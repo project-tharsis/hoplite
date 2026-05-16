@@ -26,13 +26,13 @@ MODEL_NAMES: dict[str, str] = {
     "6": "角色清晰",
 }
 
-# All known dimension signal keys in evaluation
-DIMENSION_KEYS = ["execution_signal", "adjustment_signal", "satisfaction_signal"]
+# All known dimension signal keys (inside evaluation.dimension_signals)
+DIMENSION_KEYS = ["execution", "adjustment", "satisfaction"]
 
 DIMENSION_LABELS: dict[str, str] = {
-    "execution_signal": "执行",
-    "adjustment_signal": "调整",
-    "satisfaction_signal": "满意",
+    "execution": "执行",
+    "adjustment": "调整",
+    "satisfaction": "满意",
 }
 
 
@@ -144,10 +144,10 @@ class PatternComputer:
                 if model_num in model_distributions and signal in ("🟢", "🟡", "🔴"):
                     model_distributions[model_num][signal] += 1
 
-            # Dimension signals
-            evaluation = entry.get("evaluation", {})
+            # Dimension signals (nested under evaluation.dimension_signals)
+            dim_signals = entry.get("evaluation", {}).get("dimension_signals", {})
             for dim_key in DIMENSION_KEYS:
-                signal = evaluation.get(dim_key)
+                signal = dim_signals.get(dim_key)
                 if signal in ("🟢", "🟡", "🔴"):
                     dimension_distributions[dim_key][signal] += 1
 
@@ -213,7 +213,7 @@ class PatternComputer:
             if entry.get("result") == "W":
                 wins += 1
 
-            exec_signal = entry.get("evaluation", {}).get("execution_signal")
+            exec_signal = entry.get("evaluation", {}).get("dimension_signals", {}).get("execution")
             signal_sum += self._signal_value(exec_signal)
 
         if count == 0:
