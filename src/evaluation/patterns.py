@@ -76,11 +76,6 @@ class PatternComputer:
     def _empty_distribution() -> dict[str, int]:
         return {"🟢": 0, "🟡": 0, "🔴": 0}
 
-    @staticmethod
-    def _signal_value(signal: Optional[str]) -> float:
-        """Convert a signal emoji to its numeric value; return 0.5 for unknown."""
-        return SIGNAL_VALUES.get(signal, 0.5)
-
     # ------------------------------------------------------------------
     # Public API
     # ------------------------------------------------------------------
@@ -189,21 +184,18 @@ class PatternComputer:
     def focus_area_effectiveness(
         self, focus_area: str, context: Optional[dict] = None
     ) -> dict:
-        """
-        How often a focus area appears and what the execution signal was.
+        """How often a focus area appears and what the execution signal was.
 
-        Args:
-            focus_area: e.g. "控制中场"
-            context: optional filter dict (same as similar_match_summary)
-
-        Returns:
-            dict with count, win_rate, avg_execution_signal.
+        Only entries with actual evaluation signals are included in
+        avg_execution_signal calculation. Unevaluated entries still count
+        toward appearance count and win_rate.
         """
         all_entries = self.kb.get_all()
         if context:
             all_entries = self._filter_by_context(all_entries, context)
 
         count = 0
+        evaluated_count = 0
         wins = 0
         signal_sum = 0.0
 
@@ -216,16 +208,30 @@ class PatternComputer:
             if entry.get("result") == "W":
                 wins += 1
 
-            exec_signal = entry.get("evaluation", {}).get("dimension_signals", {}).get("execution")
-            signal_sum += self._signal_value(exec_signal)
+            # Check for human_override first, then evaluation
+            override = entry.get("human_override", {})
+            dim_signals = (
+                override.get("dimension_signals")
+                or entry.get("evaluation", {}).get("dimension_signals", {})
+            )
+            exec_signal = dim_signals.get("execution")
+            if exec_signal and exec_signal in SIGNAL_VALUES:
+                signal_sum += SIGNAL_VALUES[exec_signal]
+                evaluated_count += 1
 
         if count == 0:
-            return {"count": 0, "win_rate": 0.0, "avg_execution_signal": 0.0}
+            return {
+                "count": 0,
+                "evaluated_count": 0,
+                "win_rate": 0.0,
+                "avg_execution_signal": 0.0,
+            }
 
         return {
             "count": count,
+            "evaluated_count": evaluated_count,
             "win_rate": round(wins / count, 2),
-            "avg_execution_signal": round(signal_sum / count, 2),
+            "avg_execution_signal": round(signal_sum / evaluated_count, 2) if evaluated_count > 0 else 0.0,
         }
 
     def model_trend(self, model_number: str, last_n: int = 10) -> dict:

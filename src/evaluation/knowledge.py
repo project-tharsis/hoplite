@@ -32,6 +32,23 @@ class KnowledgeBase:
         data.append(entry)
         self._write(data)
 
+    def upsert_entry(self, entry: dict, key: str = "match_id") -> None:
+        """Insert or replace an entry by key field. No duplicates."""
+        if "timestamp" not in entry:
+            entry["timestamp"] = datetime.now().isoformat()
+        data = self._read()
+        # Find existing entry with same key value
+        key_value = entry.get(key)
+        replaced = False
+        for i, existing in enumerate(data):
+            if existing.get(key) == key_value:
+                data[i] = entry
+                replaced = True
+                break
+        if not replaced:
+            data.append(entry)
+        self._write(data)
+
     def get_all(self) -> list[dict]:
         """Return all entries."""
         return self._read()
