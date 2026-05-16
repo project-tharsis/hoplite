@@ -210,5 +210,173 @@
         "6": "🟡"
       }
     }
+  },
+  {
+    "match_id": "538144",
+    "timestamp": "2025-03-04T20:00:00",
+    "opponent": "PSV",
+    "score": "7-1",
+    "result": "W",
+    "competition": "Champions League",
+    "pre_match_context": {
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "knockout",
+      "injury_situation": "full_strength",
+      "recent_form": "mixed",
+      "opponent_style": "possession"
+    },
+    "predicted_plan": {
+      "focus_areas": [
+        "控制节奏",
+        "转换效率",
+        "高位反抢/断球"
+      ],
+      "likely_approach": "打断对手节奏 + 反抢后立即转换；定位球重点部署",
+      "key_battles": [
+        "中场对抗 — Rice vs 对手组织型后腰",
+        "压迫对手出球核心 — 限制向前传球"
+      ],
+      "expected_subs": "根据比分半场/60分钟战术调整；定位球专家/高点 late sub 抢分"
+    },
+    "evaluation": {
+      "execution_signal": "🟢",
+      "adjustment_signal": "🟡",
+      "satisfaction_signal": "🟢",
+      "model_signals": {
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟢",
+        "5": "🟢",
+        "6": "🟡"
+      }
+    }
+  },
+  {
+    "match_id": "538144",
+    "timestamp": "2025-03-04T20:00:00",
+    "opponent": "PSV",
+    "score": "7-1",
+    "result": "W",
+    "competition": "Champions League",
+    "pre_match_context": {
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "knockout",
+      "injury_situation": "full_strength",
+      "recent_form": "mixed",
+      "opponent_style": "possession"
+    },
+    "predicted_plan": {
+      "focus_areas": [
+        "控制节奏",
+        "转换效率",
+        "高位反抢/断球"
+      ],
+      "likely_approach": "打断对手节奏 + 反抢后立即转换；定位球重点部署",
+      "key_battles": [
+        "中场对抗 — Rice vs 对手组织型后腰",
+        "压迫对手出球核心 — 限制向前传球"
+      ],
+      "expected_subs": "根据比分半场/60分钟战术调整；定位球专家/高点 late sub 抢分"
+    },
+    "evaluation": {
+      "execution_signal": "🟢",
+      "adjustment_signal": "🟡",
+      "satisfaction_signal": "🟢",
+      "model_signals": {
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟢",
+        "5": "🟢",
+        "6": "🟡"
+      }
+    }
+  },
+  {
+    "match_id": "538144",
+    "timestamp": "2025-03-04T20:00:00",
+    "opponent": "PSV",
+    "score": "7-1",
+    "result": "W",
+    "competition": "Champions League",
+    "pre_match_context": {
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "knockout",
+      "injury_situation": "full_strength",
+      "recent_form": "mixed",
+      "opponent_style": "possession"
+    },
+    "predicted_plan": {
+      "focus_areas": [
+        "控制节奏",
+        "转换效率",
+        "高位反抢/断球"
+      ],
+      "likely_approach": "打断对手节奏 + 反抢后立即转换；定位球重点部署",
+      "key_battles": [
+        "中场对抗 — Rice vs 对手组织型后腰",
+        "压迫对手出球核心 — 限制向前传球"
+      ],
+      "expected_subs": "根据比分半场/60分钟战术调整；定位球专家/高点 late sub 抢分"
+    },
+    "evaluation": {
+      "execution_signal": "🟢",
+      "adjustment_signal": "🟡",
+      "satisfaction_signal": "🟢",
+      "model_signals": {
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟢",
+        "5": "🟢",
+        "6": "🟡"
+      }
+    }
+  },
+  {
+    "match_id": "1",
+    "timestamp": "2025-05-01T00:00:00",
+    "opponent": "Chelsea",
+    "score": "3-1",
+    "result": "W",
+    "competition": "Premier League",
+    "pre_match_context": {
+      "opponent_quality": "top6",
+      "venue": "home",
+      "competition_stage": "league_late",
+      "injury_situation": "full_strength",
+      "recent_form": "mixed",
+      "opponent_style": "possession"
+    },
+    "predicted_plan": {
+      "focus_areas": [
+        "控制中场",
+        "高位反抢/断球"
+      ],
+      "likely_approach": "打断对手节奏 + 反抢后立即转换",
+      "key_battles": [
+        "中场对抗 — Rice vs 对手组织型后腰",
+        "压迫对手出球核心 — 限制向前传球",
+        "关键球员对位 — 限制对手核心进攻点"
+      ],
+      "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+    },
+    "evaluation": {
+      "execution_signal": "🟡",
+      "adjustment_signal": "🟡",
+      "satisfaction_signal": "🟢",
+      "model_signals": {
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🟡",
+        "4": "🟡",
+        "5": "🟡",
+        "6": "🟡"
+      }
+    }
   }
 ]

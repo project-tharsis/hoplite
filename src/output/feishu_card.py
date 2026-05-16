@@ -24,12 +24,18 @@ class FeishuCardBuilder:
         satisfaction = report_json.get("satisfaction", {})
 
         emoji = overall_signal
+        # Strip emoji from summary if it already starts with one (one_line_summary includes it)
+        clean_summary = summary
+        for sig in ("🟢 ", "🟡 ", "🔴 "):
+            if clean_summary.startswith(sig):
+                clean_summary = clean_summary[len(sig):]
+                break
 
         card = {
             "schema": "2.0",
             "config": {"wide_screen_mode": True},
             "header": {
-                "title": {"tag": "plain_text", "content": f"{emoji} {summary}"},
+                "title": {"tag": "plain_text", "content": f"{emoji} {clean_summary}"},
                 "template": "blue",
             },
             "body": {
