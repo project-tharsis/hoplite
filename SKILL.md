@@ -97,65 +97,13 @@ Feishu v4.0 interactive card with:
 - Tactical Narrative (LLM-generated, objective Chinese)
 - 📄 完整复盘 button (doc link)
 
-## Arteta's 6 Mental Models (Decision Brain)
+## Arteta's 6 Mental Models + 3D Assessment (Decision Brain)
 
-**Note:** In v4, these models live HERE in SKILL.md — not in Python. Python extracts raw data; the LLM applies these models by reading the prompt from `build_narrative_prompt` (which injects the same framework). This section serves as the canonical reference.
+**Canonical source:** `prompts/arteta_framework.md` — this is the single source of truth.
+Python's `prompt.py` reads it; SKILL.md references it. Never dual-write evaluation rules.
 
-### 模型1: 文化是战术的操作系统 (Culture as OS)
-**Philosophy:** Standards, energy, accountability precede tactics.
-**Data points:** Yellow card timing vs match state, fouls, pressing intensity, focus before/after half-time.
-- 🟢: Good discipline, fouls under control, pressing active
-- 🟡: 1-2 yellows, manageable
-- 🔴: Red card, poor-timing yellows, fouls out of control
-**Key:** 89th minute tactical yellow when leading 7-0 ≠ 2nd minute reckless yellow at 0-0.
-
-### 模型2: 控制比赛发生在哪里 (Where the Game is Played)
-**Philosophy:** Control isn't just possession — it's zones, rhythm, emotion.
-**Data points:** Possession %, shots, xG, pass accuracy, corners.
-- 🟢: Possession ≥55%, shot dominance, high xG
-- 🟡: Close data, some passive periods
-- 🔴: Possession ≤45%, fewer shots, trapped in defensive third
-
-### 模型3: 防守也是进攻身份 (Defence as Attacking Identity)
-**Philosophy:** Defence creates the platform for attack. Players must LOVE defending.
-**Data points:** Goals conceded, opponent shots on target, clean sheet, counter-attack goals.
-- 🟢: Clean sheet or ≤1 conceded, ≤3 opponent shots on target
-- 🟡: 1-2 conceded, attack unaffected
-- 🔴: 3+ conceded, defensive collapse
-
-### 模型4: 边际收益要专家化 (Marginal Gains Expertized)
-**Philosophy:** Set pieces and transitions can't be run by part-timers.
-**Data points:** Set piece goals/conceded, corner conversion, penalties.
-- 🟢: ≥2 set piece goals, 0 set piece conceded
-- 🟡: Mixed effectiveness
-- 🔴: ≥2 set piece conceded, toothless attack
-
-### 模型5: 加能力，但不要丢身份 (Add Capability, Keep Identity)
-**Philosophy:** Keep traditions, add new weapons.
-**Data points:** Pass accuracy, possession style, goal diversity (multiple scorers = system).
-- 🟢: Traditional strengths + new elements both working
-- 🟡: One working, one not
-- 🔴: Traditional strengths lost
-
-### 模型6: 人需要清晰度，不只是压力 (Role Clarity > Pressure)
-**Philosophy:** Subs must know how to contribute. Every player needs role clarity.
-**Data points:** Sub impact (scored/assisted?), timing, integration.
-- 🟢: Subs produced goals, timing reasonable (45-75 min)
-- 🟡: Neutral impact, or match decided
-- 🔴: Subs too late (80'+ losing), ineffective
-
-## Three-Dimension Assessment
-
-Replaces old 0-10 scoring. The LLM applies this from the prompt:
-
-- ① **赛前决策执行度** — Compare predicted_plan vs actual stats/events.
-- ② **赛中调整合理性** — Check sub timing and impact.
-- ③ **比赛结果满意度** — L1(base)→L2(goal diff)→L3(context) modifier system.
-  - L1: Win top→🟢, win weak→🟡, lose weak→🔴
-  - L2: Win by ≥3→🟢, away win by ≥2→🟢, lose by ≥4→🔴
-  - L3: Knockout away win→🟢
-
-Overall signal: vote across 3 dimensions (≥2🟢→🟢, ≥2🔴→🔴, else🟡).
+For detailed signal criteria per model and the 3-dimension L1→L2→L3 satisfaction logic,
+see the canonical framework file.
 
 ## Evolution Layer
 

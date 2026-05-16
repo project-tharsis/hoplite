@@ -2,128 +2,19 @@
 
 import json
 import sys
+from src.paths import PROMPTS_DIR
 
 
-ARTETA_MENTAL_MODEL_FRAMEWORK = """
-## Arteta 6 心智模型评估框架
+def _load_framework() -> str:
+    """Read the canonical Arteta framework from prompts/arteta_framework.md."""
+    framework_path = PROMPTS_DIR / "arteta_framework.md"
+    if not framework_path.exists():
+        print(f"[WARN] Framework file not found: {framework_path}", file=sys.stderr)
+        return "## Arteta Framework (missing)\n核心评估框架文件未找到。请参考 SKILL.md。\n"
+    return framework_path.read_text(encoding="utf-8")
 
-你需要基于以下比赛数据，逐一评估阿森纳在6个心智模型上的表现，给出🟢🟡🔴信号和证据。
 
-### 模型1: 文化是战术的操作系统 (Culture as OS)
-**哲学**: 日常标准不对，战术不会稳定运行。
-**数据点**: 黄牌时间与比赛状态（领先/落后/僵持）、犯规数、反抢投入度、半场结束前/后的专注度。
-**判断**: 
-- 🟢: 纪律良好（≤1黄牌或黄牌出现在合理时刻如战术犯规）、犯规数可控、反抢积极
-- 🟡: 1-2黄牌、部分犯规偏多但整体可控
-- 🔴: 红牌、2+黄牌且出现时机不当（开场/僵持时无谓吃牌）、犯规失控
-**注意**: 领先7-0时89分钟的战术黄牌 ≠ 0-0时2分钟的鲁莽黄牌。结合比赛状态判断。
-
-### 模型2: 控制比赛发生在哪里 (Where the Game is Played)  
-**哲学**: 控制不是只控球，是把比赛带到想要的区域、节奏和情绪。
-**数据点**: 控球率、射门比、xG对比、传球成功率、角球比。
-**判断**:
-- 🟢: 控球≥55%、射门显著多于对手、xG碾压、传球成功率高，比赛在阿森纳想要的区域
-- 🟡: 数据接近（如控球50-55%）、部分时段被动但有回应
-- 🔴: 控球≤45%、射门少于对手、被锁在防守三区
-
-### 模型3: 防守也是进攻身份 (Defence as Attacking Identity)
-**哲学**: 防守应为进攻创造平台——球员要"爱"防守。
-**数据点**: 失球数、对手射正次数、零封、反抢后进攻转化（从进球事件中判断反击进球）。
-**判断**:
-- 🟢: 零封或失≤1球、对手射正≤3、防守为进攻提供了平台
-- 🟡: 失1-2球、防守偶有漏洞但进攻不受影响
-- 🔴: 失3+球、防守崩溃导致进攻被压缩
-
-### 模型4: 边际收益要专家化 (Marginal Gains Expertized)
-**哲学**: 能决定比赛的部门要专家化——定位球/转换不能靠兼职。
-**数据点**: set_pieces数据（定位球进球/失球）、角球转化、点球。
-**判断**:
-- 🟢: 定位球进球≥2、零定位球失球、角球有威胁
-- 🟡: 定位球有进球也有失球、效果一般
-- 🔴: 定位球失球≥2、定位球进攻毫无威胁
-
-### 模型5: 加能力，但不要丢身份 (Add Capability, Keep Identity)
-**哲学**: 保留传统优势，同时叠加新能力。
-**数据点**: 传球成功率、控球风格（传统优势）、新援/新战术元素的表现、进球多样性（多人进球=体系好，一人进球=依赖个人）。
-**判断**:
-- 🟢: 传统优势保留（传球≥85%、控球好）+ 新元素有效（多人进球、新阵型成功）
-- 🟡: 传统优势在但新元素未发挥、或反过来
-- 🔴: 传统优势丢失（传球差、控球被压制），无论新元素如何
-
-### 模型6: 人需要清晰度，不只是压力 (Role Clarity > Pressure)
-**哲学**: 替补要知道如何贡献，球员要角色清晰。
-**数据点**: sub_impact（换人后是否进球）、换人时机、替补上场人数、是否形成体系内外的衔接。
-**判断**:
-- 🟢: 换人产生进球/助攻、替补融入体系、换人时机合理（45-75分钟）
-- 🟡: 换人效果中性、或换人数量少但比赛已无悬念
-- 🔴: 换人过晚（80'后且比分落后）、多次换人无效、替补明显脱节
-"""
-
-THREE_DIMENSION_FRAMEWORK = """
-## 三维度评估框架
-
-### ① 赛前决策执行度
-**判断**: 对比 predicted_plan（focus_areas, likely_approach, key_battles）与 stats/events 的实际数据。
-- 如果 stats 数据支持 predicted_plan 的方向 → 🟢
-- 部分匹配 → 🟡
-- 差距明显 → 🔴
-**证据要求**: 每个 focus_area 至少一条数据对应。
-
-### ② 赛中调整合理性
-**判断**: 查看 sub_impact 数据（换人时机、换人后效果）。
-- 换人直接产生进球 → 🟢
-- 换人时机合理且比赛结果好 → 🟢
-- 换人无效果但比赛已无悬念 → 🟡
-- 换人过晚且结果差 → 🔴
-**注意**: 大比分领先时不做调整是合理的（不需要换人改变比赛）。
-
-### ③ 比赛结果满意度 (L1→L2→L3)
-**L1 基础**: 赢强敌→🟢, 赢弱敌→🟡, 平强敌客场→🟢, 输弱敌→🔴, 输强敌→🟡
-**L2 净胜球修饰**: 净胜≥3球自动🟢, 客场净胜≥2球→🟢, 净负≥4球→🔴
-**L3 context加权**: 淘汰赛客场取胜→🟢
-**综合**: context.opponent_quality (top6/european_elite为强, lower为弱), context.venue, context.competition_stage
-"""
-
-WRITING_STYLE = """
-## 写作要求
-- 中文（简体），客观第三人称，不用"我们"或"我"
-- 短句分行，口语化像聊天
-- 中英文术语不加空格（e.g. "rest-defence", "xG", "inverted-fullback"）
-- 分析为什么发生，不是只描述什么
-- 引用 Arteta 的战术偏好但不扮演他
-- 300-400字中文
-- 如果有历史模式参考，请在评估时对比历史表现。
-
-结构:
-1. 总体判断（1-2句，基于三维度综合信号）
-2. 战术执行（赛前决策执行度 + 预测方向匹配度）
-3. 关键节点（6模型中的高信号/低信号 + 具体事件）
-4. 改进方向（信号为🔴或🟡的模型的具体改进点）
-5. 一句话判决（结尾）
-"""
-
-OUTPUT_FORMAT_INSTRUCTIONS = """
-## 输出格式
-
-请按以下 JSON 结构输出评估结果（先说 signals，再写 narrative）：
-
-```json
-{
-  "overall_signal": "🟢",
-  "model_signals": {
-    "1": "🟢", "2": "🟢", "3": "🟢", "4": "🟢", "5": "🟢", "6": "🟡"
-  },
-  "dimension_signals": {
-    "execution": "🟢",
-    "adjustment": "🟡",
-    "satisfaction": "🟢"
-  },
-  "narrative": "中文复盘正文..."
-}
-```
-
-overall_signal 由三个 dimension_signals 投票决定（≥2个🟢 → 🟢, ≥2个🔴 → 🔴, 否则🟡）。
-"""
+_ARTETA_FRAMEWORK = _load_framework()
 
 
 def build_narrative_prompt(report_json: dict, search_context: str = "",
@@ -195,13 +86,7 @@ def build_narrative_prompt(report_json: dict, search_context: str = "",
 
 {historical_block}
 
-{ARTETA_MENTAL_MODEL_FRAMEWORK}
-
-{THREE_DIMENSION_FRAMEWORK}
-
-{WRITING_STYLE}
-
-{OUTPUT_FORMAT_INSTRUCTIONS}
+{_ARTETA_FRAMEWORK}
 """
     
     if search_context:
