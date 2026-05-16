@@ -39,13 +39,28 @@ def match_to_json(match) -> dict:
     }
 
 
-def fetch_match_data(team: str = "Arsenal", status: str = "FINISHED", limit: int = 1) -> dict:
+def fetch_match_data(
+    team: str = "Arsenal",
+    status: str = "FINISHED",
+    limit: int = 1,
+    config: dict | None = None,
+    config_path: Path | None = None,
+) -> dict:
     """Fetch latest match for a team. Tries football-data.org + Understat xG."""
-    config_path = Path(__file__).resolve().parent.parent.parent / "config.yaml"
-    if not config_path.exists():
-        return {"error": "config.yaml not found"}
-    with open(config_path) as f:
-        config = yaml.safe_load(f)
+    # Resolve config
+    if config is None:
+        if config_path is None:
+            config_path = Path(__file__).resolve().parent.parent.parent / "config.yaml"
+        if not config_path.exists():
+            return {
+                "ok": False,
+                "error": {
+                    "code": "CONFIG_MISSING",
+                    "message": f"config.yaml not found at {config_path}",
+                },
+            }
+        with open(config_path) as f:
+            config = yaml.safe_load(f)
 
     # 1. football-data.org
     fd = FootballDataClient(token=config["data_sources"]["football_data"]["token"])
@@ -123,6 +138,20 @@ def fetch_match_data(team: str = "Arsenal", status: str = "FINISHED", limit: int
                             match.away_formation = lu.get("formation")
                         else:
                             match.home_formation = lu.get("formation")
+
+                # Get statistics
+                stats_raw = af.get_match_stats(fixture_id=fixture_id)
+                if stats_raw:
+                    from src.data.stats_parser import parse_api_football_stats
+                    home_s, away_s = parse_api_football_stats(
+                        stats_raw,
+                        config["arsenal"]["team_id_api_football"],
+                        match.arsenal_is_home,
+                    )
+                    if home_s:
+                        match.home_stats = home_s
+                    if away_s:
+                        match.away_stats = away_s
 
                 break  # Found the match
     except Exception as e:

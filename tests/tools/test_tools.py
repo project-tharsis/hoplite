@@ -185,9 +185,47 @@ def test_fetch_match_data_with_api_football_merge(mock_af_get, mock_fd_get):
     }
     af_lineups_resp.raise_for_status = Mock()
 
+    # API-Football statistics
+    af_stats_resp = Mock()
+    af_stats_resp.json.return_value = {
+        "response": [
+            {
+                "team": {"id": 42, "name": "Arsenal FC"},
+                "statistics": [
+                    {"type": "Ball Possession", "value": "58%"},
+                    {"type": "Total Shots", "value": 15},
+                    {"type": "Shots on Goal", "value": 6},
+                    {"type": "Total passes", "value": 512},
+                    {"type": "Passes %", "value": "87%"},
+                    {"type": "Fouls", "value": 8},
+                    {"type": "Corner Kicks", "value": 7},
+                    {"type": "Yellow Cards", "value": 1},
+                    {"type": "Red Cards", "value": 0},
+                ],
+            },
+            {
+                "team": {"id": 61, "name": "Chelsea FC"},
+                "statistics": [
+                    {"type": "Ball Possession", "value": "42%"},
+                    {"type": "Total Shots", "value": 8},
+                    {"type": "Shots on Goal", "value": 3},
+                    {"type": "Total passes", "value": 389},
+                    {"type": "Passes %", "value": "79%"},
+                    {"type": "Fouls", "value": 12},
+                    {"type": "Corner Kicks", "value": 4},
+                    {"type": "Yellow Cards", "value": 2},
+                    {"type": "Red Cards", "value": 0},
+                ],
+            },
+        ]
+    }
+    af_stats_resp.raise_for_status = Mock()
+
     def unified_side_effect(url, params=None, **kwargs):
         if "api.football-data.org" in url:
             return fd_resp
+        if "/fixtures/statistics" in url:
+            return af_stats_resp
         if "/fixtures/events" in url:
             return af_events_resp
         if "/fixtures/lineups" in url:
@@ -197,7 +235,18 @@ def test_fetch_match_data_with_api_football_merge(mock_af_get, mock_fd_get):
     mock_fd_get.side_effect = unified_side_effect
     mock_af_get.side_effect = unified_side_effect
 
-    result = fetch_match_data()
+    mock_config = {
+        "data_sources": {
+            "football_data": {"token": "test-fd-token"},
+            "api_football": {"key": "test-af-key"},
+        },
+        "arsenal": {
+            "team_id_football_data": 57,
+            "team_id_api_football": 42,
+        },
+    }
+
+    result = fetch_match_data(config=mock_config)
 
     assert "error" not in result
     assert len(result["events"]) == 2
@@ -205,3 +254,17 @@ def test_fetch_match_data_with_api_football_merge(mock_af_get, mock_fd_get):
     assert result["events"][0]["team"] == "home"
     assert result["home_formation"] == "4-3-3"
     assert result["away_formation"] == "4-2-3-1"
+    assert result["home_stats"] is not None
+    assert result["home_stats"]["possession"] == 58.0
+    assert result["home_stats"]["shots"] == 15
+    assert result["away_stats"] is not None
+    assert result["away_stats"]["possession"] == 42.0
+
+
+def test_fetch_match_data_config_missing_structured_error():
+    """When config is missing, returns structured error with ok=False."""
+    from src.tools.fetch import fetch_match_data
+    from pathlib import Path
+    result = fetch_match_data(config=None, config_path=Path("/nonexistent/path.yaml"))
+    assert result.get("ok") is False
+    assert result["error"]["code"] == "CONFIG_MISSING"
