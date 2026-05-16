@@ -1,0 +1,22 @@
+# hoplite config — copy to config.yaml and fill in tokens
+data_sources:
+  football_data:
+    base_url: "https://api.football-data.org/v4"
+    token: "YOUR_TOKEN"
+  api_football:
+    base_url: "https://v3.football.api-sports.io"
+    key: "YOUR_KEY"
+  understat:
+    base_url: "https://understat.com"
+
+arsenal:
+  team_id_football_data: 57
+  team_id_api_football: 42
+  team_name_understat: "Arsenal"
+
+feishu:
+  hoplite_chat_id: "oc_e23d8d8327fa57c53c9ca04e83f807e7"
+
+output:
+  card_max_tables: 5
+  doc_folder_token: ""
