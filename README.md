@@ -43,8 +43,11 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp config.example.yaml config.yaml  # add API keys
 
-# Analyze latest Arsenal match
-python -m src fetch_match_data | python -m src analyze_match
+# Step 1: Fetch latest Arsenal match data
+python -m src fetch_match_data > match.json
+
+# Step 2: Analyze (if fetch succeeded)
+python -m src analyze_match < match.json
 ```
 
 ## Data Sources

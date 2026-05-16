@@ -47,7 +47,7 @@ class Match:
 
     @property
     def arsenal_is_home(self) -> bool:
-        return self.home_team == "Arsenal"
+        return "Arsenal" in self.home_team
 
     @property
     def arsenal_score(self) -> int:

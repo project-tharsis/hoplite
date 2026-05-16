@@ -28,23 +28,11 @@ def test_load_config_valid(mock_yaml, mock_exists, mock_open):
     assert config["feishu"]["hoplite_chat_id"] == "oc_test"
 
 
-@patch("src.cli.load_config")
-@patch("src.data.football_data.FootballDataClient")
-@patch("src.output.feishu_card.FeishuCardBuilder")
-@patch("src.report.ReportOrchestrator")
-@patch("src.normalizer.normalize_football_data_match")
-def test_cmd_latest_no_matches(mock_normalize, mock_orch, mock_card, mock_fd, mock_config):
-    """Test cmd_latest when no matches are returned."""
-    mock_config.return_value = {
-        "data_sources": {"football_data": {"token": "x"}},
-        "arsenal": {"team_id_football_data": 57},
-        "feishu": {"hoplite_chat_id": "oc_test"}
-    }
-    mock_fd_instance = Mock()
-    mock_fd_instance.get_team_matches.return_value = []
-    mock_fd.return_value = mock_fd_instance
-    
-    with pytest.raises(SystemExit) as exc_info:
-        from src.cli import cmd_latest
-        cmd_latest(mock_config())
-    assert exc_info.value.code == 1
+def test_cmd_latest_stub(capsys):
+    """Test that cmd_latest prints deprecation stub."""
+    from src.cli import cmd_latest
+    cmd_latest({})
+    captured = capsys.readouterr()
+    assert "removed in v4" in captured.out
+    assert "fetch_match_data" in captured.out
+    assert "analyze_match" in captured.out

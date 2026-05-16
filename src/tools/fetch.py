@@ -1,6 +1,7 @@
 """Tool: fetch_match_data — pull latest match from football-data.org + Understat xG."""
 import yaml
 import json
+import sys
 from pathlib import Path
 from datetime import timedelta
 from dataclasses import asdict
@@ -33,6 +34,8 @@ def match_to_json(match) -> dict:
         "away_lineup": match.away_lineup,
         "result": match.result,
         "arsenal_is_home": match.arsenal_is_home,
+        "home_stats": asdict(match.home_stats) if match.home_stats else None,
+        "away_stats": asdict(match.away_stats) if match.away_stats else None,
     }
 
 
@@ -65,8 +68,8 @@ def fetch_match_data(team: str = "Arsenal", status: str = "FINISHED", limit: int
             if um["home_team"] in match.home_team and um["away_team"] in match.away_team:
                 merge_match_data(match, understat_data=um)
                 break
-    except Exception:
-        pass  # Understat unreachable — xG stays None
+    except Exception as e:
+        print(f"[WARN] Understat unavailable: {e}", file=sys.stderr)
 
     # 3. Try API-Football for events/lineups/stats
     try:
@@ -122,8 +125,8 @@ def fetch_match_data(team: str = "Arsenal", status: str = "FINISHED", limit: int
                             match.home_formation = lu.get("formation")
 
                 break  # Found the match
-    except Exception:
-        pass  # API-Football optional
+    except Exception as e:
+        print(f"[WARN] API-Football unavailable: {e}", file=sys.stderr)
 
     return match_to_json(match)
 
