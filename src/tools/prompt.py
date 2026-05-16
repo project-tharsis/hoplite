@@ -4,7 +4,11 @@ import sys
 
 
 def build_narrative_prompt(report_json: dict, search_context: str = "") -> str:
-    """Build prompt that instructs LLM to write objective third-person Chinese tactical analysis."""
+    """Build prompt that instructs LLM to write objective third-person Chinese tactical analysis.
+
+    Supports v3 report schema (predicted_plan, mental_model_results, execution,
+    adjustment, satisfaction, overall_signal) with fallback to legacy results list.
+    """
     summary = report_json.get("one_line_summary", "")
     predicted_plan = report_json.get("predicted_plan", {})
     mental_model_results = report_json.get("mental_model_results", [])
