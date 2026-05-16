@@ -57,12 +57,13 @@ def test_analyze_match_with_error_payload():
 
 def test_analyze_match_stdin_error():
     """python -m src analyze_match with error JSON doesn't crash."""
-    import subprocess
-    import json
+    import subprocess, json
+    from pathlib import Path
+    repo_root = str(Path(__file__).resolve().parents[2])
     error_input = json.dumps({"ok": False, "error": {"code": "TEST", "message": "test error"}})
     result = subprocess.run(
         ["python3", "-m", "src", "analyze_match"],
-        input=error_input, capture_output=True, text=True, cwd="/tmp/hoplite",
+        input=error_input, capture_output=True, text=True, cwd=repo_root,
     )
     # Should not crash with traceback
     assert result.returncode == 0

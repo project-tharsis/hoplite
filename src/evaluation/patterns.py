@@ -209,7 +209,7 @@ class PatternComputer:
                 wins += 1
 
             # Check for human_override first, then evaluation
-            override = entry.get("human_override", {})
+            override = entry.get("human_override") or {}
             dim_signals = (
                 override.get("dimension_signals")
                 or entry.get("evaluation", {}).get("dimension_signals", {})

@@ -5,7 +5,7 @@ import sys
 def main():
     if len(sys.argv) < 2:
         print("Usage: python -m src <tool_name>")
-        print("Tools: fetch_match_data, analyze_match, build_narrative_prompt, build_card")
+        print("Tools: fetch_match_data, analyze_match, build_narrative_prompt, build_card, save_evaluation")
         print("       latest (original CLI, kept for backward compat)")
         sys.exit(1)
 
@@ -31,6 +31,12 @@ def main():
         data = json.load(sys.stdin)
         result = build_card(data.get("report", data), data.get("narrative", ""))
         print(json.dumps(result, ensure_ascii=False))
+    elif tool == "save_evaluation":
+        from src.tools.save_evaluation import save_evaluation
+        import json
+        data = json.load(sys.stdin)
+        result = save_evaluation(data.get("report", {}), data.get("evaluation", {}))
+        print(json.dumps(result, indent=2, ensure_ascii=False))
     elif tool == "latest":
         from src.cli import main as cli_main
         sys.argv = ["hoplite", "latest"]

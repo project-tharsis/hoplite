@@ -69,7 +69,7 @@ def fetch_match_data(
         status=status, limit=limit
     )
     if not raw_matches:
-        return {"error": "No matches found"}
+        return {"ok": False, "error": {"code": "NO_MATCHES", "message": "No matches found"}}
 
     raw = raw_matches[0]
     match = normalize_football_data_match(raw)

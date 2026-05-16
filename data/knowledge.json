@@ -484,6 +484,7 @@
     "result": "W",
     "competition": "Premier League",
     "pre_match_context": {
+      "opponent": "Tottenham",
       "opponent_quality": "top6",
       "venue": "away",
       "competition_stage": "league_early",
@@ -493,21 +494,37 @@
     },
     "predicted_plan": {
       "focus_areas": [
-        "控制中场",
+        "防守结构",
+        "快速转换",
         "高位反抢/断球"
       ],
-      "likely_approach": "打断对手节奏 + 反抢后立即转换",
+      "likely_approach": "低位防线 + 结构化防守 + 快速转换反击",
       "key_battles": [
         "中场对抗 — Rice vs 对手组织型后腰",
         "压迫对手出球核心 — 限制向前传球",
-        "破密集耐心 — 避免急躁 + 把握有限机会"
+        "关键球员对位 — 限制对手核心进攻点"
       ],
-      "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+      "expected_subs": "60' 上防守型中场巩固结构；75' 反击点换前锋保持速度威胁"
     },
     "evaluation": {
-      "model_signals": {},
-      "dimension_signals": {}
-    }
+      "source": "llm",
+      "confidence": null,
+      "model_signals": {
+        "1": "🟡",
+        "2": "🟡",
+        "3": "🟢",
+        "4": "🟢",
+        "5": "🟡",
+        "6": "🟡"
+      },
+      "dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟡",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢"
+    },
+    "human_override": null
   },
   {
     "match_id": "1208067",

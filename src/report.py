@@ -45,6 +45,7 @@ class MatchReport:
                 "likely_approach": self.predicted_plan.likely_approach,
                 "key_battles": self.predicted_plan.key_battles,
                 "expected_subs": self.predicted_plan.expected_subs,
+                "historical_context": self.predicted_plan.historical_context,
             },
             "context": self.context,
             "stats": self.stats,
