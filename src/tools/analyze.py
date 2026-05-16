@@ -15,7 +15,17 @@ from src.tools.extract import (
 
 
 def analyze_match(match_json: dict, search_queries: list = None) -> dict:
-    """Extract raw match data. Returns pure data report + search queries."""
+    """Extract raw match data. Returns pure data report + search_queries."""
+    # Guard: if upstream returned an error, propagate it
+    if match_json.get("ok") is False or ("error" in match_json and "fixture_id" not in match_json):
+        return {
+            "ok": False,
+            "error": match_json.get("error", {
+                "code": "UPSTREAM_ERROR",
+                "message": str(match_json.get("error"))
+            }),
+        }
+
     # Deserialize Match
     m = Match(
         fixture_id=match_json["fixture_id"],
@@ -46,6 +56,7 @@ def analyze_match(match_json: dict, search_queries: list = None) -> dict:
     report = orchestrator.assemble(m, stats, events, context, set_pieces, subs)
 
     return {
+        "ok": True,
         "report": report.to_dict(),
         "search_queries": search_queries if search_queries is not None else [],
     }

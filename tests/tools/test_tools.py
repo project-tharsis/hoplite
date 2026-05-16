@@ -41,6 +41,35 @@ def test_analyze_match_with_minimal_data():
     assert "overall_signal" not in report
 
 
+def test_analyze_match_with_error_payload():
+    """analyze_match handles upstream error without KeyError."""
+    from src.tools.analyze import analyze_match
+    error_json = {
+        "ok": False,
+        "error": {"code": "CONFIG_MISSING", "message": "config.yaml not found"},
+    }
+    result = analyze_match(error_json)
+    assert result.get("ok") is False
+    assert "error" in result
+    # Must NOT have 'fixture_id' KeyError — should not reach Match construction
+    assert "report" not in result
+
+
+def test_analyze_match_stdin_error():
+    """python -m src analyze_match with error JSON doesn't crash."""
+    import subprocess
+    import json
+    error_input = json.dumps({"ok": False, "error": {"code": "TEST", "message": "test error"}})
+    result = subprocess.run(
+        ["python3", "-m", "src", "analyze_match"],
+        input=error_input, capture_output=True, text=True, cwd="/tmp/hoplite",
+    )
+    # Should not crash with traceback
+    assert result.returncode == 0
+    parsed = json.loads(result.stdout)
+    assert parsed.get("ok") is False
+
+
 def test_build_narrative_prompt():
     from src.tools.prompt import build_narrative_prompt
     report_json = {
