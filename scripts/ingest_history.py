@@ -32,7 +32,7 @@ LEAGUE_NAMES = {
 }
 
 # Opponent quality tiers (same as src/tools/extract.py)
-TOP6 = {"Man City", "Liverpool", "Chelsea", "Spurs", "Man Utd", "Newcastle"}
+TOP6 = {"Man City", "Liverpool", "Chelsea", "Tottenham", "Tottenham Hotspur", "Man Utd", "Newcastle"}
 EUROPEAN_ELITE = {
     "Real Madrid", "Bayern Munich", "Bayern", "PSG",
     "Barcelona", "Inter", "Inter Milan",
@@ -111,8 +111,7 @@ def get_team_name(team_data: dict) -> str:
     name_map = {
         "Manchester United": "Man Utd",
         "Manchester City": "Man City",
-        "Tottenham Hotspur": "Spurs",
-        "Tottenham": "Spurs",
+        "Tottenham Hotspur": "Tottenham",
         "Newcastle United": "Newcastle",
         "Wolverhampton Wanderers": "Wolves",
         "West Ham United": "West Ham",

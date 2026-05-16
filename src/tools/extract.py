@@ -191,7 +191,7 @@ def extract_context(match_json: dict) -> dict:
     )
 
     # Opponent quality tiers
-    top6 = {"Man City", "Liverpool", "Chelsea", "Spurs", "Man Utd", "Newcastle"}
+    top6 = {"Man City", "Liverpool", "Chelsea", "Tottenham", "Tottenham Hotspur", "Man Utd", "Newcastle"}
     european_elite = {
         "Real Madrid", "Bayern Munich", "Bayern", "PSG",
         "Barcelona", "Inter", "Inter Milan",
