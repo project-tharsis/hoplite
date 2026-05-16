@@ -156,7 +156,7 @@ class TestResultSatisfactionDimension:
     def test_returns_dimension_result(self):
         dim = ResultSatisfactionDimension()
         match = make_match()
-        ctx = {"opponent_quality": "medium", "injury_situation": "normal", "competition_stage": "league"}
+        ctx = {"opponent_quality": "mid_table", "injury_situation": "full_strength", "competition_stage": "league_early", "venue": "home"}
         result = dim.assess(match, ctx)
         assert isinstance(result, DimensionResult)
         assert result.name == "比赛结果满意度"
@@ -165,21 +165,21 @@ class TestResultSatisfactionDimension:
     def test_green_win_vs_strong_opponent(self):
         dim = ResultSatisfactionDimension()
         match = make_match(home_score=2, away_score=1)
-        ctx = {"opponent_quality": "top", "injury_situation": "normal", "competition_stage": "league"}
+        ctx = {"opponent_quality": "top6", "injury_situation": "full_strength", "competition_stage": "league_early", "venue": "home"}
         result = dim.assess(match, ctx)
         assert result.signal == "🟢"
 
     def test_yellow_win_vs_weak_opponent(self):
         dim = ResultSatisfactionDimension()
         match = make_match(home_score=2, away_score=0)
-        ctx = {"opponent_quality": "weak", "injury_situation": "normal", "competition_stage": "league"}
+        ctx = {"opponent_quality": "lower", "injury_situation": "full_strength", "competition_stage": "league_early", "venue": "home"}
         result = dim.assess(match, ctx)
         assert result.signal == "🟡"
 
     def test_red_draw_vs_weak_opponent(self):
         dim = ResultSatisfactionDimension()
         match = make_match(home_score=1, away_score=1)
-        ctx = {"opponent_quality": "weak", "injury_situation": "normal", "competition_stage": "league"}
+        ctx = {"opponent_quality": "lower", "injury_situation": "full_strength", "competition_stage": "league_early", "venue": "home"}
         result = dim.assess(match, ctx)
         assert result.signal == "🔴"
 
@@ -191,7 +191,7 @@ class TestResultSatisfactionDimension:
             home_score=1,
             away_score=1,
         )
-        ctx = {"opponent_quality": "top", "injury_situation": "normal", "competition_stage": "league"}
+        ctx = {"opponent_quality": "top6", "injury_situation": "full_strength", "competition_stage": "league_late", "venue": "away"}
         result = dim.assess(match, ctx)
         assert result.signal == "🟢"
 
@@ -203,7 +203,7 @@ class TestResultSatisfactionDimension:
             home_score=2,
             away_score=1,
         )
-        ctx = {"opponent_quality": "top", "injury_situation": "normal", "competition_stage": "league"}
+        ctx = {"opponent_quality": "top6", "injury_situation": "full_strength", "competition_stage": "league_late", "venue": "away"}
         result = dim.assess(match, ctx)
         assert result.signal == "🟡"
 
@@ -215,7 +215,7 @@ class TestResultSatisfactionDimension:
             home_score=0,
             away_score=1,
         )
-        ctx = {"opponent_quality": "weak", "injury_situation": "normal", "competition_stage": "league"}
+        ctx = {"opponent_quality": "lower", "injury_situation": "full_strength", "competition_stage": "league_early", "venue": "home"}
         result = dim.assess(match, ctx)
         assert result.signal == "🔴"
 
@@ -227,14 +227,14 @@ class TestResultSatisfactionDimension:
             home_score=0,
             away_score=4,
         )
-        ctx = {"opponent_quality": "medium", "injury_situation": "normal", "competition_stage": "league"}
+        ctx = {"opponent_quality": "mid_table", "injury_situation": "full_strength", "competition_stage": "league_early", "venue": "home"}
         result = dim.assess(match, ctx)
         assert result.signal == "🔴"
 
     def test_green_win_with_injury_crisis(self):
         dim = ResultSatisfactionDimension()
         match = make_match(home_score=1, away_score=0)
-        ctx = {"opponent_quality": "medium", "injury_situation": "severe", "competition_stage": "league"}
+        ctx = {"opponent_quality": "mid_table", "injury_situation": "crisis", "competition_stage": "league_early", "venue": "home"}
         result = dim.assess(match, ctx)
         assert result.signal == "🟢"
 
@@ -246,6 +246,54 @@ class TestResultSatisfactionDimension:
             home_score=0,
             away_score=1,
         )
-        ctx = {"opponent_quality": "top", "injury_situation": "normal", "competition_stage": "knockout"}
+        ctx = {"opponent_quality": "european_elite", "injury_situation": "full_strength", "competition_stage": "knockout", "venue": "home"}
         result = dim.assess(match, ctx)
         assert result.signal == "🔴"
+
+    # L2/L3 tests
+    def test_green_blowout_win_even_vs_weak(self):
+        """净胜3球以上大胜 → 自动🟢，无论对手强弱"""
+        dim = ResultSatisfactionDimension()
+        match = make_match(home_score=5, away_score=0)
+        ctx = {"opponent_quality": "lower", "injury_situation": "full_strength", "competition_stage": "league_early", "venue": "home"}
+        result = dim.assess(match, ctx)
+        assert result.signal == "🟢"
+
+    def test_green_away_2goal_win(self):
+        """客场净胜2球 → 🟢"""
+        dim = ResultSatisfactionDimension()
+        match = make_match(
+            home_team="West Ham",
+            away_team="Arsenal",
+            home_score=0,
+            away_score=2,
+        )
+        ctx = {"opponent_quality": "mid_table", "injury_situation": "full_strength", "competition_stage": "league_early", "venue": "away"}
+        result = dim.assess(match, ctx)
+        assert result.signal == "🟢"
+
+    def test_green_knockout_away_win(self):
+        """淘汰赛客场取胜 → L3升级至🟢"""
+        dim = ResultSatisfactionDimension()
+        match = make_match(
+            home_team="PSV",
+            away_team="Arsenal",
+            home_score=1,
+            away_score=2,
+        )
+        ctx = {"opponent_quality": "mid_table", "injury_situation": "full_strength", "competition_stage": "knockout", "venue": "away"}
+        result = dim.assess(match, ctx)
+        assert result.signal == "🟢"
+
+    def test_green_psv_7_1(self):
+        """PSV 7-1 客场淘汰赛 —— 大胜修饰符触发"""
+        dim = ResultSatisfactionDimension()
+        match = make_match(
+            home_team="PSV",
+            away_team="Arsenal",
+            home_score=1,
+            away_score=7,
+        )
+        ctx = {"opponent_quality": "mid_table", "injury_situation": "full_strength", "competition_stage": "knockout", "venue": "away"}
+        result = dim.assess(match, ctx)
+        assert result.signal == "🟢"

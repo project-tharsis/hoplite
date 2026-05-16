@@ -22,7 +22,10 @@ def _infer_pre_match_context(match: Match) -> dict:
     mid_table = {
         "Aston Villa", "Villa", "Brighton", "West Ham", "Crystal Palace",
         "Brentford", "Fulham", "Everton", "Nottingham Forest",
-        "Bournemouth", "Wolves",
+        "Bournemouth", "Wolves", "PSV", "PSV Eindhoven",
+        "Sporting", "Sporting CP", "Sporting Lisbon",
+        "Leverkusen", "Bayer Leverkusen", "Atletico", "Atletico Madrid",
+        "Roma", "Napoli", "Lazio", "Fiorentina", "Monaco",
     }
 
     if opponent in top6:

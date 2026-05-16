@@ -237,105 +237,122 @@ class ResultSatisfactionDimension:
         pre_match_context: dict,
         context: Optional[dict] = None,
     ) -> DimensionResult:
-        opponent_quality = pre_match_context.get("opponent_quality", "medium")
-        injury_situation = pre_match_context.get("injury_situation", "normal")
-        competition_stage = pre_match_context.get("competition_stage", "league")
+        opponent_quality = pre_match_context.get("opponent_quality", "mid_table")
+        injury_situation = pre_match_context.get("injury_situation", "full_strength")
+        competition_stage = pre_match_context.get("competition_stage", "league_early")
+        venue = pre_match_context.get("venue", "home")
 
         result = match.result
         goal_diff = match.arsenal_score - match.opponent_score
         evidence: list[str] = []
 
-        is_strong_opponent = opponent_quality in ("top", "strong", "high")
-        is_weak_opponent = opponent_quality in ("weak", "low", "bottom")
-        is_away = not match.arsenal_is_home
-        heavy_loss = result == "L" and goal_diff <= -3
-        injury_crisis = injury_situation in ("severe", "crisis", "many")
+        is_strong = opponent_quality in ("top6", "european_elite")
+        is_weak = opponent_quality == "lower"
+        is_away = venue == "away"
+        injury_crisis = injury_situation in ("crisis", "key_players_out")
+        is_knockout = competition_stage in ("knockout", "final")
 
-        evidence.append(f"赛果：{'胜' if result == 'W' else '平' if result == 'D' else '负'} ({match.arsenal_score}-{match.opponent_score})")
-        evidence.append(f"对手实力评估：{opponent_quality}")
+        evidence.append(f"赛果：{'胜' if result == 'W' else '平' if result == 'D' else '负'} ({match.arsenal_score}-{match.opponent_score})，净胜{goal_diff:+d}")
+        evidence.append(f"对手实力：{opponent_quality}，场地：{venue}，赛事阶段：{competition_stage}")
         if injury_crisis:
-            evidence.append(f"伤病情况：{injury_situation}")
+            evidence.append(f"伤病：{injury_situation}")
 
-        # Determine signal
-        if heavy_loss:
+        # ====================
+        # L1: Base signal
+        # ====================
+        if result == "L" and goal_diff <= -4:
+            signal = "🔴"
+            verdict = "惨败不可接受"
+            reasoning = "净负4球及以上的惨败，无论对手是谁都无法满意。"
+        elif result == "L" and goal_diff <= -3:
             signal = "🔴"
             verdict = "大比分失利不可接受"
-            reasoning = (
-                "无论对手强弱，大比分惨败都是难以接受的结果。"
-                "球队在攻防两端均出现严重问题，需要深刻反思。"
-            )
-        elif result == "W" and is_strong_opponent:
-            signal = "🟢"
-            verdict = "强强对话拿下胜利"
-            reasoning = (
-                "面对实力强劲的对手能够全取三分，"
-                "这充分体现了球队的竞争力和战术执行力，是令人满意的结果。"
-            )
-        elif result == "W" and is_weak_opponent:
-            signal = "🟡"
-            verdict = "正常发挥取得三分"
-            reasoning = (
-                "面对实力较弱的对手拿下胜利是预期之内，"
-                "虽然结果合格，但过程未必令人完全放心。"
-            )
-        elif result == "D" and is_strong_opponent and is_away:
-            signal = "🟢"
-            verdict = "客场逼平强敌可接受"
-            reasoning = (
-                "在客场面对强劲对手能够拿下一分，"
-                "从积分和士气角度看都是不错的结果，体现了球队的韧性。"
-            )
-        elif result == "D" and is_weak_opponent:
-            signal = "🔴"
-            verdict = "应赢未赢令人失望"
-            reasoning = (
-                "面对实力明显弱于自己的对手未能取胜，"
-                "暴露了球队把握机会能力不足或心态松懈的问题。"
-            )
-        elif result == "L" and is_strong_opponent:
-            signal = "🟡"
-            verdict = "虽败犹荣表现尚可"
-            reasoning = (
-                "输给实力更强的对手并非不可接受，"
-                "如果过程数据（如 xG、射门数）并不逊色，这场失利仍有可取之处。"
-            )
-        elif result == "L" and is_weak_opponent:
-            signal = "🔴"
-            verdict = "输给弱旅不可接受"
-            reasoning = (
-                "输给实力明显弱于自己的球队是严重失分，"
-                "无论过程如何，这样的结果都无法让人满意。"
-            )
-        elif result == "D" and is_strong_opponent and not is_away:
-            signal = "🟡"
-            verdict = "主场平局略显遗憾"
-            reasoning = (
-                "主场面对强敌拿到一分可以接受，"
-                "但球迷和球队原本可能期待更多，属于中规中矩的结果。"
-            )
+            reasoning = "大比分惨败，攻防两端均出现严重问题。"
         elif result == "W" and injury_crisis:
             signal = "🟢"
             verdict = "残阵取胜难能可贵"
-            reasoning = (
-                "在伤病严重的情况下依然能够取得胜利，"
-                "展现了球队的阵容深度和战斗精神，结果非常令人满意。"
-            )
+            reasoning = "伤病严重仍能取胜，展现阵容深度和战斗精神。"
+        elif result == "W" and is_strong:
+            signal = "🟢"
+            verdict = "强强对话拿下胜利"
+            reasoning = "面对实力强劲的对手全取三分，体现竞争力和执行力。"
+        elif result == "W" and is_weak:
+            signal = "🟡"
+            verdict = "正常发挥取得三分"
+            reasoning = "面对弱旅拿下胜利是预期之内，结果合格。"
+        elif result == "W" and not is_strong and not is_weak:
+            signal = "🟡"
+            verdict = "常规三分"
+            reasoning = "面对同级别对手取胜，属于正常结果。"
+        elif result == "D" and is_strong and is_away:
+            signal = "🟢"
+            verdict = "客场逼平强敌可接受"
+            reasoning = "客场面对强敌拿下一分，体现了球队韧性。"
+        elif result == "D" and is_strong and not is_away:
+            signal = "🟡"
+            verdict = "主场平局略显遗憾"
+            reasoning = "主场面对强敌拿到一分可接受，但原本期待更多。"
+        elif result == "D" and is_weak:
+            signal = "🔴"
+            verdict = "应赢未赢令人失望"
+            reasoning = "面对弱旅未能取胜，暴露把握机会能力或心态问题。"
+        elif result == "D":
+            signal = "🟡"
+            verdict = "平局中规中矩"
+            reasoning = "结果处于可接受范围。"
+        elif result == "L" and is_knockout:
+            signal = "🔴"
+            verdict = "淘汰赛失利决定性的"
+            reasoning = "淘汰赛阶段输球意味着出局，结果无论如何都无法满意。"
+        elif result == "L" and is_strong:
+            signal = "🟡"
+            verdict = "虽败犹荣表现尚可"
+            reasoning = "输给强敌并非不可接受，过程数据若不逊色仍有可取之处。"
+        elif result == "L" and is_weak:
+            signal = "🔴"
+            verdict = "输给弱旅不可接受"
+            reasoning = "输给实力明显弱于自己的球队是严重失分。"
+        elif result == "L":
+            signal = "🔴"
+            verdict = "失利令人失望"
+            reasoning = "本有希望拿分的比赛却以失利告终。"
         else:
             signal = "🟡"
             verdict = "结果基本符合预期"
-            reasoning = (
-                "综合比赛背景和最终比分，"
-                "这一结果处于可接受范围内，没有特别出彩也没有明显失误。"
-            )
+            reasoning = "综合背景和比分，结果处于可接受范围。"
 
-        if competition_stage in ("knockout", "final", "semifinal") and result == "L":
-            signal = "🔴"
-            verdict = "关键战失利影响重大"
-            reasoning = (
-                "在淘汰赛或决赛阶段输球意味着直接出局，"
-                "这样的结果无论如何都是令人极度失望的。"
-            )
-            evidence.append(f"赛事阶段：{competition_stage}，输球即出局")
+        # ====================
+        # L2: Goal difference modifier
+        # ====================
+        if result == "W" and goal_diff >= 3:
+            signal = "🟢"
+            verdict = "大胜令人满意"
+            reasoning = f"净胜{goal_diff}球的大胜，无论对手强弱都值得高度肯定。"
+            evidence.append(f"净胜{goal_diff}球 → 触发大胜修饰符")
+        elif result == "W" and goal_diff >= 2 and is_away:
+            signal = "🟢"
+            verdict = "客场两球优势取胜"
+            reasoning = "客场净胜2球是实打实的好结果，值得肯定。"
+            evidence.append(f"客场净胜{goal_diff}球 → 触发客场优势修饰符")
+
+        # ====================
+        # L3: Context weighting
+        # ====================
+        if result == "W" and is_knockout and is_away and signal != "🟢":
+            signal = "🟢"
+            verdict = "淘汰赛客场取胜"
+            reasoning = "淘汰赛客场赢球的价值远超常规赛，值得高度肯定。"
+            evidence.append("淘汰赛客场取胜 → 升级至🟢")
+
+        # xG dominance as supplementary reasoning (does not change signal)
+        arsenal_xg = match.arsenal_xg
+        opp_xg = match.away_xg if match.arsenal_is_home else match.home_xg
+        if arsenal_xg is not None and opp_xg is not None:
+            xg_diff = arsenal_xg - opp_xg
+            if xg_diff >= 2.0:
+                evidence.append(f"xG碾压（{arsenal_xg:.1f} vs {opp_xg:.1f}，差值{xg_diff:+.1f}），chance quality全面占优")
+            elif xg_diff <= -2.0:
+                evidence.append(f"xG被碾压（{arsenal_xg:.1f} vs {opp_xg:.1f}，差值{xg_diff:+.1f}），chance quality令人担忧")
 
         return DimensionResult(
             name=self.name,
