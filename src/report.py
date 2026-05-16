@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field, asdict
+from pathlib import Path
 from typing import Optional
 from src.evaluation.predictor import ArtetaPredictor, PredictedPlan
 from src.evaluation.knowledge import KnowledgeBase
@@ -61,7 +62,9 @@ class MatchReport:
 class ReportOrchestrator:
     """Assembles report from raw data. Passes to KB. No analysis."""
     
-    def __init__(self, kb_path: str = "/tmp/hoplite/data/knowledge.json"):
+    def __init__(self, kb_path: str = None):
+        if kb_path is None:
+            kb_path = str(Path(__file__).resolve().parent.parent.parent / "data" / "knowledge.json")
         self.predictor = ArtetaPredictor()
         self.kb = KnowledgeBase(kb_path)
     

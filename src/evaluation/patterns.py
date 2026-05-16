@@ -5,6 +5,7 @@ Pure statistical aggregation — no judgment, no interpretation.
 """
 
 from collections import Counter
+from pathlib import Path
 from typing import Optional
 
 from src.evaluation.knowledge import KnowledgeBase
@@ -39,7 +40,9 @@ DIMENSION_LABELS: dict[str, str] = {
 class PatternComputer:
     """Compute historical patterns from KB. Pure stats — no judgment."""
 
-    def __init__(self, kb_path: str = "/tmp/hoplite/data/knowledge.json"):
+    def __init__(self, kb_path: str = None):
+        if kb_path is None:
+            kb_path = str(Path(__file__).resolve().parent.parent.parent / "data" / "knowledge.json")
         self.kb = KnowledgeBase(kb_path)
 
     # ------------------------------------------------------------------

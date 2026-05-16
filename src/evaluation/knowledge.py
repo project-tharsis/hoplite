@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Optional
 
 
-DEFAULT_KB_PATH = "/tmp/hoplite/data/knowledge.json"
+DEFAULT_KB_PATH = str(Path(__file__).resolve().parent.parent.parent / "data" / "knowledge.json")
 
 
 class KnowledgeBase:
