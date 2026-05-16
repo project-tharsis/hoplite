@@ -137,18 +137,24 @@ def build_narrative_prompt(report_json: dict, search_context: str = "",
     set_pieces = report_json.get("set_pieces", {})
     sub_impact = report_json.get("sub_impact", [])
     
-    # Inject historical patterns if KB exists
+    # Inject historical patterns from KB
     historical_block = ""
-    if kb_path:
-        try:
-            from src.evaluation.patterns import PatternComputer
-            if context:
-                pc = PatternComputer(kb_path)
-                historical_block = pc.format_for_prompt(context, limit=5)
-                if historical_block:
-                    historical_block = f"\n{historical_block}\n"
-        except Exception:
-            pass  # silently skip if no KB data
+    if kb_path is None:
+        from src.paths import DEFAULT_KB_PATH
+        kb_path = str(DEFAULT_KB_PATH)
+
+    try:
+        from src.evaluation.patterns import PatternComputer
+        if context:
+            pc = PatternComputer(kb_path)
+            historical_block = pc.format_for_prompt(context, limit=5)
+            if historical_block:
+                historical_block = f"\n{historical_block}\n"
+    except FileNotFoundError:
+        historical_block = "\n## 历史模式参考\n\n无历史数据\n\n"
+        print("[WARN] KB file not found, skipping historical injection", file=sys.stderr)
+    except Exception as e:
+        print(f"[WARN] Failed to load KB patterns: {e}", file=sys.stderr)
 
     prompt = f"""你是足球战术分析师，需要基于原始比赛数据，用 Arteta 的6个心智模型框架评估阿森纳的表现，然后撰写中文复盘。
 

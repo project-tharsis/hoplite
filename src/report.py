@@ -71,7 +71,7 @@ class ReportOrchestrator:
     def assemble(self, match: Match, stats: dict, events: list,
                  context: dict, set_pieces: dict, subs: list) -> MatchReport:
         """Assemble pure data report. Predict plan from context."""
-        predicted_plan = self.predictor.predict(context or {})
+        predicted_plan = self.predictor.predict(context or {}, kb=self.kb)
         return MatchReport(
             match=match,
             predicted_plan=predicted_plan,
@@ -82,8 +82,9 @@ class ReportOrchestrator:
             subs=subs,
         )
     
-    def save_to_kb(self, report: MatchReport, pre_context: dict, 
-                   model_signals: dict = None, dimension_signals: dict = None):
+    def save_to_kb(self, report: MatchReport, pre_context: dict,
+                   model_signals: dict = None, dimension_signals: dict = None,
+                   overall_signal: str = None):
         """Save match entry to knowledge base."""
         opponent = report.match.away_team if report.match.arsenal_is_home else report.match.home_team
         entry = {
@@ -101,8 +102,12 @@ class ReportOrchestrator:
                 "expected_subs": report.predicted_plan.expected_subs,
             },
             "evaluation": {
+                "source": "llm",
+                "confidence": None,
                 "model_signals": model_signals or {},
                 "dimension_signals": dimension_signals or {},
-            }
+                "overall_signal": overall_signal or "",
+            },
+            "human_override": None,
         }
-        self.kb.save_entry(entry)
+        self.kb.upsert_entry(entry, key="match_id")
