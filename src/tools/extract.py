@@ -61,9 +61,45 @@ def extract_match_stats(match_json: dict) -> dict:
     goals["arsenal"]["total"] = goals["arsenal"]["first_half"] + goals["arsenal"]["second_half"]
     goals["opponent"]["total"] = goals["opponent"]["first_half"] + goals["opponent"]["second_half"]
 
+    home_stats = match_json.get("home_stats") or {}
+    away_stats = match_json.get("away_stats") or {}
+    
+    def _pick_stat(stats_dict: dict, key: str, default=None):
+        return stats_dict.get(key, default) if stats_dict else default
+
     return {
         "score": {"arsenal": arsenal_score, "opponent": opponent_score},
         "xg": {"arsenal": arsenal_xg, "opponent": opponent_xg},
+        "possession": {
+            "arsenal": _pick_stat(home_stats if arsenal_side == "home" else away_stats, "possession"),
+            "opponent": _pick_stat(away_stats if arsenal_side == "home" else home_stats, "possession"),
+        },
+        "shots": {
+            "arsenal": _pick_stat(home_stats if arsenal_side == "home" else away_stats, "shots"),
+            "opponent": _pick_stat(away_stats if arsenal_side == "home" else home_stats, "shots"),
+        },
+        "shots_on_target": {
+            "arsenal": _pick_stat(home_stats if arsenal_side == "home" else away_stats, "shots_on_target"),
+            "opponent": _pick_stat(away_stats if arsenal_side == "home" else home_stats, "shots_on_target"),
+        },
+        "passes": {
+            "arsenal": {
+                "total": _pick_stat(home_stats if arsenal_side == "home" else away_stats, "passes"),
+                "accuracy": _pick_stat(home_stats if arsenal_side == "home" else away_stats, "pass_accuracy"),
+            },
+            "opponent": {
+                "total": _pick_stat(away_stats if arsenal_side == "home" else home_stats, "passes"),
+                "accuracy": _pick_stat(away_stats if arsenal_side == "home" else home_stats, "pass_accuracy"),
+            },
+        },
+        "fouls": {
+            "arsenal": _pick_stat(home_stats if arsenal_side == "home" else away_stats, "fouls"),
+            "opponent": _pick_stat(away_stats if arsenal_side == "home" else home_stats, "fouls"),
+        },
+        "corners": {
+            "arsenal": _pick_stat(home_stats if arsenal_side == "home" else away_stats, "corners"),
+            "opponent": _pick_stat(away_stats if arsenal_side == "home" else home_stats, "corners"),
+        },
         "goals": goals,
         "cards": cards,
     }
