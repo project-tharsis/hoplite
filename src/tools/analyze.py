@@ -1,14 +1,63 @@
-"""Tool: analyze_match — run 6 tactical lenses against a match."""
+"""Tool: analyze_match — run v3 tactical assessment against a match."""
 import json
 import sys
 from datetime import datetime
+
 from src.models.match import Match
 from src.report import ReportOrchestrator
-from src.data.search_source import build_match_report_query
+
+
+def _infer_pre_match_context(match: Match) -> dict:
+    """Infer pre-match context based solely on match metadata."""
+    opponent = match.away_team if match.arsenal_is_home else match.home_team
+
+    # Opponent quality tiers
+    top6 = {
+        "Man City", "Liverpool", "Chelsea", "Spurs", "Man Utd", "Newcastle"
+    }
+    european_elite = {
+        "Real Madrid", "Bayern Munich", "Bayern", "PSG",
+        "Barcelona", "Inter", "Inter Milan",
+    }
+    mid_table = {
+        "Aston Villa", "Villa", "Brighton", "West Ham", "Crystal Palace",
+        "Brentford", "Fulham", "Everton", "Nottingham Forest",
+        "Bournemouth", "Wolves",
+    }
+
+    if opponent in top6:
+        opponent_quality = "top6"
+    elif opponent in european_elite:
+        opponent_quality = "european_elite"
+    elif opponent in mid_table:
+        opponent_quality = "mid_table"
+    else:
+        opponent_quality = "lower"
+
+    # Venue
+    venue = "home" if match.arsenal_is_home else "away"
+
+    # Competition stage
+    month = match.date.month
+    if "Premier League" in match.competition:
+        competition_stage = "league_late" if month in {2, 3, 4, 5} else "league_early"
+    elif "Champions League" in match.competition:
+        competition_stage = "knockout" if month in {3, 4, 5} else "group_stage"
+    else:
+        competition_stage = "regular"
+
+    return {
+        "opponent_quality": opponent_quality,
+        "venue": venue,
+        "competition_stage": competition_stage,
+        "injury_situation": "full_strength",
+        "recent_form": "mixed",
+        "opponent_style": "possession",
+    }
 
 
 def analyze_match(match_json: dict, search_queries: list = None) -> dict:
-    """Run tactical analysis on a match. Returns report + search queries."""
+    """Run v3 tactical analysis on a match. Returns report + search queries."""
     # Deserialize Match
     m = Match(
         fixture_id=match_json["fixture_id"],
@@ -27,38 +76,16 @@ def analyze_match(match_json: dict, search_queries: list = None) -> dict:
         away_lineup=match_json.get("away_lineup", []),
     )
 
-    # Run 6 lenses
+    # Build pre-match context from match metadata
+    pre_match_context = _infer_pre_match_context(m)
+
+    # Run v3 pipeline: predictor → mental models → 3D assessment → knowledge base
     orchestrator = ReportOrchestrator()
-    report = orchestrator.generate(m)
-
-    # Build search queries for agent
-    if search_queries is None:
-        opponent = m.away_team if m.arsenal_is_home else m.home_team
-        search_queries = [build_match_report_query(opponent, m.date.strftime("%Y-%m-%d"))]
-        # Add trend queries for top lenses
-        search_queries.extend([
-            "Arsenal set pieces analysis " + m.date.strftime("%Y-%m"),
-            "Arsenal tactical patterns " + opponent + " post-match",
-        ])
-
-    # Serialize report
-    results_json = []
-    for r in report.results:
-        results_json.append({
-            "lens_name": r.lens_name,
-            "summary": r.summary,
-            "score": r.score,
-            "key_moments": r.key_moments,
-            "insights": r.insights,
-        })
+    report = orchestrator.generate(m, pre_match_context)
 
     return {
-        "report": {
-            "overall_score": report.overall_score,
-            "one_line_summary": report.one_line_summary,
-            "results": results_json,
-        },
-        "search_queries": search_queries,
+        "report": report.to_dict(),
+        "search_queries": search_queries if search_queries is not None else [],
     }
 
 
