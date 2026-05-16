@@ -278,8 +278,15 @@ class PatternComputer:
         }
 
     def format_for_prompt(self, context: dict, limit: int = 5) -> str:
-        """
-        Generate a Chinese markdown block for injection into LLM prompt.
+        """Generate a rich Chinese markdown block for LLM prompt injection.
+
+        Includes:
+        - Similar scenario summary (count, W/D/L, avg scores)
+        - Dimension signal distribution
+        - 6-model signal distribution
+        - Top focus areas
+        - Recent 3 similar cases with detail
+        - Explicit LLM guardrails
         """
         summary = self.similar_match_summary(context, limit=limit)
         count = summary["count"]
@@ -294,8 +301,11 @@ class PatternComputer:
             lines.append(
                 f"类似场景（{venue} vs {opp_quality} {stage}）：无历史数据"
             )
+            lines.append("")
+            lines.append("**⚠️ 提示：** 无历史可参考时，完全以本场比赛数据为准做出判断。")
             return "\n".join(lines)
 
+        # Summary header
         lines.append(
             f"类似场景（{venue} vs {opp_quality} {stage}）：共 {count} 场"
         )
@@ -306,21 +316,70 @@ class PatternComputer:
         )
         lines.append("")
 
+        # Dimension signals
+        dim_dist = summary.get("dimension_signal_distribution", {})
+        if dim_dist:
+            lines.append("### 维度信号分布")
+            for dim_key in DIMENSION_KEYS:
+                label = DIMENSION_LABELS.get(dim_key, dim_key)
+                dist = dim_dist.get(dim_key, {})
+                lines.append(
+                    f"- {label}：🟢{dist.get('🟢', 0)} 🟡{dist.get('🟡', 0)} 🔴{dist.get('🔴', 0)}"
+                )
+            lines.append("")
+
         # Model signals
-        lines.append("心智模型历史表现：")
-        model_dist = summary["model_signal_distribution"]
-        for model_num in sorted(model_dist.keys()):
-            name = MODEL_NAMES.get(model_num, f"模型{model_num}")
-            dist = model_dist[model_num]
-            lines.append(
-                f"- 模型{model_num} {name}：🟢{dist['🟢']} 🟡{dist['🟡']} 🔴{dist['🔴']}"
-            )
+        model_dist = summary.get("model_signal_distribution", {})
+        if model_dist:
+            lines.append("### 心智模型历史表现")
+            for model_num in sorted(model_dist.keys()):
+                name = MODEL_NAMES.get(model_num, f"模型{model_num}")
+                dist = model_dist[model_num]
+                lines.append(
+                    f"- 模型{model_num} {name}：🟢{dist.get('🟢', 0)} 🟡{dist.get('🟡', 0)} 🔴{dist.get('🔴', 0)}"
+                )
+            lines.append("")
 
-        lines.append("")
-
-        # Common focus areas
-        top_areas = summary["most_common_focus_areas"]
+        # Top focus areas
+        top_areas = summary.get("most_common_focus_areas", [])
         if top_areas:
-            lines.append(f"常见战术重点：{'、'.join(top_areas)}")
+            lines.append(f"### 常见战术重点：{'、'.join(top_areas)}")
+            lines.append("")
+
+        # Recent similar cases (up to 3)
+        all_entries = self.kb.get_all()
+        similar = self._filter_by_context(all_entries, context)
+        recent = sorted(similar, key=lambda e: e.get("timestamp", ""), reverse=True)[:3]
+
+        if recent:
+            lines.append("### 最近类似案例")
+            for i, entry in enumerate(recent, 1):
+                opponent = entry.get("opponent", "?")
+                score = entry.get("score", "?-?")
+                result = entry.get("result", "?")
+                plan = entry.get("predicted_plan", {})
+                focus = "、".join(plan.get("focus_areas", [])) or "无记录"
+
+                eval_data = entry.get("human_override") or entry.get("evaluation", {})
+                dim_signals = eval_data.get("dimension_signals", {})
+                dim_line = " ".join(
+                    f"{DIMENSION_LABELS.get(k, k)}{dim_signals.get(k, '?')}"
+                    for k in DIMENSION_KEYS
+                )
+
+                result_map = {"W": "胜", "D": "平", "L": "负"}
+                lines.append(
+                    f"{i}. {opponent} {score}（{result_map.get(result, result)}）"
+                )
+                lines.append(f"   战术重点：{focus}")
+                lines.append(f"   维度信号：{dim_line}")
+                lines.append("")
+
+        # Guardrails for LLM
+        lines.append("### ⚠️ 历史参考规则")
+        lines.append("- 历史模式仅作为参考，**不覆盖本场比赛的实际数据**")
+        lines.append("- 如果本场数据与历史模式冲突，**以本场数据为准**")
+        lines.append("- 历史信号分布反映的是过去趋势，不预测本场结果")
+        lines.append("")
 
         return "\n".join(lines)
