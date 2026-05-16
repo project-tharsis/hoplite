@@ -112,6 +112,7 @@ def get_team_name(team_data: dict) -> str:
         "Manchester United": "Man Utd",
         "Manchester City": "Man City",
         "Tottenham Hotspur": "Spurs",
+        "Tottenham": "Spurs",
         "Newcastle United": "Newcastle",
         "Wolverhampton Wanderers": "Wolves",
         "West Ham United": "West Ham",
@@ -120,6 +121,9 @@ def get_team_name(team_data: dict) -> str:
         "AFC Bournemouth": "Bournemouth",
         "Crystal Palace": "Crystal Palace",
         "Aston Villa": "Aston Villa",
+        "Leicester City": "Leicester",
+        "Southampton": "Southampton",
+        "Ipswich Town": "Ipswich",
         "Bayern München": "Bayern Munich",
         "Atletico Madrid": "Atletico Madrid",
         "Bayer Leverkusen": "Leverkusen",
@@ -208,16 +212,21 @@ def build_match_entry(
     """Build a KB entry from API-Football fixture data."""
     fixture_data = fixture["fixture"]
     teams = fixture["teams"]
-    goals = fixture["goals"]
-    score = fixture.get("score", {})
+    # Prefer score.fulltime as primary source (more reliable), fall back to goals
+    score_wrapper = fixture.get("score", {}) or {}
+    fulltime = score_wrapper.get("fulltime", {}) or {}
+    goals = fixture.get("goals", {}) or {}
 
     fixture_id = str(fixture_data["id"])
     match_date = fixture_data["date"]  # ISO format from API
 
     home_name = get_team_name(teams["home"])
     away_name = get_team_name(teams["away"])
-    home_score = goals.get("home", 0) or 0
-    away_score = goals.get("away", 0) or 0
+    # Use fulltime score first, fall back to goals
+    home_score = fulltime.get("home") if fulltime.get("home") is not None else goals.get("home", 0)
+    away_score = fulltime.get("away") if fulltime.get("away") is not None else goals.get("away", 0)
+    home_score = home_score or 0
+    away_score = away_score or 0
 
     arsenal_is_home = teams["home"]["id"] == ARSENAL_TEAM_ID
     opponent_name = away_name if arsenal_is_home else home_name

@@ -378,5 +378,237 @@
         "6": "🟡"
       }
     }
+  },
+  {
+    "match_id": "1208023",
+    "timestamp": "2024-08-17T14:00:00+00:00",
+    "opponent": "Wolves",
+    "score": "2-0",
+    "result": "W",
+    "competition": "Premier League",
+    "pre_match_context": {
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "league_early",
+      "injury_situation": "full_strength",
+      "recent_form": "mixed",
+      "opponent_style": "possession"
+    },
+    "predicted_plan": {
+      "focus_areas": [
+        "控制中场",
+        "高位反抢/断球"
+      ],
+      "likely_approach": "打断对手节奏 + 反抢后立即转换",
+      "key_battles": [
+        "中场对抗 — Rice vs 对手组织型后腰",
+        "压迫对手出球核心 — 限制向前传球"
+      ],
+      "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+    },
+    "evaluation": {
+      "model_signals": {},
+      "dimension_signals": {}
+    }
+  },
+  {
+    "match_id": "1208032",
+    "timestamp": "2024-08-24T16:30:00+00:00",
+    "opponent": "Aston Villa",
+    "score": "2-0",
+    "result": "W",
+    "competition": "Premier League",
+    "pre_match_context": {
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "league_early",
+      "injury_situation": "full_strength",
+      "recent_form": "mixed",
+      "opponent_style": "possession"
+    },
+    "predicted_plan": {
+      "focus_areas": [
+        "控制节奏",
+        "转换效率",
+        "高位反抢/断球"
+      ],
+      "likely_approach": "打断对手节奏 + 反抢后立即转换",
+      "key_battles": [
+        "中场对抗 — Rice vs 对手组织型后腰",
+        "压迫对手出球核心 — 限制向前传球"
+      ],
+      "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+    },
+    "evaluation": {
+      "model_signals": {},
+      "dimension_signals": {}
+    }
+  },
+  {
+    "match_id": "1208041",
+    "timestamp": "2024-08-31T11:30:00+00:00",
+    "opponent": "Brighton",
+    "score": "1-1",
+    "result": "D",
+    "competition": "Premier League",
+    "pre_match_context": {
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "league_early",
+      "injury_situation": "full_strength",
+      "recent_form": "mixed",
+      "opponent_style": "possession"
+    },
+    "predicted_plan": {
+      "focus_areas": [
+        "控制中场",
+        "高位反抢/断球"
+      ],
+      "likely_approach": "打断对手节奏 + 反抢后立即转换",
+      "key_battles": [
+        "中场对抗 — Rice vs 对手组织型后腰",
+        "压迫对手出球核心 — 限制向前传球"
+      ],
+      "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+    },
+    "evaluation": {
+      "model_signals": {},
+      "dimension_signals": {}
+    }
+  },
+  {
+    "match_id": "1208059",
+    "timestamp": "2024-09-15T13:00:00+00:00",
+    "opponent": "Tottenham",
+    "score": "1-0",
+    "result": "W",
+    "competition": "Premier League",
+    "pre_match_context": {
+      "opponent_quality": "top6",
+      "venue": "away",
+      "competition_stage": "league_early",
+      "injury_situation": "full_strength",
+      "recent_form": "mixed",
+      "opponent_style": "possession"
+    },
+    "predicted_plan": {
+      "focus_areas": [
+        "控制中场",
+        "高位反抢/断球"
+      ],
+      "likely_approach": "打断对手节奏 + 反抢后立即转换",
+      "key_battles": [
+        "中场对抗 — Rice vs 对手组织型后腰",
+        "压迫对手出球核心 — 限制向前传球",
+        "破密集耐心 — 避免急躁 + 把握有限机会"
+      ],
+      "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+    },
+    "evaluation": {
+      "model_signals": {},
+      "dimension_signals": {}
+    }
+  },
+  {
+    "match_id": "1208067",
+    "timestamp": "2024-09-22T15:30:00+00:00",
+    "opponent": "Man City",
+    "score": "2-2",
+    "result": "D",
+    "competition": "Premier League",
+    "pre_match_context": {
+      "opponent_quality": "top6",
+      "venue": "away",
+      "competition_stage": "league_early",
+      "injury_situation": "full_strength",
+      "recent_form": "mixed",
+      "opponent_style": "possession"
+    },
+    "predicted_plan": {
+      "focus_areas": [
+        "防守结构",
+        "快速转换",
+        "高位反抢/断球"
+      ],
+      "likely_approach": "低位防线 + 结构化防守 + 快速转换反击",
+      "key_battles": [
+        "中场对抗 — Rice vs 对手组织型后腰",
+        "压迫对手出球核心 — 限制向前传球",
+        "关键球员对位 — 限制对手核心进攻点"
+      ],
+      "expected_subs": "60' 上防守型中场巩固结构；75' 反击点换前锋保持速度威胁"
+    },
+    "evaluation": {
+      "model_signals": {},
+      "dimension_signals": {}
+    }
+  },
+  {
+    "match_id": "1208072",
+    "timestamp": "2024-09-28T14:00:00+00:00",
+    "opponent": "Leicester",
+    "score": "4-2",
+    "result": "W",
+    "competition": "Premier League",
+    "pre_match_context": {
+      "opponent_quality": "lower",
+      "venue": "home",
+      "competition_stage": "league_early",
+      "injury_situation": "full_strength",
+      "recent_form": "mixed",
+      "opponent_style": "possession"
+    },
+    "predicted_plan": {
+      "focus_areas": [
+        "控制中场",
+        "边路overload",
+        "高位反抢/断球"
+      ],
+      "likely_approach": "高位防线 + 控球消耗 + 耐心破低位",
+      "key_battles": [
+        "中场对抗 — Rice vs 对手组织型后腰",
+        "压迫对手出球核心 — 限制向前传球",
+        "破密集耐心 — 避免急躁 + 把握有限机会"
+      ],
+      "expected_subs": "60' Trossard换边路保持压力/变化节奏；70' 轮换主力中场维持控球"
+    },
+    "evaluation": {
+      "model_signals": {},
+      "dimension_signals": {}
+    }
+  },
+  {
+    "match_id": "1208081",
+    "timestamp": "2024-10-05T14:00:00+00:00",
+    "opponent": "Southampton",
+    "score": "3-1",
+    "result": "W",
+    "competition": "Premier League",
+    "pre_match_context": {
+      "opponent_quality": "lower",
+      "venue": "home",
+      "competition_stage": "league_early",
+      "injury_situation": "full_strength",
+      "recent_form": "mixed",
+      "opponent_style": "possession"
+    },
+    "predicted_plan": {
+      "focus_areas": [
+        "控制中场",
+        "边路overload",
+        "高位反抢/断球"
+      ],
+      "likely_approach": "高位防线 + 控球消耗 + 耐心破低位",
+      "key_battles": [
+        "中场对抗 — Rice vs 对手组织型后腰",
+        "压迫对手出球核心 — 限制向前传球",
+        "破密集耐心 — 避免急躁 + 把握有限机会"
+      ],
+      "expected_subs": "60' Trossard换边路保持压力/变化节奏；70' 轮换主力中场维持控球"
+    },
+    "evaluation": {
+      "model_signals": {},
+      "dimension_signals": {}
+    }
   }
 ]
