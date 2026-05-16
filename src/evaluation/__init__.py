@@ -4,6 +4,7 @@ from src.evaluation.dimensions import (
     InMatchAdjustmentDimension,
     ResultSatisfactionDimension,
 )
+from src.evaluation.knowledge import KnowledgeBase
 from src.evaluation.predictor import (
     ArtetaPredictor,
     PredictedPlan,
@@ -16,4 +17,5 @@ __all__ = [
     "ResultSatisfactionDimension",
     "ArtetaPredictor",
     "PredictedPlan",
+    "KnowledgeBase",
 ]
