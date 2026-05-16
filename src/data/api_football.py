@@ -34,10 +34,17 @@ class ApiFootballClient:
         resp.raise_for_status()
         return resp.json().get("response", [])
 
-    def get_team_fixtures(self, team_id: int, season: int = 2025, limit: int = 10) -> list[dict]:
+    def get_team_fixtures(self, team_id: int, season: int = 2025, limit: int = 10,
+                          from_date: str = None, to_date: str = None) -> list[dict]:
         """Get recent fixtures for a team."""
         url = f"{self.BASE_URL}/fixtures"
-        params = {"team": team_id, "season": season, "last": limit}
+        params = {"team": team_id, "season": season}
+        if from_date:
+            params["from"] = from_date
+        if to_date:
+            params["to"] = to_date
+        if not from_date and not to_date:
+            params["last"] = limit
         resp = self.session.get(url, params=params)
         resp.raise_for_status()
         return resp.json().get("response", [])
