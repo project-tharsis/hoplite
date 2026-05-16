@@ -4,6 +4,7 @@ __pycache__/
 *.pyc
 .env
 .hermes/
+docs/plans/
 data/
 *.compact
 *.compact.json
