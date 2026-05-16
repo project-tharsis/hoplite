@@ -1,4 +1,8 @@
 from dataclasses import dataclass, field
+from typing import Optional
+
+from src.evaluation.knowledge import KnowledgeBase
+from src.evaluation.patterns import PatternComputer
 
 
 @dataclass
@@ -7,12 +11,14 @@ class PredictedPlan:
     likely_approach: str = ""
     key_battles: list[str] = field(default_factory=list)
     expected_subs: str = ""
+    # NEW: historical reference for prompt injection
+    historical_context: str = ""
 
 
 class ArtetaPredictor:
     """Directional prediction of Arteta's pre-match plan based on context."""
 
-    def predict(self, pre_match_context: dict) -> PredictedPlan:
+    def predict(self, pre_match_context: dict, kb: KnowledgeBase = None) -> PredictedPlan:
         """
         Input: {
             'opponent_quality': 'top6' | 'mid_table' | 'lower' | 'european_elite',
@@ -22,6 +28,7 @@ class ArtetaPredictor:
             'recent_form': 'W3' | 'mixed' | 'poor',
             'opponent_style': 'possession' | 'counter' | 'low_block' | 'pressing' | 'physical',
         }
+        If KB provided: query similar matches, weight focus_areas by historical effectiveness.
         Returns: PredictedPlan with direction, not exact tactics
         """
         opponent_quality = pre_match_context.get("opponent_quality", "mid_table")
@@ -42,11 +49,30 @@ class ArtetaPredictor:
             competition_stage, injury_situation, recent_form, venue, opponent_quality
         )
 
+        # KB-backed pattern weighting
+        historical_context = ""
+        if kb:
+            pc = PatternComputer(kb_path=str(kb.path))
+            summary = pc.similar_match_summary(pre_match_context, limit=5)
+            if summary.get("count", 0) > 0:
+                # Weight focus_areas: promote historically effective areas
+                weighted_areas: list[str] = []
+                for area in focus_areas:
+                    eff = pc.focus_area_effectiveness(area, pre_match_context)
+                    if eff.get("count", 0) >= 3 and eff.get("avg_execution_signal", 0) >= 0.7:
+                        weighted_areas.insert(0, area)  # promote to front
+                    else:
+                        weighted_areas.append(area)
+                focus_areas = weighted_areas
+
+                historical_context = pc.format_for_prompt(pre_match_context, limit=5)
+
         return PredictedPlan(
             focus_areas=focus_areas,
             likely_approach=likely_approach,
             key_battles=key_battles,
             expected_subs=expected_subs,
+            historical_context=historical_context,
         )
 
     def _build_focus_areas(

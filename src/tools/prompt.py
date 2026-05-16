@@ -86,13 +86,13 @@ THREE_DIMENSION_FRAMEWORK = """
 
 WRITING_STYLE = """
 ## 写作要求
-
 - 中文（简体），客观第三人称，不用"我们"或"我"
 - 短句分行，口语化像聊天
 - 中英文术语不加空格（e.g. "rest-defence", "xG", "inverted-fullback"）
 - 分析为什么发生，不是只描述什么
 - 引用 Arteta 的战术偏好但不扮演他
 - 300-400字中文
+- 如果有历史模式参考，请在评估时对比历史表现。
 
 结构:
 1. 总体判断（1-2句，基于三维度综合信号）
@@ -126,7 +126,8 @@ overall_signal 由三个 dimension_signals 投票决定（≥2个🟢 → 🟢, 
 """
 
 
-def build_narrative_prompt(report_json: dict, search_context: str = "") -> str:
+def build_narrative_prompt(report_json: dict, search_context: str = "",
+                           kb_path: str = None) -> str:
     """Build prompt: raw data → Arteta framework → LLM evaluation."""
     summary = report_json.get("one_line_summary", "")
     predicted_plan = report_json.get("predicted_plan", {})
@@ -172,6 +173,8 @@ def build_narrative_prompt(report_json: dict, search_context: str = "") -> str:
 ```json
 {json.dumps(sub_impact, indent=2, ensure_ascii=False)}
 ```
+
+{historical_block}
 
 {ARTETA_MENTAL_MODEL_FRAMEWORK}
 
