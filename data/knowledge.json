@@ -1,0 +1,44 @@
+[
+  {
+    "match_id": "1",
+    "timestamp": "2025-05-01T00:00:00",
+    "opponent": "Chelsea",
+    "score": "3-1",
+    "result": "W",
+    "competition": "Premier League",
+    "pre_match_context": {
+      "opponent_quality": "top6",
+      "venue": "home",
+      "competition_stage": "league_late",
+      "injury_situation": "full_strength",
+      "recent_form": "mixed",
+      "opponent_style": "possession"
+    },
+    "predicted_plan": {
+      "focus_areas": [
+        "控制中场",
+        "高位反抢/断球"
+      ],
+      "likely_approach": "打断对手节奏 + 反抢后立即转换",
+      "key_battles": [
+        "中场对抗 — Rice vs 对手组织型后腰",
+        "压迫对手出球核心 — 限制向前传球",
+        "关键球员对位 — 限制对手核心进攻点"
+      ],
+      "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+    },
+    "evaluation": {
+      "execution_signal": "🟡",
+      "adjustment_signal": "🟡",
+      "satisfaction_signal": "🟡",
+      "model_signals": {
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🟡",
+        "4": "🟡",
+        "5": "🟡",
+        "6": "🟡"
+      }
+    }
+  }
+]

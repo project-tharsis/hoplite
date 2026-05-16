@@ -3,7 +3,7 @@ import json
 import sys
 from datetime import datetime
 
-from src.models.match import Match
+from src.models.match import Match, MatchEvent
 from src.report import ReportOrchestrator
 
 
@@ -71,7 +71,7 @@ def analyze_match(match_json: dict, search_queries: list = None) -> dict:
         away_xg=match_json.get("away_xg"),
         home_formation=match_json.get("home_formation"),
         away_formation=match_json.get("away_formation"),
-        events=match_json.get("events", []),
+        events=[MatchEvent(**e) for e in match_json.get("events", [])],
         home_lineup=match_json.get("home_lineup", []),
         away_lineup=match_json.get("away_lineup", []),
     )

@@ -6,10 +6,8 @@ from src.tools.fetch import fetch_match_data, match_to_json
 
 def test_fetch_match_data_no_config():
     """Without config.yaml, returns error dict."""
-    # This runs in test env where config.yaml may or may not exist
     result = fetch_match_data()
     assert isinstance(result, dict)
-    # Either has match data or error key
     assert "error" in result or "fixture_id" in result
 
 
@@ -18,7 +16,7 @@ def test_analyze_match_with_minimal_data():
     match_json = {
         "fixture_id": 1,
         "date": "2025-05-01T00:00:00",
-        "competition": "PL",
+        "competition": "Premier League",
         "home_team": "Arsenal",
         "away_team": "Chelsea",
         "home_score": 3,
@@ -26,41 +24,59 @@ def test_analyze_match_with_minimal_data():
         "events": [{"minute": 23, "type": "goal", "team": "home", "player": "Saka", "detail": "Shot"}],
     }
     result = analyze_match(match_json)
+    report = result["report"]
     assert "report" in result
     assert "search_queries" in result
-    assert len(result["report"]["results"]) == 6
-    assert result["report"]["overall_score"] > 0
+    # v3 schema: mental_model_results instead of results
+    assert len(report["mental_model_results"]) == 6
+    assert report["overall_signal"] in ("🟢", "🟡", "🔴")
+    assert "one_line_summary" in report
 
 
 def test_build_narrative_prompt():
     from src.tools.prompt import build_narrative_prompt
     report_json = {
-        "one_line_summary": "Arsenal 3-1 Chelsea (7.5/10)",
-        "results": [
-            {"lens_name": "Set Pieces", "summary": "2 SP goals", "score": 8.5, "insights": ["Strong set pieces"], "key_moments": []},
-            {"lens_name": "Goal Events", "summary": "Late winner", "score": 7.0, "insights": ["Good tempo"], "key_moments": []},
-        ]
+        "one_line_summary": "🟢 Arsenal 3-1 Chelsea",
+        "predicted_plan": {
+            "focus_areas": ["控制中场"],
+            "likely_approach": "高位防线",
+            "key_battles": ["中场对抗"],
+            "expected_subs": "60' 边路换人",
+        },
+        "mental_model_results": [
+            {"model_number": 1, "model_name": "文化标准", "signal": "🟢", "summary": "Discipline held", "evidence": ["0 cards"], "insights": []},
+            {"model_number": 2, "model_name": "比赛控制", "signal": "🟢", "summary": "Dominated territory", "evidence": ["62% possession"], "insights": []},
+        ],
+        "execution": {"signal": "🟢", "verdict": "执行到位", "reasoning": "球队贯彻了赛前部署", "evidence": ["control midfield achieved"]},
+        "adjustment": {"signal": "🟡", "verdict": "调整合理", "reasoning": "换人时机恰当", "evidence": []},
+        "satisfaction": {"signal": "🟢", "verdict": "取胜满意", "reasoning": "", "evidence": []},
+        "overall_signal": "🟢",
     }
-    prompt = build_narrative_prompt(report_json, "Arsenal used 3-2-5.")
+    prompt = build_narrative_prompt(report_json, "Arsenal used 3-2-5 build-up.")
     assert "Arsenal 3-1 Chelsea" in prompt
-    assert "Set Pieces" in prompt
-    assert "Goal Events" in prompt
+    assert "文化标准" in prompt
+    assert "比赛控制" in prompt
     assert "3-2-5" in prompt
-    assert "inverted fullback" in prompt.lower()
-    assert "WHY" in prompt
+    # New prompt is Chinese, so check for Chinese keywords
+    assert "中文" in prompt or "Chinese" in prompt.lower()
+    assert "inverted-fullback" in prompt.lower()  # Elio style: no spaces in English terms
+    assert "为什么" in prompt or "WHY" in prompt
 
 
 def test_build_card():
     from src.tools.card import build_card
     report_json = {
-        "one_line_summary": "Arsenal 3-1 Chelsea (7.5/10)",
-        "results": [
-            {"lens_name": "Set Pieces", "summary": "2 SP goals", "score": 8.5, "key_moments": ["Gabriel header"], "insights": []},
-            {"lens_name": "Goal Events", "summary": "Late winner", "score": 7.0, "key_moments": ["Odegaard 89'"], "insights": []},
+        "one_line_summary": "🟢 Arsenal 3-1 Chelsea",
+        "mental_model_results": [
+            {"model_number": 1, "model_name": "文化标准", "signal": "🟢", "summary": "Discipline held", "evidence": [], "insights": []},
+            {"model_number": 2, "model_name": "比赛控制", "signal": "🟢", "summary": "Dominated", "evidence": [], "insights": []},
         ],
-        "overall_score": 7.5,
+        "execution": {"signal": "🟢", "verdict": "执行到位", "reasoning": "", "evidence": []},
+        "adjustment": {"signal": "🟡", "verdict": "调整合理", "reasoning": "", "evidence": []},
+        "satisfaction": {"signal": "🟢", "verdict": "取胜满意", "reasoning": "", "evidence": []},
+        "overall_signal": "🟢",
     }
-    narrative = "Arsenal controlled the game through set piece dominance."
+    narrative = "阿森纳通过定位球控制和边路overload掌控了比赛节奏。"
     result = build_card(report_json, narrative)
     assert "card_path" in result or "card" in result
 
