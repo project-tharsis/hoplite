@@ -4,8 +4,9 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
+from src.paths import DEFAULT_KB_PATH as _DEFAULT_KB_PATH
 
-DEFAULT_KB_PATH = str(Path(__file__).resolve().parent.parent.parent / "data" / "knowledge.json")
+DEFAULT_KB_PATH = str(_DEFAULT_KB_PATH)
 
 
 class KnowledgeBase:

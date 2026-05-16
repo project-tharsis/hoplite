@@ -5,8 +5,8 @@ Pure statistical aggregation — no judgment, no interpretation.
 """
 
 from collections import Counter
-from pathlib import Path
 from typing import Optional
+from src.paths import DEFAULT_KB_PATH as _pat
 
 from src.evaluation.knowledge import KnowledgeBase
 
@@ -42,7 +42,7 @@ class PatternComputer:
 
     def __init__(self, kb_path: str = None):
         if kb_path is None:
-            kb_path = str(Path(__file__).resolve().parent.parent.parent / "data" / "knowledge.json")
+            kb_path = str(_pat)
         self.kb = KnowledgeBase(kb_path)
 
     # ------------------------------------------------------------------

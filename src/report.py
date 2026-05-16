@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field, asdict
-from pathlib import Path
 from typing import Optional
+from src.paths import DEFAULT_KB_PATH
 from src.evaluation.predictor import ArtetaPredictor, PredictedPlan
 from src.evaluation.knowledge import KnowledgeBase
 from src.models.match import Match
@@ -64,7 +64,7 @@ class ReportOrchestrator:
     
     def __init__(self, kb_path: str = None):
         if kb_path is None:
-            kb_path = str(Path(__file__).resolve().parent.parent.parent / "data" / "knowledge.json")
+            kb_path = str(DEFAULT_KB_PATH)
         self.predictor = ArtetaPredictor()
         self.kb = KnowledgeBase(kb_path)
     
