@@ -2,6 +2,38 @@
 from __future__ import annotations
 
 
+# ── Event type normalization ──────────────────────────────────────────
+# API-Football (and other sources) use variant names for event types.
+# We normalize to canonical names while preserving the raw value.
+
+_EVENT_TYPE_MAP: dict[str, str] = {
+    # substitution variants
+    "subst": "substitution",
+    "substitution": "substitution",
+    # goal variants
+    "goal": "goal",
+    "Goal": "goal",
+    # card variants
+    "card": "card",
+    "Card": "card",
+}
+
+
+def normalize_event_type(raw_type: str) -> str:
+    """Map source-specific event type to canonical type.
+
+    Known mappings:
+        subst / substitution → substitution
+        goal / Goal          → goal
+        card / Card          → card
+        anything else        → other
+
+    Always returns a canonical string; callers should store the original
+    value as ``raw_type`` for audit / debugging.
+    """
+    return _EVENT_TYPE_MAP.get(raw_type, "other")
+
+
 def _detect_arsenal_side(match_json: dict) -> str:
     """Return 'home' or 'away' depending on where Arsenal is."""
     if "Arsenal" in match_json.get("home_team", ""):
@@ -43,14 +75,16 @@ def extract_match_stats(match_json: dict) -> dict:
              "opponent": {"yellow": 0, "red": 0}}
 
     for e in events:
+        raw_type = e.get("type", "")
+        canon = normalize_event_type(raw_type)
         side_key = "arsenal" if e.get("team") == arsenal_side else "opponent"
-        if e.get("type") == "goal":
+        if canon == "goal":
             minute = e.get("minute", 0) or 0
             if minute <= 45:
                 goals[side_key]["first_half"] += 1
             else:
                 goals[side_key]["second_half"] += 1
-        elif e.get("type") == "card":
+        elif canon == "card":
             detail_lower = (e.get("detail") or "").lower()
             if "red" in detail_lower:
                 cards[side_key]["red"] += 1
@@ -146,7 +180,8 @@ def extract_key_events(match_json: dict) -> list[dict]:
     return [
         {
             "minute": e.get("minute", 0),
-            "type": e.get("type", ""),
+            "type": normalize_event_type(e.get("type", "")),
+            "raw_type": e.get("type", ""),
             "team": _team_name(e.get("team", "")),
             "player": e.get("player", ""),
             "detail": e.get("detail", ""),
@@ -175,7 +210,7 @@ def extract_set_piece_goals(events: list[dict]) -> dict:
     details: list[str] = []
 
     for e in events:
-        if e.get("type") != "goal":
+        if e.get("type") not in ("goal",):   # already normalized by extract_key_events
             continue
         detail_lower = (e.get("detail") or "").lower()
         is_set_piece = any(kw in detail_lower for kw in SET_PIECE_KEYWORDS)
@@ -280,13 +315,13 @@ def extract_sub_impact(events: list[dict]) -> list[dict]:
 
     # First pass: collect all goals with player + minute
     for e in events:
-        if e.get("type") == "goal":
+        if normalize_event_type(e.get("type", "")) == "goal":
             player = e.get("player", "")
             goals_after.setdefault(player, []).append(e.get("minute", 0))
 
     # Second pass: extract substitutions
     for e in events:
-        if e.get("type") != "substitution":
+        if normalize_event_type(e.get("type", "")) != "substitution":
             continue
         sub_minute = e.get("minute", 0)
         player = e.get("player", "")
