@@ -1,7 +1,15 @@
-"""Tool: build_narrative_prompt — inject raw data + Arteta framework for LLM evaluation."""
+"""Tool: build_narrative_prompt — inject raw data + Arteta framework for LLM evaluation.
+
+Backward-compatible wrapper. When new data sources (MatchFeatures, WeakLabels, rubric)
+are provided, delegates to PromptBuilder for structured output.
+Otherwise falls back to the original monolithic prompt path.
+"""
 
 import json
 import sys
+from typing import Optional, Union
+from pathlib import Path
+
 from src.paths import PROMPTS_DIR
 
 
@@ -17,15 +25,55 @@ def _load_framework() -> str:
 _ARTETA_FRAMEWORK = _load_framework()
 
 
-def build_narrative_prompt(report_json: dict, search_context: str = "",
-                           kb_path: str = None,
-                           skip_history: bool = False) -> str:
+def build_narrative_prompt(
+    report_json: dict,
+    search_context: str = "",
+    kb_path: str = None,
+    skip_history: bool = False,
+    # ── New optional parameters (Phase 5) ────────────────────────────
+    features=None,
+    weak_labels=None,
+    rubric: Optional[Union[str, Path, dict]] = None,
+    calibration_hints: Optional[dict] = None,
+    language: str = "zh",
+) -> str:
     """Build prompt: raw data → Arteta framework → LLM evaluation.
-    
+
+    Backward-compatible: when new structured inputs (features, weak_labels, rubric)
+    are provided, delegates to PromptBuilder for modular output.
+    Otherwise uses the original monolithic prompt path.
+
     Args:
+        report_json: Original match report dict (legacy path).
+        search_context: External tactical analysis text.
+        kb_path: Path to knowledge base JSON.
         skip_history: If True, skip KB historical pattern injection.
-                      Use for batch evaluation to ensure independence.
+        features: MatchFeatures instance (new path).
+        weak_labels: WeakLabels instance (new path).
+        rubric: Path to YAML rubric or pre-loaded dict (new path).
+        calibration_hints: Historical calibration dict (new path).
+        language: Output language code ("zh" or "en").
     """
+    # ── New path: delegate to PromptBuilder ───────────────────────────
+    if features is not None and weak_labels is not None and rubric is not None:
+        from src.evaluation.prompt_builder import PromptBuilder
+
+        # If calibration_hints not provided, try to compute from KB
+        if calibration_hints is None and not skip_history:
+            calibration_hints = _try_load_calibration_hints(
+                report_json.get("context", {}), kb_path
+            )
+
+        builder = PromptBuilder(rubric=rubric, language=language)
+        return builder.build(
+            features=features,
+            weak_labels=weak_labels,
+            calibration_hints=calibration_hints,
+            skip_history=skip_history,
+            search_context=search_context,
+        )
+
+    # ── Legacy path: original monolithic prompt ───────────────────────
     summary = report_json.get("one_line_summary", "")
     predicted_plan = report_json.get("predicted_plan", {})
     context = report_json.get("context", {})
@@ -33,7 +81,7 @@ def build_narrative_prompt(report_json: dict, search_context: str = "",
     key_events = report_json.get("key_events", [])
     set_pieces = report_json.get("set_pieces", {})
     sub_impact = report_json.get("sub_impact", [])
-    
+
     # Inject historical patterns from KB (skipped for batch evaluation)
     historical_block = ""
     if not skip_history:
@@ -100,6 +148,22 @@ def build_narrative_prompt(report_json: dict, search_context: str = "",
         prompt += f"\n\n## 外部战术分析参考\n{search_context[:1000]}\n"
     
     return prompt
+
+
+def _try_load_calibration_hints(context: dict, kb_path: Optional[str] = None) -> Optional[dict]:
+    """Try to load calibration hints from KB. Returns None on failure."""
+    if not context:
+        return None
+    try:
+        from src.evaluation.patterns import PatternComputer
+        path = kb_path
+        if path is None:
+            from src.paths import DEFAULT_KB_PATH
+            path = str(DEFAULT_KB_PATH)
+        pc = PatternComputer(path)
+        return pc.similar_match_summary(context, limit=5)
+    except Exception:
+        return None
 
 
 if __name__ == "__main__":
