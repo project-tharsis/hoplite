@@ -35,6 +35,7 @@ class MatchFeatures:
     # Result & context
     result: str = ""                # W | D | L
     score_margin: int = 0
+    opponent_name: str = ""         # e.g., "Bournemouth"
     opponent_quality: str = ""      # top6 | european_elite | mid_table | lower
     venue: str = ""                 # home | away
     competition_stage: str = ""     # league_early | league_late | group_stage | knockout | regular
@@ -146,6 +147,12 @@ class FeatureExtractor:
         features.opponent_quality = context.get("opponent_quality", "unknown")
         features.venue = context.get("venue", "")
         features.competition_stage = context.get("competition_stage", "")
+
+        # Derive opponent name from team fields
+        arsenal_side = _detect_arsenal_side(match_json)
+        home_team = match_json.get("home_team", "")
+        away_team = match_json.get("away_team", "")
+        features.opponent_name = away_team if arsenal_side == "home" else home_team
 
         # ── Stats fields + missing_data tracking ─────────────────────
         missing: list[str] = []

@@ -208,18 +208,20 @@ class PromptBuilder:
             else _RESULT_LABELS_EN.get(f.result, f.result)
         )
 
+        opp = f.opponent_name or "对手"
+
         if self.language == "zh":
             lines = [
                 "## 1. 比赛概述",
                 "",
-                f"比分: 阿森纳 {f.arsenal_goals} - {f.opponent_goals} 对手（{result_label}）",
+                f"比分: 阿森纳 {f.arsenal_goals} - {f.opponent_goals} {opp}（{result_label}）",
                 f"场地: {f.venue or '未知'} | 对手等级: {f.opponent_quality or '未知'} | 赛事: {f.competition_stage or '未知'}",
             ]
         else:
             lines = [
                 "## 1. Match Summary",
                 "",
-                f"Score: Arsenal {f.arsenal_goals} - {f.opponent_goals} Opponent ({result_label})",
+                f"Score: Arsenal {f.arsenal_goals} - {f.opponent_goals} {opp} ({result_label})",
                 f"Venue: {f.venue or 'Unknown'} | Opponent tier: {f.opponent_quality or 'Unknown'} | Stage: {f.competition_stage or 'Unknown'}",
             ]
         lines.append("")
