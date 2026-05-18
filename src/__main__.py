@@ -24,7 +24,11 @@ def main():
         from src.tools.prompt import build_narrative_prompt
         import json
         data = json.load(sys.stdin)
-        print(build_narrative_prompt(data.get("report", data), data.get("search_context", "")))
+        print(build_narrative_prompt(
+            data.get("report", data),
+            data.get("search_context", ""),
+            skip_history=data.get("skip_history", False),
+        ))
     elif tool == "build_card":
         from src.tools.card import build_card
         import json

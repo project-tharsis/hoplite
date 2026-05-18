@@ -324,9 +324,9 @@ def ingest_season(
         print(f"  [{i}/{total}] 📋 {date_str} {home_name} vs {away_name}", end="")
 
         # Fetch events and lineups (2 API calls per fixture)
-        time.sleep(2)  # Rate limit: ~30 req/min for free tier
+        time.sleep(0.5)  # Rate limit: 300 req/min for PRO tier
         events_raw = fetch_events(session, fixture["fixture"]["id"])
-        time.sleep(2)  # Rate limit
+        time.sleep(0.5)  # Rate limit
         lineups_raw = fetch_lineups(session, fixture["fixture"]["id"])
 
         # Build entry

@@ -50,13 +50,21 @@ class PatternComputer:
     # ------------------------------------------------------------------
 
     def _filter_by_context(self, entries: list[dict], context: dict) -> list[dict]:
-        """Filter entries matching the given context keys from pre_match_context."""
+        """Filter entries matching the given context keys from pre_match_context.
+        
+        Only matches on opponent_quality, venue, competition_stage.
+        Opponent name is deliberately excluded so patterns group by
+        scenario type, not by exact opponent.
+        """
+        FILTER_KEYS = {"opponent_quality", "venue", "competition_stage"}
         result = []
         for entry in entries:
             pre_match = entry.get("pre_match_context", {})
             match = True
-            for key, value in context.items():
-                if pre_match.get(key) != value:
+            for key in FILTER_KEYS:
+                if key not in context:
+                    continue
+                if pre_match.get(key) != context.get(key):
                     match = False
                     break
             if match:

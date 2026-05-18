@@ -64,8 +64,30 @@ def extract_match_stats(match_json: dict) -> dict:
     home_stats = match_json.get("home_stats") or {}
     away_stats = match_json.get("away_stats") or {}
     
+    # Raw API-Football key → normalized key mapping (fallback when stats_parser is bypassed)
+    RAW_KEY_MAP = {
+        "Ball Possession": "possession",
+        "Total Shots": "shots",
+        "Shots on Goal": "shots_on_target",
+        "Total passes": "passes",
+        "Passes %": "pass_accuracy",
+        "Fouls": "fouls",
+        "Corner Kicks": "corners",
+        "expected_goals": "xg",
+    }
+
     def _pick_stat(stats_dict: dict, key: str, default=None):
-        return stats_dict.get(key, default) if stats_dict else default
+        if not stats_dict:
+            return default
+        # Try normalized key first, then raw key fallback
+        val = stats_dict.get(key)
+        if val is not None:
+            return val
+        # Try raw API key → normalized reverse lookup
+        for raw_key, norm_key in RAW_KEY_MAP.items():
+            if norm_key == key and raw_key in stats_dict:
+                return stats_dict[raw_key]
+        return default
 
     return {
         "score": {"arsenal": arsenal_score, "opponent": opponent_score},

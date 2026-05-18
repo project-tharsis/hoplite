@@ -18,8 +18,14 @@ _ARTETA_FRAMEWORK = _load_framework()
 
 
 def build_narrative_prompt(report_json: dict, search_context: str = "",
-                           kb_path: str = None) -> str:
-    """Build prompt: raw data → Arteta framework → LLM evaluation."""
+                           kb_path: str = None,
+                           skip_history: bool = False) -> str:
+    """Build prompt: raw data → Arteta framework → LLM evaluation.
+    
+    Args:
+        skip_history: If True, skip KB historical pattern injection.
+                      Use for batch evaluation to ensure independence.
+    """
     summary = report_json.get("one_line_summary", "")
     predicted_plan = report_json.get("predicted_plan", {})
     context = report_json.get("context", {})
@@ -28,24 +34,25 @@ def build_narrative_prompt(report_json: dict, search_context: str = "",
     set_pieces = report_json.get("set_pieces", {})
     sub_impact = report_json.get("sub_impact", [])
     
-    # Inject historical patterns from KB
+    # Inject historical patterns from KB (skipped for batch evaluation)
     historical_block = ""
-    if kb_path is None:
-        from src.paths import DEFAULT_KB_PATH
-        kb_path = str(DEFAULT_KB_PATH)
+    if not skip_history:
+        if kb_path is None:
+            from src.paths import DEFAULT_KB_PATH
+            kb_path = str(DEFAULT_KB_PATH)
 
-    try:
-        from src.evaluation.patterns import PatternComputer
-        if context:
-            pc = PatternComputer(kb_path)
-            historical_block = pc.format_for_prompt(context, limit=5)
-            if historical_block:
-                historical_block = f"\n{historical_block}\n"
-    except FileNotFoundError:
-        historical_block = "\n## 历史模式参考\n\n无历史数据\n\n"
-        print("[WARN] KB file not found, skipping historical injection", file=sys.stderr)
-    except Exception as e:
-        print(f"[WARN] Failed to load KB patterns: {e}", file=sys.stderr)
+        try:
+            from src.evaluation.patterns import PatternComputer
+            if context:
+                pc = PatternComputer(kb_path)
+                historical_block = pc.format_for_prompt(context, limit=5)
+                if historical_block:
+                    historical_block = f"\n{historical_block}\n"
+        except FileNotFoundError:
+            historical_block = "\n## 历史模式参考\n\n无历史数据\n\n"
+            print("[WARN] KB file not found, skipping historical injection", file=sys.stderr)
+        except Exception as e:
+            print(f"[WARN] Failed to load KB patterns: {e}", file=sys.stderr)
 
     prompt = f"""你是足球战术分析师，需要基于原始比赛数据，用 Arteta 的6个心智模型框架评估阿森纳的表现，然后撰写中文复盘。
 
@@ -99,5 +106,6 @@ if __name__ == "__main__":
     input_data = json.load(sys.stdin)
     report = input_data.get("report", input_data)
     search = input_data.get("search_context", "")
-    prompt = build_narrative_prompt(report, search)
+    skip = input_data.get("skip_history", False)
+    prompt = build_narrative_prompt(report, search, skip_history=skip)
     print(prompt)
