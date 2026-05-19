@@ -52,9 +52,13 @@ ERROR_CODES = {
     "MISSING_RAW_INPUT",
     "RAW_FILE_NOT_FOUND",
     "REPORT_FILE_NOT_FOUND",
+    "FETCH_NOT_IMPLEMENTED",
+    "FETCH_FAILED",
+    "ANALYZE_FAILED",
     "PREPARE_FAILED",
     "FEATURES_EMPTY",
     "DUPLICATE_FIXTURE_ID",
+    "WRITE_REQUIRES_FLAG",
 }
 
 
@@ -267,14 +271,22 @@ def run_prepare_seed(
                 analyze_result = analyze_match(input_data)
                 if analyze_result.get("ok"):
                     report_json = analyze_result.get("report")
+                    # Save report snapshot for reproducibility
+                    if report_json and fixture_id_str:
+                        reports_dir = Path(output_dir) / "reports"
+                        reports_dir.mkdir(parents=True, exist_ok=True)
+                        report_snapshot_path = str(reports_dir / f"{fixture_id_str}.json")
+                        with open(report_snapshot_path, "w", encoding="utf-8") as rf:
+                            json.dump(report_json, rf, indent=2, ensure_ascii=False)
+                        report_path = report_snapshot_path  # update to point at saved snapshot
                 else:
                     prepare_rows.append({
                         "legacy_match_id": legacy_id,
                         "fixture_id": fixture_id_str,
                         "ok": False,
                         "error": {
-                            "code": "PREPARE_FAILED",
-                            "message": f"analyze_match failed: {analyze_result.get('error', {}).get('message', 'unknown')}",
+                        "code": "ANALYZE_FAILED",
+                        "message": f"analyze_match failed: {analyze_result.get('error', {}).get('message', 'unknown')}",
                         },
                     })
                     summary["errors"] += 1
@@ -285,7 +297,7 @@ def run_prepare_seed(
                     "fixture_id": fixture_id_str,
                     "ok": False,
                     "error": {
-                        "code": "PREPARE_FAILED",
+                        "code": "ANALYZE_FAILED",
                         "message": f"analyze_match exception: {e}",
                     },
                 })
@@ -765,6 +777,15 @@ def main():
 
     if args.mode == "inventory":
         report = run_inventory(kb_path, manifest_path)
+        if args.output:
+            od = Path(args.output)
+            od.mkdir(parents=True, exist_ok=True)
+            # Write manifest_snapshot.json
+            with open(str(od / "manifest_snapshot.json"), "w", encoding="utf-8") as mf:
+                json.dump(manifest, mf, indent=2, ensure_ascii=False)
+            # Write inventory_report.json
+            with open(str(od / "inventory_report.json"), "w", encoding="utf-8") as rf:
+                json.dump(report, rf, indent=2, ensure_ascii=False)
         print(json.dumps(report, indent=2, ensure_ascii=False))
 
     elif args.mode == "prepare-seed":
