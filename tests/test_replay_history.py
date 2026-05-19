@@ -270,3 +270,129 @@ class TestReplayWeakLabelOnly:
         assert report["summary"]["total_entries"] == 0
         assert report["summary"]["replayed"] == 0
         assert report["summary"]["changed"] == 0
+
+
+# ── Tests: replay_compare_human ─────────────────────────────────────
+
+
+def test_replay_compare_human_includes_reviewed_entries(tmp_path):
+    """replay with --compare-human must include human_comparisons."""
+    import json as json_mod
+    kb_path = tmp_path / "kb.json"
+    entries = [
+        {
+            "match_id": "reviewed-1",
+            "features": {
+                "result": "L", "opponent_quality": "lower", "venue": "away",
+                "competition_stage": "regular", "opponent_name": "Southampton",
+                "arsenal_goals": 1, "opponent_goals": 2, "score_margin": -1,
+                "goals_conceded": 2, "yellow_cards_for": 1, "red_cards_for": 0,
+                "possession_for": 64.0, "possession_against": 36.0, "possession_delta": 28.0,
+                "shots_for": 23, "shots_against": 8, "shot_delta": 15,
+                "shots_on_target_for": 7, "shots_on_target_against": 4, "shot_on_target_delta": 3,
+                "xg_for": 2.10, "xg_against": 0.80, "xg_delta": 1.30,
+                "pass_accuracy_for": 89.0, "pass_accuracy_against": 79.0, "pass_accuracy_delta": 10.0,
+                "corners_for": 9, "corners_against": 4, "corner_delta": 5,
+                "fouls_for": 11, "fouls_against": 9,
+                "substitution_windows": [], "arsenal_sub_count": 0,
+                "goals_after_arsenal_subs": 0, "goals_by_substitutes": 0,
+                "score_state_timeline": [], "set_piece_goals_for": 0, "set_piece_goals_against": 0,
+                "predicted_plan_match_features": {}, "missing_data": [],
+            },
+            "weak_labels": {"overall_signal": "🟡", "model_signals": {}, "dimension_signals": {}},
+            "evaluation": {"overall_signal": "🔴", "model_signals": {}, "dimension_signals": {}},
+            "human_override": {
+                "reviewer": "shuo", "review_status": "confirmed",
+                "corrected_overall_signal": "🔴",
+                "corrected_model_signals": {"1": "🟢", "5": "🔴"},
+                "corrected_dimension_signals": {"satisfaction": "🔴"},
+            },
+        },
+    ]
+    with open(kb_path, "w") as f:
+        json_mod.dump(entries, f)
+
+    from scripts.replay_history import replay_compare_human
+    report = replay_compare_human(str(kb_path))
+
+    assert "human_comparisons" in report
+    assert len(report["human_comparisons"]) == 1
+    comp = report["human_comparisons"][0]
+    assert comp["match_id"] == "reviewed-1"
+    assert comp["wk"]["overall_signal"] == "🔴"
+    assert comp["llm"]["overall_signal"] == "🔴"
+    assert comp["human"]["overall_signal"] == "🔴"
+
+
+def test_replay_compare_human_missing_subfields_becomes_null(tmp_path):
+    """Missing human subfields → null, not exception."""
+    import json as json_mod
+    kb_path = tmp_path / "kb.json"
+    entries = [{
+        "match_id": "partial",
+        "features": {
+            "result": "L", "opponent_quality": "lower", "venue": "away",
+            "competition_stage": "regular", "opponent_name": "Unknown",
+            "arsenal_goals": 1, "opponent_goals": 2, "score_margin": -1,
+            "goals_conceded": 2, "yellow_cards_for": 0, "red_cards_for": 0,
+            "possession_for": 60.0, "possession_against": 40.0, "possession_delta": 20.0,
+            "shots_for": 20, "shots_against": 5, "shot_delta": 15,
+            "shots_on_target_for": 5, "shots_on_target_against": 2, "shot_on_target_delta": 3,
+            "xg_for": 2.0, "xg_against": 0.5, "xg_delta": 1.5,
+            "pass_accuracy_for": 85.0, "pass_accuracy_against": 75.0, "pass_accuracy_delta": 10.0,
+            "corners_for": 5, "corners_against": 2, "corner_delta": 3,
+            "fouls_for": 10, "fouls_against": 10,
+            "substitution_windows": [], "arsenal_sub_count": 0,
+            "goals_after_arsenal_subs": 0, "goals_by_substitutes": 0,
+            "score_state_timeline": [], "set_piece_goals_for": 0, "set_piece_goals_against": 0,
+            "predicted_plan_match_features": {}, "missing_data": [],
+        },
+        "weak_labels": {"overall_signal": "🟡", "model_signals": {}, "dimension_signals": {}},
+        "evaluation": {"overall_signal": "🔴", "model_signals": {}, "dimension_signals": {}},
+        "human_override": {"reviewer": "shuo"},  # missing corrected fields
+    }]
+    with open(kb_path, "w") as f:
+        json_mod.dump(entries, f)
+
+    from scripts.replay_history import replay_compare_human
+    report = replay_compare_human(str(kb_path))
+    comp = report["human_comparisons"][0]
+    assert comp["human"]["overall_signal"] is None
+
+
+def test_replay_does_not_mutate_kb(tmp_path):
+    """Replay must never write to KB."""
+    import json as json_mod
+    kb_path = tmp_path / "kb.json"
+    entries = [{
+        "match_id": "immutable",
+        "features": {
+            "result": "L", "opponent_quality": "lower", "venue": "away",
+            "competition_stage": "regular", "opponent_name": "Test",
+            "arsenal_goals": 0, "opponent_goals": 1, "score_margin": -1,
+            "goals_conceded": 1, "yellow_cards_for": 0, "red_cards_for": 0,
+            "possession_for": 55.0, "possession_against": 45.0, "possession_delta": 10.0,
+            "shots_for": 10, "shots_against": 5, "shot_delta": 5,
+            "shots_on_target_for": 3, "shots_on_target_against": 1, "shot_on_target_delta": 2,
+            "xg_for": 1.0, "xg_against": 0.5, "xg_delta": 0.5,
+            "pass_accuracy_for": 83.0, "pass_accuracy_against": 78.0, "pass_accuracy_delta": 5.0,
+            "corners_for": 4, "corners_against": 3, "corner_delta": 1,
+            "fouls_for": 10, "fouls_against": 10,
+            "substitution_windows": [], "arsenal_sub_count": 0,
+            "goals_after_arsenal_subs": 0, "goals_by_substitutes": 0,
+            "score_state_timeline": [], "set_piece_goals_for": 0, "set_piece_goals_against": 0,
+            "predicted_plan_match_features": {}, "missing_data": [],
+        },
+        "weak_labels": {"overall_signal": "🟡"},
+        "human_override": {"reviewer": "shuo", "corrected_overall_signal": "🔴"},
+    }]
+    before = json_mod.dumps(entries)
+    with open(kb_path, "w") as f:
+        json_mod.dump(entries, f)
+
+    from scripts.replay_history import replay_compare_human
+    replay_compare_human(str(kb_path))
+
+    with open(kb_path) as f:
+        after = f.read()
+    assert before == after, "KB was mutated by replay"
