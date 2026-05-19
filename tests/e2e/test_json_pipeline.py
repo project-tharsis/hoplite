@@ -1342,3 +1342,377 @@ class TestPromptRecordRendering:
             )
         finally:
             paths.DEFAULT_KB_PATH = orig
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# 11. Full backfill E2E: 2 seed + 1 validation
+# ═══════════════════════════════════════════════════════════════════════
+
+
+def _legacy_kb_for_backfill() -> list[dict]:
+    """3 legacy KB entries: 2 seed (one with legacy eval, one with normalized eval) + 1 validation."""
+    return [
+        {
+            "match_id": "seed-raw",
+            "timestamp": "2025-03-15T00:00:00",
+            "opponent": "Chelsea",
+            "score": "2-1",
+            "result": "W",
+            "competition": "Premier League",
+            "pre_match_context": {"opponent": "Chelsea", "opponent_quality": "top6", "venue": "home"},
+            "predicted_plan": {},
+            "evaluation": {
+                "execution_signal": "🟢",
+                "adjustment_signal": "🟡",
+                "satisfaction_signal": "🟢",
+                "model_signals": {"1": "🟢", "2": "🟡", "3": "🟢", "4": "🟡", "5": "🟢", "6": "🟡"},
+            },
+            "custom_legacy_field": "preserve_me",
+        },
+        {
+            "match_id": "seed-report",
+            "timestamp": "2025-04-20T00:00:00",
+            "opponent": "Tottenham",
+            "score": "3-0",
+            "result": "W",
+            "competition": "Premier League",
+            "pre_match_context": {"opponent": "Tottenham", "opponent_quality": "top6", "venue": "away"},
+            "predicted_plan": {},
+            "evaluation": {
+                "overall_signal": "🟢",
+                "model_signals": {"1": "🟢", "2": "🟢", "3": "🟢", "4": "🟢", "5": "🟢", "6": "🟢"},
+                "dimension_signals": {"execution": "🟢", "adjustment": "🟢", "satisfaction": "🟢"},
+            },
+        },
+        {
+            "match_id": "val-1",
+            "timestamp": "2025-05-10T00:00:00",
+            "opponent": "Everton",
+            "score": "1-1",
+            "result": "D",
+            "competition": "Premier League",
+            "pre_match_context": {"opponent": "Everton", "opponent_quality": "mid_table", "venue": "home"},
+            "predicted_plan": {},
+            "evaluation": {
+                "execution_signal": "🟡",
+                "adjustment_signal": "🟡",
+                "satisfaction_signal": "🟡",
+                "model_signals": {},
+            },
+        },
+    ]
+
+
+def _backfill_raw_match_json() -> dict:
+    """Synthetic raw match JSON for the seed-raw entry."""
+    return {
+        "fixture_id": 100001,
+        "date": "2025-03-15T15:00:00",
+        "competition": "Premier League",
+        "home_team": "Arsenal",
+        "away_team": "Chelsea",
+        "home_score": 2,
+        "away_score": 1,
+        "home_xg": 1.8,
+        "away_xg": 0.9,
+        "home_stats": {
+            "Ball Possession": "56%",
+            "Total Shots": 13,
+            "Shots on Goal": 6,
+            "Passes %": "85%",
+            "Corner Kicks": 5,
+            "Fouls": 10,
+        },
+        "away_stats": {
+            "Ball Possession": "44%",
+            "Total Shots": 8,
+            "Shots on Goal": 3,
+            "Passes %": "80%",
+            "Corner Kicks": 3,
+            "Fouls": 12,
+        },
+        "events": [
+            {"minute": 20, "type": "Goal", "team": "home", "player": "Saka", "detail": "Normal Goal"},
+            {"minute": 55, "type": "Goal", "team": "away", "player": "Palmer", "detail": "Normal Goal"},
+            {"minute": 78, "type": "Goal", "team": "home", "player": "Havertz", "detail": "Normal Goal"},
+        ],
+    }
+
+
+def _backfill_report_json() -> dict:
+    """Synthetic analyze report JSON for the seed-report entry."""
+    return {
+        "match": {
+            "fixture_id": 100002,
+            "date": "2025-04-20T17:30:00",
+            "competition": "Premier League",
+            "home_team": "Tottenham",
+            "away_team": "Arsenal",
+            "home_score": 0,
+            "away_score": 3,
+            "arsenal_score": 3,
+            "opponent_score": 0,
+            "result": "W",
+        },
+        "stats": {
+            "possession": [42.0, 58.0],
+            "shots": [6, 16],
+            "shots_on_target": [2, 8],
+            "corners": [2, 7],
+            "fouls": [14, 9],
+            "passes_accuracy": [76.0, 88.0],
+            "score": {"arsenal": 3, "opponent": 0},
+        },
+        "key_events": [
+            {"minute": 15, "type": "Goal", "team": "away", "player": "Saka"},
+            {"minute": 42, "type": "Goal", "team": "away", "player": "Havertz"},
+            {"minute": 70, "type": "Goal", "team": "away", "player": "Trossard"},
+        ],
+        "context": {
+            "opponent": "Tottenham",
+            "opponent_quality": "top6",
+            "venue": "away",
+            "competition_stage": "league_late",
+        },
+        "set_pieces": {"goals_for": 1, "goals_against": 0},
+        "sub_impact": [],
+        "predicted_plan": {"focus_areas": ["transitions", "pressing"]},
+    }
+
+
+def _backfill_validation_report_json() -> dict:
+    """Synthetic analyze report JSON for the val-1 validation entry."""
+    return {
+        "match": {
+            "fixture_id": 100003,
+            "date": "2025-05-10T15:00:00",
+            "competition": "Premier League",
+            "home_team": "Arsenal",
+            "away_team": "Everton",
+            "home_score": 1,
+            "away_score": 1,
+            "arsenal_score": 1,
+            "opponent_score": 1,
+            "result": "D",
+        },
+        "stats": {
+            "possession": [55.0, 45.0],
+            "shots": [10, 8],
+            "shots_on_target": [4, 3],
+            "corners": [5, 3],
+            "fouls": [11, 13],
+            "passes_accuracy": [83.0, 79.0],
+            "score": {"arsenal": 1, "opponent": 1},
+        },
+        "key_events": [],
+        "context": {
+            "opponent": "Everton",
+            "opponent_quality": "mid_table",
+            "venue": "home",
+            "competition_stage": "league_late",
+        },
+        "set_pieces": {"goals_for": 0, "goals_against": 0},
+        "sub_impact": [],
+        "predicted_plan": {},
+    }
+
+
+class TestBackfillE2E:
+    """Full backfill E2E: inventory → prepare-seed → apply-features (dry+write) → validate-rest → idempotency."""
+
+    def test_full_backfill_e2e(self, tmp_path):
+        """End-to-end backfill with 2 seed entries and 1 validation entry."""
+        from scripts.backfill_history import (
+            run_inventory,
+            run_prepare_seed,
+            run_apply_features,
+            run_validate_rest,
+        )
+
+        # ── Setup ────────────────────────────────────────────────────
+        kb_path = tmp_path / "knowledge.json"
+        manifest_path = tmp_path / "backfill_manifest.json"
+        raw_dir = tmp_path / "backfill" / "raw"
+        reports_dir = tmp_path / "backfill" / "reports"
+        raw_dir.mkdir(parents=True)
+        reports_dir.mkdir(parents=True)
+
+        # Write KB
+        kb_entries = _legacy_kb_for_backfill()
+        with open(kb_path, "w") as f:
+            json.dump(kb_entries, f)
+
+        # Write raw match JSON and report JSONs
+        raw_file = raw_dir / "100001.json"
+        with open(raw_file, "w") as f:
+            json.dump(_backfill_raw_match_json(), f)
+
+        report_file = reports_dir / "100002.json"
+        with open(report_file, "w") as f:
+            json.dump(_backfill_report_json(), f)
+
+        val_report_file = reports_dir / "100003.json"
+        with open(val_report_file, "w") as f:
+            json.dump(_backfill_validation_report_json(), f)
+
+        # Write manifest
+        manifest = {
+            "version": "v1",
+            "seed_set": [
+                {
+                    "legacy_match_id": "seed-raw",
+                    "fixture_id": 100001,
+                    "opponent": "Chelsea",
+                    "date": "2025-03-15",
+                    "raw_match_path": str(raw_file),
+                },
+                {
+                    "legacy_match_id": "seed-report",
+                    "fixture_id": 100002,
+                    "opponent": "Tottenham",
+                    "date": "2025-04-20",
+                    "report_path": str(report_file),
+                },
+            ],
+            "validation_set": [
+                {
+                    "legacy_match_id": "val-1",
+                    "fixture_id": 100003,
+                    "opponent": "Everton",
+                    "date": "2025-05-10",
+                    "report_path": str(val_report_file),
+                },
+            ],
+        }
+        with open(manifest_path, "w") as f:
+            json.dump(manifest, f)
+
+        # ── 1. Inventory ─────────────────────────────────────────────
+        inv = run_inventory(str(kb_path), str(manifest_path))
+        assert inv["kb"]["total_entries"] == 3
+        assert inv["kb"]["legacy_only_entries"] == 3
+        assert inv["kb"]["entries_with_features"] == 0
+        assert inv["manifest"]["seed_set_count"] == 2
+        assert inv["manifest"]["validation_set_count"] == 1
+        assert len(inv["issues"]["manifest_ids_not_in_kb"]) == 0
+        assert len(inv["issues"]["seed_entries_missing_input"]) == 0
+
+        # ── 2. Prepare-seed ──────────────────────────────────────────
+        run_dir = tmp_path / "runs" / "seed"
+        prep_result = run_prepare_seed(
+            str(kb_path), str(manifest_path), str(run_dir)
+        )
+        assert prep_result["summary"]["ok"] == 2
+        assert prep_result["summary"]["errors"] == 0
+
+        # Verify JSONL artifacts exist
+        prepare_results_path = Path(prep_result["prepare_results_path"])
+        llm_jobs_path = Path(prep_result["llm_jobs_path"])
+        assert prepare_results_path.exists()
+        assert llm_jobs_path.exists()
+
+        # Read and verify prepare_results.jsonl
+        with open(prepare_results_path) as f:
+            prep_rows = [json.loads(line) for line in f if line.strip()]
+        assert len(prep_rows) == 2
+        assert all(r["ok"] for r in prep_rows)
+        assert prep_rows[0]["legacy_match_id"] == "seed-raw"
+        assert prep_rows[0]["input_type"] == "raw_match"
+        assert prep_rows[1]["legacy_match_id"] == "seed-report"
+        assert prep_rows[1]["input_type"] == "report"
+
+        # Read and verify llm_jobs.jsonl
+        with open(llm_jobs_path) as f:
+            job_rows = [json.loads(line) for line in f if line.strip()]
+        assert len(job_rows) == 2
+        assert all("prompt" in r for r in job_rows)
+        assert all("features" in r for r in job_rows)
+        assert all("weak_labels" in r for r in job_rows)
+
+        # ── 3. Apply-features WITHOUT --write (dry run) ──────────────
+        kb_before_dry = kb_path.read_text()
+        dry_result = run_apply_features(
+            str(kb_path), str(manifest_path), str(run_dir)
+        )
+        assert dry_result["dry_run"] is True
+        assert dry_result["report"]["summary"]["applied"] == 2
+        # KB unchanged
+        assert kb_path.read_text() == kb_before_dry
+
+        # ── 4. Apply-features WITH --write ───────────────────────────
+        write_result = run_apply_features(
+            str(kb_path), str(manifest_path), str(run_dir), dry_run=False
+        )
+        assert write_result["dry_run"] is False
+        assert write_result["report"]["summary"]["applied"] == 2
+
+        # Read updated KB
+        with open(kb_path) as f:
+            updated_kb = json.load(f)
+
+        # Find the seed-raw entry
+        seed_raw = next(e for e in updated_kb if e["match_id"] == "seed-raw")
+        assert "features" in seed_raw
+        assert "weak_labels" in seed_raw
+        assert seed_raw["features_version"] == "v1"
+        assert seed_raw["weak_label_version"] == "v1"
+        assert seed_raw["rubric_version"] == "arteta_v1"
+        assert seed_raw["prompt_builder_version"] == "v1"
+        assert "backfill" in seed_raw
+        assert seed_raw["backfill"]["status"] == "feature_backfilled"
+        assert seed_raw["backfill"]["needs_v2_evaluation"] is True
+
+        # ── 5. Verify legacy_evaluation preserved ────────────────────
+        # seed-raw had legacy evaluation fields (execution_signal etc.)
+        # → should have legacy_evaluation and normalized evaluation
+        assert "legacy_evaluation" in seed_raw
+        assert seed_raw["legacy_evaluation"]["execution_signal"] == "🟢"
+        assert seed_raw["legacy_evaluation"]["adjustment_signal"] == "🟡"
+        assert seed_raw["legacy_evaluation"]["satisfaction_signal"] == "🟢"
+        # Normalized evaluation
+        assert seed_raw["evaluation"]["source"] == "legacy"
+        assert "dimension_signals" in seed_raw["evaluation"]
+        assert seed_raw["evaluation"]["dimension_signals"]["execution"] == "🟢"
+        assert seed_raw["evaluation"]["overall_signal"] == "🟢"  # 2 green, 1 yellow
+        # Unknown field preserved
+        assert seed_raw["custom_legacy_field"] == "preserve_me"
+
+        # seed-report had dimension_signals already → no normalization
+        seed_report = next(e for e in updated_kb if e["match_id"] == "seed-report")
+        assert "features" in seed_report
+        assert "weak_labels" in seed_report
+        assert "legacy_evaluation" not in seed_report  # No normalization needed
+        # Evaluation unchanged (original had dimension_signals, no normalization)
+        assert seed_report["evaluation"]["overall_signal"] == "🟢"
+
+        # Validation entry unchanged
+        val_1 = next(e for e in updated_kb if e["match_id"] == "val-1")
+        assert "features" not in val_1
+
+        # ── 6. Validate-rest ─────────────────────────────────────────
+        validate_dir = tmp_path / "runs" / "validate"
+        kb_before_validate = kb_path.read_text()
+        val_result = run_validate_rest(
+            str(kb_path), str(manifest_path), str(validate_dir)
+        )
+        assert Path(val_result["validation_report_path"]).exists()
+        # KB unchanged by validate-rest
+        assert kb_path.read_text() == kb_before_validate
+
+        # Validation report has comparison for val-1
+        with open(val_result["validation_report_path"]) as f:
+            val_report = json.load(f)
+        assert val_report["summary"]["total"] == 1
+        assert len(val_report["comparisons"]) == 1
+        assert val_report["comparisons"][0]["legacy_match_id"] == "val-1"
+
+        # ── 7. Idempotency: re-run apply-features --write ────────────
+        kb_after_first_write = kb_path.read_text()
+        idempotent_result = run_apply_features(
+            str(kb_path), str(manifest_path), str(run_dir), dry_run=False
+        )
+        assert idempotent_result["report"]["summary"]["applied"] == 0
+        assert idempotent_result["report"]["summary"]["skipped"] == 2
+        # KB unchanged
+        assert kb_path.read_text() == kb_after_first_write
+
