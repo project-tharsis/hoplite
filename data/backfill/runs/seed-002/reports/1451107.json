@@ -14,21 +14,20 @@
   "predicted_plan": {
     "focus_areas": [
       "控制中场",
-      "边路overload",
-      "高位反抢/断球"
+      "高位反抢/断球",
+      "轮换体能管理"
     ],
-    "likely_approach": "高位防线 + 控球消耗 + 耐心破低位",
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
     "key_battles": [
       "中场对抗 — Rice vs 对手组织型后腰",
       "压迫对手出球核心 — 限制向前传球",
-      "破密集耐心 — 避免急躁 + 把握有限机会"
+      "关键球员对位 — 限制对手核心进攻点"
     ],
-    "expected_subs": "60' Trossard换边路保持压力/变化节奏；70' 轮换主力中场维持控球",
-    "historical_context": "## 历史模式参考\n\n类似场景（home vs lower group_stage）：共 2 场\n- 战绩：2胜 0平 0负，场均进球 2.5，场均失球 1.0\n\n### 维度信号分布\n- 执行：🟢0 🟡0 🔴0\n- 调整：🟢0 🟡0 🔴0\n- 满意：🟢0 🟡0 🔴0\n\n### 心智模型历史表现\n- 模型1 文化标准：🟢0 🟡0 🔴0\n- 模型2 比赛控制：🟢0 🟡0 🔴0\n- 模型3 防守身份：🟢0 🟡0 🔴0\n- 模型4 边际收益：🟢0 🟡0 🔴0\n- 模型5 能力叠加：🟢0 🟡0 🔴0\n- 模型6 角色清晰：🟢0 🟡0 🔴0\n\n### 常见战术重点：控制中场、边路overload、高位反抢/断球\n\n### 最近类似案例\n1. Kairat Almaty 3-2（胜）\n   战术重点：控制中场、边路overload、高位反抢/断球\n   维度信号：执行? 调整? 满意?\n\n2. Olympiakos Piraeus 2-0（胜）\n   战术重点：控制中场、边路overload、高位反抢/断球\n   维度信号：执行green 调整yellow 满意green\n\n### ⚠️ 历史参考规则\n- 历史模式仅作为参考，**不覆盖本场比赛的实际数据**\n- 如果本场数据与历史模式冲突，**以本场数据为准**\n- 历史信号分布反映的是过去趋势，不预测本场结果\n"
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
   },
   "context": {
     "opponent": "Bayern München",
-    "opponent_quality": "lower",
+    "opponent_quality": "european_elite",
     "venue": "home",
     "competition_stage": "group_stage",
     "injury_situation": "full_strength",
