@@ -525,6 +525,25 @@ class PromptBuilder:
             for g in guardrails:
                 lines.append(f"- {g}")
 
+        # Known blind spots (v1.1)
+        blind_spots = hints.get("known_blind_spots", [])
+        if blind_spots:
+            lines.append("")
+            if self.language == "zh":
+                lines.append("已知WK盲区:")
+            else:
+                lines.append("Known WK blind spots:")
+            for bs in blind_spots:
+                bs_id = bs.get("id", "?")
+                bs_desc = bs.get("description", "")
+                bs_guard = bs.get("guardrail", "")
+                lines.append(f"- {bs_id}: {bs_desc}")
+                if bs_guard:
+                    if self.language == "zh":
+                        lines.append(f"  护栏: {bs_guard}")
+                    else:
+                        lines.append(f"  Guardrail: {bs_guard}")
+
         lines.append("")
         if self.language == "zh":
             lines.append("**注意**: 历史仅作参考，以本场数据为准。")
