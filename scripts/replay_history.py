@@ -138,12 +138,127 @@ def replay_weak_label_only(kb_path: str) -> dict:
     }
 
 
+def replay_compare_human(kb_path: str) -> dict:
+    """Replay WK v1.1, compare against LLM eval and human_override."""
+    with open(kb_path, encoding="utf-8") as f:
+        entries = json.load(f)
+
+    labeler = WeakLabeler()
+    all_changes: list[dict] = []
+    changed_count = 0
+    replayed = 0
+    skipped: list[dict] = []
+    human_comparisons: list[dict] = []
+
+    for entry in entries:
+        match_id = str(entry.get("match_id", "unknown"))
+        stored_features = entry.get("features")
+
+        if not stored_features:
+            skipped.append({"match_id": match_id, "reason": "missing features"})
+            continue
+
+        try:
+            mf = features_from_dict(stored_features)
+        except Exception as e:
+            skipped.append({"match_id": match_id, "reason": f"features parse error: {e}"})
+            continue
+
+        recomputed = labeler.label(mf)
+        recomputed_dict = {
+            "model_signals": recomputed.model_signals,
+            "dimension_signals": recomputed.dimension_signals,
+            "overall_signal": recomputed.overall_signal,
+        }
+
+        stored_wl = entry.get("weak_labels", {})
+        changes = _compare_weak_labels(stored_wl, recomputed_dict)
+        for change in changes:
+            change["match_id"] = match_id
+            all_changes.append(change)
+        if changes:
+            changed_count += 1
+        replayed += 1
+
+        ho = entry.get("human_override")
+        if ho:
+            eval_ = entry.get("evaluation", {})
+            try:
+                disagreements = _compute_human_disagreements(recomputed_dict, eval_, ho)
+            except Exception:
+                disagreements = []
+            human_comparisons.append({
+                "match_id": match_id,
+                "wk": {
+                    "overall_signal": recomputed.overall_signal,
+                    "dimension_signals": recomputed.dimension_signals,
+                    "model_signals": recomputed.model_signals,
+                },
+                "llm": {
+                    "overall_signal": eval_.get("overall_signal"),
+                    "dimension_signals": eval_.get("dimension_signals", {}),
+                    "model_signals": eval_.get("model_signals", {}),
+                },
+                "human": {
+                    "overall_signal": ho.get("corrected_overall_signal"),
+                    "dimension_signals": ho.get("corrected_dimension_signals", {}),
+                    "model_signals": ho.get("corrected_model_signals", {}),
+                },
+                "disagreements": disagreements,
+            })
+
+    return {
+        "summary": {
+            "total_entries": len(entries),
+            "replayed": replayed,
+            "skipped": len(skipped),
+            "changed": changed_count,
+            "human_reviewed": sum(1 for e in entries if e.get("human_override")),
+            "human_compared": len(human_comparisons),
+        },
+        "changes": all_changes,
+        "human_comparisons": human_comparisons,
+        "skipped": skipped,
+    }
+
+
+def _compute_human_disagreements(wk: dict, llm: dict, human: dict) -> list[dict]:
+    """Compare WK, LLM, and human signals."""
+    disagreements: list[dict] = []
+    h_overall = human.get("corrected_overall_signal")
+    if h_overall:
+        wk_os = wk.get("overall_signal")
+        llm_os = llm.get("overall_signal")
+        if wk_os != h_overall or llm_os != h_overall:
+            disagreements.append({"field": "overall_signal", "wk": wk_os, "llm": llm_os, "human": h_overall})
+
+    h_dims = human.get("corrected_dimension_signals", {})
+    for dim_key in sorted(set(list(wk.get("dimension_signals", {}).keys()) + list(llm.get("dimension_signals", {}).keys()) + list(h_dims.keys()))):
+        wk_v = wk.get("dimension_signals", {}).get(dim_key)
+        llm_v = llm.get("dimension_signals", {}).get(dim_key)
+        h_v = h_dims.get(dim_key)
+        if h_v is not None and (wk_v != h_v or llm_v != h_v):
+            disagreements.append({"field": f"dimension_signals.{dim_key}", "wk": wk_v, "llm": llm_v, "human": h_v})
+
+    h_models = human.get("corrected_model_signals", {})
+    for m_key in sorted(set(list(wk.get("model_signals", {}).keys()) + list(llm.get("model_signals", {}).keys()) + list(h_models.keys()))):
+        wk_v = wk.get("model_signals", {}).get(m_key)
+        llm_v = llm.get("model_signals", {}).get(m_key)
+        h_v = h_models.get(m_key)
+        if h_v is not None and (wk_v != h_v or llm_v != h_v):
+            disagreements.append({"field": f"model_signals.{m_key}", "wk": wk_v, "llm": llm_v, "human": h_v})
+
+    return disagreements
+
+
 def main():
     parser = argparse.ArgumentParser(description="Replay historical KB entries")
     parser.add_argument("--kb", required=True, help="Path to knowledge.json")
     parser.add_argument("--mode", default="weak-label-only",
                         choices=["weak-label-only"],
                         help="Replay mode (currently only weak-label-only)")
+    parser.add_argument("--compare-human", action="store_true",
+                        help="Include human override comparison in output")
     parser.add_argument("--output", required=True, help="Output report path")
     args = parser.parse_args()
 
@@ -153,7 +268,10 @@ def main():
         sys.exit(1)
 
     if args.mode == "weak-label-only":
-        report = replay_weak_label_only(kb_path)
+        if args.compare_human:
+            report = replay_compare_human(kb_path)
+        else:
+            report = replay_weak_label_only(kb_path)
     else:
         print(f"错误: 不支持的模式: {args.mode}", file=sys.stderr)
         sys.exit(1)
