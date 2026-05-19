@@ -35,6 +35,16 @@ class CalibrationComputer:
         "Fewer than 5 similar matches means calibration confidence is low or medium.",
     ]
 
+    KNOWN_BLIND_SPOTS: list[dict] = [
+        {
+            "id": "dominant_stats_loss",
+            "description": "WK can overrate matches where Arsenal dominates shots/xG/possession but loses.",
+            "guardrail": "Do not let shot/xG/possession dominance override result satisfaction. A loss to lower/mid_table opposition cannot be overall green.",
+            "source": "human_review",
+            "weak_label_version": "v1.1",
+        }
+    ]
+
     def __init__(self, kb_path: str | None = None):
         self._pc = PatternComputer(kb_path)
         self.kb = self._pc.kb  # expose for callers that need raw access
@@ -109,6 +119,7 @@ class CalibrationComputer:
             "dimension_signal_distribution": summary["dimension_signal_distribution"],
             "common_missing_data": common_missing,
             "guardrails": list(self.GUARDRAILS),
+            "known_blind_spots": list(self.KNOWN_BLIND_SPOTS),
         }
 
     # ------------------------------------------------------------------
@@ -158,4 +169,5 @@ class CalibrationComputer:
             "dimension_signal_distribution": {},
             "common_missing_data": [],
             "guardrails": list(CalibrationComputer.GUARDRAILS),
+            "known_blind_spots": list(CalibrationComputer.KNOWN_BLIND_SPOTS),
         }
