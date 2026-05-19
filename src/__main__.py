@@ -6,7 +6,7 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: python -m src <tool_name>")
         print("Tools: fetch_match_data, analyze_match, build_narrative_prompt, build_card, save_evaluation")
-        print("       latest (original CLI, kept for backward compat)")
+        print("       prepare_evaluation, latest (original CLI, kept for backward compat)")
         sys.exit(1)
 
     tool = sys.argv[1]
@@ -46,6 +46,21 @@ def main():
             data.get("versions"),
         )
         print(json.dumps(result, indent=2, ensure_ascii=False))
+    elif tool == "prepare_evaluation":
+        from src.tools.prepare_evaluation import prepare_evaluation
+        import json
+        data = json.load(sys.stdin)
+        # Check for --format prompt flag
+        output_format = "json"
+        if "--format" in sys.argv:
+            idx = sys.argv.index("--format")
+            if idx + 1 < len(sys.argv):
+                output_format = sys.argv[idx + 1]
+        result = prepare_evaluation(data, output_format=output_format)
+        if isinstance(result, str):
+            print(result)
+        else:
+            print(json.dumps(result, indent=2, ensure_ascii=False))
     elif tool == "latest":
         from src.cli import main as cli_main
         sys.argv = ["hoplite", "latest"]

@@ -118,6 +118,79 @@ class FeatureExtractor:
     Populates ``missing_data`` for any unavailable fields.
     """
 
+    @staticmethod
+    def extract_from_report(report_json: dict) -> MatchFeatures:
+        """Extract features from an analyze_match report JSON.
+
+        The report has shape: {match, stats, key_events, context, set_pieces,
+        sub_impact, ...}.  This method reconstructs a match-like payload and
+        delegates to ``extract()`` so feature semantics stay consistent.
+
+        Raises:
+            ValueError: if the report is too sparse to produce features.
+        """
+        match_meta = report_json.get("match")
+        if not match_meta:
+            raise ValueError(
+                "报告中缺少 'match' 字段，无法提取特征。"
+                "请提供包含 match、stats、key_events 的完整报告。"
+            )
+
+        home_team = match_meta.get("home_team", "")
+        away_team = match_meta.get("away_team", "")
+
+        # Reconstruct raw event format from enriched key_events
+        raw_events: list[dict] = []
+        for ev in report_json.get("key_events", []):
+            raw_team = "home" if ev.get("is_arsenal") and "Arsenal" in home_team else (
+                "home" if not ev.get("is_arsenal") and "Arsenal" not in home_team else "away"
+            )
+            # Flip: if Arsenal is home and event is NOT arsenal → away
+            arsenal_is_home = "Arsenal" in home_team
+            if ev.get("is_arsenal"):
+                raw_team = "home" if arsenal_is_home else "away"
+            else:
+                raw_team = "away" if arsenal_is_home else "home"
+
+            raw_events.append({
+                "minute": ev.get("minute", 0),
+                "type": ev.get("raw_type", ev.get("type", "")),
+                "team": raw_team,
+                "player": ev.get("player", ""),
+                "detail": ev.get("detail", ""),
+            })
+
+        # Build match-like dict for extract()
+        match_json: dict = {
+            "fixture_id": match_meta.get("fixture_id", ""),
+            "date": match_meta.get("date", ""),
+            "competition": match_meta.get("competition", ""),
+            "home_team": home_team,
+            "away_team": away_team,
+            "home_score": match_meta.get("home_score", 0),
+            "away_score": match_meta.get("away_score", 0),
+            "events": raw_events,
+        }
+
+        # Carry over optional fields
+        for opt in ("home_xg", "away_xg", "home_formation", "away_formation"):
+            if opt in match_meta:
+                match_json[opt] = match_meta[opt]
+
+        # Validate that we have at minimum score data
+        has_score = (
+            match_json.get("home_score") is not None
+            and match_json.get("away_score") is not None
+        )
+        has_teams = bool(home_team) and bool(away_team)
+        if not has_score or not has_teams:
+            raise ValueError(
+                "报告中 match 数据不完整——至少需要 home_team、away_team、"
+                "home_score、away_score 才能提取特征。"
+            )
+
+        return FeatureExtractor().extract(match_json)
+
     def extract(self, match_json: dict) -> MatchFeatures:
         """Main entry point. Returns a fully populated MatchFeatures."""
         features = MatchFeatures()
