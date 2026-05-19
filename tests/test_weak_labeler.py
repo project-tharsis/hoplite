@@ -644,4 +644,132 @@ class TestEdgeCases:
     def test_weak_label_version_set(self, labeler):
         f = _base_features()
         wl = labeler.label(f)
-        assert wl.weak_label_version == "v1"
+        assert wl.weak_label_version == "v1.1"
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# WK v1.1 Result-aware loss guards
+# ═══════════════════════════════════════════════════════════════════════
+
+def _lower_loss_dominant_features() -> MatchFeatures:
+    """1531572-style: all stats dominant, but result=L, opponent=lower."""
+    return MatchFeatures(
+        result="L", opponent_quality="lower", venue="away",
+        competition_stage="regular", opponent_name="Southampton",
+        arsenal_goals=1, opponent_goals=2, score_margin=-1,
+        goals_conceded=2, yellow_cards_for=1, red_cards_for=0,
+        possession_for=64.0, possession_against=36.0, possession_delta=28.0,
+        shots_for=23, shots_against=8, shot_delta=15,
+        shots_on_target_for=7, shots_on_target_against=4, shot_on_target_delta=3,
+        xg_for=2.10, xg_against=0.80, xg_delta=1.30,
+        pass_accuracy_for=89.0, pass_accuracy_against=79.0, pass_accuracy_delta=10.0,
+        corners_for=9, corners_against=4, corner_delta=5,
+        fouls_for=11, fouls_against=9,
+        substitution_windows=[{"minute": 60, "player": "Trossard", "scored_after": True}],
+        arsenal_sub_count=5, goals_after_arsenal_subs=1, goals_by_substitutes=0,
+        missing_data=["pressing", "pressing_recoveries", "transition"],
+    )
+
+
+def test_loss_to_lower_with_dominant_stats_is_red():
+    """1531572-style: WK must veto satisfaction and overall to 🔴."""
+    from src.labels.weak_labeler import WeakLabeler
+    f = _lower_loss_dominant_features()
+    wl = WeakLabeler().label(f)
+    assert wl.dimension_signals["satisfaction"] == "🔴"
+    assert wl.overall_signal == "🔴"
+    assert wl.weak_label_version == "v1.1"
+
+
+def test_loss_to_mid_table_cannot_be_green():
+    """1379109-style: satisfaction=🔴, overall must not be 🟢."""
+    from src.labels.weak_labeler import WeakLabeler
+    from src.features.extractor import MatchFeatures
+    f = MatchFeatures(
+        result="L", opponent_quality="mid_table", venue="away",
+        arsenal_goals=1, opponent_goals=2, score_margin=-1,
+        goals_conceded=2, yellow_cards_for=2, red_cards_for=0,
+        possession_for=53.0, possession_against=47.0, possession_delta=6.0,
+        shots_for=15, shots_against=15, shot_delta=0,
+        shots_on_target_for=9, shots_on_target_against=6, shot_on_target_delta=3,
+        xg_for=1.92, xg_against=2.16, xg_delta=-0.24,
+        pass_accuracy_for=85.0, pass_accuracy_against=82.0, pass_accuracy_delta=3.0,
+        corners_for=3, corners_against=3, corner_delta=0,
+        fouls_for=8, fouls_against=10,
+        substitution_windows=[{"minute": 46, "player": "Sub", "scored_after": True}],
+        arsenal_sub_count=5, goals_after_arsenal_subs=1,
+        missing_data=[],
+    )
+    wl = WeakLabeler().label(f)
+    assert wl.dimension_signals["satisfaction"] == "🔴"
+    assert wl.overall_signal != "🟢"
+    assert wl.weak_label_version == "v1.1"
+
+
+def test_loss_to_top6_cannot_be_green():
+    """Loss to top6 may be 🔴 or 🟡, but never 🟢."""
+    from src.labels.weak_labeler import WeakLabeler
+    from src.features.extractor import MatchFeatures
+    f = MatchFeatures(
+        result="L", opponent_quality="top6", venue="away",
+        arsenal_goals=0, opponent_goals=1, score_margin=-1,
+        goals_conceded=1, yellow_cards_for=2, red_cards_for=0,
+        possession_for=47.0, possession_against=53.0, possession_delta=-6.0,
+        shots_for=11, shots_against=9, shot_delta=2,
+        shots_on_target_for=1, shots_on_target_against=3, shot_on_target_delta=-2,
+        xg_for=0.49, xg_against=0.52, xg_delta=-0.03,
+        pass_accuracy_for=82.0, pass_accuracy_against=85.0, pass_accuracy_delta=-3.0,
+        corners_for=8, corners_against=3, corner_delta=5,
+        fouls_for=10, fouls_against=7,
+        substitution_windows=[{"minute": 5, "player": "Early", "scored_after": False}],
+        arsenal_sub_count=4, goals_after_arsenal_subs=0,
+        missing_data=[],
+    )
+    wl = WeakLabeler().label(f)
+    assert wl.overall_signal != "🟢"
+    assert wl.dimension_signals["satisfaction"] != "🟢"
+
+
+def test_win_with_dominant_stats_unchanged():
+    """1208154-style: W must not be affected by loss guard."""
+    from src.labels.weak_labeler import WeakLabeler
+    from src.features.extractor import MatchFeatures
+    f = MatchFeatures(
+        result="W", opponent_quality="top6", venue="home",
+        arsenal_goals=2, opponent_goals=0, score_margin=2,
+        goals_conceded=0, yellow_cards_for=1, red_cards_for=0,
+        possession_for=50.0, possession_against=50.0, possession_delta=0.0,
+        shots_for=14, shots_against=5, shot_delta=9,
+        shots_on_target_for=6, shots_on_target_against=2, shot_on_target_delta=4,
+        xg_for=2.16, xg_against=0.22, xg_delta=1.94,
+        pass_accuracy_for=87.0, pass_accuracy_against=87.0, pass_accuracy_delta=0.0,
+        corners_for=13, corners_against=0, corner_delta=13,
+        fouls_for=12, fouls_against=8,
+        substitution_windows=[{"minute": 71, "player": "Sub", "scored_after": True}],
+        arsenal_sub_count=3, goals_after_arsenal_subs=1,
+        missing_data=[],
+    )
+    wl = WeakLabeler().label(f)
+    assert wl.dimension_signals["satisfaction"] != "🔴"
+    assert wl.overall_signal != "🔴"
+    assert wl.weak_label_version == "v1.1"
+
+
+def test_weak_label_version_is_v1_1():
+    """Any label output must have version=v1.1."""
+    from src.labels.weak_labeler import WeakLabeler
+    from src.features.extractor import MatchFeatures
+    f = MatchFeatures(result="D", opponent_quality="mid_table", venue="home",
+        arsenal_goals=1, opponent_goals=1, score_margin=0,
+        goals_conceded=1, yellow_cards_for=0, red_cards_for=0,
+        possession_for=55.0, possession_against=45.0, possession_delta=10.0,
+        shots_for=10, shots_against=10, shot_delta=0,
+        shots_on_target_for=3, shots_on_target_against=3, shot_on_target_delta=0,
+        xg_for=1.0, xg_against=1.0, xg_delta=0.0,
+        pass_accuracy_for=80.0, pass_accuracy_against=80.0, pass_accuracy_delta=0.0,
+        corners_for=5, corners_against=5, corner_delta=0,
+        fouls_for=10, fouls_against=10,
+        missing_data=[],
+    )
+    wl = WeakLabeler().label(f)
+    assert wl.weak_label_version == "v1.1"
