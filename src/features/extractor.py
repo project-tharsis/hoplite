@@ -92,6 +92,7 @@ class MatchFeatures:
     substitution_windows: list = field(default_factory=list)  # list of {start_minute, end_minute, player}
     arsenal_sub_count: int = 0
     goals_after_arsenal_subs: int = 0
+    goals_by_substitutes: int = 0  # goals directly scored or assisted by subs
 
     # Score state timeline: list of {minute, arsenal_score, opponent_score}
     score_state_timeline: list = field(default_factory=list)
@@ -255,14 +256,31 @@ class FeatureExtractor:
         if arsenal_subs:
             first_sub_minute = min(s["minute"] for s in arsenal_subs)
             goals_after = 0
+            sub_player_names = {
+                s.get("player_name", "").lower().strip()
+                for s in arsenal_subs
+            }
             for e in events:
                 if (e.get("type") == "goal"
                         and e.get("is_arsenal")
                         and e.get("minute", 0) > first_sub_minute):
                     goals_after += 1
             features.goals_after_arsenal_subs = goals_after
+
+            # ── Goals directly by substitutes ─────────────────────────
+            # Count goals scored or assisted by a substitute player
+            goals_by_subs = 0
+            for e in events:
+                if e.get("type") != "goal" or not e.get("is_arsenal"):
+                    continue
+                scorer = e.get("player", "").lower().strip()
+                assister = e.get("assist", "").lower().strip()
+                if scorer in sub_player_names or assister in sub_player_names:
+                    goals_by_subs += 1
+            features.goals_by_substitutes = goals_by_subs
         else:
             features.goals_after_arsenal_subs = 0
+            features.goals_by_substitutes = 0
 
         # ── Predicted plan match features ────────────────────────────
         features.predicted_plan_match_features = {

@@ -6,7 +6,12 @@ from src.evaluation.knowledge import KnowledgeBase
 from src.evaluation.llm_result import validate_llm_result
 
 
-def save_evaluation(report_json: dict, evaluation: dict) -> dict:
+def save_evaluation(
+    report_json: dict,
+    evaluation: dict,
+    weak_labels: dict | None = None,
+    versions: dict | None = None,
+) -> dict:
     """Validate LLM evaluation and persist to KB.
 
     Input:
@@ -45,11 +50,23 @@ def save_evaluation(report_json: dict, evaluation: dict) -> dict:
         "predicted_plan": report_json.get("predicted_plan", {}),
         "evaluation": {
             "source": "llm",
-            "confidence": None,
+            "confidence": validated.get("confidence"),
             "model_signals": validated["model_signals"],
             "dimension_signals": validated["dimension_signals"],
             "overall_signal": validated["overall_signal"],
+            "narrative": validated.get("narrative", ""),
+            "evidence": validated.get("evidence", {}),
+            "missing_or_weak_evidence": validated.get(
+                "missing_or_weak_evidence", []
+            ),
+            "weak_label_disagreements": validated.get(
+                "weak_label_disagreements", []
+            ),
         },
+        "weak_labels": weak_labels or {},
+        "features_version": (versions or {}).get("features", "v1"),
+        "weak_label_version": (versions or {}).get("weak_label", "v1"),
+        "rubric_version": (versions or {}).get("rubric", "v1"),
         "human_override": None,
     }
 
@@ -65,5 +82,7 @@ if __name__ == "__main__":
     result = save_evaluation(
         input_data.get("report", {}),
         input_data.get("evaluation", {}),
+        input_data.get("weak_labels"),
+        input_data.get("versions"),
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))

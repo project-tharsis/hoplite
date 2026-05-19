@@ -39,7 +39,12 @@ def main():
         from src.tools.save_evaluation import save_evaluation
         import json
         data = json.load(sys.stdin)
-        result = save_evaluation(data.get("report", {}), data.get("evaluation", {}))
+        result = save_evaluation(
+            data.get("report", {}),
+            data.get("evaluation", {}),
+            data.get("weak_labels"),
+            data.get("versions"),
+        )
         print(json.dumps(result, indent=2, ensure_ascii=False))
     elif tool == "latest":
         from src.cli import main as cli_main

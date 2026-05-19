@@ -83,12 +83,11 @@ class WeakLabeler:
             else:
                 wl.dimension_signals[dim] = YELLOW
 
-        # ── Overall signal ────────────────────────────────────────────
-        green_count = sum(1 for s in wl.model_signals.values() if s == GREEN)
-        red_count = sum(1 for s in wl.model_signals.values() if s == RED)
-        if green_count >= 4 and red_count == 0:
+        # ── Overall signal from dimension vote ─────────────────────────
+        dim_signals = list(wl.dimension_signals.values())
+        if all(s == GREEN for s in dim_signals):
             wl.overall_signal = GREEN
-        elif red_count >= 2:
+        elif any(s == RED for s in dim_signals):
             wl.overall_signal = RED
         else:
             wl.overall_signal = YELLOW
@@ -413,7 +412,14 @@ class WeakLabeler:
 
         # Green: subs before 70' AND goals after subs > 0
         if earliest < 70 and goals_after > 0:
-            return GREEN, evidence, "high"
+            # High confidence if subs directly scored/assisted;
+            # medium if only starters scored after subs came on
+            if f.goals_by_substitutes > 0:
+                evidence.append(f"goals_by_substitutes={f.goals_by_substitutes}")
+                return GREEN, evidence, "high"
+            else:
+                evidence.append("goals_after_subs_not_by_substitutes")
+                return GREEN, evidence, "medium"
 
         # Red: subs late (>80') AND goals conceded after subs
         if latest > 80:

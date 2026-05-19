@@ -30,7 +30,7 @@ OPTIONAL_FIELDS = {
 }
 
 
-def validate_llm_result(data: dict) -> dict:
+def validate_llm_result(data: dict, strict: bool = False) -> dict:
     """Validate LLM evaluation output.
 
     Raises ValueError on schema violations.
@@ -150,6 +150,11 @@ def validate_llm_result(data: dict) -> dict:
         missing_optional.append("weak_label_disagreements")
 
     if missing_optional:
+        if strict:
+            raise ValueError(
+                "Strict mode: missing required v2 fields: "
+                + ", ".join(missing_optional)
+            )
         print(
             f"[WARN] Optional v2 fields missing: {missing_optional}. "
             "Consider including evidence, confidence, missing_or_weak_evidence, "
