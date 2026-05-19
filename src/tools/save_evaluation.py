@@ -11,6 +11,7 @@ def save_evaluation(
     evaluation: dict,
     weak_labels: dict | None = None,
     versions: dict | None = None,
+    features: dict | None = None,
 ) -> dict:
     """Validate LLM evaluation and persist to KB.
 
@@ -22,6 +23,14 @@ def save_evaluation(
                 "model_signals": {"1": "🟢", ...},
                 "dimension_signals": {"execution": "🟢", ...},
                 "narrative": "..."
+            },
+            "features": {...optional features dict...},
+            "weak_labels": {...optional weak labels dict...},
+            "versions": {
+                "features": "v1",
+                "weak_label": "v1",
+                "rubric": "arteta_v1",
+                "prompt_builder": "v1"
             }
         }
 
@@ -48,6 +57,7 @@ def save_evaluation(
         "competition": match_data.get("competition", ""),
         "pre_match_context": context,
         "predicted_plan": report_json.get("predicted_plan", {}),
+        "features": features or {},
         "evaluation": {
             "source": "llm",
             "confidence": validated.get("confidence"),
@@ -67,6 +77,7 @@ def save_evaluation(
         "features_version": (versions or {}).get("features", "v1"),
         "weak_label_version": (versions or {}).get("weak_label", "v1"),
         "rubric_version": (versions or {}).get("rubric", "v1"),
+        "prompt_builder_version": (versions or {}).get("prompt_builder", "v1"),
         "human_override": None,
     }
 
@@ -84,5 +95,6 @@ if __name__ == "__main__":
         input_data.get("evaluation", {}),
         input_data.get("weak_labels"),
         input_data.get("versions"),
+        input_data.get("features"),
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))

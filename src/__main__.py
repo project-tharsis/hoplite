@@ -44,6 +44,7 @@ def main():
             data.get("evaluation", {}),
             data.get("weak_labels"),
             data.get("versions"),
+            data.get("features"),
         )
         print(json.dumps(result, indent=2, ensure_ascii=False))
     elif tool == "prepare_evaluation":
