@@ -1,4 +1,4 @@
-"""Tests for backfill_history.py — inventory and prepare-seed modes."""
+"""Tests for backfill_history.py — inventory, prepare-seed, apply-features, validate-rest modes."""
 from __future__ import annotations
 
 import json
@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from scripts.backfill_history import run_inventory, run_prepare_seed
+from scripts.backfill_history import run_inventory, run_prepare_seed, run_apply_features, run_validate_rest
 
 
 # ── Fixtures ────────────────────────────────────────────────────────
@@ -516,3 +516,418 @@ class TestMissingFileErrors:
             rows = [json.loads(line) for line in f if line.strip()]
         assert rows[0]["ok"] is False
         assert rows[0]["error"]["code"] == "LEGACY_ENTRY_NOT_FOUND"
+
+
+# ── Apply-features helpers ─────────────────────────────────────────
+
+
+def _sample_features() -> dict:
+    """Sample features dict as returned by prepare_evaluation."""
+    return {
+        "result": "W",
+        "score_margin": 2,
+        "arsenal_goals": 3,
+        "opponent_goals": 1,
+        "opponent_name": "Chelsea",
+        "venue": "home",
+        "opponent_quality": "top6",
+        "possession_pct": 60,
+        "shots_total": 15,
+        "shots_on_target": 6,
+        "xg_arsenal": None,
+        "xg_opponent": None,
+        "corners": 7,
+        "cards_yellow_arsenal": 1,
+        "cards_yellow_opponent": 2,
+        "cards_red_arsenal": 0,
+        "cards_red_opponent": 0,
+        "sub_impact_score": 0,
+    }
+
+
+def _sample_weak_labels() -> dict:
+    """Sample weak_labels dict as returned by prepare_evaluation."""
+    return {
+        "model_signals": {"M1": "🟢", "M2": "🟡", "M3": "🟢"},
+        "dimension_signals": {"execution": "🟢", "adjustment": "🟡", "satisfaction": "🟢"},
+        "overall_signal": "🟢",
+        "confidence": 0.8,
+        "evidence_refs": [],
+        "missing_data_penalty": 0,
+        "weak_label_version": "v1",
+    }
+
+
+def _write_prepare_results(run_dir: Path, rows: list[dict]) -> Path:
+    """Write prepare_results.jsonl to a run directory."""
+    run_dir.mkdir(parents=True, exist_ok=True)
+    path = run_dir / "prepare_results.jsonl"
+    with open(path, "w", encoding="utf-8") as f:
+        for row in rows:
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    return path
+
+
+def _successful_prepare_row(legacy_match_id: str = "1", fixture_id: str = "123456") -> dict:
+    """A successful prepare_results.jsonl row."""
+    return {
+        "legacy_match_id": legacy_match_id,
+        "fixture_id": fixture_id,
+        "ok": True,
+        "input_type": "raw_match",
+        "features": _sample_features(),
+        "weak_labels": _sample_weak_labels(),
+        "rubric_version": "arteta_v1",
+        "prompt": "test prompt",
+        "raw_match_path": f"data/backfill/raw/{fixture_id}.json",
+        "report_path": "",
+    }
+
+
+def _legacy_entry_with_extra(match_id: str) -> dict:
+    """Legacy KB entry with an extra unknown field."""
+    entry = _legacy_entry(match_id)
+    entry["custom_tag"] = "seed_v1"
+    entry["notes"] = "top6 home win seed case"
+    return entry
+
+
+# ── Test 9: apply-features --write adds features, weak_labels, versions, backfill ──
+
+
+class TestApplyFeaturesAddsFields:
+
+    def test_apply_features_write(self, tmp_path):
+        """apply-features --write adds features, weak_labels, versions, and backfill metadata."""
+        entries = [_legacy_entry("1")]
+        kb_path = _write_kb(tmp_path / "kb.json", entries)
+        manifest_path = _write_manifest(
+            tmp_path / "manifest.json",
+            seed_set=[{
+                "legacy_match_id": "1",
+                "fixture_id": 123456,
+                "opponent": "Chelsea",
+                "date": "2025-05-01",
+                "raw_match_path": "/tmp/raw.json",
+            }],
+        )
+        run_dir = tmp_path / "run"
+        _write_prepare_results(run_dir, [_successful_prepare_row("1", "123456")])
+
+        result = run_apply_features(
+            kb_path, manifest_path, str(run_dir),
+            force=False, dry_run=False,
+        )
+
+        assert result["report"]["summary"]["applied"] == 1
+        assert result["report"]["summary"]["skipped"] == 0
+        assert result["dry_run"] is False
+
+        # Read mutated KB
+        with open(kb_path, encoding="utf-8") as f:
+            kb = json.load(f)
+        entry = kb[0]
+        assert entry["features"] == _sample_features()
+        assert entry["weak_labels"] == _sample_weak_labels()
+        assert entry["features_version"] == "v1"
+        assert entry["weak_label_version"] == "v1"
+        assert entry["rubric_version"] == "arteta_v1"
+        assert entry["prompt_builder_version"] == "v1"
+        assert entry["backfill"]["status"] == "feature_backfilled"
+        assert entry["backfill"]["run_id"] == run_dir.name
+        assert entry["backfill"]["legacy_match_id"] == "1"
+        assert entry["backfill"]["fixture_id"] == "123456"
+        assert entry["backfill"]["needs_v2_evaluation"] is True
+
+        # Verify snapshot files
+        assert (run_dir / "knowledge.before.json").exists()
+        assert (run_dir / "knowledge.after.json").exists()
+        assert (run_dir / "apply_report.json").exists()
+
+
+# ── Test 10: apply-features preserves unknown legacy fields ────────
+
+
+class TestApplyFeaturesPreservesFields:
+
+    def test_preserves_unknown_fields(self, tmp_path):
+        """apply-features --write preserves unknown legacy fields."""
+        entries = [_legacy_entry_with_extra("1")]
+        kb_path = _write_kb(tmp_path / "kb.json", entries)
+        manifest_path = _write_manifest(
+            tmp_path / "manifest.json",
+            seed_set=[{
+                "legacy_match_id": "1",
+                "fixture_id": 123456,
+                "raw_match_path": "/tmp/raw.json",
+            }],
+        )
+        run_dir = tmp_path / "run"
+        _write_prepare_results(run_dir, [_successful_prepare_row("1", "123456")])
+
+        run_apply_features(kb_path, manifest_path, str(run_dir), dry_run=False)
+
+        with open(kb_path, encoding="utf-8") as f:
+            kb = json.load(f)
+        entry = kb[0]
+        assert entry["custom_tag"] == "seed_v1"
+        assert entry["notes"] == "top6 home win seed case"
+        assert entry["pre_match_context"] == {}
+        assert entry["predicted_plan"] == {}
+
+
+# ── Test 11: apply-features copies original evaluation into legacy_evaluation ──
+
+
+class TestApplyFeaturesLegacyEvaluation:
+
+    def test_copies_original_to_legacy_evaluation(self, tmp_path):
+        """apply-features --write copies original evaluation into legacy_evaluation before normalizing."""
+        entry = _legacy_entry("1")
+        entries = [entry]
+        kb_path = _write_kb(tmp_path / "kb.json", entries)
+        manifest_path = _write_manifest(
+            tmp_path / "manifest.json",
+            seed_set=[{
+                "legacy_match_id": "1",
+                "fixture_id": 123456,
+                "raw_match_path": "/tmp/raw.json",
+            }],
+        )
+        run_dir = tmp_path / "run"
+        _write_prepare_results(run_dir, [_successful_prepare_row("1", "123456")])
+
+        run_apply_features(kb_path, manifest_path, str(run_dir), dry_run=False)
+
+        with open(kb_path, encoding="utf-8") as f:
+            kb = json.load(f)
+        e = kb[0]
+        # legacy_evaluation should have original fields
+        assert "legacy_evaluation" in e
+        assert e["legacy_evaluation"]["execution_signal"] == "🟡"
+        assert e["legacy_evaluation"]["adjustment_signal"] == "🟡"
+        assert e["legacy_evaluation"]["satisfaction_signal"] == "🟡"
+        assert e["legacy_evaluation"]["model_signals"] == {}
+
+
+# ── Test 12: apply-features normalizes legacy dimension signals ─────
+
+
+class TestApplyFeaturesNormalizesEvaluation:
+
+    def test_normalizes_dimension_signals(self, tmp_path):
+        """apply-features --write normalizes legacy dimension signals."""
+        entry = _legacy_entry("1")
+        entry["evaluation"]["execution_signal"] = "🟢"
+        entry["evaluation"]["adjustment_signal"] = "🟢"
+        entry["evaluation"]["satisfaction_signal"] = "🔴"
+        entries = [entry]
+        kb_path = _write_kb(tmp_path / "kb.json", entries)
+        manifest_path = _write_manifest(
+            tmp_path / "manifest.json",
+            seed_set=[{
+                "legacy_match_id": "1",
+                "fixture_id": 123456,
+                "raw_match_path": "/tmp/raw.json",
+            }],
+        )
+        run_dir = tmp_path / "run"
+        _write_prepare_results(run_dir, [_successful_prepare_row("1", "123456")])
+
+        run_apply_features(kb_path, manifest_path, str(run_dir), dry_run=False)
+
+        with open(kb_path, encoding="utf-8") as f:
+            kb = json.load(f)
+        e = kb[0]
+        assert e["evaluation"]["source"] == "legacy"
+        assert e["evaluation"]["dimension_signals"] == {
+            "execution": "🟢",
+            "adjustment": "🟢",
+            "satisfaction": "🔴",
+        }
+        # 2 green → overall green
+        assert e["evaluation"]["overall_signal"] == "🟢"
+        assert e["evaluation"]["narrative"] == ""
+
+    def test_all_red_overall_red(self, tmp_path):
+        """3 red dimension signals → overall 🔴."""
+        entry = _legacy_entry("1")
+        entry["evaluation"]["execution_signal"] = "🔴"
+        entry["evaluation"]["adjustment_signal"] = "🔴"
+        entry["evaluation"]["satisfaction_signal"] = "🟡"
+        entries = [entry]
+        kb_path = _write_kb(tmp_path / "kb.json", entries)
+        manifest_path = _write_manifest(
+            tmp_path / "manifest.json",
+            seed_set=[{
+                "legacy_match_id": "1",
+                "fixture_id": 123456,
+                "raw_match_path": "/tmp/raw.json",
+            }],
+        )
+        run_dir = tmp_path / "run"
+        _write_prepare_results(run_dir, [_successful_prepare_row("1", "123456")])
+
+        run_apply_features(kb_path, manifest_path, str(run_dir), dry_run=False)
+
+        with open(kb_path, encoding="utf-8") as f:
+            kb = json.load(f)
+        assert kb[0]["evaluation"]["overall_signal"] == "🔴"
+
+
+# ── Test 13: Re-running apply-features is idempotent ────────────────
+
+
+class TestApplyFeaturesIdempotent:
+
+    def test_idempotent(self, tmp_path):
+        """Re-running apply-features --write is idempotent."""
+        entries = [_legacy_entry("1")]
+        kb_path = _write_kb(tmp_path / "kb.json", entries)
+        manifest_path = _write_manifest(
+            tmp_path / "manifest.json",
+            seed_set=[{
+                "legacy_match_id": "1",
+                "fixture_id": 123456,
+                "raw_match_path": "/tmp/raw.json",
+            }],
+        )
+        run_dir = tmp_path / "run"
+        _write_prepare_results(run_dir, [_successful_prepare_row("1", "123456")])
+
+        # First run
+        run_apply_features(kb_path, manifest_path, str(run_dir), dry_run=False)
+        with open(kb_path, encoding="utf-8") as f:
+            first = json.load(f)
+
+        # Second run — should skip
+        result2 = run_apply_features(kb_path, manifest_path, str(run_dir), dry_run=False)
+        assert result2["report"]["summary"]["applied"] == 0
+        assert result2["report"]["summary"]["skipped"] == 1
+
+        with open(kb_path, encoding="utf-8") as f:
+            second = json.load(f)
+        assert first == second
+
+
+# ── Test 14: validate-rest writes report, does not mutate KB ────────
+
+
+class TestValidateRest:
+
+    def test_validate_rest_no_mutation(self, tmp_path):
+        """validate-rest writes a report and does not mutate KB."""
+        raw_path = tmp_path / "raw" / "999999.json"
+        raw_path.parent.mkdir(parents=True)
+        raw_path.write_text(json.dumps(_raw_match_json(999999)), encoding="utf-8")
+
+        entries = [_legacy_entry("31")]
+        kb_path = _write_kb(tmp_path / "kb.json", entries)
+        before = (tmp_path / "kb.json").read_text(encoding="utf-8")
+        manifest_path = _write_manifest(
+            tmp_path / "manifest.json",
+            seed_set=[],
+            validation_set=[{
+                "legacy_match_id": "31",
+                "fixture_id": 999999,
+                "raw_match_path": str(raw_path),
+            }],
+        )
+        output_dir = tmp_path / "validate_run"
+
+        result = run_validate_rest(kb_path, manifest_path, str(output_dir))
+
+        # KB not mutated
+        after = (tmp_path / "kb.json").read_text(encoding="utf-8")
+        assert before == after
+
+        # Report written
+        assert (output_dir / "validation_report.json").exists()
+        report = result["report"]
+        assert report["summary"]["total"] == 1
+        assert report["summary"]["compared"] + report["summary"]["skipped"] == 1
+
+    def test_validate_rest_skips_missing_input(self, tmp_path):
+        """validate-rest skips validation entries with no raw/report."""
+        entries = [_legacy_entry("31")]
+        kb_path = _write_kb(tmp_path / "kb.json", entries)
+        manifest_path = _write_manifest(
+            tmp_path / "manifest.json",
+            seed_set=[],
+            validation_set=[{"legacy_match_id": "31", "fixture_id": 789}],
+        )
+        output_dir = tmp_path / "validate_run"
+
+        result = run_validate_rest(kb_path, manifest_path, str(output_dir))
+
+        assert result["report"]["summary"]["compared"] == 0
+        assert result["report"]["summary"]["skipped"] == 1
+        assert result["report"]["skipped"][0]["reason"] == "MISSING_RAW_INPUT"
+
+
+# ── Test 15: --force allows replacing existing backfilled features ──
+
+
+class TestForceReplace:
+
+    def test_force_replaces_backfilled_features(self, tmp_path):
+        """--force allows replacing existing backfilled features."""
+        # Create entry that already has features/weak_labels
+        entry = _feature_backed_entry("1")
+        entries = [entry]
+        kb_path = _write_kb(tmp_path / "kb.json", entries)
+        manifest_path = _write_manifest(
+            tmp_path / "manifest.json",
+            seed_set=[{
+                "legacy_match_id": "1",
+                "fixture_id": 123456,
+                "raw_match_path": "/tmp/raw.json",
+            }],
+        )
+        run_dir = tmp_path / "run"
+        _write_prepare_results(run_dir, [_successful_prepare_row("1", "123456")])
+
+        # Without force — should skip
+        result_no_force = run_apply_features(
+            kb_path, manifest_path, str(run_dir), force=False, dry_run=False,
+        )
+        assert result_no_force["report"]["summary"]["skipped"] == 1
+        assert result_no_force["report"]["summary"]["applied"] == 0
+
+        # With force — should replace
+        result_force = run_apply_features(
+            kb_path, manifest_path, str(run_dir), force=True, dry_run=False,
+        )
+        assert result_force["report"]["summary"]["applied"] == 1
+        assert result_force["report"]["summary"]["skipped"] == 0
+
+        with open(kb_path, encoding="utf-8") as f:
+            kb = json.load(f)
+        assert kb[0]["features"] == _sample_features()
+        assert kb[0]["backfill"]["status"] == "feature_backfilled"
+
+
+# ── Test 16: Manifest row with only fixture_id fails MISSING_RAW_INPUT ──
+
+
+class TestFixtureIdOnlyRow:
+
+    def test_prepare_seed_fixture_id_only_fails(self, tmp_path):
+        """Manifest row with only fixture_id (no raw/report) fails with MISSING_RAW_INPUT."""
+        entries = [_legacy_entry("1")]
+        kb_path = _write_kb(tmp_path / "kb.json", entries)
+        manifest_path = _write_manifest(
+            tmp_path / "manifest.json",
+            seed_set=[{"legacy_match_id": "1", "fixture_id": 123456}],
+        )
+        output_dir = tmp_path / "run"
+
+        result = run_prepare_seed(kb_path, manifest_path, str(output_dir))
+
+        assert result["summary"]["errors"] == 1
+        assert result["summary"]["ok"] == 0
+        prepare_path = Path(result["prepare_results_path"])
+        with open(prepare_path, encoding="utf-8") as f:
+            rows = [json.loads(line) for line in f if line.strip()]
+        assert rows[0]["ok"] is False
+        assert rows[0]["error"]["code"] == "MISSING_RAW_INPUT"

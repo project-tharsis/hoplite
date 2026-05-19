@@ -2,25 +2,41 @@
 """Historical backfill seed-set pipeline.
 
 Modes:
-    inventory       Read KB + manifest, print JSON report. No writes.
-    prepare-seed    Load raw/report JSON, run prepare_evaluation, write JSONL artifacts.
+    inventory        Read KB + manifest, print JSON report. No writes.
+    prepare-seed     Load raw/report JSON, run prepare_evaluation, write JSONL artifacts.
+    apply-features   Apply prepared features/weak_labels to KB entries. Requires --run, --write.
+    validate-rest    Dry-run prepare for validation-set entries. No KB mutation.
 
 Usage:
-    python scripts/backfill_history.py \\
-        --kb data/knowledge.json \\
-        --manifest data/backfill/backfill_manifest.json \\
+    python scripts/backfill_history.py \
+        --kb data/knowledge.json \
+        --manifest data/backfill/backfill_manifest.json \
         --mode inventory
 
-    python scripts/backfill_history.py \\
-        --kb data/knowledge.json \\
-        --manifest data/backfill/backfill_manifest.json \\
-        --mode prepare-seed \\
+    python scripts/backfill_history.py \
+        --kb data/knowledge.json \
+        --manifest data/backfill/backfill_manifest.json \
+        --mode prepare-seed \
         --output data/backfill/runs/20260519-seed
+
+    python scripts/backfill_history.py \
+        --kb data/knowledge.json \
+        --manifest data/backfill/backfill_manifest.json \
+        --mode apply-features \
+        --run data/backfill/runs/20260519-seed \
+        --write
+
+    python scripts/backfill_history.py \
+        --kb data/knowledge.json \
+        --manifest data/backfill/backfill_manifest.json \
+        --mode validate-rest \
+        --output data/backfill/runs/20260519-validate
 """
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from collections import Counter
 from datetime import datetime
@@ -370,6 +386,355 @@ def run_prepare_seed(
     }
 
 
+# ── Apply-features mode ─────────────────────────────────────────────
+
+
+def _majority_vote(dimension_signals: dict) -> str:
+    """Compute overall_signal by majority vote of dimension signals."""
+    counts: Counter = Counter()
+    for v in dimension_signals.values():
+        if v in ("🟢", "🟡", "🔴"):
+            counts[v] += 1
+    if counts.get("🟢", 0) >= 2:
+        return "🟢"
+    if counts.get("🔴", 0) >= 2:
+        return "🔴"
+    return "🟡"
+
+
+def _needs_eval_normalization(evaluation: dict) -> bool:
+    """Return True if evaluation uses legacy dimension fields and lacks dimension_signals."""
+    has_legacy = any(
+        evaluation.get(k) for k in ("execution_signal", "adjustment_signal", "satisfaction_signal")
+    )
+    has_new = bool(evaluation.get("dimension_signals"))
+    return has_legacy and not has_new
+
+
+def run_apply_features(
+    kb_path: str,
+    manifest_path: str,
+    run_dir: str,
+    *,
+    force: bool = False,
+    dry_run: bool = True,
+) -> dict:
+    """Apply prepared features/weak_labels to KB entries listed in seed set.
+
+    Reads prepare_results.jsonl from *run_dir*.
+    Writes knowledge.before.json, knowledge.after.json, apply_report.json into *run_dir*.
+    Mutates kb_path only when *dry_run* is False.
+    """
+    entries = _load_kb(kb_path)
+    manifest = _load_manifest(manifest_path)
+    kb_index = _build_kb_index(entries)
+    seed_set = manifest.get("seed_set", [])
+
+    # Build set of seed-set legacy_match_ids for safety
+    seed_ids = {str(row.get("legacy_match_id", "")) for row in seed_set}
+
+    run_path = Path(run_dir)
+    prepare_results_path = run_path / "prepare_results.jsonl"
+    if not prepare_results_path.exists():
+        return {"error": f"prepare_results.jsonl not found in {run_dir}"}
+
+    # Read prepare results
+    prepare_rows: list[dict] = []
+    with open(prepare_results_path, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                prepare_rows.append(json.loads(line))
+
+    # Build lookup: legacy_match_id → prepare result (successful only)
+    prepare_by_id: dict[str, dict] = {}
+    for row in prepare_rows:
+        if row.get("ok"):
+            prepare_by_id[str(row["legacy_match_id"])] = row
+
+    # Snapshot KB before
+    run_path.mkdir(parents=True, exist_ok=True)
+    before_path = run_path / "knowledge.before.json"
+    with open(before_path, "w", encoding="utf-8") as f:
+        json.dump(entries, f, ensure_ascii=False, indent=2)
+
+    now_iso = datetime.now().isoformat(timespec="seconds")
+    run_id = run_path.name
+
+    applied: list[str] = []
+    skipped: list[dict] = []
+    errors: list[dict] = []
+
+    for entry in entries:
+        mid = str(entry.get("match_id", ""))
+        if mid not in seed_ids:
+            continue  # Never touch entries not in seed set
+        if mid not in prepare_by_id:
+            continue  # No successful prepare result
+
+        prep = prepare_by_id[mid]
+
+        # Idempotency: skip if already has features+weak_labels unless --force
+        if not force and entry.get("features") and entry.get("weak_labels"):
+            skipped.append({"legacy_match_id": mid, "reason": "already_backfilled"})
+            continue
+
+        # Apply features and weak_labels
+        entry["features"] = prep["features"]
+        entry["weak_labels"] = prep["weak_labels"]
+
+        # Version fields
+        entry["features_version"] = "v1"
+        entry["weak_label_version"] = "v1"
+        entry["rubric_version"] = prep.get("rubric_version", "arteta_v1")
+        entry["prompt_builder_version"] = "v1"
+
+        # Backfill metadata
+        manifest_row = None
+        for row in seed_set:
+            if str(row.get("legacy_match_id", "")) == mid:
+                manifest_row = row
+                break
+
+        entry["backfill"] = {
+            "status": "feature_backfilled",
+            "run_id": run_id,
+            "legacy_match_id": mid,
+            "fixture_id": str(manifest_row.get("fixture_id", "")) if manifest_row else prep.get("fixture_id", ""),
+            "raw_match_path": prep.get("raw_match_path", ""),
+            "report_path": prep.get("report_path", ""),
+            "prepared_at": now_iso,
+            "needs_v2_evaluation": True,
+        }
+
+        # Normalize legacy evaluation if needed
+        evaluation = entry.get("evaluation", {})
+        if _needs_eval_normalization(evaluation):
+            # Copy original into legacy_evaluation
+            entry["legacy_evaluation"] = dict(evaluation)
+            # Build normalized evaluation
+            dim_signals = {
+                "execution": evaluation.get("execution_signal"),
+                "adjustment": evaluation.get("adjustment_signal"),
+                "satisfaction": evaluation.get("satisfaction_signal"),
+            }
+            new_eval = {
+                "source": "legacy",
+                "model_signals": evaluation.get("model_signals", {}),
+                "dimension_signals": dim_signals,
+                "overall_signal": _majority_vote(dim_signals),
+                "narrative": "",
+            }
+            entry["evaluation"] = new_eval
+
+        applied.append(mid)
+
+    # Write knowledge.after.json
+    after_path = run_path / "knowledge.after.json"
+    with open(after_path, "w", encoding="utf-8") as f:
+        json.dump(entries, f, ensure_ascii=False, indent=2)
+
+    # Write apply_report.json
+    report = {
+        "summary": {
+            "total": len(prepare_rows),
+            "applied": len(applied),
+            "skipped": len(skipped),
+            "errors": len(errors),
+        },
+        "applied": applied,
+        "skipped": skipped,
+        "errors": errors,
+    }
+    report_path = run_path / "apply_report.json"
+    with open(report_path, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+
+    # Mutate KB only when not dry-run
+    if not dry_run:
+        _atomic_write_kb(kb_path, entries)
+
+    return {
+        "report": report,
+        "knowledge_before_path": str(before_path),
+        "knowledge_after_path": str(after_path),
+        "apply_report_path": str(report_path),
+        "dry_run": dry_run,
+    }
+
+
+def _atomic_write_kb(kb_path: str, entries: list[dict]) -> None:
+    """Write KB atomically via temp file + rename."""
+    import tempfile
+    p = Path(kb_path)
+    fd, tmp_name = tempfile.mkstemp(dir=p.parent, suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            json.dump(entries, f, ensure_ascii=False, indent=2)
+        Path(tmp_name).replace(p)
+    except Exception:
+        Path(tmp_name).unlink(missing_ok=True)
+        raise
+
+
+# ── Validate-rest mode ─────────────────────────────────────────────
+
+
+def run_validate_rest(
+    kb_path: str,
+    manifest_path: str,
+    output_dir: str,
+) -> dict:
+    """Dry-run prepare for validation-set entries and compare with legacy signals.
+
+    Does NOT mutate KB.
+    """
+    from src.tools.prepare_evaluation import prepare_evaluation
+    from src.tools.analyze import analyze_match
+
+    entries = _load_kb(kb_path)
+    manifest = _load_manifest(manifest_path)
+    kb_index = _build_kb_index(entries)
+    validation_set = manifest.get("validation_set", [])
+
+    out = Path(output_dir)
+    out.mkdir(parents=True, exist_ok=True)
+
+    comparisons: list[dict] = []
+    skipped: list[dict] = []
+    total = len(validation_set)
+
+    for row in validation_set:
+        legacy_id = str(row.get("legacy_match_id", ""))
+        raw_path = row.get("raw_match_path")
+        report_path = row.get("report_path")
+
+        kb_entry = kb_index.get(legacy_id)
+        if kb_entry is None:
+            skipped.append({"legacy_match_id": legacy_id, "reason": "LEGACY_ENTRY_NOT_FOUND"})
+            continue
+
+        # Check for input
+        has_raw = bool(raw_path)
+        has_report = bool(report_path)
+        if not has_raw and not has_report:
+            skipped.append({"legacy_match_id": legacy_id, "reason": "MISSING_RAW_INPUT"})
+            continue
+
+        # Load input data
+        input_data = None
+        input_type = None
+
+        if has_report:
+            rp = Path(report_path)
+            if not rp.exists():
+                skipped.append({"legacy_match_id": legacy_id, "reason": "REPORT_FILE_NOT_FOUND"})
+                continue
+            with open(rp, encoding="utf-8") as f:
+                input_data = json.load(f)
+            input_type = "report"
+
+        if input_data is None and has_raw:
+            rp = Path(raw_path)
+            if not rp.exists():
+                skipped.append({"legacy_match_id": legacy_id, "reason": "RAW_FILE_NOT_FOUND"})
+                continue
+            with open(rp, encoding="utf-8") as f:
+                input_data = json.load(f)
+            input_type = "raw_match"
+
+        # If only raw match, run analyze_match to get report
+        if input_type == "raw_match":
+            try:
+                analyze_result = analyze_match(input_data)
+                if analyze_result.get("ok"):
+                    eval_input = input_data
+                else:
+                    skipped.append({"legacy_match_id": legacy_id, "reason": "ANALYZE_FAILED"})
+                    continue
+            except Exception as e:
+                skipped.append({"legacy_match_id": legacy_id, "reason": f"ANALYZE_EXCEPTION: {e}"})
+                continue
+        else:
+            eval_input = input_data
+
+        # Run prepare_evaluation
+        try:
+            result = prepare_evaluation(eval_input, output_format="json")
+        except Exception as e:
+            skipped.append({"legacy_match_id": legacy_id, "reason": f"PREPARE_EXCEPTION: {e}"})
+            continue
+
+        if not result.get("ok"):
+            skipped.append({"legacy_match_id": legacy_id, "reason": f"PREPARE_FAILED: {result.get('error', {}).get('code', 'unknown')}"})
+            continue
+
+        weak_labels = result.get("weak_labels", {})
+        weak_label_signal = weak_labels.get("overall_signal", "🟡")
+
+        # Get legacy signal
+        evaluation = kb_entry.get("evaluation", {})
+        legacy_signal = _extract_legacy_overall_signal(evaluation)
+
+        # Model-level comparison
+        weak_model_signals = weak_labels.get("model_signals", {})
+        legacy_model_signals = evaluation.get("model_signals", {})
+        all_model_keys = set(weak_model_signals.keys()) | set(legacy_model_signals.keys())
+        model_differences: dict[str, dict] = {}
+        for mk in sorted(all_model_keys):
+            wl = weak_model_signals.get(mk)
+            ll = legacy_model_signals.get(mk)
+            if wl != ll:
+                model_differences[mk] = {"weak_label": wl, "legacy": ll}
+
+        comparisons.append({
+            "legacy_match_id": legacy_id,
+            "weak_label_signal": weak_label_signal,
+            "legacy_signal": legacy_signal,
+            "match": weak_label_signal == legacy_signal,
+            "model_differences": model_differences,
+        })
+
+    report = {
+        "summary": {
+            "total": total,
+            "compared": len(comparisons),
+            "skipped": len(skipped),
+        },
+        "comparisons": comparisons,
+        "skipped": skipped,
+    }
+
+    report_path = out / "validation_report.json"
+    with open(report_path, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+
+    return {
+        "report": report,
+        "validation_report_path": str(report_path),
+    }
+
+
+def _extract_legacy_overall_signal(evaluation: dict) -> str:
+    """Extract overall signal from evaluation, computing from dimension signals if needed."""
+    # If overall_signal already exists, use it
+    if evaluation.get("overall_signal"):
+        return evaluation["overall_signal"]
+    # Compute from dimension signals (new format)
+    dim = evaluation.get("dimension_signals", {})
+    if dim:
+        return _majority_vote(dim)
+    # Compute from legacy dimension fields
+    legacy_dim = {
+        "execution": evaluation.get("execution_signal"),
+        "adjustment": evaluation.get("adjustment_signal"),
+        "satisfaction": evaluation.get("satisfaction_signal"),
+    }
+    if any(legacy_dim.values()):
+        return _majority_vote(legacy_dim)
+    return "🟡"
+
+
 # ── CLI ────────────────────────────────────────────────────────────
 
 
@@ -377,11 +742,15 @@ def main():
     parser = argparse.ArgumentParser(description="Historical backfill seed-set pipeline")
     parser.add_argument("--kb", required=True, help="Path to knowledge.json")
     parser.add_argument("--manifest", required=True, help="Path to backfill manifest")
-    parser.add_argument("--mode", required=True, choices=["inventory", "prepare-seed"],
+    parser.add_argument("--mode", required=True,
+                        choices=["inventory", "prepare-seed", "apply-features", "validate-rest"],
                         help="Backfill mode")
     parser.add_argument("--output", help="Run directory for output files")
+    parser.add_argument("--run", help="Existing run directory to read artifacts from (for apply-features)")
     parser.add_argument("--write", action="store_true",
                         help="Allow KB mutation (required for apply-features)")
+    parser.add_argument("--force", action="store_true",
+                        help="Allow replacing existing backfilled features")
     args = parser.parse_args()
 
     kb_path = args.kb
@@ -403,6 +772,23 @@ def main():
             print(json.dumps({"error": "--output is required for prepare-seed mode"}), file=sys.stderr)
             sys.exit(1)
         result = run_prepare_seed(kb_path, manifest_path, args.output, dry_run=not args.write)
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+
+    elif args.mode == "apply-features":
+        if not args.run:
+            print(json.dumps({"error": "--run is required for apply-features mode"}), file=sys.stderr)
+            sys.exit(1)
+        result = run_apply_features(
+            kb_path, manifest_path, args.run,
+            force=args.force, dry_run=not args.write,
+        )
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+
+    elif args.mode == "validate-rest":
+        if not args.output:
+            print(json.dumps({"error": "--output is required for validate-rest mode"}), file=sys.stderr)
+            sys.exit(1)
+        result = run_validate_rest(kb_path, manifest_path, args.output)
         print(json.dumps(result, indent=2, ensure_ascii=False))
 
     else:
