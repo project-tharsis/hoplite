@@ -761,3 +761,54 @@ def test_yaml_rubric_dimension_fields():
     for dim in data["dimensions"]:
         for field_name in required_fields:
             assert field_name in dim, f"Dimension {dim.get('id')} missing field: {field_name}"
+
+
+# ── Test: Blind spots in prompt ──────────────────────────────────────
+
+def test_calibration_hints_render_known_blind_spots():
+    """Prompt must include known_blind_spots when present."""
+    from src.features.extractor import MatchFeatures
+    from src.labels.weak_labeler import WeakLabels
+    from src.evaluation.prompt_builder import PromptBuilder
+
+    features = MatchFeatures(
+        result="L", opponent_quality="lower", venue="away",
+        competition_stage="regular", opponent_name="Southampton",
+        arsenal_goals=1, opponent_goals=2, score_margin=-1,
+        goals_conceded=2, yellow_cards_for=0, red_cards_for=0,
+        possession_for=64.0, possession_against=36.0, possession_delta=28.0,
+        shots_for=23, shots_against=8, shot_delta=15,
+        shots_on_target_for=7, shots_on_target_against=4, shot_on_target_delta=3,
+        xg_for=2.10, xg_against=0.80, xg_delta=1.30,
+        pass_accuracy_for=89.0, pass_accuracy_against=79.0, pass_accuracy_delta=10.0,
+        corners_for=9, corners_against=4, corner_delta=5,
+        fouls_for=11, fouls_against=9,
+        missing_data=[],
+    )
+    wl = WeakLabels()
+    wl.overall_signal = "🔴"
+    wl.model_signals = {}
+    wl.dimension_signals = {"execution": "🟢", "adjustment": "🟢", "satisfaction": "🔴"}
+    wl.confidence = {}
+    wl.evidence_refs = {}
+
+    # Use a minimal rubric dict to avoid needing file access
+    rubric = {}
+    builder = PromptBuilder(rubric, language="zh")
+    hints = {
+        "count": 5,
+        "confidence": "medium",
+        "sample_quality": {"with_features": 2, "with_human_review": 1, "legacy_only": 3},
+        "record": {"wins": 2, "draws": 1, "losses": 2, "avg_arsenal_score": 1.8, "avg_opponent_score": 1.2},
+        "model_signal_distribution": {},
+        "common_missing_data": ["pressing"],
+        "guardrails": ["Historical hints are reference only."],
+        "known_blind_spots": [{
+            "id": "dominant_stats_loss",
+            "description": "WK can overrate losses with dominant stats.",
+            "guardrail": "A loss to lower/mid_table cannot be green.",
+        }],
+    }
+    prompt = builder.build(features, wl, calibration_hints=hints)
+    assert "dominant_stats_loss" in prompt
+    assert "WK can overrate" in prompt or "A loss to lower" in prompt
