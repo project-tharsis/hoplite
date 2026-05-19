@@ -1,7 +1,7 @@
 ---
 name: hoplite
 description: "Hoplite v4 — Arsenal tactical analysis MCP skill. Python extracts raw data; LLM applies Arteta's 6 mental models for qualitative analysis."
-version: 4.1.0
+version: 4.2.0
 ---
 
 # Hoplite — Arsenal Tactical Analysis Engine 🔴⚪
@@ -12,20 +12,31 @@ Post-match analysis through Mikel Arteta's six mental models. Python extracts ra
 ```
 Python tools (raw data extraction) → SKILL.md (Arteta decision framework) → Agent/LLM (qualitative analysis + narrative) → Feishu card
                                     ↕
-                           Evolution Layer (knowledge.json → patterns.py → prompt injection)
+                           Evolution Layer (knowledge.json → patterns.py → calibration.py → prompt injection)
 ```
 
 **Separation of concerns:**
 - `src/tools/extract.py` — pure stats, events, context. No judgment.
 - `src/report.py` — data container. No scoring.
 - `src/tools/analyze.py` — orchestrates extraction → assembly
-- `src/tools/prompt.py` — injects raw data + Arteta framework + historical patterns as LLM prompt
-- `src/evaluation/predictor.py` — directional pre-match plan prediction, KB-weighted when history available
-- `src/evaluation/patterns.py` — computes historical patterns (similar matches, focus area effectiveness, model trends)
+- `src/tools/prompt.py` — injects raw data + Arteta framework + historical patterns as LLM prompt (legacy path)
+- `src/tools/prepare_evaluation.py` — v2 pipeline: features + weak labels + structured prompt in one CLI
+- `src/tools/save_evaluation.py` — v2 pipeline: validates strict LLM output, persists to KB
+- `src/tools/review.py` — v2 pipeline: human review override write path
+- `src/features/extractor.py` — deterministic feature extraction from match or report JSON
+- `src/labels/weak_labeler.py` — rule-based weak labels for 6 models + 3 dimensions
+- `src/evaluation/prompt_builder.py` — structured v2 prompt from rubric + features + calibration hints
+- `src/evaluation/calibration.py` — CalibrationComputer: guarded calibration hints from JSON history
+- `src/evaluation/patterns.py` — PatternComputer: historical patterns (legacy-compatible aggregator)
 - `src/evaluation/knowledge.py` — local JSON knowledge base for match storage/retrieval
 - `scripts/ingest_history.py` — batch fetch historical matches from API-Football, populate KB
+- `scripts/replay_history.py` — deterministic weak-label replay, never mutates KB
 - **SKILL.md (this file)** — the Arteta decision brain: 6 mental model framework, 3D assessment logic, writing rules
 - **Agent (LLM)** — applies framework to data, produces signals + narrative
+
+**Rubric sources:**
+- `rubrics/arteta_v1.yaml` — **Machine-readable canonical rubric** (source of truth for v2 pipeline)
+- `prompts/arteta_framework.md` — Human-readable / legacy reference (not read by v2 code)
 
 ## Language
 
@@ -39,7 +50,7 @@ User says any of:
 - "Arsenal match report"
 - "review Arsenal game"
 
-## Workflow (5-step sequence)
+## Workflow (v2 Pipeline — Default)
 
 ### Step 1: Fetch Match Data
 Run the `fetch_match_data` tool to get the latest Arsenal match with xG data:
@@ -57,20 +68,28 @@ source .venv/bin/activate && echo '<match_json>' | python -m src analyze_match
 ```
 Output: MatchReport JSON with stats, events, context, predicted_plan, set_pieces, sub_impact.
 
-### Step 3: Build Narrative Prompt (inject Arteta framework)
-Pipe the report JSON into the `build_narrative_prompt` tool:
+### Step 3: Prepare Evaluation (v2 structured prompt)
+Pipe the report JSON into the `prepare_evaluation` tool:
 ```bash
-source .venv/bin/activate && echo '{"report": <report_json>}' | python -m src build_narrative_prompt
+source .venv/bin/activate && echo '<report_json>' | python -m src prepare_evaluation
 ```
-Output: Prompt string with raw data + Arteta 6 mental model framework + 3D assessment logic.
+Output: JSON with `{features, weak_labels, rubric_version, prompt}`.
+
+For prompt-only (copy/paste to LLM):
+```bash
+source .venv/bin/activate && echo '<report_json>' | python -m src prepare_evaluation --format prompt
+```
+
+The prompt uses `PromptBuilder` with the canonical rubric (`rubrics/arteta_v1.yaml`) and includes calibration hints from `CalibrationComputer` when available.
 
 ### Step 4: LLM Evaluation + Narrative
 **This is YOUR job.**
 
 The prompt from Step 3 contains:
-- Raw match data (stats, events, set pieces, subs, context)
-- Predicted pre-match plan
-- Arteta's 6 mental model assessment framework (what to look at, how to decide 🟢🟡🔴)
+- Extracted features (deterministic)
+- Weak label baseline (deterministic)
+- Calibration hints from historical matches (when available)
+- Arteta's 6 mental model assessment framework
 - 3-dimension assessment framework (L1→L2→L3 satisfaction, execution, adjustment)
 - Writing style rules
 
@@ -79,14 +98,57 @@ The prompt from Step 3 contains:
 2. Apply 3-dimension assessment → produce signals
 3. Vote overall signal from 3 dimensions (≥2🟢→🟢, ≥2🔴→🔴, else🟡)
 4. Write 300-400 word Chinese tactical narrative
-5. Output as JSON: `{overall_signal, model_signals: {1-6}, dimension_signals: {execution, adjustment, satisfaction}, narrative}`
+5. Output as strict v2 JSON (see schema below)
 
-### Step 5: Build & Send Card
+**Strict v2 output schema** (all fields required):
+```json
+{
+  "overall_signal": "🟡",
+  "model_signals": {"1": "🟢", "2": "🟡", "3": "🟢", "4": "🟡", "5": "🟢", "6": "🟡"},
+  "dimension_signals": {"execution": "🟢", "adjustment": "🟡", "satisfaction": "🟢"},
+  "confidence": {"1": "high", "2": "medium", ...},
+  "evidence": {"1": ["evidence string", ...], "2": [...], ...},
+  "missing_or_weak_evidence": ["list of missing data points"],
+  "weak_label_disagreements": ["list of disagreements with weak labels"],
+  "narrative": "300-400 word Chinese tactical narrative"
+}
+```
+
+### Step 5: Save Evaluation to KB
+Pipe the report + evaluation + features + weak labels into `save_evaluation`:
+```bash
+source .venv/bin/activate && echo '{"report": <report>, "evaluation": <eval>, "features": <features>, "weak_labels": <weak_labels>, "versions": {...}}' | python -m src save_evaluation
+```
+Output: `{ok: true, entry: {...}}` — the saved KB entry with features, weak labels, evaluation, and version metadata.
+
+### Step 6 (optional): Build & Send Card
 Pipe the report JSON + narrative into the `build_card` tool:
 ```bash
 source .venv/bin/activate && echo '{"report": <report_json>, "narrative": "<narrative>"}' | python -m src build_card
 ```
 Output: Card JSON file path. Send via `lark-cli` with your chat_id.
+
+### Step 7 (optional): Human Review Override
+For sampled human review, pipe review data into `review_evaluation`:
+```bash
+source .venv/bin/activate && echo '{"match_id": "123", "reviewer": "shuo", "review_status": "corrected", "corrected_overall_signal": "🟡", "corrected_model_signals": {...}}' | python -m src review_evaluation
+```
+This writes `human_override` into the KB entry. Original evaluation is preserved.
+
+### Step 8 (optional): Replay Weak Labels
+For consistency checking across historical entries:
+```bash
+python scripts/replay_history.py --kb data/knowledge.json --mode weak-label-only --output /tmp/replay.json
+```
+Deterministic, no LLM calls, never mutates KB.
+
+### Legacy Path (backward-compatible)
+
+`build_narrative_prompt` still works for the legacy monolithic prompt:
+```bash
+source .venv/bin/activate && echo '{"report": <report_json>}' | python -m src build_narrative_prompt
+```
+Use the v2 pipeline (Steps 3-5) for all new evaluations.
 
 ## Output Format
 
@@ -99,23 +161,62 @@ Feishu v4.0 interactive card with:
 
 ## Arteta's 6 Mental Models + 3D Assessment (Decision Brain)
 
-**Canonical source:** `prompts/arteta_framework.md` — this is the single source of truth.
-Python's `prompt.py` reads it; SKILL.md references it. Never dual-write evaluation rules.
+**Canonical source:** `rubrics/arteta_v1.yaml` — this is the machine-readable canonical rubric.
+Python's `PromptBuilder` reads it for v2 structured prompts.
+`prompts/arteta_framework.md` is the human-readable reference (not read by v2 code).
 
 For detailed signal criteria per model and the 3-dimension L1→L2→L3 satisfaction logic,
-see the canonical framework file.
+see the canonical rubric file.
 
 ## Evolution Layer
 
-Hoplite's decision brain self-improves through a three-tier evolution layer:
+Hoplite's decision brain self-improves through a multi-tier evolution layer:
 
-- **Data** (`data/knowledge.json`) — Every match saves context + plan + signals
-- **Patterns** (`src/evaluation/patterns.py`) — Queries similar matches, computes signal distributions
+- **Data** (`data/knowledge.json`) — Every match saves context + plan + features + weak labels + signals + versions
+- **Patterns** (`src/evaluation/patterns.py`) — `PatternComputer`: queries similar matches, computes signal distributions (legacy-compatible aggregator)
+- **Calibration** (`src/evaluation/calibration.py`) — `CalibrationComputer`: guarded calibration hints with sample-quality accounting, legacy-entry detection, confidence capping, and guardrails. New v2 code should use this.
 - **Injection** (`src/tools/prompt.py` + `predictor.py`) — Historical patterns injected into LLM prompt
+- **Replay** (`scripts/replay_history.py`) — Deterministic weak-label replay for consistency checking
 
 Batch-ingest historical matches (2022-2024, ~150 matches) via:
 ```bash
 python scripts/ingest_history.py --season 2024 --league 39
+```
+
+## Project Location
+
+Key files and directories:
+
+```
+hoplite/
+├── rubrics/arteta_v1.yaml          # Machine-readable canonical rubric
+├── prompts/arteta_framework.md     # Human-readable framework reference
+├── data/knowledge.json             # JSON knowledge base (persistence layer)
+├── src/
+│   ├── tools/
+│   │   ├── prepare_evaluation.py   # v2: features + weak labels + prompt
+│   │   ├── save_evaluation.py      # v2: validate + persist evaluation
+│   │   ├── review.py               # v2: human review override
+│   │   ├── extract.py              # Pure data extraction
+│   │   ├── analyze.py              # Extraction orchestrator
+│   │   ├── prompt.py               # Legacy prompt builder
+│   │   ├── fetch.py                # API-Football fetcher
+│   │   └── card.py                 # Feishu card builder
+│   ├── features/extractor.py       # Deterministic feature extraction
+│   ├── labels/weak_labeler.py      # Rule-based weak labels
+│   ├── evaluation/
+│   │   ├── calibration.py          # CalibrationComputer (v2)
+│   │   ├── patterns.py             # PatternComputer (legacy-compatible)
+│   │   ├── predictor.py            # Pre-match plan prediction
+│   │   ├── prompt_builder.py       # Structured v2 prompt builder
+│   │   ├── knowledge.py            # JSON knowledge base
+│   │   └── llm_result.py           # LLM output validation (strict mode)
+│   └── paths.py                    # Canonical project paths
+├── scripts/
+│   ├── replay_history.py           # Deterministic weak-label replay
+│   ├── ingest_history.py           # Batch historical data fetch
+│   └── batch_prep_prompts.py       # Batch prompt preparation
+└── tests/                          # Test suite
 ```
 
 ## Requirements
@@ -135,10 +236,10 @@ API-Football free tier is season-lagged (~1 year behind). See `references/data-s
 
 ## Agent Responsibilities
 
-- You orchestrate the 5-step tool sequence (not automated in Python)
-- You apply the 6 mental models from this file to raw data from Step 3's prompt
+- You orchestrate the tool sequence (not automated in Python)
+- You apply the 6 mental models from the rubric to raw data from Step 3's prompt
 - You apply the 3-dimension assessment framework
-- You produce signals (overall + per-model + per-dimension)
+- You produce signals (overall + per-model + per-dimension) with evidence and confidence
 - You write the tactical narrative (300-400 words, Chinese, Elio voice)
-- You output final JSON with signals + narrative
-- Python tools only do data: fetch, extract, prompt building, card JSON
+- You output strict v2 JSON (all required fields — see Step 4 schema)
+- Python tools only do data: fetch, extract, features, weak labels, prompt building, card JSON
