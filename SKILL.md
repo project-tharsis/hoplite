@@ -183,6 +183,72 @@ Batch-ingest historical matches (2022-2024, ~150 matches) via:
 python scripts/ingest_history.py --season 2024 --league 39
 ```
 
+## Historical Backfill Script
+
+**Location:** `scripts/backfill_history.py`
+
+Upgrades selected legacy KB entries into v2-compatible, feature-backed entries using a manifest-driven workflow.
+
+### 4 Modes
+
+1. **`inventory`** — Reads KB and manifest, reports counts (total, with features, legacy-only, seed-set size, validation-set size, missing inputs, manifest IDs not in KB). No writes.
+2. **`prepare-seed`** — For seed-set entries: loads raw match JSON or analyze report JSON, runs `prepare_evaluation`, writes `prepare_results.jsonl` and `llm_jobs.jsonl`. Produces LLM job prompts but does NOT call an LLM. No KB mutation.
+3. **`apply-features`** — Reads prepare results from a run directory, applies features, weak_labels, version fields, and backfill metadata to KB entries. Normalizes legacy evaluation if needed (copies original into `legacy_evaluation`). Requires `--run` and `--write`.
+4. **`validate-rest`** — Dry-run prepare for validation-set entries, compares weak labels with legacy signals, writes `validation_report.json`. Does NOT mutate KB.
+
+### Manifest Format
+
+`data/backfill/backfill_manifest.json`:
+```json
+{
+  "version": "v1",
+  "seed_set": [
+    {
+      "legacy_match_id": "1",
+      "fixture_id": 123456,
+      "opponent": "Chelsea",
+      "date": "2025-05-01",
+      "raw_match_path": "data/backfill/raw/123456.json",
+      "report_path": "data/backfill/reports/123456.json"
+    }
+  ],
+  "validation_set": [
+    {
+      "legacy_match_id": "31",
+      "fixture_id": 789012,
+      "opponent": "Everton",
+      "date": "2025-08-15"
+    }
+  ]
+}
+```
+
+At least one of `raw_match_path` or `report_path` is required for seed-set entries.
+
+### Usage
+
+```bash
+# Inventory
+python scripts/backfill_history.py --kb data/knowledge.json --manifest data/backfill/backfill_manifest.json --mode inventory
+
+# Prepare seed artifacts
+python scripts/backfill_history.py --kb data/knowledge.json --manifest data/backfill/backfill_manifest.json --mode prepare-seed --output data/backfill/runs/20260519-seed
+
+# Apply features (requires --write)
+python scripts/backfill_history.py --kb data/knowledge.json --manifest data/backfill/backfill_manifest.json --mode apply-features --run data/backfill/runs/20260519-seed --write
+
+# Validate rest (dry-run)
+python scripts/backfill_history.py --kb data/knowledge.json --manifest data/backfill/backfill_manifest.json --mode validate-rest --output data/backfill/runs/20260519-validate
+```
+
+### Safety Rules
+
+- **`--write` required:** `apply-features` will not mutate KB without `--write`
+- **Before/after snapshots:** `apply-features` saves `knowledge.before.json` and `knowledge.after.json` in the run directory
+- **Idempotency:** Re-running `apply-features --write` skips entries that already have `features` and `weak_labels` (unless `--force`)
+- **Legacy evaluation preserved:** Original evaluation is copied to `legacy_evaluation` before normalization
+- **No entries deleted:** Only adds fields, never removes entries or unknown fields
+
 ## Project Location
 
 Key files and directories:
