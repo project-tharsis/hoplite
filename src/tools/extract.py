@@ -64,8 +64,6 @@ def extract_match_stats(match_json: dict) -> dict:
 
     home_xg = match_json.get("home_xg")
     away_xg = match_json.get("away_xg")
-    arsenal_xg = home_xg if arsenal_side == "home" else away_xg
-    opponent_xg = away_xg if arsenal_side == "home" else home_xg
 
     # Count goals and cards from events
     events = match_json.get("events", [])
@@ -97,7 +95,15 @@ def extract_match_stats(match_json: dict) -> dict:
 
     home_stats = match_json.get("home_stats") or {}
     away_stats = match_json.get("away_stats") or {}
-    
+
+    # xG fallback: raw match JSON stores xG inside stats dict as "expected_goals"
+    if home_xg is None and home_stats:
+        home_xg = home_stats.get("expected_goals")
+    if away_xg is None and away_stats:
+        away_xg = away_stats.get("expected_goals")
+    arsenal_xg = home_xg if arsenal_side == "home" else away_xg
+    opponent_xg = away_xg if arsenal_side == "home" else home_xg
+
     # Raw API-Football key → normalized key mapping (fallback when stats_parser is bypassed)
     RAW_KEY_MAP = {
         "Ball Possession": "possession",
