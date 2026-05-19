@@ -1655,7 +1655,7 @@ class TestBackfillE2E:
         assert "features" in seed_raw
         assert "weak_labels" in seed_raw
         assert seed_raw["features_version"] == "v1"
-        assert seed_raw["weak_label_version"] == "v1"
+        assert seed_raw["weak_label_version"] == "v1.1"
         assert seed_raw["rubric_version"] == "arteta_v1"
         assert seed_raw["prompt_builder_version"] == "v1"
         assert "backfill" in seed_raw

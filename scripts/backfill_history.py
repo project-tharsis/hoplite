@@ -526,8 +526,8 @@ def run_apply_features(
         entry["weak_labels"] = prep["weak_labels"]
 
         # Version fields
-        entry["features_version"] = "v1"
-        entry["weak_label_version"] = "v1"
+        entry["features_version"] = prep.get("features_version", "v1")
+        entry["weak_label_version"] = prep.get("weak_labels", {}).get("weak_label_version", "v1.1")
         entry["rubric_version"] = prep.get("rubric_version", "arteta_v1")
         entry["prompt_builder_version"] = "v1"
 
