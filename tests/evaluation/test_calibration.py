@@ -190,3 +190,34 @@ def test_record_aggregation():
     assert hints["record"]["losses"] == 1
     assert hints["record"]["avg_arsenal_score"] == round((3 + 1 + 0) / 3, 2)
     assert hints["record"]["avg_opponent_score"] == round((1 + 1 + 2) / 3, 2)
+
+
+def test_build_hints_includes_known_blind_spots(tmp_path):
+    """build_hints() must include known_blind_spots field."""
+    import json
+    from src.evaluation.calibration import CalibrationComputer
+    kb_path = tmp_path / "kb.json"
+    entries = [{
+        "match_id": "1",
+        "features": {"result": "L", "opponent_quality": "lower", "missing_data": []},
+        "pre_match_context": {"opponent_quality": "lower", "venue": "away", "competition_stage": "regular"},
+        "evaluation": {"model_signals": {}, "dimension_signals": {}, "overall_signal": "🔴"},
+    }]
+    with open(kb_path, "w") as f:
+        json.dump(entries, f)
+    cc = CalibrationComputer(str(kb_path))
+    hints = cc.build_hints({"opponent_quality": "lower", "venue": "away"})
+    assert "known_blind_spots" in hints
+    spots = hints["known_blind_spots"]
+    assert len(spots) >= 1
+    assert spots[0]["id"] == "dominant_stats_loss"
+
+
+def test_empty_hints_includes_known_blind_spots():
+    """_empty_hints() must include known_blind_spots (at least one)."""
+    from src.evaluation.calibration import CalibrationComputer
+    empty = CalibrationComputer._empty_hints()
+    assert "known_blind_spots" in empty
+    spots = empty["known_blind_spots"]
+    assert len(spots) >= 1
+    assert spots[0]["id"] == "dominant_stats_loss"
