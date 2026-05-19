@@ -1,0 +1,150 @@
+{
+  "fixture_id": 1208215,
+  "date": "2025-01-04T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Brighton",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 4,
+    "Total Shots": 11,
+    "Blocked Shots": 3,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 5,
+    "Fouls": 17,
+    "Corner Kicks": 2,
+    "Offsides": 0,
+    "Ball Possession": 45.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 427,
+    "Passes accurate": 368,
+    "Passes %": 86.0,
+    "expected_goals": 1.52,
+    "goals_prevented": 0.87
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 4,
+    "Total Shots": 9,
+    "Blocked Shots": 2,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 3,
+    "Fouls": 14,
+    "Corner Kicks": 5,
+    "Offsides": 3,
+    "Ball Possession": 55.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 519,
+    "Passes accurate": 456,
+    "Passes %": 88.0,
+    "expected_goals": 0.88,
+    "goals_prevented": 0.87
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "E. Nwaneri",
+      "minute": 16,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Ethan Nwaneri",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. ORiley",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. Gruda",
+      "minute": 46,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Nwaneri",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "João Pedro",
+      "minute": 61,
+      "detail": "Penalty"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "S. Adingra",
+      "minute": 62,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Joël Veltman",
+      "minute": 64,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Jorginho",
+      "minute": 64,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Igor Julio",
+      "minute": 66,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Yankuba Minteh",
+      "minute": 82,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Mikel Merino",
+      "minute": 84,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Riccardo Calafiori",
+      "minute": 90,
+      "detail": "Yellow Card"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

@@ -1,0 +1,171 @@
+{
+  "fixture_id": 1208081,
+  "date": "2024-10-05T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Southampton",
+  "home_score": 3,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 6,
+    "Shots off Goal": 13,
+    "Total Shots": 29,
+    "Blocked Shots": 10,
+    "Shots insidebox": 20,
+    "Shots outsidebox": 9,
+    "Fouls": 10,
+    "Corner Kicks": 13,
+    "Offsides": 1,
+    "Ball Possession": 59.0,
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 536,
+    "Passes accurate": 483,
+    "Passes %": 90.0,
+    "expected_goals": 2.83,
+    "goals_prevented": -0.34
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 1,
+    "Total Shots": 8,
+    "Blocked Shots": 5,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 3,
+    "Fouls": 9,
+    "Corner Kicks": 1,
+    "Offsides": 0,
+    "Ball Possession": 41.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 395,
+    "Passes accurate": 337,
+    "Passes %": 85.0,
+    "expected_goals": 0.65,
+    "goals_prevented": -0.34
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Kyle Walker-Peters",
+      "minute": 23,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Stewart",
+      "minute": 27,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Jan Bednarek",
+      "minute": 34,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Tyler Dibling",
+      "minute": 38,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "C. Archer",
+      "minute": 55,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "K. Havertz",
+      "minute": 58,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel Jesus",
+      "minute": 60,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Sterling",
+      "minute": 60,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Jorginho",
+      "minute": 61,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "Gabriel Martinelli",
+      "minute": 68,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Manning",
+      "minute": 74,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Mateus Fernandes",
+      "minute": 74,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "T. Partey",
+      "minute": 84,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 88,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Calafiori",
+      "minute": 90,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Y. Sugawara",
+      "minute": 90,
+      "detail": "Substitution 4"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

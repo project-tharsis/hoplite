@@ -1,0 +1,275 @@
+{
+  "match": {
+    "fixture_id": 1208233,
+    "date": "2025-01-18T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Aston Villa",
+    "home_score": 2,
+    "away_score": 2,
+    "arsenal_score": 2,
+    "opponent_score": 2,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Aston Villa",
+    "opponent_quality": "mid_table",
+    "venue": "home",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": 1.33,
+      "opponent": 1.04
+    },
+    "possession": {
+      "arsenal": 66.0,
+      "opponent": 34.0
+    },
+    "shots": {
+      "arsenal": 18,
+      "opponent": 8
+    },
+    "shots_on_target": {
+      "arsenal": 6,
+      "opponent": 4
+    },
+    "passes": {
+      "arsenal": {
+        "total": 483,
+        "accuracy": 89.0
+      },
+      "opponent": {
+        "total": 262,
+        "accuracy": 74.0
+      }
+    },
+    "fouls": {
+      "arsenal": 10,
+      "opponent": 18
+    },
+    "corners": {
+      "arsenal": 10,
+      "opponent": 1
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 2,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 2,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 20,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Aston Villa",
+      "player": "Ian Maatsen",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 35,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 37,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Aston Villa",
+      "player": "A. Onana",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Aston Villa",
+      "player": "I. Maatsen",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 55,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 60,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Aston Villa",
+      "player": "Y. Tielemans",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 67,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Leandro Trossard",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 68,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Aston Villa",
+      "player": "O. Watkins",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 78,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Aston Villa",
+      "player": "Boubacar Kamara",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Aston Villa",
+      "player": "O. Watkins",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Aston Villa",
+      "player": "J. Ramsey",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 89,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Arsenal",
+      "player": "Kai Havertz",
+      "detail": "Goal cancelled",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Raheem Sterling",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Aston Villa",
+      "player": "Morgan Rogers",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 37,
+      "player": "A. Onana",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 46,
+      "player": "I. Maatsen",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "O. Watkins",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "J. Ramsey",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-2 Aston Villa (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

@@ -1,0 +1,244 @@
+{
+  "match": {
+    "fixture_id": 1208194,
+    "date": "2024-12-27T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Ipswich",
+    "home_score": 1,
+    "away_score": 0,
+    "arsenal_score": 1,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Ipswich",
+    "opponent_quality": "lower",
+    "venue": "home",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 1.86,
+      "opponent": 0.15
+    },
+    "possession": {
+      "arsenal": 68.0,
+      "opponent": 32.0
+    },
+    "shots": {
+      "arsenal": 13,
+      "opponent": 3
+    },
+    "shots_on_target": {
+      "arsenal": 5,
+      "opponent": 0
+    },
+    "passes": {
+      "arsenal": {
+        "total": 670,
+        "accuracy": 90.0
+      },
+      "opponent": {
+        "total": 318,
+        "accuracy": 81.0
+      }
+    },
+    "fouls": {
+      "arsenal": 7,
+      "opponent": 12
+    },
+    "corners": {
+      "arsenal": 5,
+      "opponent": 1
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 23,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 54,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Kai Havertz",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 65,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Ipswich",
+      "player": "Leif Davis",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 71,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Ipswich",
+      "player": "S. Szmodics",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 72,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Ipswich",
+      "player": "B. Johnson",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Ipswich",
+      "player": "J. Cajuste",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Ipswich",
+      "player": "L. Delap",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 87,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Ipswich",
+      "player": "L. Woolfenden",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 71,
+      "player": "S. Szmodics",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 72,
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "B. Johnson",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "J. Cajuste",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "L. Delap",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 87,
+      "player": "D. Rice",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "L. Woolfenden",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-0 Ipswich (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

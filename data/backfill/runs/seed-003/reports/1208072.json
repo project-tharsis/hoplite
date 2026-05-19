@@ -1,0 +1,350 @@
+{
+  "match": {
+    "fixture_id": 1208072,
+    "date": "2024-09-28T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Leicester",
+    "home_score": 4,
+    "away_score": 2,
+    "arsenal_score": 4,
+    "opponent_score": 2,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Leicester",
+    "opponent_quality": "lower",
+    "venue": "home",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 4,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": 4.62,
+      "opponent": 0.32
+    },
+    "possession": {
+      "arsenal": 75.0,
+      "opponent": 25.0
+    },
+    "shots": {
+      "arsenal": 36,
+      "opponent": 5
+    },
+    "shots_on_target": {
+      "arsenal": 16,
+      "opponent": 3
+    },
+    "passes": {
+      "arsenal": {
+        "total": 663,
+        "accuracy": 89.0
+      },
+      "opponent": {
+        "total": 232,
+        "accuracy": 74.0
+      }
+    },
+    "fouls": {
+      "arsenal": 11,
+      "opponent": 6
+    },
+    "corners": {
+      "arsenal": 17,
+      "opponent": 0
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 2,
+        "second_half": 2,
+        "total": 4
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 2,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 2,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 4,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 20,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Leicester",
+      "player": "Jamie Vardy",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 20,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 31,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Leicester",
+      "player": "Wilfred Ndidi",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 45,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "William Saliba",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 47,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Leicester",
+      "player": "J. Justin",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 49,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Riccardo Calafiori",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 50,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Leicester",
+      "player": "Oliver Skipp",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 63,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Leicester",
+      "player": "J. Justin",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Leicester",
+      "player": "Facundo Buonanotte",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "T. Partey",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Leicester",
+      "player": "F. Buonanotte",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Arsenal",
+      "player": "Kai Havertz",
+      "detail": "Goal confirmed",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Leicester",
+      "player": "S. Mavididi",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Leicester",
+      "player": "W. Ndidi",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Leicester",
+      "player": "C. Okoli",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Leicester",
+      "player": "O. Skipp",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "W. Ndidi",
+      "detail": "Own Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 74,
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "T. Partey",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "F. Buonanotte",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "L. Trossard",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "S. Mavididi",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "W. Ndidi",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "C. Okoli",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "O. Skipp",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 4-2 Leicester (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

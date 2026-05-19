@@ -1,0 +1,314 @@
+{
+  "match": {
+    "fixture_id": 1208118,
+    "date": "2024-11-02T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Newcastle",
+    "away_team": "Arsenal",
+    "home_score": 1,
+    "away_score": 0,
+    "arsenal_score": 0,
+    "opponent_score": 1,
+    "result": "L"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Newcastle",
+    "opponent_quality": "top6",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 0,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 1.05,
+      "opponent": 0.53
+    },
+    "possession": {
+      "arsenal": 64.0,
+      "opponent": 36.0
+    },
+    "shots": {
+      "arsenal": 10,
+      "opponent": 9
+    },
+    "shots_on_target": {
+      "arsenal": 1,
+      "opponent": 4
+    },
+    "passes": {
+      "arsenal": {
+        "total": 502,
+        "accuracy": 86.0
+      },
+      "opponent": {
+        "total": 289,
+        "accuracy": 69.0
+      }
+    },
+    "fouls": {
+      "arsenal": 18,
+      "opponent": 16
+    },
+    "corners": {
+      "arsenal": 6,
+      "opponent": 4
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 4,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 4,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 12,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Newcastle",
+      "player": "A. Isak",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 39,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Newcastle",
+      "player": "Fabian Schär",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 56,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 61,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 61,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 62,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Newcastle",
+      "player": "Joe Willock",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "J. Willock",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 66,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Jurriën Timber",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 71,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Newcastle",
+      "player": "Sandro Tonali",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 71,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "J. Timber",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 71,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "A. Gordon",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "T. Partey",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 88,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Jorginho",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Newcastle",
+      "player": "Nick Pope",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Kai Havertz",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "Bruno Guimarães",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 61,
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 61,
+      "player": "Mikel Merino",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "J. Willock",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 71,
+      "player": "J. Timber",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 71,
+      "player": "L. Trossard",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "A. Gordon",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "T. Partey",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "Bruno Guimarães",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 0-1 Newcastle (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

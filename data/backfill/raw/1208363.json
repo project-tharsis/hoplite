@@ -1,0 +1,150 @@
+{
+  "fixture_id": 1208363,
+  "date": "2025-05-03T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Bournemouth",
+  "home_score": 1,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 5,
+    "Total Shots": 13,
+    "Blocked Shots": 4,
+    "Shots insidebox": 12,
+    "Shots outsidebox": 1,
+    "Fouls": 7,
+    "Corner Kicks": 2,
+    "Offsides": 3,
+    "Ball Possession": 50.0,
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 427,
+    "Passes accurate": 363,
+    "Passes %": 85.0,
+    "expected_goals": 1.42,
+    "goals_prevented": 0.66
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 5,
+    "Total Shots": 9,
+    "Blocked Shots": 2,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 3,
+    "Fouls": 16,
+    "Corner Kicks": 3,
+    "Offsides": 0,
+    "Ball Possession": 50.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 417,
+    "Passes accurate": 345,
+    "Passes %": 83.0,
+    "expected_goals": 0.97,
+    "goals_prevented": 0.66
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "D. Rice",
+      "minute": 34,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Evanilson",
+      "minute": 58,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Dango Ouattara",
+      "minute": 64,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Kluivert",
+      "minute": 65,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Araujo",
+      "minute": 65,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Dean Huijsen",
+      "minute": 67,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "D. Rice",
+      "minute": 74,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "D. Ouattara",
+      "minute": 74,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Evanilson",
+      "minute": 75,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. White",
+      "minute": 86,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel Martinelli",
+      "minute": 86,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 86,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Evanilson",
+      "minute": 87,
+      "detail": "Substitution 4"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

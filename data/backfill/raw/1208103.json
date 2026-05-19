@@ -1,0 +1,171 @@
+{
+  "fixture_id": 1208103,
+  "date": "2024-10-27T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Liverpool",
+  "home_score": 2,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 4,
+    "Total Shots": 9,
+    "Blocked Shots": 2,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 4,
+    "Fouls": 14,
+    "Corner Kicks": 1,
+    "Offsides": 2,
+    "Ball Possession": 45.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 383,
+    "Passes accurate": 306,
+    "Passes %": 80.0,
+    "expected_goals": 0.92,
+    "goals_prevented": -0.26
+  },
+  "away_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 3,
+    "Total Shots": 9,
+    "Blocked Shots": 2,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 4,
+    "Fouls": 14,
+    "Corner Kicks": 3,
+    "Offsides": 1,
+    "Ball Possession": 55.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 466,
+    "Passes accurate": 387,
+    "Passes %": 83.0,
+    "expected_goals": 0.81,
+    "goals_prevented": -0.26
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 9,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "V. van Dijk",
+      "minute": 18,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Alexis Mac Allister",
+      "minute": 33,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "Mikel Merino",
+      "minute": 43,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel Magalhães",
+      "minute": 54,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Díaz",
+      "minute": 63,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Robertson",
+      "minute": 63,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Mac Allister",
+      "minute": 63,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "David Raya",
+      "minute": 66,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Timber",
+      "minute": 76,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Mohamed Salah",
+      "minute": 81,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel Martinelli",
+      "minute": 85,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 85,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Gabriel Jesus",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Darwin Núñez",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "C. Jones",
+      "minute": 90,
+      "detail": "Substitution 4"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

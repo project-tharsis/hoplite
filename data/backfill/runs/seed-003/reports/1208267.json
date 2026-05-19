@@ -1,0 +1,278 @@
+{
+  "match": {
+    "fixture_id": 1208267,
+    "date": "2025-02-15T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Leicester",
+    "away_team": "Arsenal",
+    "home_score": 0,
+    "away_score": 2,
+    "arsenal_score": 2,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Leicester",
+    "opponent_quality": "lower",
+    "venue": "away",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 1.38,
+      "opponent": 0.22
+    },
+    "possession": {
+      "arsenal": 60.0,
+      "opponent": 40.0
+    },
+    "shots": {
+      "arsenal": 11,
+      "opponent": 6
+    },
+    "shots_on_target": {
+      "arsenal": 5,
+      "opponent": 2
+    },
+    "passes": {
+      "arsenal": {
+        "total": 491,
+        "accuracy": 86.0
+      },
+      "opponent": {
+        "total": 321,
+        "accuracy": 72.0
+      }
+    },
+    "fouls": {
+      "arsenal": 10,
+      "opponent": 9
+    },
+    "corners": {
+      "arsenal": 7,
+      "opponent": 3
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 2,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 43,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Leicester",
+      "player": "J. Justin",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 46,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Leicester",
+      "player": "Bilal El Khannouss",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 57,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Leicester",
+      "player": "Jordan Ayew",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 69,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Sterling",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Leicester",
+      "player": "J. Ayew",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "T. Partey",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 81,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Leicester",
+      "player": "W. Ndidi",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Leicester",
+      "player": "B. De Cordova-Reid",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 86,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Jorginho",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 87,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 89,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 43,
+      "player": "J. Justin",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 69,
+      "player": "R. Sterling",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "J. Ayew",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "T. Partey",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "W. Ndidi",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "B. De Cordova-Reid",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 89,
+      "player": "L. Trossard",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-0 Leicester (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

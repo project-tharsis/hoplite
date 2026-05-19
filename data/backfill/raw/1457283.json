@@ -1,0 +1,143 @@
+{
+  "fixture_id": 1457283,
+  "date": "2025-09-24T00:00:00",
+  "competition": "League Cup",
+  "home_team": "Port Vale",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 0,
+    "Shots off Goal": 1,
+    "Total Shots": 3,
+    "Blocked Shots": 2,
+    "Shots insidebox": 2,
+    "Shots outsidebox": 1,
+    "Fouls": 6,
+    "Corner Kicks": 1,
+    "Offsides": 2,
+    "Ball Possession": 19.0,
+    "Yellow Cards": null,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 183,
+    "Passes accurate": 115,
+    "Passes %": 63.0,
+    "expected_goals": null,
+    "goals_prevented": null
+  },
+  "away_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 2,
+    "Total Shots": 11,
+    "Blocked Shots": 5,
+    "Shots insidebox": 7,
+    "Shots outsidebox": 4,
+    "Fouls": 5,
+    "Corner Kicks": 6,
+    "Offsides": 0,
+    "Ball Possession": 81.0,
+    "Yellow Cards": null,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 789,
+    "Passes accurate": 731,
+    "Passes %": 93.0,
+    "expected_goals": null,
+    "goals_prevented": null
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "E. Eze",
+      "minute": 8,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. Saka",
+      "minute": 63,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Lawrence-Gabriel",
+      "minute": 66,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "G. Hall",
+      "minute": 66,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Paton",
+      "minute": 70,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Curtis",
+      "minute": 70,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. White",
+      "minute": 71,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Merino",
+      "minute": 71,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": null,
+      "minute": 81,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "G. Martinelli",
+      "minute": 81,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Eze",
+      "minute": 81,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 86,
+      "detail": "Normal Goal"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

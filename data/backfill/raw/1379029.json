@@ -1,0 +1,143 @@
+{
+  "fixture_id": 1379029,
+  "date": "2025-10-04T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "West Ham",
+  "home_score": 2,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 7,
+    "Total Shots": 21,
+    "Blocked Shots": 9,
+    "Shots insidebox": 16,
+    "Shots outsidebox": 5,
+    "Fouls": 14,
+    "Corner Kicks": 8,
+    "Offsides": 1,
+    "Ball Possession": 68.0,
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 566,
+    "Passes accurate": 498,
+    "Passes %": 88.0,
+    "expected_goals": 2.77,
+    "goals_prevented": 0.2
+  },
+  "away_stats": {
+    "Shots on Goal": 0,
+    "Shots off Goal": 3,
+    "Total Shots": 4,
+    "Blocked Shots": 1,
+    "Shots insidebox": 4,
+    "Shots outsidebox": 0,
+    "Fouls": 14,
+    "Corner Kicks": 3,
+    "Offsides": 1,
+    "Ball Possession": 32.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 268,
+    "Passes accurate": 210,
+    "Passes %": 78.0,
+    "expected_goals": 0.49,
+    "goals_prevented": 0.2
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Odegaard",
+      "minute": 30,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "D. Rice",
+      "minute": 38,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Crysencio Summerville",
+      "minute": 58,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "N. Fullkrug",
+      "minute": 61,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "S. Magassa",
+      "minute": 61,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 67,
+      "detail": "Penalty"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Lucas Paquetá",
+      "minute": 69,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "minute": 75,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Calafiori",
+      "minute": 75,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "E. Eze",
+      "minute": 79,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "D. Rice",
+      "minute": 79,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Wan-Bissaka",
+      "minute": 79,
+      "detail": "Substitution 3"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

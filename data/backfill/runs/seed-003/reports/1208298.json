@@ -1,0 +1,228 @@
+{
+  "match": {
+    "fixture_id": 1208298,
+    "date": "2025-03-09T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Manchester United",
+    "away_team": "Arsenal",
+    "home_score": 1,
+    "away_score": 1,
+    "arsenal_score": 1,
+    "opponent_score": 1,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Manchester United",
+    "opponent_quality": "top6",
+    "venue": "away",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 1.62,
+      "opponent": 1.52
+    },
+    "possession": {
+      "arsenal": 68.0,
+      "opponent": 32.0
+    },
+    "shots": {
+      "arsenal": 17,
+      "opponent": 10
+    },
+    "shots_on_target": {
+      "arsenal": 6,
+      "opponent": 6
+    },
+    "passes": {
+      "arsenal": {
+        "total": 587,
+        "accuracy": 89.0
+      },
+      "opponent": {
+        "total": 275,
+        "accuracy": 76.0
+      }
+    },
+    "fouls": {
+      "arsenal": 11,
+      "opponent": 8
+    },
+    "corners": {
+      "arsenal": 9,
+      "opponent": 2
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Leandro Trossard",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 45,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Manchester United",
+      "player": "Bruno Fernandes",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester United",
+      "player": "L. Yoro",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 58,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 58,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 74,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester United",
+      "player": "C. Eriksen",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester United",
+      "player": "J. Zirkzee",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "T. Partey",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 46,
+      "player": "L. Yoro",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 58,
+      "player": "R. Calafiori",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 58,
+      "player": "E. Nwaneri",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "C. Eriksen",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "J. Zirkzee",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "T. Partey",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-1 Manchester United (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

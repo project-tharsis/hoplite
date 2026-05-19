@@ -1,0 +1,298 @@
+{
+  "match": {
+    "fixture_id": 1208125,
+    "date": "2024-11-10T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Chelsea",
+    "away_team": "Arsenal",
+    "home_score": 1,
+    "away_score": 1,
+    "arsenal_score": 1,
+    "opponent_score": 1,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Chelsea",
+    "opponent_quality": "top6",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 1.55,
+      "opponent": 1.54
+    },
+    "possession": {
+      "arsenal": 51.0,
+      "opponent": 49.0
+    },
+    "shots": {
+      "arsenal": 13,
+      "opponent": 17
+    },
+    "shots_on_target": {
+      "arsenal": 3,
+      "opponent": 3
+    },
+    "passes": {
+      "arsenal": {
+        "total": 426,
+        "accuracy": 88.0
+      },
+      "opponent": {
+        "total": 419,
+        "accuracy": 85.0
+      }
+    },
+    "fouls": {
+      "arsenal": 12,
+      "opponent": 12
+    },
+    "corners": {
+      "arsenal": 3,
+      "opponent": 4
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 2,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 4,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 21,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Levi Colwill",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 32,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Pedro Neto",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 34,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Arsenal",
+      "player": "Kai Havertz",
+      "detail": "Goal cancelled",
+      "is_arsenal": true
+    },
+    {
+      "minute": 39,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Ben White",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Noni Madueke",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 56,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Kai Havertz",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 60,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 68,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "N. Madueke",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 68,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "R. Lavia",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Chelsea",
+      "player": "Pedro Neto",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 71,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 71,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 80,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Marc Cucurella",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "M. Gusto",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 88,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "N. Jackson",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 68,
+      "player": "N. Madueke",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 68,
+      "player": "R. Lavia",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 71,
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 71,
+      "player": "D. Rice",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "B. Saka",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "M. Gusto",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 88,
+      "player": "N. Jackson",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-1 Chelsea (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

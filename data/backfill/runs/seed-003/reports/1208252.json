@@ -1,0 +1,271 @@
+{
+  "match": {
+    "fixture_id": 1208252,
+    "date": "2025-01-25T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Wolves",
+    "away_team": "Arsenal",
+    "home_score": 0,
+    "away_score": 1,
+    "arsenal_score": 1,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Wolves",
+    "opponent_quality": "mid_table",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 1.0,
+      "opponent": 0.74
+    },
+    "possession": {
+      "arsenal": 48.0,
+      "opponent": 52.0
+    },
+    "shots": {
+      "arsenal": 9,
+      "opponent": 9
+    },
+    "shots_on_target": {
+      "arsenal": 3,
+      "opponent": 4
+    },
+    "passes": {
+      "arsenal": {
+        "total": 397,
+        "accuracy": 83.0
+      },
+      "opponent": {
+        "total": 433,
+        "accuracy": 84.0
+      }
+    },
+    "fouls": {
+      "arsenal": 10,
+      "opponent": 20
+    },
+    "corners": {
+      "arsenal": 5,
+      "opponent": 1
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 1
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 1
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 32,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Wolves",
+      "player": "J. Strand Larsen",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 36,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Wolves",
+      "player": "João Gomes",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 43,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Myles Lewis-Skelly",
+      "detail": "Red Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 44,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Jurriën Timber",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Wolves",
+      "player": "João Gomes",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Wolves",
+      "player": "João Gomes",
+      "detail": "Red Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 74,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Wolves",
+      "player": "Pablo Sarabia",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 87,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Wolves",
+      "player": "André",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 87,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Wolves",
+      "player": "M. Doherty",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 87,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Wolves",
+      "player": "R. Aït-Nouri",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 87,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 32,
+      "player": "J. Strand Larsen",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 46,
+      "player": "E. Nwaneri",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "Pablo Sarabia",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 87,
+      "player": "André",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 87,
+      "player": "M. Doherty",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 87,
+      "player": "R. Aït-Nouri",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 87,
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-0 Wolves (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

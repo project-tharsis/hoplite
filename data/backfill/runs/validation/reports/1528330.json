@@ -1,0 +1,282 @@
+{
+  "match": {
+    "fixture_id": 1528330,
+    "date": "2026-03-17T20:00:00+00:00",
+    "competition": "UEFA Champions League",
+    "home_team": "Arsenal",
+    "away_team": "Bayer Leverkusen",
+    "home_score": 2,
+    "away_score": 0,
+    "arsenal_score": 2,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "高位反抢/断球",
+      "定位球威胁"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换；定位球重点部署",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球"
+    ],
+    "expected_subs": "根据比分半场/60分钟战术调整；定位球专家/高点 late sub 抢分"
+  },
+  "context": {
+    "opponent": "Bayer Leverkusen",
+    "opponent_quality": "mid_table",
+    "venue": "home",
+    "competition_stage": "knockout",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": "1.70",
+      "opponent": "0.52"
+    },
+    "possession": {
+      "arsenal": "42%",
+      "opponent": "58%"
+    },
+    "shots": {
+      "arsenal": 21,
+      "opponent": 9
+    },
+    "shots_on_target": {
+      "arsenal": 12,
+      "opponent": 2
+    },
+    "passes": {
+      "arsenal": {
+        "total": 383,
+        "accuracy": "83%"
+      },
+      "opponent": {
+        "total": 535,
+        "accuracy": "88%"
+      }
+    },
+    "fouls": {
+      "arsenal": 4,
+      "opponent": 8
+    },
+    "corners": {
+      "arsenal": 10,
+      "opponent": 8
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 0,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 36,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "E. Eze",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Bayer Leverkusen",
+      "player": "Exequiel Palacios",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 60,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bayer Leverkusen",
+      "player": "M. Terrier",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 60,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bayer Leverkusen",
+      "player": "E. Poku",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 63,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 68,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Zubimendi",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 69,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Eze",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 69,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 69,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. White",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bayer Leverkusen",
+      "player": "E. Palacios",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 83,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bayer Leverkusen",
+      "player": "R. Andrich",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 60,
+      "player": "M. Terrier",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 60,
+      "player": "E. Poku",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 68,
+      "player": "M. Zubimendi",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 69,
+      "player": "E. Eze",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 69,
+      "player": "L. Trossard",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 69,
+      "player": "B. White",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "E. Palacios",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 83,
+      "player": "R. Andrich",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "V. Gyökeres",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-0 Bayer Leverkusen (UEFA Champions League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

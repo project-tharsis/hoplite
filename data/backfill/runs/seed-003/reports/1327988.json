@@ -1,0 +1,271 @@
+{
+  "match": {
+    "fixture_id": 1327988,
+    "date": "2025-01-07T00:00:00",
+    "competition": "League Cup",
+    "home_team": "Arsenal",
+    "away_team": "Newcastle",
+    "home_score": 0,
+    "away_score": 2,
+    "arsenal_score": 0,
+    "opponent_score": 2,
+    "result": "L"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Newcastle",
+    "opponent_quality": "top6",
+    "venue": "home",
+    "competition_stage": "regular",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 0,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": null,
+      "opponent": null
+    },
+    "possession": {
+      "arsenal": 70.0,
+      "opponent": 30.0
+    },
+    "shots": {
+      "arsenal": 23,
+      "opponent": 7
+    },
+    "shots_on_target": {
+      "arsenal": 3,
+      "opponent": 4
+    },
+    "passes": {
+      "arsenal": {
+        "total": 571,
+        "accuracy": 88.0
+      },
+      "opponent": {
+        "total": 258,
+        "accuracy": 73.0
+      }
+    },
+    "fouls": {
+      "arsenal": 6,
+      "opponent": 12
+    },
+    "corners": {
+      "arsenal": 11,
+      "opponent": 1
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 37,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Newcastle",
+      "player": "A. Isak",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 43,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Newcastle",
+      "player": "Joelinton",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 51,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Newcastle",
+      "player": "A. Gordon",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 55,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Newcastle",
+      "player": "Anthony Gordon",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 59,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 59,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "T. Partey",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "J. Murphy",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "A. Isak",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "J. Willock",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "A. Gordon",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 78,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 80,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Oleksandr Zinchenko",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Newcastle",
+      "player": "Valentino Livramento",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 59,
+      "player": "L. Trossard",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 59,
+      "player": "T. Partey",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "J. Murphy",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "A. Isak",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "J. Willock",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "A. Gordon",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 78,
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 0-2 Newcastle (League Cup)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

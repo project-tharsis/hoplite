@@ -1,0 +1,185 @@
+{
+  "fixture_id": 1490810,
+  "date": "2026-01-11T00:00:00",
+  "competition": "FA Cup",
+  "home_team": "Portsmouth",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 4,
+  "home_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 3,
+    "Total Shots": 13,
+    "Blocked Shots": 5,
+    "Shots insidebox": 8,
+    "Shots outsidebox": 5,
+    "Fouls": 16,
+    "Corner Kicks": 6,
+    "Offsides": 1,
+    "Ball Possession": 39.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 273,
+    "Passes accurate": 196,
+    "Passes %": 72.0,
+    "expected_goals": 1.65,
+    "goals_prevented": null
+  },
+  "away_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 5,
+    "Total Shots": 15,
+    "Blocked Shots": 6,
+    "Shots insidebox": 12,
+    "Shots outsidebox": 3,
+    "Fouls": 9,
+    "Corner Kicks": 8,
+    "Offsides": 5,
+    "Ball Possession": 61.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 4,
+    "Total passes": 442,
+    "Passes accurate": 372,
+    "Passes %": 84.0,
+    "expected_goals": 2.96,
+    "goals_prevented": null
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "C. Bishop",
+      "minute": 3,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "A. Dozzell",
+      "minute": 8,
+      "detail": "Own Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "G. Martinelli",
+      "minute": 25,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "H. Blair",
+      "minute": 40,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Myles Lewis-Skelly",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "G. Martinelli",
+      "minute": 51,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Luke Le Roux",
+      "minute": 55,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "C. Shaughnessy",
+      "minute": 62,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Le Roux",
+      "minute": 62,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Ben White",
+      "minute": 68,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Nwaneri",
+      "minute": 69,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. White",
+      "minute": 69,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel Jesus",
+      "minute": 69,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "G. Martinelli",
+      "minute": 72,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Z. Swanson",
+      "minute": 73,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "A. Segecic",
+      "minute": 73,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel",
+      "minute": 76,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "G. Martinelli",
+      "minute": 82,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

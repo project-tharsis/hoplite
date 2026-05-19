@@ -1,0 +1,334 @@
+{
+  "match": {
+    "fixture_id": 1314297,
+    "date": "2024-12-18T19:30:00+00:00",
+    "competition": "League Cup",
+    "home_team": "Arsenal",
+    "away_team": "Crystal Palace",
+    "home_score": 3,
+    "away_score": 2,
+    "arsenal_score": 3,
+    "opponent_score": 2,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球"
+    ],
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果",
+    "historical_context": "## 历史模式参考\n\n类似场景（home vs mid_table regular）：共 2 场\n- 战绩：1胜 0平 0负，场均进球 1.0，场均失球 0.0\n\n### 维度信号分布\n- 执行：🟢0 🟡1 🔴0\n- 调整：🟢1 🟡0 🔴0\n- 满意：🟢1 🟡0 🔴0\n\n### 心智模型历史表现\n- 模型1 文化标准：🟢1 🟡0 🔴0\n- 模型2 比赛控制：🟢1 🟡0 🔴0\n- 模型3 防守身份：🟢0 🟡1 🔴0\n- 模型4 边际收益：🟢0 🟡1 🔴0\n- 模型5 能力叠加：🟢1 🟡0 🔴0\n- 模型6 角色清晰：🟢1 🟡0 🔴0\n\n### 常见战术重点：控制中场、高位反抢/断球\n\n### 最近类似案例\n1. Brighton 2-0（胜）\n   战术重点：控制中场、高位反抢/断球\n   维度信号：执行neutral 调整green 满意green\n\n2. Crystal Palace ?-?（）\n   战术重点：无记录\n   维度信号：执行🟡 调整🟢 满意🟢\n\n### ⚠️ 历史参考规则\n- 历史模式仅作为参考，**不覆盖本场比赛的实际数据**\n- 如果本场数据与历史模式冲突，**以本场数据为准**\n- 历史信号分布反映的是过去趋势，不预测本场结果\n"
+  },
+  "context": {
+    "opponent": "Crystal Palace",
+    "opponent_quality": "mid_table",
+    "venue": "home",
+    "competition_stage": "regular",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 3,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": null,
+      "opponent": null
+    },
+    "possession": {
+      "arsenal": "71%",
+      "opponent": "29%"
+    },
+    "shots": {
+      "arsenal": 12,
+      "opponent": 8
+    },
+    "shots_on_target": {
+      "arsenal": 9,
+      "opponent": 4
+    },
+    "passes": {
+      "arsenal": {
+        "total": 551,
+        "accuracy": "87%"
+      },
+      "opponent": {
+        "total": 225,
+        "accuracy": "66%"
+      }
+    },
+    "fouls": {
+      "arsenal": 7,
+      "opponent": 12
+    },
+    "corners": {
+      "arsenal": 4,
+      "opponent": 2
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 3,
+        "total": 3
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 4,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Crystal Palace",
+      "player": "J. Mateta",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 23,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Crystal Palace",
+      "player": "Caleb Kporha",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "T. Partey",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Crystal Palace",
+      "player": "C. Kporha",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 54,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 59,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Crystal Palace",
+      "player": "J. Mateta",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 59,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Crystal Palace",
+      "player": "E. Eze",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 69,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "K. Tierney",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Sterling",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 73,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Crystal Palace",
+      "player": "W. Hughes",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 81,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Crystal Palace",
+      "player": "E. Nketiah",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Crystal Palace",
+      "player": "T. Mitchell",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 87,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "J. Kiwior",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Myles Lewis-Skelly",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 46,
+      "player": "T. Partey",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 46,
+      "player": "E. Nwaneri",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 46,
+      "player": "C. Kporha",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 59,
+      "player": "J. Mateta",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 59,
+      "player": "E. Eze",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 69,
+      "player": "K. Tierney",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "R. Sterling",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "W. Hughes",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "T. Mitchell",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 87,
+      "player": "J. Kiwior",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 3-2 Crystal Palace (League Cup)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

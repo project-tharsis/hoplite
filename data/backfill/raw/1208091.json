@@ -1,0 +1,164 @@
+{
+  "fixture_id": 1208091,
+  "date": "2024-10-19T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Bournemouth",
+  "away_team": "Arsenal",
+  "home_score": 2,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 4,
+    "Total Shots": 13,
+    "Blocked Shots": 5,
+    "Shots insidebox": 9,
+    "Shots outsidebox": 4,
+    "Fouls": 12,
+    "Corner Kicks": 7,
+    "Offsides": 1,
+    "Ball Possession": 49.0,
+    "Yellow Cards": 1,
+    "Red Cards": 0,
+    "Goalkeeper Saves": 1,
+    "Total passes": 405,
+    "Passes accurate": 323,
+    "Passes %": 80.0,
+    "expected_goals": 1.82,
+    "goals_prevented": -0.35
+  },
+  "away_stats": {
+    "Shots on Goal": 1,
+    "Shots off Goal": 4,
+    "Total Shots": 6,
+    "Blocked Shots": 1,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 1,
+    "Fouls": 11,
+    "Corner Kicks": 4,
+    "Offsides": 1,
+    "Ball Possession": 51.0,
+    "Yellow Cards": 1,
+    "Red Cards": 1,
+    "Goalkeeper Saves": 2,
+    "Total passes": 439,
+    "Passes accurate": 348,
+    "Passes %": 79.0,
+    "expected_goals": 0.68,
+    "goals_prevented": -0.35
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Var",
+      "team": "away",
+      "player": "William Saliba",
+      "minute": 29,
+      "detail": "Card upgrade"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "William Saliba",
+      "minute": 30,
+      "detail": "Red Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Sterling",
+      "minute": 37,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Araujo",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Antoine Semenyo",
+      "minute": 62,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Tavernier",
+      "minute": 63,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "D. Ouattara",
+      "minute": 63,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "A. Scott",
+      "minute": 63,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 64,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Ben White",
+      "minute": 68,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "R. Christie",
+      "minute": 70,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "J. Kluivert",
+      "minute": 79,
+      "detail": "Penalty"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Kiwior",
+      "minute": 80,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Mikel Merino",
+      "minute": 81,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Evanilson",
+      "minute": 82,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

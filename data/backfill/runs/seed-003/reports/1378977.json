@@ -1,0 +1,310 @@
+{
+  "match": {
+    "fixture_id": 1378977,
+    "date": "2025-08-17T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Manchester United",
+    "away_team": "Arsenal",
+    "home_score": 0,
+    "away_score": 1,
+    "arsenal_score": 1,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "防守结构",
+      "快速转换",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "低位防线 + 结构化防守 + 快速转换反击",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "关键球员对位 — 限制对手核心进攻点"
+    ],
+    "expected_subs": "60' 上防守型中场巩固结构；75' 反击点换前锋保持速度威胁"
+  },
+  "context": {
+    "opponent": "Manchester United",
+    "opponent_quality": "top6",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 1.31,
+      "opponent": 1.52
+    },
+    "possession": {
+      "arsenal": 39.0,
+      "opponent": 61.0
+    },
+    "shots": {
+      "arsenal": 9,
+      "opponent": 22
+    },
+    "shots_on_target": {
+      "arsenal": 3,
+      "opponent": 7
+    },
+    "passes": {
+      "arsenal": {
+        "total": 294,
+        "accuracy": 74.0
+      },
+      "opponent": {
+        "total": 475,
+        "accuracy": 83.0
+      }
+    },
+    "fouls": {
+      "arsenal": 19,
+      "opponent": 10
+    },
+    "corners": {
+      "arsenal": 4,
+      "opponent": 3
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 4,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 13,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 42,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Riccardo Calafiori",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 55,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester United",
+      "player": "D. Dalot",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 60,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 60,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester United",
+      "player": "Casemiro",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester United",
+      "player": "M. Mount",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 71,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. White",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 72,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester United",
+      "player": "L. Shaw",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 83,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Manchester United",
+      "player": "Patrick Dorgu",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 85,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "David Raya",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Myles Lewis-Skelly",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Jurriën Timber",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 55,
+      "player": "D. Dalot",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 60,
+      "player": "V. Gyökeres",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 60,
+      "player": "G. Martinelli",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "Casemiro",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "M. Mount",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 71,
+      "player": "B. White",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 72,
+      "player": "R. Calafiori",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "L. Shaw",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 83,
+      "player": "D. Rice",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-0 Manchester United (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

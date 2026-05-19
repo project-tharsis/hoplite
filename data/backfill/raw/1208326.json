@@ -1,0 +1,171 @@
+{
+  "fixture_id": 1208326,
+  "date": "2025-04-05T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Everton",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 2,
+    "Total Shots": 5,
+    "Blocked Shots": 1,
+    "Shots insidebox": 3,
+    "Shots outsidebox": 2,
+    "Fouls": 17,
+    "Corner Kicks": 3,
+    "Offsides": 0,
+    "Ball Possession": 30.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 189,
+    "Passes accurate": 130,
+    "Passes %": 69.0,
+    "expected_goals": 1.09,
+    "goals_prevented": -0.04
+  },
+  "away_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 3,
+    "Total Shots": 14,
+    "Blocked Shots": 6,
+    "Shots insidebox": 11,
+    "Shots outsidebox": 3,
+    "Fouls": 13,
+    "Corner Kicks": 8,
+    "Offsides": 1,
+    "Ball Possession": 70.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 459,
+    "Passes accurate": 398,
+    "Passes %": 87.0,
+    "expected_goals": 1.79,
+    "goals_prevented": -0.04
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Jake O'Brien",
+      "minute": 18,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 34,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Nwaneri",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Sterling",
+      "minute": 46,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Jorginho",
+      "minute": 48,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "I. Ndiaye",
+      "minute": 49,
+      "detail": "Penalty"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. White",
+      "minute": 61,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "James Tarkowski",
+      "minute": 63,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "T. Iroegbunam",
+      "minute": 65,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Beto",
+      "minute": 65,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Jorginho",
+      "minute": 71,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "I. Ndiaye",
+      "minute": 75,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "N. Patterson",
+      "minute": 75,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Lewis-Skelly",
+      "minute": 75,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Carlos Alcaraz",
+      "minute": 87,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Harrison",
+      "minute": 87,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

@@ -1,0 +1,287 @@
+{
+  "match": {
+    "fixture_id": 1208023,
+    "date": "2024-08-17T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Wolves",
+    "home_score": 2,
+    "away_score": 0,
+    "arsenal_score": 2,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Wolves",
+    "opponent_quality": "mid_table",
+    "venue": "home",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 1.24,
+      "opponent": 0.47
+    },
+    "possession": {
+      "arsenal": 53.0,
+      "opponent": 47.0
+    },
+    "shots": {
+      "arsenal": 18,
+      "opponent": 9
+    },
+    "shots_on_target": {
+      "arsenal": 6,
+      "opponent": 3
+    },
+    "passes": {
+      "arsenal": {
+        "total": 420,
+        "accuracy": 85.0
+      },
+      "opponent": {
+        "total": 375,
+        "accuracy": 82.0
+      }
+    },
+    "fouls": {
+      "arsenal": 17,
+      "opponent": 14
+    },
+    "corners": {
+      "arsenal": 8,
+      "opponent": 2
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 2,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 23,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Wolves",
+      "player": "João Gomes",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 25,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 38,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Wolves",
+      "player": "Toti Gomes",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 57,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Wolves",
+      "player": "J. Bellegarde",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 60,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Bukayo Saka",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 69,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "O. Zinchenko",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 74,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Wolves",
+      "player": "Rodrigo Gomes",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 84,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Wolves",
+      "player": "R. Aït-Nouri",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 84,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Wolves",
+      "player": "J. Strand Larsen",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 84,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Wolves",
+      "player": "João Gomes",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 88,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 57,
+      "player": "J. Bellegarde",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 69,
+      "player": "O. Zinchenko",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "Rodrigo Gomes",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "B. Saka",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 84,
+      "player": "R. Aït-Nouri",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 84,
+      "player": "J. Strand Larsen",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 84,
+      "player": "João Gomes",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "D. Rice",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-0 Wolves (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

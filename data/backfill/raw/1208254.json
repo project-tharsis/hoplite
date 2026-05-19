@@ -1,0 +1,157 @@
+{
+  "fixture_id": 1208254,
+  "date": "2025-02-02T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Manchester City",
+  "home_score": 5,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 7,
+    "Shots off Goal": 2,
+    "Total Shots": 12,
+    "Blocked Shots": 3,
+    "Shots insidebox": 8,
+    "Shots outsidebox": 4,
+    "Fouls": 6,
+    "Corner Kicks": 5,
+    "Offsides": 3,
+    "Ball Possession": 46.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 398,
+    "Passes accurate": 347,
+    "Passes %": 87.0,
+    "expected_goals": 1.0,
+    "goals_prevented": -1.99
+  },
+  "away_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 3,
+    "Total Shots": 7,
+    "Blocked Shots": 0,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 2,
+    "Fouls": 7,
+    "Corner Kicks": 2,
+    "Offsides": 1,
+    "Ball Possession": 54.0,
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 474,
+    "Passes accurate": 426,
+    "Passes %": 90.0,
+    "expected_goals": 0.81,
+    "goals_prevented": -1.99
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "M. Ødegaard",
+      "minute": 2,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Jurriën Timber",
+      "minute": 25,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "E. Haaland",
+      "minute": 55,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "T. Partey",
+      "minute": 56,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "M. Lewis-Skelly",
+      "minute": 62,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Martin Ødegaard",
+      "minute": 71,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Omar Marmoush",
+      "minute": 72,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "P. Foden",
+      "minute": 72,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "K. Havertz",
+      "minute": 76,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Ødegaard",
+      "minute": 84,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "minute": 84,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "K. Havertz",
+      "minute": 90,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Lewis-Skelly",
+      "minute": 90,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "E. Nwaneri",
+      "minute": 90,
+      "detail": "Normal Goal"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

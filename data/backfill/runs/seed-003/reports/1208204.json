@@ -1,0 +1,312 @@
+{
+  "match": {
+    "fixture_id": 1208204,
+    "date": "2025-01-01T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Brentford",
+    "away_team": "Arsenal",
+    "home_score": 1,
+    "away_score": 3,
+    "arsenal_score": 3,
+    "opponent_score": 1,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Brentford",
+    "opponent_quality": "mid_table",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 3,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 1.91,
+      "opponent": 0.32
+    },
+    "possession": {
+      "arsenal": 49.0,
+      "opponent": 51.0
+    },
+    "shots": {
+      "arsenal": 14,
+      "opponent": 5
+    },
+    "shots_on_target": {
+      "arsenal": 5,
+      "opponent": 2
+    },
+    "passes": {
+      "arsenal": {
+        "total": 465,
+        "accuracy": 83.0
+      },
+      "opponent": {
+        "total": 485,
+        "accuracy": 82.0
+      }
+    },
+    "fouls": {
+      "arsenal": 8,
+      "opponent": 6
+    },
+    "corners": {
+      "arsenal": 3,
+      "opponent": 4
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 2,
+        "total": 3
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 2,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 13,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Brentford",
+      "player": "B. Mbeumo",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 17,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Jurriën Timber",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 26,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Brentford",
+      "player": "Christian Nørgaard",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 29,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 50,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 53,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 57,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Riccardo Calafiori",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brentford",
+      "player": "S. van den Berg",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brentford",
+      "player": "C. Nørgaard",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brentford",
+      "player": "Y. Wissa",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brentford",
+      "player": "M. Damsgaard",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 78,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 78,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 78,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 88,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Ødegaard",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 75,
+      "player": "S. van den Berg",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "C. Nørgaard",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "Y. Wissa",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "M. Damsgaard",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 78,
+      "player": "E. Nwaneri",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 78,
+      "player": "R. Calafiori",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 78,
+      "player": "Mikel Merino",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 88,
+      "player": "M. Ødegaard",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 3-1 Brentford (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

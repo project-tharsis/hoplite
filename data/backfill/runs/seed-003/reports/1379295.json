@@ -1,0 +1,303 @@
+{
+  "match": {
+    "fixture_id": 1379295,
+    "date": "2026-04-19T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Manchester City",
+    "away_team": "Arsenal",
+    "home_score": 2,
+    "away_score": 1,
+    "arsenal_score": 1,
+    "opponent_score": 2,
+    "result": "L"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "防守结构",
+      "快速转换",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "低位防线 + 结构化防守 + 快速转换反击",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "关键球员对位 — 限制对手核心进攻点"
+    ],
+    "expected_subs": "60' 上防守型中场巩固结构；75' 反击点换前锋保持速度威胁"
+  },
+  "context": {
+    "opponent": "Manchester City",
+    "opponent_quality": "top6",
+    "venue": "away",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": 1.62,
+      "opponent": 1.36
+    },
+    "possession": {
+      "arsenal": 41.0,
+      "opponent": 59.0
+    },
+    "shots": {
+      "arsenal": 9,
+      "opponent": 15
+    },
+    "shots_on_target": {
+      "arsenal": 3,
+      "opponent": 5
+    },
+    "passes": {
+      "arsenal": {
+        "total": 348,
+        "accuracy": 75.0
+      },
+      "opponent": {
+        "total": 498,
+        "accuracy": 85.0
+      }
+    },
+    "fouls": {
+      "arsenal": 12,
+      "opponent": 5
+    },
+    "corners": {
+      "arsenal": 5,
+      "opponent": 8
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 2,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 16,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Manchester City",
+      "player": "R. Cherki",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 18,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 36,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Cristhian Mosquera",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "N. Madueke",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 60,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Manchester City",
+      "player": "Marc Guéhi",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Manchester City",
+      "player": "E. Haaland",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "C. Mosquera",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Eze",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 83,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Manchester City",
+      "player": "Erling Haaland",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 83,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 84,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Zubimendi",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester City",
+      "player": "R. Cherki",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 88,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester City",
+      "player": "Rodri",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 88,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester City",
+      "player": "J. Doku",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester City",
+      "player": "A. Semenyo",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 46,
+      "player": "N. Madueke",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 74,
+      "player": "C. Mosquera",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 74,
+      "player": "E. Eze",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 84,
+      "player": "M. Zubimendi",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "R. Cherki",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 88,
+      "player": "Rodri",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 88,
+      "player": "J. Doku",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "A. Semenyo",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-2 Manchester City (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

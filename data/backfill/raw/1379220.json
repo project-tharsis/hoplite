@@ -1,0 +1,157 @@
+{
+  "fixture_id": 1379220,
+  "date": "2026-02-12T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Brentford",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 4,
+    "Total Shots": 12,
+    "Blocked Shots": 5,
+    "Shots insidebox": 9,
+    "Shots outsidebox": 3,
+    "Fouls": 12,
+    "Corner Kicks": 6,
+    "Offsides": null,
+    "Ball Possession": 41.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 314,
+    "Passes accurate": 235,
+    "Passes %": 75.0,
+    "expected_goals": 1.51,
+    "goals_prevented": 0.87
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 2,
+    "Total Shots": 7,
+    "Blocked Shots": 3,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 1,
+    "Fouls": 11,
+    "Corner Kicks": 4,
+    "Offsides": null,
+    "Ball Possession": 59.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 452,
+    "Passes accurate": 384,
+    "Passes %": 85.0,
+    "expected_goals": 0.6,
+    "goals_prevented": 0.87
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Vitaly Janelt",
+      "minute": 4,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Gabriel Magalhães",
+      "minute": 20,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Viktor Gyökeres",
+      "minute": 30,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Eze",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Mathias Jensen",
+      "minute": 53,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "N. Madueke",
+      "minute": 61,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "N. Madueke",
+      "minute": 70,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "K. Lewis-Potter",
+      "minute": 71,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Y. Yarmolyuk",
+      "minute": 73,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "K. Lewis-Potter",
+      "minute": 73,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 81,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "P. Hincapie",
+      "minute": 81,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Dango Ouattara",
+      "minute": 86,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Henry",
+      "minute": 90,
+      "detail": "Substitution 3"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

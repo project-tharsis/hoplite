@@ -1,0 +1,337 @@
+{
+  "match": {
+    "fixture_id": 1327989,
+    "date": "2025-02-05T00:00:00",
+    "competition": "League Cup",
+    "home_team": "Newcastle",
+    "away_team": "Arsenal",
+    "home_score": 2,
+    "away_score": 0,
+    "arsenal_score": 0,
+    "opponent_score": 2,
+    "result": "L"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Newcastle",
+    "opponent_quality": "top6",
+    "venue": "away",
+    "competition_stage": "regular",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 0,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": null,
+      "opponent": null
+    },
+    "possession": {
+      "arsenal": 68.0,
+      "opponent": 32.0
+    },
+    "shots": {
+      "arsenal": 11,
+      "opponent": 10
+    },
+    "shots_on_target": {
+      "arsenal": 3,
+      "opponent": 3
+    },
+    "passes": {
+      "arsenal": {
+        "total": 423,
+        "accuracy": 83.0
+      },
+      "opponent": {
+        "total": 203,
+        "accuracy": 63.0
+      }
+    },
+    "fouls": {
+      "arsenal": 12,
+      "opponent": 12
+    },
+    "corners": {
+      "arsenal": 13,
+      "opponent": 1
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 3,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 7,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Newcastle",
+      "player": "Alexander Isak",
+      "detail": "Goal cancelled",
+      "is_arsenal": false
+    },
+    {
+      "minute": 19,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Newcastle",
+      "player": "J. Murphy",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 37,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 42,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Kai Havertz",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 44,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "William Saliba",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 47,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Newcastle",
+      "player": "Bruno Guimarães",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 52,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Newcastle",
+      "player": "A. Gordon",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 61,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 61,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Ødegaard",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 78,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "J. Timber",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 78,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "T. Partey",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "J. Murphy",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "S. Botman",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 83,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Raheem Sterling",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 87,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "A. Isak",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 87,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "S. Tonali",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Newcastle",
+      "player": "Fabian Schär",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "Bruno Guimarães",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 37,
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 61,
+      "player": "L. Trossard",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 61,
+      "player": "M. Ødegaard",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 78,
+      "player": "J. Timber",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 78,
+      "player": "T. Partey",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "J. Murphy",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "S. Botman",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 87,
+      "player": "A. Isak",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 87,
+      "player": "S. Tonali",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "Bruno Guimarães",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 0-2 Newcastle (League Cup)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

@@ -1,0 +1,164 @@
+{
+  "fixture_id": 1379009,
+  "date": "2025-09-21T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Manchester City",
+  "home_score": 1,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 6,
+    "Total Shots": 12,
+    "Blocked Shots": 3,
+    "Shots insidebox": 11,
+    "Shots outsidebox": 1,
+    "Fouls": 11,
+    "Corner Kicks": 11,
+    "Offsides": 4,
+    "Ball Possession": 67.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 582,
+    "Passes accurate": 517,
+    "Passes %": 89.0,
+    "expected_goals": 0.89,
+    "goals_prevented": 0.24
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 2,
+    "Total Shots": 5,
+    "Blocked Shots": 0,
+    "Shots insidebox": 4,
+    "Shots outsidebox": 1,
+    "Fouls": 10,
+    "Corner Kicks": 1,
+    "Offsides": 2,
+    "Ball Possession": 33.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 300,
+    "Passes accurate": 229,
+    "Passes %": 76.0,
+    "expected_goals": 0.87,
+    "goals_prevented": 0.24
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "E. Haaland",
+      "minute": 9,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Bernardo Silva",
+      "minute": 36,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Jurriën Timber",
+      "minute": 46,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "N. Madueke",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Merino",
+      "minute": 46,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Khusanov",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "P. Foden",
+      "minute": 68,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Haaland",
+      "minute": 76,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Gianluigi Donnarumma",
+      "minute": 77,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Timber",
+      "minute": 80,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "minute": 84,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "N. O'Reilly",
+      "minute": 87,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Doku",
+      "minute": 87,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Zubimendi",
+      "minute": 90,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "G. Martinelli",
+      "minute": 90,
+      "detail": "Normal Goal"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

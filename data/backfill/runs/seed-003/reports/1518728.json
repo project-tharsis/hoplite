@@ -1,0 +1,245 @@
+{
+  "match": {
+    "fixture_id": 1518728,
+    "date": "2026-03-22T00:00:00",
+    "competition": "League Cup",
+    "home_team": "Arsenal",
+    "away_team": "Manchester City",
+    "home_score": 0,
+    "away_score": 2,
+    "arsenal_score": 0,
+    "opponent_score": 2,
+    "result": "L"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "关键球员对位 — 限制对手核心进攻点"
+    ],
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+  },
+  "context": {
+    "opponent": "Manchester City",
+    "opponent_quality": "top6",
+    "venue": "home",
+    "competition_stage": "regular",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 0,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": 1.12,
+      "opponent": 2.29
+    },
+    "possession": {
+      "arsenal": 38.0,
+      "opponent": 62.0
+    },
+    "shots": {
+      "arsenal": 10,
+      "opponent": 10
+    },
+    "shots_on_target": {
+      "arsenal": 4,
+      "opponent": 2
+    },
+    "passes": {
+      "arsenal": {
+        "total": 332,
+        "accuracy": 78.0
+      },
+      "opponent": {
+        "total": 546,
+        "accuracy": 87.0
+      }
+    },
+    "fouls": {
+      "arsenal": 12,
+      "opponent": 10
+    },
+    "corners": {
+      "arsenal": 3,
+      "opponent": 3
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 2,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 3,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 16,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Piero Hincapié",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 32,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Manchester City",
+      "player": "Abdukodir Khusanov",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 50,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Kepa Arrizabalaga",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 60,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Manchester City",
+      "player": "N. O'Reilly",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 64,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Manchester City",
+      "player": "N. O'Reilly",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "P. Hincapie",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 66,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 69,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Ben White",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. White",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester City",
+      "player": "R. Cherki",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 65,
+      "player": "P. Hincapie",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 66,
+      "player": "K. Havertz",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "B. White",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "L. Trossard",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "R. Cherki",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 0-2 Manchester City (League Cup)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

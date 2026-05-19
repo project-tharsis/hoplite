@@ -1,0 +1,359 @@
+{
+  "match": {
+    "fixture_id": 1208067,
+    "date": "2024-09-22T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Manchester City",
+    "away_team": "Arsenal",
+    "home_score": 2,
+    "away_score": 2,
+    "arsenal_score": 2,
+    "opponent_score": 2,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Manchester City",
+    "opponent_quality": "top6",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": 0.67,
+      "opponent": 2.18
+    },
+    "possession": {
+      "arsenal": 23.0,
+      "opponent": 77.0
+    },
+    "shots": {
+      "arsenal": 5,
+      "opponent": 33
+    },
+    "shots_on_target": {
+      "arsenal": 3,
+      "opponent": 11
+    },
+    "passes": {
+      "arsenal": {
+        "total": 208,
+        "accuracy": 71.0
+      },
+      "opponent": {
+        "total": 705,
+        "accuracy": 91.0
+      }
+    },
+    "fouls": {
+      "arsenal": 10,
+      "opponent": 7
+    },
+    "corners": {
+      "arsenal": 2,
+      "opponent": 8
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 2,
+        "second_half": 0,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 6,
+        "red": 1
+      },
+      "opponent": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": -5,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Myles Lewis-Skelly",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 9,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Manchester City",
+      "player": "E. Haaland",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 21,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester City",
+      "player": "Rodri",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 22,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Manchester City",
+      "player": "Ederson",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 22,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 34,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Leandro Trossard",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Manchester City",
+      "player": "Rúben Dias",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Leandro Trossard",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Thomas Partey",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Leandro Trossard",
+      "detail": "Red Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 45,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester City",
+      "player": "J. Doku",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 78,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester City",
+      "player": "Savinho",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 78,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Manchester City",
+      "player": "K. Walker",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 83,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Declan Rice",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 87,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Manchester City",
+      "player": "Bernardo Silva",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "J. Timber",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Manchester City",
+      "player": "J. Stones",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 21,
+      "player": "Rodri",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 46,
+      "player": "B. Saka",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "J. Doku",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 74,
+      "player": "R. Calafiori",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 78,
+      "player": "Savinho",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 78,
+      "player": "K. Walker",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 87,
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "J. Timber",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-2 Manchester City (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

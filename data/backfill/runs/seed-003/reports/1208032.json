@@ -1,0 +1,287 @@
+{
+  "match": {
+    "fixture_id": 1208032,
+    "date": "2024-08-24T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Aston Villa",
+    "away_team": "Arsenal",
+    "home_score": 0,
+    "away_score": 2,
+    "arsenal_score": 2,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Aston Villa",
+    "opponent_quality": "mid_table",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 0.87,
+      "opponent": 1.28
+    },
+    "possession": {
+      "arsenal": 61.0,
+      "opponent": 39.0
+    },
+    "shots": {
+      "arsenal": 9,
+      "opponent": 11
+    },
+    "shots_on_target": {
+      "arsenal": 4,
+      "opponent": 3
+    },
+    "passes": {
+      "arsenal": {
+        "total": 514,
+        "accuracy": 91.0
+      },
+      "opponent": {
+        "total": 329,
+        "accuracy": 82.0
+      }
+    },
+    "fouls": {
+      "arsenal": 16,
+      "opponent": 8
+    },
+    "corners": {
+      "arsenal": 1,
+      "opponent": 4
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 2,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 3,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 16,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Aston Villa",
+      "player": "M. Cash",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Declan Rice",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 57,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Aston Villa",
+      "player": "O. Watkins",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Aston Villa",
+      "player": "J. McGinn",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 67,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 72,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Aston Villa",
+      "player": "Amadou Onana",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Aston Villa",
+      "player": "A. Onana",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Aston Villa",
+      "player": "L. Digne",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 77,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "T. Partey",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 79,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "J. Timber",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 88,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 89,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Martin Ødegaard",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 16,
+      "player": "M. Cash",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "O. Watkins",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "J. McGinn",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "A. Onana",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "L. Digne",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 79,
+      "player": "J. Timber",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 88,
+      "player": "B. Saka",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-0 Aston Villa (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

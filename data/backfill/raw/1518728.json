@@ -1,0 +1,136 @@
+{
+  "fixture_id": 1518728,
+  "date": "2026-03-22T00:00:00",
+  "competition": "League Cup",
+  "home_team": "Arsenal",
+  "away_team": "Manchester City",
+  "home_score": 0,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 4,
+    "Total Shots": 10,
+    "Blocked Shots": 2,
+    "Shots insidebox": 9,
+    "Shots outsidebox": 1,
+    "Fouls": 12,
+    "Corner Kicks": 3,
+    "Offsides": 1,
+    "Ball Possession": 38.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 332,
+    "Passes accurate": 258,
+    "Passes %": 78.0,
+    "expected_goals": 1.12,
+    "goals_prevented": null
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 3,
+    "Total Shots": 10,
+    "Blocked Shots": 5,
+    "Shots insidebox": 8,
+    "Shots outsidebox": 2,
+    "Fouls": 10,
+    "Corner Kicks": 3,
+    "Offsides": 1,
+    "Ball Possession": 62.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 4,
+    "Total passes": 546,
+    "Passes accurate": 476,
+    "Passes %": 87.0,
+    "expected_goals": 2.29,
+    "goals_prevented": null
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Piero Hincapié",
+      "minute": 16,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Abdukodir Khusanov",
+      "minute": 32,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Kepa Arrizabalaga",
+      "minute": 50,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "N. O'Reilly",
+      "minute": 60,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "N. O'Reilly",
+      "minute": 64,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "P. Hincapie",
+      "minute": 65,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "K. Havertz",
+      "minute": 66,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Ben White",
+      "minute": 69,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. White",
+      "minute": 82,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "minute": 82,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Cherki",
+      "minute": 90,
+      "detail": "Substitution 1"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

@@ -1,0 +1,382 @@
+{
+  "match": {
+    "fixture_id": 1208151,
+    "date": "2024-11-30T17:30:00+00:00",
+    "competition": "Premier League",
+    "home_team": "West Ham",
+    "away_team": "Arsenal",
+    "home_score": 2,
+    "away_score": 5,
+    "arsenal_score": 5,
+    "opponent_score": 2,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制节奏",
+      "转换效率",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球"
+    ],
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+  },
+  "context": {
+    "opponent": "West Ham",
+    "opponent_quality": "mid_table",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 5,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": "3.60",
+      "opponent": "1.54"
+    },
+    "possession": {
+      "arsenal": "60%",
+      "opponent": "40%"
+    },
+    "shots": {
+      "arsenal": 16,
+      "opponent": 12
+    },
+    "shots_on_target": {
+      "arsenal": 7,
+      "opponent": 5
+    },
+    "passes": {
+      "arsenal": {
+        "total": 479,
+        "accuracy": "84%"
+      },
+      "opponent": {
+        "total": 323,
+        "accuracy": "78%"
+      }
+    },
+    "fouls": {
+      "arsenal": 13,
+      "opponent": 10
+    },
+    "corners": {
+      "arsenal": 10,
+      "opponent": 2
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 5,
+        "second_half": 0,
+        "total": 5
+      },
+      "opponent": {
+        "first_half": 2,
+        "second_half": 0,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 4,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 10,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 27,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 34,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "M. Ødegaard",
+      "detail": "Penalty",
+      "is_arsenal": true
+    },
+    {
+      "minute": 36,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 38,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "West Ham",
+      "player": "A. Wan-Bissaka",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 40,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "West Ham",
+      "player": "Emerson",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 42,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "West Ham",
+      "player": "Emerson Palmieri",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 42,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Bukayo Saka",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "West Ham",
+      "player": "Łukasz Fabiański",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "West Ham",
+      "player": "Crysencio Summerville",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 45,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Penalty",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "West Ham",
+      "player": "C. Summerville",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 56,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "West Ham",
+      "player": "M. Antonio",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "West Ham",
+      "player": "Emerson",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Ødegaard",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 77,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "West Ham",
+      "player": "Lucas Paquetá",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 78,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "West Ham",
+      "player": "Carlos Soler",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "West Ham",
+      "player": "Tomáš Souček",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 2,
+    "opponent": 0,
+    "details": [
+      "34' M. Ødegaard — Penalty",
+      "45' B. Saka — Penalty"
+    ]
+  },
+  "sub_impact": [
+    {
+      "minute": 46,
+      "player": "C. Summerville",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 46,
+      "player": "Gabriel Magalhães",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 56,
+      "player": "R. Calafiori",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "M. Antonio",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "Emerson",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 74,
+      "player": "M. Ødegaard",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 74,
+      "player": "B. Saka",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 77,
+      "player": "Lucas Paquetá",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 78,
+      "player": "Carlos Soler",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "L. Trossard",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 5-2 West Ham (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

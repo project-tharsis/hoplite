@@ -1,0 +1,213 @@
+{
+  "fixture_id": 1451075,
+  "date": "2025-11-04T00:00:00",
+  "competition": "UEFA Champions League",
+  "home_team": "Slavia Praha",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 3,
+  "home_stats": {
+    "Shots on Goal": 1,
+    "Shots off Goal": 5,
+    "Total Shots": 9,
+    "Blocked Shots": 3,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 3,
+    "Fouls": 31,
+    "Corner Kicks": 4,
+    "Offsides": 5,
+    "Ball Possession": 43.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 5,
+    "Total passes": 258,
+    "Passes accurate": 187,
+    "Passes %": 72.0,
+    "expected_goals": 0.47,
+    "goals_prevented": 0.12
+  },
+  "away_stats": {
+    "Shots on Goal": 8,
+    "Shots off Goal": 2,
+    "Total Shots": 14,
+    "Blocked Shots": 4,
+    "Shots insidebox": 12,
+    "Shots outsidebox": 2,
+    "Fouls": 0,
+    "Corner Kicks": 7,
+    "Offsides": 0,
+    "Ball Possession": 57.0,
+    "Yellow Cards": 4,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 344,
+    "Passes accurate": 274,
+    "Passes %": 80.0,
+    "expected_goals": 1.81,
+    "goals_prevented": 0.12
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Ethan Nwaneri",
+      "minute": 23,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Var",
+      "team": "away",
+      "player": "Gabriel Magalhães",
+      "minute": 30,
+      "detail": "Penalty confirmed"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "B. Saka",
+      "minute": 32,
+      "detail": "Penalty"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Mikel Merino",
+      "minute": 37,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "M. Merino",
+      "minute": 46,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "T. Chory",
+      "minute": 48,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Nwaneri",
+      "minute": 65,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "M. Merino",
+      "minute": 68,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Christos Zafeiris",
+      "minute": 70,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "C. Zafeiris",
+      "minute": 70,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "T. Vlcek",
+      "minute": 70,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Timber",
+      "minute": 73,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "P. Hincapie",
+      "minute": 73,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 73,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "D. Moses",
+      "minute": 74,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Y. Sanyang",
+      "minute": 74,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Christian Nørgaard",
+      "minute": 75,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Myles Lewis-Skelly",
+      "minute": 79,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "D. Rice",
+      "minute": 81,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "David Doudera",
+      "minute": 83,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Var",
+      "team": "home",
+      "player": "Lukáš Provod",
+      "minute": 86,
+      "detail": "Penalty cancelled"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Youssoupha Mbodji",
+      "minute": 90,
+      "detail": "Yellow Card"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

@@ -1,0 +1,199 @@
+{
+  "fixture_id": 1451159,
+  "date": "2026-01-28T00:00:00",
+  "competition": "UEFA Champions League",
+  "home_team": "Arsenal",
+  "away_team": "Kairat Almaty",
+  "home_score": 3,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 11,
+    "Shots off Goal": 10,
+    "Total Shots": 25,
+    "Blocked Shots": 4,
+    "Shots insidebox": 18,
+    "Shots outsidebox": 7,
+    "Fouls": 14,
+    "Corner Kicks": 11,
+    "Offsides": 2,
+    "Ball Possession": 66.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 584,
+    "Passes accurate": 514,
+    "Passes %": 88.0,
+    "expected_goals": 4.06,
+    "goals_prevented": -0.57
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 2,
+    "Total Shots": 4,
+    "Blocked Shots": 0,
+    "Shots insidebox": 3,
+    "Shots outsidebox": 1,
+    "Fouls": 10,
+    "Corner Kicks": 0,
+    "Offsides": 0,
+    "Ball Possession": 34.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 7,
+    "Total passes": 303,
+    "Passes accurate": 211,
+    "Passes %": 70.0,
+    "expected_goals": 1.11,
+    "goals_prevented": -0.57
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "V. Gyokeres",
+      "minute": 3,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Var",
+      "team": "away",
+      "player": "Jorginho",
+      "minute": 5,
+      "detail": "Penalty confirmed"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Riccardo Calafiori",
+      "minute": 6,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Jorginho",
+      "minute": 7,
+      "detail": "Penalty"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "K. Havertz",
+      "minute": 15,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "G. Martinelli",
+      "minute": 36,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Var",
+      "team": "home",
+      "player": "Gabriel Martinelli",
+      "minute": 38,
+      "detail": "Goal confirmed"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Calafiori",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "K. Havertz",
+      "minute": 46,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Edmilson",
+      "minute": 59,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Tapalov",
+      "minute": 59,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Jorginho",
+      "minute": 69,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "D. Glazer",
+      "minute": 70,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Mata",
+      "minute": 70,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "V. Gyökeres",
+      "minute": 77,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "G. Martinelli",
+      "minute": 77,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Jorginho",
+      "minute": 79,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Var",
+      "team": "home",
+      "player": "Gabriel Jesus",
+      "minute": 88,
+      "detail": "Goal cancelled"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "C. Norgaard",
+      "minute": 89,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Ricardinho",
+      "minute": 90,
+      "detail": "Normal Goal"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

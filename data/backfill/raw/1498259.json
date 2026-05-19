@@ -1,0 +1,213 @@
+{
+  "fixture_id": 1498259,
+  "date": "2026-01-14T00:00:00",
+  "competition": "League Cup",
+  "home_team": "Chelsea",
+  "away_team": "Arsenal",
+  "home_score": 2,
+  "away_score": 3,
+  "home_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 1,
+    "Total Shots": 10,
+    "Blocked Shots": 4,
+    "Shots insidebox": 7,
+    "Shots outsidebox": 3,
+    "Fouls": 12,
+    "Corner Kicks": 6,
+    "Offsides": 4,
+    "Ball Possession": 58.0,
+    "Yellow Cards": 4,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 495,
+    "Passes accurate": 421,
+    "Passes %": 85.0,
+    "expected_goals": null,
+    "goals_prevented": null
+  },
+  "away_stats": {
+    "Shots on Goal": 6,
+    "Shots off Goal": 6,
+    "Total Shots": 17,
+    "Blocked Shots": 5,
+    "Shots insidebox": 12,
+    "Shots outsidebox": 5,
+    "Fouls": 14,
+    "Corner Kicks": 9,
+    "Offsides": 2,
+    "Ball Possession": 42.0,
+    "Yellow Cards": 4,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 356,
+    "Passes accurate": 295,
+    "Passes %": 83.0,
+    "expected_goals": null,
+    "goals_prevented": null
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "B. White",
+      "minute": 7,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Estêvão",
+      "minute": 42,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Leandro Trossard",
+      "minute": 42,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Marc Cucurella",
+      "minute": 44,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "V. Gyokeres",
+      "minute": 49,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Acheampong",
+      "minute": 53,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Guiu",
+      "minute": 53,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "A. Garnacho",
+      "minute": 57,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Benoît Badiashile",
+      "minute": 65,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 67,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Odegaard",
+      "minute": 68,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "M. Zubimendi",
+      "minute": 71,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Kepa Arrizabalaga",
+      "minute": 75,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "W. Fofana",
+      "minute": 75,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Mikel Merino",
+      "minute": 78,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Cucurella",
+      "minute": 81,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Joao Pedro",
+      "minute": 81,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "V. Gyökeres",
+      "minute": 82,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "D. Rice",
+      "minute": 82,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "A. Garnacho",
+      "minute": 83,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Pedro Neto",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Jurriën Timber",
+      "minute": 90,
+      "detail": "Yellow Card"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

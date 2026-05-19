@@ -1,0 +1,326 @@
+{
+  "match": {
+    "fixture_id": 1451052,
+    "date": "2025-10-01T00:00:00",
+    "competition": "UEFA Champions League",
+    "home_team": "Arsenal",
+    "away_team": "Olympiakos Piraeus",
+    "home_score": 2,
+    "away_score": 0,
+    "arsenal_score": 2,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "边路overload",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "高位防线 + 控球消耗 + 耐心破低位",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "破密集耐心 — 避免急躁 + 把握有限机会"
+    ],
+    "expected_subs": "60' Trossard换边路保持压力/变化节奏；70' 轮换主力中场维持控球"
+  },
+  "context": {
+    "opponent": "Olympiakos Piraeus",
+    "opponent_quality": "lower",
+    "venue": "home",
+    "competition_stage": "group_stage",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 2.9,
+      "opponent": 0.5
+    },
+    "possession": {
+      "arsenal": 61.0,
+      "opponent": 39.0
+    },
+    "shots": {
+      "arsenal": 16,
+      "opponent": 10
+    },
+    "shots_on_target": {
+      "arsenal": 5,
+      "opponent": 3
+    },
+    "passes": {
+      "arsenal": {
+        "total": 496,
+        "accuracy": 82.0
+      },
+      "opponent": {
+        "total": 307,
+        "accuracy": 73.0
+      }
+    },
+    "fouls": {
+      "arsenal": 14,
+      "opponent": 17
+    },
+    "corners": {
+      "arsenal": 3,
+      "opponent": 5
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 3,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 12,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 58,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 58,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. White",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 59,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Merino",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 61,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Martín Zubimendi",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 62,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Olympiakos Piraeus",
+      "player": "G. Martins",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 73,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 73,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Olympiakos Piraeus",
+      "player": "D. Garcia",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 78,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Declan Rice",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Olympiakos Piraeus",
+      "player": "P. Retsos",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Olympiakos Piraeus",
+      "player": "S. Hezze",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Olympiakos Piraeus",
+      "player": "Chiquinho",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Olympiakos Piraeus",
+      "player": "Gabriel Strefezza",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 58,
+      "player": "B. White",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 59,
+      "player": "M. Merino",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 62,
+      "player": "G. Martins",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 73,
+      "player": "L. Trossard",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 73,
+      "player": "G. Martinelli",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "Gabriel",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "D. Garcia",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "P. Retsos",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "S. Hezze",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "Chiquinho",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-0 Olympiakos Piraeus (UEFA Champions League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

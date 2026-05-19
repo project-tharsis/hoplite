@@ -1,0 +1,251 @@
+{
+  "match": {
+    "fixture_id": 1208285,
+    "date": "2025-02-26T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Nottingham Forest",
+    "away_team": "Arsenal",
+    "home_score": 0,
+    "away_score": 0,
+    "arsenal_score": 0,
+    "opponent_score": 0,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Nottingham Forest",
+    "opponent_quality": "mid_table",
+    "venue": "away",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 0,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 0.99,
+      "opponent": 0.4
+    },
+    "possession": {
+      "arsenal": 65.0,
+      "opponent": 35.0
+    },
+    "shots": {
+      "arsenal": 13,
+      "opponent": 6
+    },
+    "shots_on_target": {
+      "arsenal": 1,
+      "opponent": 2
+    },
+    "passes": {
+      "arsenal": {
+        "total": 502,
+        "accuracy": 87.0
+      },
+      "opponent": {
+        "total": 268,
+        "accuracy": 74.0
+      }
+    },
+    "fouls": {
+      "arsenal": 17,
+      "opponent": 10
+    },
+    "corners": {
+      "arsenal": 11,
+      "opponent": 3
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 3,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Riccardo Calafiori",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 4,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Nottingham Forest",
+      "player": "Nikola Milenković",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 62,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Nottingham Forest",
+      "player": "A. Elanga",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Nottingham Forest",
+      "player": "N. Domínguez",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Jorginho",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 77,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Nottingham Forest",
+      "player": "C. Wood",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Ødegaard",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "J. Timber",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 46,
+      "player": "R. Calafiori",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 62,
+      "player": "A. Elanga",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 63,
+      "player": "N. Domínguez",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "Jorginho",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 77,
+      "player": "E. Nwaneri",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "C. Wood",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "M. Ødegaard",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "J. Timber",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 0-0 Nottingham Forest (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

@@ -1,0 +1,285 @@
+{
+  "match": {
+    "fixture_id": 1208354,
+    "date": "2025-04-23T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Crystal Palace",
+    "home_score": 2,
+    "away_score": 2,
+    "arsenal_score": 2,
+    "opponent_score": 2,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球"
+    ],
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+  },
+  "context": {
+    "opponent": "Crystal Palace",
+    "opponent_quality": "mid_table",
+    "venue": "home",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": 1.18,
+      "opponent": 1.81
+    },
+    "possession": {
+      "arsenal": 68.0,
+      "opponent": 32.0
+    },
+    "shots": {
+      "arsenal": 12,
+      "opponent": 15
+    },
+    "shots_on_target": {
+      "arsenal": 6,
+      "opponent": 4
+    },
+    "passes": {
+      "arsenal": {
+        "total": 711,
+        "accuracy": 92.0
+      },
+      "opponent": {
+        "total": 328,
+        "accuracy": 83.0
+      }
+    },
+    "fouls": {
+      "arsenal": 4,
+      "opponent": 6
+    },
+    "corners": {
+      "arsenal": 3,
+      "opponent": 6
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 2,
+        "second_half": 0,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 3,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "J. Kiwior",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 27,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Crystal Palace",
+      "player": "E. Eze",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 42,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Declan Rice",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 47,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Crystal Palace",
+      "player": "Justin Devenny",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 60,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Sterling",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Crystal Palace",
+      "player": "A. Wharton",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Crystal Palace",
+      "player": "E. Eze",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 73,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Goal cancelled",
+      "is_arsenal": true
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Crystal Palace",
+      "player": "E. Nketiah",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Crystal Palace",
+      "player": "J. Devenny",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 83,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Crystal Palace",
+      "player": "J. Mateta",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Ødegaard",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 60,
+      "player": "R. Sterling",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 63,
+      "player": "A. Wharton",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 63,
+      "player": "E. Eze",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "E. Nketiah",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "J. Devenny",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "M. Ødegaard",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-2 Crystal Palace (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

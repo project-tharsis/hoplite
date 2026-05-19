@@ -1,0 +1,283 @@
+{
+  "match": {
+    "fixture_id": 1208363,
+    "date": "2025-05-03T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Bournemouth",
+    "home_score": 1,
+    "away_score": 2,
+    "arsenal_score": 1,
+    "opponent_score": 2,
+    "result": "L"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球"
+    ],
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+  },
+  "context": {
+    "opponent": "Bournemouth",
+    "opponent_quality": "mid_table",
+    "venue": "home",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": 1.42,
+      "opponent": 0.97
+    },
+    "possession": {
+      "arsenal": 50.0,
+      "opponent": 50.0
+    },
+    "shots": {
+      "arsenal": 13,
+      "opponent": 9
+    },
+    "shots_on_target": {
+      "arsenal": 4,
+      "opponent": 2
+    },
+    "passes": {
+      "arsenal": {
+        "total": 427,
+        "accuracy": 85.0
+      },
+      "opponent": {
+        "total": 417,
+        "accuracy": 83.0
+      }
+    },
+    "fouls": {
+      "arsenal": 7,
+      "opponent": 16
+    },
+    "corners": {
+      "arsenal": 2,
+      "opponent": 3
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 2,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 0,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 34,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 58,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Bournemouth",
+      "player": "Evanilson",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 64,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Bournemouth",
+      "player": "Dango Ouattara",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bournemouth",
+      "player": "J. Kluivert",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bournemouth",
+      "player": "J. Araujo",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 67,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Bournemouth",
+      "player": "Dean Huijsen",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bournemouth",
+      "player": "D. Ouattara",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 75,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Bournemouth",
+      "player": "Evanilson",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. White",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 87,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bournemouth",
+      "player": "Evanilson",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 65,
+      "player": "J. Kluivert",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "J. Araujo",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 74,
+      "player": "D. Rice",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 74,
+      "player": "D. Ouattara",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "B. White",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "B. Saka",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 87,
+      "player": "Evanilson",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-2 Bournemouth (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

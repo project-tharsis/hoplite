@@ -1,0 +1,164 @@
+{
+  "fixture_id": 1379189,
+  "date": "2026-01-25T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Manchester United",
+  "home_score": 2,
+  "away_score": 3,
+  "home_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 5,
+    "Total Shots": 15,
+    "Blocked Shots": 6,
+    "Shots insidebox": 9,
+    "Shots outsidebox": 6,
+    "Fouls": 11,
+    "Corner Kicks": 9,
+    "Offsides": 3,
+    "Ball Possession": 56.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 443,
+    "Passes accurate": 371,
+    "Passes %": 84.0,
+    "expected_goals": 1.19,
+    "goals_prevented": -0.1
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 5,
+    "Total Shots": 10,
+    "Blocked Shots": 2,
+    "Shots insidebox": 3,
+    "Shots outsidebox": 7,
+    "Fouls": 9,
+    "Corner Kicks": 2,
+    "Offsides": 0,
+    "Ball Possession": 44.0,
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 364,
+    "Passes accurate": 289,
+    "Passes %": 79.0,
+    "expected_goals": 0.71,
+    "goals_prevented": -0.1
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "L. Martinez",
+      "minute": 29,
+      "detail": "Own Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "B. Mbeumo",
+      "minute": 37,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "P. Dorgu",
+      "minute": 50,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel Jesus",
+      "minute": 58,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "P. Hincapie",
+      "minute": 58,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Odegaard",
+      "minute": 58,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Zubimendi",
+      "minute": 58,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Declan Rice",
+      "minute": 64,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. Mbeumo",
+      "minute": 69,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "minute": 75,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "P. Dorgu",
+      "minute": 81,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "M. Merino",
+      "minute": 84,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "M. Cunha",
+      "minute": 87,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Diallo",
+      "minute": 88,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Eberechi Eze",
+      "minute": 90,
+      "detail": "Yellow Card"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

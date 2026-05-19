@@ -1,0 +1,178 @@
+{
+  "fixture_id": 1379279,
+  "date": "2026-04-11T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Bournemouth",
+  "home_score": 1,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 4,
+    "Total Shots": 15,
+    "Blocked Shots": 8,
+    "Shots insidebox": 10,
+    "Shots outsidebox": 5,
+    "Fouls": 12,
+    "Corner Kicks": 10,
+    "Offsides": 2,
+    "Ball Possession": 52.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 389,
+    "Passes accurate": 314,
+    "Passes %": 81.0,
+    "expected_goals": 2.32,
+    "goals_prevented": 0.08
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 3,
+    "Total Shots": 8,
+    "Blocked Shots": 2,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 3,
+    "Fouls": 18,
+    "Corner Kicks": 1,
+    "Offsides": 0,
+    "Ball Possession": 48.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 367,
+    "Passes accurate": 292,
+    "Passes %": 80.0,
+    "expected_goals": 1.19,
+    "goals_prevented": 0.08
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "E. J. Kroupi",
+      "minute": 17,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "V. Gyokeres",
+      "minute": 35,
+      "detail": "Penalty"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "N. Madueke",
+      "minute": 54,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "G. Martinelli",
+      "minute": 54,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "K. Havertz",
+      "minute": 54,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Christie",
+      "minute": 70,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Rayan",
+      "minute": 70,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "A. Scott",
+      "minute": 74,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Zubimendi",
+      "minute": 76,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. White",
+      "minute": 76,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Adrien Truffert",
+      "minute": 77,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Eli Junior Kroupi",
+      "minute": 79,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Viktor Gyökeres",
+      "minute": 80,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. J. Kroupi",
+      "minute": 85,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "James Hill",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Jimenez",
+      "minute": 90,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Evanilson",
+      "minute": 90,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

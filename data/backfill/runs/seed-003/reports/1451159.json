@@ -1,0 +1,364 @@
+{
+  "match": {
+    "fixture_id": 1451159,
+    "date": "2026-01-28T00:00:00",
+    "competition": "UEFA Champions League",
+    "home_team": "Arsenal",
+    "away_team": "Kairat Almaty",
+    "home_score": 3,
+    "away_score": 2,
+    "arsenal_score": 3,
+    "opponent_score": 2,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "边路overload",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "高位防线 + 控球消耗 + 耐心破低位",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "破密集耐心 — 避免急躁 + 把握有限机会"
+    ],
+    "expected_subs": "60' Trossard换边路保持压力/变化节奏；70' 轮换主力中场维持控球"
+  },
+  "context": {
+    "opponent": "Kairat Almaty",
+    "opponent_quality": "lower",
+    "venue": "home",
+    "competition_stage": "group_stage",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 3,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": 4.06,
+      "opponent": 1.11
+    },
+    "possession": {
+      "arsenal": 66.0,
+      "opponent": 34.0
+    },
+    "shots": {
+      "arsenal": 25,
+      "opponent": 4
+    },
+    "shots_on_target": {
+      "arsenal": 11,
+      "opponent": 2
+    },
+    "passes": {
+      "arsenal": {
+        "total": 584,
+        "accuracy": 88.0
+      },
+      "opponent": {
+        "total": 303,
+        "accuracy": 70.0
+      }
+    },
+    "fouls": {
+      "arsenal": 14,
+      "opponent": 10
+    },
+    "corners": {
+      "arsenal": 11,
+      "opponent": 0
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 3,
+        "second_half": 0,
+        "total": 3
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 3,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "V. Gyokeres",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 5,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Kairat Almaty",
+      "player": "Jorginho",
+      "detail": "Penalty confirmed",
+      "is_arsenal": false
+    },
+    {
+      "minute": 6,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Riccardo Calafiori",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 7,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Kairat Almaty",
+      "player": "Jorginho",
+      "detail": "Penalty",
+      "is_arsenal": false
+    },
+    {
+      "minute": 15,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 36,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 38,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Goal confirmed",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 59,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Kairat Almaty",
+      "player": "Edmilson",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 59,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Kairat Almaty",
+      "player": "E. Tapalov",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 69,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Kairat Almaty",
+      "player": "Jorginho",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Kairat Almaty",
+      "player": "D. Glazer",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Kairat Almaty",
+      "player": "L. Mata",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 77,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 77,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 79,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Kairat Almaty",
+      "player": "Jorginho",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 88,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Goal cancelled",
+      "is_arsenal": true
+    },
+    {
+      "minute": 89,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "C. Norgaard",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Kairat Almaty",
+      "player": "Ricardinho",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 1,
+    "details": [
+      "7' Jorginho — Penalty"
+    ]
+  },
+  "sub_impact": [
+    {
+      "minute": 46,
+      "player": "R. Calafiori",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 46,
+      "player": "K. Havertz",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 59,
+      "player": "Edmilson",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 59,
+      "player": "E. Tapalov",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "D. Glazer",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "L. Mata",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 77,
+      "player": "V. Gyökeres",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 77,
+      "player": "G. Martinelli",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 79,
+      "player": "Jorginho",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 89,
+      "player": "C. Norgaard",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 3-2 Kairat Almaty (UEFA Champions League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

@@ -1,0 +1,382 @@
+{
+  "match": {
+    "fixture_id": 1451075,
+    "date": "2025-11-04T00:00:00",
+    "competition": "UEFA Champions League",
+    "home_team": "Slavia Praha",
+    "away_team": "Arsenal",
+    "home_score": 0,
+    "away_score": 3,
+    "arsenal_score": 3,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "高位反抢/断球",
+      "轮换体能管理"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "破密集耐心 — 避免急躁 + 把握有限机会"
+    ],
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+  },
+  "context": {
+    "opponent": "Slavia Praha",
+    "opponent_quality": "lower",
+    "venue": "away",
+    "competition_stage": "group_stage",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 3,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 1.81,
+      "opponent": 0.47
+    },
+    "possession": {
+      "arsenal": 57.0,
+      "opponent": 43.0
+    },
+    "shots": {
+      "arsenal": 14,
+      "opponent": 9
+    },
+    "shots_on_target": {
+      "arsenal": 8,
+      "opponent": 1
+    },
+    "passes": {
+      "arsenal": {
+        "total": 344,
+        "accuracy": 80.0
+      },
+      "opponent": {
+        "total": 258,
+        "accuracy": 72.0
+      }
+    },
+    "fouls": {
+      "arsenal": 0,
+      "opponent": 31
+    },
+    "corners": {
+      "arsenal": 7,
+      "opponent": 4
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 2,
+        "total": 3
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 4,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 23,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Ethan Nwaneri",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 30,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Penalty confirmed",
+      "is_arsenal": true
+    },
+    {
+      "minute": 32,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Penalty",
+      "is_arsenal": true
+    },
+    {
+      "minute": 37,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "M. Merino",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 48,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Slavia Praha",
+      "player": "T. Chory",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 68,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "M. Merino",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Slavia Praha",
+      "player": "Christos Zafeiris",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Slavia Praha",
+      "player": "C. Zafeiris",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Slavia Praha",
+      "player": "T. Vlcek",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 73,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "J. Timber",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 73,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "P. Hincapie",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 73,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Slavia Praha",
+      "player": "D. Moses",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Slavia Praha",
+      "player": "Y. Sanyang",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 75,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Christian Nørgaard",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 79,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Myles Lewis-Skelly",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 81,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 83,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Slavia Praha",
+      "player": "David Doudera",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 86,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Slavia Praha",
+      "player": "Lukáš Provod",
+      "detail": "Penalty cancelled",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Slavia Praha",
+      "player": "Youssoupha Mbodji",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 1,
+    "opponent": 0,
+    "details": [
+      "32' B. Saka — Penalty"
+    ]
+  },
+  "sub_impact": [
+    {
+      "minute": 48,
+      "player": "T. Chory",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "E. Nwaneri",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "C. Zafeiris",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "T. Vlcek",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 73,
+      "player": "J. Timber",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 73,
+      "player": "P. Hincapie",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 73,
+      "player": "L. Trossard",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 74,
+      "player": "D. Moses",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 74,
+      "player": "Y. Sanyang",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 81,
+      "player": "D. Rice",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 3-0 Slavia Praha (UEFA Champions League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

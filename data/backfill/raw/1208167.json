@@ -1,0 +1,178 @@
+{
+  "fixture_id": 1208167,
+  "date": "2024-12-08T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Fulham",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 0,
+    "Total Shots": 2,
+    "Blocked Shots": 0,
+    "Shots insidebox": 2,
+    "Shots outsidebox": 0,
+    "Fouls": 10,
+    "Corner Kicks": 0,
+    "Offsides": 0,
+    "Ball Possession": 34.0,
+    "Yellow Cards": 4,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 302,
+    "Passes accurate": 218,
+    "Passes %": 72.0,
+    "expected_goals": 0.16,
+    "goals_prevented": -0.56
+  },
+  "away_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 8,
+    "Total Shots": 12,
+    "Blocked Shots": 0,
+    "Shots insidebox": 10,
+    "Shots outsidebox": 2,
+    "Fouls": 9,
+    "Corner Kicks": 6,
+    "Offsides": 3,
+    "Ball Possession": 66.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 587,
+    "Passes accurate": 522,
+    "Passes %": 89.0,
+    "expected_goals": 2.03,
+    "goals_prevented": -0.56
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "R. Jiménez",
+      "minute": 11,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Saša Lukić",
+      "minute": 50,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "W. Saliba",
+      "minute": 52,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "E. Smith Rowe",
+      "minute": 60,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Adama Traoré",
+      "minute": 60,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 60,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Calvin Bassey",
+      "minute": 72,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "K. Havertz",
+      "minute": 74,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Jorginho",
+      "minute": 74,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Raúl Jiménez",
+      "minute": 79,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Jiménez",
+      "minute": 79,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Ødegaard",
+      "minute": 79,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "minute": 82,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Antonee Robinson",
+      "minute": 85,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Declan Rice",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Var",
+      "team": "away",
+      "player": "Bukayo Saka",
+      "minute": 90,
+      "detail": "Goal cancelled"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "S. Lukić",
+      "minute": 90,
+      "detail": "Substitution 4"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

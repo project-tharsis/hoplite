@@ -1,0 +1,206 @@
+{
+  "fixture_id": 1208072,
+  "date": "2024-09-28T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Leicester",
+  "home_score": 4,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 16,
+    "Shots off Goal": 10,
+    "Total Shots": 36,
+    "Blocked Shots": 10,
+    "Shots insidebox": 28,
+    "Shots outsidebox": 8,
+    "Fouls": 11,
+    "Corner Kicks": 17,
+    "Offsides": 0,
+    "Ball Possession": 75.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 663,
+    "Passes accurate": 592,
+    "Passes %": 89.0,
+    "expected_goals": 4.62,
+    "goals_prevented": 1.74
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 1,
+    "Total Shots": 5,
+    "Blocked Shots": 1,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 0,
+    "Fouls": 6,
+    "Corner Kicks": 0,
+    "Offsides": 1,
+    "Ball Possession": 25.0,
+    "Yellow Cards": 4,
+    "Red Cards": null,
+    "Goalkeeper Saves": 13,
+    "Total passes": 232,
+    "Passes accurate": 171,
+    "Passes %": 74.0,
+    "expected_goals": 0.32,
+    "goals_prevented": 1.74
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Jamie Vardy",
+      "minute": 20,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "Gabriel Martinelli",
+      "minute": 20,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Wilfred Ndidi",
+      "minute": 31,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "L. Trossard",
+      "minute": 45,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "William Saliba",
+      "minute": 46,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "J. Justin",
+      "minute": 47,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Riccardo Calafiori",
+      "minute": 49,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Oliver Skipp",
+      "minute": 50,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "J. Justin",
+      "minute": 63,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Facundo Buonanotte",
+      "minute": 70,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel Martinelli",
+      "minute": 74,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "T. Partey",
+      "minute": 85,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "F. Buonanotte",
+      "minute": 85,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Var",
+      "team": "home",
+      "player": "Kai Havertz",
+      "minute": 90,
+      "detail": "Goal confirmed"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "minute": 90,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "S. Mavididi",
+      "minute": 90,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "W. Ndidi",
+      "minute": 90,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "C. Okoli",
+      "minute": 90,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "O. Skipp",
+      "minute": 90,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "W. Ndidi",
+      "minute": 90,
+      "detail": "Own Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "K. Havertz",
+      "minute": 90,
+      "detail": "Normal Goal"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

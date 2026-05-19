@@ -1,0 +1,280 @@
+{
+  "match": {
+    "fixture_id": 1208223,
+    "date": "2025-01-15T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Tottenham",
+    "home_score": 2,
+    "away_score": 1,
+    "arsenal_score": 2,
+    "opponent_score": 1,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Tottenham",
+    "opponent_quality": "top6",
+    "venue": "home",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 1.45,
+      "opponent": 0.78
+    },
+    "possession": {
+      "arsenal": 53.0,
+      "opponent": 47.0
+    },
+    "shots": {
+      "arsenal": 14,
+      "opponent": 10
+    },
+    "shots_on_target": {
+      "arsenal": 4,
+      "opponent": 2
+    },
+    "passes": {
+      "arsenal": {
+        "total": 428,
+        "accuracy": 83.0
+      },
+      "opponent": {
+        "total": 375,
+        "accuracy": 84.0
+      }
+    },
+    "fouls": {
+      "arsenal": 16,
+      "opponent": 9
+    },
+    "corners": {
+      "arsenal": 10,
+      "opponent": 4
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 2,
+        "second_half": 0,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 3,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 25,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Tottenham",
+      "player": "Son Heung-Min",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 27,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Tottenham",
+      "player": "Pape Matar Sarr",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 40,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "D. Solanke",
+      "detail": "Own Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 43,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Kai Havertz",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 44,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Tottenham",
+      "player": "Y. Bissouma",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Tottenham",
+      "player": "P. Sarr",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 61,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Sterling",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 77,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 78,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Tottenham",
+      "player": "Son Heung-Min",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 87,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Myles Lewis-Skelly",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 87,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 87,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 46,
+      "player": "Y. Bissouma",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 46,
+      "player": "P. Sarr",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 61,
+      "player": "R. Sterling",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 77,
+      "player": "L. Trossard",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 78,
+      "player": "Son Heung-Min",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 87,
+      "player": "D. Rice",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 87,
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-1 Tottenham (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

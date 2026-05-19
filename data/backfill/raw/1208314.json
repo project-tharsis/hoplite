@@ -1,0 +1,157 @@
+{
+  "fixture_id": 1208314,
+  "date": "2025-04-01T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Fulham",
+  "home_score": 2,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 6,
+    "Total Shots": 17,
+    "Blocked Shots": 7,
+    "Shots insidebox": 15,
+    "Shots outsidebox": 2,
+    "Fouls": 2,
+    "Corner Kicks": 5,
+    "Offsides": 5,
+    "Ball Possession": 51.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 479,
+    "Passes accurate": 431,
+    "Passes %": 90.0,
+    "expected_goals": 2.38,
+    "goals_prevented": -0.18
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 4,
+    "Total Shots": 9,
+    "Blocked Shots": 2,
+    "Shots insidebox": 8,
+    "Shots outsidebox": 1,
+    "Fouls": 10,
+    "Corner Kicks": 4,
+    "Offsides": 0,
+    "Ball Possession": 49.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 473,
+    "Passes accurate": 408,
+    "Passes %": 86.0,
+    "expected_goals": 0.99,
+    "goals_prevented": -0.18
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel Magalhães",
+      "minute": 16,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "Mikel Merino",
+      "minute": 37,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Joachim Andersen",
+      "minute": 53,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Saša Lukić",
+      "minute": 57,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "E. Nwaneri",
+      "minute": 66,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Smith Rowe",
+      "minute": 67,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "S. Lukić",
+      "minute": 67,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Adama Traoré",
+      "minute": 67,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Declan Rice",
+      "minute": 72,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 73,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Timber",
+      "minute": 77,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Jiménez",
+      "minute": 77,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "I. Diop",
+      "minute": 77,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Rodrigo Muniz",
+      "minute": 90,
+      "detail": "Normal Goal"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

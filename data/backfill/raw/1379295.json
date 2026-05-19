@@ -1,0 +1,164 @@
+{
+  "fixture_id": 1379295,
+  "date": "2026-04-19T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Manchester City",
+  "away_team": "Arsenal",
+  "home_score": 2,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 5,
+    "Total Shots": 15,
+    "Blocked Shots": 5,
+    "Shots insidebox": 13,
+    "Shots outsidebox": 2,
+    "Fouls": 5,
+    "Corner Kicks": 8,
+    "Offsides": 0,
+    "Ball Possession": 59.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 498,
+    "Passes accurate": 424,
+    "Passes %": 85.0,
+    "expected_goals": 1.36,
+    "goals_prevented": -0.64
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 3,
+    "Total Shots": 9,
+    "Blocked Shots": 3,
+    "Shots insidebox": 8,
+    "Shots outsidebox": 1,
+    "Fouls": 12,
+    "Corner Kicks": 5,
+    "Offsides": 4,
+    "Ball Possession": 41.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 348,
+    "Passes accurate": 262,
+    "Passes %": 75.0,
+    "expected_goals": 1.62,
+    "goals_prevented": -0.64
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "R. Cherki",
+      "minute": 16,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "K. Havertz",
+      "minute": 18,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Cristhian Mosquera",
+      "minute": 36,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "N. Madueke",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Marc Guéhi",
+      "minute": 60,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "E. Haaland",
+      "minute": 65,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "C. Mosquera",
+      "minute": 74,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Eze",
+      "minute": 74,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Erling Haaland",
+      "minute": 83,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Gabriel Magalhães",
+      "minute": 83,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Zubimendi",
+      "minute": 84,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Cherki",
+      "minute": 85,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Rodri",
+      "minute": 88,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Doku",
+      "minute": 88,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "A. Semenyo",
+      "minute": 90,
+      "detail": "Substitution 4"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

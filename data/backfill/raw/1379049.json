@@ -1,0 +1,136 @@
+{
+  "fixture_id": 1379049,
+  "date": "2025-10-26T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Crystal Palace",
+  "home_score": 1,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 4,
+    "Total Shots": 10,
+    "Blocked Shots": 3,
+    "Shots insidebox": 7,
+    "Shots outsidebox": 3,
+    "Fouls": 6,
+    "Corner Kicks": 4,
+    "Offsides": 2,
+    "Ball Possession": 60.0,
+    "Yellow Cards": null,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 540,
+    "Passes accurate": 449,
+    "Passes %": 83.0,
+    "expected_goals": 0.92,
+    "goals_prevented": 0.02
+  },
+  "away_stats": {
+    "Shots on Goal": 1,
+    "Shots off Goal": 3,
+    "Total Shots": 7,
+    "Blocked Shots": 3,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 2,
+    "Fouls": 11,
+    "Corner Kicks": 3,
+    "Offsides": 1,
+    "Ball Possession": 40.0,
+    "Yellow Cards": null,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 360,
+    "Passes accurate": 265,
+    "Passes %": 74.0,
+    "expected_goals": 0.45,
+    "goals_prevented": 0.02
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "E. Eze",
+      "minute": 39,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "W. Saliba",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Y. Pino",
+      "minute": 59,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 66,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "D. Kamada",
+      "minute": 74,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Calafiori",
+      "minute": 82,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "D. Rice",
+      "minute": 82,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "E. Eze",
+      "minute": 88,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "T. Mitchell",
+      "minute": 90,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "D. Munoz",
+      "minute": 90,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Wharton",
+      "minute": 90,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

@@ -1,0 +1,185 @@
+{
+  "fixture_id": 1506251,
+  "date": "2026-02-15T00:00:00",
+  "competition": "FA Cup",
+  "home_team": "Arsenal",
+  "away_team": "Wigan",
+  "home_score": 4,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 6,
+    "Shots off Goal": 4,
+    "Total Shots": 17,
+    "Blocked Shots": 7,
+    "Shots insidebox": 12,
+    "Shots outsidebox": 5,
+    "Fouls": 9,
+    "Corner Kicks": 5,
+    "Offsides": 4,
+    "Ball Possession": 73.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 649,
+    "Passes accurate": 588,
+    "Passes %": 91.0,
+    "expected_goals": 1.44,
+    "goals_prevented": null
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 0,
+    "Total Shots": 2,
+    "Blocked Shots": 0,
+    "Shots insidebox": 1,
+    "Shots outsidebox": 1,
+    "Fouls": 13,
+    "Corner Kicks": 0,
+    "Offsides": 1,
+    "Ball Possession": 27.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 229,
+    "Passes accurate": 165,
+    "Passes %": 72.0,
+    "expected_goals": 0.2,
+    "goals_prevented": null
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "N. Madueke",
+      "minute": 11,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "G. Martinelli",
+      "minute": 18,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "J. Hunt",
+      "minute": 23,
+      "detail": "Own Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "Gabriel Jesus",
+      "minute": 27,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Hunt",
+      "minute": 30,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "W. Saliba",
+      "minute": 61,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "N. Madueke",
+      "minute": 62,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Taylor",
+      "minute": 63,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Myles Lewis-Skelly",
+      "minute": 69,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Owen Moxon",
+      "minute": 73,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Kerr",
+      "minute": 77,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "O. Moxon",
+      "minute": 77,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Borges Rodrigues",
+      "minute": 78,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. White",
+      "minute": 79,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Christian Nørgaard",
+      "minute": 82,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Will Aimson",
+      "minute": 83,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "K. Arrizabalaga",
+      "minute": 87,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

@@ -1,0 +1,164 @@
+{
+  "fixture_id": 1208059,
+  "date": "2024-09-15T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Tottenham",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 4,
+    "Total Shots": 15,
+    "Blocked Shots": 6,
+    "Shots insidebox": 10,
+    "Shots outsidebox": 5,
+    "Fouls": 13,
+    "Corner Kicks": 7,
+    "Offsides": 2,
+    "Ball Possession": 64.0,
+    "Yellow Cards": 5,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 494,
+    "Passes accurate": 437,
+    "Passes %": 88.0,
+    "expected_goals": 0.71,
+    "goals_prevented": 0.28
+  },
+  "away_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 0,
+    "Total Shots": 7,
+    "Blocked Shots": 3,
+    "Shots insidebox": 7,
+    "Shots outsidebox": 0,
+    "Fouls": 10,
+    "Corner Kicks": 6,
+    "Offsides": 3,
+    "Ball Possession": 36.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 5,
+    "Total passes": 282,
+    "Passes accurate": 213,
+    "Passes %": 76.0,
+    "expected_goals": 0.74,
+    "goals_prevented": 0.28
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "William Saliba",
+      "minute": 15,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Destiny Udogie",
+      "minute": 27,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Rodrigo Bentancur",
+      "minute": 32,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Jurriën Timber",
+      "minute": 35,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Guglielmo Vicario",
+      "minute": 38,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Micky van de Ven",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Dejan Kulusevski",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Jorginho",
+      "minute": 49,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Gabriel Magalhães",
+      "minute": 64,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. Johnson",
+      "minute": 68,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Bentancur",
+      "minute": 68,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Maddison",
+      "minute": 80,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "minute": 80,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 80,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. Saka",
+      "minute": 86,
+      "detail": "Substitution 3"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

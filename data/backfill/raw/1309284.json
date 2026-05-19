@@ -1,0 +1,178 @@
+{
+  "fixture_id": 1309284,
+  "date": "2024-10-30T00:00:00",
+  "competition": "League Cup",
+  "home_team": "Preston",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 3,
+  "home_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 3,
+    "Total Shots": 7,
+    "Blocked Shots": 2,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 1,
+    "Fouls": 11,
+    "Corner Kicks": 1,
+    "Offsides": 2,
+    "Ball Possession": 26.0,
+    "Yellow Cards": 4,
+    "Red Cards": null,
+    "Goalkeeper Saves": 6,
+    "Total passes": 244,
+    "Passes accurate": 188,
+    "Passes %": 77.0,
+    "expected_goals": null,
+    "goals_prevented": null
+  },
+  "away_stats": {
+    "Shots on Goal": 10,
+    "Shots off Goal": 3,
+    "Total Shots": 18,
+    "Blocked Shots": 5,
+    "Shots insidebox": 14,
+    "Shots outsidebox": 4,
+    "Fouls": 4,
+    "Corner Kicks": 6,
+    "Offsides": 2,
+    "Ball Possession": 74.0,
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 718,
+    "Passes accurate": 667,
+    "Passes %": 93.0,
+    "expected_goals": null,
+    "goals_prevented": null
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Kaine Kesler-Hayden",
+      "minute": 23,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Gabriel Jesus",
+      "minute": 24,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "E. Nwaneri",
+      "minute": 33,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Mikel Merino",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Timber",
+      "minute": 46,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Andrew Hughes",
+      "minute": 55,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "K. Havertz",
+      "minute": 57,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Bowler",
+      "minute": 59,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "S. Greenwood",
+      "minute": 60,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "K. Kesler-Hayden",
+      "minute": 60,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "minute": 62,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "O. Zinchenko",
+      "minute": 62,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "A. Hughes",
+      "minute": 68,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Stefán Teitur Þórðarson",
+      "minute": 73,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Lindsay",
+      "minute": 77,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Nwaneri",
+      "minute": 80,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Mads Frøkjær-Jensen",
+      "minute": 83,
+      "detail": "Yellow Card"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

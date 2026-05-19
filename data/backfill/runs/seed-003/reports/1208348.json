@@ -1,0 +1,310 @@
+{
+  "match": {
+    "fixture_id": 1208348,
+    "date": "2025-04-20T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Ipswich",
+    "away_team": "Arsenal",
+    "home_score": 0,
+    "away_score": 4,
+    "arsenal_score": 4,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Ipswich",
+    "opponent_quality": "lower",
+    "venue": "away",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 4,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 2.55,
+      "opponent": 0.17
+    },
+    "possession": {
+      "arsenal": 75.0,
+      "opponent": 25.0
+    },
+    "shots": {
+      "arsenal": 24,
+      "opponent": 4
+    },
+    "shots_on_target": {
+      "arsenal": 7,
+      "opponent": 0
+    },
+    "passes": {
+      "arsenal": {
+        "total": 752,
+        "accuracy": 91.0
+      },
+      "opponent": {
+        "total": 250,
+        "accuracy": 80.0
+      }
+    },
+    "fouls": {
+      "arsenal": 7,
+      "opponent": 10
+    },
+    "corners": {
+      "arsenal": 12,
+      "opponent": 0
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 2,
+        "second_half": 2,
+        "total": 4
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 0,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 0,
+        "red": 1
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 14,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 28,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 32,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Ipswich",
+      "player": "Leif Davis",
+      "detail": "Red Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 35,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Ipswich",
+      "player": "J. Clarke",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Ipswich",
+      "player": "J. Enciso",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 57,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 57,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 69,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 73,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 73,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Ipswich",
+      "player": "J. Cajuste",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Ipswich",
+      "player": "G. Hirst",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 84,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 88,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Ipswich",
+      "player": "Sam Morsy",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 35,
+      "player": "J. Clarke",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 46,
+      "player": "J. Enciso",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 57,
+      "player": "Mikel Merino",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 57,
+      "player": "B. Saka",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 73,
+      "player": "D. Rice",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 73,
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "J. Cajuste",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "G. Hirst",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 84,
+      "player": "L. Trossard",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "Sam Morsy",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 4-0 Ipswich (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

@@ -1,0 +1,355 @@
+{
+  "match": {
+    "fixture_id": 1208185,
+    "date": "2024-12-21T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Crystal Palace",
+    "away_team": "Arsenal",
+    "home_score": 1,
+    "away_score": 5,
+    "arsenal_score": 5,
+    "opponent_score": 1,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Crystal Palace",
+    "opponent_quality": "mid_table",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 5,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 2.87,
+      "opponent": 1.59
+    },
+    "possession": {
+      "arsenal": 58.0,
+      "opponent": 42.0
+    },
+    "shots": {
+      "arsenal": 14,
+      "opponent": 15
+    },
+    "shots_on_target": {
+      "arsenal": 6,
+      "opponent": 6
+    },
+    "passes": {
+      "arsenal": {
+        "total": 552,
+        "accuracy": 87.0
+      },
+      "opponent": {
+        "total": 392,
+        "accuracy": 81.0
+      }
+    },
+    "fouls": {
+      "arsenal": 8,
+      "opponent": 9
+    },
+    "corners": {
+      "arsenal": 3,
+      "opponent": 3
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 3,
+        "second_half": 2,
+        "total": 5
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 2,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 6,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 11,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Crystal Palace",
+      "player": "I. Sarr",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 15,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 24,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 31,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 36,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Jurriën Timber",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 38,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 58,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 58,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 60,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 61,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Crystal Palace",
+      "player": "D. Kamada",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 64,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Crystal Palace",
+      "player": "Marc Guéhi",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 68,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Crystal Palace",
+      "player": "J. Lerma",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 68,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Crystal Palace",
+      "player": "W. Hughes",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 79,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Crystal Palace",
+      "player": "Nathaniel Clyne",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Crystal Palace",
+      "player": "N. Clyne",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 81,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Crystal Palace",
+      "player": "J. Mateta",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 84,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "J. Timber",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 24,
+      "player": "B. Saka",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 58,
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 58,
+      "player": "K. Havertz",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 61,
+      "player": "D. Kamada",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 68,
+      "player": "J. Lerma",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 68,
+      "player": "W. Hughes",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "N. Clyne",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 81,
+      "player": "J. Mateta",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "J. Timber",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 5-1 Crystal Palace (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

@@ -1,0 +1,157 @@
+{
+  "fixture_id": 1208304,
+  "date": "2025-03-16T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Chelsea",
+  "home_score": 1,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 6,
+    "Total Shots": 12,
+    "Blocked Shots": 2,
+    "Shots insidebox": 9,
+    "Shots outsidebox": 3,
+    "Fouls": 10,
+    "Corner Kicks": 5,
+    "Offsides": 2,
+    "Ball Possession": 41.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 346,
+    "Passes accurate": 292,
+    "Passes %": 84.0,
+    "expected_goals": 0.77,
+    "goals_prevented": -0.29
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 3,
+    "Total Shots": 8,
+    "Blocked Shots": 3,
+    "Shots insidebox": 3,
+    "Shots outsidebox": 5,
+    "Fouls": 13,
+    "Corner Kicks": 4,
+    "Offsides": 1,
+    "Ball Possession": 59.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 4,
+    "Total passes": 508,
+    "Passes accurate": 441,
+    "Passes %": 87.0,
+    "expected_goals": 0.35,
+    "goals_prevented": -0.29
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "Mikel Merino",
+      "minute": 20,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Levi Colwill",
+      "minute": 30,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Pedro Neto",
+      "minute": 52,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Gabriel Magalhães",
+      "minute": 54,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Thomas Partey",
+      "minute": 58,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Wesley Fofana",
+      "minute": 59,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Martin Ødegaard",
+      "minute": 65,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "C. Nkunku",
+      "minute": 76,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Sancho",
+      "minute": 76,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel Martinelli",
+      "minute": 79,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. James",
+      "minute": 82,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. Badiashile",
+      "minute": 86,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "W. Fofana",
+      "minute": 86,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Ødegaard",
+      "minute": 90,
+      "detail": "Substitution 2"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

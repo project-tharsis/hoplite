@@ -1,0 +1,3586 @@
+{
+  "summary": {
+    "total": 72,
+    "compared": 72,
+    "skipped": 0
+  },
+  "comparisons": [
+    {
+      "legacy_match_id": "1208023",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟢",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208032",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟢",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🔴",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208041",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🔴",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟡",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208059",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟢",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟡",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208067",
+      "weak_label_signal": "🔴",
+      "legacy_signal": "🟡",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🔴",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208072",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟢",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208081",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟢",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208091",
+      "weak_label_signal": "🔴",
+      "legacy_signal": "🔴",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🔴",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208103",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟡",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208118",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🔴",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208125",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟡",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208134",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟢",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208167",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208185",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟢",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟡",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208194",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟡",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208204",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟢",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208215",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟡",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208223",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟢",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208233",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208252",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟢",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟡",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208254",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟢",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208267",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟢",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208274",
+      "weak_label_signal": "🔴",
+      "legacy_signal": "🔴",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208285",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208298",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟡",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208304",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟢",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208314",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟢",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208326",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🔴",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208334",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🔴",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208348",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟢",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208354",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "yellow",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "red"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "red"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🔴",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208363",
+      "weak_label_signal": "🔴",
+      "legacy_signal": "red",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "red"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "red"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "red"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "red"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "red"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1208400",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟡",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1298642",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟢",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1309284",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟢",
+      "match": true,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1327988",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🔴",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1327989",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🔴",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🔴"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1378977",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "green",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟡",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379009",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "yellow",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "red"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379026",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "green",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379029",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "green",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379042",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "yellow",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379049",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "neutral",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "neutral"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "neutral"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "neutral"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379060",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "green",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379139",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "neutral",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "red"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "neutral"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "neutral"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "neutral"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "neutral"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379149",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379160",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟢",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "🟢"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "🟡"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🔴",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379169",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379189",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379202",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟡",
+      "match": false,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379220",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🔴",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379278",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379251",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🔴",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379259",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟡",
+      "match": false,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379279",
+      "weak_label_signal": "🔴",
+      "legacy_signal": "🟡",
+      "match": false,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379295",
+      "weak_label_signal": "🔴",
+      "legacy_signal": "🟡",
+      "match": false,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟡",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379309",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1379328",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "green",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1451052",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "green",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "yellow"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1451061",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "green",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1451075",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "green",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1451123",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "green",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "neutral"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1451159",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1534571",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟡",
+      "match": false,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1540842",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🔴",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1540843",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1457283",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "green",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1479619",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "green",
+      "match": false,
+      "model_differences": {
+        "1": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "2": {
+          "weak_label": null,
+          "legacy": "neutral"
+        },
+        "3": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "4": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "5": {
+          "weak_label": null,
+          "legacy": "green"
+        },
+        "6": {
+          "weak_label": null,
+          "legacy": "neutral"
+        },
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟡",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1498259",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟡",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1518728",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🔴",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟡",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1490810",
+      "weak_label_signal": "🟡",
+      "legacy_signal": "🟡",
+      "match": true,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    },
+    {
+      "legacy_match_id": "1506251",
+      "weak_label_signal": "🟢",
+      "legacy_signal": "🟡",
+      "match": false,
+      "model_differences": {
+        "add_capability_keep_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "culture_as_os": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "defence_as_attacking_identity": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "marginal_gains": {
+          "weak_label": "🟢",
+          "legacy": null
+        },
+        "role_clarity": {
+          "weak_label": "🟡",
+          "legacy": null
+        },
+        "where_game_is_played": {
+          "weak_label": "🟢",
+          "legacy": null
+        }
+      }
+    }
+  ],
+  "skipped": []
+}

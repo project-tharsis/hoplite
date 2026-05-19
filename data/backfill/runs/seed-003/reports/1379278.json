@@ -1,0 +1,295 @@
+{
+  "match": {
+    "fixture_id": 1379278,
+    "date": "2026-02-18T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Wolves",
+    "away_team": "Arsenal",
+    "home_score": 2,
+    "away_score": 2,
+    "arsenal_score": 2,
+    "opponent_score": 2,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制节奏",
+      "转换效率",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球"
+    ],
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+  },
+  "context": {
+    "opponent": "Wolves",
+    "opponent_quality": "mid_table",
+    "venue": "away",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": 1.6,
+      "opponent": 0.29
+    },
+    "possession": {
+      "arsenal": 58.0,
+      "opponent": 42.0
+    },
+    "shots": {
+      "arsenal": 10,
+      "opponent": 5
+    },
+    "shots_on_target": {
+      "arsenal": 4,
+      "opponent": 2
+    },
+    "passes": {
+      "arsenal": {
+        "total": 484,
+        "accuracy": 82.0
+      },
+      "opponent": {
+        "total": 354,
+        "accuracy": 74.0
+      }
+    },
+    "fouls": {
+      "arsenal": 8,
+      "opponent": 6
+    },
+    "corners": {
+      "arsenal": 3,
+      "opponent": 1
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 2,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 5,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 22,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Wolves",
+      "player": "A. Gomes",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Wolves",
+      "player": "Santiago Bueno",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 56,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "P. Hincapie",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 57,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Arsenal",
+      "player": "Piero Hincapié",
+      "detail": "Goal confirmed",
+      "is_arsenal": true
+    },
+    {
+      "minute": 61,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Wolves",
+      "player": "H. Bueno",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 65,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "N. Madueke",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Wolves",
+      "player": "J. Tchatchoua",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 71,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Wolves",
+      "player": "Jean-Ricner Bellegarde",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 73,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 84,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Wolves",
+      "player": "J. Bellegarde",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": null,
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Wolves",
+      "player": "T. Edozie",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 22,
+      "player": "A. Gomes",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "V. Gyökeres",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 65,
+      "player": "N. Madueke",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "J. Tchatchoua",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 73,
+      "player": "B. Saka",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 84,
+      "player": "J. Bellegarde",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": null,
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-2 Wolves (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

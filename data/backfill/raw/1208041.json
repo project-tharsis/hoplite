@@ -1,0 +1,185 @@
+{
+  "fixture_id": 1208041,
+  "date": "2024-08-31T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Brighton",
+  "home_score": 1,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 7,
+    "Shots off Goal": 2,
+    "Total Shots": 11,
+    "Blocked Shots": 2,
+    "Shots insidebox": 10,
+    "Shots outsidebox": 1,
+    "Fouls": 12,
+    "Corner Kicks": 3,
+    "Offsides": 3,
+    "Ball Possession": 36.0,
+    "Yellow Cards": 5,
+    "Red Cards": 1,
+    "Goalkeeper Saves": 3,
+    "Total passes": 270,
+    "Passes accurate": 200,
+    "Passes %": 74.0,
+    "expected_goals": 2.08,
+    "goals_prevented": 1.43
+  },
+  "away_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 10,
+    "Total Shots": 22,
+    "Blocked Shots": 8,
+    "Shots insidebox": 15,
+    "Shots outsidebox": 7,
+    "Fouls": 7,
+    "Corner Kicks": 7,
+    "Offsides": 1,
+    "Ball Possession": 64.0,
+    "Yellow Cards": 2,
+    "Red Cards": 0,
+    "Goalkeeper Saves": 6,
+    "Total passes": 471,
+    "Passes accurate": 404,
+    "Passes %": 86.0,
+    "expected_goals": 1.83,
+    "goals_prevented": 1.43
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Milner",
+      "minute": 17,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "K. Havertz",
+      "minute": 38,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Declan Rice",
+      "minute": 42,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Thomas Partey",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Declan Rice",
+      "minute": 49,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Declan Rice",
+      "minute": 49,
+      "detail": "Red Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "João Pedro",
+      "minute": 58,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "minute": 59,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Jurriën Timber",
+      "minute": 70,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Yankuba Minteh",
+      "minute": 70,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Y. Minteh",
+      "minute": 71,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Veltman",
+      "minute": 72,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Ødegaard",
+      "minute": 73,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Timber",
+      "minute": 80,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "D. Welbeck",
+      "minute": 85,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "K. Mitoma",
+      "minute": 85,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "David Raya",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "João Pedro",
+      "minute": 90,
+      "detail": "Yellow Card"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

@@ -1,0 +1,334 @@
+{
+  "match": {
+    "fixture_id": 1451061,
+    "date": "2025-10-21T00:00:00",
+    "competition": "UEFA Champions League",
+    "home_team": "Arsenal",
+    "away_team": "Atletico Madrid",
+    "home_score": 4,
+    "away_score": 0,
+    "arsenal_score": 4,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "高位反抢/断球",
+      "轮换体能管理"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球"
+    ],
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+  },
+  "context": {
+    "opponent": "Atletico Madrid",
+    "opponent_quality": "mid_table",
+    "venue": "home",
+    "competition_stage": "group_stage",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 4,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 2.19,
+      "opponent": 0.67
+    },
+    "possession": {
+      "arsenal": 52.0,
+      "opponent": 48.0
+    },
+    "shots": {
+      "arsenal": 19,
+      "opponent": 11
+    },
+    "shots_on_target": {
+      "arsenal": 8,
+      "opponent": 1
+    },
+    "passes": {
+      "arsenal": {
+        "total": 421,
+        "accuracy": 90.0
+      },
+      "opponent": {
+        "total": 394,
+        "accuracy": 84.0
+      }
+    },
+    "fouls": {
+      "arsenal": 14,
+      "opponent": 10
+    },
+    "corners": {
+      "arsenal": 3,
+      "opponent": 4
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 4,
+        "total": 4
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 33,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Atletico Madrid",
+      "player": "José María Giménez",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 38,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Martín Zubimendi",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 57,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Atletico Madrid",
+      "player": "N. Gonzalez",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Atletico Madrid",
+      "player": "Koke",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Atletico Madrid",
+      "player": "J. M. Gimenez",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 64,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 67,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "V. Gyokeres",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "V. Gyokeres",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 72,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 72,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Zubimendi",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 72,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Eze",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 72,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Atletico Madrid",
+      "player": "G. Simeone",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 73,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Atletico Madrid",
+      "player": "A. Sorloth",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 75,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Atletico Madrid",
+      "player": "Robin Le Normand",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 83,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "J. Timber",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 83,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 63,
+      "player": "N. Gonzalez",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 63,
+      "player": "Koke",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 63,
+      "player": "J. M. Gimenez",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 72,
+      "player": "Gabriel",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 72,
+      "player": "M. Zubimendi",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 72,
+      "player": "E. Eze",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 72,
+      "player": "G. Simeone",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 73,
+      "player": "A. Sorloth",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 83,
+      "player": "J. Timber",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 83,
+      "player": "V. Gyökeres",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 4-0 Atletico Madrid (UEFA Champions League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

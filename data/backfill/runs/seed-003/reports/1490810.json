@@ -1,0 +1,343 @@
+{
+  "match": {
+    "fixture_id": 1490810,
+    "date": "2026-01-11T00:00:00",
+    "competition": "FA Cup",
+    "home_team": "Portsmouth",
+    "away_team": "Arsenal",
+    "home_score": 1,
+    "away_score": 4,
+    "arsenal_score": 4,
+    "opponent_score": 1,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "破密集耐心 — 避免急躁 + 把握有限机会"
+    ],
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+  },
+  "context": {
+    "opponent": "Portsmouth",
+    "opponent_quality": "lower",
+    "venue": "away",
+    "competition_stage": "regular",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 4,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 2.96,
+      "opponent": 1.65
+    },
+    "possession": {
+      "arsenal": 61.0,
+      "opponent": 39.0
+    },
+    "shots": {
+      "arsenal": 15,
+      "opponent": 13
+    },
+    "shots_on_target": {
+      "arsenal": 4,
+      "opponent": 5
+    },
+    "passes": {
+      "arsenal": {
+        "total": 442,
+        "accuracy": 84.0
+      },
+      "opponent": {
+        "total": 273,
+        "accuracy": 72.0
+      }
+    },
+    "fouls": {
+      "arsenal": 9,
+      "opponent": 16
+    },
+    "corners": {
+      "arsenal": 8,
+      "opponent": 6
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 2,
+        "second_half": 2,
+        "total": 4
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 2,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 3,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Portsmouth",
+      "player": "C. Bishop",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 8,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "A. Dozzell",
+      "detail": "Own Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 25,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 40,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Portsmouth",
+      "player": "H. Blair",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Myles Lewis-Skelly",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 51,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 55,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Portsmouth",
+      "player": "Luke Le Roux",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 62,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Portsmouth",
+      "player": "C. Shaughnessy",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 62,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Portsmouth",
+      "player": "L. Le Roux",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 68,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Ben White",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 69,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 69,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. White",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 69,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 72,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 73,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Portsmouth",
+      "player": "Z. Swanson",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 73,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Portsmouth",
+      "player": "A. Segecic",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 40,
+      "player": "H. Blair",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 62,
+      "player": "C. Shaughnessy",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 62,
+      "player": "L. Le Roux",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 69,
+      "player": "E. Nwaneri",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 69,
+      "player": "B. White",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 69,
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 73,
+      "player": "Z. Swanson",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 73,
+      "player": "A. Segecic",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "Gabriel",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "G. Martinelli",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 4-1 Portsmouth (FA Cup)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

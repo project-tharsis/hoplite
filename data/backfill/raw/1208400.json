@@ -1,0 +1,143 @@
+{
+  "fixture_id": 1208400,
+  "date": "2025-05-25T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Southampton",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 2,
+    "Total Shots": 7,
+    "Blocked Shots": 3,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 2,
+    "Fouls": 7,
+    "Corner Kicks": 5,
+    "Offsides": 1,
+    "Ball Possession": 38.0,
+    "Yellow Cards": null,
+    "Red Cards": null,
+    "Goalkeeper Saves": 6,
+    "Total passes": 339,
+    "Passes accurate": 278,
+    "Passes %": 82.0,
+    "expected_goals": 0.62,
+    "goals_prevented": -0.01
+  },
+  "away_stats": {
+    "Shots on Goal": 8,
+    "Shots off Goal": 5,
+    "Total Shots": 23,
+    "Blocked Shots": 10,
+    "Shots insidebox": 16,
+    "Shots outsidebox": 7,
+    "Fouls": 8,
+    "Corner Kicks": 8,
+    "Offsides": 1,
+    "Ball Possession": 62.0,
+    "Yellow Cards": null,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 533,
+    "Passes accurate": 486,
+    "Passes %": 91.0,
+    "expected_goals": 2.39,
+    "goals_prevented": -0.01
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "K. Tierney",
+      "minute": 43,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "R. Stewart",
+      "minute": 56,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Sterling",
+      "minute": 63,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "K. Tierney",
+      "minute": 63,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Stewart",
+      "minute": 70,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "O. Zinchenko",
+      "minute": 70,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "minute": 71,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Nwaneri",
+      "minute": 75,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Robinson",
+      "minute": 79,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "K. Sulemana",
+      "minute": 79,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Ugochukwu",
+      "minute": 86,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "M. Ødegaard",
+      "minute": 90,
+      "detail": "Normal Goal"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

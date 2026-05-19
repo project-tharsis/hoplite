@@ -1,0 +1,323 @@
+{
+  "match": {
+    "fixture_id": 1208041,
+    "date": "2024-08-31T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Brighton",
+    "home_score": 1,
+    "away_score": 1,
+    "arsenal_score": 1,
+    "opponent_score": 1,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Brighton",
+    "opponent_quality": "mid_table",
+    "venue": "home",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 2.08,
+      "opponent": 1.83
+    },
+    "possession": {
+      "arsenal": 36.0,
+      "opponent": 64.0
+    },
+    "shots": {
+      "arsenal": 11,
+      "opponent": 22
+    },
+    "shots_on_target": {
+      "arsenal": 7,
+      "opponent": 4
+    },
+    "passes": {
+      "arsenal": {
+        "total": 270,
+        "accuracy": 74.0
+      },
+      "opponent": {
+        "total": 471,
+        "accuracy": 86.0
+      }
+    },
+    "fouls": {
+      "arsenal": 12,
+      "opponent": 7
+    },
+    "corners": {
+      "arsenal": 3,
+      "opponent": 7
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 5,
+        "red": 1
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 17,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brighton",
+      "player": "J. Milner",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 38,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 42,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Declan Rice",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Thomas Partey",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 49,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Declan Rice",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 49,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Declan Rice",
+      "detail": "Red Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 58,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Brighton",
+      "player": "João Pedro",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 59,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Jurriën Timber",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Brighton",
+      "player": "Yankuba Minteh",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 71,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brighton",
+      "player": "Y. Minteh",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 72,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brighton",
+      "player": "J. Veltman",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 73,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Ødegaard",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "J. Timber",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brighton",
+      "player": "D. Welbeck",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brighton",
+      "player": "K. Mitoma",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "David Raya",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Brighton",
+      "player": "João Pedro",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 17,
+      "player": "J. Milner",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 59,
+      "player": "L. Trossard",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 71,
+      "player": "Y. Minteh",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 72,
+      "player": "J. Veltman",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 73,
+      "player": "M. Ødegaard",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "J. Timber",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "D. Welbeck",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "K. Mitoma",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-1 Brighton (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

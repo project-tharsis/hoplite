@@ -1,0 +1,287 @@
+{
+  "match": {
+    "fixture_id": 1208314,
+    "date": "2025-04-01T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Fulham",
+    "home_score": 2,
+    "away_score": 1,
+    "arsenal_score": 2,
+    "opponent_score": 1,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Fulham",
+    "opponent_quality": "mid_table",
+    "venue": "home",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 2.38,
+      "opponent": 0.99
+    },
+    "possession": {
+      "arsenal": 51.0,
+      "opponent": 49.0
+    },
+    "shots": {
+      "arsenal": 17,
+      "opponent": 9
+    },
+    "shots_on_target": {
+      "arsenal": 4,
+      "opponent": 3
+    },
+    "passes": {
+      "arsenal": {
+        "total": 479,
+        "accuracy": 90.0
+      },
+      "opponent": {
+        "total": 473,
+        "accuracy": 86.0
+      }
+    },
+    "fouls": {
+      "arsenal": 2,
+      "opponent": 10
+    },
+    "corners": {
+      "arsenal": 5,
+      "opponent": 4
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 16,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 37,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 53,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Fulham",
+      "player": "Joachim Andersen",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 57,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Fulham",
+      "player": "Saša Lukić",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 66,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 67,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Fulham",
+      "player": "E. Smith Rowe",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 67,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Fulham",
+      "player": "S. Lukić",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 67,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Fulham",
+      "player": "Adama Traoré",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 72,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Declan Rice",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 73,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 77,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "J. Timber",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 77,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Fulham",
+      "player": "R. Jiménez",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 77,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Fulham",
+      "player": "I. Diop",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Fulham",
+      "player": "Rodrigo Muniz",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 16,
+      "player": "Gabriel Magalhães",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 66,
+      "player": "E. Nwaneri",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 67,
+      "player": "E. Smith Rowe",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 67,
+      "player": "S. Lukić",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 67,
+      "player": "Adama Traoré",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 77,
+      "player": "J. Timber",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 77,
+      "player": "R. Jiménez",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 77,
+      "player": "I. Diop",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-1 Fulham (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

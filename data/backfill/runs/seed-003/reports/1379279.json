@@ -1,0 +1,335 @@
+{
+  "match": {
+    "fixture_id": 1379279,
+    "date": "2026-04-11T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Bournemouth",
+    "home_score": 1,
+    "away_score": 2,
+    "arsenal_score": 1,
+    "opponent_score": 2,
+    "result": "L"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球"
+    ],
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+  },
+  "context": {
+    "opponent": "Bournemouth",
+    "opponent_quality": "mid_table",
+    "venue": "home",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": 2.32,
+      "opponent": 1.19
+    },
+    "possession": {
+      "arsenal": 52.0,
+      "opponent": 48.0
+    },
+    "shots": {
+      "arsenal": 15,
+      "opponent": 8
+    },
+    "shots_on_target": {
+      "arsenal": 3,
+      "opponent": 3
+    },
+    "passes": {
+      "arsenal": {
+        "total": 389,
+        "accuracy": 81.0
+      },
+      "opponent": {
+        "total": 367,
+        "accuracy": 80.0
+      }
+    },
+    "fouls": {
+      "arsenal": 12,
+      "opponent": 18
+    },
+    "corners": {
+      "arsenal": 10,
+      "opponent": 1
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 17,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Bournemouth",
+      "player": "E. J. Kroupi",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 35,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "V. Gyokeres",
+      "detail": "Penalty",
+      "is_arsenal": true
+    },
+    {
+      "minute": 54,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "N. Madueke",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 54,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 54,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bournemouth",
+      "player": "R. Christie",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bournemouth",
+      "player": "Rayan",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 74,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Bournemouth",
+      "player": "A. Scott",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Zubimendi",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. White",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 77,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Bournemouth",
+      "player": "Adrien Truffert",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 79,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Bournemouth",
+      "player": "Eli Junior Kroupi",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 80,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Viktor Gyökeres",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bournemouth",
+      "player": "E. J. Kroupi",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Bournemouth",
+      "player": "James Hill",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bournemouth",
+      "player": "A. Jimenez",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bournemouth",
+      "player": "Evanilson",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 1,
+    "opponent": 0,
+    "details": [
+      "35' V. Gyokeres — Penalty"
+    ]
+  },
+  "sub_impact": [
+    {
+      "minute": 54,
+      "player": "N. Madueke",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 54,
+      "player": "G. Martinelli",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 54,
+      "player": "K. Havertz",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "R. Christie",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "Rayan",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "M. Zubimendi",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "B. White",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "E. J. Kroupi",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "A. Jimenez",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "Evanilson",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-2 Bournemouth (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

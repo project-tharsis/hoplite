@@ -1,0 +1,157 @@
+{
+  "fixture_id": 1540843,
+  "date": "2026-05-05T00:00:00",
+  "competition": "UEFA Champions League",
+  "home_team": "Arsenal",
+  "away_team": "Atletico Madrid",
+  "home_score": 1,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 8,
+    "Total Shots": 13,
+    "Blocked Shots": 3,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 7,
+    "Fouls": 10,
+    "Corner Kicks": 5,
+    "Offsides": 1,
+    "Ball Possession": 53.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 445,
+    "Passes accurate": 378,
+    "Passes %": 85.0,
+    "expected_goals": 1.56,
+    "goals_prevented": 0.21
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 4,
+    "Total Shots": 9,
+    "Blocked Shots": 3,
+    "Shots insidebox": 7,
+    "Shots outsidebox": 2,
+    "Fouls": 13,
+    "Corner Kicks": 2,
+    "Offsides": 2,
+    "Ball Possession": 47.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 386,
+    "Passes accurate": 320,
+    "Passes %": 83.0,
+    "expected_goals": 0.99,
+    "goals_prevented": 0.21
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Kepa Arrizabalaga",
+      "minute": -5,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 44,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Le Normand",
+      "minute": 57,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Lookman",
+      "minute": 57,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "G. Simeone",
+      "minute": 57,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 58,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Calafiori",
+      "minute": 58,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "E. Eze",
+      "minute": 59,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Griezmann",
+      "minute": 66,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Alvarez",
+      "minute": 66,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Lewis-Skelly",
+      "minute": 74,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Marc Pubill",
+      "minute": 81,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "minute": 83,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Koke",
+      "minute": 90,
+      "detail": "Yellow Card"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

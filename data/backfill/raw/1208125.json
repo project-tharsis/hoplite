@@ -1,0 +1,171 @@
+{
+  "fixture_id": 1208125,
+  "date": "2024-11-10T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Chelsea",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 6,
+    "Total Shots": 17,
+    "Blocked Shots": 8,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 12,
+    "Fouls": 12,
+    "Corner Kicks": 4,
+    "Offsides": 1,
+    "Ball Possession": 49.0,
+    "Yellow Cards": 4,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 419,
+    "Passes accurate": 358,
+    "Passes %": 85.0,
+    "expected_goals": 1.54,
+    "goals_prevented": -0.71
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 4,
+    "Total Shots": 13,
+    "Blocked Shots": 6,
+    "Shots insidebox": 8,
+    "Shots outsidebox": 5,
+    "Fouls": 12,
+    "Corner Kicks": 3,
+    "Offsides": 7,
+    "Ball Possession": 51.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 426,
+    "Passes accurate": 375,
+    "Passes %": 88.0,
+    "expected_goals": 1.55,
+    "goals_prevented": -0.71
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Levi Colwill",
+      "minute": 21,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Pedro Neto",
+      "minute": 32,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Var",
+      "team": "away",
+      "player": "Kai Havertz",
+      "minute": 34,
+      "detail": "Goal cancelled"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Ben White",
+      "minute": 39,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Noni Madueke",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Kai Havertz",
+      "minute": 56,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "minute": 60,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "N. Madueke",
+      "minute": 68,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Lavia",
+      "minute": 68,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "Pedro Neto",
+      "minute": 70,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "minute": 71,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "D. Rice",
+      "minute": 71,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Marc Cucurella",
+      "minute": 80,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. Saka",
+      "minute": 80,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Gusto",
+      "minute": 82,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "N. Jackson",
+      "minute": 88,
+      "detail": "Substitution 4"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

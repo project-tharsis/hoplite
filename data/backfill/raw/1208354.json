@@ -1,0 +1,157 @@
+{
+  "fixture_id": 1208354,
+  "date": "2025-04-23T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Crystal Palace",
+  "home_score": 2,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 6,
+    "Shots off Goal": 4,
+    "Total Shots": 12,
+    "Blocked Shots": 2,
+    "Shots insidebox": 9,
+    "Shots outsidebox": 3,
+    "Fouls": 4,
+    "Corner Kicks": 3,
+    "Offsides": 1,
+    "Ball Possession": 68.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 711,
+    "Passes accurate": 656,
+    "Passes %": 92.0,
+    "expected_goals": 1.18,
+    "goals_prevented": -0.18
+  },
+  "away_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 6,
+    "Total Shots": 15,
+    "Blocked Shots": 5,
+    "Shots insidebox": 11,
+    "Shots outsidebox": 4,
+    "Fouls": 6,
+    "Corner Kicks": 6,
+    "Offsides": 1,
+    "Ball Possession": 32.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 328,
+    "Passes accurate": 271,
+    "Passes %": 83.0,
+    "expected_goals": 1.81,
+    "goals_prevented": -0.18
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "J. Kiwior",
+      "minute": 3,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "E. Eze",
+      "minute": 27,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "L. Trossard",
+      "minute": 42,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Declan Rice",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Justin Devenny",
+      "minute": 47,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Sterling",
+      "minute": 60,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Wharton",
+      "minute": 63,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Eze",
+      "minute": 63,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Var",
+      "team": "home",
+      "player": "Gabriel Martinelli",
+      "minute": 73,
+      "detail": "Goal cancelled"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Nketiah",
+      "minute": 80,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Devenny",
+      "minute": 80,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "J. Mateta",
+      "minute": 83,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Lewis-Skelly",
+      "minute": 86,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Ødegaard",
+      "minute": 86,
+      "detail": "Substitution 3"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

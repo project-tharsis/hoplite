@@ -1,0 +1,150 @@
+{
+  "fixture_id": 1208267,
+  "date": "2025-02-15T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Leicester",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 2,
+    "Total Shots": 6,
+    "Blocked Shots": 2,
+    "Shots insidebox": 4,
+    "Shots outsidebox": 2,
+    "Fouls": 9,
+    "Corner Kicks": 3,
+    "Offsides": 1,
+    "Ball Possession": 40.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 321,
+    "Passes accurate": 230,
+    "Passes %": 72.0,
+    "expected_goals": 0.22,
+    "goals_prevented": 0.15
+  },
+  "away_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 3,
+    "Total Shots": 11,
+    "Blocked Shots": 3,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 5,
+    "Fouls": 10,
+    "Corner Kicks": 7,
+    "Offsides": 4,
+    "Ball Possession": 60.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 491,
+    "Passes accurate": 420,
+    "Passes %": 86.0,
+    "expected_goals": 1.38,
+    "goals_prevented": 0.15
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Justin",
+      "minute": 43,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Bilal El Khannouss",
+      "minute": 46,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Jordan Ayew",
+      "minute": 57,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Sterling",
+      "minute": 69,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Ayew",
+      "minute": 75,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "T. Partey",
+      "minute": 75,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Lewis-Skelly",
+      "minute": 76,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Mikel Merino",
+      "minute": 81,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "W. Ndidi",
+      "minute": 85,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. De Cordova-Reid",
+      "minute": 85,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Jorginho",
+      "minute": 86,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Mikel Merino",
+      "minute": 87,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 89,
+      "detail": "Substitution 4"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

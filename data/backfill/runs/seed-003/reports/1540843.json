@@ -1,0 +1,307 @@
+{
+  "match": {
+    "fixture_id": 1540843,
+    "date": "2026-05-05T00:00:00",
+    "competition": "UEFA Champions League",
+    "home_team": "Arsenal",
+    "away_team": "Atletico Madrid",
+    "home_score": 1,
+    "away_score": 0,
+    "arsenal_score": 1,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "高位反抢/断球",
+      "定位球威胁"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换；定位球重点部署",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球"
+    ],
+    "expected_subs": "根据比分半场/60分钟战术调整；定位球专家/高点 late sub 抢分"
+  },
+  "context": {
+    "opponent": "Atletico Madrid",
+    "opponent_quality": "mid_table",
+    "venue": "home",
+    "competition_stage": "knockout",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 1.56,
+      "opponent": 0.99
+    },
+    "possession": {
+      "arsenal": 53.0,
+      "opponent": 47.0
+    },
+    "shots": {
+      "arsenal": 13,
+      "opponent": 9
+    },
+    "shots_on_target": {
+      "arsenal": 2,
+      "opponent": 2
+    },
+    "passes": {
+      "arsenal": {
+        "total": 445,
+        "accuracy": 85.0
+      },
+      "opponent": {
+        "total": 386,
+        "accuracy": 83.0
+      }
+    },
+    "fouls": {
+      "arsenal": 10,
+      "opponent": 13
+    },
+    "corners": {
+      "arsenal": 5,
+      "opponent": 2
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": -5,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Kepa Arrizabalaga",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 44,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 57,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Atletico Madrid",
+      "player": "R. Le Normand",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 57,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Atletico Madrid",
+      "player": "A. Lookman",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 57,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Atletico Madrid",
+      "player": "G. Simeone",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 58,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 58,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 59,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Eze",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 66,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Atletico Madrid",
+      "player": "A. Griezmann",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 66,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Atletico Madrid",
+      "player": "J. Alvarez",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 81,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Atletico Madrid",
+      "player": "Marc Pubill",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 83,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Atletico Madrid",
+      "player": "Koke",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 57,
+      "player": "R. Le Normand",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 57,
+      "player": "A. Lookman",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 57,
+      "player": "G. Simeone",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 58,
+      "player": "B. Saka",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 58,
+      "player": "R. Calafiori",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 59,
+      "player": "E. Eze",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 66,
+      "player": "A. Griezmann",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 66,
+      "player": "J. Alvarez",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 74,
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 83,
+      "player": "L. Trossard",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-0 Atletico Madrid (UEFA Champions League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

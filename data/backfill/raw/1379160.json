@@ -1,0 +1,178 @@
+{
+  "fixture_id": 1379160,
+  "date": "2026-01-03T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Bournemouth",
+  "away_team": "Arsenal",
+  "home_score": 2,
+  "away_score": 3,
+  "home_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 7,
+    "Total Shots": 15,
+    "Blocked Shots": 5,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 10,
+    "Fouls": 13,
+    "Corner Kicks": 7,
+    "Offsides": 1,
+    "Ball Possession": 43.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 339,
+    "Passes accurate": 259,
+    "Passes %": 76.0,
+    "expected_goals": 1.43,
+    "goals_prevented": -0.9
+  },
+  "away_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 3,
+    "Total Shots": 12,
+    "Blocked Shots": 4,
+    "Shots insidebox": 7,
+    "Shots outsidebox": 5,
+    "Fouls": 8,
+    "Corner Kicks": 5,
+    "Offsides": 1,
+    "Ball Possession": 57.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 462,
+    "Passes accurate": 368,
+    "Passes %": 80.0,
+    "expected_goals": 1.13,
+    "goals_prevented": -0.9
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "Evanilson",
+      "minute": 10,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Gabriel",
+      "minute": 16,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Antoine Semenyo",
+      "minute": 26,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "D. Rice",
+      "minute": 54,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "V. Gyökeres",
+      "minute": 66,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "D. Brooks",
+      "minute": 67,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "N. Madueke",
+      "minute": 67,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "G. Martinelli",
+      "minute": 67,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Martín Zubimendi",
+      "minute": 70,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "D. Rice",
+      "minute": 71,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Evanilson",
+      "minute": 74,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Kluivert",
+      "minute": 74,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "A. Scott",
+      "minute": 74,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "E. J. Kroupi",
+      "minute": 76,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Eli Junior Kroupi",
+      "minute": 80,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Odegaard",
+      "minute": 80,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Amine Adli",
+      "minute": 90,
+      "detail": "Yellow Card"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

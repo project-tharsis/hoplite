@@ -1,0 +1,276 @@
+{
+  "match": {
+    "fixture_id": 1208400,
+    "date": "2025-05-25T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Southampton",
+    "away_team": "Arsenal",
+    "home_score": 1,
+    "away_score": 2,
+    "arsenal_score": 2,
+    "opponent_score": 1,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Southampton",
+    "opponent_quality": "lower",
+    "venue": "away",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 2.39,
+      "opponent": 0.62
+    },
+    "possession": {
+      "arsenal": 62.0,
+      "opponent": 38.0
+    },
+    "shots": {
+      "arsenal": 23,
+      "opponent": 7
+    },
+    "shots_on_target": {
+      "arsenal": 8,
+      "opponent": 2
+    },
+    "passes": {
+      "arsenal": {
+        "total": 533,
+        "accuracy": 91.0
+      },
+      "opponent": {
+        "total": 339,
+        "accuracy": 82.0
+      }
+    },
+    "fouls": {
+      "arsenal": 8,
+      "opponent": 7
+    },
+    "corners": {
+      "arsenal": 8,
+      "opponent": 5
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 0,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 43,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "K. Tierney",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 56,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Southampton",
+      "player": "R. Stewart",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Sterling",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "K. Tierney",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Southampton",
+      "player": "R. Stewart",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "O. Zinchenko",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 71,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 79,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Southampton",
+      "player": "J. Robinson",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 79,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Southampton",
+      "player": "K. Sulemana",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Southampton",
+      "player": "L. Ugochukwu",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "M. Ødegaard",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 63,
+      "player": "R. Sterling",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 63,
+      "player": "K. Tierney",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "R. Stewart",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "O. Zinchenko",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 71,
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "E. Nwaneri",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 79,
+      "player": "J. Robinson",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 79,
+      "player": "K. Sulemana",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "L. Ugochukwu",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-1 Southampton (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

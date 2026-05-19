@@ -1,0 +1,305 @@
+{
+  "match": {
+    "fixture_id": 1208103,
+    "date": "2024-10-27T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Liverpool",
+    "home_score": 2,
+    "away_score": 2,
+    "arsenal_score": 2,
+    "opponent_score": 2,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Liverpool",
+    "opponent_quality": "top6",
+    "venue": "home",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": 0.92,
+      "opponent": 0.81
+    },
+    "possession": {
+      "arsenal": 45.0,
+      "opponent": 55.0
+    },
+    "shots": {
+      "arsenal": 9,
+      "opponent": 9
+    },
+    "shots_on_target": {
+      "arsenal": 3,
+      "opponent": 4
+    },
+    "passes": {
+      "arsenal": {
+        "total": 383,
+        "accuracy": 80.0
+      },
+      "opponent": {
+        "total": 466,
+        "accuracy": 83.0
+      }
+    },
+    "fouls": {
+      "arsenal": 14,
+      "opponent": 14
+    },
+    "corners": {
+      "arsenal": 1,
+      "opponent": 3
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 2,
+        "second_half": 0,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 2,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 9,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 18,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Liverpool",
+      "player": "V. van Dijk",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 33,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Liverpool",
+      "player": "Alexis Mac Allister",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 43,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 54,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Liverpool",
+      "player": "L. Díaz",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Liverpool",
+      "player": "A. Robertson",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Liverpool",
+      "player": "A. Mac Allister",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 66,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "David Raya",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "J. Timber",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 81,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Liverpool",
+      "player": "Mohamed Salah",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Liverpool",
+      "player": "Darwin Núñez",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Liverpool",
+      "player": "C. Jones",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 54,
+      "player": "Gabriel Magalhães",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 63,
+      "player": "L. Díaz",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 63,
+      "player": "A. Robertson",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 63,
+      "player": "A. Mac Allister",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "J. Timber",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "B. Saka",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "C. Jones",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-2 Liverpool (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

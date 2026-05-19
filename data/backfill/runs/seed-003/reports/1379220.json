@@ -1,0 +1,286 @@
+{
+  "match": {
+    "fixture_id": 1379220,
+    "date": "2026-02-12T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Brentford",
+    "away_team": "Arsenal",
+    "home_score": 1,
+    "away_score": 1,
+    "arsenal_score": 1,
+    "opponent_score": 1,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制节奏",
+      "转换效率",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球"
+    ],
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+  },
+  "context": {
+    "opponent": "Brentford",
+    "opponent_quality": "mid_table",
+    "venue": "away",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 0.6,
+      "opponent": 1.51
+    },
+    "possession": {
+      "arsenal": 59.0,
+      "opponent": 41.0
+    },
+    "shots": {
+      "arsenal": 7,
+      "opponent": 12
+    },
+    "shots_on_target": {
+      "arsenal": 2,
+      "opponent": 3
+    },
+    "passes": {
+      "arsenal": {
+        "total": 452,
+        "accuracy": 85.0
+      },
+      "opponent": {
+        "total": 314,
+        "accuracy": 75.0
+      }
+    },
+    "fouls": {
+      "arsenal": 11,
+      "opponent": 12
+    },
+    "corners": {
+      "arsenal": 4,
+      "opponent": 6
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 2,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 4,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Brentford",
+      "player": "Vitaly Janelt",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 20,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 30,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Viktor Gyökeres",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Eze",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 53,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Brentford",
+      "player": "Mathias Jensen",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 61,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "N. Madueke",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "N. Madueke",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 71,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Brentford",
+      "player": "K. Lewis-Potter",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 73,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brentford",
+      "player": "Y. Yarmolyuk",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 73,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brentford",
+      "player": "K. Lewis-Potter",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 81,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 81,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "P. Hincapie",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 86,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Brentford",
+      "player": "Dango Ouattara",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brentford",
+      "player": "R. Henry",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 46,
+      "player": "E. Eze",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "N. Madueke",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 73,
+      "player": "Y. Yarmolyuk",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 73,
+      "player": "K. Lewis-Potter",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 81,
+      "player": "L. Trossard",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 81,
+      "player": "P. Hincapie",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "R. Henry",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-1 Brentford (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

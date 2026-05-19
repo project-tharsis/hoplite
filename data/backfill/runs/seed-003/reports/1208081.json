@@ -1,0 +1,312 @@
+{
+  "match": {
+    "fixture_id": 1208081,
+    "date": "2024-10-05T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Southampton",
+    "home_score": 3,
+    "away_score": 1,
+    "arsenal_score": 3,
+    "opponent_score": 1,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Southampton",
+    "opponent_quality": "lower",
+    "venue": "home",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 3,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 2.83,
+      "opponent": 0.65
+    },
+    "possession": {
+      "arsenal": 59.0,
+      "opponent": 41.0
+    },
+    "shots": {
+      "arsenal": 29,
+      "opponent": 8
+    },
+    "shots_on_target": {
+      "arsenal": 6,
+      "opponent": 2
+    },
+    "passes": {
+      "arsenal": {
+        "total": 536,
+        "accuracy": 90.0
+      },
+      "opponent": {
+        "total": 395,
+        "accuracy": 85.0
+      }
+    },
+    "fouls": {
+      "arsenal": 10,
+      "opponent": 9
+    },
+    "corners": {
+      "arsenal": 13,
+      "opponent": 1
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 3,
+        "total": 3
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 0,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 23,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Southampton",
+      "player": "Kyle Walker-Peters",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 27,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Southampton",
+      "player": "R. Stewart",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 34,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Southampton",
+      "player": "Jan Bednarek",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 38,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Southampton",
+      "player": "Tyler Dibling",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 55,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Southampton",
+      "player": "C. Archer",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 58,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 60,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 60,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Sterling",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 61,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Jorginho",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 68,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Southampton",
+      "player": "R. Manning",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Southampton",
+      "player": "Mateus Fernandes",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 84,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "T. Partey",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 88,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Southampton",
+      "player": "Y. Sugawara",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 27,
+      "player": "R. Stewart",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 60,
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 60,
+      "player": "R. Sterling",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 61,
+      "player": "Jorginho",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 74,
+      "player": "R. Manning",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 74,
+      "player": "Mateus Fernandes",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 84,
+      "player": "T. Partey",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "R. Calafiori",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "Y. Sugawara",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 3-1 Southampton (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

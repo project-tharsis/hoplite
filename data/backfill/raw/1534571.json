@@ -1,0 +1,129 @@
+{
+  "fixture_id": 1534571,
+  "date": "2026-04-15T00:00:00",
+  "competition": "UEFA Champions League",
+  "home_team": "Arsenal",
+  "away_team": "Sporting CP",
+  "home_score": 0,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 1,
+    "Shots off Goal": 8,
+    "Total Shots": 15,
+    "Blocked Shots": 6,
+    "Shots insidebox": 8,
+    "Shots outsidebox": 7,
+    "Fouls": 7,
+    "Corner Kicks": 8,
+    "Offsides": 0,
+    "Ball Possession": 50.0,
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 443,
+    "Passes accurate": 385,
+    "Passes %": 87.0,
+    "expected_goals": 0.64,
+    "goals_prevented": 0.18
+  },
+  "away_stats": {
+    "Shots on Goal": 1,
+    "Shots off Goal": 6,
+    "Total Shots": 8,
+    "Blocked Shots": 1,
+    "Shots insidebox": 7,
+    "Shots outsidebox": 1,
+    "Fouls": 11,
+    "Corner Kicks": 3,
+    "Offsides": 1,
+    "Ball Possession": 50.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 445,
+    "Passes accurate": 388,
+    "Passes %": 87.0,
+    "expected_goals": 0.29,
+    "goals_prevented": 0.18
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "V. Gyökeres",
+      "minute": 56,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "N. Madueke",
+      "minute": 63,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Pote",
+      "minute": 71,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "G. Catamo",
+      "minute": 71,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "H. Morita",
+      "minute": 77,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Maximiliano Araújo",
+      "minute": 79,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "E. Eze",
+      "minute": 79,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "G. Martinelli",
+      "minute": 79,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Trincao",
+      "minute": 85,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Quaresma",
+      "minute": 85,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

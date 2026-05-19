@@ -1,0 +1,164 @@
+{
+  "fixture_id": 1378977,
+  "date": "2025-08-17T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Manchester United",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 7,
+    "Shots off Goal": 7,
+    "Total Shots": 22,
+    "Blocked Shots": 8,
+    "Shots insidebox": 15,
+    "Shots outsidebox": 7,
+    "Fouls": 10,
+    "Corner Kicks": 3,
+    "Offsides": 1,
+    "Ball Possession": 61.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 475,
+    "Passes accurate": 393,
+    "Passes %": 83.0,
+    "expected_goals": 1.52,
+    "goals_prevented": 0.75
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 3,
+    "Total Shots": 9,
+    "Blocked Shots": 3,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 4,
+    "Fouls": 19,
+    "Corner Kicks": 4,
+    "Offsides": 2,
+    "Ball Possession": 39.0,
+    "Yellow Cards": 4,
+    "Red Cards": null,
+    "Goalkeeper Saves": 7,
+    "Total passes": 294,
+    "Passes accurate": 219,
+    "Passes %": 74.0,
+    "expected_goals": 1.31,
+    "goals_prevented": 0.75
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "R. Calafiori",
+      "minute": 13,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Riccardo Calafiori",
+      "minute": 42,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "D. Dalot",
+      "minute": 55,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "V. Gyökeres",
+      "minute": 60,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "G. Martinelli",
+      "minute": 60,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Casemiro",
+      "minute": 65,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Mount",
+      "minute": 65,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. White",
+      "minute": 71,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Calafiori",
+      "minute": 72,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Shaw",
+      "minute": 80,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "D. Rice",
+      "minute": 83,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Patrick Dorgu",
+      "minute": 85,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "David Raya",
+      "minute": 85,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Myles Lewis-Skelly",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Jurriën Timber",
+      "minute": 90,
+      "detail": "Yellow Card"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

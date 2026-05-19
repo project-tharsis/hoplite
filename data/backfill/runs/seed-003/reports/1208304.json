@@ -1,0 +1,280 @@
+{
+  "match": {
+    "fixture_id": 1208304,
+    "date": "2025-03-16T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Chelsea",
+    "home_score": 1,
+    "away_score": 0,
+    "arsenal_score": 1,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Chelsea",
+    "opponent_quality": "top6",
+    "venue": "home",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 0.77,
+      "opponent": 0.35
+    },
+    "possession": {
+      "arsenal": 41.0,
+      "opponent": 59.0
+    },
+    "shots": {
+      "arsenal": 12,
+      "opponent": 8
+    },
+    "shots_on_target": {
+      "arsenal": 4,
+      "opponent": 2
+    },
+    "passes": {
+      "arsenal": {
+        "total": 346,
+        "accuracy": 84.0
+      },
+      "opponent": {
+        "total": 508,
+        "accuracy": 87.0
+      }
+    },
+    "fouls": {
+      "arsenal": 10,
+      "opponent": 13
+    },
+    "corners": {
+      "arsenal": 5,
+      "opponent": 4
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 3,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 20,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 30,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Levi Colwill",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 52,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Pedro Neto",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 54,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 58,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Thomas Partey",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 59,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Wesley Fofana",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Martin Ødegaard",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "C. Nkunku",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "J. Sancho",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 79,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "R. James",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "B. Badiashile",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "W. Fofana",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Ødegaard",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 76,
+      "player": "C. Nkunku",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "J. Sancho",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 79,
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "R. James",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "B. Badiashile",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "W. Fofana",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "M. Ødegaard",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-0 Chelsea (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

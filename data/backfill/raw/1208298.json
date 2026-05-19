@@ -1,0 +1,122 @@
+{
+  "fixture_id": 1208298,
+  "date": "2025-03-09T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Manchester United",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 6,
+    "Shots off Goal": 2,
+    "Total Shots": 10,
+    "Blocked Shots": 2,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 4,
+    "Fouls": 8,
+    "Corner Kicks": 2,
+    "Offsides": 0,
+    "Ball Possession": 32.0,
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 5,
+    "Total passes": 275,
+    "Passes accurate": 208,
+    "Passes %": 76.0,
+    "expected_goals": 1.52,
+    "goals_prevented": 0.47
+  },
+  "away_stats": {
+    "Shots on Goal": 6,
+    "Shots off Goal": 6,
+    "Total Shots": 17,
+    "Blocked Shots": 5,
+    "Shots insidebox": 9,
+    "Shots outsidebox": 8,
+    "Fouls": 11,
+    "Corner Kicks": 9,
+    "Offsides": 1,
+    "Ball Possession": 68.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 5,
+    "Total passes": 587,
+    "Passes accurate": 524,
+    "Passes %": 89.0,
+    "expected_goals": 1.62,
+    "goals_prevented": 0.47
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Leandro Trossard",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "Bruno Fernandes",
+      "minute": 45,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Yoro",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Calafiori",
+      "minute": 58,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Nwaneri",
+      "minute": 58,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "D. Rice",
+      "minute": 74,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "C. Eriksen",
+      "minute": 76,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Zirkzee",
+      "minute": 76,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "T. Partey",
+      "minute": 76,
+      "detail": "Substitution 3"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

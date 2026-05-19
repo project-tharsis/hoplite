@@ -1,0 +1,164 @@
+{
+  "fixture_id": 1208348,
+  "date": "2025-04-20T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Ipswich",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 4,
+  "home_stats": {
+    "Shots on Goal": 0,
+    "Shots off Goal": 2,
+    "Total Shots": 4,
+    "Blocked Shots": 2,
+    "Shots insidebox": 2,
+    "Shots outsidebox": 2,
+    "Fouls": 10,
+    "Corner Kicks": 0,
+    "Offsides": 1,
+    "Ball Possession": 25.0,
+    "Yellow Cards": null,
+    "Red Cards": 1,
+    "Goalkeeper Saves": 3,
+    "Total passes": 250,
+    "Passes accurate": 199,
+    "Passes %": 80.0,
+    "expected_goals": 0.17,
+    "goals_prevented": 0.0
+  },
+  "away_stats": {
+    "Shots on Goal": 7,
+    "Shots off Goal": 8,
+    "Total Shots": 24,
+    "Blocked Shots": 9,
+    "Shots insidebox": 19,
+    "Shots outsidebox": 5,
+    "Fouls": 7,
+    "Corner Kicks": 12,
+    "Offsides": 1,
+    "Ball Possession": 75.0,
+    "Yellow Cards": null,
+    "Red Cards": 0,
+    "Goalkeeper Saves": 0,
+    "Total passes": 752,
+    "Passes accurate": 685,
+    "Passes %": 91.0,
+    "expected_goals": 2.55,
+    "goals_prevented": 0.0
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 14,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "minute": 28,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Leif Davis",
+      "minute": 32,
+      "detail": "Red Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Clarke",
+      "minute": 35,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Enciso",
+      "minute": 46,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Mikel Merino",
+      "minute": 57,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. Saka",
+      "minute": 57,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 69,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "D. Rice",
+      "minute": 73,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "minute": 73,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Cajuste",
+      "minute": 82,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "G. Hirst",
+      "minute": 82,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 84,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "E. Nwaneri",
+      "minute": 88,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Sam Morsy",
+      "minute": 90,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

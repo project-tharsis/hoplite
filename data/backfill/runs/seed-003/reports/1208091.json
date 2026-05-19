@@ -1,0 +1,305 @@
+{
+  "match": {
+    "fixture_id": 1208091,
+    "date": "2024-10-19T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Bournemouth",
+    "away_team": "Arsenal",
+    "home_score": 2,
+    "away_score": 0,
+    "arsenal_score": 0,
+    "opponent_score": 2,
+    "result": "L"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Bournemouth",
+    "opponent_quality": "mid_table",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 0,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": 0.68,
+      "opponent": 1.82
+    },
+    "possession": {
+      "arsenal": 51.0,
+      "opponent": 49.0
+    },
+    "shots": {
+      "arsenal": 6,
+      "opponent": 13
+    },
+    "shots_on_target": {
+      "arsenal": 1,
+      "opponent": 4
+    },
+    "passes": {
+      "arsenal": {
+        "total": 439,
+        "accuracy": 79.0
+      },
+      "opponent": {
+        "total": 405,
+        "accuracy": 80.0
+      }
+    },
+    "fouls": {
+      "arsenal": 11,
+      "opponent": 12
+    },
+    "corners": {
+      "arsenal": 4,
+      "opponent": 7
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 2,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 1
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 29,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Arsenal",
+      "player": "William Saliba",
+      "detail": "Card upgrade",
+      "is_arsenal": true
+    },
+    {
+      "minute": 30,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "William Saliba",
+      "detail": "Red Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 37,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Sterling",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bournemouth",
+      "player": "J. Araujo",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 62,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Bournemouth",
+      "player": "Antoine Semenyo",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bournemouth",
+      "player": "M. Tavernier",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bournemouth",
+      "player": "D. Ouattara",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bournemouth",
+      "player": "A. Scott",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 64,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 68,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Ben White",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Bournemouth",
+      "player": "R. Christie",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 79,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Bournemouth",
+      "player": "J. Kluivert",
+      "detail": "Penalty",
+      "is_arsenal": false
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "J. Kiwior",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 81,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bournemouth",
+      "player": "Evanilson",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 1,
+    "details": [
+      "79' J. Kluivert — Penalty"
+    ]
+  },
+  "sub_impact": [
+    {
+      "minute": 37,
+      "player": "R. Sterling",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 46,
+      "player": "J. Araujo",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 63,
+      "player": "M. Tavernier",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 63,
+      "player": "D. Ouattara",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 63,
+      "player": "A. Scott",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 64,
+      "player": "L. Trossard",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "J. Kiwior",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 81,
+      "player": "Mikel Merino",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "Evanilson",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 0-2 Bournemouth (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

@@ -1,0 +1,164 @@
+{
+  "fixture_id": 1208233,
+  "date": "2025-01-18T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Aston Villa",
+  "home_score": 2,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 6,
+    "Shots off Goal": 7,
+    "Total Shots": 18,
+    "Blocked Shots": 5,
+    "Shots insidebox": 11,
+    "Shots outsidebox": 7,
+    "Fouls": 10,
+    "Corner Kicks": 10,
+    "Offsides": 3,
+    "Ball Possession": 66.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 483,
+    "Passes accurate": 429,
+    "Passes %": 89.0,
+    "expected_goals": 1.33,
+    "goals_prevented": -0.13
+  },
+  "away_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 3,
+    "Total Shots": 8,
+    "Blocked Shots": 1,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 3,
+    "Fouls": 18,
+    "Corner Kicks": 1,
+    "Offsides": 2,
+    "Ball Possession": 34.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 4,
+    "Total passes": 262,
+    "Passes accurate": 193,
+    "Passes %": 74.0,
+    "expected_goals": 1.04,
+    "goals_prevented": -0.13
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Ian Maatsen",
+      "minute": 20,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "Gabriel Martinelli",
+      "minute": 35,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Onana",
+      "minute": 37,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "I. Maatsen",
+      "minute": 46,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "K. Havertz",
+      "minute": 55,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Y. Tielemans",
+      "minute": 60,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Leandro Trossard",
+      "minute": 67,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "O. Watkins",
+      "minute": 68,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Boubacar Kamara",
+      "minute": 78,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "O. Watkins",
+      "minute": 80,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel Martinelli",
+      "minute": 82,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Ramsey",
+      "minute": 85,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Var",
+      "team": "home",
+      "player": "Kai Havertz",
+      "minute": 89,
+      "detail": "Goal cancelled"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Raheem Sterling",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Morgan Rogers",
+      "minute": 90,
+      "detail": "Yellow Card"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

@@ -1,0 +1,282 @@
+{
+  "match": {
+    "fixture_id": 1208059,
+    "date": "2024-09-15T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Tottenham",
+    "away_team": "Arsenal",
+    "home_score": 0,
+    "away_score": 1,
+    "arsenal_score": 1,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Tottenham",
+    "opponent_quality": "top6",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 0.74,
+      "opponent": 0.71
+    },
+    "possession": {
+      "arsenal": 36.0,
+      "opponent": 64.0
+    },
+    "shots": {
+      "arsenal": 7,
+      "opponent": 15
+    },
+    "shots_on_target": {
+      "arsenal": 4,
+      "opponent": 5
+    },
+    "passes": {
+      "arsenal": {
+        "total": 282,
+        "accuracy": 76.0
+      },
+      "opponent": {
+        "total": 494,
+        "accuracy": 88.0
+      }
+    },
+    "fouls": {
+      "arsenal": 10,
+      "opponent": 13
+    },
+    "corners": {
+      "arsenal": 6,
+      "opponent": 7
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 3,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 5,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 15,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "William Saliba",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 27,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Tottenham",
+      "player": "Destiny Udogie",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 32,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Tottenham",
+      "player": "Rodrigo Bentancur",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 35,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Jurriën Timber",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 38,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Tottenham",
+      "player": "Guglielmo Vicario",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Tottenham",
+      "player": "Micky van de Ven",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Tottenham",
+      "player": "Dejan Kulusevski",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 49,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Jorginho",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 64,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 68,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Tottenham",
+      "player": "B. Johnson",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 68,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Tottenham",
+      "player": "R. Bentancur",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Tottenham",
+      "player": "J. Maddison",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 80,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 68,
+      "player": "B. Johnson",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 68,
+      "player": "R. Bentancur",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "J. Maddison",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 80,
+      "player": "L. Trossard",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "B. Saka",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-0 Tottenham (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

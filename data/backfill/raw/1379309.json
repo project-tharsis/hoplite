@@ -1,0 +1,164 @@
+{
+  "fixture_id": 1379309,
+  "date": "2026-05-02T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Fulham",
+  "home_score": 3,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 9,
+    "Shots off Goal": 6,
+    "Total Shots": 18,
+    "Blocked Shots": 3,
+    "Shots insidebox": 14,
+    "Shots outsidebox": 4,
+    "Fouls": 7,
+    "Corner Kicks": 3,
+    "Offsides": 7,
+    "Ball Possession": 54.0,
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 511,
+    "Passes accurate": 453,
+    "Passes %": 89.0,
+    "expected_goals": 3.23,
+    "goals_prevented": 0.66
+  },
+  "away_stats": {
+    "Shots on Goal": 1,
+    "Shots off Goal": 3,
+    "Total Shots": 10,
+    "Blocked Shots": 6,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 5,
+    "Fouls": 12,
+    "Corner Kicks": 4,
+    "Offsides": 0,
+    "Ball Possession": 46.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 6,
+    "Total passes": 433,
+    "Passes accurate": 359,
+    "Passes %": 83.0,
+    "expected_goals": 0.37,
+    "goals_prevented": 0.66
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "V. Gyokeres",
+      "minute": 9,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Saša Lukić",
+      "minute": 23,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Var",
+      "team": "home",
+      "player": "Riccardo Calafiori",
+      "minute": 30,
+      "detail": "Goal cancelled"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 40,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "V. Gyokeres",
+      "minute": 45,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "V. Gyökeres",
+      "minute": 64,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "D. Rice",
+      "minute": 64,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "H. Reed",
+      "minute": 64,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "H. Wilson",
+      "minute": 64,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "S. Chukwueze",
+      "minute": 64,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Jimenez",
+      "minute": 73,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "E. Eze",
+      "minute": 78,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Smith Rowe",
+      "minute": 78,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. White",
+      "minute": 83,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

@@ -1,0 +1,150 @@
+{
+  "fixture_id": 1208252,
+  "date": "2025-01-25T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Wolves",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 4,
+    "Total Shots": 9,
+    "Blocked Shots": 1,
+    "Shots insidebox": 4,
+    "Shots outsidebox": 5,
+    "Fouls": 20,
+    "Corner Kicks": 1,
+    "Offsides": null,
+    "Ball Possession": 52.0,
+    "Yellow Cards": 2,
+    "Red Cards": 1,
+    "Goalkeeper Saves": 2,
+    "Total passes": 433,
+    "Passes accurate": 364,
+    "Passes %": 84.0,
+    "expected_goals": 0.74,
+    "goals_prevented": 0.74
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 3,
+    "Total Shots": 9,
+    "Blocked Shots": 3,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 3,
+    "Fouls": 10,
+    "Corner Kicks": 5,
+    "Offsides": null,
+    "Ball Possession": 48.0,
+    "Yellow Cards": 1,
+    "Red Cards": 1,
+    "Goalkeeper Saves": 4,
+    "Total passes": 397,
+    "Passes accurate": 329,
+    "Passes %": 83.0,
+    "expected_goals": 1.0,
+    "goals_prevented": 0.74
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Strand Larsen",
+      "minute": 32,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "João Gomes",
+      "minute": 36,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Myles Lewis-Skelly",
+      "minute": 43,
+      "detail": "Red Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Jurriën Timber",
+      "minute": 44,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Nwaneri",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "João Gomes",
+      "minute": 70,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "João Gomes",
+      "minute": 70,
+      "detail": "Red Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "R. Calafiori",
+      "minute": 74,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Pablo Sarabia",
+      "minute": 75,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "André",
+      "minute": 87,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Doherty",
+      "minute": 87,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Aït-Nouri",
+      "minute": 87,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "minute": 87,
+      "detail": "Substitution 2"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

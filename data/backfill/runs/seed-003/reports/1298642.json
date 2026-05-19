@@ -1,0 +1,328 @@
+{
+  "match": {
+    "fixture_id": 1298642,
+    "date": "2024-09-25T00:00:00",
+    "competition": "League Cup",
+    "home_team": "Arsenal",
+    "away_team": "Bolton",
+    "home_score": 5,
+    "away_score": 1,
+    "arsenal_score": 5,
+    "opponent_score": 1,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Bolton",
+    "opponent_quality": "lower",
+    "venue": "home",
+    "competition_stage": "regular",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 5,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": null,
+      "opponent": null
+    },
+    "possession": {
+      "arsenal": 77.0,
+      "opponent": 23.0
+    },
+    "shots": {
+      "arsenal": 21,
+      "opponent": 4
+    },
+    "shots_on_target": {
+      "arsenal": 8,
+      "opponent": 1
+    },
+    "passes": {
+      "arsenal": {
+        "total": 642,
+        "accuracy": 90.0
+      },
+      "opponent": {
+        "total": 187,
+        "accuracy": 63.0
+      }
+    },
+    "fouls": {
+      "arsenal": 5,
+      "opponent": 8
+    },
+    "corners": {
+      "arsenal": 10,
+      "opponent": 4
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 2,
+        "second_half": 3,
+        "total": 5
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 16,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 34,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Riccardo Calafiori",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 37,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 49,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 53,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Bolton",
+      "player": "A. Collins",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 62,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 62,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 64,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "R. Sterling",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 69,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bolton",
+      "player": "K. Dempsey",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 69,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bolton",
+      "player": "S. Arfield",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 71,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 71,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bolton",
+      "player": "C. Forino",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 77,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 78,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bolton",
+      "player": "J. McAtee",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 79,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bolton",
+      "player": "A. Collins",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 81,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Sterling",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 62,
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 62,
+      "player": "D. Rice",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 69,
+      "player": "K. Dempsey",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 69,
+      "player": "S. Arfield",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "R. Calafiori",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 71,
+      "player": "B. Saka",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 71,
+      "player": "C. Forino",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 78,
+      "player": "J. McAtee",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 79,
+      "player": "A. Collins",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 81,
+      "player": "R. Sterling",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 5-1 Bolton (League Cup)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

@@ -1,0 +1,310 @@
+{
+  "match": {
+    "fixture_id": 1379209,
+    "date": "2026-02-07T15:00:00+00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Sunderland",
+    "home_score": 3,
+    "away_score": 0,
+    "arsenal_score": 3,
+    "opponent_score": 0,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "边路overload",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "高位防线 + 控球消耗 + 耐心破低位",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "破密集耐心 — 避免急躁 + 把握有限机会"
+    ],
+    "expected_subs": "60' Trossard换边路保持压力/变化节奏；70' 轮换主力中场维持控球"
+  },
+  "context": {
+    "opponent": "Sunderland",
+    "opponent_quality": "lower",
+    "venue": "home",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 3,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": "1.49",
+      "opponent": "0.19"
+    },
+    "possession": {
+      "arsenal": "49%",
+      "opponent": "51%"
+    },
+    "shots": {
+      "arsenal": 16,
+      "opponent": 5
+    },
+    "shots_on_target": {
+      "arsenal": 5,
+      "opponent": 3
+    },
+    "passes": {
+      "arsenal": {
+        "total": 389,
+        "accuracy": "84%"
+      },
+      "opponent": {
+        "total": 408,
+        "accuracy": "80%"
+      }
+    },
+    "fouls": {
+      "arsenal": 11,
+      "opponent": 8
+    },
+    "corners": {
+      "arsenal": 5,
+      "opponent": 2
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 2,
+        "total": 3
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 26,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "William Saliba",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 39,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Sunderland",
+      "player": "Habib Diarra",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 40,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Sunderland",
+      "player": "Brian Brobbey",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 42,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "M. Zubimendi",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 60,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 60,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "N. Madueke",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 64,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Sunderland",
+      "player": "C. Talbi",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 66,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "V. Gyokeres",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 67,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 67,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 71,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Sunderland",
+      "player": "N. Sadiki",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Sunderland",
+      "player": "T. Hume",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Sunderland",
+      "player": "B. Brobbey",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 89,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "V. Gyokeres",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 60,
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 60,
+      "player": "N. Madueke",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 64,
+      "player": "C. Talbi",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 67,
+      "player": "R. Calafiori",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 67,
+      "player": "K. Havertz",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 71,
+      "player": "N. Sadiki",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "T. Hume",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "B. Brobbey",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 89,
+      "player": "L. Trossard",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 3-0 Sunderland (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

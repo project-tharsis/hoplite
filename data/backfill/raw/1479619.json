@@ -1,0 +1,157 @@
+{
+  "fixture_id": 1479619,
+  "date": "2025-10-29T00:00:00",
+  "competition": "League Cup",
+  "home_team": "Arsenal",
+  "away_team": "Brighton",
+  "home_score": 2,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 3,
+    "Total Shots": 16,
+    "Blocked Shots": 8,
+    "Shots insidebox": 9,
+    "Shots outsidebox": 7,
+    "Fouls": 9,
+    "Corner Kicks": 8,
+    "Offsides": 4,
+    "Ball Possession": 50.0,
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 6,
+    "Total passes": 436,
+    "Passes accurate": 353,
+    "Passes %": 81.0,
+    "expected_goals": 1.27,
+    "goals_prevented": null
+  },
+  "away_stats": {
+    "Shots on Goal": 6,
+    "Shots off Goal": 7,
+    "Total Shots": 18,
+    "Blocked Shots": 5,
+    "Shots insidebox": 10,
+    "Shots outsidebox": 8,
+    "Fouls": 14,
+    "Corner Kicks": 2,
+    "Offsides": 3,
+    "Ball Possession": 50.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 442,
+    "Passes accurate": 379,
+    "Passes %": 86.0,
+    "expected_goals": 1.41,
+    "goals_prevented": null
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Diego Coppola",
+      "minute": 34,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "C. Kostoulas",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "E. Nwaneri",
+      "minute": 57,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "G. Rutter",
+      "minute": 67,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. De Cuyper",
+      "minute": 67,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "D. Gomez",
+      "minute": 68,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "P. Hincapie",
+      "minute": 70,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. White",
+      "minute": 70,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Dowman",
+      "minute": 71,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 76,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "A. Harriman-Annous",
+      "minute": 77,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "D. Coppola",
+      "minute": 78,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "E. Eze",
+      "minute": 83,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Olivier Boscagli",
+      "minute": 86,
+      "detail": "Yellow Card"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

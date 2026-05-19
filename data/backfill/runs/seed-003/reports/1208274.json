@@ -1,0 +1,280 @@
+{
+  "match": {
+    "fixture_id": 1208274,
+    "date": "2025-02-22T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "West Ham",
+    "home_score": 0,
+    "away_score": 1,
+    "arsenal_score": 0,
+    "opponent_score": 1,
+    "result": "L"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "West Ham",
+    "opponent_quality": "mid_table",
+    "venue": "home",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 0,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 1.22,
+      "opponent": 1.07
+    },
+    "possession": {
+      "arsenal": 68.0,
+      "opponent": 32.0
+    },
+    "shots": {
+      "arsenal": 20,
+      "opponent": 5
+    },
+    "shots_on_target": {
+      "arsenal": 2,
+      "opponent": 2
+    },
+    "passes": {
+      "arsenal": {
+        "total": 642,
+        "accuracy": 89.0
+      },
+      "opponent": {
+        "total": 309,
+        "accuracy": 78.0
+      }
+    },
+    "fouls": {
+      "arsenal": 16,
+      "opponent": 15
+    },
+    "corners": {
+      "arsenal": 2,
+      "opponent": 0
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 1
+      },
+      "opponent": {
+        "yellow": 3,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 44,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "West Ham",
+      "player": "J. Bowen",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 56,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 56,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 61,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "West Ham",
+      "player": "Jean-Clair Todibo",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 62,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "West Ham",
+      "player": "J. Todibo",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 72,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Arsenal",
+      "player": "Myles Lewis-Skelly",
+      "detail": "Card upgrade",
+      "is_arsenal": true
+    },
+    {
+      "minute": 73,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Myles Lewis-Skelly",
+      "detail": "Red Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 78,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "West Ham",
+      "player": "Oliver Scarles",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 81,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "West Ham",
+      "player": "J. Bowen",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 86,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Thomas Partey",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "W. Saliba",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 88,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "West Ham",
+      "player": "E. Álvarez",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "West Ham",
+      "player": "James Ward-Prowse",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 56,
+      "player": "R. Calafiori",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 56,
+      "player": "D. Rice",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 62,
+      "player": "J. Todibo",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 81,
+      "player": "E. Nwaneri",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "J. Bowen",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "W. Saliba",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 88,
+      "player": "E. Álvarez",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 0-1 West Ham (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

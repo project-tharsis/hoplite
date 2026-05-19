@@ -1,0 +1,178 @@
+{
+  "fixture_id": 1208134,
+  "date": "2024-11-23T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Nottingham Forest",
+  "home_score": 3,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 7,
+    "Shots off Goal": 7,
+    "Total Shots": 19,
+    "Blocked Shots": 5,
+    "Shots insidebox": 14,
+    "Shots outsidebox": 5,
+    "Fouls": 10,
+    "Corner Kicks": 8,
+    "Offsides": 4,
+    "Ball Possession": 66.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 587,
+    "Passes accurate": 536,
+    "Passes %": 91.0,
+    "expected_goals": 1.19,
+    "goals_prevented": -1.56
+  },
+  "away_stats": {
+    "Shots on Goal": 0,
+    "Shots off Goal": 5,
+    "Total Shots": 7,
+    "Blocked Shots": 2,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 2,
+    "Fouls": 11,
+    "Corner Kicks": 1,
+    "Offsides": 2,
+    "Ball Possession": 34.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 295,
+    "Passes accurate": 240,
+    "Passes %": 81.0,
+    "expected_goals": 0.33,
+    "goals_prevented": -1.56
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 15,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Jorginho",
+      "minute": 24,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Gabriel Jesus",
+      "minute": 31,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Bukayo Saka",
+      "minute": 44,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Ola Aina",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Jorginho",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Elanga",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "T. Partey",
+      "minute": 52,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "T. Awoniyi",
+      "minute": 63,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "N. Domínguez",
+      "minute": 63,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Calafiori",
+      "minute": 67,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Ryan Yates",
+      "minute": 69,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Álex Moreno",
+      "minute": 72,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Ødegaard",
+      "minute": 82,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 83,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "E. Nwaneri",
+      "minute": 86,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Timber",
+      "minute": 88,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

@@ -1,0 +1,185 @@
+{
+  "fixture_id": 1327989,
+  "date": "2025-02-05T00:00:00",
+  "competition": "League Cup",
+  "home_team": "Newcastle",
+  "away_team": "Arsenal",
+  "home_score": 2,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 4,
+    "Total Shots": 10,
+    "Blocked Shots": 3,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 4,
+    "Fouls": 12,
+    "Corner Kicks": 1,
+    "Offsides": 3,
+    "Ball Possession": 32.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 203,
+    "Passes accurate": 127,
+    "Passes %": 63.0,
+    "expected_goals": null,
+    "goals_prevented": null
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 3,
+    "Total Shots": 11,
+    "Blocked Shots": 5,
+    "Shots insidebox": 7,
+    "Shots outsidebox": 4,
+    "Fouls": 12,
+    "Corner Kicks": 13,
+    "Offsides": 0,
+    "Ball Possession": 68.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 423,
+    "Passes accurate": 351,
+    "Passes %": 83.0,
+    "expected_goals": null,
+    "goals_prevented": null
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Var",
+      "team": "home",
+      "player": "Alexander Isak",
+      "minute": 7,
+      "detail": "Goal cancelled"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "J. Murphy",
+      "minute": 19,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "minute": 37,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Kai Havertz",
+      "minute": 42,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "William Saliba",
+      "minute": 44,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Bruno Guimarães",
+      "minute": 47,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "A. Gordon",
+      "minute": 52,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 61,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Ødegaard",
+      "minute": 61,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Timber",
+      "minute": 78,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "T. Partey",
+      "minute": 78,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Murphy",
+      "minute": 80,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "S. Botman",
+      "minute": 80,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Raheem Sterling",
+      "minute": 83,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "A. Isak",
+      "minute": 87,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "S. Tonali",
+      "minute": 87,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Fabian Schär",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Bruno Guimarães",
+      "minute": 90,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

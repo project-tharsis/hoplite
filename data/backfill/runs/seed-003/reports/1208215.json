@@ -1,0 +1,266 @@
+{
+  "match": {
+    "fixture_id": 1208215,
+    "date": "2025-01-04T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Brighton",
+    "away_team": "Arsenal",
+    "home_score": 1,
+    "away_score": 1,
+    "arsenal_score": 1,
+    "opponent_score": 1,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [],
+    "likely_approach": "",
+    "key_battles": [],
+    "expected_subs": "",
+    "historical_context": ""
+  },
+  "context": {
+    "opponent": "Brighton",
+    "opponent_quality": "mid_table",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 0.88,
+      "opponent": 1.52
+    },
+    "possession": {
+      "arsenal": 55.0,
+      "opponent": 45.0
+    },
+    "shots": {
+      "arsenal": 9,
+      "opponent": 11
+    },
+    "shots_on_target": {
+      "arsenal": 3,
+      "opponent": 4
+    },
+    "passes": {
+      "arsenal": {
+        "total": 519,
+        "accuracy": 88.0
+      },
+      "opponent": {
+        "total": 427,
+        "accuracy": 86.0
+      }
+    },
+    "fouls": {
+      "arsenal": 14,
+      "opponent": 17
+    },
+    "corners": {
+      "arsenal": 5,
+      "opponent": 2
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 3,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 16,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 45,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Ethan Nwaneri",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brighton",
+      "player": "M. ORiley",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brighton",
+      "player": "B. Gruda",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Nwaneri",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 61,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Brighton",
+      "player": "João Pedro",
+      "detail": "Penalty",
+      "is_arsenal": false
+    },
+    {
+      "minute": 62,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brighton",
+      "player": "S. Adingra",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 64,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Brighton",
+      "player": "Joël Veltman",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 64,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Jorginho",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 66,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Brighton",
+      "player": "Igor Julio",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 82,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Brighton",
+      "player": "Yankuba Minteh",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 84,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Riccardo Calafiori",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 1,
+    "details": [
+      "61' João Pedro — Penalty"
+    ]
+  },
+  "sub_impact": [
+    {
+      "minute": 46,
+      "player": "M. ORiley",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 46,
+      "player": "B. Gruda",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 46,
+      "player": "E. Nwaneri",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 62,
+      "player": "S. Adingra",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 64,
+      "player": "Jorginho",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 66,
+      "player": "Igor Julio",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-1 Brighton (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

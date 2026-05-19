@@ -1,0 +1,287 @@
+{
+  "match": {
+    "fixture_id": 1540842,
+    "date": "2026-04-29T00:00:00",
+    "competition": "UEFA Champions League",
+    "home_team": "Atletico Madrid",
+    "away_team": "Arsenal",
+    "home_score": 1,
+    "away_score": 1,
+    "arsenal_score": 1,
+    "opponent_score": 1,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制节奏",
+      "转换效率",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换；定位球重点部署",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球"
+    ],
+    "expected_subs": "根据比分半场/60分钟战术调整；定位球专家/高点 late sub 抢分"
+  },
+  "context": {
+    "opponent": "Atletico Madrid",
+    "opponent_quality": "mid_table",
+    "venue": "away",
+    "competition_stage": "knockout",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 1.51,
+      "opponent": 2.21
+    },
+    "possession": {
+      "arsenal": 48.0,
+      "opponent": 52.0
+    },
+    "shots": {
+      "arsenal": 11,
+      "opponent": 18
+    },
+    "shots_on_target": {
+      "arsenal": 2,
+      "opponent": 4
+    },
+    "passes": {
+      "arsenal": {
+        "total": 480,
+        "accuracy": 88.0
+      },
+      "opponent": {
+        "total": 505,
+        "accuracy": 83.0
+      }
+    },
+    "fouls": {
+      "arsenal": 11,
+      "opponent": 7
+    },
+    "corners": {
+      "arsenal": 1,
+      "opponent": 6
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 0,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 44,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "V. Gyokeres",
+      "detail": "Penalty",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Atletico Madrid",
+      "player": "G. Simeone",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 55,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Atletico Madrid",
+      "player": "Marcos Llorente",
+      "detail": "Penalty confirmed",
+      "is_arsenal": false
+    },
+    {
+      "minute": 56,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Atletico Madrid",
+      "player": "J. Alvarez",
+      "detail": "Penalty",
+      "is_arsenal": false
+    },
+    {
+      "minute": 58,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Odegaard",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 68,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "N. Madueke",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 68,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 69,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 77,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Atletico Madrid",
+      "player": "J. Alvarez",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 78,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Atletico Madrid",
+      "player": "Dávid Hancko",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 80,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Arsenal",
+      "player": "Eberechi Eze",
+      "detail": "Penalty cancelled",
+      "is_arsenal": true
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. White",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 88,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Atletico Madrid",
+      "player": "J. Cardoso",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 1,
+    "opponent": 1,
+    "details": [
+      "44' V. Gyokeres — Penalty",
+      "56' J. Alvarez — Penalty"
+    ]
+  },
+  "sub_impact": [
+    {
+      "minute": 46,
+      "player": "G. Simeone",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 58,
+      "player": "M. Odegaard",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 68,
+      "player": "N. Madueke",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 68,
+      "player": "G. Martinelli",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 69,
+      "player": "V. Gyökeres",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 77,
+      "player": "J. Alvarez",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "B. White",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 88,
+      "player": "J. Cardoso",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-1 Atletico Madrid (UEFA Champions League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

@@ -1,0 +1,164 @@
+{
+  "fixture_id": 1451123,
+  "date": "2025-12-10T00:00:00",
+  "competition": "UEFA Champions League",
+  "home_team": "Club Brugge KV",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 3,
+  "home_stats": {
+    "Shots on Goal": 7,
+    "Shots off Goal": 6,
+    "Total Shots": 18,
+    "Blocked Shots": 5,
+    "Shots insidebox": 11,
+    "Shots outsidebox": 7,
+    "Fouls": 10,
+    "Corner Kicks": 1,
+    "Offsides": 1,
+    "Ball Possession": 49.0,
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 7,
+    "Total passes": 474,
+    "Passes accurate": 421,
+    "Passes %": 89.0,
+    "expected_goals": 1.1,
+    "goals_prevented": 1.15
+  },
+  "away_stats": {
+    "Shots on Goal": 11,
+    "Shots off Goal": 8,
+    "Total Shots": 20,
+    "Blocked Shots": 1,
+    "Shots insidebox": 12,
+    "Shots outsidebox": 8,
+    "Fouls": 9,
+    "Corner Kicks": 5,
+    "Offsides": 0,
+    "Ball Possession": 51.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 7,
+    "Total passes": 477,
+    "Passes accurate": 419,
+    "Passes %": 88.0,
+    "expected_goals": 2.99,
+    "goals_prevented": 1.15
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "N. Madueke",
+      "minute": 25,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "N. Madueke",
+      "minute": 47,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "G. Martinelli",
+      "minute": 56,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "V. Gyökeres",
+      "minute": 62,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "P. Hincapie",
+      "minute": 63,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Christian Nørgaard",
+      "minute": 65,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "H. Siquet",
+      "minute": 67,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "N. Tresoldi",
+      "minute": 67,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Ben White",
+      "minute": 68,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "N. Madueke",
+      "minute": 71,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Odegaard",
+      "minute": 72,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Onyedika",
+      "minute": 74,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Seys",
+      "minute": 74,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "C. Forbs",
+      "minute": 83,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. White",
+      "minute": 83,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

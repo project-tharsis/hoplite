@@ -1,0 +1,213 @@
+{
+  "fixture_id": 1208067,
+  "date": "2024-09-22T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Manchester City",
+  "away_team": "Arsenal",
+  "home_score": 2,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 11,
+    "Shots off Goal": 9,
+    "Total Shots": 33,
+    "Blocked Shots": 13,
+    "Shots insidebox": 15,
+    "Shots outsidebox": 18,
+    "Fouls": 7,
+    "Corner Kicks": 8,
+    "Offsides": 0,
+    "Ball Possession": 77.0,
+    "Yellow Cards": 3,
+    "Red Cards": 0,
+    "Goalkeeper Saves": 1,
+    "Total passes": 705,
+    "Passes accurate": 644,
+    "Passes %": 91.0,
+    "expected_goals": 2.18,
+    "goals_prevented": 0.22
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 2,
+    "Total Shots": 5,
+    "Blocked Shots": 0,
+    "Shots insidebox": 4,
+    "Shots outsidebox": 1,
+    "Fouls": 10,
+    "Corner Kicks": 2,
+    "Offsides": 1,
+    "Ball Possession": 23.0,
+    "Yellow Cards": 6,
+    "Red Cards": 1,
+    "Goalkeeper Saves": 9,
+    "Total passes": 208,
+    "Passes accurate": 148,
+    "Passes %": 71.0,
+    "expected_goals": 0.67,
+    "goals_prevented": 0.22
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Myles Lewis-Skelly",
+      "minute": -5,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "E. Haaland",
+      "minute": 9,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Rodri",
+      "minute": 21,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Ederson",
+      "minute": 22,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "R. Calafiori",
+      "minute": 22,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Leandro Trossard",
+      "minute": 34,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Rúben Dias",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Leandro Trossard",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Thomas Partey",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Leandro Trossard",
+      "minute": 45,
+      "detail": "Red Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Gabriel Magalhães",
+      "minute": 45,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. Saka",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Doku",
+      "minute": 70,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Calafiori",
+      "minute": 74,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Savinho",
+      "minute": 78,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "K. Walker",
+      "minute": 78,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Declan Rice",
+      "minute": 83,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "minute": 87,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Bernardo Silva",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Gabriel Jesus",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Timber",
+      "minute": 90,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "J. Stones",
+      "minute": 90,
+      "detail": "Normal Goal"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

@@ -1,0 +1,171 @@
+{
+  "fixture_id": 1208334,
+  "date": "2025-04-12T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Brentford",
+  "home_score": 1,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 5,
+    "Total Shots": 14,
+    "Blocked Shots": 6,
+    "Shots insidebox": 8,
+    "Shots outsidebox": 6,
+    "Fouls": 7,
+    "Corner Kicks": 13,
+    "Offsides": 3,
+    "Ball Possession": 64.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 480,
+    "Passes accurate": 418,
+    "Passes %": 87.0,
+    "expected_goals": 0.96,
+    "goals_prevented": -0.58
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 1,
+    "Total Shots": 3,
+    "Blocked Shots": 0,
+    "Shots insidebox": 3,
+    "Shots outsidebox": 0,
+    "Fouls": 9,
+    "Corner Kicks": 5,
+    "Offsides": 1,
+    "Ball Possession": 36.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 280,
+    "Passes accurate": 219,
+    "Passes %": 78.0,
+    "expected_goals": 0.24,
+    "goals_prevented": -0.58
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Var",
+      "team": "home",
+      "player": "Kieran Tierney",
+      "minute": 27,
+      "detail": "Goal cancelled"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Christian Nørgaard",
+      "minute": 28,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Kevin Schade",
+      "minute": 34,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "T. Partey",
+      "minute": 61,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "O. Zinchenko",
+      "minute": 62,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "K. Tierney",
+      "minute": 62,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "E. Nwaneri",
+      "minute": 63,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "T. Partey",
+      "minute": 69,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "V. Janelt",
+      "minute": 69,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "K. Ajer",
+      "minute": 69,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Y. Wissa",
+      "minute": 74,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "D. Rice",
+      "minute": 75,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Yehor Yarmolyuk",
+      "minute": 78,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Damsgaard",
+      "minute": 80,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Martin Ødegaard",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "C. Nørgaard",
+      "minute": 90,
+      "detail": "Substitution 4"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

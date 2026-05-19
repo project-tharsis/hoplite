@@ -1,0 +1,171 @@
+{
+  "fixture_id": 1451052,
+  "date": "2025-10-01T00:00:00",
+  "competition": "UEFA Champions League",
+  "home_team": "Arsenal",
+  "away_team": "Olympiakos Piraeus",
+  "home_score": 2,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 6,
+    "Total Shots": 16,
+    "Blocked Shots": 5,
+    "Shots insidebox": 15,
+    "Shots outsidebox": 1,
+    "Fouls": 14,
+    "Corner Kicks": 3,
+    "Offsides": 2,
+    "Ball Possession": 61.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 496,
+    "Passes accurate": 407,
+    "Passes %": 82.0,
+    "expected_goals": 2.9,
+    "goals_prevented": -0.11
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 2,
+    "Total Shots": 10,
+    "Blocked Shots": 5,
+    "Shots insidebox": 7,
+    "Shots outsidebox": 3,
+    "Fouls": 17,
+    "Corner Kicks": 5,
+    "Offsides": 4,
+    "Ball Possession": 39.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 307,
+    "Passes accurate": 223,
+    "Passes %": 73.0,
+    "expected_goals": 0.5,
+    "goals_prevented": -0.11
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "G. Martinelli",
+      "minute": 12,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Gabriel Magalhães",
+      "minute": 58,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. White",
+      "minute": 58,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Merino",
+      "minute": 59,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Martín Zubimendi",
+      "minute": 61,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "G. Martins",
+      "minute": 62,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "minute": 73,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "G. Martinelli",
+      "minute": 73,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel",
+      "minute": 75,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "D. Garcia",
+      "minute": 75,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Declan Rice",
+      "minute": 78,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "P. Retsos",
+      "minute": 85,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "S. Hezze",
+      "minute": 85,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Chiquinho",
+      "minute": 86,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Gabriel Strefezza",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 90,
+      "detail": "Normal Goal"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

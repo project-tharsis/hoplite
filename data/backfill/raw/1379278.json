@@ -1,0 +1,164 @@
+{
+  "fixture_id": 1379278,
+  "date": "2026-02-18T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Wolves",
+  "away_team": "Arsenal",
+  "home_score": 2,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 3,
+    "Total Shots": 5,
+    "Blocked Shots": 0,
+    "Shots insidebox": 2,
+    "Shots outsidebox": 3,
+    "Fouls": 6,
+    "Corner Kicks": 1,
+    "Offsides": 1,
+    "Ball Possession": 42.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 354,
+    "Passes accurate": 263,
+    "Passes %": 74.0,
+    "expected_goals": 0.29,
+    "goals_prevented": -0.86
+  },
+  "away_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 4,
+    "Total Shots": 10,
+    "Blocked Shots": 2,
+    "Shots insidebox": 9,
+    "Shots outsidebox": 1,
+    "Fouls": 8,
+    "Corner Kicks": 3,
+    "Offsides": 3,
+    "Ball Possession": 58.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 484,
+    "Passes accurate": 396,
+    "Passes %": 82.0,
+    "expected_goals": 1.6,
+    "goals_prevented": -0.86
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "B. Saka",
+      "minute": 5,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "A. Gomes",
+      "minute": 22,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Santiago Bueno",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "P. Hincapie",
+      "minute": 56,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Var",
+      "team": "away",
+      "player": "Piero Hincapié",
+      "minute": 57,
+      "detail": "Goal confirmed"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "H. Bueno",
+      "minute": 61,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "V. Gyökeres",
+      "minute": 65,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "N. Madueke",
+      "minute": 65,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Tchatchoua",
+      "minute": 70,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Jean-Ricner Bellegarde",
+      "minute": 71,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. Saka",
+      "minute": 73,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Bellegarde",
+      "minute": 84,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Gabriel Jesus",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": null,
+      "minute": 90,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "T. Edozie",
+      "minute": 90,
+      "detail": "Normal Goal"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

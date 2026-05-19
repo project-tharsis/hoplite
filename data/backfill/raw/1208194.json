@@ -1,0 +1,129 @@
+{
+  "fixture_id": 1208194,
+  "date": "2024-12-27T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Ipswich",
+  "home_score": 1,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 3,
+    "Total Shots": 13,
+    "Blocked Shots": 5,
+    "Shots insidebox": 9,
+    "Shots outsidebox": 4,
+    "Fouls": 7,
+    "Corner Kicks": 5,
+    "Offsides": 1,
+    "Ball Possession": 68.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 670,
+    "Passes accurate": 604,
+    "Passes %": 90.0,
+    "expected_goals": 1.86,
+    "goals_prevented": 0.33
+  },
+  "away_stats": {
+    "Shots on Goal": 0,
+    "Shots off Goal": 0,
+    "Total Shots": 3,
+    "Blocked Shots": 3,
+    "Shots insidebox": 0,
+    "Shots outsidebox": 3,
+    "Fouls": 12,
+    "Corner Kicks": 1,
+    "Offsides": 2,
+    "Ball Possession": 32.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 4,
+    "Total passes": 318,
+    "Passes accurate": 256,
+    "Passes %": 81.0,
+    "expected_goals": 0.15,
+    "goals_prevented": 0.33
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "K. Havertz",
+      "minute": 23,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Kai Havertz",
+      "minute": 54,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Leif Davis",
+      "minute": 65,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "S. Szmodics",
+      "minute": 71,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel Jesus",
+      "minute": 72,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. Johnson",
+      "minute": 80,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Cajuste",
+      "minute": 80,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Delap",
+      "minute": 80,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "D. Rice",
+      "minute": 87,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Woolfenden",
+      "minute": 90,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

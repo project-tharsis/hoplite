@@ -1,0 +1,129 @@
+{
+  "fixture_id": 1379042,
+  "date": "2025-10-18T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Fulham",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 0,
+    "Shots off Goal": 6,
+    "Total Shots": 9,
+    "Blocked Shots": 3,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 3,
+    "Fouls": 11,
+    "Corner Kicks": 6,
+    "Offsides": 0,
+    "Ball Possession": 37.0,
+    "Yellow Cards": null,
+    "Red Cards": null,
+    "Goalkeeper Saves": 4,
+    "Total passes": 313,
+    "Passes accurate": 248,
+    "Passes %": 79.0,
+    "expected_goals": 0.44,
+    "goals_prevented": 0.0
+  },
+  "away_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 7,
+    "Total Shots": 16,
+    "Blocked Shots": 4,
+    "Shots insidebox": 14,
+    "Shots outsidebox": 2,
+    "Fouls": 4,
+    "Corner Kicks": 10,
+    "Offsides": 2,
+    "Ball Possession": 63.0,
+    "Yellow Cards": null,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 546,
+    "Passes accurate": 475,
+    "Passes %": 87.0,
+    "expected_goals": 1.87,
+    "goals_prevented": 0.0
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Andersen",
+      "minute": 42,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 58,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Eze",
+      "minute": 62,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. King",
+      "minute": 63,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "T. Cairney",
+      "minute": 64,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Var",
+      "team": "away",
+      "player": "Bukayo Saka",
+      "minute": 67,
+      "detail": "Penalty cancelled"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 81,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "H. Wilson",
+      "minute": 82,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Cuenca",
+      "minute": 82,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "V. Gyökeres",
+      "minute": 90,
+      "detail": "Substitution 3"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

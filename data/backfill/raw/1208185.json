@@ -1,0 +1,199 @@
+{
+  "fixture_id": 1208185,
+  "date": "2024-12-21T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Crystal Palace",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 5,
+  "home_stats": {
+    "Shots on Goal": 6,
+    "Shots off Goal": 6,
+    "Total Shots": 15,
+    "Blocked Shots": 3,
+    "Shots insidebox": 10,
+    "Shots outsidebox": 5,
+    "Fouls": 9,
+    "Corner Kicks": 3,
+    "Offsides": 1,
+    "Ball Possession": 42.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 392,
+    "Passes accurate": 318,
+    "Passes %": 81.0,
+    "expected_goals": 1.59,
+    "goals_prevented": 0.71
+  },
+  "away_stats": {
+    "Shots on Goal": 6,
+    "Shots off Goal": 3,
+    "Total Shots": 14,
+    "Blocked Shots": 5,
+    "Shots insidebox": 13,
+    "Shots outsidebox": 1,
+    "Fouls": 8,
+    "Corner Kicks": 3,
+    "Offsides": 0,
+    "Ball Possession": 58.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 5,
+    "Total passes": 552,
+    "Passes accurate": 479,
+    "Passes %": 87.0,
+    "expected_goals": 2.87,
+    "goals_prevented": 0.71
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Gabriel Jesus",
+      "minute": 6,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "I. Sarr",
+      "minute": 11,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Gabriel Jesus",
+      "minute": 15,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. Saka",
+      "minute": 24,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Gabriel Magalhães",
+      "minute": 31,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Jurriën Timber",
+      "minute": 36,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "K. Havertz",
+      "minute": 38,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Lewis-Skelly",
+      "minute": 58,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "K. Havertz",
+      "minute": 58,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "minute": 60,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "D. Kamada",
+      "minute": 61,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Marc Guéhi",
+      "minute": 64,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Lerma",
+      "minute": 68,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "W. Hughes",
+      "minute": 68,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Nathaniel Clyne",
+      "minute": 79,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "N. Clyne",
+      "minute": 80,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Mateta",
+      "minute": 81,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "D. Rice",
+      "minute": 84,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Timber",
+      "minute": 86,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel Jesus",
+      "minute": 86,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

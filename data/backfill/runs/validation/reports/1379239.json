@@ -1,0 +1,329 @@
+{
+  "match": {
+    "fixture_id": 1379239,
+    "date": "2026-03-01T16:30:00+00:00",
+    "competition": "Premier League",
+    "home_team": "Arsenal",
+    "away_team": "Chelsea",
+    "home_score": 2,
+    "away_score": 1,
+    "arsenal_score": 2,
+    "opponent_score": 1,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "关键球员对位 — 限制对手核心进攻点"
+    ],
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
+  },
+  "context": {
+    "opponent": "Chelsea",
+    "opponent_quality": "top6",
+    "venue": "home",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": "1.09",
+      "opponent": "1.07"
+    },
+    "possession": {
+      "arsenal": "41%",
+      "opponent": "59%"
+    },
+    "shots": {
+      "arsenal": 12,
+      "opponent": 9
+    },
+    "shots_on_target": {
+      "arsenal": 5,
+      "opponent": 3
+    },
+    "passes": {
+      "arsenal": {
+        "total": 338,
+        "accuracy": "82%"
+      },
+      "opponent": {
+        "total": 482,
+        "accuracy": "88%"
+      }
+    },
+    "fouls": {
+      "arsenal": 11,
+      "opponent": 14
+    },
+    "corners": {
+      "arsenal": 5,
+      "opponent": 10
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 5,
+        "red": 1
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 21,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "W. Saliba",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 45,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Chelsea",
+      "player": "P. Hincapie",
+      "detail": "Own Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 56,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 59,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Cole Palmer",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Jorrel Hato",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 66,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "J. Timber",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 67,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Pedro Neto",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Pedro Neto",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Pedro Neto",
+      "detail": "Red Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 75,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Gabriel Magalhães",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "J. Hato",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "Andrey Santos",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 79,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Enzo Fernández",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "C. Palmer",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "E. Fernandez",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "M. Sarr",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 56,
+      "player": "L. Trossard",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "J. Hato",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "Andrey Santos",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "V. Gyökeres",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "D. Rice",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "C. Palmer",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "E. Fernandez",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "M. Sarr",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-1 Chelsea (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

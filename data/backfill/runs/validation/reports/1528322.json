@@ -1,0 +1,290 @@
+{
+  "match": {
+    "fixture_id": 1528322,
+    "date": "2026-03-11T17:45:00+00:00",
+    "competition": "UEFA Champions League",
+    "home_team": "Bayer Leverkusen",
+    "away_team": "Arsenal",
+    "home_score": 1,
+    "away_score": 1,
+    "arsenal_score": 1,
+    "opponent_score": 1,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制节奏",
+      "转换效率",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换；定位球重点部署",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球"
+    ],
+    "expected_subs": "根据比分半场/60分钟战术调整；定位球专家/高点 late sub 抢分"
+  },
+  "context": {
+    "opponent": "Bayer Leverkusen",
+    "opponent_quality": "mid_table",
+    "venue": "away",
+    "competition_stage": "knockout",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": "1.64",
+      "opponent": "0.85"
+    },
+    "possession": {
+      "arsenal": "55%",
+      "opponent": "45%"
+    },
+    "shots": {
+      "arsenal": 6,
+      "opponent": 10
+    },
+    "shots_on_target": {
+      "arsenal": 2,
+      "opponent": 3
+    },
+    "passes": {
+      "arsenal": {
+        "total": 522,
+        "accuracy": "87%"
+      },
+      "opponent": {
+        "total": 442,
+        "accuracy": "87%"
+      }
+    },
+    "fouls": {
+      "arsenal": 10,
+      "opponent": 9
+    },
+    "corners": {
+      "arsenal": 3,
+      "opponent": 2
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 3,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 4,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 2,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Bayer Leverkusen",
+      "player": "Robert Andrich",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 26,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Bayer Leverkusen",
+      "player": "R. Andrich",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 58,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Bayer Leverkusen",
+      "player": "Ernest Poku",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 60,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 63,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Bayer Leverkusen",
+      "player": "Exequiel Palacios",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 69,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Martín Zubimendi",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bayer Leverkusen",
+      "player": "I. Maza",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 74,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bayer Leverkusen",
+      "player": "E. Palacios",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Bayer Leverkusen",
+      "player": "M. Terrier",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Eze",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 89,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Penalty",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Bayer Leverkusen",
+      "player": "Alejandro Grimaldo",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Kai Havertz",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 1,
+    "opponent": 0,
+    "details": [
+      "89' K. Havertz — Penalty"
+    ]
+  },
+  "sub_impact": [
+    {
+      "minute": 60,
+      "player": "B. Saka",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 74,
+      "player": "I. Maza",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 74,
+      "player": "V. Gyökeres",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "E. Palacios",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "M. Terrier",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "E. Eze",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-1 Bayer Leverkusen (UEFA Champions League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

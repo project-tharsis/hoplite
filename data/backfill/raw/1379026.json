@@ -1,0 +1,178 @@
+{
+  "fixture_id": 1379026,
+  "date": "2025-09-28T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Newcastle",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 1,
+    "Total Shots": 8,
+    "Blocked Shots": 4,
+    "Shots insidebox": 7,
+    "Shots outsidebox": 1,
+    "Fouls": 8,
+    "Corner Kicks": 7,
+    "Offsides": 1,
+    "Ball Possession": 37.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 5,
+    "Total passes": 279,
+    "Passes accurate": 194,
+    "Passes %": 70.0,
+    "expected_goals": 0.61,
+    "goals_prevented": -0.07
+  },
+  "away_stats": {
+    "Shots on Goal": 7,
+    "Shots off Goal": 7,
+    "Total Shots": 20,
+    "Blocked Shots": 6,
+    "Shots insidebox": 18,
+    "Shots outsidebox": 2,
+    "Fouls": 9,
+    "Corner Kicks": 12,
+    "Offsides": 0,
+    "Ball Possession": 63.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 495,
+    "Passes accurate": 405,
+    "Passes %": 82.0,
+    "expected_goals": 2.04,
+    "goals_prevented": -0.07
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Var",
+      "team": "away",
+      "player": "Viktor Gyökeres",
+      "minute": 15,
+      "detail": "Penalty cancelled"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "N. Woltemade",
+      "minute": 34,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "C. Mosquera",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Riccardo Calafiori",
+      "minute": 56,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Murphy",
+      "minute": 66,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "A. Gordon",
+      "minute": 67,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "N. Woltemade",
+      "minute": 67,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. Saka",
+      "minute": 70,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Calafiori",
+      "minute": 70,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "V. Livramento",
+      "minute": 77,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Zubimendi",
+      "minute": 82,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Joelinton",
+      "minute": 83,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "M. Merino",
+      "minute": 84,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Dan Burn",
+      "minute": 88,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "minute": 88,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Joelinton",
+      "minute": 90,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "Gabriel",
+      "minute": 90,
+      "detail": "Normal Goal"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

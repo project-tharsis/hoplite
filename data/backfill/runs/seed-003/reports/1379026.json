@@ -1,0 +1,335 @@
+{
+  "match": {
+    "fixture_id": 1379026,
+    "date": "2025-09-28T00:00:00",
+    "competition": "Premier League",
+    "home_team": "Newcastle",
+    "away_team": "Arsenal",
+    "home_score": 1,
+    "away_score": 2,
+    "arsenal_score": 2,
+    "opponent_score": 1,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "防守结构",
+      "快速转换",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "低位防线 + 结构化防守 + 快速转换反击",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "关键球员对位 — 限制对手核心进攻点"
+    ],
+    "expected_subs": "60' 上防守型中场巩固结构；75' 反击点换前锋保持速度威胁"
+  },
+  "context": {
+    "opponent": "Newcastle",
+    "opponent_quality": "top6",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": 2.04,
+      "opponent": 0.61
+    },
+    "possession": {
+      "arsenal": 63.0,
+      "opponent": 37.0
+    },
+    "shots": {
+      "arsenal": 20,
+      "opponent": 8
+    },
+    "shots_on_target": {
+      "arsenal": 7,
+      "opponent": 3
+    },
+    "passes": {
+      "arsenal": {
+        "total": 495,
+        "accuracy": 82.0
+      },
+      "opponent": {
+        "total": 279,
+        "accuracy": 70.0
+      }
+    },
+    "fouls": {
+      "arsenal": 9,
+      "opponent": 8
+    },
+    "corners": {
+      "arsenal": 12,
+      "opponent": 7
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 2,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 0,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 15,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Arsenal",
+      "player": "Viktor Gyökeres",
+      "detail": "Penalty cancelled",
+      "is_arsenal": true
+    },
+    {
+      "minute": 34,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Newcastle",
+      "player": "N. Woltemade",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "C. Mosquera",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 56,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Riccardo Calafiori",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 66,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "J. Murphy",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 67,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "A. Gordon",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 67,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "N. Woltemade",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 77,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "V. Livramento",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Zubimendi",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 83,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Newcastle",
+      "player": "Joelinton",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 84,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "M. Merino",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 88,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Newcastle",
+      "player": "Dan Burn",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 88,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Newcastle",
+      "player": "Joelinton",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 46,
+      "player": "C. Mosquera",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 66,
+      "player": "J. Murphy",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 67,
+      "player": "A. Gordon",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 67,
+      "player": "N. Woltemade",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "B. Saka",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "R. Calafiori",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 77,
+      "player": "V. Livramento",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "M. Zubimendi",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 88,
+      "player": "L. Trossard",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "Joelinton",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-1 Newcastle (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

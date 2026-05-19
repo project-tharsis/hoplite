@@ -1,0 +1,178 @@
+{
+  "fixture_id": 1451061,
+  "date": "2025-10-21T00:00:00",
+  "competition": "UEFA Champions League",
+  "home_team": "Arsenal",
+  "away_team": "Atletico Madrid",
+  "home_score": 4,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 8,
+    "Shots off Goal": 6,
+    "Total Shots": 19,
+    "Blocked Shots": 5,
+    "Shots insidebox": 16,
+    "Shots outsidebox": 3,
+    "Fouls": 14,
+    "Corner Kicks": 3,
+    "Offsides": 2,
+    "Ball Possession": 52.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 421,
+    "Passes accurate": 378,
+    "Passes %": 90.0,
+    "expected_goals": 2.19,
+    "goals_prevented": -0.92
+  },
+  "away_stats": {
+    "Shots on Goal": 1,
+    "Shots off Goal": 6,
+    "Total Shots": 11,
+    "Blocked Shots": 4,
+    "Shots insidebox": 8,
+    "Shots outsidebox": 3,
+    "Fouls": 10,
+    "Corner Kicks": 4,
+    "Offsides": 0,
+    "Ball Possession": 48.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 4,
+    "Total passes": 394,
+    "Passes accurate": 332,
+    "Passes %": 84.0,
+    "expected_goals": 0.67,
+    "goals_prevented": -0.92
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "José María Giménez",
+      "minute": 33,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Martín Zubimendi",
+      "minute": 38,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "Gabriel",
+      "minute": 57,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "N. Gonzalez",
+      "minute": 63,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Koke",
+      "minute": 63,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. M. Gimenez",
+      "minute": 63,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "G. Martinelli",
+      "minute": 64,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "V. Gyokeres",
+      "minute": 67,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "V. Gyokeres",
+      "minute": 70,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel",
+      "minute": 72,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Zubimendi",
+      "minute": 72,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "E. Eze",
+      "minute": 72,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "G. Simeone",
+      "minute": 72,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Sorloth",
+      "minute": 73,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Robin Le Normand",
+      "minute": 75,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Timber",
+      "minute": 83,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "V. Gyökeres",
+      "minute": 83,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

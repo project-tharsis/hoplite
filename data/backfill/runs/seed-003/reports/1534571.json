@@ -1,0 +1,264 @@
+{
+  "match": {
+    "fixture_id": 1534571,
+    "date": "2026-04-15T00:00:00",
+    "competition": "UEFA Champions League",
+    "home_team": "Arsenal",
+    "away_team": "Sporting CP",
+    "home_score": 0,
+    "away_score": 0,
+    "arsenal_score": 0,
+    "opponent_score": 0,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "高位反抢/断球",
+      "定位球威胁"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换；定位球重点部署",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球"
+    ],
+    "expected_subs": "根据比分半场/60分钟战术调整；定位球专家/高点 late sub 抢分"
+  },
+  "context": {
+    "opponent": "Sporting CP",
+    "opponent_quality": "mid_table",
+    "venue": "home",
+    "competition_stage": "knockout",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 0,
+      "opponent": 0
+    },
+    "xg": {
+      "arsenal": 0.64,
+      "opponent": 0.29
+    },
+    "possession": {
+      "arsenal": 50.0,
+      "opponent": 50.0
+    },
+    "shots": {
+      "arsenal": 15,
+      "opponent": 8
+    },
+    "shots_on_target": {
+      "arsenal": 1,
+      "opponent": 1
+    },
+    "passes": {
+      "arsenal": {
+        "total": 443,
+        "accuracy": 87.0
+      },
+      "opponent": {
+        "total": 445,
+        "accuracy": 87.0
+      }
+    },
+    "fouls": {
+      "arsenal": 7,
+      "opponent": 11
+    },
+    "corners": {
+      "arsenal": 8,
+      "opponent": 3
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 0,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 56,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 63,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "N. Madueke",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 71,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Sporting CP",
+      "player": "Pote",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 71,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Sporting CP",
+      "player": "G. Catamo",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 77,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Sporting CP",
+      "player": "H. Morita",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 79,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Sporting CP",
+      "player": "Maximiliano Araújo",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 79,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Eze",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 79,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Sporting CP",
+      "player": "Trincao",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 85,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Sporting CP",
+      "player": "E. Quaresma",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 56,
+      "player": "V. Gyökeres",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 63,
+      "player": "N. Madueke",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 71,
+      "player": "Pote",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 71,
+      "player": "G. Catamo",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 77,
+      "player": "H. Morita",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 79,
+      "player": "E. Eze",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 79,
+      "player": "G. Martinelli",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "Trincao",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 85,
+      "player": "E. Quaresma",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 0-0 Sporting CP (UEFA Champions League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

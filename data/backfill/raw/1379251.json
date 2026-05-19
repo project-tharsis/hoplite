@@ -1,0 +1,164 @@
+{
+  "fixture_id": 1379251,
+  "date": "2026-03-04T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Brighton",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 3,
+    "Total Shots": 11,
+    "Blocked Shots": 5,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 5,
+    "Fouls": 14,
+    "Corner Kicks": 4,
+    "Offsides": 3,
+    "Ball Possession": 60.0,
+    "Yellow Cards": 4,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 470,
+    "Passes accurate": 385,
+    "Passes %": 82.0,
+    "expected_goals": 0.82,
+    "goals_prevented": 0.56
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 4,
+    "Total Shots": 7,
+    "Blocked Shots": 1,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 1,
+    "Fouls": 12,
+    "Corner Kicks": 3,
+    "Offsides": 0,
+    "Ball Possession": 40.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 322,
+    "Passes accurate": 226,
+    "Passes %": 70.0,
+    "expected_goals": 0.47,
+    "goals_prevented": 0.56
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "B. Saka",
+      "minute": 9,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Cristhian Mosquera",
+      "minute": 11,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "K. Mitoma",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Diego Gómez",
+      "minute": 52,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "V. Gyökeres",
+      "minute": 59,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "G. Martinelli",
+      "minute": 60,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "C. Mosquera",
+      "minute": 64,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Hinshelwood",
+      "minute": 69,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Wieffer",
+      "minute": 77,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "D. Gomez",
+      "minute": 77,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "C. Baleba",
+      "minute": 78,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Olivier Boscagli",
+      "minute": 80,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Zubimendi",
+      "minute": 80,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Ferdi Kadıoğlu",
+      "minute": 81,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Yasin Ayari",
+      "minute": 90,
+      "detail": "Yellow Card"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

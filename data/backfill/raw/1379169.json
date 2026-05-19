@@ -1,0 +1,129 @@
+{
+  "fixture_id": 1379169,
+  "date": "2026-01-08T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Liverpool",
+  "home_score": 0,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 1,
+    "Total Shots": 9,
+    "Blocked Shots": 4,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 3,
+    "Fouls": 10,
+    "Corner Kicks": 3,
+    "Offsides": 2,
+    "Ball Possession": 48.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 459,
+    "Passes accurate": 396,
+    "Passes %": 86.0,
+    "expected_goals": 0.57,
+    "goals_prevented": 0.68
+  },
+  "away_stats": {
+    "Shots on Goal": 0,
+    "Shots off Goal": 5,
+    "Total Shots": 8,
+    "Blocked Shots": 3,
+    "Shots insidebox": 2,
+    "Shots outsidebox": 6,
+    "Fouls": 9,
+    "Corner Kicks": 0,
+    "Offsides": 1,
+    "Ball Possession": 52.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 4,
+    "Total passes": 509,
+    "Passes accurate": 453,
+    "Passes %": 89.0,
+    "expected_goals": 0.31,
+    "goals_prevented": 0.68
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Leandro Trossard",
+      "minute": 12,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "P. Hincapie",
+      "minute": 57,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "V. Gyökeres",
+      "minute": 64,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "minute": 64,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 78,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Odegaard",
+      "minute": 78,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Gabriel Martinelli",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Ibrahima Konaté",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Alexis Mac Allister",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "C. Bradley",
+      "minute": 90,
+      "detail": "Substitution 1"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

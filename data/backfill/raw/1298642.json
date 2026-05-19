@@ -1,0 +1,178 @@
+{
+  "fixture_id": 1298642,
+  "date": "2024-09-25T00:00:00",
+  "competition": "League Cup",
+  "home_team": "Arsenal",
+  "away_team": "Bolton",
+  "home_score": 5,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 8,
+    "Shots off Goal": 6,
+    "Total Shots": 21,
+    "Blocked Shots": 7,
+    "Shots insidebox": 17,
+    "Shots outsidebox": 4,
+    "Fouls": 5,
+    "Corner Kicks": 10,
+    "Offsides": 1,
+    "Ball Possession": 77.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 642,
+    "Passes accurate": 575,
+    "Passes %": 90.0,
+    "expected_goals": null,
+    "goals_prevented": null
+  },
+  "away_stats": {
+    "Shots on Goal": 1,
+    "Shots off Goal": 3,
+    "Total Shots": 4,
+    "Blocked Shots": 0,
+    "Shots insidebox": 4,
+    "Shots outsidebox": 0,
+    "Fouls": 8,
+    "Corner Kicks": 4,
+    "Offsides": 2,
+    "Ball Possession": 23.0,
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 187,
+    "Passes accurate": 118,
+    "Passes %": 63.0,
+    "expected_goals": null,
+    "goals_prevented": null
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "D. Rice",
+      "minute": 16,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Riccardo Calafiori",
+      "minute": 34,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "E. Nwaneri",
+      "minute": 37,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "E. Nwaneri",
+      "minute": 49,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "A. Collins",
+      "minute": 53,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Lewis-Skelly",
+      "minute": 62,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "D. Rice",
+      "minute": 62,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "R. Sterling",
+      "minute": 64,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "K. Dempsey",
+      "minute": 69,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "S. Arfield",
+      "minute": 69,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Calafiori",
+      "minute": 70,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 71,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "C. Forino",
+      "minute": 71,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "K. Havertz",
+      "minute": 77,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. McAtee",
+      "minute": 78,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Collins",
+      "minute": 79,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "R. Sterling",
+      "minute": 81,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

@@ -1,0 +1,206 @@
+{
+  "fixture_id": 1379149,
+  "date": "2025-12-30T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Aston Villa",
+  "home_score": 4,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 7,
+    "Shots off Goal": 8,
+    "Total Shots": 22,
+    "Blocked Shots": 7,
+    "Shots insidebox": 17,
+    "Shots outsidebox": 5,
+    "Fouls": 18,
+    "Corner Kicks": 3,
+    "Offsides": 4,
+    "Ball Possession": 46.0,
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 351,
+    "Passes accurate": 302,
+    "Passes %": 86.0,
+    "expected_goals": 3.04,
+    "goals_prevented": -1.28
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 4,
+    "Total Shots": 11,
+    "Blocked Shots": 4,
+    "Shots insidebox": 9,
+    "Shots outsidebox": 2,
+    "Fouls": 9,
+    "Corner Kicks": 3,
+    "Offsides": 0,
+    "Ball Possession": 54.0,
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 416,
+    "Passes accurate": 362,
+    "Passes %": 87.0,
+    "expected_goals": 2.67,
+    "goals_prevented": -1.28
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Mikel Merino",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Morgan Rogers",
+      "minute": 45,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "A. Onana",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "Gabriel",
+      "minute": 48,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "M. Zubimendi",
+      "minute": 52,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Sancho",
+      "minute": 61,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Buendia",
+      "minute": 61,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "L. Trossard",
+      "minute": 69,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Var",
+      "team": "home",
+      "player": "Leandro Trossard",
+      "minute": 72,
+      "detail": "Goal confirmed"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "M. Merino",
+      "minute": 73,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "V. Gyökeres",
+      "minute": 77,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel",
+      "minute": 77,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "Gabriel Jesus",
+      "minute": 78,
+      "detail": "Normal Goal"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Gabriel Jesus",
+      "minute": 79,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Lamare Bogarde",
+      "minute": 81,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Rogers",
+      "minute": 82,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Y. Tielemans",
+      "minute": 82,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Timber",
+      "minute": 83,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "B. Saka",
+      "minute": 83,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Ollie Watkins",
+      "minute": 90,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "O. Watkins",
+      "minute": 90,
+      "detail": "Normal Goal"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": true
+}

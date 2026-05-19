@@ -1,0 +1,373 @@
+{
+  "match": {
+    "fixture_id": 1498259,
+    "date": "2026-01-14T00:00:00",
+    "competition": "League Cup",
+    "home_team": "Chelsea",
+    "away_team": "Arsenal",
+    "home_score": 2,
+    "away_score": 3,
+    "arsenal_score": 3,
+    "opponent_score": 2,
+    "result": "W"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "防守结构",
+      "快速转换",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "低位防线 + 结构化防守 + 快速转换反击",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "关键球员对位 — 限制对手核心进攻点"
+    ],
+    "expected_subs": "60' 上防守型中场巩固结构；75' 反击点换前锋保持速度威胁"
+  },
+  "context": {
+    "opponent": "Chelsea",
+    "opponent_quality": "top6",
+    "venue": "away",
+    "competition_stage": "regular",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 3,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": null,
+      "opponent": null
+    },
+    "possession": {
+      "arsenal": 42.0,
+      "opponent": 58.0
+    },
+    "shots": {
+      "arsenal": 17,
+      "opponent": 10
+    },
+    "shots_on_target": {
+      "arsenal": 6,
+      "opponent": 5
+    },
+    "passes": {
+      "arsenal": {
+        "total": 356,
+        "accuracy": 83.0
+      },
+      "opponent": {
+        "total": 495,
+        "accuracy": 85.0
+      }
+    },
+    "fouls": {
+      "arsenal": 14,
+      "opponent": 12
+    },
+    "corners": {
+      "arsenal": 9,
+      "opponent": 6
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 1,
+        "second_half": 2,
+        "total": 3
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 2,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 4,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 4,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 7,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "B. White",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 42,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Estêvão",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 42,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Leandro Trossard",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 44,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Marc Cucurella",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 49,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "V. Gyokeres",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 53,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "J. Acheampong",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 53,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "M. Guiu",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 57,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Chelsea",
+      "player": "A. Garnacho",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 65,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Benoît Badiashile",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 67,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 68,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Odegaard",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 71,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "M. Zubimendi",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 75,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Kepa Arrizabalaga",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "W. Fofana",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 78,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 81,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "M. Cucurella",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 81,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "Joao Pedro",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 82,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "D. Rice",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 83,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Chelsea",
+      "player": "A. Garnacho",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Pedro Neto",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Jurriën Timber",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 53,
+      "player": "J. Acheampong",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 53,
+      "player": "M. Guiu",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 67,
+      "player": "L. Trossard",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 68,
+      "player": "M. Odegaard",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "W. Fofana",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 81,
+      "player": "M. Cucurella",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 81,
+      "player": "Joao Pedro",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "V. Gyökeres",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 82,
+      "player": "D. Rice",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 3-2 Chelsea (League Cup)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

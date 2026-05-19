@@ -1,0 +1,129 @@
+{
+  "fixture_id": 1208285,
+  "date": "2025-02-26T00:00:00",
+  "competition": "Premier League",
+  "home_team": "Nottingham Forest",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 1,
+    "Total Shots": 6,
+    "Blocked Shots": 3,
+    "Shots insidebox": 4,
+    "Shots outsidebox": 2,
+    "Fouls": 10,
+    "Corner Kicks": 3,
+    "Offsides": 1,
+    "Ball Possession": 35.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 268,
+    "Passes accurate": 199,
+    "Passes %": 74.0,
+    "expected_goals": 0.4,
+    "goals_prevented": 0.38
+  },
+  "away_stats": {
+    "Shots on Goal": 1,
+    "Shots off Goal": 3,
+    "Total Shots": 13,
+    "Blocked Shots": 9,
+    "Shots insidebox": 8,
+    "Shots outsidebox": 5,
+    "Fouls": 17,
+    "Corner Kicks": 11,
+    "Offsides": 2,
+    "Ball Possession": 65.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 502,
+    "Passes accurate": 438,
+    "Passes %": 87.0,
+    "expected_goals": 0.99,
+    "goals_prevented": 0.38
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Card",
+      "team": "away",
+      "player": "Riccardo Calafiori",
+      "minute": 3,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Nikola Milenković",
+      "minute": 4,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "R. Calafiori",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "A. Elanga",
+      "minute": 62,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "N. Domínguez",
+      "minute": 63,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "Jorginho",
+      "minute": 70,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "E. Nwaneri",
+      "minute": 77,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "C. Wood",
+      "minute": 85,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Ødegaard",
+      "minute": 85,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "J. Timber",
+      "minute": 85,
+      "detail": "Substitution 5"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}

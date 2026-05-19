@@ -1,0 +1,150 @@
+{
+  "fixture_id": 1540842,
+  "date": "2026-04-29T00:00:00",
+  "competition": "UEFA Champions League",
+  "home_team": "Atletico Madrid",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 8,
+    "Total Shots": 18,
+    "Blocked Shots": 6,
+    "Shots insidebox": 13,
+    "Shots outsidebox": 5,
+    "Fouls": 7,
+    "Corner Kicks": 6,
+    "Offsides": 0,
+    "Ball Possession": 52.0,
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 505,
+    "Passes accurate": 420,
+    "Passes %": 83.0,
+    "expected_goals": 2.21,
+    "goals_prevented": 0.76
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 4,
+    "Total Shots": 11,
+    "Blocked Shots": 5,
+    "Shots insidebox": 8,
+    "Shots outsidebox": 3,
+    "Fouls": 11,
+    "Corner Kicks": 1,
+    "Offsides": 1,
+    "Ball Possession": 48.0,
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 480,
+    "Passes accurate": 423,
+    "Passes %": 88.0,
+    "expected_goals": 1.51,
+    "goals_prevented": 0.76
+  },
+  "home_formation": "",
+  "away_formation": "",
+  "events": [
+    {
+      "type": "Goal",
+      "team": "away",
+      "player": "V. Gyokeres",
+      "minute": 44,
+      "detail": "Penalty"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "G. Simeone",
+      "minute": 46,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "Var",
+      "team": "home",
+      "player": "Marcos Llorente",
+      "minute": 55,
+      "detail": "Penalty confirmed"
+    },
+    {
+      "type": "Goal",
+      "team": "home",
+      "player": "J. Alvarez",
+      "minute": 56,
+      "detail": "Penalty"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "M. Odegaard",
+      "minute": 58,
+      "detail": "Substitution 1"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "N. Madueke",
+      "minute": 68,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "G. Martinelli",
+      "minute": 68,
+      "detail": "Substitution 3"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "V. Gyökeres",
+      "minute": 69,
+      "detail": "Substitution 4"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Alvarez",
+      "minute": 77,
+      "detail": "Substitution 2"
+    },
+    {
+      "type": "Card",
+      "team": "home",
+      "player": "Dávid Hancko",
+      "minute": 78,
+      "detail": "Yellow Card"
+    },
+    {
+      "type": "Var",
+      "team": "away",
+      "player": "Eberechi Eze",
+      "minute": 80,
+      "detail": "Penalty cancelled"
+    },
+    {
+      "type": "subst",
+      "team": "away",
+      "player": "B. White",
+      "minute": 86,
+      "detail": "Substitution 5"
+    },
+    {
+      "type": "subst",
+      "team": "home",
+      "player": "J. Cardoso",
+      "minute": 88,
+      "detail": "Substitution 3"
+    }
+  ],
+  "home_xg": null,
+  "away_xg": null,
+  "home_lineup": [],
+  "away_lineup": [],
+  "result": "",
+  "arsenal_is_home": false
+}
