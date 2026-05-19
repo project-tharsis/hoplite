@@ -27,6 +27,7 @@ from src.tools.prepare_evaluation import prepare_evaluation
 from src.tools.save_evaluation import save_evaluation
 from src.tools.review import review_evaluation
 from src.evaluation.calibration import CalibrationComputer
+from src.evaluation.patterns import PatternComputer
 from src.evaluation.knowledge import KnowledgeBase
 from scripts.replay_history import replay_weak_label_only
 
@@ -781,3 +782,370 @@ class TestSubstituteScorerRegression:
         assert features.result == "W"
         assert features.score_margin == 2
         assert features.opponent_name == "Wolves"
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# 9. Closed-loop integration: CalibrationComputer → prompt rendering
+# ═══════════════════════════════════════════════════════════════════════
+
+
+def _synthetic_kb_entries(n: int = 3) -> list[dict]:
+    """Create n synthetic KB entries with matching pre_match_context."""
+    entries = []
+    for i in range(n):
+        entries.append({
+            "match_id": str(300 + i),
+            "opponent": "West Ham",
+            "result": "W" if i % 2 == 0 else "D",
+            "score": "2-1" if i % 2 == 0 else "1-1",
+            "pre_match_context": {
+                "opponent_quality": "mid_table",
+                "venue": "away",
+                "competition_stage": "league_early",
+            },
+            "features": {
+                "result": "W" if i % 2 == 0 else "D",
+                "score_margin": 1 if i % 2 == 0 else 0,
+                "arsenal_goals": 2 if i % 2 == 0 else 1,
+                "opponent_goals": 1,
+                "yellow_cards_for": 1,
+                "red_cards_for": 0,
+                "fouls_for": 10,
+                "fouls_against": 12,
+                "possession_for": 55.0,
+                "possession_against": 45.0,
+                "possession_delta": 10.0,
+                "shots_for": 12,
+                "shots_against": 8,
+                "shot_delta": 4,
+                "shots_on_target_for": 5,
+                "shots_on_target_against": 3,
+                "shot_on_target_delta": 2,
+                "xg_for": 1.5,
+                "xg_against": 0.8,
+                "xg_delta": 0.7,
+                "pass_accuracy_for": 85.0,
+                "pass_accuracy_against": 80.0,
+                "pass_accuracy_delta": 5.0,
+                "corners_for": 6,
+                "corners_against": 3,
+                "corner_delta": 3,
+                "opponent_shots_on_target": 3,
+                "set_piece_goals_for": 0,
+                "set_piece_goals_against": 0,
+                "goals_conceded": 1,
+                "arsenal_sub_count": 0,
+                "goals_after_arsenal_subs": 0,
+                "goals_by_substitutes": 0,
+                "substitution_windows": [],
+                "score_state_timeline": [],
+                "missing_data": ["xG"] if i == 0 else [],
+            },
+            "evaluation": {
+                "source": "llm",
+                "overall_signal": "🟢" if i % 2 == 0 else "🟡",
+                "model_signals": {
+                    "1": "🟢", "2": "🟡", "3": "🟢",
+                    "4": "🟡", "5": "🟢", "6": "🟡",
+                },
+                "dimension_signals": {
+                    "execution": "🟢",
+                    "adjustment": "🟡",
+                    "satisfaction": "🟢",
+                },
+                "confidence": {
+                    "1": "high", "2": "medium", "3": "high",
+                    "4": "medium", "5": "high", "6": "medium",
+                },
+                "evidence": {},
+            },
+            "weak_labels": {
+                "overall_signal": "🟡",
+                "model_signals": {
+                    "1": "🟡", "2": "🟡", "3": "🟡",
+                    "4": "🟡", "5": "🟡", "6": "🟡",
+                },
+                "dimension_signals": {
+                    "execution": "🟡",
+                    "adjustment": "🟡",
+                    "satisfaction": "🟡",
+                },
+            },
+            "human_override": None,
+        })
+    return entries
+
+
+def _report_with_matching_context() -> dict:
+    """Report JSON whose context matches the synthetic KB entries."""
+    return {
+        "match": {
+            "fixture_id": 999100,
+            "date": "2026-08-20T15:00:00",
+            "competition": "Premier League",
+            "home_team": "West Ham",
+            "away_team": "Arsenal",
+            "home_score": 1,
+            "away_score": 2,
+            "home_xg": 0.9,
+            "away_xg": 1.6,
+        },
+        "stats": {},
+        "key_events": [],
+        "context": {
+            "opponent": "West Ham",
+            "opponent_quality": "mid_table",
+            "venue": "away",
+            "competition_stage": "league_early",
+        },
+        "predicted_plan": {"focus_areas": ["transitions", "set_pieces"]},
+    }
+
+
+class TestCalibrationRenderedInPrompt:
+    """Test 9a: CalibrationComputer output is rendered in prompt by prompt_builder."""
+
+    def test_prompt_contains_calibration_confidence(self, tmp_path):
+        """Prompt includes 校准置信度 / Calibration confidence."""
+        import src.paths as paths
+        kb_path = tmp_path / "knowledge.json"
+        entries = _synthetic_kb_entries(3)
+        with open(kb_path, "w") as f:
+            json.dump(entries, f)
+
+        orig = paths.DEFAULT_KB_PATH
+        paths.DEFAULT_KB_PATH = kb_path
+        try:
+            result = prepare_evaluation(
+                _report_with_matching_context(), output_format="prompt"
+            )
+            assert isinstance(result, str)
+            assert "校准置信度" in result or "Calibration confidence" in result, (
+                f"Prompt missing calibration confidence text. "
+                f"First 500 chars: {result[:500]}"
+            )
+        finally:
+            paths.DEFAULT_KB_PATH = orig
+
+    def test_prompt_contains_sample_quality(self, tmp_path):
+        """Prompt includes 样本质量 / Sample quality."""
+        import src.paths as paths
+        kb_path = tmp_path / "knowledge.json"
+        entries = _synthetic_kb_entries(3)
+        with open(kb_path, "w") as f:
+            json.dump(entries, f)
+
+        orig = paths.DEFAULT_KB_PATH
+        paths.DEFAULT_KB_PATH = kb_path
+        try:
+            result = prepare_evaluation(
+                _report_with_matching_context(), output_format="prompt"
+            )
+            assert isinstance(result, str)
+            assert "样本质量" in result or "Sample quality" in result, (
+                f"Prompt missing sample quality text. "
+                f"First 500 chars: {result[:500]}"
+            )
+        finally:
+            paths.DEFAULT_KB_PATH = orig
+
+    def test_prompt_contains_calibration_guardrails(self, tmp_path):
+        """Prompt includes 校准护栏 / Calibration guardrails."""
+        import src.paths as paths
+        kb_path = tmp_path / "knowledge.json"
+        entries = _synthetic_kb_entries(3)
+        with open(kb_path, "w") as f:
+            json.dump(entries, f)
+
+        orig = paths.DEFAULT_KB_PATH
+        paths.DEFAULT_KB_PATH = kb_path
+        try:
+            result = prepare_evaluation(
+                _report_with_matching_context(), output_format="prompt"
+            )
+            assert isinstance(result, str)
+            assert "校准护栏" in result or "Calibration guardrails" in result, (
+                f"Prompt missing calibration guardrails text. "
+                f"First 500 chars: {result[:500]}"
+            )
+        finally:
+            paths.DEFAULT_KB_PATH = orig
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# 10. Closed-loop: review → CalibrationComputer uses corrected signals
+# ═══════════════════════════════════════════════════════════════════════
+
+
+class TestCalibrationUsesCorrectedSignals:
+    """Test 9b: After review_evaluation, CalibrationComputer.build_hints
+    reflects corrected model signals from human_override."""
+
+    def _seed_and_review(self, tmp_path: Path) -> Path:
+        """Seed KB with 3 entries, review one with corrected signals."""
+        import src.paths as paths
+        kb_path = tmp_path / "knowledge.json"
+        entries = _synthetic_kb_entries(3)
+        with open(kb_path, "w") as f:
+            json.dump(entries, f)
+
+        orig = paths.DEFAULT_KB_PATH
+        paths.DEFAULT_KB_PATH = kb_path
+        try:
+            # Review entry match_id=300 — change model 1 from 🟢 to 🔴
+            review_evaluation({
+                "match_id": "300",
+                "reviewer": "test",
+                "review_status": "corrected",
+                "corrected_overall_signal": "🔴",
+                "corrected_model_signals": {
+                    "1": "🔴", "2": "🔴", "3": "🔴",
+                    "4": "🔴", "5": "🔴", "6": "🔴",
+                },
+                "corrected_dimension_signals": {
+                    "execution": "🔴",
+                    "adjustment": "🔴",
+                    "satisfaction": "🔴",
+                },
+                "comments": "test correction",
+            })
+        finally:
+            paths.DEFAULT_KB_PATH = orig
+        return kb_path
+
+    def test_calibration_reflects_corrected_model_signals(self, tmp_path):
+        """build_hints model_signal_distribution uses corrected signals."""
+        kb_path = self._seed_and_review(tmp_path)
+        cc = CalibrationComputer(str(kb_path))
+        hints = cc.build_hints(
+            {"opponent_quality": "mid_table", "venue": "away",
+             "competition_stage": "league_early"},
+            limit=5,
+        )
+        model_dist = hints["model_signal_distribution"]
+        # Entry 300 was corrected to all 🔴, entries 301/302 have original signals.
+        # Model 1: entry 300 was 🟢→🔴, entry 301 is 🟡 (from eval), entry 302 is 🟢 (from eval)
+        # So model 1 distribution: 🔴=1 (from 300 corrected), 🟡=1 (from 301), 🟢=1 (from 302)
+        assert model_dist["1"]["🔴"] >= 1, (
+            f"Expected at least 1 🔴 for model 1 after correction, got {model_dist['1']}"
+        )
+
+    def test_calibration_reflects_corrected_dimension_signals(self, tmp_path):
+        """build_hints dimension_signal_distribution uses corrected signals."""
+        kb_path = self._seed_and_review(tmp_path)
+        cc = CalibrationComputer(str(kb_path))
+        hints = cc.build_hints(
+            {"opponent_quality": "mid_table", "venue": "away",
+             "competition_stage": "league_early"},
+            limit=5,
+        )
+        dim_dist = hints["dimension_signal_distribution"]
+        # Entry 300 was corrected: execution 🟢→🔴
+        # Entry 301: execution 🟢 (from eval), Entry 302: execution 🟢 (from eval)
+        # So execution: 🔴=1, 🟢=2
+        assert dim_dist["execution"]["🔴"] >= 1, (
+            f"Expected at least 1 🔴 for execution after correction, got {dim_dist['execution']}"
+        )
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# 11. Closed-loop: review → PatternComputer uses corrected signals
+# ═══════════════════════════════════════════════════════════════════════
+
+
+class TestPatternComputerUsesCorrectedSignals:
+    """Test 9c: After review_evaluation, PatternComputer.similar_match_summary
+    reflects corrected dimension signals from human_override."""
+
+    def test_dimension_signal_distribution_reflects_correction(self, tmp_path):
+        """similar_match_summary uses corrected_dimension_signals."""
+        import src.paths as paths
+        kb_path = tmp_path / "knowledge.json"
+        entries = _synthetic_kb_entries(3)
+        with open(kb_path, "w") as f:
+            json.dump(entries, f)
+
+        orig = paths.DEFAULT_KB_PATH
+        paths.DEFAULT_KB_PATH = kb_path
+        try:
+            # Review entry 301: change satisfaction from 🟢 to 🔴
+            review_evaluation({
+                "match_id": "301",
+                "reviewer": "test",
+                "review_status": "corrected",
+                "corrected_overall_signal": "🔴",
+                "corrected_model_signals": {
+                    "1": "🔴", "2": "🔴", "3": "🔴",
+                    "4": "🔴", "5": "🔴", "6": "🔴",
+                },
+                "corrected_dimension_signals": {
+                    "execution": "🔴",
+                    "adjustment": "🔴",
+                    "satisfaction": "🔴",
+                },
+                "comments": "dim correction test",
+            })
+        finally:
+            paths.DEFAULT_KB_PATH = orig
+
+        pc = PatternComputer(str(kb_path))
+        summary = pc.similar_match_summary(
+            {"opponent_quality": "mid_table", "venue": "away",
+             "competition_stage": "league_early"},
+            limit=5,
+        )
+        dim_dist = summary["dimension_signal_distribution"]
+        # Entry 300: execution 🟢 (original eval), entry 301: execution 🔴 (corrected),
+        # entry 302: execution 🟢 (original eval)
+        # So execution: 🔴=1, 🟢=2
+        assert dim_dist["execution"]["🔴"] >= 1, (
+            f"Expected at least 1 🔴 for execution in PatternComputer, got {dim_dist['execution']}"
+        )
+        # Satisfaction: entry 300 🟢, entry 301 🔴 (corrected), entry 302 🟢
+        assert dim_dist["satisfaction"]["🔴"] >= 1, (
+            f"Expected at least 1 🔴 for satisfaction in PatternComputer, got {dim_dist['satisfaction']}"
+        )
+
+    def test_model_signal_distribution_reflects_correction(self, tmp_path):
+        """similar_match_summary uses corrected_model_signals."""
+        import src.paths as paths
+        kb_path = tmp_path / "knowledge.json"
+        entries = _synthetic_kb_entries(3)
+        with open(kb_path, "w") as f:
+            json.dump(entries, f)
+
+        orig = paths.DEFAULT_KB_PATH
+        paths.DEFAULT_KB_PATH = kb_path
+        try:
+            review_evaluation({
+                "match_id": "301",
+                "reviewer": "test",
+                "review_status": "corrected",
+                "corrected_overall_signal": "🔴",
+                "corrected_model_signals": {
+                    "1": "🔴", "2": "🔴", "3": "🔴",
+                    "4": "🔴", "5": "🔴", "6": "🔴",
+                },
+                "corrected_dimension_signals": {
+                    "execution": "🔴",
+                    "adjustment": "🔴",
+                    "satisfaction": "🔴",
+                },
+                "comments": "model correction test",
+            })
+        finally:
+            paths.DEFAULT_KB_PATH = orig
+
+        pc = PatternComputer(str(kb_path))
+        summary = pc.similar_match_summary(
+            {"opponent_quality": "mid_table", "venue": "away",
+             "competition_stage": "league_early"},
+            limit=5,
+        )
+        model_dist = summary["model_signal_distribution"]
+        # Entry 300: model 1 🟢 (eval), entry 301: model 1 🔴 (corrected),
+        # entry 302: model 1 🟢 (eval)
+        # So model 1: 🔴=1, 🟢=2
+        assert model_dist["1"]["🔴"] >= 1, (
+            f"Expected at least 1 🔴 for model 1 in PatternComputer, got {model_dist['1']}"
+        )
