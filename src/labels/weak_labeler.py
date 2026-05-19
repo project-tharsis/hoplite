@@ -42,7 +42,7 @@ class WeakLabels:
     confidence: dict[str, str] = field(default_factory=dict)
     evidence_refs: dict[str, list[str]] = field(default_factory=dict)
     missing_data_penalty: bool = False
-    weak_label_version: str = "v1"
+    weak_label_version: str = "v1.1"
 
 
 class WeakLabeler:
@@ -100,6 +100,9 @@ class WeakLabeler:
         else:
             wl.overall_signal = YELLOW
 
+        # ── Apply result-aware loss guards (v1.1) ────────────────────
+        self._apply_result_aware_guards(features, wl)
+
         # ── Apply missing data penalty to confidence ──────────────────
         if wl.missing_data_penalty:
             for model_id in ALL_MODELS:
@@ -107,6 +110,37 @@ class WeakLabeler:
                     wl.confidence[model_id] = "medium"
 
         return wl
+
+    # ── Result-aware loss guards (v1.1) ─────────────────────────────
+
+    def _apply_result_aware_guards(self, features: MatchFeatures, wl: WeakLabels) -> None:
+        """Apply overall veto for losses based on opponent quality.
+
+        Spec: loss to lower/mid_table → satisfaction=🔴 + overall=🔴.
+              loss to top6/elite → satisfaction capped at 🟡, overall capped at 🟡.
+              Must not upgrade an already 🔴 signal.
+        """
+        if features.result != "L":
+            return
+
+        quality = features.opponent_quality
+
+        if quality in ("lower", "mid_table"):
+            # Hard veto: satisfaction=🔴, overall=🔴
+            wl.dimension_signals["satisfaction"] = RED
+            wl.overall_signal = RED
+            wl.evidence_refs.setdefault("add_capability_keep_identity", []).append("result_aware_veto:loss_to_non_elite")
+            wl.evidence_refs.setdefault("defence_as_attacking_identity", []).append("result_aware_veto:loss_to_non_elite")
+
+        elif quality in ("top6", "european_elite"):
+            if wl.dimension_signals.get("satisfaction") == GREEN:
+                wl.dimension_signals["satisfaction"] = YELLOW
+            if wl.overall_signal == GREEN:
+                wl.overall_signal = YELLOW
+
+        else:
+            if wl.overall_signal == GREEN:
+                wl.overall_signal = YELLOW
 
     # ── Model 1: Culture as OS (discipline) ───────────────────────────
 
