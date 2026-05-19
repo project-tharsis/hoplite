@@ -447,18 +447,20 @@ class PromptBuilder:
             lines.append("")
             return "\n".join(lines)
 
+        # Support both flat (PatternComputer) and nested record (CalibrationComputer) shapes
+        record = hints.get("record", hints)
         if self.language == "zh":
-            wins = hints.get("wins", 0)
-            draws = hints.get("draws", 0)
-            losses = hints.get("losses", 0)
+            wins = record.get("wins", 0)
+            draws = record.get("draws", 0)
+            losses = record.get("losses", 0)
             lines.append(f"类似场景共 {count} 场: {wins}胜 {draws}平 {losses}负")
-            lines.append(f"场均进球 {hints.get('avg_arsenal_score', 0)}, 场均失球 {hints.get('avg_opponent_score', 0)}")
+            lines.append(f"场均进球 {record.get('avg_arsenal_score', 0)}, 场均失球 {record.get('avg_opponent_score', 0)}")
         else:
-            wins = hints.get("wins", 0)
-            draws = hints.get("draws", 0)
-            losses = hints.get("losses", 0)
+            wins = record.get("wins", 0)
+            draws = record.get("draws", 0)
+            losses = record.get("losses", 0)
             lines.append(f"Similar scenarios: {count} matches ({wins}W {draws}D {losses}L)")
-            lines.append(f"Avg goals: {hints.get('avg_arsenal_score', 0)}, Avg conceded: {hints.get('avg_opponent_score', 0)}")
+            lines.append(f"Avg goals: {record.get('avg_arsenal_score', 0)}, Avg conceded: {record.get('avg_opponent_score', 0)}")
 
         # Model signal distributions
         model_dist = hints.get("model_signal_distribution", {})

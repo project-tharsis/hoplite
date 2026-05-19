@@ -1149,3 +1149,196 @@ class TestPatternComputerUsesCorrectedSignals:
         assert model_dist["1"]["🔴"] >= 1, (
             f"Expected at least 1 🔴 for model 1 in PatternComputer, got {model_dist['1']}"
         )
+
+# ═══════════════════════════════════════════════════════════════════════
+# 10. Prompt record rendering — W/D/L correctly shown from CalibrationComputer
+# ═══════════════════════════════════════════════════════════════════════
+
+
+class TestPromptRecordRendering:
+    """Verify that prepare_evaluation prompt shows correct W/D/L record
+    from CalibrationComputer's nested record dict."""
+
+    def test_prompt_shows_correct_record(self, tmp_path):
+        """Seed 2W 1D 1L history, prompt must show correct record."""
+        from src.tools.prepare_evaluation import prepare_evaluation
+        import src.paths as paths
+
+        entries = [
+            {
+                "match_id": "rec1",
+                "opponent": "West Ham",
+                "result": "W",
+                "score": "2-1",
+                "pre_match_context": {
+                    "opponent_quality": "mid_table",
+                    "venue": "away",
+                    "competition_stage": "league_early",
+                },
+                "features": {
+                    "result": "W", "score_margin": 1,
+                    "arsenal_goals": 2, "opponent_goals": 1,
+                    "yellow_cards_for": 1, "red_cards_for": 0,
+                    "fouls_for": 10, "fouls_against": 12,
+                    "possession_for": 55.0, "possession_against": 45.0,
+                    "possession_delta": 10.0,
+                    "shots_for": 12, "shots_against": 8,
+                    "shot_delta": 4,
+                    "shots_on_target_for": 5, "shots_on_target_against": 3,
+                    "shot_on_target_delta": 2,
+                    "xg_for": 1.5, "xg_against": 0.8, "xg_delta": 0.7,
+                    "pass_accuracy_for": 85.0, "pass_accuracy_against": 80.0,
+                    "pass_accuracy_delta": 5.0,
+                    "corners_for": 6, "corners_against": 3, "corner_delta": 3,
+                    "opponent_shots_on_target": 3,
+                    "set_piece_goals_for": 0, "set_piece_goals_against": 0,
+                    "goals_conceded": 1,
+                    "arsenal_sub_count": 0, "goals_after_arsenal_subs": 0,
+                    "goals_by_substitutes": 0,
+                    "substitution_windows": [], "score_state_timeline": [],
+                    "missing_data": [],
+                },
+                "evaluation": {
+                    "source": "llm",
+                    "overall_signal": "🟢",
+                    "model_signals": {"1": "🟢", "2": "🟢", "3": "🟢", "4": "🟢", "5": "🟢", "6": "🟢"},
+                    "dimension_signals": {"execution": "🟢", "adjustment": "🟢", "satisfaction": "🟢"},
+                    "narrative": "",
+                },
+            },
+            {
+                "match_id": "rec2",
+                "opponent": "West Ham",
+                "result": "W",
+                "score": "3-0",
+                "pre_match_context": {
+                    "opponent_quality": "mid_table",
+                    "venue": "away",
+                    "competition_stage": "league_early",
+                },
+                "features": {
+                    "result": "W", "score_margin": 3,
+                    "arsenal_goals": 3, "opponent_goals": 0,
+                    "yellow_cards_for": 0, "red_cards_for": 0,
+                    "fouls_for": 8, "fouls_against": 10,
+                    "possession_for": 60.0, "possession_against": 40.0,
+                    "possession_delta": 20.0,
+                    "shots_for": 15, "shots_against": 5,
+                    "shot_delta": 10,
+                    "shots_on_target_for": 7, "shots_on_target_against": 1,
+                    "shot_on_target_delta": 6,
+                    "xg_for": 2.5, "xg_against": 0.3, "xg_delta": 2.2,
+                    "pass_accuracy_for": 88.0, "pass_accuracy_against": 75.0,
+                    "pass_accuracy_delta": 13.0,
+                    "corners_for": 8, "corners_against": 2, "corner_delta": 6,
+                    "opponent_shots_on_target": 1,
+                    "set_piece_goals_for": 1, "set_piece_goals_against": 0,
+                    "goals_conceded": 0,
+                    "arsenal_sub_count": 0, "goals_after_arsenal_subs": 0,
+                    "goals_by_substitutes": 0,
+                    "substitution_windows": [], "score_state_timeline": [],
+                    "missing_data": [],
+                },
+                "evaluation": {
+                    "source": "llm",
+                    "overall_signal": "🟢",
+                    "model_signals": {"1": "🟢", "2": "🟢", "3": "🟢", "4": "🟢", "5": "🟢", "6": "🟢"},
+                    "dimension_signals": {"execution": "🟢", "adjustment": "🟢", "satisfaction": "🟢"},
+                    "narrative": "",
+                },
+            },
+            {
+                "match_id": "rec3",
+                "opponent": "West Ham",
+                "result": "L",
+                "score": "0-2",
+                "pre_match_context": {
+                    "opponent_quality": "mid_table",
+                    "venue": "away",
+                    "competition_stage": "league_early",
+                },
+                "features": {
+                    "result": "L", "score_margin": -2,
+                    "arsenal_goals": 0, "opponent_goals": 2,
+                    "yellow_cards_for": 3, "red_cards_for": 0,
+                    "fouls_for": 14, "fouls_against": 8,
+                    "possession_for": 45.0, "possession_against": 55.0,
+                    "possession_delta": -10.0,
+                    "shots_for": 6, "shots_against": 14,
+                    "shot_delta": -8,
+                    "shots_on_target_for": 2, "shots_on_target_against": 6,
+                    "shot_on_target_delta": -4,
+                    "xg_for": 0.4, "xg_against": 1.8, "xg_delta": -1.4,
+                    "pass_accuracy_for": 78.0, "pass_accuracy_against": 84.0,
+                    "pass_accuracy_delta": -6.0,
+                    "corners_for": 3, "corners_against": 7, "corner_delta": -4,
+                    "opponent_shots_on_target": 6,
+                    "set_piece_goals_for": 0, "set_piece_goals_against": 1,
+                    "goals_conceded": 2,
+                    "arsenal_sub_count": 0, "goals_after_arsenal_subs": 0,
+                    "goals_by_substitutes": 0,
+                    "substitution_windows": [], "score_state_timeline": [],
+                    "missing_data": [],
+                },
+                "evaluation": {
+                    "source": "llm",
+                    "overall_signal": "🔴",
+                    "model_signals": {"1": "🔴", "2": "🔴", "3": "🔴", "4": "🔴", "5": "🔴", "6": "🔴"},
+                    "dimension_signals": {"execution": "🔴", "adjustment": "🔴", "satisfaction": "🔴"},
+                    "narrative": "",
+                },
+            },
+        ]
+
+        kb_path = tmp_path / "knowledge.json"
+        with open(kb_path, "w") as f:
+            json.dump(entries, f)
+
+        orig = paths.DEFAULT_KB_PATH
+        paths.DEFAULT_KB_PATH = str(kb_path)
+        try:
+            report = {
+                "match": {
+                    "fixture_id": 999,
+                    "date": "2026-05-19T00:00:00",
+                    "home_team": "West Ham",
+                    "away_team": "Arsenal",
+                    "home_score": 1,
+                    "away_score": 2,
+                    "competition": "Premier League",
+                    "arsenal_score": 2,
+                    "opponent_score": 1,
+                    "result": "W",
+                },
+                "stats": {
+                    "possession": [55.0, 45.0],
+                    "shots": [12, 8],
+                    "shots_on_target": [5, 3],
+                    "corners": [6, 3],
+                    "fouls": [10, 12],
+                    "passes_accuracy": [85.0, 80.0],
+                    "score": {"arsenal": 2, "opponent": 1},
+                },
+                "key_events": [],
+                "context": {
+                    "opponent": "West Ham",
+                    "opponent_quality": "mid_table",
+                    "venue": "away",
+                    "competition_stage": "league_early",
+                },
+                "set_pieces": {"goals_for": 0, "goals_against": 0},
+                "sub_impact": [],
+            }
+            result = prepare_evaluation(report, output_format="prompt")
+            assert isinstance(result, str)
+
+            # 2W 1D 0L in this context (the "rec3" entry is L but also matches)
+            # Actually: rec1=W, rec2=W, rec3=L => 2胜 0平 1负
+            assert "2胜" in result or "2W" in result, (
+                f"Expected '2胜' or '2W' in prompt, got: ...{result[200:600]}..."
+            )
+            assert "1负" in result or "1L" in result, (
+                f"Expected '1负' or '1L' in prompt, got: ...{result[200:600]}..."
+            )
+        finally:
+            paths.DEFAULT_KB_PATH = orig
