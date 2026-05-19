@@ -169,6 +169,47 @@ python -m src analyze_match < match.json > report.json
 python -m src prepare_evaluation < report.json
 ```
 
+## Historical Backfill (Seed-Set Pipeline)
+
+Legacy KB entries (pre-v2) contain only context, predicted plan, and old evaluation signals. **Legacy data alone cannot produce real features** — feature extraction requires raw match JSON or analyze report JSON with actual stats and events.
+
+The backfill script upgrades selected legacy entries into v2-compatible, feature-backed entries:
+
+```bash
+# 1. Check current KB state (no writes)
+python scripts/backfill_history.py \
+  --kb data/knowledge.json \
+  --manifest data/backfill/backfill_manifest.json \
+  --mode inventory
+
+# 2. Prepare seed-set artifacts (features + weak labels + LLM job prompts)
+#    prepare-seed produces LLM jobs but does NOT call an LLM
+python scripts/backfill_history.py \
+  --kb data/knowledge.json \
+  --manifest data/backfill/backfill_manifest.json \
+  --mode prepare-seed \
+  --output data/backfill/runs/20260519-seed
+
+# 3. Apply features to KB (--write required for mutation)
+python scripts/backfill_history.py \
+  --kb data/knowledge.json \
+  --manifest data/backfill/backfill_manifest.json \
+  --mode apply-features \
+  --run data/backfill/runs/20260519-seed \
+  --write
+
+# 4. Validate remaining entries (dry-run only, no KB mutation)
+python scripts/backfill_history.py \
+  --kb data/knowledge.json \
+  --manifest data/backfill/backfill_manifest.json \
+  --mode validate-rest \
+  --output data/backfill/runs/20260519-validate
+```
+
+The manifest (`data/backfill/backfill_manifest.json`) lists seed-set and validation-set entries with their `legacy_match_id`, `fixture_id`, and paths to raw match JSON or analyze report JSON.
+
+**Safety rules:** `apply-features` requires `--write`; before/after KB snapshots are saved per run; re-running is idempotent (skips already-backfilled entries unless `--force`).
+
 ## Data Sources
 
 - [API-Football](https://api-football.com) — events, lineups, stats (free tier)
