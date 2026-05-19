@@ -1110,52 +1110,24 @@
       "fixture_id": "1208151",
       "raw_match_path": "data/backfill/raw/1208151.json",
       "report_path": "data/backfill/runs/seed-002/reports/1208151.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
   {
     "match_id": "1208154",
-    "timestamp": "2024-12-04T20:15:00+00:00",
-    "opponent": "Man Utd",
-    "score": "2-0",
-    "result": "W",
+    "timestamp": "2024-12-04",
+    "opponent": "Manchester United",
+    "score": "?-?",
+    "result": "",
     "competition": "Premier League",
     "pre_match_context": {
       "opponent_quality": "top6",
       "venue": "home",
       "competition_stage": "league_early",
-      "injury_situation": "full_strength",
-      "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent": "Manchester United"
     },
-    "predicted_plan": {
-      "focus_areas": [
-        "控制中场",
-        "高位反抢/断球"
-      ],
-      "likely_approach": "打断对手节奏 + 反抢后立即转换",
-      "key_battles": [
-        "中场对抗 — Rice vs 对手组织型后腰",
-        "压迫对手出球核心 — 限制向前传球",
-        "关键球员对位 — 限制对手核心进攻点"
-      ],
-      "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
-    },
-    "evaluation": {
-      "source": "llm",
-      "confidence": null,
-      "model_signals": {
-        "1": "🟢",
-        "2": "🟢",
-        "3": "🟢",
-        "4": "🟢",
-        "5": "🟡",
-        "6": "🟢"
-      },
-      "dimension_signals": {},
-      "overall_signal": "🟡"
-    },
+    "predicted_plan": {},
     "features": {
       "result": "W",
       "score_margin": 2,
@@ -1240,6 +1212,81 @@
         "transition"
       ]
     },
+    "evaluation": {
+      "source": "llm",
+      "confidence": {
+        "1": "medium",
+        "2": "high",
+        "3": "high",
+        "4": "high",
+        "5": "medium",
+        "6": "medium"
+      },
+      "model_signals": {
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟢",
+        "5": "🟢",
+        "6": "🟡"
+      },
+      "dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟡",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "narrative": "2-0赢曼联，控制力体现在禁区压制而非控球。\n\n控球50-50但射门14-5、xG 2.16-0.22、角球13-0。让曼联拿球但射门仅5次xG 0.22——典型的我让你拿球但你别想进球。\n\n防守零封曼联，Saliba-Gabriel完全压制，对手无真正威胁。进攻端xG 2.16转化为2球合理。定位球13个角球持续施压。\n\n换人71分钟偏晚但有效果，替补产生1球。Arteta调度中规中矩。\n\n评分:执行🟢 调整🟡 满意🟢 = 整体🟢。控制比赛的教科书——不是控制球，是控制机会质量。",
+      "evidence": {
+        "1": [
+          "1张黄牌0红牌，纪律在可控范围",
+          "犯规12次高但无失控",
+          "赢球背景下黄牌未影响节奏"
+        ],
+        "2": [
+          "射门14-5碾压",
+          "xG 2.16 vs 0.22压倒性优势",
+          "角球13-0体现持续进攻压力"
+        ],
+        "3": [
+          "零封曼联",
+          "对手射正仅2次",
+          "防守为进攻提供完整平台"
+        ],
+        "4": [
+          "角球13远超对手0次",
+          "定位球攻防均未失分"
+        ],
+        "5": [
+          "传球准确率87%保持传统优势",
+          "赢球且核心指标达标"
+        ],
+        "6": [
+          "3次换人，最早71分钟",
+          "换人后产生1个进球",
+          "换人时间偏晚但有效果"
+        ]
+      },
+      "missing_or_weak_evidence": [
+        "pressing unavailable",
+        "pressing_recoveries unavailable",
+        "transition unavailable"
+      ],
+      "weak_label_disagreements": [
+        {
+          "model": "1",
+          "weak_signal": "🟡",
+          "llm_signal": "🟢",
+          "reason": "弱标签将1黄12犯判为🟡偏保守。赢球背景下1黄无红，犯规未失控，应为🟢"
+        },
+        {
+          "model": "5",
+          "weak_signal": "🟡",
+          "llm_signal": "🟢",
+          "reason": "rubric规则W+PA>80+poss>=50应判🟢，本场PA87/poss50全部达标"
+        }
+      ]
+    },
     "weak_labels": {
       "model_signals": {
         "culture_as_os": "🟡",
@@ -1311,6 +1358,26 @@
     "weak_label_version": "v1",
     "rubric_version": "arteta_v1",
     "prompt_builder_version": "v1",
+    "human_override": {
+      "reviewer": "shuo",
+      "review_status": "confirmed",
+      "corrected_overall_signal": "🟢",
+      "corrected_model_signals": {
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟢",
+        "5": "🟢",
+        "6": "🟡"
+      },
+      "corrected_dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟡",
+        "satisfaction": "🟢"
+      },
+      "comments": "LLM从WK=🟡提升到🟢是正确的。M1的WK🟡偏保守——赢球背景下1黄12犯不是问题。M5也应该是🟢:W+PA87+poss50达标。原始bug(features里opponent_quality曾被误判为lower)确认修复后context正确为top6。",
+      "reviewed_at": "2026-05-19T17:20:11"
+    },
     "backfill": {
       "status": "feature_backfilled",
       "run_id": "seed-002",
@@ -1318,7 +1385,7 @@
       "fixture_id": "1208154",
       "raw_match_path": "data/backfill/raw/1208154.json",
       "report_path": "data/backfill/runs/seed-002/reports/1208154.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -1560,7 +1627,7 @@
       "fixture_id": "1208174",
       "raw_match_path": "data/backfill/raw/1208174.json",
       "report_path": "data/backfill/runs/seed-002/reports/1208174.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -2575,7 +2642,7 @@
       "fixture_id": "1208376",
       "raw_match_path": "data/backfill/raw/1208376.json",
       "report_path": "data/backfill/runs/seed-002/reports/1208376.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -2790,7 +2857,7 @@
       "fixture_id": "1208383",
       "raw_match_path": "data/backfill/raw/1208383.json",
       "report_path": "data/backfill/runs/seed-002/reports/1208383.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -2919,45 +2986,18 @@
   },
   {
     "match_id": "1314297",
-    "timestamp": "2024-12-18T19:30:00+00:00",
+    "timestamp": "2024-12-18",
     "opponent": "Crystal Palace",
-    "score": "3-2",
-    "result": "W",
-    "competition": "League 48",
+    "score": "?-?",
+    "result": "",
+    "competition": "EFL Cup",
     "pre_match_context": {
       "opponent_quality": "mid_table",
       "venue": "home",
       "competition_stage": "regular",
-      "injury_situation": "full_strength",
-      "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent": "Crystal Palace"
     },
-    "predicted_plan": {
-      "focus_areas": [
-        "控制中场",
-        "高位反抢/断球"
-      ],
-      "likely_approach": "打断对手节奏 + 反抢后立即转换",
-      "key_battles": [
-        "中场对抗 — Rice vs 对手组织型后腰",
-        "压迫对手出球核心 — 限制向前传球"
-      ],
-      "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
-    },
-    "evaluation": {
-      "source": "llm",
-      "confidence": null,
-      "model_signals": {
-        "1": "🟢",
-        "2": "🟡",
-        "3": "🟡",
-        "4": "🟡",
-        "5": "🟢",
-        "6": "🟡"
-      },
-      "dimension_signals": {},
-      "overall_signal": "🟡"
-    },
+    "predicted_plan": {},
     "features": {
       "result": "W",
       "score_margin": 1,
@@ -3068,6 +3108,68 @@
         "xG"
       ]
     },
+    "evaluation": {
+      "source": "llm",
+      "confidence": {
+        "1": "high",
+        "2": "medium",
+        "3": "low",
+        "4": "medium",
+        "5": "medium",
+        "6": "high"
+      },
+      "model_signals": {
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🟡",
+        "4": "🟡",
+        "5": "🟢",
+        "6": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "narrative": "3-2险胜水晶宫，数据碾压但比分揪心。\n\n控球71%-29%、传球87%—场面完全统治。但连丢2球暴露防守专注力问题。xG缺失让我们无法判断这2球是高质量失球还是个人/体系失误，证据不足下M3只能🟡。\n\n换人是最大亮点:5次换人后产生3个进球，替补贡献堪称哈维。最早46分钟换人说明Arteta早有预案——角色清晰度极高。\n\n进攻端虽只12次射门但9次射正，效率高。控球71%转化为3球的转化率在无xG佐证下只能看射正数说话了。\n\n整体:弱队面前碾压控球但防守漏了2个，不完美。好在换人救命+进攻效率兜底。评级🟢靠的是结果+换人，而非比赛质量。",
+      "evidence": {
+        "1": [
+          "仅1黄无红",
+          "犯规7次控制良好"
+        ],
+        "2": [
+          "射门12-8占优",
+          "控球71-29完全压制",
+          "xG缺失但shot+poss统治"
+        ],
+        "3": [
+          "失2球防线有裂痕",
+          "对手射正4次",
+          "xG缺失影响对防守质量的判断"
+        ],
+        "4": [
+          "定位球未得分未失分",
+          "角球4-2小幅领先"
+        ],
+        "5": [
+          "传球87%保持传统",
+          "赢球+控球71%撑场面"
+        ],
+        "6": [
+          "5次换人最早46分钟",
+          "换人后3个进球，替补贡献巨大",
+          "clear role signal"
+        ]
+      },
+      "missing_or_weak_evidence": [
+        "xG missing - data source gap",
+        "pressing unavailable",
+        "pressing_recoveries unavailable",
+        "transition unavailable"
+      ],
+      "weak_label_disagreements": []
+    },
     "weak_labels": {
       "model_signals": {
         "culture_as_os": "🟢",
@@ -3137,6 +3239,7 @@
     "weak_label_version": "v1",
     "rubric_version": "arteta_v1",
     "prompt_builder_version": "v1",
+    "human_override": null,
     "backfill": {
       "status": "feature_backfilled",
       "run_id": "seed-002",
@@ -3144,7 +3247,7 @@
       "fixture_id": "1314297",
       "raw_match_path": "data/backfill/raw/1314297.json",
       "report_path": "data/backfill/runs/seed-002/reports/1314297.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -3511,58 +3614,24 @@
       "fixture_id": "1378979",
       "raw_match_path": "data/backfill/raw/1378979.json",
       "report_path": "data/backfill/runs/seed-002/reports/1378979.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
   {
     "match_id": "1378993",
-    "timestamp": "2025-08-31T15:30:00+00:00",
+    "timestamp": "2025-08-31",
     "opponent": "Liverpool",
-    "score": "0-1",
-    "result": "L",
+    "score": "?-?",
+    "result": "",
     "competition": "Premier League",
     "pre_match_context": {
       "opponent_quality": "top6",
       "venue": "away",
       "competition_stage": "league_early",
-      "injury_situation": "full_strength",
-      "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent": "Liverpool"
     },
-    "predicted_plan": {
-      "focus_areas": [
-        "防守结构",
-        "快速转换",
-        "高位反抢/断球"
-      ],
-      "likely_approach": "低位防线 + 结构化防守 + 快速转换反击",
-      "key_battles": [
-        "中场对抗 — Rice vs 对手组织型后腰",
-        "压迫对手出球核心 — 限制向前传球",
-        "关键球员对位 — 限制对手核心进攻点"
-      ],
-      "expected_subs": "60' 上防守型中场巩固结构；75' 反击点换前锋保持速度威胁"
-    },
-    "evaluation": {
-      "source": "llm",
-      "confidence": null,
-      "model_signals": {
-        "1": "🟡",
-        "2": "🔴",
-        "3": "🟡",
-        "4": "🔴",
-        "5": "🔴",
-        "6": "🟡"
-      },
-      "dimension_signals": {
-        "execution": "🔴",
-        "adjustment": "🟡",
-        "satisfaction": "🔴"
-      },
-      "overall_signal": "🔴",
-      "narrative": "安菲尔德客场0-1负于利物浦，暴露了阿森纳在顶级客场对抗中的多重短板。47%控球率和82%传球准确率均低于球队标准，371次传球对比利物浦的435次反映出中场争夺中处于下风。文化标准层面虽保持了竞争纪律——全场未出现崩溃式失球，但未能在关键时刻展现必胜信念。比赛控制是最薄弱环节：面对利物浦的高位逼抢，阿森纳无法建立持续的进攻节奏，11次射门仅1次射正的转化率令人失望，进攻雷声大雨点小。防守身份尚可维持，仅失一球且下半场才丢球，防守结构整体有序，但被动防守的姿态与球队追求的主动防守身份存在差距。边际收益方面几乎为零——定位球8个角球颗粒无收，转换进攻缺乏致命一击。能力叠加受阻，进攻三区缺乏创造力和多点威胁，进攻过于依赖单一通道。角色清晰度中规中矩，球员理解防守职责但在进攻端的角色衔接出现断层。下半场失球暴露了调整能力的不足——未能及时改变比赛走势。综合来看，执行维度为红、调整为黄、满意度为红，整体信号消极，这是一场需要深刻复盘的比赛。"
-    },
+    "predicted_plan": {},
     "features": {
       "result": "L",
       "score_margin": -1,
@@ -3647,6 +3716,67 @@
         "transition"
       ]
     },
+    "evaluation": {
+      "source": "llm",
+      "confidence": {
+        "1": "high",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium",
+        "5": "high",
+        "6": "low"
+      },
+      "model_signals": {
+        "1": "🔴",
+        "2": "🟡",
+        "3": "🟢",
+        "4": "🟢",
+        "5": "🔴",
+        "6": "🔴"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🔴",
+        "satisfaction": "🔴"
+      },
+      "overall_signal": "🔴",
+      "narrative": "0-1输利物浦，输在纪律和能力叠加而非战术崩溃。\n\n数据上看是均势:射门11-9，xG 0.49-0.52，控球47-53。一场双方都乏善可陈的比赛被一个细节决定了——2张黄牌+输球触发critical-time card规则，M1直接🔴。\n\n进攻端威胁有限：仅1次射正，xG 0.49不足以赢比赛。传球82%和控球47%两项传统指标低于基准，输球触发M5🔴。\n\n换人最早5分钟（疑似伤退），4次换人后0进球。M6只能判🔴——无论原因，adjustment未带来改变。\n\n定位球8个角球是唯一亮点，但未能转化为得分。\n\n评级:执行🟡 调整🔴 满意🔴 = 整体🔴。不是惨败，但0分+纪律问题+换人无效=差R。",
+      "evidence": {
+        "1": [
+          "2黄+负=critical-time card trigger",
+          "rubric规则yellow>=2 AND result=L → 🔴"
+        ],
+        "2": [
+          "射门11-9小优但xG 0.49-0.52几乎均势",
+          "控球47-53稍劣",
+          "机会质量不高"
+        ],
+        "3": [
+          "仅失1球",
+          "对手射正3次",
+          "防守未崩溃"
+        ],
+        "4": [
+          "角球8-3大幅领先",
+          "定位球未失球"
+        ],
+        "5": [
+          "L+传球82控球47均低于阈值",
+          "输球直接触发🔴"
+        ],
+        "6": [
+          "4次换人最早仅5分钟",
+          "换人后0进球",
+          "early sub是伤退但无法判断细节"
+        ]
+      },
+      "missing_or_weak_evidence": [
+        "pressing unavailable",
+        "transition unavailable",
+        "early sub context unclear - injury or tactical?"
+      ],
+      "weak_label_disagreements": []
+    },
     "weak_labels": {
       "model_signals": {
         "culture_as_os": "🔴",
@@ -3716,6 +3846,7 @@
     "weak_label_version": "v1",
     "rubric_version": "arteta_v1",
     "prompt_builder_version": "v1",
+    "human_override": null,
     "backfill": {
       "status": "feature_backfilled",
       "run_id": "seed-002",
@@ -3723,7 +3854,7 @@
       "fixture_id": "1378993",
       "raw_match_path": "data/backfill/raw/1378993.json",
       "report_path": "data/backfill/runs/seed-002/reports/1378993.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -3949,7 +4080,7 @@
       "fixture_id": "1378999",
       "raw_match_path": "data/backfill/raw/1378999.json",
       "report_path": "data/backfill/runs/seed-002/reports/1378999.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -4450,7 +4581,7 @@
       "fixture_id": "1379076",
       "raw_match_path": "data/backfill/raw/1379076.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379076.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -4684,7 +4815,7 @@
       "fixture_id": "1379079",
       "raw_match_path": "data/backfill/raw/1379079.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379079.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -4903,7 +5034,7 @@
       "fixture_id": "1379091",
       "raw_match_path": "data/backfill/raw/1379091.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379091.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -5121,57 +5252,24 @@
       "fixture_id": "1379099",
       "raw_match_path": "data/backfill/raw/1379099.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379099.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
   {
     "match_id": "1379109",
-    "timestamp": "2025-12-06T12:30:00+00:00",
+    "timestamp": "2025-12-06",
     "opponent": "Aston Villa",
-    "score": "1-2",
-    "result": "L",
+    "score": "?-?",
+    "result": "",
     "competition": "Premier League",
     "pre_match_context": {
       "opponent_quality": "mid_table",
       "venue": "away",
       "competition_stage": "league_early",
-      "injury_situation": "full_strength",
-      "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent": "Aston Villa"
     },
-    "predicted_plan": {
-      "focus_areas": [
-        "控制节奏",
-        "转换效率",
-        "高位反抢/断球"
-      ],
-      "likely_approach": "打断对手节奏 + 反抢后立即转换",
-      "key_battles": [
-        "中场对抗 — Rice vs 对手组织型后腰",
-        "压迫对手出球核心 — 限制向前传球"
-      ],
-      "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
-    },
-    "evaluation": {
-      "source": "llm",
-      "confidence": null,
-      "model_signals": {
-        "1": "🔴",
-        "2": "🟡",
-        "3": "🔴",
-        "4": "🟡",
-        "5": "🟡",
-        "6": "🟡"
-      },
-      "dimension_signals": {
-        "execution": "🔴",
-        "adjustment": "🟡",
-        "satisfaction": "🔴"
-      },
-      "overall_signal": "🔴",
-      "narrative": "阿森纳客场1-2负于阿斯顿维拉，这是本赛季令人沮丧的一场失利。上半场第36分钟Cash率先破门，阿森纳陷入被动。半场连换Merino和Eze试图扭转局面，Trossard在第52分钟扳平比分显示了调整的初步效果。然而此后球队未能完成反超，反而在比赛末段崩盘——第90分钟Buendia绝杀，将阿森纳推入深渊。全场15次射门9次射正的效率本可带来更好结果，但关键时刻的防守注意力不集中成为致命伤。纪律层面亮起红灯：Calafiori和Saka各吃到一张黄牌，后者因与裁判争论染黄，反映出球队在逆境中的情绪管理失控。六个模型中文化标准和防守身份亮红灯——客场被绝杀暴露了心理韧性的严重不足，两黄牌也说明球员在压力下失去了Arteta强调的冷静与专业态度。比赛控制黄灯：控球占优但未能真正主导比赛走势。边际收益和能力叠加黄灯：换人虽有Trossard扳平的亮点，但整体处于被动应对状态。角色清晰黄灯：终场前防线混乱暴露了位置感的缺失。这是一场需要深刻反思的失利——不是实力差距，而是心态崩塌和关键时刻执行力不足的问题。"
-    },
+    "predicted_plan": {},
     "features": {
       "result": "L",
       "score_margin": -1,
@@ -5271,6 +5369,67 @@
         "transition"
       ]
     },
+    "evaluation": {
+      "source": "llm",
+      "confidence": {
+        "1": "high",
+        "2": "medium",
+        "3": "medium",
+        "4": "medium",
+        "5": "high",
+        "6": "medium"
+      },
+      "model_signals": {
+        "1": "🔴",
+        "2": "🟡",
+        "3": "🔴",
+        "4": "🟡",
+        "5": "🔴",
+        "6": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🔴"
+      },
+      "overall_signal": "🔴",
+      "narrative": "1-2负维拉，输给Emery不是因为战术差，是因为两个关键时刻——纪律问题和防守漏洞。\n\n数据层面两队接近:射门15-15，但xG 1.92-2.16显示维拉的机会更好。阿森纳让对手射正6次xG 2.16，防线被凿开口子。\n\n纪律:2张黄牌+输球触发critical-time card → M1直接🔴。这不是犯规数量问题，是比赛关键时刻的纪律缺失。\n\n进攻端创造15次射门但xG仅1.92——机会质量不够好。传球85%控球53%说明节奏还行，但输球让一切都打折扣。\n\n换人虽有效果（1个进球）但不够——因为需要的是反超不是缩小差距。\n\n评级:执行🟡 调整🟢 满意🔴 = 整体🔴。输给mid_table对手，防守+纪律双掉链子。",
+      "evidence": {
+        "1": [
+          "2黄+负=critical-time card trigger",
+          "rubric:yellow>=2 AND result=L → 🔴"
+        ],
+        "2": [
+          "射门15-15均势",
+          "xG 1.92 vs 2.16反输",
+          "控球53-47小幅领先"
+        ],
+        "3": [
+          "失2球",
+          "对手射正6次xG 2.16",
+          "防线被打穿"
+        ],
+        "4": [
+          "角球3-3均势",
+          "定位球未得分未失分",
+          "无边际收益"
+        ],
+        "5": [
+          "L直接触发🔴",
+          "传球85%控球53%尚可但输球"
+        ],
+        "6": [
+          "5次换人最早46分钟",
+          "换人后1个进球",
+          "换人策略有效但不够"
+        ]
+      },
+      "missing_or_weak_evidence": [
+        "pressing unavailable",
+        "transition unavailable"
+      ],
+      "weak_label_disagreements": []
+    },
     "weak_labels": {
       "model_signals": {
         "culture_as_os": "🔴",
@@ -5342,6 +5501,26 @@
     "weak_label_version": "v1",
     "rubric_version": "arteta_v1",
     "prompt_builder_version": "v1",
+    "human_override": {
+      "reviewer": "shuo",
+      "review_status": "confirmed",
+      "corrected_overall_signal": "🔴",
+      "corrected_model_signals": {
+        "1": "🔴",
+        "2": "🟡",
+        "3": "🔴",
+        "4": "🟡",
+        "5": "🔴",
+        "6": "🟢"
+      },
+      "corrected_dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🔴"
+      },
+      "comments": "LLM从WK=🟡降级到🔴确认。WK给M1🔴正是critical-time card(yellow>=2 AND L)，维度计算后overall=🟡是因为execution🟡+adjustment🟢+satisfaction🟡 = 🟡? 实际satisfaction应为🔴(输mid_table客)。LLM正确修正了satisfaction维度。",
+      "reviewed_at": "2026-05-19T17:20:11"
+    },
     "backfill": {
       "status": "feature_backfilled",
       "run_id": "seed-002",
@@ -5349,7 +5528,7 @@
       "fixture_id": "1379109",
       "raw_match_path": "data/backfill/raw/1379109.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379109.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -5575,57 +5754,24 @@
       "fixture_id": "1379119",
       "raw_match_path": "data/backfill/raw/1379119.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379119.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
   {
     "match_id": "1379132",
-    "timestamp": "2025-12-20T20:00:00+00:00",
+    "timestamp": "2025-12-20",
     "opponent": "Everton",
-    "score": "1-0",
-    "result": "W",
+    "score": "?-?",
+    "result": "",
     "competition": "Premier League",
     "pre_match_context": {
       "opponent_quality": "mid_table",
       "venue": "away",
       "competition_stage": "league_early",
-      "injury_situation": "full_strength",
-      "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent": "Everton"
     },
-    "predicted_plan": {
-      "focus_areas": [
-        "控制节奏",
-        "转换效率",
-        "高位反抢/断球"
-      ],
-      "likely_approach": "打断对手节奏 + 反抢后立即转换",
-      "key_battles": [
-        "中场对抗 — Rice vs 对手组织型后腰",
-        "压迫对手出球核心 — 限制向前传球"
-      ],
-      "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
-    },
-    "evaluation": {
-      "source": "llm",
-      "confidence": null,
-      "model_signals": {
-        "1": "🟡",
-        "2": "🟢",
-        "3": "🟢",
-        "4": "🟡",
-        "5": "🟡",
-        "6": "🟢"
-      },
-      "dimension_signals": {
-        "execution": "🟡",
-        "adjustment": "🟡",
-        "satisfaction": "🟡"
-      },
-      "overall_signal": "🟡",
-      "narrative": "阿森纳客场1-0小胜埃弗顿，Gyökeres第27分钟点球破门成为全场唯一进球。65%的控球率和654次传球高达88%的成功率，体现了球队对比赛节奏的绝对掌控力。防守端仅让对手5次射门1次射正，堪称铁壁般的防线表现。然而13次射门仅2次射正的数据再次暴露终结效率的短板——除点球外几乎未能创造出真正有威胁的破门良机。文化标准亮黄灯：Gyökeres和Martinelli各因拖延时间吃到黄牌，虽属战术性行为但不符合Arteta一贯强调的高标准职业态度。比赛控制绿灯：客场控球超过六成，传球流畅节奏完全由阿森纳主导；防守身份绿灯：零封对手且将射门限制到最低水平；角色清晰绿灯：防守端分工明确结构紧凑，没有给对手任何反击空间。边际收益黄灯：唯一进球来自定位球点球，缺乏运动战中的破局手段和创造力；能力叠加黄灯：换人策略以保护结果为主——65分钟Gyökeres下场、80分钟Trossard上场、88分钟Odegaard下场，更多是巩固而非提升进攻火力。这是一场务实高效的客场胜利，结果令人满意但过程缺乏足够的说服力和观赏性，赢球方式过于单一。"
-    },
+    "predicted_plan": {},
     "features": {
       "result": "W",
       "score_margin": 1,
@@ -5705,6 +5851,76 @@
         "transition"
       ]
     },
+    "evaluation": {
+      "source": "llm",
+      "confidence": {
+        "1": "medium",
+        "2": "high",
+        "3": "high",
+        "4": "medium",
+        "5": "high",
+        "6": "medium"
+      },
+      "model_signals": {
+        "1": "🟡",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟢",
+        "5": "🟢",
+        "6": "🟡"
+      },
+      "dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟡",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "narrative": "1-0客场赢Everton，典型的磨出来3分。\n\n控球65-35、xG 2.00-0.20——这是客场打Everton的数据，不是主场踢保级队。阿森纳完全压制了Dyche的球队，只需担心的是只进1球。\n\n进攻端:xG 2.00说明创造了足够多的好机会，但转化率偏低。13射5正，效率尚可但不足以拉开比分。定位球得分是亮点——面对Everton这种防守型球队，定位球是破局关键。\n\n防守端零封Goodison Park意义重大:对手仅1次射正xG 0.20。防线无懈可击。\n\n换人:3次换人最早65分钟偏晚，且换人后0进球。但1-0领先比分允许保守。\n\n评级:执行🟢 调整🟡 满意🟢 = 整体🟢。内容对得起1-0，过程统治，比分虽小但3分干净。",
+      "evidence": {
+        "1": [
+          "2黄牌+5犯规",
+          "无红牌无失控",
+          "但2黄on bench - 非critical because result=W",
+          "风险在边缘，判🟡偏保守"
+        ],
+        "2": [
+          "射门13-5压制",
+          "xG 2.00 vs 0.20绝对碾压",
+          "控球65-35统治级"
+        ],
+        "3": [
+          "零封Goodison Park",
+          "对手射正仅1次",
+          "防守完美平台"
+        ],
+        "4": [
+          "set_piece_goals_for=1",
+          "定位球得分=边际收益",
+          "角球3-2小幅领先"
+        ],
+        "5": [
+          "W+PA88+poss65全部远超阈值",
+          "传统优势完全保留"
+        ],
+        "6": [
+          "3次换人最早65分钟",
+          "换人后0进球",
+          "late sub with no impact"
+        ]
+      },
+      "missing_or_weak_evidence": [
+        "pressing unavailable",
+        "transition unavailable"
+      ],
+      "weak_label_disagreements": [
+        {
+          "model": "1",
+          "weak_signal": "🟡",
+          "llm_signal": "🟡",
+          "reason": "与弱标签一致"
+        }
+      ]
+    },
     "weak_labels": {
       "model_signals": {
         "culture_as_os": "🟡",
@@ -5774,6 +5990,7 @@
     "weak_label_version": "v1",
     "rubric_version": "arteta_v1",
     "prompt_builder_version": "v1",
+    "human_override": null,
     "backfill": {
       "status": "feature_backfilled",
       "run_id": "seed-002",
@@ -5781,7 +5998,7 @@
       "fixture_id": "1379132",
       "raw_match_path": "data/backfill/raw/1379132.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379132.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -6131,7 +6348,7 @@
       "fixture_id": "1379185",
       "raw_match_path": "data/backfill/raw/1379185.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379185.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -6412,7 +6629,7 @@
       "fixture_id": "1379209",
       "raw_match_path": "data/backfill/raw/1379209.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379209.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -6698,7 +6915,7 @@
       "fixture_id": "1379237",
       "raw_match_path": "data/backfill/raw/1379237.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379237.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -6902,7 +7119,7 @@
       "fixture_id": "1379239",
       "raw_match_path": "data/backfill/raw/1379239.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379239.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -7231,7 +7448,7 @@
       "fixture_id": "1379299",
       "raw_match_path": "data/backfill/raw/1379299.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379299.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -7535,7 +7752,7 @@
       "fixture_id": "1451021",
       "raw_match_path": "data/backfill/raw/1451021.json",
       "report_path": "data/backfill/runs/seed-002/reports/1451021.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -7687,52 +7904,18 @@
   },
   {
     "match_id": "1451107",
-    "timestamp": "2025-11-26T20:00:00+00:00",
-    "opponent": "Bayern Munich",
-    "score": "3-1",
-    "result": "W",
+    "timestamp": "2025-11-26",
+    "opponent": "Bayern München",
+    "score": "?-?",
+    "result": "",
     "competition": "Champions League",
     "pre_match_context": {
       "opponent_quality": "european_elite",
       "venue": "home",
       "competition_stage": "group_stage",
-      "injury_situation": "full_strength",
-      "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent": "Bayern München"
     },
-    "predicted_plan": {
-      "focus_areas": [
-        "控制中场",
-        "高位反抢/断球",
-        "轮换体能管理"
-      ],
-      "likely_approach": "打断对手节奏 + 反抢后立即转换",
-      "key_battles": [
-        "中场对抗 — Rice vs 对手组织型后腰",
-        "压迫对手出球核心 — 限制向前传球",
-        "关键球员对位 — 限制对手核心进攻点"
-      ],
-      "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
-    },
-    "evaluation": {
-      "source": "llm",
-      "confidence": null,
-      "model_signals": {
-        "1": "🟡",
-        "2": "🟢",
-        "3": "🟢",
-        "4": "🟡",
-        "5": "🟢",
-        "6": "🟢"
-      },
-      "dimension_signals": {
-        "execution": "🟢",
-        "adjustment": "🟢",
-        "satisfaction": "🟢"
-      },
-      "overall_signal": "🟢",
-      "narrative": "阿森纳主场3-1击败拜仁慕尼黑，用一场经典的效率型胜利震撼欧冠赛场。40%控球率看似被动，但13射8正对比拜仁8射2正的数据揭示了真相——阿森纳主动让出球权，用精准的转换打击对手。Timber第22分钟先拔头筹，拜仁32分钟由Karl扳平后，下半场Madueke第69分钟和Martinelli第77分钟先后破门锁定胜局。文化标准黄灯：2张黄牌（Saliba 74分钟拖延时间、Merino 80分钟犯规），加上全场16次犯规，身体对抗强度偏高但均在比赛语境下可理解。比赛控制绿灯：虽然控球率仅40%，但射正比8:2的碾压优势说明阿森纳完全掌控了比赛的致命区域——这不是被动挨打，而是主动选择的反击战。防守身份绿灯：拜仁全场仅2次射正，面对拥有60%控球率的德甲豪门，防守端的纪律性和结构性令人印象深刻。边际收益黄灯：6次角球仅1次于拜仁，但未转化为定位球进球。能力叠加绿灯：80%传球成功率在低控球率下可以接受，三人进球（Timber、Madueke、Martinelli）展现了多点开花的进攻体系。角色清晰绿灯：38分钟Trossard早早替补上场体现战术灵活性，68分钟Saka和Lewis-Skelly的换人维持了强度，替补Madueke上场仅1分钟就进球。这是一场教科书级别的big game效率足球。"
-    },
+    "predicted_plan": {},
     "features": {
       "result": "W",
       "score_margin": 2,
@@ -7837,6 +8020,69 @@
         "transition"
       ]
     },
+    "evaluation": {
+      "source": "llm",
+      "confidence": {
+        "1": "medium",
+        "2": "high",
+        "3": "high",
+        "4": "medium",
+        "5": "medium",
+        "6": "high"
+      },
+      "model_signals": {
+        "1": "🟡",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟢",
+        "5": "🟡",
+        "6": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟢",
+        "satisfaction": "🟡"
+      },
+      "overall_signal": "🟢",
+      "narrative": "3-1赢Bayern，数据极其有意思——控球40-60但赢了2球，典型的Arteta欧冠模式。\n\n控球劣势是主动选择:面对Bayern的传控，让出球权打反击。结果? 射门13-8、xG 3.11-0.65、射正8-2。每项质量指标阿森纳都碾压。xG 3.11说明创造了一堆好机会，Bayern虽然控球60%但威胁被完全隔离。\n\n防守端仅失1球，对手xG仅0.65——Saliba-Gabriel在欧冠依然靠谱。\n\n换人策略优秀:最早38分钟就开始换人（上半场就有调整预案），5次换人后产生2个进球。Arteta的临场调度非常积极。\n\n纪律方面16次犯规有点多（对阵Bayern可以理解，对抗强度大），2黄无红因此M1🟡而非🔴。\n\n评级:执行🟢 调整🟢 满意🟡 = 整体🟢。一场典型的'用效率碾压控球'的欧冠表演。",
+      "evidence": {
+        "1": [
+          "2黄+16犯规偏高",
+          "无红牌",
+          "对抗激烈但未失控"
+        ],
+        "2": [
+          "射门13-8占优",
+          "xG 3.11 vs 0.65压倒性碾压",
+          "控球40-60但射正8-2——反击效率极高"
+        ],
+        "3": [
+          "仅失1球",
+          "对手射正2次xG仅0.65",
+          "防线压制Bayern"
+        ],
+        "4": [
+          "角球6-1大幅领先",
+          "定位球未失球",
+          "角球形成持续威胁"
+        ],
+        "5": [
+          "赢球但控球40%低于50%阈值",
+          "传球80%勉强达标",
+          "result=W + PA≥80 → 至少🟡"
+        ],
+        "6": [
+          "5次换人最早38分钟",
+          "换人后2个进球",
+          "clear and effective"
+        ]
+      },
+      "missing_or_weak_evidence": [
+        "pressing unavailable - would clarify if high press caused possession deficit",
+        "transition unavailable"
+      ],
+      "weak_label_disagreements": []
+    },
     "weak_labels": {
       "model_signals": {
         "culture_as_os": "🟡",
@@ -7908,6 +8154,7 @@
     "weak_label_version": "v1",
     "rubric_version": "arteta_v1",
     "prompt_builder_version": "v1",
+    "human_override": null,
     "backfill": {
       "status": "feature_backfilled",
       "run_id": "seed-002",
@@ -7915,7 +8162,7 @@
       "fixture_id": "1451107",
       "raw_match_path": "data/backfill/raw/1451107.json",
       "report_path": "data/backfill/runs/seed-002/reports/1451107.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -8185,7 +8432,7 @@
       "fixture_id": "1451136",
       "raw_match_path": "data/backfill/raw/1451136.json",
       "report_path": "data/backfill/runs/seed-002/reports/1451136.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -8415,7 +8662,7 @@
       "fixture_id": "1528322",
       "raw_match_path": "data/backfill/raw/1528322.json",
       "report_path": "data/backfill/runs/seed-002/reports/1528322.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -8624,7 +8871,7 @@
       "fixture_id": "1528330",
       "raw_match_path": "data/backfill/raw/1528330.json",
       "report_path": "data/backfill/runs/seed-002/reports/1528330.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -8817,7 +9064,7 @@
       "fixture_id": "1534570",
       "raw_match_path": "data/backfill/raw/1534570.json",
       "report_path": "data/backfill/runs/seed-002/reports/1534570.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -9232,7 +9479,7 @@
       "fixture_id": "1498260",
       "raw_match_path": "data/backfill/raw/1498260.json",
       "report_path": "data/backfill/runs/seed-002/reports/1498260.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
@@ -9545,42 +9792,24 @@
       "fixture_id": "1523412",
       "raw_match_path": "data/backfill/raw/1523412.json",
       "report_path": "data/backfill/runs/seed-002/reports/1523412.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   },
   {
     "match_id": "1531572",
-    "timestamp": "2026-04-04T19:00:00+00:00",
+    "timestamp": "2026-04-04",
     "opponent": "Southampton",
-    "score": "1-2",
-    "result": "L",
-    "competition": "League 45",
+    "score": "?-?",
+    "result": "",
+    "competition": "Premier League",
     "pre_match_context": {
       "opponent_quality": "lower",
       "venue": "away",
       "competition_stage": "regular",
-      "injury_situation": "full_strength",
-      "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent": "Southampton"
     },
-    "predicted_plan": {
-      "focus_areas": [
-        "控制中场",
-        "高位反抢/断球"
-      ],
-      "likely_approach": "打断对手节奏 + 反抢后立即转换",
-      "key_battles": [
-        "中场对抗 — Rice vs 对手组织型后腰",
-        "压迫对手出球核心 — 限制向前传球",
-        "破密集耐心 — 避免急躁 + 把握有限机会"
-      ],
-      "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果"
-    },
-    "evaluation": {
-      "model_signals": {},
-      "dimension_signals": {}
-    },
+    "predicted_plan": {},
     "features": {
       "result": "L",
       "score_margin": -1,
@@ -9680,6 +9909,76 @@
         "transition"
       ]
     },
+    "evaluation": {
+      "source": "llm",
+      "confidence": {
+        "1": "high",
+        "2": "high",
+        "3": "high",
+        "4": "medium",
+        "5": "high",
+        "6": "medium"
+      },
+      "model_signals": {
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🔴",
+        "4": "🟢",
+        "5": "🔴",
+        "6": "🟡"
+      },
+      "dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟡",
+        "satisfaction": "🔴"
+      },
+      "overall_signal": "🔴",
+      "narrative": "1-2输Southampton，这不是惜败，是耻辱——data美如画，比分丑到哭。\n\n控球64-36、射门23-8、xG 2.10-0.80……一切指向完胜。但比分是1-2。问题在哪？\n\n防守端:xG only 0.80的对手进了2球。8次射门4次射正=50%的射正转化，说明Southampton的每次机会都致命——这不是系统性崩溃，是防线在关键时刻塌了。M3直接🔴。\n\n进攻端:23次射门只有1个进球——xG 2.10说明创造了足够的好机会，但finish质量灾难性地低。\n\n纪律没问题（1黄），控球完美（64%），传球顶级（89%）。这是M5的身份paradox极端案例——传统优势全部保留，但输了。输弱敌=🔴 satisfaction。\n\n这是最危险的比赛类型:数据说明你该赢，但比分说你输了。提醒:足球不是数据建模，是机会转化。",
+      "evidence": {
+        "1": [
+          "仅1黄0红",
+          "犯规11次",
+          "纪律不是问题"
+        ],
+        "2": [
+          "射门23-8完全碾压",
+          "xG 2.10 vs 0.80",
+          "控球64-36统治"
+        ],
+        "3": [
+          "失2球",
+          "对手仅8射4正却进2球",
+          "xg_against 0.80但实际丢2 = 防守效率低"
+        ],
+        "4": [
+          "角球9-4领先",
+          "定位球未失分",
+          "set piece neutral but positive corner edge"
+        ],
+        "5": [
+          "L直接触发🔴",
+          "传球89%控球64%——数据完美但输了",
+          "最极端的identity paradox"
+        ],
+        "6": [
+          "5次换人最早60分钟",
+          "换人后1球但不够",
+          "sub effect positive but insufficient"
+        ]
+      },
+      "missing_or_weak_evidence": [
+        "pressing unavailable",
+        "transition unavailable - could explain why dominance didn't convert"
+      ],
+      "weak_label_disagreements": [
+        {
+          "model": "3",
+          "weak_signal": "🟡",
+          "llm_signal": "🔴",
+          "reason": "弱标签给M3=🟡是对手xG低，但实际丢2球说明防守效率严重不足。对手8射4正进2球=50%射正转化，是防线个人失误而非结构问题"
+        }
+      ]
+    },
     "weak_labels": {
       "model_signals": {
         "culture_as_os": "🟢",
@@ -9750,6 +10049,26 @@
     "weak_label_version": "v1",
     "rubric_version": "arteta_v1",
     "prompt_builder_version": "v1",
+    "human_override": {
+      "reviewer": "shuo",
+      "review_status": "confirmed",
+      "corrected_overall_signal": "🔴",
+      "corrected_model_signals": {
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🔴",
+        "4": "🟢",
+        "5": "🔴",
+        "6": "🟡"
+      },
+      "corrected_dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟡",
+        "satisfaction": "🔴"
+      },
+      "comments": "WK=🟢是严重错判。控球64%/射门23/xG2.10的比赛输给lower对手，不存在🟢的可能。M5=L直接🔴，M3=对手xG仅0.80但实失2球说明防守效率灾难。WK应该修正这个场景的规则——dominant stats+L=still 🔴，不能因为shot_delta大就mask掉L。LLM的🔴确认。",
+      "reviewed_at": "2026-05-19T17:20:11"
+    },
     "backfill": {
       "status": "feature_backfilled",
       "run_id": "seed-002",
@@ -9757,7 +10076,7 @@
       "fixture_id": "1531572",
       "raw_match_path": "data/backfill/raw/1531572.json",
       "report_path": "data/backfill/runs/seed-002/reports/1531572.json",
-      "prepared_at": "2026-05-19T16:46:40",
+      "prepared_at": "2026-05-19T17:18:21",
       "needs_v2_evaluation": true
     }
   }
