@@ -265,7 +265,7 @@ def extract_context(match_json: dict) -> dict:
         "Newcastle", "Newcastle United",
     }
     european_elite = {
-        "Real Madrid", "Bayern Munich", "Bayern", "PSG", "Paris Saint Germain",
+        "Real Madrid", "Bayern Munich", "Bayern", "Bayern München", "PSG", "Paris Saint Germain", "Paris Saint-Germain",
         "Barcelona", "Inter", "Inter Milan",
     }
     mid_table = {

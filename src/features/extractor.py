@@ -193,7 +193,7 @@ class FeatureExtractor:
             for stat_key in ("possession", "shots", "shots_on_target", "fouls", "corners"):
                 val = report_stats.get(stat_key, {})
                 if isinstance(val, list) and len(val) >= 2:
-                    # List shape: [home_val, away_val] or [arsenal_val, opponent_val]
+                    # List shape: always [home_val, away_val]
                     h = val[home_idx]
                     a = val[away_idx]
                 elif isinstance(val, dict):
@@ -243,16 +243,26 @@ class FeatureExtractor:
                 "home_score、away_score 才能提取特征。"
             )
 
-        return FeatureExtractor().extract(match_json)
+        # Carry report context as override (don't re-infer from team names)
+        report_context = report_json.get("context")
 
-    def extract(self, match_json: dict) -> MatchFeatures:
-        """Main entry point. Returns a fully populated MatchFeatures."""
+        return FeatureExtractor().extract(match_json, context_override=report_context or None)
+
+    def extract(self, match_json: dict, *, context_override: dict | None = None) -> MatchFeatures:
+        """Main entry point. Returns a fully populated MatchFeatures.
+
+        Args:
+            match_json: Normalized match JSON dict.
+            context_override: If provided, use this context dict instead of
+                re-inferring from extract_context(). Keys: opponent_quality,
+                venue, competition_stage, opponent.
+        """
         features = MatchFeatures()
 
         # ── Raw extractions from existing tools ──────────────────────
         stats = extract_match_stats(match_json)
         events = extract_key_events(match_json)
-        context = extract_context(match_json)
+        context = context_override if context_override else extract_context(match_json)
         set_pieces = extract_set_piece_goals(events)
         subs = extract_sub_impact(events)
 

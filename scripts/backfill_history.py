@@ -575,16 +575,35 @@ def run_apply_features(
             entry["evaluation"] = new_eval
         else:
             # Even if not legacy-shape, normalize any remaining text signals
+            # in model_signals, dimension_signals, and overall_signal
+            changed = False
             model_signals = evaluation.get("model_signals", {})
             if model_signals:
-                needs_emoji = any(
-                    v in ("green", "yellow", "red", "neutral")
-                    for v in model_signals.values() if isinstance(v, str)
-                )
-                if needs_emoji:
-                    entry["evaluation"]["model_signals"] = {
-                        k: _normalize_signal_emoji(v) for k, v in model_signals.items()
-                    }
+                new_ms = {}
+                for k, v in model_signals.items():
+                    nv = _normalize_signal_emoji(v)
+                    if nv != v:
+                        changed = True
+                    new_ms[k] = nv
+                if changed:
+                    entry["evaluation"]["model_signals"] = new_ms
+
+            dim_signals = evaluation.get("dimension_signals", {})
+            if dim_signals:
+                new_ds = {}
+                for k, v in dim_signals.items():
+                    nv = _normalize_signal_emoji(v)
+                    if nv != v:
+                        changed = True
+                    new_ds[k] = nv
+                if changed:
+                    entry["evaluation"]["dimension_signals"] = new_ds
+
+            overall = evaluation.get("overall_signal")
+            if overall:
+                nv = _normalize_signal_emoji(overall)
+                if nv != overall:
+                    entry["evaluation"]["overall_signal"] = nv
 
         applied.append(mid)
 
