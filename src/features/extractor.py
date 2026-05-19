@@ -330,7 +330,7 @@ class FeatureExtractor:
             first_sub_minute = min(s["minute"] for s in arsenal_subs)
             goals_after = 0
             sub_player_names = {
-                s.get("player", "").lower().strip()
+                (s.get("player") or "").lower().strip()
                 for s in arsenal_subs
             }
             for e in events:
