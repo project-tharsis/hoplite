@@ -136,33 +136,75 @@ Backward compatibility:
 - Readers must tolerate missing fields.
 - New v2 writes must include these fields.
 
-## 6. Required Work
+## 6. Version Policy
+
+Use explicit version fields because JSON history must remain replayable after rules change.
+
+Version fields:
+
+- `features_version`
+- `weak_label_version`
+- `rubric_version`
+- `prompt_builder_version`
+
+Rules:
+
+- Bump `features_version` when feature names, semantics, defaults, or missing-data behavior change.
+- Bump `weak_label_version` when any weak-label rule changes output for the same features.
+- Bump `rubric_version` when Arteta model philosophy, model criteria, dimension criteria, or output schema changes.
+- Bump `prompt_builder_version` when prompt section order, required output fields, or calibration-hint presentation changes.
+- Use major-style names for rubric changes that alter interpretation, e.g. `arteta_v2`.
+- Use minor-style names for implementation-compatible changes, e.g. `v1.1`, only if existing replay remains comparable.
+- Every replay report must include the source and target versions it used.
+
+## 7. Required Work
 
 ### Phase 1: Add Structured Prompt CLI
 
-Add a new tool command:
+Add one canonical tool command:
 
 ```bash
-python -m src build_structured_prompt < report.json
+python -m src prepare_evaluation < match_or_report.json
 ```
 
-or, if preferred:
+This command replaces the need for separate `build_structured_prompt` and `build_narrative_prompt_v2` commands.
 
-```bash
-python -m src build_narrative_prompt_v2 < report.json
-```
+Output format should be controlled by an optional flag:
 
-The command should:
+- default / `--format json`: emit machine-readable JSON containing features, weak labels, versions, and prompt.
+- `--format prompt`: emit only the prompt string for direct LLM copy/paste.
 
-1. Accept either `{ "report": {...} }` or raw report JSON.
-2. Extract the original raw match data if present; otherwise use report fields as input where possible.
-3. Run `FeatureExtractor`.
-4. Run `WeakLabeler`.
-5. Load `rubrics/arteta_v1.yaml`.
-6. Build calibration hints unless `skip_history=true`.
-7. Output the structured prompt.
+Input contract:
 
-Also provide a machine-readable mode:
+The command must accept either:
+
+1. Raw match JSON from `fetch_match_data`, containing at minimum:
+   - `fixture_id`
+   - `date`
+   - `competition`
+   - `home_team`
+   - `away_team`
+   - `home_score`
+   - `away_score`
+   - `events`
+   - `home_stats` or `away_stats` when available
+2. Analyze report JSON from `analyze_match`, containing at minimum:
+   - `match`
+   - `stats`
+   - `key_events`
+   - `context`
+   - `set_pieces`
+   - `sub_impact`
+
+Implementation requirement:
+
+- `FeatureExtractor` currently expects match-like raw input. If the input is an analyze report, either:
+  - convert the report back into a match-like payload before calling `FeatureExtractor`, or
+  - add a dedicated `FeatureExtractor.extract_from_report(report_json)` path.
+- Do not silently produce empty/default features when required input is missing.
+- Return a structured error if the input cannot support feature extraction.
+
+Command behavior:
 
 ```bash
 python -m src prepare_evaluation < report.json
@@ -182,8 +224,10 @@ Output:
 Acceptance:
 
 - A caller can get features, weak labels, and prompt from one CLI command.
+- `--format prompt` returns only the structured prompt string.
 - The prompt output uses `PromptBuilder`, not the legacy monolithic prompt.
 - Existing `build_narrative_prompt` legacy behavior remains available.
+- Invalid or underspecified input returns a structured error instead of misleading default features.
 
 ### Phase 2: Persist Feature Snapshots in JSON
 
@@ -292,6 +336,19 @@ Responsibilities:
 - Read `KnowledgeBase`.
 - Produce guarded calibration hints from JSON history.
 - Mark confidence based on sample size and data completeness.
+
+Relationship to `PatternComputer`:
+
+- Keep `PatternComputer` for backward compatibility with legacy prompt code and existing tests.
+- `CalibrationComputer` is the new public interface for v2 structured prompts.
+- `CalibrationComputer` may call `PatternComputer` internally for existing aggregate computations, but it must add:
+  - sample-quality accounting
+  - legacy-entry detection
+  - confidence capping
+  - guardrails
+  - common missing-data reporting
+- New v2 code should call `CalibrationComputer`, not `PatternComputer`, directly.
+- Do not delete or deprecate `PatternComputer` in this phase; mark it as a lower-level/legacy-compatible aggregator in docstrings if touched.
 
 API:
 
@@ -415,7 +472,7 @@ Required documentation changes:
 ```text
 fetch_match_data
 → analyze_match
-→ prepare_evaluation / build_structured_prompt
+→ prepare_evaluation
 → LLM evaluation
 → save_evaluation
 → optional review_evaluation
@@ -453,7 +510,7 @@ Minimum verification:
 uv run --with pytest --with pytest-mock --with pyyaml --with requests --with pandas pytest
 ```
 
-## 7. Implementation Order
+## 8. Implementation Order
 
 Recommended DS execution order:
 
@@ -466,7 +523,7 @@ Recommended DS execution order:
 7. Update README and SKILL.
 8. Run full test suite.
 
-## 8. Important Constraints
+## 9. Important Constraints
 
 - Keep JSON as the source of persistence for this phase.
 - Do not add DB code.
@@ -475,16 +532,17 @@ Recommended DS execution order:
 - Do not make historical calibration a hard override.
 - Preserve original LLM evaluation when human review is added.
 - Keep all new writes deterministic and testable.
+- Keep `PatternComputer` available for legacy compatibility.
+- Do not add a second structured-prompt CLI command unless there is a concrete caller that needs it.
 
-## 9. Done Definition
+## 10. Done Definition
 
 This follow-up is complete when:
 
-- The v2 structured pipeline can be run from CLI.
+- The v2 structured pipeline can be run from `prepare_evaluation`.
 - New saved JSON entries include features, weak labels, v2 evaluation fields, and versions.
 - Human review can be written into JSON.
 - Replay can run against JSON without LLM calls.
 - Calibration hints are generated by a dedicated module.
 - README and SKILL describe the new JSON-based workflow.
 - Full test suite passes.
-
