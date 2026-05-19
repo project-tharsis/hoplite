@@ -196,6 +196,9 @@ knowledge.before.json
 knowledge.after.json
 ```
 
+`knowledge.before.json` and `knowledge.after.json` are written only by `apply-features`.
+`inventory`, `prepare-seed`, and `validate-rest` may omit them because they do not mutate the KB.
+
 Raw and report snapshots should live outside the run directory so future runs can reuse them:
 
 ```text
@@ -275,11 +278,28 @@ Common flags:
 - `--kb`: path to `knowledge.json`
 - `--manifest`: path to manifest
 - `--mode`: one of `inventory`, `prepare-seed`, `apply-features`, `validate-rest`
-- `--output`: run directory
-- `--run`: existing run directory to read artifacts from, required by `apply-features` unless `--output` points at the run
+- `--output`: run directory for modes that create reports (`inventory`, `prepare-seed`, `validate-rest`)
+- `--run`: existing run directory to read artifacts from; required by `apply-features`
 - `--write`: required for any `data/knowledge.json` mutation
 - `--force`: allow replacing existing backfilled `features` and `weak_labels`
 - `--fetch-missing`: optional future behavior; when absent, local `raw_match_path` or `report_path` is required for prepare modes
+
+Do not require both `--output` and `--run` in one command. The normal flow is:
+
+```bash
+python scripts/backfill_history.py \
+  --kb data/knowledge.json \
+  --manifest data/backfill/backfill_manifest.json \
+  --mode prepare-seed \
+  --output data/backfill/runs/20260519-seed
+
+python scripts/backfill_history.py \
+  --kb data/knowledge.json \
+  --manifest data/backfill/backfill_manifest.json \
+  --mode apply-features \
+  --run data/backfill/runs/20260519-seed \
+  --write
+```
 
 Supported modes:
 
@@ -304,7 +324,7 @@ Output:
 For seed-set entries only:
 
 1. Load raw match JSON or analyze report JSON.
-2. If only raw match JSON exists, run `analyze_match`.
+2. If only raw match JSON exists, call `src.tools.analyze.analyze_match(raw_match_json)` directly in Python.
 3. If neither local raw nor local report exists, fail with `MISSING_RAW_INPUT` unless `--fetch-missing` is implemented and passed.
 4. Run `prepare_evaluation` with JSON output.
 5. Persist raw/report snapshots if available.
@@ -313,17 +333,78 @@ For seed-set entries only:
 
 Default behavior: dry-run. Do not mutate KB unless `--write` is passed.
 
+Do not shell out to `python -m src analyze_match` from this script. Import the function:
+
+```python
+from src.tools.analyze import analyze_match
+from src.tools.prepare_evaluation import prepare_evaluation
+```
+
+`prepare_results.jsonl` success row shape:
+
+```json
+{
+  "legacy_match_id": "1",
+  "fixture_id": "123456",
+  "ok": true,
+  "input_type": "raw_match",
+  "features": {},
+  "weak_labels": {},
+  "rubric_version": "arteta_v1",
+  "prompt": "...",
+  "raw_match_path": "data/backfill/raw/123456.json",
+  "report_path": "data/backfill/reports/123456.json"
+}
+```
+
+`prepare_results.jsonl` error row shape:
+
+```json
+{
+  "legacy_match_id": "1",
+  "fixture_id": "123456",
+  "ok": false,
+  "error": {
+    "code": "PREPARE_FAILED",
+    "message": "prepare_evaluation returned EXTRACTION_FAILED"
+  }
+}
+```
+
 ### 8.3 `apply-features`
 
 For seed-set entries with successful prepare results:
 
 1. Create `knowledge.before.json`.
 2. Add `features`, `weak_labels`, version fields, and `backfill` metadata.
-3. If reshaping old `evaluation`, copy the original object into `legacy_evaluation` first.
+3. If old `evaluation` uses legacy dimension fields, copy the original object into `legacy_evaluation` first.
 4. Normalize legacy `evaluation.dimension_signals` if needed.
 5. Write `knowledge.after.json`.
 6. Write `apply_report.json`.
 7. Mutate `data/knowledge.json` only when `--write` is passed.
+
+Legacy evaluation normalization is needed only when:
+
+- `evaluation` contains any of `execution_signal`, `adjustment_signal`, or `satisfaction_signal`; and
+- `evaluation.dimension_signals` is missing or empty.
+
+Normalization mapping:
+
+```python
+dimension_signals = {
+    "execution": evaluation.get("execution_signal"),
+    "adjustment": evaluation.get("adjustment_signal"),
+    "satisfaction": evaluation.get("satisfaction_signal"),
+}
+```
+
+Then compute `evaluation.overall_signal` by the existing majority-vote rule:
+
+- at least two `🟢` dimension signals → `🟢`
+- at least two `🔴` dimension signals → `🔴`
+- otherwise → `🟡`
+
+If an entry already has `evaluation.dimension_signals`, leave it unchanged.
 
 ### 8.4 `validate-rest`
 
