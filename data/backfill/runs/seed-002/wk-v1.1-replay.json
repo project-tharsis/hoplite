@@ -1,0 +1,643 @@
+{
+  "summary": {
+    "total_entries": 111,
+    "replayed": 30,
+    "skipped": 81,
+    "changed": 2,
+    "human_reviewed": 3,
+    "human_compared": 3
+  },
+  "changes": [
+    {
+      "field": "weak_labels.overall_signal",
+      "old": "🟡",
+      "new": "🔴",
+      "match_id": "1379109"
+    },
+    {
+      "field": "weak_labels.overall_signal",
+      "old": "🟢",
+      "new": "🔴",
+      "match_id": "1531572"
+    },
+    {
+      "field": "weak_labels.dimension_signals.satisfaction",
+      "old": "🟡",
+      "new": "🔴",
+      "match_id": "1531572"
+    }
+  ],
+  "human_comparisons": [
+    {
+      "match_id": "1208154",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "culture_as_os": "🟡",
+          "where_game_is_played": "🟢",
+          "defence_as_attacking_identity": "🟢",
+          "marginal_gains": "🟢",
+          "add_capability_keep_identity": "🟡",
+          "role_clarity": "🟡"
+        }
+      },
+      "llm": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "human": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "disagreements": [
+        {
+          "field": "overall_signal",
+          "wk": "🟡",
+          "llm": "🟢",
+          "human": "🟢"
+        },
+        {
+          "field": "dimension_signals.satisfaction",
+          "wk": "🟡",
+          "llm": "🟢",
+          "human": "🟢"
+        },
+        {
+          "field": "model_signals.1",
+          "wk": null,
+          "llm": "🟢",
+          "human": "🟢"
+        },
+        {
+          "field": "model_signals.2",
+          "wk": null,
+          "llm": "🟢",
+          "human": "🟢"
+        },
+        {
+          "field": "model_signals.3",
+          "wk": null,
+          "llm": "🟢",
+          "human": "🟢"
+        },
+        {
+          "field": "model_signals.4",
+          "wk": null,
+          "llm": "🟢",
+          "human": "🟢"
+        },
+        {
+          "field": "model_signals.5",
+          "wk": null,
+          "llm": "🟢",
+          "human": "🟢"
+        },
+        {
+          "field": "model_signals.6",
+          "wk": null,
+          "llm": "🟡",
+          "human": "🟡"
+        }
+      ]
+    },
+    {
+      "match_id": "1379109",
+      "wk": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "culture_as_os": "🔴",
+          "where_game_is_played": "🟡",
+          "defence_as_attacking_identity": "🔴",
+          "marginal_gains": "🟡",
+          "add_capability_keep_identity": "🔴",
+          "role_clarity": "🟢"
+        }
+      },
+      "llm": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🔴",
+          "4": "🟡",
+          "5": "🔴",
+          "6": "🟢"
+        }
+      },
+      "human": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🔴",
+          "4": "🟡",
+          "5": "🔴",
+          "6": "🟢"
+        }
+      },
+      "disagreements": [
+        {
+          "field": "model_signals.1",
+          "wk": null,
+          "llm": "🔴",
+          "human": "🔴"
+        },
+        {
+          "field": "model_signals.2",
+          "wk": null,
+          "llm": "🟡",
+          "human": "🟡"
+        },
+        {
+          "field": "model_signals.3",
+          "wk": null,
+          "llm": "🔴",
+          "human": "🔴"
+        },
+        {
+          "field": "model_signals.4",
+          "wk": null,
+          "llm": "🟡",
+          "human": "🟡"
+        },
+        {
+          "field": "model_signals.5",
+          "wk": null,
+          "llm": "🔴",
+          "human": "🔴"
+        },
+        {
+          "field": "model_signals.6",
+          "wk": null,
+          "llm": "🟢",
+          "human": "🟢"
+        }
+      ]
+    },
+    {
+      "match_id": "1531572",
+      "wk": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "culture_as_os": "🟢",
+          "where_game_is_played": "🟢",
+          "defence_as_attacking_identity": "🟡",
+          "marginal_gains": "🟢",
+          "add_capability_keep_identity": "🔴",
+          "role_clarity": "🟢"
+        }
+      },
+      "llm": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🔴",
+          "4": "🟢",
+          "5": "🔴",
+          "6": "🟡"
+        }
+      },
+      "human": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🔴",
+          "4": "🟢",
+          "5": "🔴",
+          "6": "🟡"
+        }
+      },
+      "disagreements": [
+        {
+          "field": "dimension_signals.adjustment",
+          "wk": "🟢",
+          "llm": "🟡",
+          "human": "🟡"
+        },
+        {
+          "field": "model_signals.1",
+          "wk": null,
+          "llm": "🟢",
+          "human": "🟢"
+        },
+        {
+          "field": "model_signals.2",
+          "wk": null,
+          "llm": "🟢",
+          "human": "🟢"
+        },
+        {
+          "field": "model_signals.3",
+          "wk": null,
+          "llm": "🔴",
+          "human": "🔴"
+        },
+        {
+          "field": "model_signals.4",
+          "wk": null,
+          "llm": "🟢",
+          "human": "🟢"
+        },
+        {
+          "field": "model_signals.5",
+          "wk": null,
+          "llm": "🔴",
+          "human": "🔴"
+        },
+        {
+          "field": "model_signals.6",
+          "wk": null,
+          "llm": "🟡",
+          "human": "🟡"
+        }
+      ]
+    }
+  ],
+  "skipped": [
+    {
+      "match_id": "1",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "538144",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "538144",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "538144",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "538144",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "538144",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208023",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208032",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208041",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208059",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208067",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208072",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208081",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208091",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208103",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208118",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208125",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208134",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208167",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208185",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208194",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208204",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208215",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208223",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208233",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208252",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208254",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208267",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208274",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208285",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208298",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208304",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208314",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208326",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208334",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208348",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208354",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208363",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1208400",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1298642",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1309284",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1327988",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1327989",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1378977",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379009",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379026",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379029",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379042",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379049",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379060",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379139",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379149",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379160",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379169",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379189",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379202",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379220",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379278",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379251",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379259",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379279",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379295",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379309",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1379328",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1451052",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1451061",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1451075",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1451123",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1451159",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1534571",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1540842",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1540843",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1457283",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1479619",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1498259",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1518728",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1490810",
+      "reason": "missing features"
+    },
+    {
+      "match_id": "1506251",
+      "reason": "missing features"
+    }
+  ]
+}
