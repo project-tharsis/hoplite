@@ -915,6 +915,201 @@
       },
       "dimension_signals": {},
       "overall_signal": "🟡"
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 3,
+      "opponent_name": "West Ham",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "league_early",
+      "arsenal_goals": 5,
+      "opponent_goals": 2,
+      "possession_for": 60.0,
+      "possession_against": 40.0,
+      "possession_delta": 20.0,
+      "shots_for": 16,
+      "shots_against": 12,
+      "shot_delta": 4,
+      "shots_on_target_for": 7,
+      "shots_on_target_against": 5,
+      "shot_on_target_delta": 2,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 84.0,
+      "pass_accuracy_against": 78.0,
+      "pass_accuracy_delta": 6.0,
+      "corners_for": 10,
+      "corners_against": 2,
+      "corner_delta": 8,
+      "fouls_for": 13,
+      "fouls_against": 10,
+      "yellow_cards_for": 1,
+      "red_cards_for": 0,
+      "goals_conceded": 2,
+      "opponent_shots_on_target": 5,
+      "set_piece_goals_for": 2,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 46,
+          "player": "Gabriel Magalhães",
+          "scored_after": false
+        },
+        {
+          "minute": 56,
+          "player": "R. Calafiori",
+          "scored_after": false
+        },
+        {
+          "minute": 74,
+          "player": "M. Ødegaard",
+          "scored_after": false
+        },
+        {
+          "minute": 74,
+          "player": "B. Saka",
+          "scored_after": false
+        },
+        {
+          "minute": 85,
+          "player": "L. Trossard",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 5,
+      "goals_after_arsenal_subs": 0,
+      "goals_by_substitutes": 4,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 10,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 27,
+          "arsenal_score": 2,
+          "opponent_score": 0
+        },
+        {
+          "minute": 34,
+          "arsenal_score": 3,
+          "opponent_score": 0
+        },
+        {
+          "minute": 36,
+          "arsenal_score": 4,
+          "opponent_score": 0
+        },
+        {
+          "minute": 38,
+          "arsenal_score": 4,
+          "opponent_score": 1
+        },
+        {
+          "minute": 40,
+          "arsenal_score": 4,
+          "opponent_score": 2
+        },
+        {
+          "minute": 45,
+          "arsenal_score": 5,
+          "opponent_score": 2
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "opponent": "West Ham"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟡",
+        "marginal_gains": "🟢",
+        "add_capability_keep_identity": "🟢",
+        "role_clarity": "🟡"
+      },
+      "dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟡",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=1",
+          "red_cards_for=0",
+          "fouls_for=13",
+          "fouls_against=10"
+        ],
+        "where_game_is_played": [
+          "shot_delta=4",
+          "possession_delta=20.0",
+          "corner_delta=8",
+          "opponent_shots_on_target=5"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=2",
+          "opponent_shots_on_target=5"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=2",
+          "set_piece_goals_against=0"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=84.0",
+          "possession_for=60.0",
+          "goals_for=5"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=5",
+          "goals_after_arsenal_subs=0",
+          "earliest_sub_min=46",
+          "latest_sub_min=85",
+          "goals_conceded_after_subs=0"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1208151",
+      "fixture_id": "1208151",
+      "raw_match_path": "data/backfill/raw/1208151.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1208151.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -958,6 +1153,169 @@
       },
       "dimension_signals": {},
       "overall_signal": "🟡"
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 2,
+      "opponent_name": "Manchester United",
+      "opponent_quality": "lower",
+      "venue": "home",
+      "competition_stage": "league_early",
+      "arsenal_goals": 2,
+      "opponent_goals": 0,
+      "possession_for": 50.0,
+      "possession_against": 50.0,
+      "possession_delta": 0.0,
+      "shots_for": 14,
+      "shots_against": 5,
+      "shot_delta": 9,
+      "shots_on_target_for": 6,
+      "shots_on_target_against": 2,
+      "shot_on_target_delta": 4,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 87.0,
+      "pass_accuracy_against": 87.0,
+      "pass_accuracy_delta": 0.0,
+      "corners_for": 13,
+      "corners_against": 0,
+      "corner_delta": 13,
+      "fouls_for": 12,
+      "fouls_against": 8,
+      "yellow_cards_for": 1,
+      "red_cards_for": 0,
+      "goals_conceded": 0,
+      "opponent_shots_on_target": 2,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 71,
+          "player": "O. Zinchenko",
+          "scored_after": false
+        },
+        {
+          "minute": 71,
+          "player": "Gabriel Martinelli",
+          "scored_after": false
+        },
+        {
+          "minute": 90,
+          "player": "M. Ødegaard",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 3,
+      "goals_after_arsenal_subs": 1,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 54,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 73,
+          "arsenal_score": 2,
+          "opponent_score": 0
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "opponent": "Manchester United"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟡",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟢",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🟡"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟡",
+        "satisfaction": "🟡"
+      },
+      "overall_signal": "🟡",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=1",
+          "red_cards_for=0",
+          "fouls_for=12",
+          "fouls_against=8",
+          "fouls_delta=4>=4"
+        ],
+        "where_game_is_played": [
+          "shot_delta=9",
+          "possession_delta=0.0",
+          "corner_delta=13",
+          "opponent_shots_on_target=2"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=0",
+          "opponent_shots_on_target=2"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=13",
+          "corners_against=0"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=87.0",
+          "possession_for=50.0",
+          "goals_for=2"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=3",
+          "goals_after_arsenal_subs=1",
+          "earliest_sub_min=71",
+          "latest_sub_min=90",
+          "goals_conceded_after_subs=0"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1208154",
+      "fixture_id": "1208154",
+      "raw_match_path": "data/backfill/raw/1208154.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1208154.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -1043,6 +1401,161 @@
       },
       "dimension_signals": {},
       "overall_signal": "🟡"
+    },
+    "features": {
+      "result": "D",
+      "score_margin": 0,
+      "opponent_name": "Everton",
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "league_early",
+      "arsenal_goals": 0,
+      "opponent_goals": 0,
+      "possession_for": 77.0,
+      "possession_against": 23.0,
+      "possession_delta": 54.0,
+      "shots_for": 13,
+      "shots_against": 2,
+      "shot_delta": 11,
+      "shots_on_target_for": 5,
+      "shots_on_target_against": 0,
+      "shot_on_target_delta": 5,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 92.0,
+      "pass_accuracy_against": 71.0,
+      "pass_accuracy_delta": 21.0,
+      "corners_for": 8,
+      "corners_against": 2,
+      "corner_delta": 6,
+      "fouls_for": 6,
+      "fouls_against": 9,
+      "yellow_cards_for": 0,
+      "red_cards_for": 0,
+      "goals_conceded": 0,
+      "opponent_shots_on_target": 0,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 62,
+          "player": "D. Rice",
+          "scored_after": false
+        },
+        {
+          "minute": 62,
+          "player": "M. Ødegaard",
+          "scored_after": false
+        },
+        {
+          "minute": 69,
+          "player": "Mikel Merino",
+          "scored_after": false
+        },
+        {
+          "minute": 69,
+          "player": "M. Lewis-Skelly",
+          "scored_after": false
+        },
+        {
+          "minute": 74,
+          "player": "Gabriel Martinelli",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 5,
+      "goals_after_arsenal_subs": 0,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [],
+      "predicted_plan_match_features": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "opponent": "Everton"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟢",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🟡"
+      },
+      "dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟡",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=0",
+          "red_cards_for=0",
+          "fouls_for=6",
+          "fouls_against=9"
+        ],
+        "where_game_is_played": [
+          "shot_delta=11",
+          "possession_delta=54.0",
+          "corner_delta=6",
+          "opponent_shots_on_target=0"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=0",
+          "opponent_shots_on_target=0"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=8",
+          "corners_against=2"
+        ],
+        "add_capability_keep_identity": [
+          "result=D",
+          "pass_accuracy_for=92.0",
+          "possession_for=77.0",
+          "goals_for=0"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=5",
+          "goals_after_arsenal_subs=0",
+          "earliest_sub_min=62",
+          "latest_sub_min=74"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1208174",
+      "fixture_id": "1208174",
+      "raw_match_path": "data/backfill/raw/1208174.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1208174.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -1883,6 +2396,179 @@
       },
       "overall_signal": "yellow",
       "narrative": "阿森纳客场挑战利物浦，上半场以0-2落后，但下半场连入两球顽强扳平。尽管最终未能全取三分，但下半场的反弹展现了球队的精神韧性和战术调整能力。在安菲尔德控制56%的控球率、15次射门7次射正，这些数据证明球队具备与顶级对手正面交锋的实力。文化标准（模型1）在逆境中表现出色——落后两球不放弃，展现出不可妥协的战斗精神和职业态度。比赛控制（模型2）在下半场得到有效执行，通过控球和前场施压逐渐扭转了局面。防守身份（模型3）虽上半场失球较多，但下半场的稳固表现阻止了利物浦扩大比分，整体防守结构有所改善。边际收益（模型4）在下半场的两个进球中得到充分体现，关键时刻把握住了机会。能力叠加（模型5）进攻端多点开花，射门质量和数量均表现出色。角色清晰度（模型6）在下半场调整后每个球员都明确了职责，战术执行到位。这场比赛的遗憾在于上半场的被动开局和未能完成逆转，但下半场的表现为球队注入了信心。"
+    },
+    "features": {
+      "result": "D",
+      "score_margin": 0,
+      "opponent_name": "Liverpool",
+      "opponent_quality": "top6",
+      "venue": "away",
+      "competition_stage": "league_late",
+      "arsenal_goals": 2,
+      "opponent_goals": 2,
+      "possession_for": 56.0,
+      "possession_against": 44.0,
+      "possession_delta": 12.0,
+      "shots_for": 15,
+      "shots_against": 14,
+      "shot_delta": 1,
+      "shots_on_target_for": 7,
+      "shots_on_target_against": 5,
+      "shot_on_target_delta": 2,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 86.0,
+      "pass_accuracy_against": 82.0,
+      "pass_accuracy_delta": 4.0,
+      "corners_for": 1,
+      "corners_against": 3,
+      "corner_delta": -2,
+      "fouls_for": 10,
+      "fouls_against": 13,
+      "yellow_cards_for": 3,
+      "red_cards_for": 1,
+      "goals_conceded": 2,
+      "opponent_shots_on_target": 5,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 78,
+          "player": "L. Trossard",
+          "scored_after": false
+        },
+        {
+          "minute": 78,
+          "player": "B. White",
+          "scored_after": false
+        },
+        {
+          "minute": 88,
+          "player": "B. Saka",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 3,
+      "goals_after_arsenal_subs": 0,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 20,
+          "arsenal_score": 0,
+          "opponent_score": 1
+        },
+        {
+          "minute": 21,
+          "arsenal_score": 0,
+          "opponent_score": 2
+        },
+        {
+          "minute": 47,
+          "arsenal_score": 1,
+          "opponent_score": 2
+        },
+        {
+          "minute": 70,
+          "arsenal_score": 2,
+          "opponent_score": 2
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "opponent": "Liverpool"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🔴",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟡",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🟡"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟡",
+        "satisfaction": "🟡"
+      },
+      "overall_signal": "🟡",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=3",
+          "red_cards_for=1",
+          "red_card_present"
+        ],
+        "where_game_is_played": [
+          "shot_delta=1",
+          "possession_delta=12.0",
+          "corner_delta=-2",
+          "opponent_shots_on_target=5"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=2",
+          "opponent_shots_on_target=5"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=1",
+          "corners_against=3",
+          "corners_for=1",
+          "corners_against=3"
+        ],
+        "add_capability_keep_identity": [
+          "result=D",
+          "pass_accuracy_for=86.0",
+          "possession_for=56.0",
+          "goals_for=2"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=3",
+          "goals_after_arsenal_subs=0",
+          "earliest_sub_min=78",
+          "latest_sub_min=88",
+          "goals_conceded_after_subs=0"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1208376",
+      "fixture_id": "1208376",
+      "raw_match_path": "data/backfill/raw/1208376.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1208376.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -1931,6 +2617,171 @@
       },
       "overall_signal": "green",
       "narrative": "阿森纳主场1-0小胜纽卡斯尔，这是一场纪律严明、战术成熟的胜利。面对实力强劲的对手，球队控制了51%的控球率，通过10次角球持续施加压力，并在下半场完成致命一击。防守端的零封表现尤为出色，展现出顶级的防守组织能力。文化标准（模型1）表现优秀——全场比赛展现出极高的专注度和职业态度，始终保持对胜利的渴望。比赛控制（模型2）通过控球和定位球的持续施压，逐步瓦解对手防线。防守身份（模型3）堪称完美，面对纽卡斯尔的进攻，防线保持了紧密的结构和出色的纪律性，实现了零封。边际收益（模型4）在关键时刻的进球和比赛末段的防守管理中得到充分体现。能力叠加（模型5）方面进攻端略显保守，但整体威胁足以确保胜利。角色清晰度（模型6）每个球员在防守和进攻转换中都清楚自己的职责，战术执行精准到位。这场胜利展现了阿森纳在关键时刻的成熟和韧性，证明球队具备在高压环境下赢得重要比赛的能力。"
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 1,
+      "opponent_name": "Newcastle",
+      "opponent_quality": "top6",
+      "venue": "home",
+      "competition_stage": "league_late",
+      "arsenal_goals": 1,
+      "opponent_goals": 0,
+      "possession_for": 51.0,
+      "possession_against": 49.0,
+      "possession_delta": 2.0,
+      "shots_for": 12,
+      "shots_against": 14,
+      "shot_delta": -2,
+      "shots_on_target_for": 4,
+      "shots_on_target_against": 5,
+      "shot_on_target_delta": -1,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 83.0,
+      "pass_accuracy_against": 83.0,
+      "pass_accuracy_delta": 0.0,
+      "corners_for": 10,
+      "corners_against": 7,
+      "corner_delta": 3,
+      "fouls_for": 9,
+      "fouls_against": 9,
+      "yellow_cards_for": 3,
+      "red_cards_for": 0,
+      "goals_conceded": 0,
+      "opponent_shots_on_target": 5,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 46,
+          "player": "W. Saliba",
+          "scored_after": false
+        },
+        {
+          "minute": 76,
+          "player": "B. Saka",
+          "scored_after": false
+        },
+        {
+          "minute": 88,
+          "player": "L. Trossard",
+          "scored_after": false
+        },
+        {
+          "minute": 90,
+          "player": "M. Ødegaard",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 4,
+      "goals_after_arsenal_subs": 1,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 55,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "opponent": "Newcastle"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟡",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟢",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=3",
+          "red_cards_for=0",
+          "fouls_for=9",
+          "fouls_against=9",
+          "yellow_cards=3>=2"
+        ],
+        "where_game_is_played": [
+          "shot_delta=-2",
+          "possession_delta=2.0",
+          "corner_delta=3",
+          "opponent_shots_on_target=5"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=0",
+          "opponent_shots_on_target=5"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=10",
+          "corners_against=7",
+          "corners_for=10",
+          "corners_against=7"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=83.0",
+          "possession_for=51.0",
+          "goals_for=1"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=4",
+          "goals_after_arsenal_subs=1",
+          "earliest_sub_min=46",
+          "latest_sub_min=90",
+          "goals_after_subs_not_by_substitutes"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1208383",
+      "fixture_id": "1208383",
+      "raw_match_path": "data/backfill/raw/1208383.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1208383.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -2096,6 +2947,195 @@
       },
       "dimension_signals": {},
       "overall_signal": "🟡"
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 1,
+      "opponent_name": "Crystal Palace",
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "regular",
+      "arsenal_goals": 3,
+      "opponent_goals": 2,
+      "possession_for": 71.0,
+      "possession_against": 29.0,
+      "possession_delta": 42.0,
+      "shots_for": 12,
+      "shots_against": 8,
+      "shot_delta": 4,
+      "shots_on_target_for": 9,
+      "shots_on_target_against": 4,
+      "shot_on_target_delta": 5,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 87.0,
+      "pass_accuracy_against": 66.0,
+      "pass_accuracy_delta": 21.0,
+      "corners_for": 4,
+      "corners_against": 2,
+      "corner_delta": 2,
+      "fouls_for": 7,
+      "fouls_against": 12,
+      "yellow_cards_for": 1,
+      "red_cards_for": 0,
+      "goals_conceded": 2,
+      "opponent_shots_on_target": 4,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 46,
+          "player": "T. Partey",
+          "scored_after": false
+        },
+        {
+          "minute": 46,
+          "player": "E. Nwaneri",
+          "scored_after": false
+        },
+        {
+          "minute": 69,
+          "player": "K. Tierney",
+          "scored_after": false
+        },
+        {
+          "minute": 70,
+          "player": "R. Sterling",
+          "scored_after": false
+        },
+        {
+          "minute": 87,
+          "player": "J. Kiwior",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 5,
+      "goals_after_arsenal_subs": 3,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 4,
+          "arsenal_score": 0,
+          "opponent_score": 1
+        },
+        {
+          "minute": 54,
+          "arsenal_score": 1,
+          "opponent_score": 1
+        },
+        {
+          "minute": 73,
+          "arsenal_score": 2,
+          "opponent_score": 1
+        },
+        {
+          "minute": 81,
+          "arsenal_score": 3,
+          "opponent_score": 1
+        },
+        {
+          "minute": 85,
+          "arsenal_score": 3,
+          "opponent_score": 2
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "regular",
+        "opponent": "Crystal Palace"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟡",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟢",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=1",
+          "red_cards_for=0",
+          "fouls_for=7",
+          "fouls_against=12"
+        ],
+        "where_game_is_played": [
+          "shot_delta=4",
+          "possession_delta=42.0",
+          "corner_delta=2",
+          "opponent_shots_on_target=4"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=2",
+          "opponent_shots_on_target=4"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=4",
+          "corners_against=2",
+          "corners_for=4",
+          "corners_against=2"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=87.0",
+          "possession_for=71.0",
+          "goals_for=3"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=5",
+          "goals_after_arsenal_subs=3",
+          "earliest_sub_min=46",
+          "latest_sub_min=87",
+          "goals_after_subs_not_by_substitutes"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1314297",
+      "fixture_id": "1314297",
+      "raw_match_path": "data/backfill/raw/1314297.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1314297.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -2276,6 +3316,191 @@
       },
       "overall_signal": "green",
       "narrative": "阿森纳在酋长球场以5-0横扫利兹联，展现了Arteta体系下压倒性的统治力。全场68%控球率、599次传球92%准确率、18射5正打入5球，各项数据均指向完美的战术执行。文化标准层面，球队从第一分钟起就保持高强度压迫，前两球上半场奠定基调后下半场毫不松懈再入三球，体现了Arteta对每场比赛标准一致性的要求。比赛控制方面，阿森纳完全掌控节奏——利兹仅3射1正、290次传球，被压缩在32%控球区域内毫无反击能力。防守身份得到完美体现，零封对手且几乎未给对方任何有威胁的机会。边际收益上，5次射正全部转化为进球展现了顶级终结效率，定位球和转换中的细节处理无可挑剔。能力叠加层面，进球分布在上下半场，进攻多点开花令对手无法针对性防范。角色清晰度极高，每位球员在高位压迫、边路overload和中场控制中的职责分明、衔接流畅。整体而言，这是一场将Arteta六大心智模型全部激活的教科书式胜利，三个维度均为积极信号。"
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 5,
+      "opponent_name": "Leeds",
+      "opponent_quality": "lower",
+      "venue": "home",
+      "competition_stage": "league_early",
+      "arsenal_goals": 5,
+      "opponent_goals": 0,
+      "possession_for": 68.0,
+      "possession_against": 32.0,
+      "possession_delta": 36.0,
+      "shots_for": 18,
+      "shots_against": 3,
+      "shot_delta": 15,
+      "shots_on_target_for": 5,
+      "shots_on_target_against": 1,
+      "shot_on_target_delta": 4,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 92.0,
+      "pass_accuracy_against": 76.0,
+      "pass_accuracy_delta": 16.0,
+      "corners_for": 2,
+      "corners_against": 2,
+      "corner_delta": 0,
+      "fouls_for": 8,
+      "fouls_against": 11,
+      "yellow_cards_for": 0,
+      "red_cards_for": 0,
+      "goals_conceded": 0,
+      "opponent_shots_on_target": 1,
+      "set_piece_goals_for": 1,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 38,
+          "player": "M. Odegaard",
+          "scored_after": false
+        },
+        {
+          "minute": 53,
+          "player": "B. Saka",
+          "scored_after": false
+        },
+        {
+          "minute": 64,
+          "player": "R. Calafiori",
+          "scored_after": false
+        },
+        {
+          "minute": 64,
+          "player": "J. Timber",
+          "scored_after": false
+        },
+        {
+          "minute": 64,
+          "player": "N. Madueke",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 5,
+      "goals_after_arsenal_subs": 4,
+      "goals_by_substitutes": 3,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 34,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 45,
+          "arsenal_score": 2,
+          "opponent_score": 0
+        },
+        {
+          "minute": 48,
+          "arsenal_score": 3,
+          "opponent_score": 0
+        },
+        {
+          "minute": 56,
+          "arsenal_score": 4,
+          "opponent_score": 0
+        },
+        {
+          "minute": 90,
+          "arsenal_score": 5,
+          "opponent_score": 0
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "opponent": "Leeds"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟢",
+        "add_capability_keep_identity": "🟢",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=0",
+          "red_cards_for=0",
+          "fouls_for=8",
+          "fouls_against=11"
+        ],
+        "where_game_is_played": [
+          "shot_delta=15",
+          "possession_delta=36.0",
+          "corner_delta=0",
+          "opponent_shots_on_target=1"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=0",
+          "opponent_shots_on_target=1"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=1",
+          "set_piece_goals_against=0"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=92.0",
+          "possession_for=68.0",
+          "goals_for=5"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=5",
+          "goals_after_arsenal_subs=4",
+          "earliest_sub_min=38",
+          "latest_sub_min=64",
+          "goals_by_substitutes=3"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1378979",
+      "fixture_id": "1378979",
+      "raw_match_path": "data/backfill/raw/1378979.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1378979.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -2325,6 +3550,167 @@
       },
       "overall_signal": "red",
       "narrative": "安菲尔德客场0-1负于利物浦，暴露了阿森纳在顶级客场对抗中的多重短板。47%控球率和82%传球准确率均低于球队标准，371次传球对比利物浦的435次反映出中场争夺中处于下风。文化标准层面虽保持了竞争纪律——全场未出现崩溃式失球，但未能在关键时刻展现必胜信念。比赛控制是最薄弱环节：面对利物浦的高位逼抢，阿森纳无法建立持续的进攻节奏，11次射门仅1次射正的转化率令人失望，进攻雷声大雨点小。防守身份尚可维持，仅失一球且下半场才丢球，防守结构整体有序，但被动防守的姿态与球队追求的主动防守身份存在差距。边际收益方面几乎为零——定位球8个角球颗粒无收，转换进攻缺乏致命一击。能力叠加受阻，进攻三区缺乏创造力和多点威胁，进攻过于依赖单一通道。角色清晰度中规中矩，球员理解防守职责但在进攻端的角色衔接出现断层。下半场失球暴露了调整能力的不足——未能及时改变比赛走势。综合来看，执行维度为红、调整为黄、满意度为红，整体信号消极，这是一场需要深刻复盘的比赛。"
+    },
+    "features": {
+      "result": "L",
+      "score_margin": -1,
+      "opponent_name": "Liverpool",
+      "opponent_quality": "top6",
+      "venue": "away",
+      "competition_stage": "league_early",
+      "arsenal_goals": 0,
+      "opponent_goals": 1,
+      "possession_for": 47.0,
+      "possession_against": 53.0,
+      "possession_delta": -6.0,
+      "shots_for": 11,
+      "shots_against": 9,
+      "shot_delta": 2,
+      "shots_on_target_for": 1,
+      "shots_on_target_against": 3,
+      "shot_on_target_delta": -2,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 82.0,
+      "pass_accuracy_against": 85.0,
+      "pass_accuracy_delta": -3.0,
+      "corners_for": 8,
+      "corners_against": 3,
+      "corner_delta": 5,
+      "fouls_for": 10,
+      "fouls_against": 7,
+      "yellow_cards_for": 2,
+      "red_cards_for": 0,
+      "goals_conceded": 1,
+      "opponent_shots_on_target": 3,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 5,
+          "player": "W. Saliba",
+          "scored_after": false
+        },
+        {
+          "minute": 70,
+          "player": "M. Merino",
+          "scored_after": false
+        },
+        {
+          "minute": 70,
+          "player": "G. Martinelli",
+          "scored_after": false
+        },
+        {
+          "minute": 89,
+          "player": "N. Madueke",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 4,
+      "goals_after_arsenal_subs": 0,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 83,
+          "arsenal_score": 0,
+          "opponent_score": 1
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "opponent": "Liverpool"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🔴",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟢",
+        "add_capability_keep_identity": "🔴",
+        "role_clarity": "🔴"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🔴",
+        "satisfaction": "🔴"
+      },
+      "overall_signal": "🔴",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=2",
+          "red_cards_for=0",
+          "critical_time_card"
+        ],
+        "where_game_is_played": [
+          "shot_delta=2",
+          "possession_delta=-6.0",
+          "corner_delta=5",
+          "opponent_shots_on_target=3"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=1",
+          "opponent_shots_on_target=3"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=8",
+          "corners_against=3"
+        ],
+        "add_capability_keep_identity": [
+          "result=L",
+          "pass_accuracy_for=82.0",
+          "possession_for=47.0",
+          "goals_for=0"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=4",
+          "goals_after_arsenal_subs=0",
+          "earliest_sub_min=5",
+          "latest_sub_min=89",
+          "goals_conceded_after_subs=1"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1378993",
+      "fixture_id": "1378993",
+      "raw_match_path": "data/backfill/raw/1378993.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1378993.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -2372,6 +3758,183 @@
       },
       "overall_signal": "green",
       "narrative": "主场3-0完胜诺丁汉森林，阿森纳在经历安菲尔德失利后迅速回归正轨。54%控球率看似不极端，但16射5正对5射1正的数据对比清晰表明了场上的绝对优势。文化标准层面，球队展现了强大的心理韧性——在前一场客场失利后没有出现信心滑坡，反而以更加果断的态度投入比赛，上半场即取得领先奠定基调。比赛控制方面，虽然森林试图通过46%的控球维持一定对抗，但阿森纳通过高效的反抢和快速转换牢牢掌控比赛走向。防守身份堪称完美，零封对手且仅让对方1次射正，高位反抢策略成功打断了对手的组织节奏。边际收益处理到位，下半场连入两球体现了球队在领先后继续寻找扩大优势的决心，而非保守退缩。能力叠加层面，三个进球分布在上下半场的不同阶段，展现了多元化的进攻手段。角色清晰度极高，每位球员在「打断对手节奏+反抢后立即转换」的战术框架中各司其职。下半场由1-0扩大到3-0的过程尤其体现了教练组中场调整的精准——换人维持了进攻压力并保护了结果。三个维度全面绿灯，这是一场典型的Arteta体系强势回应战。"
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 3,
+      "opponent_name": "Nottingham Forest",
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "league_early",
+      "arsenal_goals": 3,
+      "opponent_goals": 0,
+      "possession_for": 54.0,
+      "possession_against": 46.0,
+      "possession_delta": 8.0,
+      "shots_for": 16,
+      "shots_against": 5,
+      "shot_delta": 11,
+      "shots_on_target_for": 5,
+      "shots_on_target_against": 1,
+      "shot_on_target_delta": 4,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 87.0,
+      "pass_accuracy_against": 86.0,
+      "pass_accuracy_delta": 1.0,
+      "corners_for": 8,
+      "corners_against": 3,
+      "corner_delta": 5,
+      "fouls_for": 8,
+      "fouls_against": 11,
+      "yellow_cards_for": 1,
+      "red_cards_for": 0,
+      "goals_conceded": 0,
+      "opponent_shots_on_target": 1,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 18,
+          "player": "M. Odegaard",
+          "scored_after": false
+        },
+        {
+          "minute": 68,
+          "player": "R. Calafiori",
+          "scored_after": false
+        },
+        {
+          "minute": 68,
+          "player": "V. Gyökeres",
+          "scored_after": false
+        },
+        {
+          "minute": 78,
+          "player": "N. Madueke",
+          "scored_after": false
+        },
+        {
+          "minute": 79,
+          "player": "E. Eze",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 5,
+      "goals_after_arsenal_subs": 3,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 32,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 46,
+          "arsenal_score": 2,
+          "opponent_score": 0
+        },
+        {
+          "minute": 79,
+          "arsenal_score": 3,
+          "opponent_score": 0
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "opponent": "Nottingham Forest"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟢",
+        "add_capability_keep_identity": "🟢",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=1",
+          "red_cards_for=0",
+          "fouls_for=8",
+          "fouls_against=11"
+        ],
+        "where_game_is_played": [
+          "shot_delta=11",
+          "possession_delta=8.0",
+          "corner_delta=5",
+          "opponent_shots_on_target=1"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=0",
+          "opponent_shots_on_target=1"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=8",
+          "corners_against=3"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=87.0",
+          "possession_for=54.0",
+          "goals_for=3"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=5",
+          "goals_after_arsenal_subs=3",
+          "earliest_sub_min=18",
+          "latest_sub_min=79",
+          "goals_after_subs_not_by_substitutes"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1378999",
+      "fixture_id": "1378999",
+      "raw_match_path": "data/backfill/raw/1378999.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1378999.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -2707,6 +4270,170 @@
       },
       "overall_signal": "red",
       "narrative": "阿森纳客场2-2被桑德兰逼平，90分钟丢球痛失两分，这是一场数据碾压却结果崩盘的典型案例。65%控球率、17次射门7次射正对比对手6射2正，上半场落后一球后下半场Saka和Trossard先后破门完成反超，然而终场前Brobbey扳平，从2-1到2-2的崩塌令人扼腕。文化标准绿灯：全场仅1张黄牌（Zubimendi 36分钟战术犯规），纪律层面没有问题。比赛控制黄灯：控球和射门数据压倒性优势，但两次射正就丢两球，说明控制力并未延伸到防守关键区域。防守身份红灯：对手仅2次射正却全部转化为进球，且第二球发生在90分钟——这是防守专注度的致命断裂。边际收益黄灯：定位球无建树，角球2比2平手，未能在细节上拉开差距。能力叠加绿灯：87%传球成功率、多人进球体现体系运转良好。角色清晰红灯：全场仅1次换人（88分钟Eze），在2-1领先时完全没有通过换人加固防守或控制节奏，Arteta的临场调度是本场最大败笔。这场平局的教训很明确——控球不等于控制，射门多不等于赢球，最后十分钟的专注度才是真正的冠军品质。"
+    },
+    "features": {
+      "result": "D",
+      "score_margin": 0,
+      "opponent_name": "Sunderland",
+      "opponent_quality": "lower",
+      "venue": "away",
+      "competition_stage": "league_early",
+      "arsenal_goals": 2,
+      "opponent_goals": 2,
+      "possession_for": 65.0,
+      "possession_against": 35.0,
+      "possession_delta": 30.0,
+      "shots_for": 17,
+      "shots_against": 6,
+      "shot_delta": 11,
+      "shots_on_target_for": 7,
+      "shots_on_target_against": 2,
+      "shot_on_target_delta": 5,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 87.0,
+      "pass_accuracy_against": 79.0,
+      "pass_accuracy_delta": 8.0,
+      "corners_for": 2,
+      "corners_against": 2,
+      "corner_delta": 0,
+      "fouls_for": 13,
+      "fouls_against": 13,
+      "yellow_cards_for": 1,
+      "red_cards_for": 0,
+      "goals_conceded": 2,
+      "opponent_shots_on_target": 2,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 88,
+          "player": "E. Eze",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 1,
+      "goals_after_arsenal_subs": 0,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 36,
+          "arsenal_score": 0,
+          "opponent_score": 1
+        },
+        {
+          "minute": 54,
+          "arsenal_score": 1,
+          "opponent_score": 1
+        },
+        {
+          "minute": 74,
+          "arsenal_score": 2,
+          "opponent_score": 1
+        },
+        {
+          "minute": 90,
+          "arsenal_score": 2,
+          "opponent_score": 2
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "opponent": "Sunderland"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟡",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🔴"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🔴",
+        "satisfaction": "🟡"
+      },
+      "overall_signal": "🟡",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=1",
+          "red_cards_for=0",
+          "fouls_for=13",
+          "fouls_against=13"
+        ],
+        "where_game_is_played": [
+          "shot_delta=11",
+          "possession_delta=30.0",
+          "corner_delta=0",
+          "opponent_shots_on_target=2"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=2",
+          "opponent_shots_on_target=2"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=2",
+          "corners_against=2",
+          "corners_for=2",
+          "corners_against=2"
+        ],
+        "add_capability_keep_identity": [
+          "result=D",
+          "pass_accuracy_for=87.0",
+          "possession_for=65.0",
+          "goals_for=2"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=1",
+          "goals_after_arsenal_subs=0",
+          "earliest_sub_min=88",
+          "latest_sub_min=88",
+          "goals_conceded_after_subs=1"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1379076",
+      "fixture_id": "1379076",
+      "raw_match_path": "data/backfill/raw/1379076.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1379076.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -2755,6 +4482,190 @@
       },
       "overall_signal": "green",
       "narrative": "阿森纳主场4-1横扫热刺，北伦敦德比呈现一边倒态势，Eze上演帽子戏法成为绝对主角。57%控球率、17射8正对比热刺3射2正，射门比5.7:1的数据堪称碾压。Trossard第36分钟首开纪录后，Eze在41分钟和46分钟连下两城完成半场帽子戏法，比赛悬念在半场结束时已被彻底杀死。Richarlison 55分钟的进球只是挽回颜面，Eze第76分钟再添一球完成大四喜。文化标准绿灯：全场仅1张黄牌（Rice 87分钟争论），在一场充满火药味的德比中保持了极佳的纪律性。比赛控制绿灯：从第一分钟就掌握主动权，热刺全场仅3次射门，比赛完全在阿森纳的节奏中进行。防守身份绿灯：仅失1球且对手射正仅2次，防守端几乎没有给热刺任何机会。边际收益黄灯：无定位球进球，角球4比1占优但未能转化为进球。能力叠加黄灯：81%传球成功率略低于理想标准，但Eze帽子戏法证明了进攻端的爆发力。角色清晰绿灯：78分钟起的换人节奏合理，核心球员得到休息，替补顺利融入。这是一场宣告争冠决心的标志性胜利——在德比战中用实力说话。"
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 3,
+      "opponent_name": "Tottenham",
+      "opponent_quality": "top6",
+      "venue": "home",
+      "competition_stage": "league_early",
+      "arsenal_goals": 4,
+      "opponent_goals": 1,
+      "possession_for": 57.0,
+      "possession_against": 43.0,
+      "possession_delta": 14.0,
+      "shots_for": 17,
+      "shots_against": 3,
+      "shot_delta": 14,
+      "shots_on_target_for": 8,
+      "shots_on_target_against": 2,
+      "shot_on_target_delta": 6,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 81.0,
+      "pass_accuracy_against": 76.0,
+      "pass_accuracy_delta": 5.0,
+      "corners_for": 4,
+      "corners_against": 1,
+      "corner_delta": 3,
+      "fouls_for": 11,
+      "fouls_against": 15,
+      "yellow_cards_for": 1,
+      "red_cards_for": 0,
+      "goals_conceded": 1,
+      "opponent_shots_on_target": 2,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 78,
+          "player": "L. Trossard",
+          "scored_after": false
+        },
+        {
+          "minute": 88,
+          "player": "M. Merino",
+          "scored_after": false
+        },
+        {
+          "minute": 88,
+          "player": "P. Hincapie",
+          "scored_after": false
+        },
+        {
+          "minute": 90,
+          "player": "R. Calafiori",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 4,
+      "goals_after_arsenal_subs": 0,
+      "goals_by_substitutes": 1,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 36,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 41,
+          "arsenal_score": 2,
+          "opponent_score": 0
+        },
+        {
+          "minute": 46,
+          "arsenal_score": 3,
+          "opponent_score": 0
+        },
+        {
+          "minute": 55,
+          "arsenal_score": 3,
+          "opponent_score": 1
+        },
+        {
+          "minute": 76,
+          "arsenal_score": 4,
+          "opponent_score": 1
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "opponent": "Tottenham"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟢",
+        "role_clarity": "🟡"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟡",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟡",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=1",
+          "red_cards_for=0",
+          "fouls_for=11",
+          "fouls_against=15"
+        ],
+        "where_game_is_played": [
+          "shot_delta=14",
+          "possession_delta=14.0",
+          "corner_delta=3",
+          "opponent_shots_on_target=2"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=1",
+          "opponent_shots_on_target=2"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=4",
+          "corners_against=1",
+          "corners_for=4",
+          "corners_against=1"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=81.0",
+          "possession_for=57.0",
+          "goals_for=4"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=4",
+          "goals_after_arsenal_subs=0",
+          "earliest_sub_min=78",
+          "latest_sub_min=90",
+          "goals_conceded_after_subs=0"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1379079",
+      "fixture_id": "1379079",
+      "raw_match_path": "data/backfill/raw/1379079.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1379079.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -2804,6 +4715,174 @@
       },
       "overall_signal": "neutral",
       "narrative": "阿森纳客场1-1战平切尔西，一场充满戏剧性却令人五味杂陈的伦敦德比。切尔西38分钟Caicedo被红牌罚下后，阿森纳在长达52分钟里以多打少，却在48分钟被Chalobah头球破门落后，直到59分钟Merino扳平。62%控球率、8射4正对比切尔西11射4正——多一人却射门更少，这组数据刺眼。文化标准红灯：全场6张黄牌（Zubimendi 5分钟、Mosquera 13分钟、Calafiori 27分钟、Hincapie 41分钟、Lewis-Skelly 54分钟、Gyökeres 88分钟），上半场就累积4张黄牌，开场阶段的鲁莽犯规严重影响了防守结构和球员动作尺度。比赛控制黄灯：控球占优但创造机会不足，多打一人的优势未能转化为射门和威胁上的压倒性。防守身份黄灯：被10人切尔西先进球，48分钟的定位球失球暴露了注意力问题。边际收益黄灯：3次角球无建树，定位球攻防均无亮点。能力叠加黄灯：84%传球成功率尚可，但体系运转因频繁犯规而断断续续。角色清晰绿灯：46分钟换下Calafiori、57分钟同时换上Zubimendi和Martinelli的调整立竿见影，Merino 59分钟进球扳平，换人质量是本场最大亮点。这场平局的核心矛盾在于——纪律失控让一场本应拿下的比赛变成了勉强全身而退。"
+    },
+    "features": {
+      "result": "D",
+      "score_margin": 0,
+      "opponent_name": "Chelsea",
+      "opponent_quality": "top6",
+      "venue": "away",
+      "competition_stage": "league_early",
+      "arsenal_goals": 1,
+      "opponent_goals": 1,
+      "possession_for": 62.0,
+      "possession_against": 38.0,
+      "possession_delta": 24.0,
+      "shots_for": 8,
+      "shots_against": 11,
+      "shot_delta": -3,
+      "shots_on_target_for": 4,
+      "shots_on_target_against": 4,
+      "shot_on_target_delta": 0,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 84.0,
+      "pass_accuracy_against": 80.0,
+      "pass_accuracy_delta": 4.0,
+      "corners_for": 3,
+      "corners_against": 3,
+      "corner_delta": 0,
+      "fouls_for": 13,
+      "fouls_against": 12,
+      "yellow_cards_for": 6,
+      "red_cards_for": 0,
+      "goals_conceded": 1,
+      "opponent_shots_on_target": 4,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 46,
+          "player": "R. Calafiori",
+          "scored_after": false
+        },
+        {
+          "minute": 57,
+          "player": "M. Zubimendi",
+          "scored_after": false
+        },
+        {
+          "minute": 57,
+          "player": "G. Martinelli",
+          "scored_after": false
+        },
+        {
+          "minute": 72,
+          "player": "E. Eze",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 4,
+      "goals_after_arsenal_subs": 1,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 48,
+          "arsenal_score": 0,
+          "opponent_score": 1
+        },
+        {
+          "minute": 59,
+          "arsenal_score": 1,
+          "opponent_score": 1
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "opponent": "Chelsea"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🔴",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟡",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟡"
+      },
+      "overall_signal": "🟡",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=6",
+          "red_cards_for=0",
+          "yellow_cards=6>=4"
+        ],
+        "where_game_is_played": [
+          "shot_delta=-3",
+          "possession_delta=24.0",
+          "corner_delta=0",
+          "opponent_shots_on_target=4"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=1",
+          "opponent_shots_on_target=4"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=3",
+          "corners_against=3",
+          "corners_for=3",
+          "corners_against=3"
+        ],
+        "add_capability_keep_identity": [
+          "result=D",
+          "pass_accuracy_for=84.0",
+          "possession_for=62.0",
+          "goals_for=1"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=4",
+          "goals_after_arsenal_subs=1",
+          "earliest_sub_min=46",
+          "latest_sub_min=72",
+          "goals_after_subs_not_by_substitutes"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1379091",
+      "fixture_id": "1379091",
+      "raw_match_path": "data/backfill/raw/1379091.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1379091.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -2851,6 +4930,175 @@
       },
       "overall_signal": "green",
       "narrative": "阿森纳主场2-0轻取布伦特福德，一场从头到尾都在掌控之中的职业化胜利。Merino第11分钟闪电破门奠定基调，Saka第90分钟锁定胜局，中间79分钟的沉寂被稳健的防守和控球完美填充。62%控球率、15射7正对比对手6射1正，数据层面毫无悬念。文化标准绿灯：全场零黄牌、仅7次犯规，纪律性堪称赛季最佳之一，面对布伦特福德的身体对抗风格始终保持冷静。比赛控制绿灯：从第一分钟就掌握主动，11分钟即取得领先后从容控制节奏，布伦特福德全场仅1次射正，比赛从未脱离阿森纳的掌控。防守身份绿灯：零封对手，仅1次射正——防守端的专注度和结构性在连续作战后依然保持高水准。边际收益黄灯：布伦特福德获得8次角球形成一定威胁，但阿森纳全部化解；自身4次角球未能转化为进球。能力叠加黄灯：84%传球成功率略低于85%的理想线，但Merino和Saka分别进球体现了体系的输出多样性。角色清晰绿灯：44分钟Mosquera换人（疑似伤病保护）、61分钟Madueke和Martinelli同时上场保持攻势、83分钟Rice安全下场，换人节奏教科书级别，Saka替补上场后90分钟进球更是角色清晰的最佳注脚。这是一场'该赢的比赛赢得漂亮'的典型案例。"
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 2,
+      "opponent_name": "Brentford",
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "league_early",
+      "arsenal_goals": 2,
+      "opponent_goals": 0,
+      "possession_for": 62.0,
+      "possession_against": 38.0,
+      "possession_delta": 24.0,
+      "shots_for": 15,
+      "shots_against": 6,
+      "shot_delta": 9,
+      "shots_on_target_for": 7,
+      "shots_on_target_against": 1,
+      "shot_on_target_delta": 6,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 84.0,
+      "pass_accuracy_against": 77.0,
+      "pass_accuracy_delta": 7.0,
+      "corners_for": 4,
+      "corners_against": 8,
+      "corner_delta": -4,
+      "fouls_for": 7,
+      "fouls_against": 9,
+      "yellow_cards_for": 0,
+      "red_cards_for": 0,
+      "goals_conceded": 0,
+      "opponent_shots_on_target": 1,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 44,
+          "player": "C. Mosquera",
+          "scored_after": false
+        },
+        {
+          "minute": 61,
+          "player": "N. Madueke",
+          "scored_after": false
+        },
+        {
+          "minute": 61,
+          "player": "G. Martinelli",
+          "scored_after": false
+        },
+        {
+          "minute": 83,
+          "player": "D. Rice",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 4,
+      "goals_after_arsenal_subs": 1,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 11,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 90,
+          "arsenal_score": 2,
+          "opponent_score": 0
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "opponent": "Brentford"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟢",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=0",
+          "red_cards_for=0",
+          "fouls_for=7",
+          "fouls_against=9"
+        ],
+        "where_game_is_played": [
+          "shot_delta=9",
+          "possession_delta=24.0",
+          "corner_delta=-4",
+          "opponent_shots_on_target=1"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=0",
+          "opponent_shots_on_target=1"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=4",
+          "corners_against=8",
+          "corners_for=4",
+          "corners_against=8"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=84.0",
+          "possession_for=62.0",
+          "goals_for=2"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=4",
+          "goals_after_arsenal_subs=1",
+          "earliest_sub_min=44",
+          "latest_sub_min=83",
+          "goals_after_subs_not_by_substitutes"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1379099",
+      "fixture_id": "1379099",
+      "raw_match_path": "data/backfill/raw/1379099.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1379099.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -2899,6 +5147,184 @@
       },
       "overall_signal": "red",
       "narrative": "阿森纳客场1-2负于阿斯顿维拉，这是本赛季令人沮丧的一场失利。上半场第36分钟Cash率先破门，阿森纳陷入被动。半场连换Merino和Eze试图扭转局面，Trossard在第52分钟扳平比分显示了调整的初步效果。然而此后球队未能完成反超，反而在比赛末段崩盘——第90分钟Buendia绝杀，将阿森纳推入深渊。全场15次射门9次射正的效率本可带来更好结果，但关键时刻的防守注意力不集中成为致命伤。纪律层面亮起红灯：Calafiori和Saka各吃到一张黄牌，后者因与裁判争论染黄，反映出球队在逆境中的情绪管理失控。六个模型中文化标准和防守身份亮红灯——客场被绝杀暴露了心理韧性的严重不足，两黄牌也说明球员在压力下失去了Arteta强调的冷静与专业态度。比赛控制黄灯：控球占优但未能真正主导比赛走势。边际收益和能力叠加黄灯：换人虽有Trossard扳平的亮点，但整体处于被动应对状态。角色清晰黄灯：终场前防线混乱暴露了位置感的缺失。这是一场需要深刻反思的失利——不是实力差距，而是心态崩塌和关键时刻执行力不足的问题。"
+    },
+    "features": {
+      "result": "L",
+      "score_margin": -1,
+      "opponent_name": "Aston Villa",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "league_early",
+      "arsenal_goals": 1,
+      "opponent_goals": 2,
+      "possession_for": 53.0,
+      "possession_against": 47.0,
+      "possession_delta": 6.0,
+      "shots_for": 15,
+      "shots_against": 15,
+      "shot_delta": 0,
+      "shots_on_target_for": 9,
+      "shots_on_target_against": 6,
+      "shot_on_target_delta": 3,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 85.0,
+      "pass_accuracy_against": 82.0,
+      "pass_accuracy_delta": 3.0,
+      "corners_for": 3,
+      "corners_against": 3,
+      "corner_delta": 0,
+      "fouls_for": 8,
+      "fouls_against": 10,
+      "yellow_cards_for": 2,
+      "red_cards_for": 0,
+      "goals_conceded": 2,
+      "opponent_shots_on_target": 6,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 46,
+          "player": "M. Merino",
+          "scored_after": false
+        },
+        {
+          "minute": 46,
+          "player": "E. Eze",
+          "scored_after": false
+        },
+        {
+          "minute": 79,
+          "player": "B. Saka",
+          "scored_after": false
+        },
+        {
+          "minute": 86,
+          "player": null,
+          "scored_after": false
+        },
+        {
+          "minute": 86,
+          "player": "R. Calafiori",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 5,
+      "goals_after_arsenal_subs": 1,
+      "goals_by_substitutes": 1,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 36,
+          "arsenal_score": 0,
+          "opponent_score": 1
+        },
+        {
+          "minute": 52,
+          "arsenal_score": 1,
+          "opponent_score": 1
+        },
+        {
+          "minute": 90,
+          "arsenal_score": 1,
+          "opponent_score": 2
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "opponent": "Aston Villa"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🔴",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟡",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🔴",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🔴"
+      },
+      "overall_signal": "🟡",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=2",
+          "red_cards_for=0",
+          "critical_time_card"
+        ],
+        "where_game_is_played": [
+          "shot_delta=0",
+          "possession_delta=6.0",
+          "corner_delta=0",
+          "opponent_shots_on_target=6"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=2",
+          "opponent_shots_on_target=6"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=3",
+          "corners_against=3",
+          "corners_for=3",
+          "corners_against=3"
+        ],
+        "add_capability_keep_identity": [
+          "result=L",
+          "pass_accuracy_for=85.0",
+          "possession_for=53.0",
+          "goals_for=1"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=5",
+          "goals_after_arsenal_subs=1",
+          "earliest_sub_min=46",
+          "latest_sub_min=86",
+          "goals_by_substitutes=1"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1379109",
+      "fixture_id": "1379109",
+      "raw_match_path": "data/backfill/raw/1379109.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1379109.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -2946,6 +5372,183 @@
       },
       "overall_signal": "neutral",
       "narrative": "阿森纳主场2-1险胜狼队，过程远比比分显示的更加紧张刺激。69%的控球率和16次射门展现了压倒性的场面优势，但仅2次射正的冰冷数据暴露了终结效率的严重问题——大量射门偏离目标，未能将控球优势转化为有效威胁。第31分钟早早换下White，57分钟三人同时换人（Eze、Martinelli、Zubimendi）掀起进攻浪潮，调整效果在第70分钟显现——Johnstone的乌龙球打破僵局，Mosquera随后再入一球看似锁定胜局。然而第90分钟Arokodare的进球和随后的混乱将悬念拉回，终场前的紧张气氛令人揪心。狼队全场仅3次射门2次射正却打进1球，进攻效率远超主队。纪律方面阿森纳零黄牌值得肯定，但狼队4张黄牌反映出比赛对抗的激烈程度。能力叠加绿灯：替补球员上场后带来了活力和决定性进球；调整绿灯：换人策略有效改变了比赛走势。但比赛控制黄灯：69%控球率却赢得如此艰难令人不安；防守身份黄灯：末段丢球暴露了注意力的涣散；角色清晰黄灯：大量射门偏离目标说明进攻端的定位和决策不够精准。这是一场典型的'赢了但不令人满意'的比赛，胜利的喜悦被过程的粗糙所冲淡。"
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 1,
+      "opponent_name": "Wolves",
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "league_early",
+      "arsenal_goals": 2,
+      "opponent_goals": 1,
+      "possession_for": 69.0,
+      "possession_against": 31.0,
+      "possession_delta": 38.0,
+      "shots_for": 16,
+      "shots_against": 3,
+      "shot_delta": 13,
+      "shots_on_target_for": 2,
+      "shots_on_target_against": 2,
+      "shot_on_target_delta": 0,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 87.0,
+      "pass_accuracy_against": 69.0,
+      "pass_accuracy_delta": 18.0,
+      "corners_for": 8,
+      "corners_against": 0,
+      "corner_delta": 8,
+      "fouls_for": 7,
+      "fouls_against": 15,
+      "yellow_cards_for": 0,
+      "red_cards_for": 0,
+      "goals_conceded": 1,
+      "opponent_shots_on_target": 2,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 31,
+          "player": "B. White",
+          "scored_after": false
+        },
+        {
+          "minute": 57,
+          "player": "E. Eze",
+          "scored_after": false
+        },
+        {
+          "minute": 57,
+          "player": "G. Martinelli",
+          "scored_after": false
+        },
+        {
+          "minute": 58,
+          "player": "M. Zubimendi",
+          "scored_after": false
+        },
+        {
+          "minute": 81,
+          "player": "V. Gyökeres",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 5,
+      "goals_after_arsenal_subs": 2,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 70,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 90,
+          "arsenal_score": 1,
+          "opponent_score": 1
+        },
+        {
+          "minute": 90,
+          "arsenal_score": 2,
+          "opponent_score": 1
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "opponent": "Wolves"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟢",
+        "add_capability_keep_identity": "🟢",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=0",
+          "red_cards_for=0",
+          "fouls_for=7",
+          "fouls_against=15"
+        ],
+        "where_game_is_played": [
+          "shot_delta=13",
+          "possession_delta=38.0",
+          "corner_delta=8",
+          "opponent_shots_on_target=2"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=1",
+          "opponent_shots_on_target=2"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=8",
+          "corners_against=0"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=87.0",
+          "possession_for=69.0",
+          "goals_for=2"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=5",
+          "goals_after_arsenal_subs=2",
+          "earliest_sub_min=31",
+          "latest_sub_min=81",
+          "goals_after_subs_not_by_substitutes"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1379119",
+      "fixture_id": "1379119",
+      "raw_match_path": "data/backfill/raw/1379119.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1379119.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -2994,6 +5597,162 @@
       },
       "overall_signal": "neutral",
       "narrative": "阿森纳客场1-0小胜埃弗顿，Gyökeres第27分钟点球破门成为全场唯一进球。65%的控球率和654次传球高达88%的成功率，体现了球队对比赛节奏的绝对掌控力。防守端仅让对手5次射门1次射正，堪称铁壁般的防线表现。然而13次射门仅2次射正的数据再次暴露终结效率的短板——除点球外几乎未能创造出真正有威胁的破门良机。文化标准亮黄灯：Gyökeres和Martinelli各因拖延时间吃到黄牌，虽属战术性行为但不符合Arteta一贯强调的高标准职业态度。比赛控制绿灯：客场控球超过六成，传球流畅节奏完全由阿森纳主导；防守身份绿灯：零封对手且将射门限制到最低水平；角色清晰绿灯：防守端分工明确结构紧凑，没有给对手任何反击空间。边际收益黄灯：唯一进球来自定位球点球，缺乏运动战中的破局手段和创造力；能力叠加黄灯：换人策略以保护结果为主——65分钟Gyökeres下场、80分钟Trossard上场、88分钟Odegaard下场，更多是巩固而非提升进攻火力。这是一场务实高效的客场胜利，结果令人满意但过程缺乏足够的说服力和观赏性，赢球方式过于单一。"
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 1,
+      "opponent_name": "Everton",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "league_early",
+      "arsenal_goals": 1,
+      "opponent_goals": 0,
+      "possession_for": 65.0,
+      "possession_against": 35.0,
+      "possession_delta": 30.0,
+      "shots_for": 13,
+      "shots_against": 5,
+      "shot_delta": 8,
+      "shots_on_target_for": 2,
+      "shots_on_target_against": 1,
+      "shot_on_target_delta": 1,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 88.0,
+      "pass_accuracy_against": 74.0,
+      "pass_accuracy_delta": 14.0,
+      "corners_for": 3,
+      "corners_against": 2,
+      "corner_delta": 1,
+      "fouls_for": 5,
+      "fouls_against": 4,
+      "yellow_cards_for": 2,
+      "red_cards_for": 0,
+      "goals_conceded": 0,
+      "opponent_shots_on_target": 1,
+      "set_piece_goals_for": 1,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 65,
+          "player": "V. Gyökeres",
+          "scored_after": false
+        },
+        {
+          "minute": 80,
+          "player": "L. Trossard",
+          "scored_after": false
+        },
+        {
+          "minute": 88,
+          "player": "M. Odegaard",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 3,
+      "goals_after_arsenal_subs": 0,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 27,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "opponent": "Everton"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟡",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟢",
+        "add_capability_keep_identity": "🟢",
+        "role_clarity": "🟡"
+      },
+      "dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟡",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=2",
+          "red_cards_for=0",
+          "fouls_for=5",
+          "fouls_against=4",
+          "yellow_cards=2>=2"
+        ],
+        "where_game_is_played": [
+          "shot_delta=8",
+          "possession_delta=30.0",
+          "corner_delta=1",
+          "opponent_shots_on_target=1"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=0",
+          "opponent_shots_on_target=1"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=1",
+          "set_piece_goals_against=0"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=88.0",
+          "possession_for=65.0",
+          "goals_for=1"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=3",
+          "goals_after_arsenal_subs=0",
+          "earliest_sub_min=65",
+          "latest_sub_min=88",
+          "goals_conceded_after_subs=0"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1379132",
+      "fixture_id": "1379132",
+      "raw_match_path": "data/backfill/raw/1379132.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1379132.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -3186,6 +5945,162 @@
     "evaluation": {
       "model_signals": {},
       "dimension_signals": {}
+    },
+    "features": {
+      "result": "D",
+      "score_margin": 0,
+      "opponent_name": "Nottingham Forest",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "league_early",
+      "arsenal_goals": 0,
+      "opponent_goals": 0,
+      "possession_for": 60.0,
+      "possession_against": 40.0,
+      "possession_delta": 20.0,
+      "shots_for": 15,
+      "shots_against": 6,
+      "shot_delta": 9,
+      "shots_on_target_for": 3,
+      "shots_on_target_against": 0,
+      "shot_on_target_delta": 3,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 84.0,
+      "pass_accuracy_against": 81.0,
+      "pass_accuracy_delta": 3.0,
+      "corners_for": 9,
+      "corners_against": 4,
+      "corner_delta": 5,
+      "fouls_for": 14,
+      "fouls_against": 8,
+      "yellow_cards_for": 1,
+      "red_cards_for": 0,
+      "goals_conceded": 0,
+      "opponent_shots_on_target": 0,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 46,
+          "player": "G. Martinelli",
+          "scored_after": false
+        },
+        {
+          "minute": 57,
+          "player": "V. Gyökeres",
+          "scored_after": false
+        },
+        {
+          "minute": 57,
+          "player": "N. Madueke",
+          "scored_after": false
+        },
+        {
+          "minute": 57,
+          "player": "M. Odegaard",
+          "scored_after": false
+        },
+        {
+          "minute": 79,
+          "player": "M. Zubimendi",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 5,
+      "goals_after_arsenal_subs": 0,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [],
+      "predicted_plan_match_features": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "opponent": "Nottingham Forest"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟡",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟢",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🟡"
+      },
+      "dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟡",
+        "satisfaction": "🟡"
+      },
+      "overall_signal": "🟡",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=1",
+          "red_cards_for=0",
+          "fouls_for=14",
+          "fouls_against=8",
+          "fouls_delta=6>=4"
+        ],
+        "where_game_is_played": [
+          "shot_delta=9",
+          "possession_delta=20.0",
+          "corner_delta=5",
+          "opponent_shots_on_target=0"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=0",
+          "opponent_shots_on_target=0"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=9",
+          "corners_against=4"
+        ],
+        "add_capability_keep_identity": [
+          "result=D",
+          "pass_accuracy_for=84.0",
+          "possession_for=60.0",
+          "goals_for=0"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=5",
+          "goals_after_arsenal_subs=0",
+          "earliest_sub_min=46",
+          "latest_sub_min=79"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1379185",
+      "fixture_id": "1379185",
+      "raw_match_path": "data/backfill/raw/1379185.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1379185.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -3286,6 +6201,185 @@
     "evaluation": {
       "model_signals": {},
       "dimension_signals": {}
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 3,
+      "opponent_name": "Sunderland",
+      "opponent_quality": "lower",
+      "venue": "home",
+      "competition_stage": "league_late",
+      "arsenal_goals": 3,
+      "opponent_goals": 0,
+      "possession_for": 49.0,
+      "possession_against": 51.0,
+      "possession_delta": -2.0,
+      "shots_for": 16,
+      "shots_against": 5,
+      "shot_delta": 11,
+      "shots_on_target_for": 5,
+      "shots_on_target_against": 3,
+      "shot_on_target_delta": 2,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 84.0,
+      "pass_accuracy_against": 80.0,
+      "pass_accuracy_delta": 4.0,
+      "corners_for": 5,
+      "corners_against": 2,
+      "corner_delta": 3,
+      "fouls_for": 11,
+      "fouls_against": 8,
+      "yellow_cards_for": 1,
+      "red_cards_for": 0,
+      "goals_conceded": 0,
+      "opponent_shots_on_target": 3,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 60,
+          "player": "Gabriel Jesus",
+          "scored_after": false
+        },
+        {
+          "minute": 60,
+          "player": "N. Madueke",
+          "scored_after": false
+        },
+        {
+          "minute": 67,
+          "player": "R. Calafiori",
+          "scored_after": false
+        },
+        {
+          "minute": 67,
+          "player": "K. Havertz",
+          "scored_after": false
+        },
+        {
+          "minute": 89,
+          "player": "L. Trossard",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 5,
+      "goals_after_arsenal_subs": 2,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 42,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 66,
+          "arsenal_score": 2,
+          "opponent_score": 0
+        },
+        {
+          "minute": 90,
+          "arsenal_score": 3,
+          "opponent_score": 0
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "opponent": "Sunderland"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=1",
+          "red_cards_for=0",
+          "fouls_for=11",
+          "fouls_against=8"
+        ],
+        "where_game_is_played": [
+          "shot_delta=11",
+          "possession_delta=-2.0",
+          "corner_delta=3",
+          "opponent_shots_on_target=3"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=0",
+          "opponent_shots_on_target=3"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=5",
+          "corners_against=2",
+          "corners_for=5",
+          "corners_against=2"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=84.0",
+          "possession_for=49.0",
+          "goals_for=3"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=5",
+          "goals_after_arsenal_subs=2",
+          "earliest_sub_min=60",
+          "latest_sub_min=89",
+          "goals_after_subs_not_by_substitutes"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1379209",
+      "fixture_id": "1379209",
+      "raw_match_path": "data/backfill/raw/1379209.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1379209.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -3386,6 +6480,190 @@
     "evaluation": {
       "model_signals": {},
       "dimension_signals": {}
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 3,
+      "opponent_name": "Tottenham",
+      "opponent_quality": "top6",
+      "venue": "away",
+      "competition_stage": "league_late",
+      "arsenal_goals": 4,
+      "opponent_goals": 1,
+      "possession_for": 60.0,
+      "possession_against": 40.0,
+      "possession_delta": 20.0,
+      "shots_for": 20,
+      "shots_against": 6,
+      "shot_delta": 14,
+      "shots_on_target_for": 7,
+      "shots_on_target_against": 5,
+      "shot_on_target_delta": 2,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 79.0,
+      "pass_accuracy_against": 73.0,
+      "pass_accuracy_delta": 6.0,
+      "corners_for": 5,
+      "corners_against": 2,
+      "corner_delta": 3,
+      "fouls_for": 11,
+      "fouls_against": 17,
+      "yellow_cards_for": 1,
+      "red_cards_for": 0,
+      "goals_conceded": 1,
+      "opponent_shots_on_target": 5,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 57,
+          "player": "J. Timber",
+          "scored_after": false
+        },
+        {
+          "minute": 76,
+          "player": "L. Trossard",
+          "scored_after": false
+        },
+        {
+          "minute": 77,
+          "player": "E. Eze",
+          "scored_after": false
+        },
+        {
+          "minute": 90,
+          "player": "B. Saka",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 4,
+      "goals_after_arsenal_subs": 2,
+      "goals_by_substitutes": 2,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 32,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 34,
+          "arsenal_score": 1,
+          "opponent_score": 1
+        },
+        {
+          "minute": 47,
+          "arsenal_score": 2,
+          "opponent_score": 1
+        },
+        {
+          "minute": 61,
+          "arsenal_score": 3,
+          "opponent_score": 1
+        },
+        {
+          "minute": 90,
+          "arsenal_score": 4,
+          "opponent_score": 1
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "opponent": "Tottenham"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟡",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟡"
+      },
+      "overall_signal": "🟡",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=1",
+          "red_cards_for=0",
+          "fouls_for=11",
+          "fouls_against=17"
+        ],
+        "where_game_is_played": [
+          "shot_delta=14",
+          "possession_delta=20.0",
+          "corner_delta=3",
+          "opponent_shots_on_target=5"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=1",
+          "opponent_shots_on_target=5"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=5",
+          "corners_against=2",
+          "corners_for=5",
+          "corners_against=2"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=79.0",
+          "possession_for=60.0",
+          "goals_for=4"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=4",
+          "goals_after_arsenal_subs=2",
+          "earliest_sub_min=57",
+          "latest_sub_min=90",
+          "goals_by_substitutes=2"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1379237",
+      "fixture_id": "1379237",
+      "raw_match_path": "data/backfill/raw/1379237.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1379237.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -3419,6 +6697,175 @@
     "evaluation": {
       "model_signals": {},
       "dimension_signals": {}
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 1,
+      "opponent_name": "Chelsea",
+      "opponent_quality": "top6",
+      "venue": "home",
+      "competition_stage": "league_late",
+      "arsenal_goals": 2,
+      "opponent_goals": 1,
+      "possession_for": 41.0,
+      "possession_against": 59.0,
+      "possession_delta": -18.0,
+      "shots_for": 12,
+      "shots_against": 9,
+      "shot_delta": 3,
+      "shots_on_target_for": 5,
+      "shots_on_target_against": 3,
+      "shot_on_target_delta": 2,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 82.0,
+      "pass_accuracy_against": 88.0,
+      "pass_accuracy_delta": -6.0,
+      "corners_for": 5,
+      "corners_against": 10,
+      "corner_delta": -5,
+      "fouls_for": 11,
+      "fouls_against": 14,
+      "yellow_cards_for": 1,
+      "red_cards_for": 0,
+      "goals_conceded": 1,
+      "opponent_shots_on_target": 3,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 56,
+          "player": "L. Trossard",
+          "scored_after": false
+        },
+        {
+          "minute": 76,
+          "player": "V. Gyökeres",
+          "scored_after": false
+        },
+        {
+          "minute": 76,
+          "player": "D. Rice",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 3,
+      "goals_after_arsenal_subs": 1,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 21,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 45,
+          "arsenal_score": 1,
+          "opponent_score": 1
+        },
+        {
+          "minute": 66,
+          "arsenal_score": 2,
+          "opponent_score": 1
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "opponent": "Chelsea"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=1",
+          "red_cards_for=0",
+          "fouls_for=11",
+          "fouls_against=14"
+        ],
+        "where_game_is_played": [
+          "shot_delta=3",
+          "possession_delta=-18.0",
+          "corner_delta=-5",
+          "opponent_shots_on_target=3"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=1",
+          "opponent_shots_on_target=3"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=5",
+          "corners_against=10",
+          "corners_for=5",
+          "corners_against=10"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=82.0",
+          "possession_for=41.0",
+          "goals_for=2"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=3",
+          "goals_after_arsenal_subs=1",
+          "earliest_sub_min=56",
+          "latest_sub_min=76",
+          "goals_after_subs_not_by_substitutes"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1379239",
+      "fixture_id": "1379239",
+      "raw_match_path": "data/backfill/raw/1379239.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1379239.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -3583,6 +7030,169 @@
     "evaluation": {
       "model_signals": {},
       "dimension_signals": {}
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 1,
+      "opponent_name": "Newcastle",
+      "opponent_quality": "top6",
+      "venue": "home",
+      "competition_stage": "league_late",
+      "arsenal_goals": 1,
+      "opponent_goals": 0,
+      "possession_for": 45.0,
+      "possession_against": 55.0,
+      "possession_delta": -10.0,
+      "shots_for": 11,
+      "shots_against": 13,
+      "shot_delta": -2,
+      "shots_on_target_for": 4,
+      "shots_on_target_against": 3,
+      "shot_on_target_delta": 1,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 81.0,
+      "pass_accuracy_against": 85.0,
+      "pass_accuracy_delta": -4.0,
+      "corners_for": 7,
+      "corners_against": 2,
+      "corner_delta": 5,
+      "fouls_for": 13,
+      "fouls_against": 10,
+      "yellow_cards_for": 2,
+      "red_cards_for": 0,
+      "goals_conceded": 0,
+      "opponent_shots_on_target": 3,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 34,
+          "player": "K. Havertz",
+          "scored_after": false
+        },
+        {
+          "minute": 53,
+          "player": "E. Eze",
+          "scored_after": false
+        },
+        {
+          "minute": 81,
+          "player": "N. Madueke",
+          "scored_after": false
+        },
+        {
+          "minute": 81,
+          "player": "M. Zubimendi",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 4,
+      "goals_after_arsenal_subs": 0,
+      "goals_by_substitutes": 1,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 9,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "opponent": "Newcastle"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟡",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟢",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🟡"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟡",
+        "satisfaction": "🟡"
+      },
+      "overall_signal": "🟡",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=2",
+          "red_cards_for=0",
+          "fouls_for=13",
+          "fouls_against=10",
+          "yellow_cards=2>=2"
+        ],
+        "where_game_is_played": [
+          "shot_delta=-2",
+          "possession_delta=-10.0",
+          "corner_delta=5",
+          "opponent_shots_on_target=3"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=0",
+          "opponent_shots_on_target=3"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=7",
+          "corners_against=2"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=81.0",
+          "possession_for=45.0",
+          "goals_for=1"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=4",
+          "goals_after_arsenal_subs=0",
+          "earliest_sub_min=34",
+          "latest_sub_min=81",
+          "goals_conceded_after_subs=0"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1379299",
+      "fixture_id": "1379299",
+      "raw_match_path": "data/backfill/raw/1379299.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1379299.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -3715,6 +7325,176 @@
       },
       "overall_signal": "green",
       "narrative": "欧冠小组赛客场2-0击败毕尔巴鄂竞技，阿森纳在圣马梅斯球场完成了一次极具说服力的欧战表演。62%控球率和490次传球体现了对比赛节奏的掌控，尽管双方射门次数持平各11次，但阿森纳6射正对2射正的精准度差距决定了比赛走向。文化标准层面，在欧冠客场面对西甲劲旅保持零封并全取三分，展现了球队在最高舞台上的竞争信念和纪律性。比赛控制表现优秀——圣马梅斯球场的狂热氛围并未动摇球队的控球节奏，83%传球准确率在客场高强度对抗中属上乘水准。防守身份是本场亮点，对手同样11次射门却仅有2次射正，说明防守阵型有效压制了对手的射门质量，全场零封彰显防线的稳固。边际收益方面存在改进空间——11射6正仅入2球的转化率尚有提升余地，定位球机会的利用效率也可以更高。能力叠加充分展现，上下半场各入一球且来自不同进攻组合，多点威胁令对手防不胜防。角色清晰度在轮换背景下尤为突出，「轮换体能管理」的赛前重点得到落实，球员在高强度客场中依然保持战术纪律。下半场连入两球的调整效果出色。整体三个维度全面积极，为欧冠征程奠定了坚实基础。"
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 2,
+      "opponent_name": "Athletic Club",
+      "opponent_quality": "lower",
+      "venue": "away",
+      "competition_stage": "group_stage",
+      "arsenal_goals": 2,
+      "opponent_goals": 0,
+      "possession_for": 62.0,
+      "possession_against": 38.0,
+      "possession_delta": 24.0,
+      "shots_for": 11,
+      "shots_against": 11,
+      "shot_delta": 0,
+      "shots_on_target_for": 6,
+      "shots_on_target_against": 2,
+      "shot_on_target_delta": 4,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 83.0,
+      "pass_accuracy_against": 74.0,
+      "pass_accuracy_delta": 9.0,
+      "corners_for": 2,
+      "corners_against": 2,
+      "corner_delta": 0,
+      "fouls_for": 15,
+      "fouls_against": 18,
+      "yellow_cards_for": 3,
+      "red_cards_for": 0,
+      "goals_conceded": 0,
+      "opponent_shots_on_target": 2,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 65,
+          "player": "V. Gyökeres",
+          "scored_after": false
+        },
+        {
+          "minute": 71,
+          "player": "E. Eze",
+          "scored_after": false
+        },
+        {
+          "minute": 90,
+          "player": "R. Calafiori",
+          "scored_after": false
+        },
+        {
+          "minute": 90,
+          "player": "N. Madueke",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 4,
+      "goals_after_arsenal_subs": 2,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 72,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 87,
+          "arsenal_score": 2,
+          "opponent_score": 0
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "group_stage",
+        "opponent": "Athletic Club"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟡",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟢",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=3",
+          "red_cards_for=0",
+          "fouls_for=15",
+          "fouls_against=18",
+          "yellow_cards=3>=2"
+        ],
+        "where_game_is_played": [
+          "shot_delta=0",
+          "possession_delta=24.0",
+          "corner_delta=0",
+          "opponent_shots_on_target=2"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=0",
+          "opponent_shots_on_target=2"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=2",
+          "corners_against=2",
+          "corners_for=2",
+          "corners_against=2"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=83.0",
+          "possession_for=62.0",
+          "goals_for=2"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=4",
+          "goals_after_arsenal_subs=2",
+          "earliest_sub_min=65",
+          "latest_sub_min=90",
+          "goals_after_subs_not_by_substitutes"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1451021",
+      "fixture_id": "1451021",
+      "raw_match_path": "data/backfill/raw/1451021.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1451021.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -3910,6 +7690,189 @@
       },
       "overall_signal": "green",
       "narrative": "阿森纳主场3-1击败拜仁慕尼黑，用一场经典的效率型胜利震撼欧冠赛场。40%控球率看似被动，但13射8正对比拜仁8射2正的数据揭示了真相——阿森纳主动让出球权，用精准的转换打击对手。Timber第22分钟先拔头筹，拜仁32分钟由Karl扳平后，下半场Madueke第69分钟和Martinelli第77分钟先后破门锁定胜局。文化标准黄灯：2张黄牌（Saliba 74分钟拖延时间、Merino 80分钟犯规），加上全场16次犯规，身体对抗强度偏高但均在比赛语境下可理解。比赛控制绿灯：虽然控球率仅40%，但射正比8:2的碾压优势说明阿森纳完全掌控了比赛的致命区域——这不是被动挨打，而是主动选择的反击战。防守身份绿灯：拜仁全场仅2次射正，面对拥有60%控球率的德甲豪门，防守端的纪律性和结构性令人印象深刻。边际收益黄灯：6次角球仅1次于拜仁，但未转化为定位球进球。能力叠加绿灯：80%传球成功率在低控球率下可以接受，三人进球（Timber、Madueke、Martinelli）展现了多点开花的进攻体系。角色清晰绿灯：38分钟Trossard早早替补上场体现战术灵活性，68分钟Saka和Lewis-Skelly的换人维持了强度，替补Madueke上场仅1分钟就进球。这是一场教科书级别的big game效率足球。"
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 2,
+      "opponent_name": "Bayern München",
+      "opponent_quality": "lower",
+      "venue": "home",
+      "competition_stage": "group_stage",
+      "arsenal_goals": 3,
+      "opponent_goals": 1,
+      "possession_for": 40.0,
+      "possession_against": 60.0,
+      "possession_delta": -20.0,
+      "shots_for": 13,
+      "shots_against": 8,
+      "shot_delta": 5,
+      "shots_on_target_for": 8,
+      "shots_on_target_against": 2,
+      "shot_on_target_delta": 6,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 80.0,
+      "pass_accuracy_against": 86.0,
+      "pass_accuracy_delta": -6.0,
+      "corners_for": 6,
+      "corners_against": 1,
+      "corner_delta": 5,
+      "fouls_for": 16,
+      "fouls_against": 13,
+      "yellow_cards_for": 2,
+      "red_cards_for": 0,
+      "goals_conceded": 1,
+      "opponent_shots_on_target": 2,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 38,
+          "player": "L. Trossard",
+          "scored_after": false
+        },
+        {
+          "minute": 68,
+          "player": "B. Saka",
+          "scored_after": false
+        },
+        {
+          "minute": 68,
+          "player": "M. Lewis-Skelly",
+          "scored_after": false
+        },
+        {
+          "minute": 80,
+          "player": "J. Timber",
+          "scored_after": false
+        },
+        {
+          "minute": 80,
+          "player": "E. Eze",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 5,
+      "goals_after_arsenal_subs": 2,
+      "goals_by_substitutes": 1,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 22,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 32,
+          "arsenal_score": 1,
+          "opponent_score": 1
+        },
+        {
+          "minute": 69,
+          "arsenal_score": 2,
+          "opponent_score": 1
+        },
+        {
+          "minute": 77,
+          "arsenal_score": 3,
+          "opponent_score": 1
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "group_stage",
+        "opponent": "Bayern München"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟡",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟢",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟡"
+      },
+      "overall_signal": "🟡",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=2",
+          "red_cards_for=0",
+          "fouls_for=16",
+          "fouls_against=13",
+          "yellow_cards=2>=2"
+        ],
+        "where_game_is_played": [
+          "shot_delta=5",
+          "possession_delta=-20.0",
+          "corner_delta=5",
+          "opponent_shots_on_target=2"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=1",
+          "opponent_shots_on_target=2"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=6",
+          "corners_against=1"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=80.0",
+          "possession_for=40.0",
+          "goals_for=3"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=5",
+          "goals_after_arsenal_subs=2",
+          "earliest_sub_min=38",
+          "latest_sub_min=80",
+          "goals_by_substitutes=1"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1451107",
+      "fixture_id": "1451107",
+      "raw_match_path": "data/backfill/raw/1451107.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1451107.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -3993,6 +7956,191 @@
     "evaluation": {
       "model_signals": {},
       "dimension_signals": {}
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 2,
+      "opponent_name": "Inter",
+      "opponent_quality": "european_elite",
+      "venue": "away",
+      "competition_stage": "group_stage",
+      "arsenal_goals": 3,
+      "opponent_goals": 1,
+      "possession_for": 49.0,
+      "possession_against": 51.0,
+      "possession_delta": -2.0,
+      "shots_for": 17,
+      "shots_against": 18,
+      "shot_delta": -1,
+      "shots_on_target_for": 6,
+      "shots_on_target_against": 4,
+      "shot_on_target_delta": 2,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 83.0,
+      "pass_accuracy_against": 87.0,
+      "pass_accuracy_delta": -4.0,
+      "corners_for": 7,
+      "corners_against": 4,
+      "corner_delta": 3,
+      "fouls_for": 17,
+      "fouls_against": 9,
+      "yellow_cards_for": 2,
+      "red_cards_for": 0,
+      "goals_conceded": 1,
+      "opponent_shots_on_target": 4,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 64,
+          "player": "J. Timber",
+          "scored_after": false
+        },
+        {
+          "minute": 64,
+          "player": "E. Eze",
+          "scored_after": false
+        },
+        {
+          "minute": 75,
+          "player": "C. Mosquera",
+          "scored_after": false
+        },
+        {
+          "minute": 75,
+          "player": "Gabriel Jesus",
+          "scored_after": false
+        },
+        {
+          "minute": 79,
+          "player": "L. Trossard",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 5,
+      "goals_after_arsenal_subs": 1,
+      "goals_by_substitutes": 2,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 10,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 18,
+          "arsenal_score": 1,
+          "opponent_score": 1
+        },
+        {
+          "minute": 31,
+          "arsenal_score": 2,
+          "opponent_score": 1
+        },
+        {
+          "minute": 84,
+          "arsenal_score": 3,
+          "opponent_score": 1
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "european_elite",
+        "venue": "away",
+        "competition_stage": "group_stage",
+        "opponent": "Inter"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🔴",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟡",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟡"
+      },
+      "overall_signal": "🟡",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=2",
+          "red_cards_for=0",
+          "fouls_for=17",
+          "fouls_against=9",
+          "fouls_delta=8>=8"
+        ],
+        "where_game_is_played": [
+          "shot_delta=-1",
+          "possession_delta=-2.0",
+          "corner_delta=3",
+          "opponent_shots_on_target=4"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=1",
+          "opponent_shots_on_target=4"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=7",
+          "corners_against=4",
+          "corners_for=7",
+          "corners_against=4"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=83.0",
+          "possession_for=49.0",
+          "goals_for=3"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=5",
+          "goals_after_arsenal_subs=1",
+          "earliest_sub_min=64",
+          "latest_sub_min=79",
+          "goals_by_substitutes=2"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1451136",
+      "fixture_id": "1451136",
+      "raw_match_path": "data/backfill/raw/1451136.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1451136.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -4060,6 +8208,167 @@
     "evaluation": {
       "model_signals": {},
       "dimension_signals": {}
+    },
+    "features": {
+      "result": "D",
+      "score_margin": 0,
+      "opponent_name": "Bayer Leverkusen",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "knockout",
+      "arsenal_goals": 1,
+      "opponent_goals": 1,
+      "possession_for": 55.0,
+      "possession_against": 45.0,
+      "possession_delta": 10.0,
+      "shots_for": 6,
+      "shots_against": 10,
+      "shot_delta": -4,
+      "shots_on_target_for": 2,
+      "shots_on_target_against": 3,
+      "shot_on_target_delta": -1,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 87.0,
+      "pass_accuracy_against": 87.0,
+      "pass_accuracy_delta": 0.0,
+      "corners_for": 3,
+      "corners_against": 2,
+      "corner_delta": 1,
+      "fouls_for": 10,
+      "fouls_against": 9,
+      "yellow_cards_for": 3,
+      "red_cards_for": 0,
+      "goals_conceded": 1,
+      "opponent_shots_on_target": 3,
+      "set_piece_goals_for": 1,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 60,
+          "player": "B. Saka",
+          "scored_after": false
+        },
+        {
+          "minute": 74,
+          "player": "V. Gyökeres",
+          "scored_after": false
+        },
+        {
+          "minute": 82,
+          "player": "E. Eze",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 3,
+      "goals_after_arsenal_subs": 1,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 46,
+          "arsenal_score": 0,
+          "opponent_score": 1
+        },
+        {
+          "minute": 89,
+          "arsenal_score": 1,
+          "opponent_score": 1
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "knockout",
+        "opponent": "Bayer Leverkusen"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟡",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟢",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟡"
+      },
+      "overall_signal": "🟡",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=3",
+          "red_cards_for=0",
+          "fouls_for=10",
+          "fouls_against=9",
+          "yellow_cards=3>=2"
+        ],
+        "where_game_is_played": [
+          "shot_delta=-4",
+          "possession_delta=10.0",
+          "corner_delta=1",
+          "opponent_shots_on_target=3"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=1",
+          "opponent_shots_on_target=3"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=1",
+          "set_piece_goals_against=0"
+        ],
+        "add_capability_keep_identity": [
+          "result=D",
+          "pass_accuracy_for=87.0",
+          "possession_for=55.0",
+          "goals_for=1"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=3",
+          "goals_after_arsenal_subs=1",
+          "earliest_sub_min=60",
+          "latest_sub_min=82",
+          "goals_after_subs_not_by_substitutes"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1528322",
+      "fixture_id": "1528322",
+      "raw_match_path": "data/backfill/raw/1528322.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1528322.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -4093,6 +8402,180 @@
     "evaluation": {
       "model_signals": {},
       "dimension_signals": {}
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 2,
+      "opponent_name": "Bayer Leverkusen",
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "knockout",
+      "arsenal_goals": 2,
+      "opponent_goals": 0,
+      "possession_for": 42.0,
+      "possession_against": 58.0,
+      "possession_delta": -16.0,
+      "shots_for": 21,
+      "shots_against": 9,
+      "shot_delta": 12,
+      "shots_on_target_for": 12,
+      "shots_on_target_against": 2,
+      "shot_on_target_delta": 10,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 83.0,
+      "pass_accuracy_against": 88.0,
+      "pass_accuracy_delta": -5.0,
+      "corners_for": 10,
+      "corners_against": 8,
+      "corner_delta": 2,
+      "fouls_for": 4,
+      "fouls_against": 8,
+      "yellow_cards_for": 0,
+      "red_cards_for": 0,
+      "goals_conceded": 0,
+      "opponent_shots_on_target": 2,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 68,
+          "player": "M. Zubimendi",
+          "scored_after": false
+        },
+        {
+          "minute": 69,
+          "player": "E. Eze",
+          "scored_after": false
+        },
+        {
+          "minute": 69,
+          "player": "L. Trossard",
+          "scored_after": false
+        },
+        {
+          "minute": 69,
+          "player": "B. White",
+          "scored_after": false
+        },
+        {
+          "minute": 90,
+          "player": "V. Gyökeres",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 5,
+      "goals_after_arsenal_subs": 0,
+      "goals_by_substitutes": 1,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 36,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 63,
+          "arsenal_score": 2,
+          "opponent_score": 0
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "knockout",
+        "opponent": "Bayer Leverkusen"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🟡"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟡",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟡",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=0",
+          "red_cards_for=0",
+          "fouls_for=4",
+          "fouls_against=8"
+        ],
+        "where_game_is_played": [
+          "shot_delta=12",
+          "possession_delta=-16.0",
+          "corner_delta=2",
+          "opponent_shots_on_target=2"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=0",
+          "opponent_shots_on_target=2"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=10",
+          "corners_against=8",
+          "corners_for=10",
+          "corners_against=8"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=83.0",
+          "possession_for=42.0",
+          "goals_for=2"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=5",
+          "goals_after_arsenal_subs=0",
+          "earliest_sub_min=68",
+          "latest_sub_min=90",
+          "goals_conceded_after_subs=0"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1528330",
+      "fixture_id": "1528330",
+      "raw_match_path": "data/backfill/raw/1528330.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1528330.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -4126,6 +8609,164 @@
     "evaluation": {
       "model_signals": {},
       "dimension_signals": {}
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 1,
+      "opponent_name": "Sporting CP",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "knockout",
+      "arsenal_goals": 1,
+      "opponent_goals": 0,
+      "possession_for": 56.0,
+      "possession_against": 44.0,
+      "possession_delta": 12.0,
+      "shots_for": 8,
+      "shots_against": 11,
+      "shot_delta": -3,
+      "shots_on_target_for": 4,
+      "shots_on_target_against": 5,
+      "shot_on_target_delta": -1,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 92.0,
+      "pass_accuracy_against": 85.0,
+      "pass_accuracy_delta": 7.0,
+      "corners_for": 4,
+      "corners_against": 3,
+      "corner_delta": 1,
+      "fouls_for": 10,
+      "fouls_against": 11,
+      "yellow_cards_for": 0,
+      "red_cards_for": 0,
+      "goals_conceded": 0,
+      "opponent_shots_on_target": 5,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 70,
+          "player": "M. Odegaard",
+          "scored_after": false
+        },
+        {
+          "minute": 76,
+          "player": "L. Trossard",
+          "scored_after": false
+        },
+        {
+          "minute": 76,
+          "player": "N. Madueke",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 3,
+      "goals_after_arsenal_subs": 1,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 90,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "knockout",
+        "opponent": "Sporting CP"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟢",
+        "role_clarity": "🟡"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟡",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟡",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=0",
+          "red_cards_for=0",
+          "fouls_for=10",
+          "fouls_against=11"
+        ],
+        "where_game_is_played": [
+          "shot_delta=-3",
+          "possession_delta=12.0",
+          "corner_delta=1",
+          "opponent_shots_on_target=5"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=0",
+          "opponent_shots_on_target=5"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=4",
+          "corners_against=3",
+          "corners_for=4",
+          "corners_against=3"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=92.0",
+          "possession_for=56.0",
+          "goals_for=1"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=3",
+          "goals_after_arsenal_subs=1",
+          "earliest_sub_min=70",
+          "latest_sub_min=76"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1534570",
+      "fixture_id": "1534570",
+      "raw_match_path": "data/backfill/raw/1534570.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1534570.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -4387,6 +9028,160 @@
     "evaluation": {
       "model_signals": {},
       "dimension_signals": {}
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 1,
+      "opponent_name": "Chelsea",
+      "opponent_quality": "top6",
+      "venue": "home",
+      "competition_stage": "regular",
+      "arsenal_goals": 1,
+      "opponent_goals": 0,
+      "possession_for": 44.0,
+      "possession_against": 56.0,
+      "possession_delta": -12.0,
+      "shots_for": 5,
+      "shots_against": 14,
+      "shot_delta": -9,
+      "shots_on_target_for": 2,
+      "shots_on_target_against": 2,
+      "shot_on_target_delta": 0,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 85.0,
+      "pass_accuracy_against": 90.0,
+      "pass_accuracy_delta": -5.0,
+      "corners_for": 2,
+      "corners_against": 5,
+      "corner_delta": -3,
+      "fouls_for": 14,
+      "fouls_against": 12,
+      "yellow_cards_for": 0,
+      "red_cards_for": 0,
+      "goals_conceded": 0,
+      "opponent_shots_on_target": 2,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 69,
+          "player": "N. Madueke",
+          "scored_after": false
+        },
+        {
+          "minute": 69,
+          "player": "V. Gyökeres",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 2,
+      "goals_after_arsenal_subs": 1,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 90,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "regular",
+        "opponent": "Chelsea"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟡",
+        "defence_as_attacking_identity": "🟢",
+        "marginal_gains": "🟡",
+        "add_capability_keep_identity": "🟡",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=0",
+          "red_cards_for=0",
+          "fouls_for=14",
+          "fouls_against=12"
+        ],
+        "where_game_is_played": [
+          "shot_delta=-9",
+          "possession_delta=-12.0",
+          "corner_delta=-3",
+          "opponent_shots_on_target=2"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=0",
+          "opponent_shots_on_target=2"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=2",
+          "corners_against=5",
+          "corners_for=2",
+          "corners_against=5"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=85.0",
+          "possession_for=44.0",
+          "goals_for=1"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=2",
+          "goals_after_arsenal_subs=1",
+          "earliest_sub_min=69",
+          "latest_sub_min=69",
+          "goals_after_subs_not_by_substitutes"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1498260",
+      "fixture_id": "1498260",
+      "raw_match_path": "data/backfill/raw/1498260.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1498260.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -4520,6 +9315,184 @@
     "evaluation": {
       "model_signals": {},
       "dimension_signals": {}
+    },
+    "features": {
+      "result": "W",
+      "score_margin": 1,
+      "opponent_name": "Mansfield Town",
+      "opponent_quality": "lower",
+      "venue": "away",
+      "competition_stage": "regular",
+      "arsenal_goals": 2,
+      "opponent_goals": 1,
+      "possession_for": 67.0,
+      "possession_against": 33.0,
+      "possession_delta": 34.0,
+      "shots_for": 19,
+      "shots_against": 18,
+      "shot_delta": 1,
+      "shots_on_target_for": 8,
+      "shots_on_target_against": 5,
+      "shot_on_target_delta": 3,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 84.0,
+      "pass_accuracy_against": 74.0,
+      "pass_accuracy_delta": 10.0,
+      "corners_for": 8,
+      "corners_against": 4,
+      "corner_delta": 4,
+      "fouls_for": 6,
+      "fouls_against": 16,
+      "yellow_cards_for": 2,
+      "red_cards_for": 0,
+      "goals_conceded": 1,
+      "opponent_shots_on_target": 5,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 38,
+          "player": "L. Trossard",
+          "scored_after": false
+        },
+        {
+          "minute": 62,
+          "player": "M. Salmon",
+          "scored_after": false
+        },
+        {
+          "minute": 62,
+          "player": "K. Havertz",
+          "scored_after": false
+        },
+        {
+          "minute": 76,
+          "player": "R. Calafiori",
+          "scored_after": false
+        },
+        {
+          "minute": 77,
+          "player": "M. Dowman",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 5,
+      "goals_after_arsenal_subs": 2,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 41,
+          "arsenal_score": 1,
+          "opponent_score": 0
+        },
+        {
+          "minute": 50,
+          "arsenal_score": 1,
+          "opponent_score": 1
+        },
+        {
+          "minute": 66,
+          "arsenal_score": 2,
+          "opponent_score": 1
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "regular",
+        "opponent": "Mansfield Town"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟡",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟡",
+        "marginal_gains": "🟢",
+        "add_capability_keep_identity": "🟢",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟢",
+        "satisfaction": "🟡"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=2",
+          "red_cards_for=0",
+          "fouls_for=6",
+          "fouls_against=16",
+          "yellow_cards=2>=2"
+        ],
+        "where_game_is_played": [
+          "shot_delta=1",
+          "possession_delta=34.0",
+          "corner_delta=4",
+          "opponent_shots_on_target=5"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=1",
+          "opponent_shots_on_target=5"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=8",
+          "corners_against=4"
+        ],
+        "add_capability_keep_identity": [
+          "result=W",
+          "pass_accuracy_for=84.0",
+          "possession_for=67.0",
+          "goals_for=2"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=5",
+          "goals_after_arsenal_subs=2",
+          "earliest_sub_min=38",
+          "latest_sub_min=77",
+          "goals_after_subs_not_by_substitutes"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1523412",
+      "fixture_id": "1523412",
+      "raw_match_path": "data/backfill/raw/1523412.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1523412.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   },
   {
@@ -4553,6 +9526,183 @@
     "evaluation": {
       "model_signals": {},
       "dimension_signals": {}
+    },
+    "features": {
+      "result": "L",
+      "score_margin": -1,
+      "opponent_name": "Southampton",
+      "opponent_quality": "lower",
+      "venue": "away",
+      "competition_stage": "regular",
+      "arsenal_goals": 1,
+      "opponent_goals": 2,
+      "possession_for": 64.0,
+      "possession_against": 36.0,
+      "possession_delta": 28.0,
+      "shots_for": 23,
+      "shots_against": 8,
+      "shot_delta": 15,
+      "shots_on_target_for": 7,
+      "shots_on_target_against": 4,
+      "shot_on_target_delta": 3,
+      "xg_for": null,
+      "xg_against": null,
+      "xg_delta": null,
+      "pass_accuracy_for": 89.0,
+      "pass_accuracy_against": 79.0,
+      "pass_accuracy_delta": 10.0,
+      "corners_for": 9,
+      "corners_against": 4,
+      "corner_delta": 5,
+      "fouls_for": 11,
+      "fouls_against": 9,
+      "yellow_cards_for": 1,
+      "red_cards_for": 0,
+      "goals_conceded": 2,
+      "opponent_shots_on_target": 4,
+      "set_piece_goals_for": 0,
+      "set_piece_goals_against": 0,
+      "substitution_windows": [
+        {
+          "minute": 60,
+          "player": "Gabriel Jesus",
+          "scored_after": false
+        },
+        {
+          "minute": 60,
+          "player": "M. Lewis-Skelly",
+          "scored_after": false
+        },
+        {
+          "minute": 61,
+          "player": "M. Odegaard",
+          "scored_after": false
+        },
+        {
+          "minute": 72,
+          "player": "Gabriel",
+          "scored_after": false
+        },
+        {
+          "minute": 79,
+          "player": "K. Havertz",
+          "scored_after": false
+        }
+      ],
+      "arsenal_sub_count": 5,
+      "goals_after_arsenal_subs": 1,
+      "goals_by_substitutes": 0,
+      "score_state_timeline": [
+        {
+          "minute": 0,
+          "arsenal_score": 0,
+          "opponent_score": 0
+        },
+        {
+          "minute": 35,
+          "arsenal_score": 0,
+          "opponent_score": 1
+        },
+        {
+          "minute": 68,
+          "arsenal_score": 1,
+          "opponent_score": 1
+        },
+        {
+          "minute": 85,
+          "arsenal_score": 1,
+          "opponent_score": 2
+        }
+      ],
+      "predicted_plan_match_features": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "regular",
+        "opponent": "Southampton"
+      },
+      "missing_data": [
+        "pressing",
+        "pressing_recoveries",
+        "transition",
+        "xG"
+      ]
+    },
+    "weak_labels": {
+      "model_signals": {
+        "culture_as_os": "🟢",
+        "where_game_is_played": "🟢",
+        "defence_as_attacking_identity": "🟡",
+        "marginal_gains": "🟢",
+        "add_capability_keep_identity": "🔴",
+        "role_clarity": "🟢"
+      },
+      "dimension_signals": {
+        "execution": "🟢",
+        "adjustment": "🟢",
+        "satisfaction": "🟡"
+      },
+      "overall_signal": "🟢",
+      "confidence": {
+        "culture_as_os": "medium",
+        "where_game_is_played": "medium",
+        "defence_as_attacking_identity": "medium",
+        "marginal_gains": "medium",
+        "add_capability_keep_identity": "medium",
+        "role_clarity": "medium"
+      },
+      "evidence_refs": {
+        "culture_as_os": [
+          "yellow_cards_for=1",
+          "red_cards_for=0",
+          "fouls_for=11",
+          "fouls_against=9"
+        ],
+        "where_game_is_played": [
+          "shot_delta=15",
+          "possession_delta=28.0",
+          "corner_delta=5",
+          "opponent_shots_on_target=4"
+        ],
+        "defence_as_attacking_identity": [
+          "goals_conceded=2",
+          "opponent_shots_on_target=4"
+        ],
+        "marginal_gains": [
+          "set_piece_goals_for=0",
+          "set_piece_goals_against=0",
+          "corners_for=9",
+          "corners_against=4"
+        ],
+        "add_capability_keep_identity": [
+          "result=L",
+          "pass_accuracy_for=89.0",
+          "possession_for=64.0",
+          "goals_for=1"
+        ],
+        "role_clarity": [
+          "arsenal_sub_count=5",
+          "goals_after_arsenal_subs=1",
+          "earliest_sub_min=60",
+          "latest_sub_min=79",
+          "goals_after_subs_not_by_substitutes"
+        ]
+      },
+      "missing_data_penalty": true,
+      "weak_label_version": "v1"
+    },
+    "features_version": "v1",
+    "weak_label_version": "v1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "backfill": {
+      "status": "feature_backfilled",
+      "run_id": "seed-002",
+      "legacy_match_id": "1531572",
+      "fixture_id": "1531572",
+      "raw_match_path": "data/backfill/raw/1531572.json",
+      "report_path": "data/backfill/runs/seed-002/reports/1531572.json",
+      "prepared_at": "2026-05-19T15:20:55",
+      "needs_v2_evaluation": true
     }
   }
 ]
