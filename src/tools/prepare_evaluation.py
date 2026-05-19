@@ -170,16 +170,21 @@ def _find_rubric() -> Optional[Path]:
 
 
 def _try_calibration_hints(context: dict, kb_path: Optional[str] = None) -> Optional[dict]:
-    """Best-effort calibration hints from KB. Returns None on failure."""
+    """Best-effort calibration hints from KB via CalibrationComputer.
+
+    Returns the full CalibrationComputer output (confidence, sample_quality,
+    guardrails, etc.) so prompt_builder can render guarded hints.
+    Returns None on failure or empty context.
+    """
     if not context:
         return None
     try:
-        from src.evaluation.patterns import PatternComputer
+        from src.evaluation.calibration import CalibrationComputer
         if kb_path is None:
             from src.paths import DEFAULT_KB_PATH
             kb_path = str(DEFAULT_KB_PATH)
-        pc = PatternComputer(kb_path)
-        return pc.similar_match_summary(context, limit=5)
+        cc = CalibrationComputer(kb_path)
+        return cc.build_hints(context, limit=5)
     except Exception:
         return None
 

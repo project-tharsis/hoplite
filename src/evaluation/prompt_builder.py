@@ -482,6 +482,47 @@ class PromptBuilder:
             else:
                 lines.append(f"Common focus areas: {', '.join(top_areas)}")
 
+        # Calibration confidence (v2 CalibrationComputer fields)
+        confidence = hints.get("confidence")
+        if confidence:
+            lines.append("")
+            if self.language == "zh":
+                lines.append(f"校准置信度: {confidence}")
+            else:
+                lines.append(f"Calibration confidence: {confidence}")
+
+        # Sample quality breakdown
+        sample_quality = hints.get("sample_quality")
+        if sample_quality:
+            wf = sample_quality.get("with_features", 0)
+            wr = sample_quality.get("with_human_review", 0)
+            lo = sample_quality.get("legacy_only", 0)
+            lines.append("")
+            if self.language == "zh":
+                lines.append(f"样本质量: {wf}条含特征 / {wr}条含人工审核 / {lo}条仅旧格式")
+            else:
+                lines.append(f"Sample quality: {wf} with features / {wr} with human review / {lo} legacy-only")
+
+        # Common missing data
+        common_missing = hints.get("common_missing_data", [])
+        if common_missing:
+            lines.append("")
+            if self.language == "zh":
+                lines.append(f"历史常见缺失数据: {', '.join(common_missing)}")
+            else:
+                lines.append(f"Common missing data: {', '.join(common_missing)}")
+
+        # Guardrails
+        guardrails = hints.get("guardrails", [])
+        if guardrails:
+            lines.append("")
+            if self.language == "zh":
+                lines.append("校准护栏:")
+            else:
+                lines.append("Calibration guardrails:")
+            for g in guardrails:
+                lines.append(f"- {g}")
+
         lines.append("")
         if self.language == "zh":
             lines.append("**注意**: 历史仅作参考，以本场数据为准。")

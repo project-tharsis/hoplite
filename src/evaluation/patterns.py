@@ -144,14 +144,21 @@ class PatternComputer:
             arsenal_goals += a
             opponent_goals += o
 
-            # Model signals
-            model_signals = entry.get("evaluation", {}).get("model_signals", {})
+            # Model signals — prefer human_override.corrected_model_signals
+            override = entry.get("human_override") or {}
+            model_signals = (
+                override.get("corrected_model_signals")
+                or entry.get("evaluation", {}).get("model_signals", {})
+            )
             for model_num, signal in model_signals.items():
                 if model_num in model_distributions and signal in ("🟢", "🟡", "🔴"):
                     model_distributions[model_num][signal] += 1
 
-            # Dimension signals (nested under evaluation.dimension_signals)
-            dim_signals = entry.get("evaluation", {}).get("dimension_signals", {})
+            # Dimension signals — prefer human_override.corrected_dimension_signals
+            dim_signals = (
+                override.get("corrected_dimension_signals")
+                or entry.get("evaluation", {}).get("dimension_signals", {})
+            )
             for dim_key in DIMENSION_KEYS:
                 signal = dim_signals.get(dim_key)
                 if signal in ("🟢", "🟡", "🔴"):
@@ -219,7 +226,7 @@ class PatternComputer:
             # Check for human_override first, then evaluation
             override = entry.get("human_override") or {}
             dim_signals = (
-                override.get("dimension_signals")
+                override.get("corrected_dimension_signals")
                 or entry.get("evaluation", {}).get("dimension_signals", {})
             )
             exec_signal = dim_signals.get("execution")
