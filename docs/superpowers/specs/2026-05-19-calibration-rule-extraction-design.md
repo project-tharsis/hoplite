@@ -1,105 +1,299 @@
-# Design Decision Record: Calibration Rule Extraction & WK Patch v1
+# Calibration Rule Extraction & WK v1.1 Patch Spec
 
-## 问题
+## Problem
 
-人工 review 发现了 WK 系统性错误（dominant stats + L ≠ 🟢），但当前没有机制把这条经验提炼成可复用的规则。human_override 只是样本存在 KB 里，replay 和 calibration 都不消费它。目标：把第一次人工 review 的三个锚点变成 WK 修正规则 + CalibrationComputer 盲区提示 + replay 可比较。
+Human review confirmed the first reusable WK blind spot:
 
-## 竞品扫描
+> dominant stats + loss against lower/mid_table opposition must not become 🟢.
 
-无直接竞品。这是 calibration 系统自改进的元层——把人工反馈编码为规则。NLP 里有 active learning / rule refinement，但足球分析领域没有成熟方案。我们的独特空白：**不是"更多训练数据"，是"从 review diff 提取规则修正"。**
+The current WK can still overrate this shape because execution/control and adjustment can both be 🟢, causing overall to stay 🟢 even when satisfaction is poor. The goal of this spec is to turn the first reviewed pattern into:
 
-## 方案对比
+1. A deterministic WK v1.1 rule.
+2. A replay comparison mode that can compare WK, LLM, and human override.
+3. A CalibrationComputer blind-spot hint rendered into prompts.
+4. A seed replay report that proves the patch fixes the known failure without broad regressions.
 
-| 维度 | 方案 A: Satisfaction Guard | 方案 B: Full Result-Aware Rewrite | 不做 |
-|---|---|---|---|
-| 复杂度 | 低 — 只改 satisfaction 维度计算逻辑 | 高 — 重写 overall signal 计算，加入 result×quality 矩阵 | 零 |
-| 维护成本 | 低 — 规则显式、可测试 | 中 — 矩阵维护 | 零 |
-| 覆盖问题 | 精准覆盖 dominant-stats+L 盲区 | 覆盖所有 result 场景但过度设计 | 盲区持续 |
-| 引入回归风险 | 低 — 只改一个维度 + 3 个 guardrail 规则 | 高 — 可能误伤正常场景 | 零 |
-| 可解释性 | 高 — 规则 = 人类可读 | 中 | 无 |
+Clarification: `PatternComputer` and `CalibrationComputer` already consume `human_override` for historical distributions. The missing piece is not basic human_override consumption. The missing pieces are replay comparison against human review and explicit blind-spot extraction into future prompts.
 
-## 决策
+## Non-Goals
 
-选 **方案 A**。理由：
-1. 3 条 human review 的锚点全部指向同一个模式：dominant stats + L + low-quality opponent → WK over-optimistic
-2. 不需要重写整个评分系统，只需在 satisfaction 维度加 result-aware guard，在 CalibrationComputer 加盲区提示
-3. 33 条测试文件，改动量最小化 → 回归风险可控
-4. 留下扩产空间：如果 future review 发现新模式，再加新规则
+- Do not rewrite the full weak-label scoring system.
+- Do not add a learned model.
+- Do not mutate the 70+ validation set in this spec.
+- Do not make `validate-rest` write to KB. It remains dry-run/read-only.
+- Do not overwrite stored seed weak labels until the replay diff is reviewed and approved.
 
-## 接口契约
+## Decision
 
-### Phase 1: WK satisfaction guard
-```
-Input: MatchFeatures (已有)
-Modify: WeakLabeler._model_5_identity (不改)
-Modify: WeakLabeler.label() 的 satisfaction 维度派生逻辑
-规则:
-  IF result == "L":
-    IF opponent_quality in ("lower", "mid_table"):
-      satisfaction = RED  # 覆盖多数投票
-    ELSE (top6 / european_elite / knockout):
-      satisfaction = max(satisfaction_vote, YELLOW)  # 不低于🟡
-```
+Implement a narrow **Result-Aware Satisfaction Guard + Overall Veto**.
 
-### Phase 2: Human override → replay
-```
-New: replay_history.py --compare-human
-Output: 每场的 {match_id, WK_signal, LLM_signal, human_signal, disagreements: [{model, WK, LLM, human}]}
-Read-only, never mutates KB
+This is intentionally smaller than a full result-quality matrix. It only handles losses, because the confirmed review failures are all about WK over-optimism when Arsenal loses despite strong control data.
+
+## Rule Contract
+
+### WK v1.1 Version
+
+`WeakLabels.weak_label_version` must change from `v1` to `v1.1`.
+
+Any output produced by the patched `WeakLabeler` must set:
+
+```json
+{
+  "weak_label_version": "v1.1"
+}
 ```
 
-### Phase 3: CalibrationComputer blind spots
-```
-New: CalibrationComputer.KNOWN_BLIND_SPOTS = [...]
-CalibrationComputer.build_hints() 输出新增 known_blind_spots 字段
-PromptBuilder 渲染盲区提示到 calibration section
-```
+### Loss Guard
 
-### Phase 4: Replay 30 seed
-```
-replay_history.py --kb data/knowledge.json --mode weak-label-only
-dry-run: 输出 diff（WK changes），不写 KB
-重点验证: 1531572 WK 🔴, 其他胜场不被误伤
-```
+Apply this after existing model signals and dimension votes are computed.
 
-### Phase 5: 扩展到 70+ validation
-```
-backfill_history.py --mode validate-rest
-先 dry-run 看 comparison 报告
-批准后 --write
-```
+```text
+IF features.result == "L":
+  IF features.opponent_quality in ("lower", "mid_table"):
+    dimension_signals["satisfaction"] = 🔴
+    overall_signal = 🔴
+    add evidence/metadata that result-aware veto fired
 
-## 数据流
+  ELSE IF features.opponent_quality in ("top6", "european_elite"):
+    IF dimension_signals["satisfaction"] == 🟢:
+      dimension_signals["satisfaction"] = 🟡
+    IF overall_signal == 🟢:
+      overall_signal = 🟡
+    do not upgrade 🔴 to 🟡
 
-```
-human_override in KB
-        ↓
-Phase 2: replay --compare-human reads human_override
-        ↓                         
-Phase 3: CalibrationComputer.known_blind_spots ← hardcoded from Phase 1 pattern analysis
-        ↓
-PromptBuilder renders blind spots to prompt
-        ↓
-LLM sees: "⚠️ Known WK blind spot: dominant stats + loss ≠ 🟢"
+  ELSE:
+    IF overall_signal == 🟢:
+      overall_signal = 🟡
 ```
 
-## 错误处理
+Important semantics:
 
-- WK guard 规则冲突：新规则与现有多数投票冲突 → 显式 override，规则优先于投票
-- missing opponent_quality：satisfaction guard 降级为 YELLOW
-- replay 找不到 human_override：skip，不报错
-- 新 WK 规则误伤胜场：Phase 4 dry-run 全覆盖 30 场，任何意外变化 → 暂停，回看规则
+- Strong/dominant stats can keep `execution=🟢`.
+- Timely substitutions can keep `adjustment=🟢`.
+- But loss to `lower` or `mid_table` opposition vetoes overall optimism.
+- Loss to `top6` or `european_elite` may be 🟡, but the rule must never upgrade an already 🔴 signal.
+- This is an overall veto, not only a satisfaction tweak. Without the overall veto, a loss can still be voted 🟢 by two green dimensions.
 
-## 风险与假设
+## Phase 1: WK v1.1 Patch
 
-- 假设 1：当前 3 条 human review 的 pattern (dominant+L) 是最大盲区。如果后续 review 发现更大盲区，需要加新规则 → 低风险，架构支持增量
-- 假设 2：satisfaction guard 不会误伤 top6 负场。验证：top6 L 仍可🟡 → 通过 Phase 4 验证
-- 假设 3：opponent_quality 在所有 seed 条目中已正确（context override fix 已闭环）→ 已验证
-- 风险：satisfaction RED 可能通过 overall signal 投票把 overall 变成 🔴（≥2 RED dims）。期望行为：输弱敌确实应该 🔴 → 这不是 bug 是 feature
+Modify `src/labels/weak_labeler.py`.
 
-## 进入 Plan 的前置条件
+Expected shape:
 
-- [x] 用户确认 DDR（待确认）
-- [x] 所有假设已被记录
-- [x] 接口契约已明确
-- [x] 5 个 phase 边界清晰
+```python
+def _apply_result_aware_guards(self, features: MatchFeatures, wl: WeakLabels) -> None:
+    ...
+```
+
+Call this helper after the existing dimension and overall votes, before confidence penalty returns.
+
+The helper must be deterministic and must not inspect LLM evaluation or human_override.
+
+Acceptance:
+
+- `1531572` style features (`result=L`, `opponent_quality=lower`, dominant stats) produce:
+  - `dimension_signals["satisfaction"] == 🔴`
+  - `overall_signal == 🔴`
+  - `weak_label_version == "v1.1"`
+- `1379109` style features (`result=L`, `opponent_quality=mid_table`) produce:
+  - `dimension_signals["satisfaction"] == 🔴`
+  - `overall_signal == 🔴` if there are at least two red/vetoed dimensions, or at minimum not 🟢.
+- `top6/european_elite` losses:
+  - cannot produce `overall_signal == 🟢`
+  - can remain 🔴 if other rules already made them 🔴
+  - can be 🟡 if the match was competitive.
+- Wins and draws are unaffected by this guard.
+
+## Phase 2: Replay Human Comparison
+
+Modify `scripts/replay_history.py`.
+
+Add CLI flag:
+
+```bash
+--compare-human
+```
+
+When enabled, replay must include entries with `human_override` and output a comparison object per reviewed match.
+
+Output shape:
+
+```json
+{
+  "summary": {
+    "total_entries": 111,
+    "replayed": 30,
+    "changed": 4,
+    "human_reviewed": 3,
+    "human_compared": 3
+  },
+  "changes": [],
+  "human_comparisons": [
+    {
+      "match_id": "1531572",
+      "wk": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {}
+      },
+      "llm": {
+        "overall_signal": "🔴",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "human": {
+        "overall_signal": "🔴",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "disagreements": [
+        {
+          "field": "dimension_signals.satisfaction",
+          "wk": "🔴",
+          "llm": "🔴",
+          "human": "🔴"
+        }
+      ]
+    }
+  ],
+  "skipped": []
+}
+```
+
+Notes:
+
+- `wk` means recomputed WK v1.1 from stored features.
+- `llm` means stored `entry.evaluation`.
+- `human` means `entry.human_override.corrected_*`.
+- If a human_override is missing a subfield, use `null` for that subfield and keep the row.
+- Replay remains read-only and must never mutate KB.
+
+## Phase 3: Calibration Blind Spots
+
+Modify `src/evaluation/calibration.py`.
+
+Add:
+
+```python
+KNOWN_BLIND_SPOTS = [
+    {
+        "id": "dominant_stats_loss",
+        "description": "WK can overrate matches where Arsenal dominates shots/xG/possession but loses.",
+        "guardrail": "Do not let shot/xG/possession dominance override result satisfaction. A loss to lower/mid_table opposition cannot be overall green.",
+        "source": "human_review",
+        "weak_label_version": "v1.1",
+    }
+]
+```
+
+`CalibrationComputer.build_hints()` and `_empty_hints()` must include:
+
+```json
+{
+  "known_blind_spots": [...]
+}
+```
+
+## Phase 4: Prompt Rendering
+
+Modify `src/evaluation/prompt_builder.py`.
+
+Render `known_blind_spots` inside the calibration section after guardrails.
+
+Chinese output should include a compact section like:
+
+```text
+已知WK盲区:
+- dominant_stats_loss: WK can overrate matches where Arsenal dominates shots/xG/possession but loses.
+  护栏: Do not let shot/xG/possession dominance override result satisfaction. A loss to lower/mid_table opposition cannot be overall green.
+```
+
+Acceptance:
+
+- `prepare_evaluation` prompt includes `dominant_stats_loss`.
+- Prompt includes the guardrail text.
+- Existing calibration confidence/sample quality rendering remains unchanged.
+
+## Phase 5: Seed Replay Dry Run
+
+Run:
+
+```bash
+uv run --with pyyaml --with requests --with pandas \
+  python scripts/replay_history.py \
+  --kb data/knowledge.json \
+  --mode weak-label-only \
+  --compare-human \
+  --output data/backfill/runs/seed-002/wk-v1.1-replay.json
+```
+
+This writes a replay artifact only. It must not update `data/knowledge.json`.
+
+Acceptance:
+
+- `1531572` recomputed WK is 🔴 overall.
+- `1531572` satisfaction is 🔴.
+- `1379109` satisfaction is 🔴 and overall is not 🟢.
+- `1208154` remains eligible for LLM upgrade; WK must not be forced down by the loss guard because it is a win.
+- `1314297` remains unaffected by xG missing fallback because it is not a loss.
+- No win changes solely because of this guard.
+- Replay output includes all 3 human-reviewed matches in `human_comparisons`.
+
+## Test Requirements
+
+Add or update tests before implementation.
+
+Required tests:
+
+1. `tests/test_weak_labeler.py`
+   - loss to lower with dominant stats produces satisfaction 🔴 and overall 🔴.
+   - loss to mid_table produces satisfaction 🔴 and overall not 🟢.
+   - loss to top6 cannot be overall 🟢 but can remain 🔴 when model votes justify 🔴.
+   - win with dominant stats is unchanged.
+   - `weak_label_version == "v1.1"`.
+
+2. `tests/test_replay_history.py`
+   - `--compare-human` includes reviewed entries.
+   - missing human subfields become `null`, not exceptions.
+   - replay does not mutate KB.
+
+3. `tests/evaluation/test_calibration.py`
+   - `build_hints()` includes `known_blind_spots`.
+   - `_empty_hints()` includes the same field.
+
+4. `tests/test_prompt_builder.py` or `tests/e2e/test_json_pipeline.py`
+   - calibration prompt renders `dominant_stats_loss`.
+   - calibration prompt renders the result-satisfaction guardrail.
+
+Verification command:
+
+```bash
+uv run --with pytest --with pytest-mock --with pyyaml --with requests --with pandas pytest
+```
+
+## Done Definition
+
+This spec is done only when all are true:
+
+- WK outputs `weak_label_version=v1.1`.
+- Result-aware loss guard is implemented with overall veto.
+- Replay supports `--compare-human`.
+- Calibration hints expose `known_blind_spots`.
+- Prompt renders known blind spots.
+- Seed replay artifact is written.
+- `1531572` is no longer WK 🟢.
+- No win is changed by the loss guard.
+- Full test suite passes.
+- `data/knowledge.json` is not rewritten as part of this spec unless explicitly approved after reviewing the replay artifact.
+
+## Future Work
+
+After this spec lands and the replay artifact is reviewed, a separate spec can decide whether to:
+
+1. Apply WK v1.1 weak labels to the 30 seed entries.
+2. Expand raw/report backfill to the remaining 70+ validation matches.
+3. Add more blind spots from future human review cycles.
