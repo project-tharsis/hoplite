@@ -340,14 +340,24 @@ class TestDimensions:
         wl = labeler.label(f)
         assert wl.dimension_signals["satisfaction"] == GREEN
 
-    def test_satisfaction_red_any_red(self, labeler):
+    def test_satisfaction_red_majority(self, labeler):
         f = _base_features(
-            red_cards_for=1,  # model 1 → red
-            goals_conceded=0, opponent_shots_on_target=0,
+            red_cards_for=1,  # model 1 -> red
+            goals_conceded=3, opponent_shots_on_target=5,  # model 3 -> red
             result="W", pass_accuracy_for=85.0, possession_for=55.0,
         )
         wl = labeler.label(f)
         assert wl.dimension_signals["satisfaction"] == RED
+
+    def test_satisfaction_yellow_single_red(self, labeler):
+        """With >=2 rule, 1 red + 1 green + 1 yellow -> yellow (no majority)."""
+        f = _base_features(
+            red_cards_for=1,  # model 1 -> red
+            goals_conceded=1, opponent_shots_on_target=5,  # model 3 -> yellow
+            result="W", pass_accuracy_for=85.0, possession_for=55.0,  # model 5 -> green
+        )
+        wl = labeler.label(f)
+        assert wl.dimension_signals["satisfaction"] == YELLOW
 
     def test_adjustment_equals_model_6(self, labeler):
         f = _base_features()
@@ -380,11 +390,16 @@ class TestOverallSignal:
 
     def test_red_two_or_more_red(self, labeler):
         f = _base_features(
-            red_cards_for=1,  # M1 red
-            goals_conceded=3,  # M3 red
+            red_cards_for=1,  # M1 red -> satisfaction
+            goals_conceded=3,  # M3 red -> satisfaction
+            shot_delta=-5, xg_delta=-1.0, corner_delta=-3,  # M2 red -> execution
+            set_piece_goals_for=0, set_piece_goals_against=2,  # M4 red -> execution
             result="W", pass_accuracy_for=85.0, possession_for=55.0,
         )
         wl = labeler.label(f)
+        # satisfaction: M1r M3r M5g -> 2 red -> r
+        # execution: M2r M4r -> 2 red -> r
+        # overall: >=2 red dims -> RED
         assert wl.overall_signal == RED
 
     def test_yellow_mixed(self, labeler):
@@ -392,13 +407,16 @@ class TestOverallSignal:
             yellow_cards_for=2, red_cards_for=0,  # M1 yellow
             shot_delta=5, xg_delta=1.0, possession_delta=10,  # M2 green
             goals_conceded=1, opponent_shots_on_target=5,  # M3 yellow
-            set_piece_goals_for=1, set_piece_goals_against=0,  # M4 green
+            set_piece_goals_for=1, set_piece_goals_against=1,  # M4 yellow (even)
             result="W", pass_accuracy_for=78.0, possession_for=55.0,  # M5 yellow
             arsenal_sub_count=1, goals_after_arsenal_subs=1,
             substitution_windows=[{"minute": 60, "player": "X", "scored_after": True}],
         )
         wl = labeler.label(f)
-        # 2 green, 0 red, 3 yellow → yellow overall
+        # execution: M2g M4y -> 1 green -> yellow
+        # adjustment: M6 green (single model)
+        # satisfaction: M1y M3y M5y -> yellow
+        # overall: 1 green, 0 red -> yellow
         assert wl.overall_signal == YELLOW
 
 
@@ -580,11 +598,14 @@ class TestEdgeCases:
             yellow_cards_for=4, red_cards_for=1,
             pass_accuracy_for=70.0, possession_for=40.0,
             set_piece_goals_for=0, set_piece_goals_against=2,
+            shot_delta=-5, xg_delta=-1.5, corner_delta=-3,  # M2 red -> execution
         )
         wl = labeler.label(f)
         assert wl.model_signals[MODEL_3] == RED
         assert wl.model_signals[MODEL_5] == RED
         assert wl.model_signals[MODEL_1] == RED
+        # satisfaction: M1r M3r M5r -> r, execution: M2r M4r -> r
+        # overall: >=2 red dims -> RED
         assert wl.overall_signal == RED
 
     def test_draw(self, labeler):

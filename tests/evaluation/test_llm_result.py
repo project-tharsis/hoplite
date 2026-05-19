@@ -16,6 +16,20 @@ VALID_RESULT = {
         "satisfaction": "🟢",
     },
     "narrative": "阿森纳通过控制中场和定位球威胁掌控了比赛节奏。",
+    "evidence": {
+        "1": ["黄牌1张，犯规10次"],
+        "2": ["射门差+4", "xG差+0.7"],
+        "3": ["丢1球，对手射正3次"],
+        "4": ["定位球进1个"],
+        "5": ["胜场，传球85%，控球55%"],
+        "6": ["替补上场后进球"],
+    },
+    "confidence": {
+        "1": "high", "2": "high", "3": "medium",
+        "4": "high", "5": "medium", "6": "high",
+    },
+    "missing_or_weak_evidence": [],
+    "weak_label_disagreements": [],
 }
 
 

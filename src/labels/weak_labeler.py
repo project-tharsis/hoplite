@@ -73,21 +73,29 @@ class WeakLabeler:
             self._model_6_subs(features)
         )
 
-        # ── Derive dimensions ─────────────────────────────────────────
+        # ── Derive dimensions (majority vote) ────────────────────────
         for dim, model_ids in DIMENSION_MAP.items():
             signals = [wl.model_signals[m] for m in model_ids]
-            if all(s == GREEN for s in signals):
-                wl.dimension_signals[dim] = GREEN
-            elif any(s == RED for s in signals):
-                wl.dimension_signals[dim] = RED
+            if len(signals) == 1:
+                # Single-model dimension: model signal IS the dimension
+                wl.dimension_signals[dim] = signals[0]
             else:
-                wl.dimension_signals[dim] = YELLOW
+                green_count = sum(1 for s in signals if s == GREEN)
+                red_count = sum(1 for s in signals if s == RED)
+                if green_count >= 2:
+                    wl.dimension_signals[dim] = GREEN
+                elif red_count >= 2:
+                    wl.dimension_signals[dim] = RED
+                else:
+                    wl.dimension_signals[dim] = YELLOW
 
-        # ── Overall signal from dimension vote ─────────────────────────
+        # ── Overall signal from dimension vote (≥2 → majority) ────────
         dim_signals = list(wl.dimension_signals.values())
-        if all(s == GREEN for s in dim_signals):
+        green_dims = sum(1 for s in dim_signals if s == GREEN)
+        red_dims = sum(1 for s in dim_signals if s == RED)
+        if green_dims >= 2:
             wl.overall_signal = GREEN
-        elif any(s == RED for s in dim_signals):
+        elif red_dims >= 2:
             wl.overall_signal = RED
         else:
             wl.overall_signal = YELLOW

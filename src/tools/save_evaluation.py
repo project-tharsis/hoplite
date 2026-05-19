@@ -30,7 +30,7 @@ def save_evaluation(
     """
     # Validate
     try:
-        validated = validate_llm_result(evaluation)
+        validated = validate_llm_result(evaluation, strict=True)
     except ValueError as e:
         return {"ok": False, "error": {"code": "VALIDATION_FAILED", "message": str(e)}}
 
