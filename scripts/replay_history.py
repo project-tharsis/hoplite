@@ -23,6 +23,29 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from src.features.extractor import MatchFeatures
 from src.labels.weak_labeler import WeakLabeler
 
+# WK uses semantic keys (culture_as_os) → map to numeric (1-6)
+# for comparison with LLM/human which use numeric keys
+_WK_MODEL_KEY_TO_NUM = {
+    "culture_as_os": "1",
+    "where_game_is_played": "2",
+    "defence_as_attacking_identity": "3",
+    "marginal_gains": "4",
+    "add_capability_keep_identity": "5",
+    "role_clarity": "6",
+}
+_NUM_TO_WK_MODEL_KEY = {v: k for k, v in _WK_MODEL_KEY_TO_NUM.items()}
+
+
+def _normalize_model_keys(signals: dict) -> dict[str, str]:
+    """Map WK semantic keys to numeric keys. Pass-through if already numeric."""
+    if not signals:
+        return {}
+    result: dict[str, str] = {}
+    for k, v in signals.items():
+        num = _WK_MODEL_KEY_TO_NUM.get(k, k)  # map "culture_as_os" → "1"; keep "1" as-is
+        result[num] = v
+    return result
+
 
 def features_from_dict(d: dict) -> MatchFeatures:
     """Reconstruct a MatchFeatures dataclass from a stored dict.
@@ -192,7 +215,7 @@ def replay_compare_human(kb_path: str) -> dict:
                 "wk": {
                     "overall_signal": recomputed.overall_signal,
                     "dimension_signals": recomputed.dimension_signals,
-                    "model_signals": recomputed.model_signals,
+                    "model_signals": _normalize_model_keys(recomputed.model_signals),
                 },
                 "llm": {
                     "overall_signal": eval_.get("overall_signal"),
@@ -241,8 +264,9 @@ def _compute_human_disagreements(wk: dict, llm: dict, human: dict) -> list[dict]
             disagreements.append({"field": f"dimension_signals.{dim_key}", "wk": wk_v, "llm": llm_v, "human": h_v})
 
     h_models = human.get("corrected_model_signals", {})
-    for m_key in sorted(set(list(wk.get("model_signals", {}).keys()) + list(llm.get("model_signals", {}).keys()) + list(h_models.keys()))):
-        wk_v = wk.get("model_signals", {}).get(m_key)
+    wk_models_normalized = _normalize_model_keys(wk.get("model_signals", {}))
+    for m_key in sorted(set(list(wk_models_normalized.keys()) + list(llm.get("model_signals", {}).keys()) + list(h_models.keys()))):
+        wk_v = wk_models_normalized.get(m_key)
         llm_v = llm.get("model_signals", {}).get(m_key)
         h_v = h_models.get(m_key)
         if h_v is not None and (wk_v != h_v or llm_v != h_v):

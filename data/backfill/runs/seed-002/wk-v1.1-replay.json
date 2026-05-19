@@ -38,12 +38,12 @@
           "satisfaction": "🟡"
         },
         "model_signals": {
-          "culture_as_os": "🟡",
-          "where_game_is_played": "🟢",
-          "defence_as_attacking_identity": "🟢",
-          "marginal_gains": "🟢",
-          "add_capability_keep_identity": "🟡",
-          "role_clarity": "🟡"
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟡"
         }
       },
       "llm": {
@@ -93,39 +93,15 @@
         },
         {
           "field": "model_signals.1",
-          "wk": null,
-          "llm": "🟢",
-          "human": "🟢"
-        },
-        {
-          "field": "model_signals.2",
-          "wk": null,
-          "llm": "🟢",
-          "human": "🟢"
-        },
-        {
-          "field": "model_signals.3",
-          "wk": null,
-          "llm": "🟢",
-          "human": "🟢"
-        },
-        {
-          "field": "model_signals.4",
-          "wk": null,
+          "wk": "🟡",
           "llm": "🟢",
           "human": "🟢"
         },
         {
           "field": "model_signals.5",
-          "wk": null,
+          "wk": "🟡",
           "llm": "🟢",
           "human": "🟢"
-        },
-        {
-          "field": "model_signals.6",
-          "wk": null,
-          "llm": "🟡",
-          "human": "🟡"
         }
       ]
     },
@@ -139,12 +115,12 @@
           "satisfaction": "🔴"
         },
         "model_signals": {
-          "culture_as_os": "🔴",
-          "where_game_is_played": "🟡",
-          "defence_as_attacking_identity": "🔴",
-          "marginal_gains": "🟡",
-          "add_capability_keep_identity": "🔴",
-          "role_clarity": "🟢"
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🔴",
+          "4": "🟡",
+          "5": "🔴",
+          "6": "🟢"
         }
       },
       "llm": {
@@ -179,44 +155,7 @@
           "6": "🟢"
         }
       },
-      "disagreements": [
-        {
-          "field": "model_signals.1",
-          "wk": null,
-          "llm": "🔴",
-          "human": "🔴"
-        },
-        {
-          "field": "model_signals.2",
-          "wk": null,
-          "llm": "🟡",
-          "human": "🟡"
-        },
-        {
-          "field": "model_signals.3",
-          "wk": null,
-          "llm": "🔴",
-          "human": "🔴"
-        },
-        {
-          "field": "model_signals.4",
-          "wk": null,
-          "llm": "🟡",
-          "human": "🟡"
-        },
-        {
-          "field": "model_signals.5",
-          "wk": null,
-          "llm": "🔴",
-          "human": "🔴"
-        },
-        {
-          "field": "model_signals.6",
-          "wk": null,
-          "llm": "🟢",
-          "human": "🟢"
-        }
-      ]
+      "disagreements": []
     },
     {
       "match_id": "1531572",
@@ -228,12 +167,12 @@
           "satisfaction": "🔴"
         },
         "model_signals": {
-          "culture_as_os": "🟢",
-          "where_game_is_played": "🟢",
-          "defence_as_attacking_identity": "🟡",
-          "marginal_gains": "🟢",
-          "add_capability_keep_identity": "🔴",
-          "role_clarity": "🟢"
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟢",
+          "5": "🔴",
+          "6": "🟢"
         }
       },
       "llm": {
@@ -276,38 +215,14 @@
           "human": "🟡"
         },
         {
-          "field": "model_signals.1",
-          "wk": null,
-          "llm": "🟢",
-          "human": "🟢"
-        },
-        {
-          "field": "model_signals.2",
-          "wk": null,
-          "llm": "🟢",
-          "human": "🟢"
-        },
-        {
           "field": "model_signals.3",
-          "wk": null,
-          "llm": "🔴",
-          "human": "🔴"
-        },
-        {
-          "field": "model_signals.4",
-          "wk": null,
-          "llm": "🟢",
-          "human": "🟢"
-        },
-        {
-          "field": "model_signals.5",
-          "wk": null,
+          "wk": "🟡",
           "llm": "🔴",
           "human": "🔴"
         },
         {
           "field": "model_signals.6",
-          "wk": null,
+          "wk": "🟢",
           "llm": "🟡",
           "human": "🟡"
         }

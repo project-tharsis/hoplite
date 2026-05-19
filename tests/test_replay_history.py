@@ -322,6 +322,13 @@ def test_replay_compare_human_includes_reviewed_entries(tmp_path):
     assert comp["wk"]["overall_signal"] == "🔴"
     assert comp["llm"]["overall_signal"] == "🔴"
     assert comp["human"]["overall_signal"] == "🔴"
+    # WK model_signals must use numeric keys, not semantic keys, and not null
+    wk_models = comp["wk"]["model_signals"]
+    assert wk_models, "WK model_signals must not be empty"
+    assert all(v is not None for v in wk_models.values()), \
+        f"WK model_signals must not have null values: {wk_models}"
+    # At least key "5" (add_capability_keep_identity) should be 🔴 due to loss guard
+    assert "5" in wk_models, f"WK model key '5' missing, got keys {list(wk_models.keys())}"
 
 
 def test_replay_compare_human_missing_subfields_becomes_null(tmp_path):
