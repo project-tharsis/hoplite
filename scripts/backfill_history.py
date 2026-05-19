@@ -271,6 +271,20 @@ def run_prepare_seed(
                 analyze_result = analyze_match(input_data)
                 if analyze_result.get("ok"):
                     report_json = analyze_result.get("report")
+                    # Merge KB pre_match_context into report context as ground truth
+                    # (extract_context may misclassify opponent_quality from raw team names)
+                    kb_entry = kb_index.get(legacy_id, {})
+                    kb_context = kb_entry.get("pre_match_context", {})
+                    if report_json and kb_context:
+                        report_context = report_json.get("context", {})
+                        for key in ("opponent_quality", "venue", "competition_stage", "opponent"):
+                            if kb_context.get(key) and kb_context[key] != "unknown":
+                                report_context[key] = kb_context[key]
+                        report_json["context"] = report_context
+                    # Merge KB predicted_plan if available
+                    kb_plan = kb_entry.get("predicted_plan")
+                    if report_json and kb_plan:
+                        report_json["predicted_plan"] = kb_plan
                     # Save report snapshot for reproducibility
                     if report_json and fixture_id_str:
                         reports_dir = Path(output_dir) / "reports"
@@ -303,8 +317,8 @@ def run_prepare_seed(
                 })
                 summary["errors"] += 1
                 continue
-            # Use raw match data for prepare_evaluation
-            eval_input = input_data
+            # Use report (with merged KB context) for prepare_evaluation
+            eval_input = report_json if report_json else input_data
         else:
             # Report input — use as-is for prepare_evaluation
             eval_input = input_data
@@ -412,6 +426,22 @@ def _majority_vote(dimension_signals: dict) -> str:
     if counts.get("🔴", 0) >= 2:
         return "🔴"
     return "🟡"
+
+
+_LEGACY_SIGNAL_MAP = {
+    "green": "🟢",
+    "yellow": "🟡",
+    "neutral": "🟡",
+    "red": "🔴",
+}
+
+
+def _normalize_signal_emoji(value: str | None) -> str | None:
+    """Convert legacy text signals (green/yellow/red/neutral) to emoji."""
+    if value is None:
+        return None
+    lower = value.lower().strip()
+    return _LEGACY_SIGNAL_MAP.get(lower, value)  # pass through if already emoji
 
 
 def _needs_eval_normalization(evaluation: dict) -> bool:
@@ -526,18 +556,35 @@ def run_apply_features(
             entry["legacy_evaluation"] = dict(evaluation)
             # Build normalized evaluation
             dim_signals = {
-                "execution": evaluation.get("execution_signal"),
-                "adjustment": evaluation.get("adjustment_signal"),
-                "satisfaction": evaluation.get("satisfaction_signal"),
+                "execution": _normalize_signal_emoji(evaluation.get("execution_signal")),
+                "adjustment": _normalize_signal_emoji(evaluation.get("adjustment_signal")),
+                "satisfaction": _normalize_signal_emoji(evaluation.get("satisfaction_signal")),
+            }
+            # Normalize model_signals to emoji
+            raw_model_signals = evaluation.get("model_signals", {})
+            normalized_model_signals = {
+                k: _normalize_signal_emoji(v) for k, v in raw_model_signals.items()
             }
             new_eval = {
                 "source": "legacy",
-                "model_signals": evaluation.get("model_signals", {}),
+                "model_signals": normalized_model_signals,
                 "dimension_signals": dim_signals,
                 "overall_signal": _majority_vote(dim_signals),
-                "narrative": "",
+                "narrative": evaluation.get("narrative", ""),
             }
             entry["evaluation"] = new_eval
+        else:
+            # Even if not legacy-shape, normalize any remaining text signals
+            model_signals = evaluation.get("model_signals", {})
+            if model_signals:
+                needs_emoji = any(
+                    v in ("green", "yellow", "red", "neutral")
+                    for v in model_signals.values() if isinstance(v, str)
+                )
+                if needs_emoji:
+                    entry["evaluation"]["model_signals"] = {
+                        k: _normalize_signal_emoji(v) for k, v in model_signals.items()
+                    }
 
         applied.append(mid)
 

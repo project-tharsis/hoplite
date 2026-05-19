@@ -1,0 +1,170 @@
+{
+  "fixture_id": 1208376,
+  "date": "2025-05-11T15:30:00+00:00",
+  "competition": "Premier League",
+  "home_team": "Liverpool",
+  "away_team": "Arsenal",
+  "home_score": 2,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 8,
+    "Total Shots": 14,
+    "Blocked Shots": 1,
+    "Shots insidebox": 10,
+    "Shots outsidebox": 4,
+    "Fouls": 13,
+    "Corner Kicks": 3,
+    "Offsides": 3,
+    "Ball Possession": "44%",
+    "Yellow Cards": 1,
+    "Red Cards": 0,
+    "Goalkeeper Saves": 4,
+    "Total passes": 355,
+    "Passes accurate": 292,
+    "Passes %": "82%",
+    "expected_goals": "2.39",
+    "goals_prevented": "0.70"
+  },
+  "away_stats": {
+    "Shots on Goal": 7,
+    "Shots off Goal": 4,
+    "Total Shots": 15,
+    "Blocked Shots": 4,
+    "Shots insidebox": 11,
+    "Shots outsidebox": 4,
+    "Fouls": 10,
+    "Corner Kicks": 1,
+    "Offsides": 1,
+    "Ball Possession": "56%",
+    "Yellow Cards": 3,
+    "Red Cards": 1,
+    "Goalkeeper Saves": 3,
+    "Total passes": 447,
+    "Passes accurate": 384,
+    "Passes %": "86%",
+    "expected_goals": "2.58",
+    "goals_prevented": "0.70"
+  },
+  "events": [
+    {
+      "minute": 20,
+      "type": "Goal",
+      "team": "home",
+      "player": "C. Gakpo",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 21,
+      "type": "Goal",
+      "team": "home",
+      "player": "L. Díaz",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 34,
+      "type": "Card",
+      "team": "away",
+      "player": "Mikel Merino",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 43,
+      "type": "Card",
+      "team": "away",
+      "player": "Myles Lewis-Skelly",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 47,
+      "type": "Goal",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 60,
+      "type": "Card",
+      "team": "home",
+      "player": "Conor Bradley",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 66,
+      "type": "subst",
+      "team": "home",
+      "player": "C. Gakpo",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 67,
+      "type": "subst",
+      "team": "home",
+      "player": "C. Bradley",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 67,
+      "type": "subst",
+      "team": "home",
+      "player": "C. Jones",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 70,
+      "type": "Goal",
+      "team": "away",
+      "player": "Mikel Merino",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 78,
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 78,
+      "type": "subst",
+      "team": "away",
+      "player": "B. White",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 79,
+      "type": "Card",
+      "team": "away",
+      "player": "Mikel Merino",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 79,
+      "type": "Card",
+      "team": "away",
+      "player": "Mikel Merino",
+      "detail": "Red Card"
+    },
+    {
+      "minute": 79,
+      "type": "subst",
+      "team": "home",
+      "player": "L. Díaz",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 83,
+      "type": "subst",
+      "team": "home",
+      "player": "R. Gravenberch",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 88,
+      "type": "subst",
+      "team": "away",
+      "player": "B. Saka",
+      "detail": "Substitution 3"
+    }
+  ]
+}

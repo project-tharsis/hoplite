@@ -1,0 +1,177 @@
+{
+  "fixture_id": 1379079,
+  "date": "2025-11-23T16:30:00+00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Tottenham",
+  "home_score": 4,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 8,
+    "Shots off Goal": 7,
+    "Total Shots": 17,
+    "Blocked Shots": 2,
+    "Shots insidebox": 12,
+    "Shots outsidebox": 5,
+    "Fouls": 11,
+    "Corner Kicks": 4,
+    "Offsides": 3,
+    "Ball Possession": "57%",
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 448,
+    "Passes accurate": 363,
+    "Passes %": "81%",
+    "expected_goals": "1.93",
+    "goals_prevented": "-0.85"
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 1,
+    "Total Shots": 3,
+    "Blocked Shots": 0,
+    "Shots insidebox": 0,
+    "Shots outsidebox": 3,
+    "Fouls": 15,
+    "Corner Kicks": 1,
+    "Offsides": 1,
+    "Ball Possession": "43%",
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 4,
+    "Total passes": 330,
+    "Passes accurate": 250,
+    "Passes %": "76%",
+    "expected_goals": "0.07",
+    "goals_prevented": "-0.85"
+  },
+  "events": [
+    {
+      "minute": 32,
+      "type": "Card",
+      "team": "away",
+      "player": "Rodrigo Bentancur",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 36,
+      "type": "Goal",
+      "team": "home",
+      "player": "L. Trossard",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 41,
+      "type": "Goal",
+      "team": "home",
+      "player": "E. Eze",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 46,
+      "type": "subst",
+      "team": "away",
+      "player": "K. Danso",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 46,
+      "type": "Goal",
+      "team": "home",
+      "player": "E. Eze",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 55,
+      "type": "Goal",
+      "team": "away",
+      "player": "Richarlison",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 66,
+      "type": "subst",
+      "team": "away",
+      "player": "R. Bentancur",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 66,
+      "type": "subst",
+      "team": "away",
+      "player": "W. Odobert",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 70,
+      "type": "Card",
+      "team": "away",
+      "player": "Cristian Romero",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 76,
+      "type": "Goal",
+      "team": "home",
+      "player": "E. Eze",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 78,
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 78,
+      "type": "subst",
+      "team": "away",
+      "player": "D. Spence",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 78,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Kudus",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 87,
+      "type": "Card",
+      "team": "home",
+      "player": "Declan Rice",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 87,
+      "type": "Card",
+      "team": "away",
+      "player": "Pedro Porro",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 88,
+      "type": "subst",
+      "team": "home",
+      "player": "M. Merino",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 88,
+      "type": "subst",
+      "team": "home",
+      "player": "P. Hincapie",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 90,
+      "type": "subst",
+      "team": "home",
+      "player": "R. Calafiori",
+      "detail": "Substitution 4"
+    }
+  ]
+}

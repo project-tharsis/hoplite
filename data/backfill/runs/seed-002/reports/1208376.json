@@ -1,0 +1,322 @@
+{
+  "match": {
+    "fixture_id": 1208376,
+    "date": "2025-05-11T15:30:00+00:00",
+    "competition": "Premier League",
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "home_score": 2,
+    "away_score": 2,
+    "arsenal_score": 2,
+    "opponent_score": 2,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "防守结构",
+      "快速转换",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "低位防线 + 结构化防守 + 快速转换反击",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "关键球员对位 — 限制对手核心进攻点"
+    ],
+    "expected_subs": "60' 上防守型中场巩固结构；75' 反击点换前锋保持速度威胁",
+    "historical_context": "## 历史模式参考\n\n类似场景（away vs top6 league_late）：共 3 场\n- 战绩：1胜 1平 1负，场均进球 2.33，场均失球 1.67\n\n### 维度信号分布\n- 执行：🟢0 🟡0 🔴0\n- 调整：🟢0 🟡0 🔴0\n- 满意：🟢0 🟡0 🔴0\n\n### 心智模型历史表现\n- 模型1 文化标准：🟢0 🟡0 🔴0\n- 模型2 比赛控制：🟢0 🟡0 🔴0\n- 模型3 防守身份：🟢0 🟡0 🔴0\n- 模型4 边际收益：🟢0 🟡0 🔴0\n- 模型5 能力叠加：🟢0 🟡0 🔴0\n- 模型6 角色清晰：🟢0 🟡0 🔴0\n\n### 常见战术重点：防守结构、快速转换、高位反抢/断球\n\n### 最近类似案例\n1. Man City 1-2（负）\n   战术重点：防守结构、快速转换、高位反抢/断球\n   维度信号：执行? 调整? 满意?\n\n2. Tottenham 4-1（胜）\n   战术重点：防守结构、快速转换、高位反抢/断球\n   维度信号：执行? 调整? 满意?\n\n3. Liverpool 2-2（平）\n   战术重点：防守结构、快速转换、高位反抢/断球\n   维度信号：执行yellow 调整green 满意yellow\n\n### ⚠️ 历史参考规则\n- 历史模式仅作为参考，**不覆盖本场比赛的实际数据**\n- 如果本场数据与历史模式冲突，**以本场数据为准**\n- 历史信号分布反映的是过去趋势，不预测本场结果\n"
+  },
+  "context": {
+    "opponent": "Liverpool",
+    "opponent_quality": "top6",
+    "venue": "away",
+    "competition_stage": "league_late",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 2,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": "2.58",
+      "opponent": "2.39"
+    },
+    "possession": {
+      "arsenal": "56%",
+      "opponent": "44%"
+    },
+    "shots": {
+      "arsenal": 15,
+      "opponent": 14
+    },
+    "shots_on_target": {
+      "arsenal": 7,
+      "opponent": 5
+    },
+    "passes": {
+      "arsenal": {
+        "total": 447,
+        "accuracy": "86%"
+      },
+      "opponent": {
+        "total": 355,
+        "accuracy": "82%"
+      }
+    },
+    "fouls": {
+      "arsenal": 10,
+      "opponent": 13
+    },
+    "corners": {
+      "arsenal": 1,
+      "opponent": 3
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 2,
+        "total": 2
+      },
+      "opponent": {
+        "first_half": 2,
+        "second_half": 0,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 3,
+        "red": 1
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 20,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Liverpool",
+      "player": "C. Gakpo",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 21,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Liverpool",
+      "player": "L. Díaz",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 34,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 43,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Myles Lewis-Skelly",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 47,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 60,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Liverpool",
+      "player": "Conor Bradley",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 66,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Liverpool",
+      "player": "C. Gakpo",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 67,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Liverpool",
+      "player": "C. Bradley",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 67,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Liverpool",
+      "player": "C. Jones",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 70,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 78,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 78,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. White",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 79,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 79,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Mikel Merino",
+      "detail": "Red Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 79,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Liverpool",
+      "player": "L. Díaz",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 83,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Liverpool",
+      "player": "R. Gravenberch",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 88,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 66,
+      "player": "C. Gakpo",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 67,
+      "player": "C. Bradley",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 67,
+      "player": "C. Jones",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 78,
+      "player": "L. Trossard",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 78,
+      "player": "B. White",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 79,
+      "player": "L. Díaz",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 83,
+      "player": "R. Gravenberch",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 88,
+      "player": "B. Saka",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 2-2 Liverpool (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

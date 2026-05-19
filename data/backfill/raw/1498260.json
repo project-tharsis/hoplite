@@ -1,0 +1,121 @@
+{
+  "fixture_id": 1498260,
+  "date": "2026-02-03T20:00:00+00:00",
+  "competition": "League Cup",
+  "home_team": "Arsenal",
+  "away_team": "Chelsea",
+  "home_score": 1,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 0,
+    "Total Shots": 5,
+    "Blocked Shots": 3,
+    "Shots insidebox": 4,
+    "Shots outsidebox": 1,
+    "Fouls": 14,
+    "Corner Kicks": 2,
+    "Offsides": 1,
+    "Ball Possession": "44%",
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 409,
+    "Passes accurate": 347,
+    "Passes %": "85%",
+    "expected_goals": null,
+    "goals_prevented": null
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 8,
+    "Total Shots": 14,
+    "Blocked Shots": 4,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 9,
+    "Fouls": 12,
+    "Corner Kicks": 5,
+    "Offsides": 1,
+    "Ball Possession": "56%",
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 511,
+    "Passes accurate": 458,
+    "Passes %": "90%",
+    "expected_goals": null,
+    "goals_prevented": null
+  },
+  "events": [
+    {
+      "minute": 56,
+      "type": "Card",
+      "team": "away",
+      "player": "Liam Delap",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 60,
+      "type": "subst",
+      "team": "away",
+      "player": "L. Delap",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 60,
+      "type": "subst",
+      "team": "away",
+      "player": "J. Hato",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 68,
+      "type": "Card",
+      "team": "away",
+      "player": "Malo Gusto",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 69,
+      "type": "subst",
+      "team": "home",
+      "player": "N. Madueke",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 69,
+      "type": "subst",
+      "team": "home",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 71,
+      "type": "Card",
+      "team": "away",
+      "player": "Estêvão",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 75,
+      "type": "subst",
+      "team": "away",
+      "player": "Andrey Santos",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 87,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Gusto",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 90,
+      "type": "Goal",
+      "team": "home",
+      "player": "K. Havertz",
+      "detail": "Normal Goal"
+    }
+  ]
+}

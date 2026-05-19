@@ -1,0 +1,156 @@
+{
+  "fixture_id": 1379109,
+  "date": "2025-12-06T12:30:00+00:00",
+  "competition": "Premier League",
+  "home_team": "Aston Villa",
+  "away_team": "Arsenal",
+  "home_score": 2,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 6,
+    "Shots off Goal": 2,
+    "Total Shots": 15,
+    "Blocked Shots": 7,
+    "Shots insidebox": 13,
+    "Shots outsidebox": 2,
+    "Fouls": 10,
+    "Corner Kicks": 3,
+    "Offsides": 0,
+    "Ball Possession": "47%",
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 7,
+    "Total passes": 397,
+    "Passes accurate": 325,
+    "Passes %": "82%",
+    "expected_goals": "2.16",
+    "goals_prevented": "-0.01"
+  },
+  "away_stats": {
+    "Shots on Goal": 9,
+    "Shots off Goal": 5,
+    "Total Shots": 15,
+    "Blocked Shots": 1,
+    "Shots insidebox": 9,
+    "Shots outsidebox": 6,
+    "Fouls": 8,
+    "Corner Kicks": 3,
+    "Offsides": 3,
+    "Ball Possession": "53%",
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 4,
+    "Total passes": 443,
+    "Passes accurate": 376,
+    "Passes %": "85%",
+    "expected_goals": "1.92",
+    "goals_prevented": "-0.01"
+  },
+  "events": [
+    {
+      "minute": 36,
+      "type": "Goal",
+      "team": "home",
+      "player": "M. Cash",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 46,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Merino",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 46,
+      "type": "subst",
+      "team": "away",
+      "player": "E. Eze",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 52,
+      "type": "Goal",
+      "team": "away",
+      "player": "L. Trossard",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 66,
+      "type": "subst",
+      "team": "home",
+      "player": "O. Watkins",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 72,
+      "type": "Card",
+      "team": "away",
+      "player": "Riccardo Calafiori",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 74,
+      "type": "Card",
+      "team": "away",
+      "player": "Bukayo Saka",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 75,
+      "type": "subst",
+      "team": "home",
+      "player": "A. Onana",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 75,
+      "type": "subst",
+      "team": "home",
+      "player": "J. McGinn",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 79,
+      "type": "subst",
+      "team": "away",
+      "player": "B. Saka",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 86,
+      "type": "subst",
+      "team": "home",
+      "player": "P. Torres",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 86,
+      "type": "subst",
+      "team": "away",
+      "player": null,
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 86,
+      "type": "subst",
+      "team": "away",
+      "player": "R. Calafiori",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 87,
+      "type": "subst",
+      "team": "home",
+      "player": "M. Cash",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 90,
+      "type": "Goal",
+      "team": "home",
+      "player": "E. Buendia",
+      "detail": "Normal Goal"
+    }
+  ]
+}

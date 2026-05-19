@@ -1,0 +1,177 @@
+{
+  "fixture_id": 1451107,
+  "date": "2025-11-26T20:00:00+00:00",
+  "competition": "UEFA Champions League",
+  "home_team": "Arsenal",
+  "away_team": "Bayern München",
+  "home_score": 3,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 8,
+    "Shots off Goal": 5,
+    "Total Shots": 13,
+    "Blocked Shots": 0,
+    "Shots insidebox": 12,
+    "Shots outsidebox": 1,
+    "Fouls": 16,
+    "Corner Kicks": 6,
+    "Offsides": 2,
+    "Ball Possession": "40%",
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 344,
+    "Passes accurate": 275,
+    "Passes %": "80%",
+    "expected_goals": "3.11",
+    "goals_prevented": "0.38"
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 3,
+    "Total Shots": 8,
+    "Blocked Shots": 3,
+    "Shots insidebox": 8,
+    "Shots outsidebox": 0,
+    "Fouls": 13,
+    "Corner Kicks": 1,
+    "Offsides": 0,
+    "Ball Possession": "60%",
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 5,
+    "Total passes": 533,
+    "Passes accurate": 461,
+    "Passes %": "86%",
+    "expected_goals": "0.65",
+    "goals_prevented": "0.38"
+  },
+  "events": [
+    {
+      "minute": 22,
+      "type": "Goal",
+      "team": "home",
+      "player": "J. Timber",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 23,
+      "type": "Card",
+      "team": "away",
+      "player": "Dayot Upamecano",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 32,
+      "type": "Goal",
+      "team": "away",
+      "player": "L. Karl",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 38,
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 43,
+      "type": "Card",
+      "team": "away",
+      "player": "Konrad Laimer",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 68,
+      "type": "subst",
+      "team": "home",
+      "player": "B. Saka",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 68,
+      "type": "subst",
+      "team": "home",
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 69,
+      "type": "Goal",
+      "team": "home",
+      "player": "N. Madueke",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 72,
+      "type": "subst",
+      "team": "away",
+      "player": "S. Gnabry",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 72,
+      "type": "subst",
+      "team": "away",
+      "player": "K. Laimer",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 74,
+      "type": "Card",
+      "team": "home",
+      "player": "William Saliba",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 77,
+      "type": "Goal",
+      "team": "home",
+      "player": "G. Martinelli",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 80,
+      "type": "Card",
+      "team": "home",
+      "player": "Mikel Merino",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 80,
+      "type": "subst",
+      "team": "home",
+      "player": "J. Timber",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 80,
+      "type": "subst",
+      "team": "home",
+      "player": "E. Eze",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 81,
+      "type": "subst",
+      "team": "away",
+      "player": "D. Upamecano",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 81,
+      "type": "subst",
+      "team": "away",
+      "player": "J. Kimmich",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 81,
+      "type": "subst",
+      "team": "away",
+      "player": "L. Karl",
+      "detail": "Substitution 5"
+    }
+  ]
+}

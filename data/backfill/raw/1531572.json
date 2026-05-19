@@ -1,0 +1,156 @@
+{
+  "fixture_id": 1531572,
+  "date": "2026-04-04T19:00:00+00:00",
+  "competition": "FA Cup",
+  "home_team": "Southampton",
+  "away_team": "Arsenal",
+  "home_score": 2,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 3,
+    "Total Shots": 8,
+    "Blocked Shots": 1,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 2,
+    "Fouls": 9,
+    "Corner Kicks": 4,
+    "Offsides": null,
+    "Ball Possession": "36%",
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 6,
+    "Total passes": 304,
+    "Passes accurate": 240,
+    "Passes %": "79%",
+    "expected_goals": "0.80",
+    "goals_prevented": null
+  },
+  "away_stats": {
+    "Shots on Goal": 7,
+    "Shots off Goal": 6,
+    "Total Shots": 23,
+    "Blocked Shots": 10,
+    "Shots insidebox": 14,
+    "Shots outsidebox": 9,
+    "Fouls": 11,
+    "Corner Kicks": 9,
+    "Offsides": null,
+    "Ball Possession": "64%",
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 524,
+    "Passes accurate": 466,
+    "Passes %": "89%",
+    "expected_goals": "2.10",
+    "goals_prevented": null
+  },
+  "events": [
+    {
+      "minute": 27,
+      "type": "Card",
+      "team": "home",
+      "player": "Ryan Manning",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 35,
+      "type": "Goal",
+      "team": "home",
+      "player": "R. Stewart",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 60,
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 60,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 61,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Odegaard",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 68,
+      "type": "Goal",
+      "team": "away",
+      "player": "V. Gyokeres",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 70,
+      "type": "subst",
+      "team": "home",
+      "player": "R. Stewart",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 71,
+      "type": "subst",
+      "team": "home",
+      "player": "L. Scienza",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 72,
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 76,
+      "type": "subst",
+      "team": "home",
+      "player": "C. Bragg",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 79,
+      "type": "subst",
+      "team": "away",
+      "player": "K. Havertz",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 85,
+      "type": "Goal",
+      "team": "home",
+      "player": "S. Charles",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 89,
+      "type": "Card",
+      "team": "home",
+      "player": "Caspar Jander",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 90,
+      "type": "Card",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 90,
+      "type": "subst",
+      "team": "home",
+      "player": "R. Manning",
+      "detail": "Substitution 4"
+    }
+  ]
+}

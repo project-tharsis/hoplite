@@ -1,0 +1,170 @@
+{
+  "fixture_id": 1451136,
+  "date": "2026-01-20T20:00:00+00:00",
+  "competition": "UEFA Champions League",
+  "home_team": "Inter",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 3,
+  "home_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 6,
+    "Total Shots": 18,
+    "Blocked Shots": 8,
+    "Shots insidebox": 14,
+    "Shots outsidebox": 4,
+    "Fouls": 9,
+    "Corner Kicks": 4,
+    "Offsides": 3,
+    "Ball Possession": "51%",
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 446,
+    "Passes accurate": 386,
+    "Passes %": "87%",
+    "expected_goals": "1.36",
+    "goals_prevented": "-0.03"
+  },
+  "away_stats": {
+    "Shots on Goal": 6,
+    "Shots off Goal": 6,
+    "Total Shots": 17,
+    "Blocked Shots": 5,
+    "Shots insidebox": 12,
+    "Shots outsidebox": 5,
+    "Fouls": 17,
+    "Corner Kicks": 7,
+    "Offsides": 3,
+    "Ball Possession": "49%",
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 420,
+    "Passes accurate": 348,
+    "Passes %": "83%",
+    "expected_goals": "2.14",
+    "goals_prevented": "-0.03"
+  },
+  "events": [
+    {
+      "minute": 10,
+      "type": "Goal",
+      "team": "away",
+      "player": "Gabriel Jesus",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 18,
+      "type": "Goal",
+      "team": "home",
+      "player": "P. Sucic",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 31,
+      "type": "Goal",
+      "team": "away",
+      "player": "Gabriel Jesus",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 63,
+      "type": "subst",
+      "team": "home",
+      "player": "N. Barella",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 63,
+      "type": "subst",
+      "team": "home",
+      "player": "L. Martinez",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 64,
+      "type": "subst",
+      "team": "away",
+      "player": "J. Timber",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 64,
+      "type": "subst",
+      "team": "away",
+      "player": "E. Eze",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 72,
+      "type": "Card",
+      "team": "home",
+      "player": "Alessandro Bastoni",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 73,
+      "type": "Card",
+      "team": "away",
+      "player": "Mikel Merino",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 75,
+      "type": "subst",
+      "team": "away",
+      "player": "C. Mosquera",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 75,
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 79,
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 82,
+      "type": "Card",
+      "team": "home",
+      "player": "Francesco Acerbi",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 82,
+      "type": "subst",
+      "team": "home",
+      "player": "Luis Henrique",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 82,
+      "type": "subst",
+      "team": "home",
+      "player": "P. Zielinski",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 84,
+      "type": "Goal",
+      "team": "away",
+      "player": "V. Gyokeres",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 90,
+      "type": "Card",
+      "team": "away",
+      "player": "Declan Rice",
+      "detail": "Yellow Card"
+    }
+  ]
+}

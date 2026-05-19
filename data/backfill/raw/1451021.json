@@ -1,0 +1,156 @@
+{
+  "fixture_id": 1451021,
+  "date": "2025-09-16T16:45:00+00:00",
+  "competition": "UEFA Champions League",
+  "home_team": "Athletic Club",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 4,
+    "Total Shots": 11,
+    "Blocked Shots": 5,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 5,
+    "Fouls": 18,
+    "Corner Kicks": 2,
+    "Offsides": 0,
+    "Ball Possession": "38%",
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 4,
+    "Total passes": 303,
+    "Passes accurate": 224,
+    "Passes %": "74%",
+    "expected_goals": "0.35",
+    "goals_prevented": "0.17"
+  },
+  "away_stats": {
+    "Shots on Goal": 6,
+    "Shots off Goal": 4,
+    "Total Shots": 11,
+    "Blocked Shots": 1,
+    "Shots insidebox": 9,
+    "Shots outsidebox": 2,
+    "Fouls": 15,
+    "Corner Kicks": 2,
+    "Offsides": 2,
+    "Ball Possession": "62%",
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 490,
+    "Passes accurate": 409,
+    "Passes %": "83%",
+    "expected_goals": "1.28",
+    "goals_prevented": "0.17"
+  },
+  "events": [
+    {
+      "minute": 7,
+      "type": "Card",
+      "team": "away",
+      "player": "Declan Rice",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 61,
+      "type": "subst",
+      "team": "home",
+      "player": "R. Navarro",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 65,
+      "type": "subst",
+      "team": "away",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 68,
+      "type": "subst",
+      "team": "home",
+      "player": "O. Sancet",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 68,
+      "type": "subst",
+      "team": "home",
+      "player": "A. Boiro",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 71,
+      "type": "subst",
+      "team": "away",
+      "player": "E. Eze",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 72,
+      "type": "Goal",
+      "team": "away",
+      "player": "G. Martinelli",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 81,
+      "type": "subst",
+      "team": "home",
+      "player": null,
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 81,
+      "type": "subst",
+      "team": "home",
+      "player": "M. Vesga",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 84,
+      "type": "Card",
+      "team": "away",
+      "player": "Noni Madueke",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 85,
+      "type": "Card",
+      "team": "home",
+      "player": "Mikel Jauregizar",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 87,
+      "type": "Goal",
+      "team": "away",
+      "player": "L. Trossard",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 90,
+      "type": "Card",
+      "team": "away",
+      "player": "Martín Zubimendi",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 90,
+      "type": "subst",
+      "team": "away",
+      "player": "R. Calafiori",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 90,
+      "type": "subst",
+      "team": "away",
+      "player": "N. Madueke",
+      "detail": "Substitution 4"
+    }
+  ]
+}

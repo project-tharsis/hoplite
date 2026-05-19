@@ -1,0 +1,170 @@
+{
+  "fixture_id": 1314297,
+  "date": "2024-12-18T19:30:00+00:00",
+  "competition": "League Cup",
+  "home_team": "Arsenal",
+  "away_team": "Crystal Palace",
+  "home_score": 3,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 9,
+    "Shots off Goal": 3,
+    "Total Shots": 12,
+    "Blocked Shots": 0,
+    "Shots insidebox": 7,
+    "Shots outsidebox": 5,
+    "Fouls": 7,
+    "Corner Kicks": 4,
+    "Offsides": 3,
+    "Ball Possession": "71%",
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 551,
+    "Passes accurate": 482,
+    "Passes %": "87%",
+    "expected_goals": null,
+    "goals_prevented": null
+  },
+  "away_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 2,
+    "Total Shots": 8,
+    "Blocked Shots": 2,
+    "Shots insidebox": 4,
+    "Shots outsidebox": 4,
+    "Fouls": 12,
+    "Corner Kicks": 2,
+    "Offsides": 1,
+    "Ball Possession": "29%",
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 6,
+    "Total passes": 225,
+    "Passes accurate": 149,
+    "Passes %": "66%",
+    "expected_goals": null,
+    "goals_prevented": null
+  },
+  "events": [
+    {
+      "minute": 4,
+      "type": "Goal",
+      "team": "away",
+      "player": "J. Mateta",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 23,
+      "type": "Card",
+      "team": "away",
+      "player": "Caleb Kporha",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 46,
+      "type": "subst",
+      "team": "home",
+      "player": "T. Partey",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 46,
+      "type": "subst",
+      "team": "home",
+      "player": "E. Nwaneri",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 46,
+      "type": "subst",
+      "team": "away",
+      "player": "C. Kporha",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 54,
+      "type": "Goal",
+      "team": "home",
+      "player": "Gabriel Jesus",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 59,
+      "type": "subst",
+      "team": "away",
+      "player": "J. Mateta",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 59,
+      "type": "subst",
+      "team": "away",
+      "player": "E. Eze",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 69,
+      "type": "subst",
+      "team": "home",
+      "player": "K. Tierney",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 70,
+      "type": "subst",
+      "team": "home",
+      "player": "R. Sterling",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 73,
+      "type": "Goal",
+      "team": "home",
+      "player": "Gabriel Jesus",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 80,
+      "type": "subst",
+      "team": "away",
+      "player": "W. Hughes",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 81,
+      "type": "Goal",
+      "team": "home",
+      "player": "Gabriel Jesus",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 85,
+      "type": "Goal",
+      "team": "away",
+      "player": "E. Nketiah",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 86,
+      "type": "subst",
+      "team": "away",
+      "player": "T. Mitchell",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 87,
+      "type": "subst",
+      "team": "home",
+      "player": "J. Kiwior",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 90,
+      "type": "Card",
+      "team": "home",
+      "player": "Myles Lewis-Skelly",
+      "detail": "Yellow Card"
+    }
+  ]
+}

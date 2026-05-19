@@ -1,0 +1,170 @@
+{
+  "fixture_id": 1379091,
+  "date": "2025-11-30T16:30:00+00:00",
+  "competition": "Premier League",
+  "home_team": "Chelsea",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 5,
+    "Total Shots": 11,
+    "Blocked Shots": 2,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 5,
+    "Fouls": 12,
+    "Corner Kicks": 3,
+    "Offsides": 1,
+    "Ball Possession": "38%",
+    "Yellow Cards": 1,
+    "Red Cards": 1,
+    "Goalkeeper Saves": 3,
+    "Total passes": 279,
+    "Passes accurate": 222,
+    "Passes %": "80%",
+    "expected_goals": "0.79",
+    "goals_prevented": "0.15"
+  },
+  "away_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 3,
+    "Total Shots": 8,
+    "Blocked Shots": 1,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 2,
+    "Fouls": 13,
+    "Corner Kicks": 3,
+    "Offsides": 3,
+    "Ball Possession": "62%",
+    "Yellow Cards": 6,
+    "Red Cards": 0,
+    "Goalkeeper Saves": 3,
+    "Total passes": 463,
+    "Passes accurate": 390,
+    "Passes %": "84%",
+    "expected_goals": "1.26",
+    "goals_prevented": "0.15"
+  },
+  "events": [
+    {
+      "minute": 5,
+      "type": "Card",
+      "team": "away",
+      "player": "Martín Zubimendi",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 11,
+      "type": "Card",
+      "team": "home",
+      "player": "Marc Cucurella",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 13,
+      "type": "Card",
+      "team": "away",
+      "player": "Cristhian Mosquera",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 27,
+      "type": "Card",
+      "team": "away",
+      "player": "Riccardo Calafiori",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 37,
+      "type": "Var",
+      "team": "home",
+      "player": "Moisés Caicedo",
+      "detail": "Card upgrade"
+    },
+    {
+      "minute": 38,
+      "type": "Card",
+      "team": "home",
+      "player": "Moisés Caicedo",
+      "detail": "Red Card"
+    },
+    {
+      "minute": 41,
+      "type": "Card",
+      "team": "away",
+      "player": "Piero Hincapié",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 46,
+      "type": "subst",
+      "team": "home",
+      "player": "Estêvão",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 46,
+      "type": "subst",
+      "team": "away",
+      "player": "R. Calafiori",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 48,
+      "type": "Goal",
+      "team": "home",
+      "player": "T. Chalobah",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 54,
+      "type": "Card",
+      "team": "away",
+      "player": "Myles Lewis-Skelly",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 55,
+      "type": "subst",
+      "team": "home",
+      "player": "Joao Pedro",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 57,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Zubimendi",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 57,
+      "type": "subst",
+      "team": "away",
+      "player": "G. Martinelli",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 59,
+      "type": "Goal",
+      "team": "away",
+      "player": "M. Merino",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 72,
+      "type": "subst",
+      "team": "away",
+      "player": "E. Eze",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 88,
+      "type": "Card",
+      "team": "away",
+      "player": "Viktor Gyökeres",
+      "detail": "Yellow Card"
+    }
+  ]
+}

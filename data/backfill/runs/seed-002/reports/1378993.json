@@ -1,0 +1,286 @@
+{
+  "match": {
+    "fixture_id": 1378993,
+    "date": "2025-08-31T15:30:00+00:00",
+    "competition": "Premier League",
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "home_score": 1,
+    "away_score": 0,
+    "arsenal_score": 0,
+    "opponent_score": 1,
+    "result": "L"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "防守结构",
+      "快速转换",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "低位防线 + 结构化防守 + 快速转换反击",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "关键球员对位 — 限制对手核心进攻点"
+    ],
+    "expected_subs": "60' 上防守型中场巩固结构；75' 反击点换前锋保持速度威胁",
+    "historical_context": "## 历史模式参考\n\n类似场景（away vs top6 league_early）：共 4 场\n- 战绩：2胜 1平 1负，场均进球 1.0，场均失球 0.75\n\n### 维度信号分布\n- 执行：🟢0 🟡0 🔴0\n- 调整：🟢0 🟡0 🔴0\n- 满意：🟢0 🟡0 🔴0\n\n### 心智模型历史表现\n- 模型1 文化标准：🟢0 🟡0 🔴0\n- 模型2 比赛控制：🟢0 🟡0 🔴0\n- 模型3 防守身份：🟢0 🟡0 🔴0\n- 模型4 边际收益：🟢0 🟡0 🔴0\n- 模型5 能力叠加：🟢0 🟡0 🔴0\n- 模型6 角色清晰：🟢0 🟡0 🔴0\n\n### 常见战术重点：防守结构、快速转换、高位反抢/断球\n\n### 最近类似案例\n1. Chelsea 1-1（平）\n   战术重点：防守结构、快速转换、高位反抢/断球\n   维度信号：执行neutral 调整green 满意neutral\n\n2. Newcastle 2-1（胜）\n   战术重点：防守结构、快速转换、高位反抢/断球\n   维度信号：执行green 调整green 满意green\n\n3. Liverpool 0-1（负）\n   战术重点：防守结构、快速转换、高位反抢/断球\n   维度信号：执行red 调整yellow 满意red\n\n### ⚠️ 历史参考规则\n- 历史模式仅作为参考，**不覆盖本场比赛的实际数据**\n- 如果本场数据与历史模式冲突，**以本场数据为准**\n- 历史信号分布反映的是过去趋势，不预测本场结果\n"
+  },
+  "context": {
+    "opponent": "Liverpool",
+    "opponent_quality": "top6",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 0,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": "0.49",
+      "opponent": "0.52"
+    },
+    "possession": {
+      "arsenal": "47%",
+      "opponent": "53%"
+    },
+    "shots": {
+      "arsenal": 11,
+      "opponent": 9
+    },
+    "shots_on_target": {
+      "arsenal": 1,
+      "opponent": 3
+    },
+    "passes": {
+      "arsenal": {
+        "total": 371,
+        "accuracy": "82%"
+      },
+      "opponent": {
+        "total": 435,
+        "accuracy": "85%"
+      }
+    },
+    "fouls": {
+      "arsenal": 10,
+      "opponent": 7
+    },
+    "corners": {
+      "arsenal": 8,
+      "opponent": 3
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 0,
+        "total": 0
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 2,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 5,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "W. Saliba",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 29,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Liverpool",
+      "player": "Ryan Gravenberch",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 61,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Liverpool",
+      "player": "A. Mac Allister",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 66,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Viktor Gyökeres",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Merino",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 79,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Liverpool",
+      "player": "H. Ekitike",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 79,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Liverpool",
+      "player": "I. Konate",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 81,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Martín Zubimendi",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 83,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Liverpool",
+      "player": "D. Szoboszlai",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 89,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Liverpool",
+      "player": "F. Wirtz",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 89,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "N. Madueke",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Liverpool",
+      "player": "Wataru Endo",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 5,
+      "player": "W. Saliba",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 61,
+      "player": "A. Mac Allister",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "M. Merino",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "G. Martinelli",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 79,
+      "player": "H. Ekitike",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 79,
+      "player": "I. Konate",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 89,
+      "player": "F. Wirtz",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 89,
+      "player": "N. Madueke",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 0-1 Liverpool (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

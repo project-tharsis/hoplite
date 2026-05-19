@@ -1,0 +1,308 @@
+{
+  "match": {
+    "fixture_id": 1379091,
+    "date": "2025-11-30T16:30:00+00:00",
+    "competition": "Premier League",
+    "home_team": "Chelsea",
+    "away_team": "Arsenal",
+    "home_score": 1,
+    "away_score": 1,
+    "arsenal_score": 1,
+    "opponent_score": 1,
+    "result": "D"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "防守结构",
+      "快速转换",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "低位防线 + 结构化防守 + 快速转换反击",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "关键球员对位 — 限制对手核心进攻点"
+    ],
+    "expected_subs": "60' 上防守型中场巩固结构；75' 反击点换前锋保持速度威胁",
+    "historical_context": "## 历史模式参考\n\n类似场景（away vs top6 league_early）：共 4 场\n- 战绩：2胜 1平 1负，场均进球 1.0，场均失球 0.75\n\n### 维度信号分布\n- 执行：🟢0 🟡0 🔴0\n- 调整：🟢0 🟡0 🔴0\n- 满意：🟢0 🟡0 🔴0\n\n### 心智模型历史表现\n- 模型1 文化标准：🟢0 🟡0 🔴0\n- 模型2 比赛控制：🟢0 🟡0 🔴0\n- 模型3 防守身份：🟢0 🟡0 🔴0\n- 模型4 边际收益：🟢0 🟡0 🔴0\n- 模型5 能力叠加：🟢0 🟡0 🔴0\n- 模型6 角色清晰：🟢0 🟡0 🔴0\n\n### 常见战术重点：防守结构、快速转换、高位反抢/断球\n\n### 最近类似案例\n1. Chelsea 1-1（平）\n   战术重点：防守结构、快速转换、高位反抢/断球\n   维度信号：执行neutral 调整green 满意neutral\n\n2. Newcastle 2-1（胜）\n   战术重点：防守结构、快速转换、高位反抢/断球\n   维度信号：执行green 调整green 满意green\n\n3. Liverpool 0-1（负）\n   战术重点：防守结构、快速转换、高位反抢/断球\n   维度信号：执行red 调整yellow 满意red\n\n### ⚠️ 历史参考规则\n- 历史模式仅作为参考，**不覆盖本场比赛的实际数据**\n- 如果本场数据与历史模式冲突，**以本场数据为准**\n- 历史信号分布反映的是过去趋势，不预测本场结果\n"
+  },
+  "context": {
+    "opponent": "Chelsea",
+    "opponent_quality": "top6",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 1
+    },
+    "xg": {
+      "arsenal": "1.26",
+      "opponent": "0.79"
+    },
+    "possession": {
+      "arsenal": "62%",
+      "opponent": "38%"
+    },
+    "shots": {
+      "arsenal": 8,
+      "opponent": 11
+    },
+    "shots_on_target": {
+      "arsenal": 4,
+      "opponent": 4
+    },
+    "passes": {
+      "arsenal": {
+        "total": 463,
+        "accuracy": "84%"
+      },
+      "opponent": {
+        "total": 279,
+        "accuracy": "80%"
+      }
+    },
+    "fouls": {
+      "arsenal": 13,
+      "opponent": 12
+    },
+    "corners": {
+      "arsenal": 3,
+      "opponent": 3
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 6,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 1,
+        "red": 1
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 5,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Martín Zubimendi",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 11,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Marc Cucurella",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 13,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Cristhian Mosquera",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 27,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Riccardo Calafiori",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 37,
+      "type": "other",
+      "raw_type": "Var",
+      "team": "Chelsea",
+      "player": "Moisés Caicedo",
+      "detail": "Card upgrade",
+      "is_arsenal": false
+    },
+    {
+      "minute": 38,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Chelsea",
+      "player": "Moisés Caicedo",
+      "detail": "Red Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 41,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Piero Hincapié",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "Estêvão",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 48,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Chelsea",
+      "player": "T. Chalobah",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 54,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Myles Lewis-Skelly",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 55,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Chelsea",
+      "player": "Joao Pedro",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 57,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Zubimendi",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 57,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "G. Martinelli",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 59,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "M. Merino",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 72,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Eze",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 88,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Viktor Gyökeres",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 46,
+      "player": "Estêvão",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 46,
+      "player": "R. Calafiori",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 55,
+      "player": "Joao Pedro",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 57,
+      "player": "M. Zubimendi",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 57,
+      "player": "G. Martinelli",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 72,
+      "player": "E. Eze",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-1 Chelsea (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

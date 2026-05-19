@@ -1,0 +1,310 @@
+{
+  "match": {
+    "fixture_id": 1531572,
+    "date": "2026-04-04T19:00:00+00:00",
+    "competition": "FA Cup",
+    "home_team": "Southampton",
+    "away_team": "Arsenal",
+    "home_score": 2,
+    "away_score": 1,
+    "arsenal_score": 1,
+    "opponent_score": 2,
+    "result": "L"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "控制中场",
+      "高位反抢/断球"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球",
+      "破密集耐心 — 避免急躁 + 把握有限机会"
+    ],
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果",
+    "historical_context": "## 历史模式参考\n\n类似场景（away vs lower regular）：共 4 场\n- 战绩：3胜 0平 1负，场均进球 2.25，场均失球 1.0\n\n### 维度信号分布\n- 执行：🟢0 🟡0 🔴0\n- 调整：🟢0 🟡0 🔴0\n- 满意：🟢0 🟡0 🔴0\n\n### 心智模型历史表现\n- 模型1 文化标准：🟢0 🟡0 🔴0\n- 模型2 比赛控制：🟢0 🟡0 🔴0\n- 模型3 防守身份：🟢0 🟡0 🔴0\n- 模型4 边际收益：🟢0 🟡0 🔴0\n- 模型5 能力叠加：🟢0 🟡0 🔴0\n- 模型6 角色清晰：🟢0 🟡0 🔴0\n\n### 常见战术重点：控制中场、高位反抢/断球\n\n### 最近类似案例\n1. Southampton 1-2（负）\n   战术重点：控制中场、高位反抢/断球\n   维度信号：执行? 调整? 满意?\n\n2. Mansfield Town 2-1（胜）\n   战术重点：控制中场、高位反抢/断球\n   维度信号：执行? 调整? 满意?\n\n3. Portsmouth 4-1（胜）\n   战术重点：控制中场、高位反抢/断球\n   维度信号：执行? 调整? 满意?\n\n### ⚠️ 历史参考规则\n- 历史模式仅作为参考，**不覆盖本场比赛的实际数据**\n- 如果本场数据与历史模式冲突，**以本场数据为准**\n- 历史信号分布反映的是过去趋势，不预测本场结果\n"
+  },
+  "context": {
+    "opponent": "Southampton",
+    "opponent_quality": "lower",
+    "venue": "away",
+    "competition_stage": "regular",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": "2.10",
+      "opponent": "0.80"
+    },
+    "possession": {
+      "arsenal": "64%",
+      "opponent": "36%"
+    },
+    "shots": {
+      "arsenal": 23,
+      "opponent": 8
+    },
+    "shots_on_target": {
+      "arsenal": 7,
+      "opponent": 4
+    },
+    "passes": {
+      "arsenal": {
+        "total": 524,
+        "accuracy": "89%"
+      },
+      "opponent": {
+        "total": 304,
+        "accuracy": "79%"
+      }
+    },
+    "fouls": {
+      "arsenal": 11,
+      "opponent": 9
+    },
+    "corners": {
+      "arsenal": 9,
+      "opponent": 4
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 1,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 2,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 27,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Southampton",
+      "player": "Ryan Manning",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 35,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Southampton",
+      "player": "R. Stewart",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 60,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 60,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 61,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Odegaard",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 68,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "V. Gyokeres",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 70,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Southampton",
+      "player": "R. Stewart",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 71,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Southampton",
+      "player": "L. Scienza",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 72,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "Gabriel",
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 76,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Southampton",
+      "player": "C. Bragg",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 79,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "K. Havertz",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 85,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Southampton",
+      "player": "S. Charles",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 89,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Southampton",
+      "player": "Caspar Jander",
+      "detail": "Yellow Card",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Gabriel Martinelli",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 90,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Southampton",
+      "player": "R. Manning",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 60,
+      "player": "Gabriel Jesus",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 60,
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 61,
+      "player": "M. Odegaard",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 70,
+      "player": "R. Stewart",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 71,
+      "player": "L. Scienza",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 72,
+      "player": "Gabriel",
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 76,
+      "player": "C. Bragg",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 79,
+      "player": "K. Havertz",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 90,
+      "player": "R. Manning",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-2 Southampton (FA Cup)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

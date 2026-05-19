@@ -1,0 +1,135 @@
+{
+  "fixture_id": 1379076,
+  "date": "2025-11-08T17:30:00+00:00",
+  "competition": "Premier League",
+  "home_team": "Sunderland",
+  "away_team": "Arsenal",
+  "home_score": 2,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 2,
+    "Total Shots": 6,
+    "Blocked Shots": 2,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 0,
+    "Fouls": 13,
+    "Corner Kicks": 2,
+    "Offsides": 2,
+    "Ball Possession": "35%",
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 5,
+    "Total passes": 287,
+    "Passes accurate": 226,
+    "Passes %": "79%",
+    "expected_goals": "0.44",
+    "goals_prevented": "-1.18"
+  },
+  "away_stats": {
+    "Shots on Goal": 7,
+    "Shots off Goal": 6,
+    "Total Shots": 17,
+    "Blocked Shots": 4,
+    "Shots insidebox": 12,
+    "Shots outsidebox": 5,
+    "Fouls": 13,
+    "Corner Kicks": 2,
+    "Offsides": 0,
+    "Ball Possession": "65%",
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 529,
+    "Passes accurate": 460,
+    "Passes %": "87%",
+    "expected_goals": "1.91",
+    "goals_prevented": "-1.18"
+  },
+  "events": [
+    {
+      "minute": 36,
+      "type": "Card",
+      "team": "away",
+      "player": "Martín Zubimendi",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 36,
+      "type": "Goal",
+      "team": "home",
+      "player": "D. Ballard",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 45,
+      "type": "Card",
+      "team": "home",
+      "player": "Granit Xhaka",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 54,
+      "type": "Goal",
+      "team": "away",
+      "player": "B. Saka",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 63,
+      "type": "subst",
+      "team": "home",
+      "player": "W. Isidor",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 64,
+      "type": "subst",
+      "team": "home",
+      "player": "B. Traore",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 64,
+      "type": "subst",
+      "team": "home",
+      "player": "E. Le Fee",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 72,
+      "type": "Card",
+      "team": "home",
+      "player": "Reinildo Mandava",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 74,
+      "type": "Goal",
+      "team": "away",
+      "player": "L. Trossard",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 87,
+      "type": "subst",
+      "team": "home",
+      "player": "L. Geertruida",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 88,
+      "type": "subst",
+      "team": "away",
+      "player": "E. Eze",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 90,
+      "type": "Goal",
+      "team": "home",
+      "player": "B. Brobbey",
+      "detail": "Normal Goal"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "fixture_id": 1378999,
+  "date": "2025-09-13T11:30:00+00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Nottingham Forest",
+  "home_score": 3,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 6,
+    "Total Shots": 16,
+    "Blocked Shots": 5,
+    "Shots insidebox": 12,
+    "Shots outsidebox": 4,
+    "Fouls": 8,
+    "Corner Kicks": 8,
+    "Offsides": 2,
+    "Ball Possession": "54%",
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 478,
+    "Passes accurate": 415,
+    "Passes %": "87%",
+    "expected_goals": "1.84",
+    "goals_prevented": "-0.65"
+  },
+  "away_stats": {
+    "Shots on Goal": 1,
+    "Shots off Goal": 1,
+    "Total Shots": 5,
+    "Blocked Shots": 3,
+    "Shots insidebox": 3,
+    "Shots outsidebox": 2,
+    "Fouls": 11,
+    "Corner Kicks": 3,
+    "Offsides": 0,
+    "Ball Possession": "46%",
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 409,
+    "Passes accurate": 350,
+    "Passes %": "86%",
+    "expected_goals": "0.20",
+    "goals_prevented": "-0.65"
+  },
+  "events": [
+    {
+      "minute": 18,
+      "type": "subst",
+      "team": "home",
+      "player": "M. Odegaard",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 32,
+      "type": "Goal",
+      "team": "home",
+      "player": "M. Zubimendi",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 37,
+      "type": "subst",
+      "team": "away",
+      "player": "Murillo",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 46,
+      "type": "Goal",
+      "team": "home",
+      "player": "V. Gyokeres",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 60,
+      "type": "subst",
+      "team": "away",
+      "player": "C. Wood",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 60,
+      "type": "subst",
+      "team": "away",
+      "player": "C. Hudson-Odoi",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 61,
+      "type": "Card",
+      "team": "home",
+      "player": "Riccardo Calafiori",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 68,
+      "type": "subst",
+      "team": "home",
+      "player": "R. Calafiori",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 68,
+      "type": "subst",
+      "team": "home",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 73,
+      "type": "subst",
+      "team": "away",
+      "player": "I. Sangare",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 73,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Gibbs-White",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 78,
+      "type": "Card",
+      "team": "away",
+      "player": "Neco Williams",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 78,
+      "type": "subst",
+      "team": "home",
+      "player": "N. Madueke",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 79,
+      "type": "subst",
+      "team": "home",
+      "player": "E. Eze",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 79,
+      "type": "Goal",
+      "team": "home",
+      "player": "M. Zubimendi",
+      "detail": "Normal Goal"
+    }
+  ]
+}

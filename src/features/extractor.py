@@ -177,6 +177,60 @@ class FeatureExtractor:
             if opt in match_meta:
                 match_json[opt] = match_meta[opt]
 
+        # Carry over stats from report (report.stats may have nested arsenal/opponent shape
+        # or list shape [home_val, away_val]; reconstruct home_stats/away_stats for extract_match_stats)
+        report_stats = report_json.get("stats", {})
+        if report_stats and not match_json.get("home_stats"):
+            arsenal_is_home = "Arsenal" in home_team
+            # Map (home/away) → side labels for dict-shaped stats
+            home_side = "arsenal" if arsenal_is_home else "opponent"
+            away_side = "opponent" if arsenal_is_home else "arsenal"
+            # For list-shaped stats [home_val, away_val], indices are always home=0, away=1
+            home_idx, away_idx = 0, 1
+
+            home_stats: dict = {}
+            away_stats: dict = {}
+            for stat_key in ("possession", "shots", "shots_on_target", "fouls", "corners"):
+                val = report_stats.get(stat_key, {})
+                if isinstance(val, list) and len(val) >= 2:
+                    # List shape: [home_val, away_val] or [arsenal_val, opponent_val]
+                    h = val[home_idx]
+                    a = val[away_idx]
+                elif isinstance(val, dict):
+                    h = val.get(home_side)
+                    a = val.get(away_side)
+                else:
+                    continue
+                if h is not None:
+                    home_stats[stat_key] = h
+                if a is not None:
+                    away_stats[stat_key] = a
+            # Pass accuracy (nested or list)
+            passes = report_stats.get("passes", {})
+            passes_acc = report_stats.get("passes_accuracy", [])
+            for side, stats_dict in [(home_side, home_stats), (away_side, away_stats)]:
+                if isinstance(passes_acc, list) and len(passes_acc) >= 2:
+                    idx = home_idx if side == home_side else away_idx
+                    acc = passes_acc[idx]
+                elif isinstance(passes, dict):
+                    acc = passes.get(side, {}).get("accuracy")
+                else:
+                    acc = None
+                if acc is not None:
+                    stats_dict["pass_accuracy"] = acc
+            # xG from report stats
+            xg = report_stats.get("xg", {})
+            if isinstance(xg, dict):
+                if xg.get(home_side) is not None:
+                    home_stats["expected_goals"] = xg[home_side]
+                if xg.get(away_side) is not None:
+                    away_stats["expected_goals"] = xg[away_side]
+
+            if home_stats:
+                match_json["home_stats"] = home_stats
+            if away_stats:
+                match_json["away_stats"] = away_stats
+
         # Validate that we have at minimum score data
         has_score = (
             match_json.get("home_score") is not None

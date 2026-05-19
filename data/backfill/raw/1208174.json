@@ -1,0 +1,121 @@
+{
+  "fixture_id": 1208174,
+  "date": "2024-12-14T15:00:00+00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Everton",
+  "home_score": 0,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 3,
+    "Total Shots": 13,
+    "Blocked Shots": 5,
+    "Shots insidebox": 11,
+    "Shots outsidebox": 2,
+    "Fouls": 6,
+    "Corner Kicks": 8,
+    "Offsides": 5,
+    "Ball Possession": "77%",
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 684,
+    "Passes accurate": 631,
+    "Passes %": "92%",
+    "expected_goals": "1.22",
+    "goals_prevented": "1.81"
+  },
+  "away_stats": {
+    "Shots on Goal": 0,
+    "Shots off Goal": 0,
+    "Total Shots": 2,
+    "Blocked Shots": 2,
+    "Shots insidebox": 1,
+    "Shots outsidebox": 1,
+    "Fouls": 9,
+    "Corner Kicks": 2,
+    "Offsides": 3,
+    "Ball Possession": "23%",
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 5,
+    "Total passes": 209,
+    "Passes accurate": 149,
+    "Passes %": "71%",
+    "expected_goals": "0.09",
+    "goals_prevented": "1.81"
+  },
+  "events": [
+    {
+      "minute": 62,
+      "type": "subst",
+      "team": "home",
+      "player": "D. Rice",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 62,
+      "type": "subst",
+      "team": "home",
+      "player": "M. Ødegaard",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 66,
+      "type": "subst",
+      "team": "away",
+      "player": "J. Harrison",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 66,
+      "type": "subst",
+      "team": "away",
+      "player": "D. Calvert-Lewin",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 69,
+      "type": "subst",
+      "team": "home",
+      "player": "Mikel Merino",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 69,
+      "type": "subst",
+      "team": "home",
+      "player": "M. Lewis-Skelly",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 72,
+      "type": "Card",
+      "team": "away",
+      "player": "Ashley Young",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 74,
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 77,
+      "type": "Card",
+      "team": "away",
+      "player": "Jordan Pickford",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 81,
+      "type": "Card",
+      "team": "away",
+      "player": "Armando Broja",
+      "detail": "Yellow Card"
+    }
+  ]
+}

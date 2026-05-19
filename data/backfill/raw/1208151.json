@@ -1,0 +1,205 @@
+{
+  "fixture_id": 1208151,
+  "date": "2024-11-30T17:30:00+00:00",
+  "competition": "Premier League",
+  "home_team": "West Ham",
+  "away_team": "Arsenal",
+  "home_score": 2,
+  "away_score": 5,
+  "home_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 3,
+    "Total Shots": 12,
+    "Blocked Shots": 4,
+    "Shots insidebox": 8,
+    "Shots outsidebox": 4,
+    "Fouls": 10,
+    "Corner Kicks": 2,
+    "Offsides": 1,
+    "Ball Possession": "40%",
+    "Yellow Cards": 4,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 323,
+    "Passes accurate": 252,
+    "Passes %": "78%",
+    "expected_goals": "1.54",
+    "goals_prevented": "0.28"
+  },
+  "away_stats": {
+    "Shots on Goal": 7,
+    "Shots off Goal": 5,
+    "Total Shots": 16,
+    "Blocked Shots": 4,
+    "Shots insidebox": 13,
+    "Shots outsidebox": 3,
+    "Fouls": 13,
+    "Corner Kicks": 10,
+    "Offsides": 1,
+    "Ball Possession": "60%",
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 479,
+    "Passes accurate": 400,
+    "Passes %": "84%",
+    "expected_goals": "3.60",
+    "goals_prevented": "0.28"
+  },
+  "events": [
+    {
+      "minute": 10,
+      "type": "Goal",
+      "team": "away",
+      "player": "Gabriel Magalhães",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 27,
+      "type": "Goal",
+      "team": "away",
+      "player": "L. Trossard",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 34,
+      "type": "Goal",
+      "team": "away",
+      "player": "M. Ødegaard",
+      "detail": "Penalty"
+    },
+    {
+      "minute": 36,
+      "type": "Goal",
+      "team": "away",
+      "player": "K. Havertz",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 38,
+      "type": "Goal",
+      "team": "home",
+      "player": "A. Wan-Bissaka",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 40,
+      "type": "Goal",
+      "team": "home",
+      "player": "Emerson",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 42,
+      "type": "Card",
+      "team": "home",
+      "player": "Emerson Palmieri",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 42,
+      "type": "Card",
+      "team": "away",
+      "player": "Bukayo Saka",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 45,
+      "type": "Card",
+      "team": "home",
+      "player": "Łukasz Fabiański",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 45,
+      "type": "Card",
+      "team": "home",
+      "player": "Crysencio Summerville",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 45,
+      "type": "Goal",
+      "team": "away",
+      "player": "B. Saka",
+      "detail": "Penalty"
+    },
+    {
+      "minute": 46,
+      "type": "subst",
+      "team": "home",
+      "player": "C. Summerville",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 46,
+      "type": "subst",
+      "team": "away",
+      "player": "Gabriel Magalhães",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 56,
+      "type": "subst",
+      "team": "away",
+      "player": "R. Calafiori",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 65,
+      "type": "subst",
+      "team": "home",
+      "player": "M. Antonio",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 65,
+      "type": "subst",
+      "team": "home",
+      "player": "Emerson",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 74,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Ødegaard",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 74,
+      "type": "subst",
+      "team": "away",
+      "player": "B. Saka",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 77,
+      "type": "subst",
+      "team": "home",
+      "player": "Lucas Paquetá",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 78,
+      "type": "subst",
+      "team": "home",
+      "player": "Carlos Soler",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 85,
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 90,
+      "type": "Card",
+      "team": "home",
+      "player": "Tomáš Souček",
+      "detail": "Yellow Card"
+    }
+  ]
+}

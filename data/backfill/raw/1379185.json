@@ -1,0 +1,114 @@
+{
+  "fixture_id": 1379185,
+  "date": "2026-01-17T17:30:00+00:00",
+  "competition": "Premier League",
+  "home_team": "Nottingham Forest",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 0,
+    "Shots off Goal": 3,
+    "Total Shots": 6,
+    "Blocked Shots": 3,
+    "Shots insidebox": 1,
+    "Shots outsidebox": 5,
+    "Fouls": 8,
+    "Corner Kicks": 4,
+    "Offsides": 1,
+    "Ball Possession": "40%",
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 321,
+    "Passes accurate": 259,
+    "Passes %": "81%",
+    "expected_goals": "0.34",
+    "goals_prevented": "0.00"
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 4,
+    "Total Shots": 15,
+    "Blocked Shots": 8,
+    "Shots insidebox": 14,
+    "Shots outsidebox": 1,
+    "Fouls": 14,
+    "Corner Kicks": 9,
+    "Offsides": 0,
+    "Ball Possession": "60%",
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 494,
+    "Passes accurate": 416,
+    "Passes %": "84%",
+    "expected_goals": "2.10",
+    "goals_prevented": "0.00"
+  },
+  "events": [
+    {
+      "minute": 37,
+      "type": "Card",
+      "team": "away",
+      "player": "Jurriën Timber",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 46,
+      "type": "subst",
+      "team": "away",
+      "player": "G. Martinelli",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 57,
+      "type": "subst",
+      "team": "away",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 57,
+      "type": "subst",
+      "team": "away",
+      "player": "N. Madueke",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 57,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Odegaard",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 76,
+      "type": "subst",
+      "team": "home",
+      "player": "Igor Jesus",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 79,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Zubimendi",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 89,
+      "type": "subst",
+      "team": "home",
+      "player": "N. Dominguez",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 90,
+      "type": "Card",
+      "team": "home",
+      "player": "Ola Aina",
+      "detail": "Yellow Card"
+    }
+  ]
+}

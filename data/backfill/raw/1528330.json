@@ -1,0 +1,135 @@
+{
+  "fixture_id": 1528330,
+  "date": "2026-03-17T20:00:00+00:00",
+  "competition": "UEFA Champions League",
+  "home_team": "Arsenal",
+  "away_team": "Bayer Leverkusen",
+  "home_score": 2,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 12,
+    "Shots off Goal": 5,
+    "Total Shots": 21,
+    "Blocked Shots": 4,
+    "Shots insidebox": 13,
+    "Shots outsidebox": 8,
+    "Fouls": 4,
+    "Corner Kicks": 10,
+    "Offsides": 1,
+    "Ball Possession": "42%",
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 383,
+    "Passes accurate": 317,
+    "Passes %": "83%",
+    "expected_goals": "1.70",
+    "goals_prevented": "0.40"
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 5,
+    "Total Shots": 9,
+    "Blocked Shots": 2,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 4,
+    "Fouls": 8,
+    "Corner Kicks": 8,
+    "Offsides": 0,
+    "Ball Possession": "58%",
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 10,
+    "Total passes": 535,
+    "Passes accurate": 470,
+    "Passes %": "88%",
+    "expected_goals": "0.52",
+    "goals_prevented": "0.40"
+  },
+  "events": [
+    {
+      "minute": 36,
+      "type": "Goal",
+      "team": "home",
+      "player": "E. Eze",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 46,
+      "type": "Card",
+      "team": "away",
+      "player": "Exequiel Palacios",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 60,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Terrier",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 60,
+      "type": "subst",
+      "team": "away",
+      "player": "E. Poku",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 63,
+      "type": "Goal",
+      "team": "home",
+      "player": "D. Rice",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 68,
+      "type": "subst",
+      "team": "home",
+      "player": "M. Zubimendi",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 69,
+      "type": "subst",
+      "team": "home",
+      "player": "E. Eze",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 69,
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 69,
+      "type": "subst",
+      "team": "home",
+      "player": "B. White",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 70,
+      "type": "subst",
+      "team": "away",
+      "player": "E. Palacios",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 83,
+      "type": "subst",
+      "team": "away",
+      "player": "R. Andrich",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 90,
+      "type": "subst",
+      "team": "home",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 5"
+    }
+  ]
+}

@@ -5,6 +5,12 @@ __pycache__/
 .env
 .hermes/
 docs/plans/
-data/
+# Ignore data files but allow backfill artifacts for remote code review
+data/*
+!data/backfill
 *.compact
 *.compact.json
+knowledge.before.json
+knowledge.after.json
+data/backfill/runs/seed-inventory/
+data/backfill/runs/seed-001/

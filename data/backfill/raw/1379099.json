@@ -1,0 +1,135 @@
+{
+  "fixture_id": 1379099,
+  "date": "2025-12-03T19:30:00+00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Brentford",
+  "home_score": 2,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 7,
+    "Shots off Goal": 4,
+    "Total Shots": 15,
+    "Blocked Shots": 4,
+    "Shots insidebox": 10,
+    "Shots outsidebox": 5,
+    "Fouls": 7,
+    "Corner Kicks": 4,
+    "Offsides": null,
+    "Ball Possession": "62%",
+    "Yellow Cards": 0,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 542,
+    "Passes accurate": 456,
+    "Passes %": "84%",
+    "expected_goals": "1.77",
+    "goals_prevented": "-0.72"
+  },
+  "away_stats": {
+    "Shots on Goal": 1,
+    "Shots off Goal": 2,
+    "Total Shots": 6,
+    "Blocked Shots": 3,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 1,
+    "Fouls": 9,
+    "Corner Kicks": 8,
+    "Offsides": null,
+    "Ball Possession": "38%",
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 5,
+    "Total passes": 333,
+    "Passes accurate": 255,
+    "Passes %": "77%",
+    "expected_goals": "0.35",
+    "goals_prevented": "-0.72"
+  },
+  "events": [
+    {
+      "minute": 11,
+      "type": "Goal",
+      "team": "home",
+      "player": "M. Merino",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 44,
+      "type": "subst",
+      "team": "home",
+      "player": "C. Mosquera",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 60,
+      "type": "subst",
+      "team": "away",
+      "player": "K. Schade",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 61,
+      "type": "subst",
+      "team": "home",
+      "player": "N. Madueke",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 61,
+      "type": "subst",
+      "team": "home",
+      "player": "G. Martinelli",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 61,
+      "type": "subst",
+      "team": "away",
+      "player": "V. Janelt",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 61,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Jensen",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 65,
+      "type": "Card",
+      "team": "away",
+      "player": "Yehor Yarmolyuk",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 74,
+      "type": "subst",
+      "team": "away",
+      "player": "E. Pinnock",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 74,
+      "type": "subst",
+      "team": "away",
+      "player": "R. Henry",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 83,
+      "type": "subst",
+      "team": "home",
+      "player": "D. Rice",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 90,
+      "type": "Goal",
+      "team": "home",
+      "player": "B. Saka",
+      "detail": "Normal Goal"
+    }
+  ]
+}

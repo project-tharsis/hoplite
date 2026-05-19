@@ -1,0 +1,135 @@
+{
+  "fixture_id": 1379132,
+  "date": "2025-12-20T20:00:00+00:00",
+  "competition": "Premier League",
+  "home_team": "Everton",
+  "away_team": "Arsenal",
+  "home_score": 0,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 1,
+    "Shots off Goal": 2,
+    "Total Shots": 5,
+    "Blocked Shots": 2,
+    "Shots insidebox": 4,
+    "Shots outsidebox": 1,
+    "Fouls": 4,
+    "Corner Kicks": 2,
+    "Offsides": 0,
+    "Ball Possession": "35%",
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 0,
+    "Total passes": 339,
+    "Passes accurate": 250,
+    "Passes %": "74%",
+    "expected_goals": "0.20",
+    "goals_prevented": "0.18"
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 9,
+    "Total Shots": 13,
+    "Blocked Shots": 2,
+    "Shots insidebox": 12,
+    "Shots outsidebox": 1,
+    "Fouls": 5,
+    "Corner Kicks": 3,
+    "Offsides": 1,
+    "Ball Possession": "65%",
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 654,
+    "Passes accurate": 573,
+    "Passes %": "88%",
+    "expected_goals": "2.00",
+    "goals_prevented": "0.18"
+  },
+  "events": [
+    {
+      "minute": 24,
+      "type": "Var",
+      "team": "away",
+      "player": "Declan Rice",
+      "detail": "Penalty confirmed"
+    },
+    {
+      "minute": 26,
+      "type": "Card",
+      "team": "home",
+      "player": "Vitaliy Mykolenko",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 27,
+      "type": "Goal",
+      "team": "away",
+      "player": "V. Gyokeres",
+      "detail": "Penalty"
+    },
+    {
+      "minute": 39,
+      "type": "Card",
+      "team": "home",
+      "player": "James Tarkowski",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 56,
+      "type": "Card",
+      "team": "away",
+      "player": "Viktor Gyökeres",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 65,
+      "type": "subst",
+      "team": "away",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 66,
+      "type": "subst",
+      "team": "home",
+      "player": "T. Barry",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 75,
+      "type": "subst",
+      "team": "home",
+      "player": "D. McNeil",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 76,
+      "type": "subst",
+      "team": "home",
+      "player": "C. Alcaraz",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 80,
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 88,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Odegaard",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 89,
+      "type": "Card",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "detail": "Yellow Card"
+    }
+  ]
+}

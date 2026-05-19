@@ -1,0 +1,156 @@
+{
+  "fixture_id": 1528322,
+  "date": "2026-03-11T17:45:00+00:00",
+  "competition": "UEFA Champions League",
+  "home_team": "Bayer Leverkusen",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 4,
+    "Total Shots": 10,
+    "Blocked Shots": 3,
+    "Shots insidebox": 4,
+    "Shots outsidebox": 6,
+    "Fouls": 9,
+    "Corner Kicks": 2,
+    "Offsides": 0,
+    "Ball Possession": "45%",
+    "Yellow Cards": 4,
+    "Red Cards": null,
+    "Goalkeeper Saves": 1,
+    "Total passes": 442,
+    "Passes accurate": 385,
+    "Passes %": "87%",
+    "expected_goals": "0.85",
+    "goals_prevented": "-0.32"
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 3,
+    "Total Shots": 6,
+    "Blocked Shots": 1,
+    "Shots insidebox": 6,
+    "Shots outsidebox": 1,
+    "Fouls": 10,
+    "Corner Kicks": 3,
+    "Offsides": 1,
+    "Ball Possession": "55%",
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 522,
+    "Passes accurate": 455,
+    "Passes %": "87%",
+    "expected_goals": "1.64",
+    "goals_prevented": "-0.32"
+  },
+  "events": [
+    {
+      "minute": 2,
+      "type": "Card",
+      "team": "home",
+      "player": "Robert Andrich",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 26,
+      "type": "Card",
+      "team": "away",
+      "player": "Gabriel Martinelli",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 46,
+      "type": "Goal",
+      "team": "home",
+      "player": "R. Andrich",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 58,
+      "type": "Card",
+      "team": "home",
+      "player": "Ernest Poku",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 60,
+      "type": "subst",
+      "team": "away",
+      "player": "B. Saka",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 63,
+      "type": "Card",
+      "team": "home",
+      "player": "Exequiel Palacios",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 69,
+      "type": "Card",
+      "team": "away",
+      "player": "Martín Zubimendi",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 74,
+      "type": "subst",
+      "team": "home",
+      "player": "I. Maza",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 74,
+      "type": "subst",
+      "team": "away",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 82,
+      "type": "subst",
+      "team": "home",
+      "player": "E. Palacios",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 82,
+      "type": "subst",
+      "team": "home",
+      "player": "M. Terrier",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 82,
+      "type": "subst",
+      "team": "away",
+      "player": "E. Eze",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 89,
+      "type": "Goal",
+      "team": "away",
+      "player": "K. Havertz",
+      "detail": "Penalty"
+    },
+    {
+      "minute": 90,
+      "type": "Card",
+      "team": "home",
+      "player": "Alejandro Grimaldo",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 90,
+      "type": "Card",
+      "team": "away",
+      "player": "Kai Havertz",
+      "detail": "Yellow Card"
+    }
+  ]
+}

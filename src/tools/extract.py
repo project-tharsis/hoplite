@@ -254,15 +254,26 @@ def extract_context(match_json: dict) -> dict:
     )
 
     # Opponent quality tiers
-    top6 = {"Man City", "Liverpool", "Chelsea", "Tottenham", "Tottenham Hotspur", "Man Utd", "Newcastle"}
+    # Include both abbreviated and full names to avoid misclassification
+    # (e.g. API-Football uses "Manchester United" while some sources use "Man Utd")
+    top6 = {
+        "Man City", "Manchester City",
+        "Liverpool",
+        "Chelsea",
+        "Tottenham", "Tottenham Hotspur",
+        "Man Utd", "Manchester United",
+        "Newcastle", "Newcastle United",
+    }
     european_elite = {
-        "Real Madrid", "Bayern Munich", "Bayern", "PSG",
+        "Real Madrid", "Bayern Munich", "Bayern", "PSG", "Paris Saint Germain",
         "Barcelona", "Inter", "Inter Milan",
     }
     mid_table = {
-        "Aston Villa", "Villa", "Brighton", "West Ham", "Crystal Palace",
+        "Aston Villa", "Villa", "Brighton", "Brighton and Hove Albion",
+        "West Ham", "West Ham United", "Crystal Palace",
         "Brentford", "Fulham", "Everton", "Nottingham Forest",
-        "Bournemouth", "Wolves", "PSV", "PSV Eindhoven",
+        "Bournemouth", "Wolves", "Wolverhampton Wanderers",
+        "PSV", "PSV Eindhoven",
         "Sporting", "Sporting CP", "Sporting Lisbon",
         "Leverkusen", "Bayer Leverkusen", "Atletico", "Atletico Madrid",
         "Roma", "Napoli", "Lazio", "Fiorentina", "Monaco",

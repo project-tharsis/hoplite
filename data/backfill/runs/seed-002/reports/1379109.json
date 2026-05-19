@@ -1,0 +1,317 @@
+{
+  "match": {
+    "fixture_id": 1379109,
+    "date": "2025-12-06T12:30:00+00:00",
+    "competition": "Premier League",
+    "home_team": "Aston Villa",
+    "away_team": "Arsenal",
+    "home_score": 2,
+    "away_score": 1,
+    "arsenal_score": 1,
+    "opponent_score": 2,
+    "result": "L"
+  },
+  "predicted_plan": {
+    "focus_areas": [
+      "高位反抢/断球",
+      "转换效率",
+      "控制节奏"
+    ],
+    "likely_approach": "打断对手节奏 + 反抢后立即转换",
+    "key_battles": [
+      "中场对抗 — Rice vs 对手组织型后腰",
+      "压迫对手出球核心 — 限制向前传球"
+    ],
+    "expected_subs": "60' 边路/进攻型换人维持压力；75' 防守型中场或后卫保护结果",
+    "historical_context": "## 历史模式参考\n\n类似场景（away vs mid_table league_early）：共 5 场\n- 战绩：3胜 1平 1负，场均进球 1.8，场均失球 1.0\n\n### 维度信号分布\n- 执行：🟢0 🟡0 🔴0\n- 调整：🟢0 🟡0 🔴0\n- 满意：🟢0 🟡0 🔴0\n\n### 心智模型历史表现\n- 模型1 文化标准：🟢1 🟡1 🔴0\n- 模型2 比赛控制：🟢1 🟡1 🔴0\n- 模型3 防守身份：🟢0 🟡2 🔴0\n- 模型4 边际收益：🟢1 🟡0 🔴1\n- 模型5 能力叠加：🟢1 🟡1 🔴0\n- 模型6 角色清晰：🟢1 🟡1 🔴0\n\n### 常见战术重点：控制节奏、转换效率、高位反抢/断球\n\n### 最近类似案例\n1. Nottingham Forest 0-0（平）\n   战术重点：控制节奏、转换效率、高位反抢/断球\n   维度信号：执行? 调整? 满意?\n\n2. Bournemouth 3-2（胜）\n   战术重点：控制节奏、转换效率、高位反抢/断球\n   维度信号：执行🟢 调整🟡 满意🟢\n\n3. Everton 1-0（胜）\n   战术重点：控制节奏、转换效率、高位反抢/断球\n   维度信号：执行neutral 调整neutral 满意neutral\n\n### ⚠️ 历史参考规则\n- 历史模式仅作为参考，**不覆盖本场比赛的实际数据**\n- 如果本场数据与历史模式冲突，**以本场数据为准**\n- 历史信号分布反映的是过去趋势，不预测本场结果\n"
+  },
+  "context": {
+    "opponent": "Aston Villa",
+    "opponent_quality": "mid_table",
+    "venue": "away",
+    "competition_stage": "league_early",
+    "injury_situation": "full_strength",
+    "recent_form": "mixed",
+    "opponent_style": "possession"
+  },
+  "stats": {
+    "score": {
+      "arsenal": 1,
+      "opponent": 2
+    },
+    "xg": {
+      "arsenal": "1.92",
+      "opponent": "2.16"
+    },
+    "possession": {
+      "arsenal": "53%",
+      "opponent": "47%"
+    },
+    "shots": {
+      "arsenal": 15,
+      "opponent": 15
+    },
+    "shots_on_target": {
+      "arsenal": 9,
+      "opponent": 6
+    },
+    "passes": {
+      "arsenal": {
+        "total": 443,
+        "accuracy": "85%"
+      },
+      "opponent": {
+        "total": 397,
+        "accuracy": "82%"
+      }
+    },
+    "fouls": {
+      "arsenal": 8,
+      "opponent": 10
+    },
+    "corners": {
+      "arsenal": 3,
+      "opponent": 3
+    },
+    "goals": {
+      "arsenal": {
+        "first_half": 0,
+        "second_half": 1,
+        "total": 1
+      },
+      "opponent": {
+        "first_half": 1,
+        "second_half": 1,
+        "total": 2
+      }
+    },
+    "cards": {
+      "arsenal": {
+        "yellow": 2,
+        "red": 0
+      },
+      "opponent": {
+        "yellow": 0,
+        "red": 0
+      }
+    }
+  },
+  "key_events": [
+    {
+      "minute": 36,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Aston Villa",
+      "player": "M. Cash",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "M. Merino",
+      "detail": "Substitution 1",
+      "is_arsenal": true
+    },
+    {
+      "minute": 46,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "E. Eze",
+      "detail": "Substitution 2",
+      "is_arsenal": true
+    },
+    {
+      "minute": 52,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Arsenal",
+      "player": "L. Trossard",
+      "detail": "Normal Goal",
+      "is_arsenal": true
+    },
+    {
+      "minute": 66,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Aston Villa",
+      "player": "O. Watkins",
+      "detail": "Substitution 1",
+      "is_arsenal": false
+    },
+    {
+      "minute": 72,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Riccardo Calafiori",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 74,
+      "type": "card",
+      "raw_type": "Card",
+      "team": "Arsenal",
+      "player": "Bukayo Saka",
+      "detail": "Yellow Card",
+      "is_arsenal": true
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Aston Villa",
+      "player": "A. Onana",
+      "detail": "Substitution 2",
+      "is_arsenal": false
+    },
+    {
+      "minute": 75,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Aston Villa",
+      "player": "J. McGinn",
+      "detail": "Substitution 3",
+      "is_arsenal": false
+    },
+    {
+      "minute": 79,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "B. Saka",
+      "detail": "Substitution 3",
+      "is_arsenal": true
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Aston Villa",
+      "player": "P. Torres",
+      "detail": "Substitution 4",
+      "is_arsenal": false
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": null,
+      "detail": "Substitution 4",
+      "is_arsenal": true
+    },
+    {
+      "minute": 86,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Arsenal",
+      "player": "R. Calafiori",
+      "detail": "Substitution 5",
+      "is_arsenal": true
+    },
+    {
+      "minute": 87,
+      "type": "substitution",
+      "raw_type": "subst",
+      "team": "Aston Villa",
+      "player": "M. Cash",
+      "detail": "Substitution 5",
+      "is_arsenal": false
+    },
+    {
+      "minute": 90,
+      "type": "goal",
+      "raw_type": "Goal",
+      "team": "Aston Villa",
+      "player": "E. Buendia",
+      "detail": "Normal Goal",
+      "is_arsenal": false
+    }
+  ],
+  "set_pieces": {
+    "arsenal": 0,
+    "opponent": 0,
+    "details": []
+  },
+  "sub_impact": [
+    {
+      "minute": 46,
+      "player": "M. Merino",
+      "detail": "Substitution 1",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 46,
+      "player": "E. Eze",
+      "detail": "Substitution 2",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 66,
+      "player": "O. Watkins",
+      "detail": "Substitution 1",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "A. Onana",
+      "detail": "Substitution 2",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 75,
+      "player": "J. McGinn",
+      "detail": "Substitution 3",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 79,
+      "player": "B. Saka",
+      "detail": "Substitution 3",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "P. Torres",
+      "detail": "Substitution 4",
+      "is_arsenal": false,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": null,
+      "detail": "Substitution 4",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 86,
+      "player": "R. Calafiori",
+      "detail": "Substitution 5",
+      "is_arsenal": true,
+      "scored_after": false
+    },
+    {
+      "minute": 87,
+      "player": "M. Cash",
+      "detail": "Substitution 5",
+      "is_arsenal": false,
+      "scored_after": false
+    }
+  ],
+  "one_line_summary": "Arsenal 1-2 Aston Villa (Premier League)",
+  "narrative": "",
+  "model_signals": {},
+  "dimension_signals": {}
+}

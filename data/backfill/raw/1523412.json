@@ -1,0 +1,184 @@
+{
+  "fixture_id": 1523412,
+  "date": "2026-03-07T12:15:00+00:00",
+  "competition": "FA Cup",
+  "home_team": "Mansfield Town",
+  "away_team": "Arsenal",
+  "home_score": 1,
+  "away_score": 2,
+  "home_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 9,
+    "Total Shots": 18,
+    "Blocked Shots": 4,
+    "Shots insidebox": 11,
+    "Shots outsidebox": 7,
+    "Fouls": 16,
+    "Corner Kicks": 4,
+    "Offsides": 1,
+    "Ball Possession": "33%",
+    "Yellow Cards": 4,
+    "Red Cards": null,
+    "Goalkeeper Saves": 5,
+    "Total passes": 260,
+    "Passes accurate": 192,
+    "Passes %": "74%",
+    "expected_goals": "1.36",
+    "goals_prevented": null
+  },
+  "away_stats": {
+    "Shots on Goal": 8,
+    "Shots off Goal": 6,
+    "Total Shots": 19,
+    "Blocked Shots": 5,
+    "Shots insidebox": 17,
+    "Shots outsidebox": 2,
+    "Fouls": 6,
+    "Corner Kicks": 8,
+    "Offsides": 1,
+    "Ball Possession": "67%",
+    "Yellow Cards": 2,
+    "Red Cards": null,
+    "Goalkeeper Saves": 4,
+    "Total passes": 546,
+    "Passes accurate": 461,
+    "Passes %": "84%",
+    "expected_goals": "2.73",
+    "goals_prevented": null
+  },
+  "events": [
+    {
+      "minute": 38,
+      "type": "subst",
+      "team": "away",
+      "player": "L. Trossard",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 41,
+      "type": "Goal",
+      "team": "away",
+      "player": "N. Madueke",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 46,
+      "type": "subst",
+      "team": "home",
+      "player": "T. Roberts",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 50,
+      "type": "Goal",
+      "team": "home",
+      "player": "W. Evans",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 60,
+      "type": "Card",
+      "team": "home",
+      "player": "Louis Reed",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 62,
+      "type": "subst",
+      "team": "home",
+      "player": "G. Abbott",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 62,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Salmon",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 62,
+      "type": "subst",
+      "team": "away",
+      "player": "K. Havertz",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 66,
+      "type": "Goal",
+      "team": "away",
+      "player": "E. Eze",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 70,
+      "type": "Card",
+      "team": "away",
+      "player": "Riccardo Calafiori",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 74,
+      "type": "Card",
+      "team": "away",
+      "player": "Eberechi Eze",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 76,
+      "type": "subst",
+      "team": "away",
+      "player": "R. Calafiori",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 77,
+      "type": "Card",
+      "team": "home",
+      "player": "Lucas Akins",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 77,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Dowman",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 80,
+      "type": "Card",
+      "team": "home",
+      "player": "Stephen McLaughlin",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 81,
+      "type": "subst",
+      "team": "home",
+      "player": "R. Oates",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 81,
+      "type": "subst",
+      "team": "home",
+      "player": "S. McLaughlin",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 87,
+      "type": "subst",
+      "team": "home",
+      "player": "K. Knoyle",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 90,
+      "type": "Card",
+      "team": "home",
+      "player": "Aaron Lewis",
+      "detail": "Yellow Card"
+    }
+  ]
+}

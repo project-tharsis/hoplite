@@ -1,0 +1,156 @@
+{
+  "fixture_id": 1208383,
+  "date": "2025-05-18T15:30:00+00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Newcastle",
+  "home_score": 1,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 4,
+    "Shots off Goal": 3,
+    "Total Shots": 12,
+    "Blocked Shots": 5,
+    "Shots insidebox": 7,
+    "Shots outsidebox": 5,
+    "Fouls": 9,
+    "Corner Kicks": 10,
+    "Offsides": null,
+    "Ball Possession": "51%",
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 5,
+    "Total passes": 408,
+    "Passes accurate": 337,
+    "Passes %": "83%",
+    "expected_goals": "0.64",
+    "goals_prevented": "0.35"
+  },
+  "away_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 3,
+    "Total Shots": 14,
+    "Blocked Shots": 6,
+    "Shots insidebox": 10,
+    "Shots outsidebox": 4,
+    "Fouls": 9,
+    "Corner Kicks": 7,
+    "Offsides": null,
+    "Ball Possession": "49%",
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 3,
+    "Total passes": 371,
+    "Passes accurate": 307,
+    "Passes %": "83%",
+    "expected_goals": "1.86",
+    "goals_prevented": "0.35"
+  },
+  "events": [
+    {
+      "minute": 46,
+      "type": "subst",
+      "team": "home",
+      "player": "W. Saliba",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 55,
+      "type": "Goal",
+      "team": "home",
+      "player": "D. Rice",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 63,
+      "type": "subst",
+      "team": "away",
+      "player": "J. Murphy",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 64,
+      "type": "Card",
+      "team": "away",
+      "player": "Emil Krafth",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 64,
+      "type": "subst",
+      "team": "away",
+      "player": "S. Botman",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 64,
+      "type": "subst",
+      "team": "away",
+      "player": "C. Wilson",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 76,
+      "type": "subst",
+      "team": "home",
+      "player": "B. Saka",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 76,
+      "type": "subst",
+      "team": "away",
+      "player": "H. Barnes",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 88,
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 90,
+      "type": "Card",
+      "team": "home",
+      "player": "Jakub Kiwior",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 90,
+      "type": "Card",
+      "team": "home",
+      "player": "Kai Havertz",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 90,
+      "type": "Card",
+      "team": "home",
+      "player": "David Raya",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 90,
+      "type": "Card",
+      "team": "away",
+      "player": "Dan Burn",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 90,
+      "type": "Card",
+      "team": "away",
+      "player": "Joe Willock",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 90,
+      "type": "subst",
+      "team": "home",
+      "player": "M. Ødegaard",
+      "detail": "Substitution 4"
+    }
+  ]
+}

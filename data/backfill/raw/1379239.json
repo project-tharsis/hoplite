@@ -1,0 +1,177 @@
+{
+  "fixture_id": 1379239,
+  "date": "2026-03-01T16:30:00+00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Chelsea",
+  "home_score": 2,
+  "away_score": 1,
+  "home_stats": {
+    "Shots on Goal": 5,
+    "Shots off Goal": 3,
+    "Total Shots": 12,
+    "Blocked Shots": 4,
+    "Shots insidebox": 7,
+    "Shots outsidebox": 5,
+    "Fouls": 11,
+    "Corner Kicks": 5,
+    "Offsides": 0,
+    "Ball Possession": "41%",
+    "Yellow Cards": 1,
+    "Red Cards": 0,
+    "Goalkeeper Saves": 4,
+    "Total passes": 338,
+    "Passes accurate": 277,
+    "Passes %": "82%",
+    "expected_goals": "1.09",
+    "goals_prevented": "0.08"
+  },
+  "away_stats": {
+    "Shots on Goal": 3,
+    "Shots off Goal": 5,
+    "Total Shots": 9,
+    "Blocked Shots": 1,
+    "Shots insidebox": 5,
+    "Shots outsidebox": 4,
+    "Fouls": 14,
+    "Corner Kicks": 10,
+    "Offsides": 1,
+    "Ball Possession": "59%",
+    "Yellow Cards": 5,
+    "Red Cards": 1,
+    "Goalkeeper Saves": 3,
+    "Total passes": 482,
+    "Passes accurate": 425,
+    "Passes %": "88%",
+    "expected_goals": "1.07",
+    "goals_prevented": "0.08"
+  },
+  "events": [
+    {
+      "minute": 21,
+      "type": "Goal",
+      "team": "home",
+      "player": "W. Saliba",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 45,
+      "type": "Goal",
+      "team": "away",
+      "player": "P. Hincapie",
+      "detail": "Own Goal"
+    },
+    {
+      "minute": 56,
+      "type": "subst",
+      "team": "home",
+      "player": "L. Trossard",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 59,
+      "type": "Card",
+      "team": "away",
+      "player": "Cole Palmer",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 65,
+      "type": "Card",
+      "team": "away",
+      "player": "Jorrel Hato",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 66,
+      "type": "Goal",
+      "team": "home",
+      "player": "J. Timber",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 67,
+      "type": "Card",
+      "team": "away",
+      "player": "Pedro Neto",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 70,
+      "type": "Card",
+      "team": "away",
+      "player": "Pedro Neto",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 70,
+      "type": "Card",
+      "team": "away",
+      "player": "Pedro Neto",
+      "detail": "Red Card"
+    },
+    {
+      "minute": 75,
+      "type": "Card",
+      "team": "home",
+      "player": "Gabriel Magalhães",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 75,
+      "type": "subst",
+      "team": "away",
+      "player": "J. Hato",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 75,
+      "type": "subst",
+      "team": "away",
+      "player": "Andrey Santos",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 76,
+      "type": "subst",
+      "team": "home",
+      "player": "V. Gyökeres",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 76,
+      "type": "subst",
+      "team": "home",
+      "player": "D. Rice",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 79,
+      "type": "Card",
+      "team": "away",
+      "player": "Enzo Fernández",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 86,
+      "type": "subst",
+      "team": "away",
+      "player": "C. Palmer",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 86,
+      "type": "subst",
+      "team": "away",
+      "player": "E. Fernandez",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 90,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Sarr",
+      "detail": "Substitution 5"
+    }
+  ]
+}

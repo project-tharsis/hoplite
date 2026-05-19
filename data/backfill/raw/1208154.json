@@ -1,0 +1,149 @@
+{
+  "fixture_id": 1208154,
+  "date": "2024-12-04T20:15:00+00:00",
+  "competition": "Premier League",
+  "home_team": "Arsenal",
+  "away_team": "Manchester United",
+  "home_score": 2,
+  "away_score": 0,
+  "home_stats": {
+    "Shots on Goal": 6,
+    "Shots off Goal": 3,
+    "Total Shots": 14,
+    "Blocked Shots": 5,
+    "Shots insidebox": 13,
+    "Shots outsidebox": 1,
+    "Fouls": 12,
+    "Corner Kicks": 13,
+    "Offsides": 2,
+    "Ball Possession": "50%",
+    "Yellow Cards": 1,
+    "Red Cards": null,
+    "Goalkeeper Saves": 2,
+    "Total passes": 463,
+    "Passes accurate": 403,
+    "Passes %": "87%",
+    "expected_goals": "2.16",
+    "goals_prevented": "0.86"
+  },
+  "away_stats": {
+    "Shots on Goal": 2,
+    "Shots off Goal": 3,
+    "Total Shots": 5,
+    "Blocked Shots": 0,
+    "Shots insidebox": 3,
+    "Shots outsidebox": 2,
+    "Fouls": 8,
+    "Corner Kicks": 0,
+    "Offsides": 2,
+    "Ball Possession": "50%",
+    "Yellow Cards": 3,
+    "Red Cards": null,
+    "Goalkeeper Saves": 4,
+    "Total passes": 476,
+    "Passes accurate": 412,
+    "Passes %": "87%",
+    "expected_goals": "0.22",
+    "goals_prevented": "0.86"
+  },
+  "events": [
+    {
+      "minute": 44,
+      "type": "Card",
+      "team": "away",
+      "player": "Tyrell Malacia",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 45,
+      "type": "Card",
+      "team": "away",
+      "player": "Manuel Ugarte",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 46,
+      "type": "subst",
+      "team": "away",
+      "player": "T. Malacia",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 51,
+      "type": "Card",
+      "team": "away",
+      "player": "Harry Maguire",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 54,
+      "type": "Goal",
+      "team": "home",
+      "player": "J. Timber",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 59,
+      "type": "subst",
+      "team": "away",
+      "player": "A. Garnacho",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 59,
+      "type": "subst",
+      "team": "away",
+      "player": "M. Mount",
+      "detail": "Substitution 3"
+    },
+    {
+      "minute": 59,
+      "type": "subst",
+      "team": "away",
+      "player": "H. Maguire",
+      "detail": "Substitution 4"
+    },
+    {
+      "minute": 66,
+      "type": "Card",
+      "team": "home",
+      "player": "Oleksandr Zinchenko",
+      "detail": "Yellow Card"
+    },
+    {
+      "minute": 71,
+      "type": "subst",
+      "team": "home",
+      "player": "O. Zinchenko",
+      "detail": "Substitution 1"
+    },
+    {
+      "minute": 71,
+      "type": "subst",
+      "team": "home",
+      "player": "Gabriel Martinelli",
+      "detail": "Substitution 2"
+    },
+    {
+      "minute": 73,
+      "type": "Goal",
+      "team": "home",
+      "player": "W. Saliba",
+      "detail": "Normal Goal"
+    },
+    {
+      "minute": 79,
+      "type": "subst",
+      "team": "away",
+      "player": "R. Højlund",
+      "detail": "Substitution 5"
+    },
+    {
+      "minute": 90,
+      "type": "subst",
+      "team": "home",
+      "player": "M. Ødegaard",
+      "detail": "Substitution 3"
+    }
+  ]
+}
