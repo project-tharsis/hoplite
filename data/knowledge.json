@@ -1110,7 +1110,7 @@
       "fixture_id": "1208151",
       "raw_match_path": "data/backfill/raw/1208151.json",
       "report_path": "data/backfill/runs/seed-002/reports/1208151.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -1160,7 +1160,7 @@
       "result": "W",
       "score_margin": 2,
       "opponent_name": "Manchester United",
-      "opponent_quality": "lower",
+      "opponent_quality": "top6",
       "venue": "home",
       "competition_stage": "league_early",
       "arsenal_goals": 2,
@@ -1229,7 +1229,7 @@
         }
       ],
       "predicted_plan_match_features": {
-        "opponent_quality": "lower",
+        "opponent_quality": "top6",
         "venue": "home",
         "competition_stage": "league_early",
         "opponent": "Manchester United"
@@ -1318,7 +1318,7 @@
       "fixture_id": "1208154",
       "raw_match_path": "data/backfill/raw/1208154.json",
       "report_path": "data/backfill/runs/seed-002/reports/1208154.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -1560,7 +1560,7 @@
       "fixture_id": "1208174",
       "raw_match_path": "data/backfill/raw/1208174.json",
       "report_path": "data/backfill/runs/seed-002/reports/1208174.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -2388,19 +2388,19 @@
       "source": "llm",
       "confidence": null,
       "model_signals": {
-        "1": "green",
-        "2": "yellow",
-        "3": "yellow",
-        "4": "green",
-        "5": "yellow",
-        "6": "green"
+        "1": "🟢",
+        "2": "🟡",
+        "3": "🟡",
+        "4": "🟢",
+        "5": "🟡",
+        "6": "🟢"
       },
       "dimension_signals": {
-        "execution": "yellow",
-        "adjustment": "green",
-        "satisfaction": "yellow"
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟡"
       },
-      "overall_signal": "yellow",
+      "overall_signal": "🟡",
       "narrative": "阿森纳客场挑战利物浦，上半场以0-2落后，但下半场连入两球顽强扳平。尽管最终未能全取三分，但下半场的反弹展现了球队的精神韧性和战术调整能力。在安菲尔德控制56%的控球率、15次射门7次射正，这些数据证明球队具备与顶级对手正面交锋的实力。文化标准（模型1）在逆境中表现出色——落后两球不放弃，展现出不可妥协的战斗精神和职业态度。比赛控制（模型2）在下半场得到有效执行，通过控球和前场施压逐渐扭转了局面。防守身份（模型3）虽上半场失球较多，但下半场的稳固表现阻止了利物浦扩大比分，整体防守结构有所改善。边际收益（模型4）在下半场的两个进球中得到充分体现，关键时刻把握住了机会。能力叠加（模型5）进攻端多点开花，射门质量和数量均表现出色。角色清晰度（模型6）在下半场调整后每个球员都明确了职责，战术执行到位。这场比赛的遗憾在于上半场的被动开局和未能完成逆转，但下半场的表现为球队注入了信心。"
     },
     "features": {
@@ -2575,7 +2575,7 @@
       "fixture_id": "1208376",
       "raw_match_path": "data/backfill/raw/1208376.json",
       "report_path": "data/backfill/runs/seed-002/reports/1208376.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -2611,19 +2611,19 @@
       "source": "llm",
       "confidence": null,
       "model_signals": {
-        "1": "green",
-        "2": "green",
-        "3": "green",
-        "4": "green",
-        "5": "yellow",
-        "6": "green"
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟢",
+        "5": "🟡",
+        "6": "🟢"
       },
       "dimension_signals": {
-        "execution": "green",
-        "adjustment": "green",
-        "satisfaction": "green"
+        "execution": "🟢",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
       },
-      "overall_signal": "green",
+      "overall_signal": "🟢",
       "narrative": "阿森纳主场1-0小胜纽卡斯尔，这是一场纪律严明、战术成熟的胜利。面对实力强劲的对手，球队控制了51%的控球率，通过10次角球持续施加压力，并在下半场完成致命一击。防守端的零封表现尤为出色，展现出顶级的防守组织能力。文化标准（模型1）表现优秀——全场比赛展现出极高的专注度和职业态度，始终保持对胜利的渴望。比赛控制（模型2）通过控球和定位球的持续施压，逐步瓦解对手防线。防守身份（模型3）堪称完美，面对纽卡斯尔的进攻，防线保持了紧密的结构和出色的纪律性，实现了零封。边际收益（模型4）在关键时刻的进球和比赛末段的防守管理中得到充分体现。能力叠加（模型5）方面进攻端略显保守，但整体威胁足以确保胜利。角色清晰度（模型6）每个球员在防守和进攻转换中都清楚自己的职责，战术执行精准到位。这场胜利展现了阿森纳在关键时刻的成熟和韧性，证明球队具备在高压环境下赢得重要比赛的能力。"
     },
     "features": {
@@ -2790,7 +2790,7 @@
       "fixture_id": "1208383",
       "raw_match_path": "data/backfill/raw/1208383.json",
       "report_path": "data/backfill/runs/seed-002/reports/1208383.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -3144,7 +3144,7 @@
       "fixture_id": "1314297",
       "raw_match_path": "data/backfill/raw/1314297.json",
       "report_path": "data/backfill/runs/seed-002/reports/1314297.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -3312,19 +3312,19 @@
       "source": "llm",
       "confidence": null,
       "model_signals": {
-        "1": "green",
-        "2": "green",
-        "3": "green",
-        "4": "green",
-        "5": "green",
-        "6": "green"
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟢",
+        "5": "🟢",
+        "6": "🟢"
       },
       "dimension_signals": {
-        "execution": "green",
-        "adjustment": "green",
-        "satisfaction": "green"
+        "execution": "🟢",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
       },
-      "overall_signal": "green",
+      "overall_signal": "🟢",
       "narrative": "阿森纳在酋长球场以5-0横扫利兹联，展现了Arteta体系下压倒性的统治力。全场68%控球率、599次传球92%准确率、18射5正打入5球，各项数据均指向完美的战术执行。文化标准层面，球队从第一分钟起就保持高强度压迫，前两球上半场奠定基调后下半场毫不松懈再入三球，体现了Arteta对每场比赛标准一致性的要求。比赛控制方面，阿森纳完全掌控节奏——利兹仅3射1正、290次传球，被压缩在32%控球区域内毫无反击能力。防守身份得到完美体现，零封对手且几乎未给对方任何有威胁的机会。边际收益上，5次射正全部转化为进球展现了顶级终结效率，定位球和转换中的细节处理无可挑剔。能力叠加层面，进球分布在上下半场，进攻多点开花令对手无法针对性防范。角色清晰度极高，每位球员在高位压迫、边路overload和中场控制中的职责分明、衔接流畅。整体而言，这是一场将Arteta六大心智模型全部激活的教科书式胜利，三个维度均为积极信号。"
     },
     "features": {
@@ -3511,7 +3511,7 @@
       "fixture_id": "1378979",
       "raw_match_path": "data/backfill/raw/1378979.json",
       "report_path": "data/backfill/runs/seed-002/reports/1378979.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -3548,19 +3548,19 @@
       "source": "llm",
       "confidence": null,
       "model_signals": {
-        "1": "yellow",
-        "2": "red",
-        "3": "yellow",
-        "4": "red",
-        "5": "red",
-        "6": "yellow"
+        "1": "🟡",
+        "2": "🔴",
+        "3": "🟡",
+        "4": "🔴",
+        "5": "🔴",
+        "6": "🟡"
       },
       "dimension_signals": {
-        "execution": "red",
-        "adjustment": "yellow",
-        "satisfaction": "red"
+        "execution": "🔴",
+        "adjustment": "🟡",
+        "satisfaction": "🔴"
       },
-      "overall_signal": "red",
+      "overall_signal": "🔴",
       "narrative": "安菲尔德客场0-1负于利物浦，暴露了阿森纳在顶级客场对抗中的多重短板。47%控球率和82%传球准确率均低于球队标准，371次传球对比利物浦的435次反映出中场争夺中处于下风。文化标准层面虽保持了竞争纪律——全场未出现崩溃式失球，但未能在关键时刻展现必胜信念。比赛控制是最薄弱环节：面对利物浦的高位逼抢，阿森纳无法建立持续的进攻节奏，11次射门仅1次射正的转化率令人失望，进攻雷声大雨点小。防守身份尚可维持，仅失一球且下半场才丢球，防守结构整体有序，但被动防守的姿态与球队追求的主动防守身份存在差距。边际收益方面几乎为零——定位球8个角球颗粒无收，转换进攻缺乏致命一击。能力叠加受阻，进攻三区缺乏创造力和多点威胁，进攻过于依赖单一通道。角色清晰度中规中矩，球员理解防守职责但在进攻端的角色衔接出现断层。下半场失球暴露了调整能力的不足——未能及时改变比赛走势。综合来看，执行维度为红、调整为黄、满意度为红，整体信号消极，这是一场需要深刻复盘的比赛。"
     },
     "features": {
@@ -3723,7 +3723,7 @@
       "fixture_id": "1378993",
       "raw_match_path": "data/backfill/raw/1378993.json",
       "report_path": "data/backfill/runs/seed-002/reports/1378993.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -3758,19 +3758,19 @@
       "source": "llm",
       "confidence": null,
       "model_signals": {
-        "1": "green",
-        "2": "green",
-        "3": "green",
-        "4": "green",
-        "5": "green",
-        "6": "green"
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟢",
+        "5": "🟢",
+        "6": "🟢"
       },
       "dimension_signals": {
-        "execution": "green",
-        "adjustment": "green",
-        "satisfaction": "green"
+        "execution": "🟢",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
       },
-      "overall_signal": "green",
+      "overall_signal": "🟢",
       "narrative": "主场3-0完胜诺丁汉森林，阿森纳在经历安菲尔德失利后迅速回归正轨。54%控球率看似不极端，但16射5正对5射1正的数据对比清晰表明了场上的绝对优势。文化标准层面，球队展现了强大的心理韧性——在前一场客场失利后没有出现信心滑坡，反而以更加果断的态度投入比赛，上半场即取得领先奠定基调。比赛控制方面，虽然森林试图通过46%的控球维持一定对抗，但阿森纳通过高效的反抢和快速转换牢牢掌控比赛走向。防守身份堪称完美，零封对手且仅让对方1次射正，高位反抢策略成功打断了对手的组织节奏。边际收益处理到位，下半场连入两球体现了球队在领先后继续寻找扩大优势的决心，而非保守退缩。能力叠加层面，三个进球分布在上下半场的不同阶段，展现了多元化的进攻手段。角色清晰度极高，每位球员在「打断对手节奏+反抢后立即转换」的战术框架中各司其职。下半场由1-0扩大到3-0的过程尤其体现了教练组中场调整的精准——换人维持了进攻压力并保护了结果。三个维度全面绿灯，这是一场典型的Arteta体系强势回应战。"
     },
     "features": {
@@ -3949,7 +3949,7 @@
       "fixture_id": "1378999",
       "raw_match_path": "data/backfill/raw/1378999.json",
       "report_path": "data/backfill/runs/seed-002/reports/1378999.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -4272,19 +4272,19 @@
       "source": "llm",
       "confidence": null,
       "model_signals": {
-        "1": "green",
-        "2": "neutral",
-        "3": "red",
-        "4": "neutral",
-        "5": "green",
-        "6": "red"
+        "1": "🟢",
+        "2": "🟡",
+        "3": "🔴",
+        "4": "🟡",
+        "5": "🟢",
+        "6": "🔴"
       },
       "dimension_signals": {
-        "execution": "neutral",
-        "adjustment": "red",
-        "satisfaction": "red"
+        "execution": "🟡",
+        "adjustment": "🔴",
+        "satisfaction": "🔴"
       },
-      "overall_signal": "red",
+      "overall_signal": "🔴",
       "narrative": "阿森纳客场2-2被桑德兰逼平，90分钟丢球痛失两分，这是一场数据碾压却结果崩盘的典型案例。65%控球率、17次射门7次射正对比对手6射2正，上半场落后一球后下半场Saka和Trossard先后破门完成反超，然而终场前Brobbey扳平，从2-1到2-2的崩塌令人扼腕。文化标准绿灯：全场仅1张黄牌（Zubimendi 36分钟战术犯规），纪律层面没有问题。比赛控制黄灯：控球和射门数据压倒性优势，但两次射正就丢两球，说明控制力并未延伸到防守关键区域。防守身份红灯：对手仅2次射正却全部转化为进球，且第二球发生在90分钟——这是防守专注度的致命断裂。边际收益黄灯：定位球无建树，角球2比2平手，未能在细节上拉开差距。能力叠加绿灯：87%传球成功率、多人进球体现体系运转良好。角色清晰红灯：全场仅1次换人（88分钟Eze），在2-1领先时完全没有通过换人加固防守或控制节奏，Arteta的临场调度是本场最大败笔。这场平局的教训很明确——控球不等于控制，射门多不等于赢球，最后十分钟的专注度才是真正的冠军品质。"
     },
     "features": {
@@ -4450,7 +4450,7 @@
       "fixture_id": "1379076",
       "raw_match_path": "data/backfill/raw/1379076.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379076.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -4486,19 +4486,19 @@
       "source": "llm",
       "confidence": null,
       "model_signals": {
-        "1": "green",
-        "2": "green",
-        "3": "green",
-        "4": "neutral",
-        "5": "neutral",
-        "6": "green"
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟡",
+        "5": "🟡",
+        "6": "🟢"
       },
       "dimension_signals": {
-        "execution": "green",
-        "adjustment": "green",
-        "satisfaction": "green"
+        "execution": "🟢",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
       },
-      "overall_signal": "green",
+      "overall_signal": "🟢",
       "narrative": "阿森纳主场4-1横扫热刺，北伦敦德比呈现一边倒态势，Eze上演帽子戏法成为绝对主角。57%控球率、17射8正对比热刺3射2正，射门比5.7:1的数据堪称碾压。Trossard第36分钟首开纪录后，Eze在41分钟和46分钟连下两城完成半场帽子戏法，比赛悬念在半场结束时已被彻底杀死。Richarlison 55分钟的进球只是挽回颜面，Eze第76分钟再添一球完成大四喜。文化标准绿灯：全场仅1张黄牌（Rice 87分钟争论），在一场充满火药味的德比中保持了极佳的纪律性。比赛控制绿灯：从第一分钟就掌握主动权，热刺全场仅3次射门，比赛完全在阿森纳的节奏中进行。防守身份绿灯：仅失1球且对手射正仅2次，防守端几乎没有给热刺任何机会。边际收益黄灯：无定位球进球，角球4比1占优但未能转化为进球。能力叠加黄灯：81%传球成功率略低于理想标准，但Eze帽子戏法证明了进攻端的爆发力。角色清晰绿灯：78分钟起的换人节奏合理，核心球员得到休息，替补顺利融入。这是一场宣告争冠决心的标志性胜利——在德比战中用实力说话。"
     },
     "features": {
@@ -4684,7 +4684,7 @@
       "fixture_id": "1379079",
       "raw_match_path": "data/backfill/raw/1379079.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379079.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -4721,19 +4721,19 @@
       "source": "llm",
       "confidence": null,
       "model_signals": {
-        "1": "red",
-        "2": "neutral",
-        "3": "neutral",
-        "4": "neutral",
-        "5": "neutral",
-        "6": "green"
+        "1": "🔴",
+        "2": "🟡",
+        "3": "🟡",
+        "4": "🟡",
+        "5": "🟡",
+        "6": "🟢"
       },
       "dimension_signals": {
-        "execution": "neutral",
-        "adjustment": "green",
-        "satisfaction": "neutral"
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟡"
       },
-      "overall_signal": "neutral",
+      "overall_signal": "🟡",
       "narrative": "阿森纳客场1-1战平切尔西，一场充满戏剧性却令人五味杂陈的伦敦德比。切尔西38分钟Caicedo被红牌罚下后，阿森纳在长达52分钟里以多打少，却在48分钟被Chalobah头球破门落后，直到59分钟Merino扳平。62%控球率、8射4正对比切尔西11射4正——多一人却射门更少，这组数据刺眼。文化标准红灯：全场6张黄牌（Zubimendi 5分钟、Mosquera 13分钟、Calafiori 27分钟、Hincapie 41分钟、Lewis-Skelly 54分钟、Gyökeres 88分钟），上半场就累积4张黄牌，开场阶段的鲁莽犯规严重影响了防守结构和球员动作尺度。比赛控制黄灯：控球占优但创造机会不足，多打一人的优势未能转化为射门和威胁上的压倒性。防守身份黄灯：被10人切尔西先进球，48分钟的定位球失球暴露了注意力问题。边际收益黄灯：3次角球无建树，定位球攻防均无亮点。能力叠加黄灯：84%传球成功率尚可，但体系运转因频繁犯规而断断续续。角色清晰绿灯：46分钟换下Calafiori、57分钟同时换上Zubimendi和Martinelli的调整立竿见影，Merino 59分钟进球扳平，换人质量是本场最大亮点。这场平局的核心矛盾在于——纪律失控让一场本应拿下的比赛变成了勉强全身而退。"
     },
     "features": {
@@ -4903,7 +4903,7 @@
       "fixture_id": "1379091",
       "raw_match_path": "data/backfill/raw/1379091.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379091.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -4938,19 +4938,19 @@
       "source": "llm",
       "confidence": null,
       "model_signals": {
-        "1": "green",
-        "2": "green",
-        "3": "green",
-        "4": "neutral",
-        "5": "neutral",
-        "6": "green"
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟡",
+        "5": "🟡",
+        "6": "🟢"
       },
       "dimension_signals": {
-        "execution": "green",
-        "adjustment": "green",
-        "satisfaction": "green"
+        "execution": "🟢",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
       },
-      "overall_signal": "green",
+      "overall_signal": "🟢",
       "narrative": "阿森纳主场2-0轻取布伦特福德，一场从头到尾都在掌控之中的职业化胜利。Merino第11分钟闪电破门奠定基调，Saka第90分钟锁定胜局，中间79分钟的沉寂被稳健的防守和控球完美填充。62%控球率、15射7正对比对手6射1正，数据层面毫无悬念。文化标准绿灯：全场零黄牌、仅7次犯规，纪律性堪称赛季最佳之一，面对布伦特福德的身体对抗风格始终保持冷静。比赛控制绿灯：从第一分钟就掌握主动，11分钟即取得领先后从容控制节奏，布伦特福德全场仅1次射正，比赛从未脱离阿森纳的掌控。防守身份绿灯：零封对手，仅1次射正——防守端的专注度和结构性在连续作战后依然保持高水准。边际收益黄灯：布伦特福德获得8次角球形成一定威胁，但阿森纳全部化解；自身4次角球未能转化为进球。能力叠加黄灯：84%传球成功率略低于85%的理想线，但Merino和Saka分别进球体现了体系的输出多样性。角色清晰绿灯：44分钟Mosquera换人（疑似伤病保护）、61分钟Madueke和Martinelli同时上场保持攻势、83分钟Rice安全下场，换人节奏教科书级别，Saka替补上场后90分钟进球更是角色清晰的最佳注脚。这是一场'该赢的比赛赢得漂亮'的典型案例。"
     },
     "features": {
@@ -5121,7 +5121,7 @@
       "fixture_id": "1379099",
       "raw_match_path": "data/backfill/raw/1379099.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379099.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -5157,19 +5157,19 @@
       "source": "llm",
       "confidence": null,
       "model_signals": {
-        "1": "red",
-        "2": "neutral",
-        "3": "red",
-        "4": "neutral",
-        "5": "neutral",
-        "6": "neutral"
+        "1": "🔴",
+        "2": "🟡",
+        "3": "🔴",
+        "4": "🟡",
+        "5": "🟡",
+        "6": "🟡"
       },
       "dimension_signals": {
-        "execution": "red",
-        "adjustment": "neutral",
-        "satisfaction": "red"
+        "execution": "🔴",
+        "adjustment": "🟡",
+        "satisfaction": "🔴"
       },
-      "overall_signal": "red",
+      "overall_signal": "🔴",
       "narrative": "阿森纳客场1-2负于阿斯顿维拉，这是本赛季令人沮丧的一场失利。上半场第36分钟Cash率先破门，阿森纳陷入被动。半场连换Merino和Eze试图扭转局面，Trossard在第52分钟扳平比分显示了调整的初步效果。然而此后球队未能完成反超，反而在比赛末段崩盘——第90分钟Buendia绝杀，将阿森纳推入深渊。全场15次射门9次射正的效率本可带来更好结果，但关键时刻的防守注意力不集中成为致命伤。纪律层面亮起红灯：Calafiori和Saka各吃到一张黄牌，后者因与裁判争论染黄，反映出球队在逆境中的情绪管理失控。六个模型中文化标准和防守身份亮红灯——客场被绝杀暴露了心理韧性的严重不足，两黄牌也说明球员在压力下失去了Arteta强调的冷静与专业态度。比赛控制黄灯：控球占优但未能真正主导比赛走势。边际收益和能力叠加黄灯：换人虽有Trossard扳平的亮点，但整体处于被动应对状态。角色清晰黄灯：终场前防线混乱暴露了位置感的缺失。这是一场需要深刻反思的失利——不是实力差距，而是心态崩塌和关键时刻执行力不足的问题。"
     },
     "features": {
@@ -5349,7 +5349,7 @@
       "fixture_id": "1379109",
       "raw_match_path": "data/backfill/raw/1379109.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379109.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -5384,19 +5384,19 @@
       "source": "llm",
       "confidence": null,
       "model_signals": {
-        "1": "neutral",
-        "2": "neutral",
-        "3": "neutral",
-        "4": "neutral",
-        "5": "green",
-        "6": "neutral"
+        "1": "🟡",
+        "2": "🟡",
+        "3": "🟡",
+        "4": "🟡",
+        "5": "🟢",
+        "6": "🟡"
       },
       "dimension_signals": {
-        "execution": "neutral",
-        "adjustment": "green",
-        "satisfaction": "neutral"
+        "execution": "🟡",
+        "adjustment": "🟢",
+        "satisfaction": "🟡"
       },
-      "overall_signal": "neutral",
+      "overall_signal": "🟡",
       "narrative": "阿森纳主场2-1险胜狼队，过程远比比分显示的更加紧张刺激。69%的控球率和16次射门展现了压倒性的场面优势，但仅2次射正的冰冷数据暴露了终结效率的严重问题——大量射门偏离目标，未能将控球优势转化为有效威胁。第31分钟早早换下White，57分钟三人同时换人（Eze、Martinelli、Zubimendi）掀起进攻浪潮，调整效果在第70分钟显现——Johnstone的乌龙球打破僵局，Mosquera随后再入一球看似锁定胜局。然而第90分钟Arokodare的进球和随后的混乱将悬念拉回，终场前的紧张气氛令人揪心。狼队全场仅3次射门2次射正却打进1球，进攻效率远超主队。纪律方面阿森纳零黄牌值得肯定，但狼队4张黄牌反映出比赛对抗的激烈程度。能力叠加绿灯：替补球员上场后带来了活力和决定性进球；调整绿灯：换人策略有效改变了比赛走势。但比赛控制黄灯：69%控球率却赢得如此艰难令人不安；防守身份黄灯：末段丢球暴露了注意力的涣散；角色清晰黄灯：大量射门偏离目标说明进攻端的定位和决策不够精准。这是一场典型的'赢了但不令人满意'的比赛，胜利的喜悦被过程的粗糙所冲淡。"
     },
     "features": {
@@ -5575,7 +5575,7 @@
       "fixture_id": "1379119",
       "raw_match_path": "data/backfill/raw/1379119.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379119.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -5611,19 +5611,19 @@
       "source": "llm",
       "confidence": null,
       "model_signals": {
-        "1": "neutral",
-        "2": "green",
-        "3": "green",
-        "4": "neutral",
-        "5": "neutral",
-        "6": "green"
+        "1": "🟡",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟡",
+        "5": "🟡",
+        "6": "🟢"
       },
       "dimension_signals": {
-        "execution": "neutral",
-        "adjustment": "neutral",
-        "satisfaction": "neutral"
+        "execution": "🟡",
+        "adjustment": "🟡",
+        "satisfaction": "🟡"
       },
-      "overall_signal": "neutral",
+      "overall_signal": "🟡",
       "narrative": "阿森纳客场1-0小胜埃弗顿，Gyökeres第27分钟点球破门成为全场唯一进球。65%的控球率和654次传球高达88%的成功率，体现了球队对比赛节奏的绝对掌控力。防守端仅让对手5次射门1次射正，堪称铁壁般的防线表现。然而13次射门仅2次射正的数据再次暴露终结效率的短板——除点球外几乎未能创造出真正有威胁的破门良机。文化标准亮黄灯：Gyökeres和Martinelli各因拖延时间吃到黄牌，虽属战术性行为但不符合Arteta一贯强调的高标准职业态度。比赛控制绿灯：客场控球超过六成，传球流畅节奏完全由阿森纳主导；防守身份绿灯：零封对手且将射门限制到最低水平；角色清晰绿灯：防守端分工明确结构紧凑，没有给对手任何反击空间。边际收益黄灯：唯一进球来自定位球点球，缺乏运动战中的破局手段和创造力；能力叠加黄灯：换人策略以保护结果为主——65分钟Gyökeres下场、80分钟Trossard上场、88分钟Odegaard下场，更多是巩固而非提升进攻火力。这是一场务实高效的客场胜利，结果令人满意但过程缺乏足够的说服力和观赏性，赢球方式过于单一。"
     },
     "features": {
@@ -5781,7 +5781,7 @@
       "fixture_id": "1379132",
       "raw_match_path": "data/backfill/raw/1379132.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379132.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -6131,7 +6131,7 @@
       "fixture_id": "1379185",
       "raw_match_path": "data/backfill/raw/1379185.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379185.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -6412,7 +6412,7 @@
       "fixture_id": "1379209",
       "raw_match_path": "data/backfill/raw/1379209.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379209.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -6698,7 +6698,7 @@
       "fixture_id": "1379237",
       "raw_match_path": "data/backfill/raw/1379237.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379237.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -6902,7 +6902,7 @@
       "fixture_id": "1379239",
       "raw_match_path": "data/backfill/raw/1379239.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379239.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -7231,7 +7231,7 @@
       "fixture_id": "1379299",
       "raw_match_path": "data/backfill/raw/1379299.json",
       "report_path": "data/backfill/runs/seed-002/reports/1379299.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -7351,19 +7351,19 @@
       "source": "llm",
       "confidence": null,
       "model_signals": {
-        "1": "green",
-        "2": "green",
-        "3": "green",
-        "4": "yellow",
-        "5": "green",
-        "6": "green"
+        "1": "🟢",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟡",
+        "5": "🟢",
+        "6": "🟢"
       },
       "dimension_signals": {
-        "execution": "green",
-        "adjustment": "green",
-        "satisfaction": "green"
+        "execution": "🟢",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
       },
-      "overall_signal": "green",
+      "overall_signal": "🟢",
       "narrative": "欧冠小组赛客场2-0击败毕尔巴鄂竞技，阿森纳在圣马梅斯球场完成了一次极具说服力的欧战表演。62%控球率和490次传球体现了对比赛节奏的掌控，尽管双方射门次数持平各11次，但阿森纳6射正对2射正的精准度差距决定了比赛走向。文化标准层面，在欧冠客场面对西甲劲旅保持零封并全取三分，展现了球队在最高舞台上的竞争信念和纪律性。比赛控制表现优秀——圣马梅斯球场的狂热氛围并未动摇球队的控球节奏，83%传球准确率在客场高强度对抗中属上乘水准。防守身份是本场亮点，对手同样11次射门却仅有2次射正，说明防守阵型有效压制了对手的射门质量，全场零封彰显防线的稳固。边际收益方面存在改进空间——11射6正仅入2球的转化率尚有提升余地，定位球机会的利用效率也可以更高。能力叠加充分展现，上下半场各入一球且来自不同进攻组合，多点威胁令对手防不胜防。角色清晰度在轮换背景下尤为突出，「轮换体能管理」的赛前重点得到落实，球员在高强度客场中依然保持战术纪律。下半场连入两球的调整效果出色。整体三个维度全面积极，为欧冠征程奠定了坚实基础。"
     },
     "features": {
@@ -7535,7 +7535,7 @@
       "fixture_id": "1451021",
       "raw_match_path": "data/backfill/raw/1451021.json",
       "report_path": "data/backfill/runs/seed-002/reports/1451021.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -7718,26 +7718,26 @@
       "source": "llm",
       "confidence": null,
       "model_signals": {
-        "1": "neutral",
-        "2": "green",
-        "3": "green",
-        "4": "neutral",
-        "5": "green",
-        "6": "green"
+        "1": "🟡",
+        "2": "🟢",
+        "3": "🟢",
+        "4": "🟡",
+        "5": "🟢",
+        "6": "🟢"
       },
       "dimension_signals": {
-        "execution": "green",
-        "adjustment": "green",
-        "satisfaction": "green"
+        "execution": "🟢",
+        "adjustment": "🟢",
+        "satisfaction": "🟢"
       },
-      "overall_signal": "green",
+      "overall_signal": "🟢",
       "narrative": "阿森纳主场3-1击败拜仁慕尼黑，用一场经典的效率型胜利震撼欧冠赛场。40%控球率看似被动，但13射8正对比拜仁8射2正的数据揭示了真相——阿森纳主动让出球权，用精准的转换打击对手。Timber第22分钟先拔头筹，拜仁32分钟由Karl扳平后，下半场Madueke第69分钟和Martinelli第77分钟先后破门锁定胜局。文化标准黄灯：2张黄牌（Saliba 74分钟拖延时间、Merino 80分钟犯规），加上全场16次犯规，身体对抗强度偏高但均在比赛语境下可理解。比赛控制绿灯：虽然控球率仅40%，但射正比8:2的碾压优势说明阿森纳完全掌控了比赛的致命区域——这不是被动挨打，而是主动选择的反击战。防守身份绿灯：拜仁全场仅2次射正，面对拥有60%控球率的德甲豪门，防守端的纪律性和结构性令人印象深刻。边际收益黄灯：6次角球仅1次于拜仁，但未转化为定位球进球。能力叠加绿灯：80%传球成功率在低控球率下可以接受，三人进球（Timber、Madueke、Martinelli）展现了多点开花的进攻体系。角色清晰绿灯：38分钟Trossard早早替补上场体现战术灵活性，68分钟Saka和Lewis-Skelly的换人维持了强度，替补Madueke上场仅1分钟就进球。这是一场教科书级别的big game效率足球。"
     },
     "features": {
       "result": "W",
       "score_margin": 2,
       "opponent_name": "Bayern München",
-      "opponent_quality": "lower",
+      "opponent_quality": "european_elite",
       "venue": "home",
       "competition_stage": "group_stage",
       "arsenal_goals": 3,
@@ -7826,7 +7826,7 @@
         }
       ],
       "predicted_plan_match_features": {
-        "opponent_quality": "lower",
+        "opponent_quality": "european_elite",
         "venue": "home",
         "competition_stage": "group_stage",
         "opponent": "Bayern München"
@@ -7915,7 +7915,7 @@
       "fixture_id": "1451107",
       "raw_match_path": "data/backfill/raw/1451107.json",
       "report_path": "data/backfill/runs/seed-002/reports/1451107.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -8185,7 +8185,7 @@
       "fixture_id": "1451136",
       "raw_match_path": "data/backfill/raw/1451136.json",
       "report_path": "data/backfill/runs/seed-002/reports/1451136.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -8415,7 +8415,7 @@
       "fixture_id": "1528322",
       "raw_match_path": "data/backfill/raw/1528322.json",
       "report_path": "data/backfill/runs/seed-002/reports/1528322.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -8624,7 +8624,7 @@
       "fixture_id": "1528330",
       "raw_match_path": "data/backfill/raw/1528330.json",
       "report_path": "data/backfill/runs/seed-002/reports/1528330.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -8817,7 +8817,7 @@
       "fixture_id": "1534570",
       "raw_match_path": "data/backfill/raw/1534570.json",
       "report_path": "data/backfill/runs/seed-002/reports/1534570.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -9232,7 +9232,7 @@
       "fixture_id": "1498260",
       "raw_match_path": "data/backfill/raw/1498260.json",
       "report_path": "data/backfill/runs/seed-002/reports/1498260.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -9545,7 +9545,7 @@
       "fixture_id": "1523412",
       "raw_match_path": "data/backfill/raw/1523412.json",
       "report_path": "data/backfill/runs/seed-002/reports/1523412.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   },
@@ -9757,7 +9757,7 @@
       "fixture_id": "1531572",
       "raw_match_path": "data/backfill/raw/1531572.json",
       "report_path": "data/backfill/runs/seed-002/reports/1531572.json",
-      "prepared_at": "2026-05-19T15:44:00",
+      "prepared_at": "2026-05-19T16:46:40",
       "needs_v2_evaluation": true
     }
   }
