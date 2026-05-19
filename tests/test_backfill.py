@@ -931,3 +931,68 @@ class TestFixtureIdOnlyRow:
             rows = [json.loads(line) for line in f if line.strip()]
         assert rows[0]["ok"] is False
         assert rows[0]["error"]["code"] == "MISSING_RAW_INPUT"
+
+# ═══════════════════════════════════════════════════════════════════════
+# CLI-level integration tests
+# ═══════════════════════════════════════════════════════════════════════
+
+
+class TestInventoryCLI:
+    """Verify inventory --output writes manifest_snapshot.json and inventory_report.json."""
+
+    def test_inventory_output_writes_artifact_files(self, tmp_path):
+        """CLI: inventory --output writes both snapshot files."""
+        import json, subprocess
+        from pathlib import Path
+
+        entries = [_legacy_entry("1")]
+        kb_path = _write_kb(tmp_path / "kb.json", entries)
+        manifest_path = _write_manifest(
+            tmp_path / "manifest.json",
+            seed_set=[{"legacy_match_id": "1", "fixture_id": 123, "opponent": "A", "date": "2025-01-01", "raw_match_path": "nope.json"}],
+        )
+        output_dir = tmp_path / "run"
+
+        # Run via the actual CLI entry point
+        import sys
+        sys.argv = [
+            "backfill_history.py",
+            "--kb", str(kb_path),
+            "--manifest", str(manifest_path),
+            "--mode", "inventory",
+            "--output", str(output_dir),
+        ]
+        # We need to run main() but capture stdout
+        import io
+        from scripts.backfill_history import main
+        old_stdout = sys.stdout
+        sys.stdout = buf = io.StringIO()
+        try:
+            main()
+        except SystemExit:
+            pass
+        finally:
+            sys.stdout = old_stdout
+        output = buf.getvalue()
+
+        # Verify stdout has JSON report
+        report = json.loads(output.strip())
+        # Report has kb and manifest sections
+        assert "kb" in report, f"No report output: {output[:200]}"
+        assert report["kb"].get("total_entries") == 1
+
+        # Verify artifact files exist
+        ms_path = output_dir / "manifest_snapshot.json"
+        ir_path = output_dir / "inventory_report.json"
+        assert ms_path.exists(), f"manifest_snapshot.json not found at {ms_path}"
+        assert ir_path.exists(), f"inventory_report.json not found at {ir_path}"
+
+        # Verify manifest_snapshot content matches
+        with open(ms_path) as f:
+            ms = json.load(f)
+        assert ms.get("seed_set") is not None, "manifest_snapshot missing seed_set"
+
+        # Verify inventory_report content matches
+        with open(ir_path) as f:
+            ir = json.load(f)
+        assert "kb" in ir and ir["kb"].get("total_entries") == 1, "inventory_report missing counts"

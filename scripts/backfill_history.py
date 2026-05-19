@@ -780,6 +780,8 @@ def main():
         if args.output:
             od = Path(args.output)
             od.mkdir(parents=True, exist_ok=True)
+            # Load manifest for snapshot
+            manifest = _load_manifest(manifest_path)
             # Write manifest_snapshot.json
             with open(str(od / "manifest_snapshot.json"), "w", encoding="utf-8") as mf:
                 json.dump(manifest, mf, indent=2, ensure_ascii=False)
