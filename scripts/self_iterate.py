@@ -44,6 +44,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.evaluation.llm_result import validate_llm_result
 
+# Signal helpers (mirrored from adjudication.py for use in distill/replay)
+SIGNAL_ORDER = {"🔴": 0, "🟡": 1, "🟢": 2}
+
+
+def _signal_rank(sig: str) -> int:
+    return SIGNAL_ORDER.get(sig, -1)
+
 
 # ── Helpers ────────────────────────────────────────────────────────
 
@@ -849,6 +856,34 @@ def main():
     cr.add_argument("--b002", required=True, help="Path to b-002 adjudication_report.json")
     cr.add_argument("--output", required=True, help="Path to comparison_report.json")
 
+    # ── summarize-validation (Phase 1) ─────────────────────────────
+    sv = subparsers.add_parser("summarize-validation", help="Solidify b-003 validation summary")
+    sv.add_argument("--comparison", required=True, help="Path to comparison_report.json")
+    sv.add_argument("--adjudication", required=True, help="Path to adjudication_report.json")
+    sv.add_argument("--output", required=True, help="Path to validation_summary.json")
+
+    # ── distill-wk-rules (Phase 2) ─────────────────────────────────
+    dw = subparsers.add_parser("distill-wk-rules", help="Distill WK v1.2 rule candidates")
+    dw.add_argument("--kb", required=True, help="Path to knowledge.json")
+    dw.add_argument("--baseline-adjudication", required=True, help="Path to b-001 adjudication_report.json")
+    dw.add_argument("--current-adjudication", required=True, help="Path to b-003 adjudication_report.json")
+    dw.add_argument("--comparison", required=True, help="Path to comparison_report.json")
+    dw.add_argument("--output", required=True, help="Path to wk_rule_candidates.json")
+
+    # ── replay-wk-candidates (Phase 3) ─────────────────────────────
+    rp = subparsers.add_parser("replay-wk-candidates", help="Dry-run replay of WK candidate rules")
+    rp.add_argument("--kb", required=True, help="Path to knowledge.json")
+    rp.add_argument("--adjudication", required=True, help="Path to b-003 adjudication_report.json")
+    rp.add_argument("--candidates", required=True, help="Path to wk_rule_candidates.json")
+    rp.add_argument("--output", required=True, help="Path to wk_candidate_replay.json")
+
+    # ── propose-wk-patch-spec (Phase 5) ────────────────────────────
+    pp = subparsers.add_parser("propose-wk-patch-spec", help="Generate WK v1.2 implementation spec")
+    pp.add_argument("--candidates", required=True, help="Path to wk_rule_candidates.json")
+    pp.add_argument("--replay", required=True, help="Path to wk_candidate_replay.json")
+    pp.add_argument("--regression-manifest", required=True, help="Path to regression_manifest.json")
+    pp.add_argument("--output", required=True, help="Path to implementation spec .md")
+
     args = parser.parse_args()
 
     if args.command == "make-jobs":
@@ -910,6 +945,22 @@ def main():
     elif args.command == "compare-runs":
         result = run_compare_runs(args.b001, args.b002, args.output)
         print(json.dumps({"ok": True, "output": args.output, "summary": result["summary"]}, indent=2, ensure_ascii=False))
+
+    elif args.command == "summarize-validation":
+        result = run_summarize_validation(args.comparison, args.adjudication, args.output)
+        print(json.dumps({"ok": True, "output": args.output}, indent=2, ensure_ascii=False))
+
+    elif args.command == "distill-wk-rules":
+        result = run_distill_wk_rules(args.kb, args.baseline_adjudication, args.current_adjudication, args.comparison, args.output)
+        print(json.dumps({"ok": True, "output": args.output, "summary": result["summary"]}, indent=2, ensure_ascii=False))
+
+    elif args.command == "replay-wk-candidates":
+        result = run_replay_wk_candidates(args.kb, args.adjudication, args.candidates, args.output)
+        print(json.dumps({"ok": True, "output": args.output, "summary": result["summary"]}, indent=2, ensure_ascii=False))
+
+    elif args.command == "propose-wk-patch-spec":
+        result = run_propose_wk_patch_spec(args.candidates, args.replay, args.regression_manifest, args.output)
+        print(json.dumps({"ok": True, "output": args.output, "generated": result["generated"]}, indent=2, ensure_ascii=False))
 
 
 def run_compare_runs(b001_path: str, b002_path: str, output_path: str) -> dict:
@@ -1059,6 +1110,709 @@ def run_compare_runs(b001_path: str, b002_path: str, output_path: str) -> dict:
         summary["clean_subset_effective"] = clean_subset["effective"]
     return {"summary": summary}
 
+
+# ── Phase 1: summarize-validation ────────────────────────────────────
+
+
+def run_summarize_validation(comparison_path: str, adjudication_path: str, output_path: str) -> dict:
+    """Solidify b-003 validation summary from comparison + adjudication reports."""
+    with open(comparison_path, encoding="utf-8") as f:
+        comparison = json.load(f)
+    with open(adjudication_path, encoding="utf-8") as f:
+        adjudication = json.load(f)
+
+    cs = comparison.get("clean_subset", {})
+    excluded_count = adjudication["summary"].get("missing_evaluator_b", 0)
+
+    summary = {
+        "source_run": "b-003",
+        "prompt_blind_spots_validated": cs.get("effective", False),
+        "primary_basis": "clean_subset",
+        "clean_subset": {
+            "common_match_ids": cs.get("common_match_ids", 0),
+            "criteria_met": cs.get("criteria_met", 0),
+            "criteria_total": cs.get("criteria_total", 5),
+            "effective": cs.get("effective", False),
+            "overall_delta": cs.get("delta", {}).get("overall_agreement_rate", 0.0),
+            "dimension_delta": cs.get("delta", {}).get("dimension_agreement_rate", 0.0),
+            "model_delta": cs.get("delta", {}).get("model_agreement_rate", 0.0),
+            "wk_too_harsh_delta": cs.get("delta", {}).get("wk_too_harsh", 0),
+        },
+        "excluded": {
+            "quarantined_or_missing": excluded_count,
+            "reason": "quality_gate",
+        },
+    }
+
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
+
+    return {"summary": summary}
+
+
+# ── Phase 2: distill-wk-rules ────────────────────────────────────────
+
+
+def _derive_feature_view(entry: dict) -> dict:
+    """Derive deterministic feature predicates from KB entry features."""
+    features = entry.get("features", {})
+    result = features.get("result", "")
+    score_margin = features.get("score_margin", 0)
+    goals_conceded = features.get("goals_conceded", None)
+    shots_delta = features.get("shots_delta", features.get("shot_delta", None))
+    possession_delta = features.get("possession_delta", None)
+    corner_delta = features.get("corner_delta", None)
+    xg_delta = features.get("xg_delta", None)
+    xg_against = features.get("xg_against", None)
+    opponent_shots_on_target = features.get("opponent_shots_on_target", None)
+
+    missing = []
+    for f in ["goals_conceded", "shots_delta", "possession_delta", "corner_delta", "xg_delta", "xg_against", "opponent_shots_on_target"]:
+        if features.get(f) is None:
+            missing.append(f)
+
+    clean_sheet = goals_conceded == 0 if goals_conceded is not None else False
+    if goals_conceded is None:
+        clean_sheet = False
+
+    dom_conds = 0
+    if shots_delta is not None and shots_delta >= 5:
+        dom_conds += 1
+    if possession_delta is not None and possession_delta >= 8:
+        dom_conds += 1
+    if corner_delta is not None and corner_delta >= 4:
+        dom_conds += 1
+    dominant_control = dom_conds >= 2
+
+    dominant_chance_quality = xg_delta is not None and xg_delta >= 0.75
+
+    risk_conds = 0
+    if goals_conceded is not None and goals_conceded == 0:
+        risk_conds += 1
+    if opponent_shots_on_target is not None and opponent_shots_on_target <= 3:
+        risk_conds += 1
+    if xg_against is not None and xg_against <= 1.0:
+        risk_conds += 1
+    low_defensive_risk = risk_conds >= 2
+
+    narrow_win = result == "W" and score_margin == 1
+    loss_despite_dominance = result == "L" and (dominant_control or dominant_chance_quality)
+
+    return {
+        "match_id": entry.get("match_id", ""),
+        "result": result,
+        "opponent_quality": features.get("opponent_quality", "unknown"),
+        "venue": features.get("venue", "unknown"),
+        "competition_stage": features.get("competition_stage", "unknown"),
+        "score_margin": score_margin,
+        "clean_sheet": clean_sheet if goals_conceded is not None else False,
+        "dominant_control": dominant_control,
+        "dominant_chance_quality": dominant_chance_quality,
+        "low_defensive_risk": low_defensive_risk,
+        "narrow_win": narrow_win,
+        "loss_despite_dominance": loss_despite_dominance,
+        "xg_present": xg_delta is not None,
+        "missing_features": missing,
+    }
+
+
+def run_distill_wk_rules(
+    kb_path: str,
+    baseline_adj_path: str,
+    current_adj_path: str,
+    comparison_path: str,
+    output_path: str,
+) -> dict:
+    """Distill WK v1.2 rule candidates from b-003 disagreements."""
+    entries = _load_kb(kb_path)
+    kb_index = _build_kb_index(entries)
+
+    with open(current_adj_path, encoding="utf-8") as f:
+        current_adj = json.load(f)
+    with open(comparison_path, encoding="utf-8") as f:
+        comparison = json.load(f)
+
+    # Get clean subset match_ids
+    cs = comparison.get("clean_subset", {})
+    cs_b003 = cs.get("b002", cs.get("b001", {}))
+    # Build from rows: compared rows from current adjudication
+    clean_ids = set()
+    for row in current_adj.get("rows", []):
+        if row["status"] not in ("missing_evaluator_b", "invalid_evaluator_b"):
+            clean_ids.add(row["match_id"])
+
+    # Disagreement statuses to distill
+    distill_statuses = {"wk_too_harsh", "wk_too_generous", "dimension_level_disagreement", "model_level_disagreement"}
+
+    candidates = []
+    rejected = []
+
+    # Group disagreements by (status, target, direction)
+    disagreement_groups: dict[tuple, list[dict]] = {}
+    for row in current_adj.get("rows", []):
+        if row["match_id"] not in clean_ids:
+            continue
+        if row["status"] not in distill_statuses:
+            continue
+
+        entry = kb_index.get(row["match_id"])
+        if entry is None:
+            continue
+
+        fv = _derive_feature_view(entry)
+
+        # Determine target and direction based on status
+        current_signal = ""
+        target = ""
+        target_signal = ""
+        direction = ""
+        if row["status"] == "wk_too_harsh":
+            # WK is harsher than B — B wants upgrade
+            target = "overall_signal"
+            direction = "upgrade"
+            current_signal = row["wk"]["overall_signal"]
+            target_signal = row["b"]["overall_signal"]
+        elif row["status"] == "wk_too_generous":
+            target = "overall_signal"
+            direction = "downgrade"
+            current_signal = row["wk"]["overall_signal"]
+            target_signal = row["b"]["overall_signal"]
+        elif row["status"] == "dimension_level_disagreement":
+            # Find the first differing dimension
+            dim_diffs = [d for d in row["differences"] if d in ("execution", "adjustment", "satisfaction")]
+            if not dim_diffs:
+                continue
+            target = f"dimension_signals.{dim_diffs[0]}"
+            direction = "upgrade" if _signal_rank(row["b"]["dimension_signals"].get(dim_diffs[0], "")) > _signal_rank(row["wk"]["dimension_signals"].get(dim_diffs[0], "")) else "downgrade"
+            current_signal = row["wk"]["dimension_signals"].get(dim_diffs[0], "")
+            target_signal = row["b"]["dimension_signals"].get(dim_diffs[0], "")
+        elif row["status"] == "model_level_disagreement":
+            model_diffs = [d for d in row["differences"] if d in ("1", "2", "3", "4", "5", "6")]
+            if not model_diffs:
+                continue
+            target = f"model_signals.{model_diffs[0]}"
+            direction = "upgrade" if _signal_rank(row["b"]["model_signals"].get(model_diffs[0], "")) > _signal_rank(row["wk"]["model_signals"].get(model_diffs[0], "")) else "downgrade"
+            current_signal = row["wk"]["model_signals"].get(model_diffs[0], "")
+            target_signal = row["b"]["model_signals"].get(model_diffs[0], "")
+        else:
+            continue
+
+        key = (row["status"], target, direction, target_signal)
+        disagreement_groups.setdefault(key, []).append({
+            "match_id": row["match_id"],
+            "fv": fv,
+            "current_signal": current_signal,
+            "target_signal": target_signal,
+        })
+
+    # Build candidates from groups
+    for (status, target, direction, target_signal), items in disagreement_groups.items():
+        # Extract predicate from feature views
+        predicates = {}
+        for fv in items:
+            for key in ["result", "opponent_quality", "venue", "competition_stage"]:
+                val = fv.get(key)
+                if val and val != "unknown":
+                    predicates.setdefault(key, set()).add(val)
+            for key in ["clean_sheet", "dominant_control", "dominant_chance_quality", "low_defensive_risk", "narrow_win", "loss_despite_dominance"]:
+                if fv.get(key):
+                    predicates.setdefault(key, set()).add(True)
+
+        # Build predicate dict
+        pred = {}
+        for key, vals in predicates.items():
+            if len(vals) == 1:
+                pred[key] = list(vals)[0]
+            elif key in ("result", "venue"):
+                pred[key] = list(vals)[0] if len(vals) == 1 else list(vals)
+
+        # Support count
+        support = len(items)
+        examples = [it["match_id"] for it in items[:5]]
+
+        # Precision: how many of the predicate-matching rows agree with target_signal
+        # For now, precision = support / (support + false_positives)
+        # False positives = rows where predicate matches but WK already has target_signal
+        false_positives = 0
+        for row in current_adj.get("rows", []):
+            if row["match_id"] in clean_ids and row["match_id"] not in {it["match_id"] for it in items}:
+                entry = kb_index.get(row["match_id"])
+                if entry:
+                    fv = _derive_feature_view(entry)
+                    if _predicate_matches(pred, fv):
+                        # Check if WK already has target_signal here (would be a false positive)
+                        wk_sig = row["wk"].get("overall_signal", "")
+                        if target == "overall_signal" and wk_sig == target_signal:
+                            false_positives += 1
+
+        precision = support / (support + false_positives) if (support + false_positives) > 0 else 0.0
+
+        # Build counterexamples (rows where predicate matches but disagreement goes other way)
+        counterexamples = []
+        regression_must_not = []
+        for row in current_adj.get("rows", []):
+            if row["match_id"] in clean_ids and row["match_id"] not in {it["match_id"] for it in items}:
+                entry = kb_index.get(row["match_id"])
+                if entry:
+                    fv = _derive_feature_view(entry)
+                    if _predicate_matches(pred, fv):
+                        if row["status"] in ("wk_too_generous",) and direction == "upgrade":
+                            counterexamples.append(row["match_id"])
+
+        # Regression: known failures
+        for row in current_adj.get("rows", []):
+            if row.get("features", {}).get("result") == "L":
+                entry = kb_index.get(row["match_id"])
+                if entry:
+                    fv = _derive_feature_view(entry)
+                    if _predicate_matches(pred, fv):
+                        regression_must_not.append(row["match_id"])
+
+        candidate = {
+            "candidate_schema_version": "wk_rule_candidate_v1",
+            "id": f"wk_v1_2_{status}_{target.replace('.', '_')}_{direction}",
+            "source_runs": ["b-001", "b-003"],
+            "primary_run": "b-003",
+            "target": target,
+            "predicate": pred,
+            "current_wk_signal": current_signal,
+            "target_signal": target_signal,
+            "direction": direction,
+            "support": support,
+            "precision_vs_b": round(precision, 4),
+            "false_positive_count": false_positives,
+            "examples": examples,
+            "counterexamples": counterexamples[:5],
+            "regression_must_not_change": regression_must_not[:5],
+            "risk": "medium" if status == "wk_too_generous" else "low",
+            "rationale": f"评估器B在{_predicate_description(pred)}时稳定给{'更高' if direction == 'upgrade' else '更低'}信号",
+            "implementation_hint": "",
+        }
+
+        # Must have a non-empty deterministic predicate (spec §8.3)
+        if not pred:
+            candidate["rejection_reason"] = "empty predicate: no deterministic feature predicate found"
+            rejected.append(candidate)
+            continue
+
+        # Check thresholds
+        is_generous = status == "wk_too_generous"
+        if is_generous:
+            if support >= 7 and precision >= 0.90 and false_positives == 0:
+                candidates.append(candidate)
+            else:
+                candidate["rejection_reason"] = f"wk_too_generous stricter gate: support={support}<7 or precision={precision:.2f}<0.90 or fp={false_positives}>0"
+                rejected.append(candidate)
+        else:
+            if support >= 5 and precision >= 0.80 and false_positives <= 1:
+                candidates.append(candidate)
+            else:
+                candidate["rejection_reason"] = f"gate: support={support}<5 or precision={precision:.2f}<0.80 or fp={false_positives}>1"
+                rejected.append(candidate)
+
+    # Write outputs
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(candidates, f, ensure_ascii=False, indent=2)
+
+    rejected_path = Path(output_path).parent / "rejected_candidates.json"
+    with open(rejected_path, "w", encoding="utf-8") as f:
+        json.dump(rejected, f, ensure_ascii=False, indent=2)
+
+    return {
+        "summary": {
+            "candidates": len(candidates),
+            "rejected": len(rejected),
+            "total_disagreements": sum(len(v) for v in disagreement_groups.values()),
+        }
+    }
+
+
+def _predicate_matches(pred: dict, fv: dict) -> bool:
+    """Check if a feature view matches a predicate."""
+    for key, val in pred.items():
+        if isinstance(val, list):
+            if fv.get(key) not in val:
+                return False
+        elif isinstance(val, bool):
+            if fv.get(key) != val:
+                return False
+        else:
+            if fv.get(key) != val:
+                return False
+    return True
+
+
+def _predicate_description(pred: dict) -> str:
+    """Human-readable description of a predicate."""
+    parts = []
+    if "result" in pred:
+        parts.append(f"result={pred['result']}")
+    if "opponent_quality" in pred:
+        parts.append(f"vs {pred['opponent_quality']}")
+    if "dominant_chance_quality" in pred and pred["dominant_chance_quality"]:
+        parts.append("机会质量占优")
+    if "low_defensive_risk" in pred and pred["low_defensive_risk"]:
+        parts.append("防守风险低")
+    if "clean_sheet" in pred and pred["clean_sheet"]:
+        parts.append("零封")
+    return "、".join(parts) if parts else "特定条件"
+
+
+# ── Phase 3: replay-wk-candidates ────────────────────────────────────
+
+
+def run_replay_wk_candidates(
+    kb_path: str,
+    adjudication_path: str,
+    candidates_path: str,
+    output_path: str,
+) -> dict:
+    """Dry-run replay: simulate applying candidate rules to WK signals."""
+    entries = _load_kb(kb_path)
+    kb_index = _build_kb_index(entries)
+
+    with open(adjudication_path, encoding="utf-8") as f:
+        adjudication = json.load(f)
+    with open(candidates_path, encoding="utf-8") as f:
+        candidates = json.load(f)
+
+    # Get clean subset rows
+    clean_rows = [r for r in adjudication.get("rows", []) if r["status"] not in ("missing_evaluator_b", "invalid_evaluator_b")]
+
+    # Simulate applying candidates
+    def apply_candidates(wk: dict, fv: dict) -> dict:
+        """Apply candidate rules to a WK signal dict (in-memory)."""
+        result = {
+            "overall_signal": wk.get("overall_signal", ""),
+            "dimension_signals": dict(wk.get("dimension_signals", {})),
+            "model_signals": dict(wk.get("model_signals", {})),
+        }
+        for cand in candidates:
+            if _predicate_matches(cand["predicate"], fv):
+                target = cand["target"]
+                target_signal = cand["target_signal"]
+                if target == "overall_signal":
+                    result["overall_signal"] = target_signal
+                elif target.startswith("dimension_signals."):
+                    dim = target.split(".")[1]
+                    if dim in result["dimension_signals"]:
+                        result["dimension_signals"][dim] = target_signal
+                elif target.startswith("model_signals."):
+                    model = target.split(".")[1]
+                    if model in result["model_signals"]:
+                        result["model_signals"][model] = target_signal
+        return result
+
+    # Compute before/after metrics
+    before_overall_agree = 0
+    after_overall_agree = 0
+    before_dim_agree = 0
+    after_dim_agree = 0
+    before_model_agree = 0
+    after_model_agree = 0
+    before_wk_too_harsh = 0
+    after_wk_too_harsh = 0
+    before_wk_too_generous = 0
+    after_wk_too_generous = 0
+    candidate_impacts = []
+    regression_results = []
+
+    for row in clean_rows:
+        entry = kb_index.get(row["match_id"])
+        if not entry:
+            continue
+
+        fv = _derive_feature_view(entry)
+        wk = row["wk"]
+        b = row["b"]
+        new_wk = apply_candidates(wk, fv)
+
+        # Before metrics
+        if row["status"] not in ("missing_evaluator_b", "invalid_evaluator_b"):
+            if "overall" not in row["differences"] or not row["differences"]:
+                before_overall_agree += 1
+            if row["status"] in ("agreement_high_confidence", "agreement_low_confidence", "model_level_disagreement"):
+                before_dim_agree += 1
+            if row["status"] in ("agreement_high_confidence", "agreement_low_confidence"):
+                before_model_agree += 1
+            if row["status"] == "wk_too_harsh":
+                before_wk_too_harsh += 1
+            if row["status"] == "wk_too_generous":
+                before_wk_too_generous += 1
+
+        # After: compare new_wk vs B
+        new_diffs = []
+        if new_wk["overall_signal"] != b["overall_signal"]:
+            new_diffs.append("overall")
+        for dim in ("execution", "adjustment", "satisfaction"):
+            if new_wk["dimension_signals"].get(dim) != b["dimension_signals"].get(dim):
+                new_diffs.append(dim)
+        for mk in ("1", "2", "3", "4", "5", "6"):
+            if new_wk["model_signals"].get(mk) != b["model_signals"].get(mk):
+                new_diffs.append(mk)
+
+        if not new_diffs:
+            after_overall_agree += 1
+            after_dim_agree += 1
+            after_model_agree += 1
+        elif "overall" not in new_diffs:
+            after_overall_agree += 1
+            dim_diffs_new = [d for d in new_diffs if d in ("execution", "adjustment", "satisfaction")]
+            if not dim_diffs_new:
+                after_dim_agree += 1
+                after_model_agree += 1
+            else:
+                model_diffs_new = [d for d in new_diffs if d in ("1", "2", "3", "4", "5", "6")]
+                if not model_diffs_new:
+                    after_model_agree += 1
+        else:
+            # Overall mismatch
+            wk_rank = _signal_rank(new_wk["overall_signal"])
+            b_rank = _signal_rank(b["overall_signal"])
+            if wk_rank < b_rank:
+                after_wk_too_harsh += 1
+            elif wk_rank > b_rank:
+                after_wk_too_generous += 1
+
+        # Track per-match changes
+        if new_wk != wk:
+            candidate_impacts.append({
+                "match_id": row["match_id"],
+                "before": wk,
+                "after": new_wk,
+                "b_signals": b,
+            })
+
+        # Regression check: 1531572 must not become overall 🟢
+        if row["match_id"] == "1531572" and new_wk["overall_signal"] == "🟢":
+            regression_results.append({"match_id": "1531572", "passed": False, "reason": "became overall 🟢"})
+        elif row["match_id"] == "1531572":
+            regression_results.append({"match_id": "1531572", "passed": True})
+
+        # Lower/mid_table loss guard
+        if (fv.get("result") == "L" and fv.get("opponent_quality") in ("lower", "mid_table", "unknown")
+                and new_wk["overall_signal"] == "🟢"):
+            regression_results.append({"match_id": row["match_id"], "passed": False, "reason": "loss to lower/mid_table became overall 🟢"})
+
+    n = len(clean_rows)
+    report = {
+        "dry_run": True,
+        "weak_label_from": "v1.1",
+        "weak_label_candidate": "v1.2",
+        "basis": "b-003 clean subset",
+        "compared": n,
+        "before": {
+            "overall_agreement_rate": round(before_overall_agree / n, 4) if n else 0,
+            "dimension_agreement_rate": round(before_dim_agree / n, 4) if n else 0,
+            "model_agreement_rate": round(before_model_agree / n, 4) if n else 0,
+            "wk_too_harsh": before_wk_too_harsh,
+            "wk_too_generous": before_wk_too_generous,
+        },
+        "after": {
+            "overall_agreement_rate": round(after_overall_agree / n, 4) if n else 0,
+            "dimension_agreement_rate": round(after_dim_agree / n, 4) if n else 0,
+            "model_agreement_rate": round(after_model_agree / n, 4) if n else 0,
+            "wk_too_harsh": after_wk_too_harsh,
+            "wk_too_generous": after_wk_too_generous,
+        },
+        "candidate_impacts": candidate_impacts,
+        "regression_results": regression_results,
+    }
+
+    # Generate regression manifest
+    manifest = _build_regression_manifest(clean_rows, kb_index)
+    manifest_path = Path(output_path).parent / "regression_manifest.json"
+    with open(manifest_path, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, ensure_ascii=False, indent=2)
+
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+
+    # Check if replay passes
+    b = report["before"]
+    a = report["after"]
+    all_regressions_pass = all(r["passed"] for r in regression_results) if regression_results else True
+    harsh_rel_decrease = (b["wk_too_harsh"] - a["wk_too_harsh"]) / b["wk_too_harsh"] if b["wk_too_harsh"] > 0 else 1.0
+    generous_abs_increase = a["wk_too_generous"] - b["wk_too_generous"]
+
+    passes = (
+        n >= 90
+        and a["overall_agreement_rate"] >= b["overall_agreement_rate"]
+        and a["dimension_agreement_rate"] >= b["dimension_agreement_rate"]
+        and a["model_agreement_rate"] >= b["model_agreement_rate"]
+        and harsh_rel_decrease >= 0.20
+        and generous_abs_increase <= 2
+        and all_regressions_pass
+    )
+
+    return {
+        "summary": {
+            "compared": n,
+            "before": b,
+            "after": a,
+            "passes": passes,
+            "regressions_passed": all_regressions_pass,
+            "candidate_impacts": len(candidate_impacts),
+        }
+    }
+
+
+def _build_regression_manifest(clean_rows: list[dict], kb_index: dict) -> dict:
+    """Build regression manifest from clean subset rows."""
+    must_not_green = [{"match_id": "1531572", "reason": "dominant stats + loss to lower opposition must not become green"}]
+
+    win_regression = {"top6": [], "european_elite": [], "mid_table_away": [], "lower_home": []}
+    for row in clean_rows:
+        entry = kb_index.get(row["match_id"])
+        if not entry:
+            continue
+        fv = _derive_feature_view(entry)
+        if fv.get("result") != "W":
+            continue
+        opp = fv.get("opponent_quality", "unknown")
+        venue = fv.get("venue", "unknown")
+        if opp == "top6" and len(win_regression["top6"]) < 2:
+            win_regression["top6"].append(row["match_id"])
+        elif opp == "european_elite" and len(win_regression["european_elite"]) < 2:
+            win_regression["european_elite"].append(row["match_id"])
+        elif opp == "mid_table" and venue == "away" and len(win_regression["mid_table_away"]) < 2:
+            win_regression["mid_table_away"].append(row["match_id"])
+        elif opp == "lower" and venue == "home" and len(win_regression["lower_home"]) < 2:
+            win_regression["lower_home"].append(row["match_id"])
+
+    win_regression_set = []
+    for category, ids in win_regression.items():
+        for mid in ids:
+            win_regression_set.append({"match_id": mid, "category": category})
+
+    # Add loss guards to must_not
+    for row in clean_rows:
+        entry = kb_index.get(row["match_id"])
+        if not entry:
+            continue
+        fv = _derive_feature_view(entry)
+        if fv.get("result") == "L" and fv.get("opponent_quality") in ("lower", "mid_table"):
+            must_not_green.append({
+                "match_id": row["match_id"],
+                "reason": f"loss to {fv.get('opponent_quality')} opposition must not become overall green due to dominance metrics",
+            })
+
+    return {
+        "must_not_become_green_overall": must_not_green,
+        "loss_guard": {"rule": "loss to lower/mid_table opposition cannot become overall green because of dominance metrics"},
+        "win_regression_set": win_regression_set,
+        "quarantined_excluded": ["1208103", "1208118", "1208215", "1208233", "1208326", "1379169", "1379251", "1518728"],
+    }
+
+
+# ── Phase 5: propose-wk-patch-spec ───────────────────────────────────
+
+
+def run_propose_wk_patch_spec(
+    candidates_path: str,
+    replay_path: str,
+    regression_manifest_path: str,
+    output_path: str,
+) -> dict:
+    """Generate WK v1.2 implementation spec if replay passes."""
+    with open(replay_path, encoding="utf-8") as f:
+        replay = json.load(f)
+    with open(candidates_path, encoding="utf-8") as f:
+        candidates = json.load(f)
+    with open(regression_manifest_path, encoding="utf-8") as f:
+        manifest = json.load(f)
+
+    # Check if replay passes
+    b = replay.get("before", {})
+    a = replay.get("after", {})
+    n = replay.get("compared", 0)
+    all_regressions = all(r.get("passed", True) for r in replay.get("regression_results", []))
+    harsh_rel = (b.get("wk_too_harsh", 0) - a.get("wk_too_harsh", 0)) / b.get("wk_too_harsh", 1) if b.get("wk_too_harsh", 0) > 0 else 1.0
+    generous_abs = a.get("wk_too_generous", 0) - b.get("wk_too_generous", 0)
+
+    passes = (
+        n >= 90
+        and a.get("overall_agreement_rate", 0) >= b.get("overall_agreement_rate", 0)
+        and a.get("dimension_agreement_rate", 0) >= b.get("dimension_agreement_rate", 0)
+        and a.get("model_agreement_rate", 0) >= b.get("model_agreement_rate", 0)
+        and harsh_rel >= 0.20
+        and generous_abs <= 2
+        and all_regressions
+    )
+
+    if not passes:
+        # Write rejected
+        rejected_path = Path(output_path).parent / "rejected_candidates.json"
+        if rejected_path.exists():
+            pass  # Already written by distill
+        return {"generated": False, "reason": "replay did not pass criteria"}
+
+    # Generate spec
+    candidate_ids = [c["id"] for c in candidates]
+    regression_ids = [r["match_id"] for r in manifest.get("must_not_become_green_overall", [])]
+
+    spec = f"""# WK v1.2 Implementation Spec
+
+Generated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}
+Status: 待实现
+Source: wk-v1.2 rule distillation pipeline
+
+## Background
+
+b-003 clean-subset validation passed (5/5 criteria, 94 match_ids).
+{len(candidates)} rule candidates passed distillation gates.
+Dry-run replay passed all criteria.
+
+## Candidates
+
+"""
+    for c in candidates:
+        spec += f"### {c['id']}\n\n"
+        spec += f"- Target: `{c['target']}`\n"
+        spec += f"- Direction: {c['direction']}\n"
+        spec += f"- Predicate: `{json.dumps(c['predicate'], ensure_ascii=False)}`\n"
+        spec += f"- Current: {c['current_wk_signal']} → Target: {c['target_signal']}\n"
+        spec += f"- Support: {c['support']}, Precision: {c['precision_vs_b']}, FP: {c['false_positive_count']}\n"
+        spec += f"- Examples: {', '.join(c['examples'])}\n"
+        spec += f"- Risk: {c['risk']}\n"
+        spec += f"- Rationale: {c['rationale']}\n\n"
+
+    spec += """## Regression Guards
+
+Must NOT become overall 🟢:
+"""
+    for r in manifest.get("must_not_become_green_overall", [])[:10]:
+        spec += f"- `{r['match_id']}`: {r['reason']}\n"
+
+    spec += f"""
+## Dry-Run Results
+
+- Compared: {n}
+- Overall agreement: {b.get('overall_agreement_rate', 0):.1%} → {a.get('overall_agreement_rate', 0):.1%}
+- Dimension agreement: {b.get('dimension_agreement_rate', 0):.1%} → {a.get('dimension_agreement_rate', 0):.1%}
+- Model agreement: {b.get('model_agreement_rate', 0):.1%} → {a.get('model_agreement_rate', 0):.1%}
+- wk_too_harsh: {b.get('wk_too_harsh', 0)} → {a.get('wk_too_harsh', 0)}
+- wk_too_generous: {b.get('wk_too_generous', 0)} → {a.get('wk_too_generous', 0)}
+
+## Version Bump
+
+weak_label_version: v1.1 → v1.2
+
+## Non-Goals
+
+- Do NOT modify evaluator B prompts
+- Do NOT re-run evaluations
+- Do NOT write to knowledge.json until implementation is reviewed
+"""
+
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(spec)
+
+    return {"generated": True, "candidates": len(candidate_ids)}
 
 if __name__ == "__main__":
     main()

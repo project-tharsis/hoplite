@@ -1,0 +1,521 @@
+[
+  {
+    "candidate_schema_version": "wk_rule_candidate_v1",
+    "id": "wk_v1_2_model_level_disagreement_model_signals_1_upgrade",
+    "source_runs": [
+      "b-001",
+      "b-003"
+    ],
+    "primary_run": "b-003",
+    "target": "model_signals.1",
+    "predicate": {},
+    "current_wk_signal": "🟡",
+    "target_signal": "🟢",
+    "direction": "upgrade",
+    "support": 3,
+    "precision_vs_b": 1.0,
+    "false_positive_count": 0,
+    "examples": [
+      "1208023",
+      "1379132",
+      "1506251"
+    ],
+    "counterexamples": [
+      "1208174",
+      "1208194",
+      "1327988",
+      "1379189",
+      "1451075"
+    ],
+    "regression_must_not_change": [
+      "1208091",
+      "1208118",
+      "1208274",
+      "1208363",
+      "1327988"
+    ],
+    "risk": "low",
+    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "implementation_hint": "",
+    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+  },
+  {
+    "candidate_schema_version": "wk_rule_candidate_v1",
+    "id": "wk_v1_2_model_level_disagreement_model_signals_1_upgrade",
+    "source_runs": [
+      "b-001",
+      "b-003"
+    ],
+    "primary_run": "b-003",
+    "target": "model_signals.1",
+    "predicate": {},
+    "current_wk_signal": "🟡",
+    "target_signal": "🟡",
+    "direction": "upgrade",
+    "support": 1,
+    "precision_vs_b": 1.0,
+    "false_positive_count": 0,
+    "examples": [
+      "1208032"
+    ],
+    "counterexamples": [
+      "1208174",
+      "1208194",
+      "1327988",
+      "1379189",
+      "1451075"
+    ],
+    "regression_must_not_change": [
+      "1208091",
+      "1208118",
+      "1208274",
+      "1208363",
+      "1327988"
+    ],
+    "risk": "low",
+    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "implementation_hint": "",
+    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+  },
+  {
+    "candidate_schema_version": "wk_rule_candidate_v1",
+    "id": "wk_v1_2_wk_too_harsh_overall_signal_upgrade",
+    "source_runs": [
+      "b-001",
+      "b-003"
+    ],
+    "primary_run": "b-003",
+    "target": "overall_signal",
+    "predicate": {},
+    "current_wk_signal": "🟡",
+    "target_signal": "🟢",
+    "direction": "upgrade",
+    "support": 13,
+    "precision_vs_b": 0.2281,
+    "false_positive_count": 44,
+    "examples": [
+      "1208059",
+      "1208072",
+      "1208154",
+      "1208204",
+      "1208254"
+    ],
+    "counterexamples": [
+      "1208174",
+      "1208194",
+      "1327988",
+      "1379189",
+      "1451075"
+    ],
+    "regression_must_not_change": [
+      "1208091",
+      "1208118",
+      "1208274",
+      "1208363",
+      "1327988"
+    ],
+    "risk": "low",
+    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "implementation_hint": "",
+    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+  },
+  {
+    "candidate_schema_version": "wk_rule_candidate_v1",
+    "id": "wk_v1_2_dimension_level_disagreement_dimension_signals_execution_downgrade",
+    "source_runs": [
+      "b-001",
+      "b-003"
+    ],
+    "primary_run": "b-003",
+    "target": "dimension_signals.execution",
+    "predicate": {},
+    "current_wk_signal": "🟡",
+    "target_signal": "🔴",
+    "direction": "downgrade",
+    "support": 1,
+    "precision_vs_b": 1.0,
+    "false_positive_count": 0,
+    "examples": [
+      "1208067"
+    ],
+    "counterexamples": [],
+    "regression_must_not_change": [
+      "1208091",
+      "1208118",
+      "1208274",
+      "1208363",
+      "1327988"
+    ],
+    "risk": "low",
+    "rationale": "评估器B在特定条件时稳定给更低信号",
+    "implementation_hint": "",
+    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+  },
+  {
+    "candidate_schema_version": "wk_rule_candidate_v1",
+    "id": "wk_v1_2_dimension_level_disagreement_dimension_signals_satisfaction_downgrade",
+    "source_runs": [
+      "b-001",
+      "b-003"
+    ],
+    "primary_run": "b-003",
+    "target": "dimension_signals.satisfaction",
+    "predicate": {},
+    "current_wk_signal": "🟡",
+    "target_signal": "🟡",
+    "direction": "downgrade",
+    "support": 3,
+    "precision_vs_b": 1.0,
+    "false_positive_count": 0,
+    "examples": [
+      "1208081",
+      "1379042",
+      "1379139"
+    ],
+    "counterexamples": [],
+    "regression_must_not_change": [
+      "1208091",
+      "1208118",
+      "1208274",
+      "1208363",
+      "1327988"
+    ],
+    "risk": "low",
+    "rationale": "评估器B在特定条件时稳定给更低信号",
+    "implementation_hint": "",
+    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+  },
+  {
+    "candidate_schema_version": "wk_rule_candidate_v1",
+    "id": "wk_v1_2_dimension_level_disagreement_dimension_signals_satisfaction_upgrade",
+    "source_runs": [
+      "b-001",
+      "b-003"
+    ],
+    "primary_run": "b-003",
+    "target": "dimension_signals.satisfaction",
+    "predicate": {},
+    "current_wk_signal": "🟡",
+    "target_signal": "🟢",
+    "direction": "upgrade",
+    "support": 8,
+    "precision_vs_b": 1.0,
+    "false_positive_count": 0,
+    "examples": [
+      "1208125",
+      "1208185",
+      "1208298",
+      "1208304",
+      "1379091"
+    ],
+    "counterexamples": [
+      "1208174",
+      "1208194",
+      "1327988",
+      "1379189",
+      "1451075"
+    ],
+    "regression_must_not_change": [
+      "1208091",
+      "1208118",
+      "1208274",
+      "1208363",
+      "1327988"
+    ],
+    "risk": "low",
+    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "implementation_hint": "",
+    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+  },
+  {
+    "candidate_schema_version": "wk_rule_candidate_v1",
+    "id": "wk_v1_2_wk_too_generous_overall_signal_downgrade",
+    "source_runs": [
+      "b-001",
+      "b-003"
+    ],
+    "primary_run": "b-003",
+    "target": "overall_signal",
+    "predicate": {},
+    "current_wk_signal": "🟡",
+    "target_signal": "🟡",
+    "direction": "downgrade",
+    "support": 3,
+    "precision_vs_b": 0.0682,
+    "false_positive_count": 41,
+    "examples": [
+      "1208174",
+      "1208194",
+      "1451075"
+    ],
+    "counterexamples": [],
+    "regression_must_not_change": [
+      "1208091",
+      "1208118",
+      "1208274",
+      "1208363",
+      "1327988"
+    ],
+    "risk": "medium",
+    "rationale": "评估器B在特定条件时稳定给更低信号",
+    "implementation_hint": "",
+    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+  },
+  {
+    "candidate_schema_version": "wk_rule_candidate_v1",
+    "id": "wk_v1_2_dimension_level_disagreement_dimension_signals_execution_upgrade",
+    "source_runs": [
+      "b-001",
+      "b-003"
+    ],
+    "primary_run": "b-003",
+    "target": "dimension_signals.execution",
+    "predicate": {},
+    "current_wk_signal": "🟡",
+    "target_signal": "🟢",
+    "direction": "upgrade",
+    "support": 11,
+    "precision_vs_b": 1.0,
+    "false_positive_count": 0,
+    "examples": [
+      "1208314",
+      "1208400",
+      "1314297",
+      "1379049",
+      "1379099"
+    ],
+    "counterexamples": [
+      "1208174",
+      "1208194",
+      "1327988",
+      "1379189",
+      "1451075"
+    ],
+    "regression_must_not_change": [
+      "1208091",
+      "1208118",
+      "1208274",
+      "1208363",
+      "1327988"
+    ],
+    "risk": "low",
+    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "implementation_hint": "",
+    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+  },
+  {
+    "candidate_schema_version": "wk_rule_candidate_v1",
+    "id": "wk_v1_2_dimension_level_disagreement_dimension_signals_adjustment_downgrade",
+    "source_runs": [
+      "b-001",
+      "b-003"
+    ],
+    "primary_run": "b-003",
+    "target": "dimension_signals.adjustment",
+    "predicate": {},
+    "current_wk_signal": "🟡",
+    "target_signal": "🔴",
+    "direction": "downgrade",
+    "support": 1,
+    "precision_vs_b": 1.0,
+    "false_positive_count": 0,
+    "examples": [
+      "1208376"
+    ],
+    "counterexamples": [],
+    "regression_must_not_change": [
+      "1208091",
+      "1208118",
+      "1208274",
+      "1208363",
+      "1327988"
+    ],
+    "risk": "low",
+    "rationale": "评估器B在特定条件时稳定给更低信号",
+    "implementation_hint": "",
+    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+  },
+  {
+    "candidate_schema_version": "wk_rule_candidate_v1",
+    "id": "wk_v1_2_model_level_disagreement_model_signals_2_upgrade",
+    "source_runs": [
+      "b-001",
+      "b-003"
+    ],
+    "primary_run": "b-003",
+    "target": "model_signals.2",
+    "predicate": {},
+    "current_wk_signal": "🟡",
+    "target_signal": "🟢",
+    "direction": "upgrade",
+    "support": 2,
+    "precision_vs_b": 1.0,
+    "false_positive_count": 0,
+    "examples": [
+      "1208383",
+      "1379160"
+    ],
+    "counterexamples": [
+      "1208174",
+      "1208194",
+      "1327988",
+      "1379189",
+      "1451075"
+    ],
+    "regression_must_not_change": [
+      "1208091",
+      "1208118",
+      "1208274",
+      "1208363",
+      "1327988"
+    ],
+    "risk": "low",
+    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "implementation_hint": "",
+    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+  },
+  {
+    "candidate_schema_version": "wk_rule_candidate_v1",
+    "id": "wk_v1_2_wk_too_generous_overall_signal_downgrade",
+    "source_runs": [
+      "b-001",
+      "b-003"
+    ],
+    "primary_run": "b-003",
+    "target": "overall_signal",
+    "predicate": {},
+    "current_wk_signal": "🟡",
+    "target_signal": "🔴",
+    "direction": "downgrade",
+    "support": 3,
+    "precision_vs_b": 0.25,
+    "false_positive_count": 9,
+    "examples": [
+      "1327988",
+      "1379189",
+      "1540842"
+    ],
+    "counterexamples": [],
+    "regression_must_not_change": [
+      "1208091",
+      "1208118",
+      "1208274",
+      "1208363",
+      "1327988"
+    ],
+    "risk": "medium",
+    "rationale": "评估器B在特定条件时稳定给更低信号",
+    "implementation_hint": "",
+    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+  },
+  {
+    "candidate_schema_version": "wk_rule_candidate_v1",
+    "id": "wk_v1_2_dimension_level_disagreement_dimension_signals_satisfaction_upgrade",
+    "source_runs": [
+      "b-001",
+      "b-003"
+    ],
+    "primary_run": "b-003",
+    "target": "dimension_signals.satisfaction",
+    "predicate": {},
+    "current_wk_signal": "🟡",
+    "target_signal": "🟡",
+    "direction": "upgrade",
+    "support": 2,
+    "precision_vs_b": 1.0,
+    "false_positive_count": 0,
+    "examples": [
+      "1378993",
+      "1379295"
+    ],
+    "counterexamples": [
+      "1208174",
+      "1208194",
+      "1327988",
+      "1379189",
+      "1451075"
+    ],
+    "regression_must_not_change": [
+      "1208091",
+      "1208118",
+      "1208274",
+      "1208363",
+      "1327988"
+    ],
+    "risk": "low",
+    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "implementation_hint": "",
+    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+  },
+  {
+    "candidate_schema_version": "wk_rule_candidate_v1",
+    "id": "wk_v1_2_dimension_level_disagreement_dimension_signals_adjustment_upgrade",
+    "source_runs": [
+      "b-001",
+      "b-003"
+    ],
+    "primary_run": "b-003",
+    "target": "dimension_signals.adjustment",
+    "predicate": {},
+    "current_wk_signal": "🟡",
+    "target_signal": "🟢",
+    "direction": "upgrade",
+    "support": 2,
+    "precision_vs_b": 1.0,
+    "false_positive_count": 0,
+    "examples": [
+      "1534570",
+      "1479619"
+    ],
+    "counterexamples": [
+      "1208174",
+      "1208194",
+      "1327988",
+      "1379189",
+      "1451075"
+    ],
+    "regression_must_not_change": [
+      "1208091",
+      "1208118",
+      "1208274",
+      "1208363",
+      "1327988"
+    ],
+    "risk": "low",
+    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "implementation_hint": "",
+    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+  },
+  {
+    "candidate_schema_version": "wk_rule_candidate_v1",
+    "id": "wk_v1_2_model_level_disagreement_model_signals_4_downgrade",
+    "source_runs": [
+      "b-001",
+      "b-003"
+    ],
+    "primary_run": "b-003",
+    "target": "model_signals.4",
+    "predicate": {},
+    "current_wk_signal": "🟡",
+    "target_signal": "🟡",
+    "direction": "downgrade",
+    "support": 1,
+    "precision_vs_b": 1.0,
+    "false_positive_count": 0,
+    "examples": [
+      "1457283"
+    ],
+    "counterexamples": [],
+    "regression_must_not_change": [
+      "1208091",
+      "1208118",
+      "1208274",
+      "1208363",
+      "1327988"
+    ],
+    "risk": "low",
+    "rationale": "评估器B在特定条件时稳定给更低信号",
+    "implementation_hint": "",
+    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+  }
+]
