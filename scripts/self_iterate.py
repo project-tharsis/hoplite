@@ -1232,6 +1232,14 @@ def run_distill_wk_rules(
         current_adj = json.load(f)
     with open(comparison_path, encoding="utf-8") as f:
         comparison = json.load(f)
+    with open(baseline_adj_path, encoding="utf-8") as f:
+        baseline_adj = json.load(f)
+
+    # Build baseline status index for stability check
+    baseline_status: dict[str, str] = {}
+    for row in baseline_adj.get("rows", []):
+        if row["status"] not in ("missing_evaluator_b", "invalid_evaluator_b"):
+            baseline_status[row["match_id"]] = row["status"]
 
     # Get clean subset match_ids
     cs = comparison.get("clean_subset", {})
@@ -1308,32 +1316,25 @@ def run_distill_wk_rules(
 
     # Build candidates from groups
     for (status, target, direction, target_signal), items in disagreement_groups.items():
-        # Extract predicate from feature views
-        predicates = {}
-        for fv in items:
-            for key in ["result", "opponent_quality", "venue", "competition_stage"]:
-                val = fv.get(key)
-                if val and val != "unknown":
-                    predicates.setdefault(key, set()).add(val)
-            for key in ["clean_sheet", "dominant_control", "dominant_chance_quality", "low_defensive_risk", "narrow_win", "loss_despite_dominance"]:
-                if fv.get(key):
-                    predicates.setdefault(key, set()).add(True)
-
-        # Build predicate dict
+        # Extract predicates — INTERSECTION: all items must share the same value
         pred = {}
-        for key, vals in predicates.items():
+        # Categorical features: intersect via set
+        for key in ["result", "opponent_quality", "venue", "competition_stage"]:
+            vals = {fv.get(key) for fv in [it["fv"] for it in items]}
+            vals.discard(None)
+            vals.discard("unknown")
             if len(vals) == 1:
-                pred[key] = list(vals)[0]
-            elif key in ("result", "venue"):
-                pred[key] = list(vals)[0] if len(vals) == 1 else list(vals)
+                pred[key] = vals.pop()
+        # Boolean features: only include if ALL items have it true
+        for key in ["clean_sheet", "dominant_control", "dominant_chance_quality", "low_defensive_risk", "narrow_win", "loss_despite_dominance"]:
+            if all(it["fv"].get(key) for it in items):
+                pred[key] = True
 
         # Support count
         support = len(items)
         examples = [it["match_id"] for it in items[:5]]
 
-        # Precision: how many of the predicate-matching rows agree with target_signal
-        # For now, precision = support / (support + false_positives)
-        # False positives = rows where predicate matches but WK already has target_signal
+        # Precision: FP = predicate-matching rows where WK already has target_signal at target
         false_positives = 0
         for row in current_adj.get("rows", []):
             if row["match_id"] in clean_ids and row["match_id"] not in {it["match_id"] for it in items}:
@@ -1341,9 +1342,17 @@ def run_distill_wk_rules(
                 if entry:
                     fv = _derive_feature_view(entry)
                     if _predicate_matches(pred, fv):
-                        # Check if WK already has target_signal here (would be a false positive)
-                        wk_sig = row["wk"].get("overall_signal", "")
-                        if target == "overall_signal" and wk_sig == target_signal:
+                        # Check WK signal at the specific target
+                        wk_sig = ""
+                        if target == "overall_signal":
+                            wk_sig = row["wk"].get("overall_signal", "")
+                        elif target.startswith("dimension_signals."):
+                            dim = target.split(".")[1]
+                            wk_sig = row["wk"].get("dimension_signals", {}).get(dim, "")
+                        elif target.startswith("model_signals."):
+                            model = target.split(".")[1]
+                            wk_sig = row["wk"].get("model_signals", {}).get(model, "")
+                        if wk_sig == target_signal:
                             false_positives += 1
 
         precision = support / (support + false_positives) if (support + false_positives) > 0 else 0.0
@@ -1369,6 +1378,13 @@ def run_distill_wk_rules(
                     if _predicate_matches(pred, fv):
                         regression_must_not.append(row["match_id"])
 
+        # Cross-run stability: how many match_ids also disagreed in b-001
+        stable_count = sum(
+            1 for it in items if it["match_id"] in baseline_status
+            and baseline_status[it["match_id"]] in distill_statuses
+        )
+        stability_rate = stable_count / support if support > 0 else 0.0
+
         candidate = {
             "candidate_schema_version": "wk_rule_candidate_v1",
             "id": f"wk_v1_2_{status}_{target.replace('.', '_')}_{direction}",
@@ -1380,6 +1396,7 @@ def run_distill_wk_rules(
             "target_signal": target_signal,
             "direction": direction,
             "support": support,
+            "cross_run_stability": round(stability_rate, 4),
             "precision_vs_b": round(precision, 4),
             "false_positive_count": false_positives,
             "examples": examples,
@@ -1542,39 +1559,30 @@ def run_replay_wk_candidates(
             if row["status"] == "wk_too_generous":
                 before_wk_too_generous += 1
 
-        # After: compare new_wk vs B
-        new_diffs = []
-        if new_wk["overall_signal"] != b["overall_signal"]:
-            new_diffs.append("overall")
-        for dim in ("execution", "adjustment", "satisfaction"):
-            if new_wk["dimension_signals"].get(dim) != b["dimension_signals"].get(dim):
-                new_diffs.append(dim)
-        for mk in ("1", "2", "3", "4", "5", "6"):
-            if new_wk["model_signals"].get(mk) != b["model_signals"].get(mk):
-                new_diffs.append(mk)
-
-        if not new_diffs:
-            after_overall_agree += 1
-            after_dim_agree += 1
-            after_model_agree += 1
-        elif "overall" not in new_diffs:
-            after_overall_agree += 1
-            dim_diffs_new = [d for d in new_diffs if d in ("execution", "adjustment", "satisfaction")]
-            if not dim_diffs_new:
-                after_dim_agree += 1
-                after_model_agree += 1
-            else:
-                model_diffs_new = [d for d in new_diffs if d in ("1", "2", "3", "4", "5", "6")]
-                if not model_diffs_new:
-                    after_model_agree += 1
-        else:
-            # Overall mismatch
-            wk_rank = _signal_rank(new_wk["overall_signal"])
+        # After: cascade matching adjudicator's status classification
+        # Priority: overall > dimension > model (dim disagreement masks model agreement)
+        new_overall = new_wk["overall_signal"]
+        if new_overall != b["overall_signal"]:
+            wk_rank = _signal_rank(new_overall)
             b_rank = _signal_rank(b["overall_signal"])
             if wk_rank < b_rank:
                 after_wk_too_harsh += 1
             elif wk_rank > b_rank:
                 after_wk_too_generous += 1
+        else:
+            after_overall_agree += 1
+            new_dim_diffs = [
+                d for d in ("execution", "adjustment", "satisfaction")
+                if new_wk["dimension_signals"].get(d) != b["dimension_signals"].get(d)
+            ]
+            if not new_dim_diffs:
+                after_dim_agree += 1
+                new_model_diffs = [
+                    m for m in ("1", "2", "3", "4", "5", "6")
+                    if new_wk["model_signals"].get(m) != b["model_signals"].get(m)
+                ]
+                if not new_model_diffs:
+                    after_model_agree += 1
 
         # Track per-match changes
         if new_wk != wk:
@@ -1627,11 +1635,7 @@ def run_replay_wk_candidates(
     with open(manifest_path, "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
-    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(report, f, ensure_ascii=False, indent=2)
-
-    # Check if replay passes
+    # Check if replay passes (before writing artifact)
     b = report["before"]
     a = report["after"]
     all_regressions_pass = all(r["passed"] for r in regression_results) if regression_results else True
@@ -1647,6 +1651,11 @@ def run_replay_wk_candidates(
         and generous_abs_increase <= 2
         and all_regressions_pass
     )
+    report["passes"] = passes
+
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
 
     return {
         "summary": {

@@ -1,0 +1,79 @@
+{
+  "must_not_become_green_overall": [
+    {
+      "match_id": "1531572",
+      "reason": "dominant stats + loss to lower opposition must not become green"
+    },
+    {
+      "match_id": "1208091",
+      "reason": "loss to mid_table opposition must not become overall green due to dominance metrics"
+    },
+    {
+      "match_id": "1208274",
+      "reason": "loss to mid_table opposition must not become overall green due to dominance metrics"
+    },
+    {
+      "match_id": "1208363",
+      "reason": "loss to mid_table opposition must not become overall green due to dominance metrics"
+    },
+    {
+      "match_id": "1379109",
+      "reason": "loss to mid_table opposition must not become overall green due to dominance metrics"
+    },
+    {
+      "match_id": "1379279",
+      "reason": "loss to mid_table opposition must not become overall green due to dominance metrics"
+    },
+    {
+      "match_id": "1531572",
+      "reason": "loss to lower opposition must not become overall green due to dominance metrics"
+    }
+  ],
+  "loss_guard": {
+    "rule": "loss to lower/mid_table opposition cannot become overall green because of dominance metrics"
+  },
+  "win_regression_set": [
+    {
+      "match_id": "1208059",
+      "category": "top6"
+    },
+    {
+      "match_id": "1208154",
+      "category": "top6"
+    },
+    {
+      "match_id": "1451107",
+      "category": "european_elite"
+    },
+    {
+      "match_id": "1451136",
+      "category": "european_elite"
+    },
+    {
+      "match_id": "1208032",
+      "category": "mid_table_away"
+    },
+    {
+      "match_id": "1208151",
+      "category": "mid_table_away"
+    },
+    {
+      "match_id": "1208072",
+      "category": "lower_home"
+    },
+    {
+      "match_id": "1208081",
+      "category": "lower_home"
+    }
+  ],
+  "quarantined_excluded": [
+    "1208103",
+    "1208118",
+    "1208215",
+    "1208233",
+    "1208326",
+    "1379169",
+    "1379251",
+    "1518728"
+  ]
+}

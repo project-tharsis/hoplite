@@ -1,0 +1,19 @@
+{
+  "source_run": "b-003",
+  "prompt_blind_spots_validated": true,
+  "primary_basis": "clean_subset",
+  "clean_subset": {
+    "common_match_ids": 94,
+    "criteria_met": 5,
+    "criteria_total": 5,
+    "effective": true,
+    "overall_delta": 0.149,
+    "dimension_delta": 0.2234,
+    "model_delta": 0.234,
+    "wk_too_harsh_delta": -20
+  },
+  "excluded": {
+    "quarantined_or_missing": 8,
+    "reason": "quality_gate"
+  }
+}

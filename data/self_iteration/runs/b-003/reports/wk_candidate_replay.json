@@ -1,0 +1,29 @@
+{
+  "dry_run": true,
+  "weak_label_from": "v1.1",
+  "weak_label_candidate": "v1.2",
+  "basis": "b-003 clean subset",
+  "compared": 94,
+  "before": {
+    "overall_agreement_rate": 0.7979,
+    "dimension_agreement_rate": 0.5,
+    "model_agreement_rate": 0.4255,
+    "wk_too_harsh": 13,
+    "wk_too_generous": 6
+  },
+  "after": {
+    "overall_agreement_rate": 0.7979,
+    "dimension_agreement_rate": 0.5,
+    "model_agreement_rate": 0.4255,
+    "wk_too_harsh": 13,
+    "wk_too_generous": 6
+  },
+  "candidate_impacts": [],
+  "regression_results": [
+    {
+      "match_id": "1531572",
+      "passed": true
+    }
+  ],
+  "passes": false
+}
