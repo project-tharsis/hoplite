@@ -1,0 +1,15 @@
+{
+  "summary": {
+    "total_candidates": 4,
+    "added_count": 4,
+    "skipped_count": 0,
+    "dry_run": false
+  },
+  "added": [
+    "wk_too_harsh_competition_stage=league_early_opponent_quality=['lower', 'mid_table', 'top6']_result=W_venue=home",
+    "wk_too_harsh_competition_stage=league_early_opponent_quality=['mid_table', 'top6']_result=D_venue=away",
+    "wk_too_harsh_competition_stage=league_early_opponent_quality=['mid_table']_result=W_venue=away",
+    "wk_too_harsh_competition_stage=league_late_opponent_quality=['mid_table', 'top6']_result=W_venue=home"
+  ],
+  "skipped": []
+}

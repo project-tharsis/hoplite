@@ -1,11 +1,43 @@
 {
-  "version": "v1",
+  "version": "v2",
   "blind_spots": [
     {
       "id": "dominant_stats_loss",
       "description": "WK can overrate matches where Arsenal dominates shots/xG/possession but loses.",
       "guardrail": "Do not let shot/xG/possession dominance override result satisfaction. A loss to lower/mid_table opposition cannot be overall green.",
       "source": "human_review",
+      "weak_label_version": "v1.1",
+      "status": "active"
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=league_early_opponent_quality=['lower', 'mid_table', 'top6']_result=W_venue=home",
+      "description": "评估器B在5场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "guardrail": "评估器B在5场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "source": "rule_mining",
+      "weak_label_version": "v1.1",
+      "status": "active"
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=league_early_opponent_quality=['mid_table', 'top6']_result=D_venue=away",
+      "description": "评估器B在3场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "guardrail": "评估器B在3场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "source": "rule_mining",
+      "weak_label_version": "v1.1",
+      "status": "active"
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=league_early_opponent_quality=['mid_table']_result=W_venue=away",
+      "description": "评估器B在4场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "guardrail": "评估器B在4场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "source": "rule_mining",
+      "weak_label_version": "v1.1",
+      "status": "active"
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=league_late_opponent_quality=['mid_table', 'top6']_result=W_venue=home",
+      "description": "评估器B在3场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "guardrail": "评估器B在3场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "source": "rule_mining",
       "weak_label_version": "v1.1",
       "status": "active"
     }

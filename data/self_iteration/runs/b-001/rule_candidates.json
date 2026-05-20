@@ -1,0 +1,543 @@
+{
+  "version": "v1",
+  "summary": {
+    "disagreement_rows": 35,
+    "candidates": 4,
+    "rejected_candidates": 14
+  },
+  "candidates": [
+    {
+      "id": "wk_too_harsh_competition_stage=league_early_opponent_quality=['lower', 'mid_table', 'top6']_result=W_venue=home",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "W",
+        "opponent_quality": [
+          "lower",
+          "mid_table",
+          "top6"
+        ],
+        "venue": "home",
+        "competition_stage": "league_early"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 5,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1208072",
+        "1208154",
+        "1379049",
+        "1379079",
+        "1379149"
+      ],
+      "counterexamples": [],
+      "proposed_action": "prompt_blind_spot",
+      "risk": "medium",
+      "rationale": "评估器B在5场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。"
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=league_early_opponent_quality=['mid_table', 'top6']_result=D_venue=away",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "D",
+        "opponent_quality": [
+          "mid_table",
+          "top6"
+        ],
+        "venue": "away",
+        "competition_stage": "league_early"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 3,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1208067",
+        "1208167",
+        "1379185"
+      ],
+      "counterexamples": [],
+      "proposed_action": "prompt_blind_spot",
+      "risk": "medium",
+      "rationale": "评估器B在3场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。"
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=league_early_opponent_quality=['mid_table']_result=W_venue=away",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "W",
+        "opponent_quality": [
+          "mid_table"
+        ],
+        "venue": "away",
+        "competition_stage": "league_early"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 4,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1208185",
+        "1208204",
+        "1208252",
+        "1379160"
+      ],
+      "counterexamples": [],
+      "proposed_action": "prompt_blind_spot",
+      "risk": "medium",
+      "rationale": "评估器B在4场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。"
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=league_late_opponent_quality=['mid_table', 'top6']_result=W_venue=home",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "W",
+        "opponent_quality": [
+          "mid_table",
+          "top6"
+        ],
+        "venue": "home",
+        "competition_stage": "league_late"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 3,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1208254",
+        "1379299",
+        "1379309"
+      ],
+      "counterexamples": [],
+      "proposed_action": "prompt_blind_spot",
+      "risk": "medium",
+      "rationale": "评估器B在3场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "id": "wk_too_generous_competition_stage=regular_opponent_quality=['top6']_result=L_venue=home",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "L",
+        "opponent_quality": [
+          "top6"
+        ],
+        "venue": "home",
+        "competition_stage": "regular"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🔴",
+      "direction": "downgrade",
+      "support": 1,
+      "precision_vs_b": 0.5,
+      "false_positive_count": 1,
+      "examples": [
+        "1518728"
+      ],
+      "counterexamples": [
+        "1327988"
+      ],
+      "proposed_action": "rejected",
+      "risk": "low",
+      "rationale": "评估器B在1场比赛中认为WK评分偏高（precision=0.50）。特征模式：poor_control=False, cards_pressure=False。",
+      "rejection_reasons": [
+        "support=1 < 3 (minimum for prompt_blind_spot)",
+        "precision=0.5000 < 0.70",
+        "diversity=1 < 2 (need ≥2 different opponents or competitions)"
+      ]
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=group_stage_opponent_quality=['european_elite']_result=W_venue=away",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "W",
+        "opponent_quality": [
+          "european_elite"
+        ],
+        "venue": "away",
+        "competition_stage": "group_stage"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 1,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1451136"
+      ],
+      "counterexamples": [],
+      "proposed_action": "rejected",
+      "risk": "low",
+      "rationale": "评估器B在1场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "rejection_reasons": [
+        "support=1 < 3 (minimum for prompt_blind_spot)",
+        "diversity=1 < 2 (need ≥2 different opponents or competitions)"
+      ]
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=group_stage_opponent_quality=['lower', 'mid_table']_result=W_venue=home",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "W",
+        "opponent_quality": [
+          "lower",
+          "mid_table"
+        ],
+        "venue": "home",
+        "competition_stage": "group_stage"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 2,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1451061",
+        "1451159"
+      ],
+      "counterexamples": [],
+      "proposed_action": "rejected",
+      "risk": "low",
+      "rationale": "评估器B在2场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "rejection_reasons": [
+        "support=2 < 3 (minimum for prompt_blind_spot)"
+      ]
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=knockout_opponent_quality=['mid_table']_result=D_venue=away",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "D",
+        "opponent_quality": [
+          "mid_table"
+        ],
+        "venue": "away",
+        "competition_stage": "knockout"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 2,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1528322",
+        "1540842"
+      ],
+      "counterexamples": [],
+      "proposed_action": "rejected",
+      "risk": "low",
+      "rationale": "评估器B在2场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "rejection_reasons": [
+        "support=2 < 3 (minimum for prompt_blind_spot)"
+      ]
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=knockout_opponent_quality=['mid_table']_result=W_venue=away",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "W",
+        "opponent_quality": [
+          "mid_table"
+        ],
+        "venue": "away",
+        "competition_stage": "knockout"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 1,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1534570"
+      ],
+      "counterexamples": [],
+      "proposed_action": "rejected",
+      "risk": "low",
+      "rationale": "评估器B在1场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "rejection_reasons": [
+        "support=1 < 3 (minimum for prompt_blind_spot)",
+        "diversity=1 < 2 (need ≥2 different opponents or competitions)"
+      ]
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=knockout_opponent_quality=['mid_table']_result=W_venue=home",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "W",
+        "opponent_quality": [
+          "mid_table"
+        ],
+        "venue": "home",
+        "competition_stage": "knockout"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 2,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1528330",
+        "1540843"
+      ],
+      "counterexamples": [],
+      "proposed_action": "rejected",
+      "risk": "low",
+      "rationale": "评估器B在2场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "rejection_reasons": [
+        "support=2 < 3 (minimum for prompt_blind_spot)"
+      ]
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=league_early_opponent_quality=['top6']_result=L_venue=home",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "L",
+        "opponent_quality": [
+          "top6"
+        ],
+        "venue": "home",
+        "competition_stage": "league_early"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 1,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1379189"
+      ],
+      "counterexamples": [],
+      "proposed_action": "rejected",
+      "risk": "low",
+      "rationale": "评估器B在1场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "rejection_reasons": [
+        "support=1 < 3 (minimum for prompt_blind_spot)",
+        "diversity=1 < 2 (need ≥2 different opponents or competitions)"
+      ]
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=league_late_opponent_quality=['mid_table', 'top6']_result=W_venue=away",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "W",
+        "opponent_quality": [
+          "mid_table",
+          "top6"
+        ],
+        "venue": "away",
+        "competition_stage": "league_late"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 2,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1379237",
+        "1379251"
+      ],
+      "counterexamples": [],
+      "proposed_action": "rejected",
+      "risk": "low",
+      "rationale": "评估器B在2场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "rejection_reasons": [
+        "support=2 < 3 (minimum for prompt_blind_spot)"
+      ]
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=league_late_opponent_quality=['mid_table']_result=D_venue=away",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "D",
+        "opponent_quality": [
+          "mid_table"
+        ],
+        "venue": "away",
+        "competition_stage": "league_late"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 1,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1379278"
+      ],
+      "counterexamples": [],
+      "proposed_action": "rejected",
+      "risk": "low",
+      "rationale": "评估器B在1场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "rejection_reasons": [
+        "support=1 < 3 (minimum for prompt_blind_spot)",
+        "diversity=1 < 2 (need ≥2 different opponents or competitions)"
+      ]
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=league_late_opponent_quality=['mid_table']_result=L_venue=home",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "L",
+        "opponent_quality": [
+          "mid_table"
+        ],
+        "venue": "home",
+        "competition_stage": "league_late"
+      },
+      "wk_pattern": "🔴",
+      "b_pattern": "🟡",
+      "direction": "upgrade",
+      "support": 2,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1208363",
+        "1379279"
+      ],
+      "counterexamples": [],
+      "proposed_action": "rejected",
+      "risk": "low",
+      "rationale": "评估器B在2场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "rejection_reasons": [
+        "support=2 < 3 (minimum for prompt_blind_spot)",
+        "diversity=1 < 2 (need ≥2 different opponents or competitions)"
+      ]
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=regular_opponent_quality=['lower', 'top6']_result=W_venue=away",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "W",
+        "opponent_quality": [
+          "lower",
+          "top6"
+        ],
+        "venue": "away",
+        "competition_stage": "regular"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 2,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1498259",
+        "1490810"
+      ],
+      "counterexamples": [],
+      "proposed_action": "rejected",
+      "risk": "low",
+      "rationale": "评估器B在2场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "rejection_reasons": [
+        "support=2 < 3 (minimum for prompt_blind_spot)"
+      ]
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=regular_opponent_quality=['mid_table']_result=W_venue=home",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "W",
+        "opponent_quality": [
+          "mid_table"
+        ],
+        "venue": "home",
+        "competition_stage": "regular"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 1,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1479619"
+      ],
+      "counterexamples": [],
+      "proposed_action": "rejected",
+      "risk": "low",
+      "rationale": "评估器B在1场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "rejection_reasons": [
+        "support=1 < 3 (minimum for prompt_blind_spot)",
+        "diversity=1 < 2 (need ≥2 different opponents or competitions)"
+      ]
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=regular_opponent_quality=['top6']_result=L_venue=away",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "L",
+        "opponent_quality": [
+          "top6"
+        ],
+        "venue": "away",
+        "competition_stage": "regular"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 1,
+      "precision_vs_b": 1.0,
+      "false_positive_count": 0,
+      "examples": [
+        "1327989"
+      ],
+      "counterexamples": [],
+      "proposed_action": "rejected",
+      "risk": "low",
+      "rationale": "评估器B在1场比赛中认为WK评分偏低（precision=1.00）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "rejection_reasons": [
+        "support=1 < 3 (minimum for prompt_blind_spot)",
+        "diversity=1 < 2 (need ≥2 different opponents or competitions)"
+      ]
+    },
+    {
+      "id": "wk_too_harsh_competition_stage=regular_opponent_quality=['top6']_result=L_venue=home",
+      "target": "overall_signal",
+      "predicate": {
+        "result": "L",
+        "opponent_quality": [
+          "top6"
+        ],
+        "venue": "home",
+        "competition_stage": "regular"
+      },
+      "wk_pattern": "🟡",
+      "b_pattern": "🟢",
+      "direction": "upgrade",
+      "support": 1,
+      "precision_vs_b": 0.5,
+      "false_positive_count": 1,
+      "examples": [
+        "1327988"
+      ],
+      "counterexamples": [
+        "1518728"
+      ],
+      "proposed_action": "rejected",
+      "risk": "low",
+      "rationale": "评估器B在1场比赛中认为WK评分偏低（precision=0.50）。特征模式：dominant_control=False, clean_sheet=False, dominant_xg=False。",
+      "rejection_reasons": [
+        "support=1 < 3 (minimum for prompt_blind_spot)",
+        "precision=0.5000 < 0.70",
+        "diversity=1 < 2 (need ≥2 different opponents or competitions)"
+      ]
+    }
+  ]
+}

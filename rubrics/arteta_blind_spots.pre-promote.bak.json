@@ -1,0 +1,13 @@
+{
+  "version": "v1",
+  "blind_spots": [
+    {
+      "id": "dominant_stats_loss",
+      "description": "WK can overrate matches where Arsenal dominates shots/xG/possession but loses.",
+      "guardrail": "Do not let shot/xG/possession dominance override result satisfaction. A loss to lower/mid_table opposition cannot be overall green.",
+      "source": "human_review",
+      "weak_label_version": "v1.1",
+      "status": "active"
+    }
+  ]
+}
