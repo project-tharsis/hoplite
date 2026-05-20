@@ -2224,14 +2224,29 @@ def run_mine_enhanced_wk_predicates(
 
                 # Breadth check: predicates matching >80% of clean subset are too broad
                 breadth = matched_total / len(clean_ids) if clean_ids else 0.0
+                ts_slug = target_signal.replace("🟢", "green").replace("🟡", "yellow").replace("🔴", "red").replace(" ", "_")
                 if breadth > 0.80:
                     total_predicates_evaluated += 1
+                    group_match_in_pred = matched_ids & group_match_ids
                     rejected.append({
-                        "id": f"breadth_{status}_{target.replace('.', '_')}_{direction}_{'_'.join(sorted(pred.keys()))}",
+                        "candidate_schema_version": "enhanced_wk_rule_candidate_v1",
+                        "id": f"breadth_{status}_{target.replace('.', '_')}_{ts_slug}_{direction}_{'_'.join(sorted(pred.keys()))}",
+                        "source_runs": ["b-001", "b-003"],
+                        "primary_run": "b-003",
+                        "target": target,
                         "predicate": pred,
                         "predicate_size": len(pred),
+                        "current_wk_signal": items[0]["current_signal"],
+                        "target_signal": target_signal,
+                        "direction": direction,
+                        "support": len(group_match_in_pred),
                         "matched_total": matched_total,
+                        "precision_vs_b": round(precision, 4),
+                        "false_positive_count": fp,
+                        "coverage_ratio": round(coverage, 4),
                         "breadth": round(breadth, 4),
+                        "examples": list(group_match_in_pred)[:5],
+                        "counterexamples": list(matched_ids - group_match_ids)[:5],
                         "rejection_reason": f"breadth_too_high: matches {matched_total}/{len(clean_ids)} ({breadth:.0%}) of clean subset",
                     })
                     continue
@@ -2243,7 +2258,7 @@ def run_mine_enhanced_wk_predicates(
 
                 cand = {
                     "candidate_schema_version": "enhanced_wk_rule_candidate_v1",
-                    "id": f"enhanced_{status}_{target.replace('.', '_')}_{direction}_{'_'.join(sorted(pred.keys()))}",
+                    "id": f"enhanced_{status}_{target.replace('.', '_')}_{ts_slug}_{direction}_{'_'.join(sorted(pred.keys()))}",
                     "source_runs": ["b-001", "b-003"],
                     "primary_run": "b-003",
                     "target": target,
