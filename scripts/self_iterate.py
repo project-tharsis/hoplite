@@ -236,6 +236,9 @@ def _filter_entries(
     for entry in entries:
         if not _is_feature_backed(entry):
             continue
+        if only == "all-feature-backed":
+            result.append(entry)
+            continue
         if only in ("missing-evaluation", "missing-or-stale-evaluation"):
             if not _has_evaluator_b(entry, evaluator_id):
                 result.append(entry)
@@ -483,6 +486,53 @@ def run_make_jobs(
     }
 
 
+def _is_quarantine_result(evaluation: dict) -> tuple[bool, str]:
+    """Detect low-quality / placeholder evaluator output.
+
+    Returns (is_quarantine, reason).
+    """
+    narrative = evaluation.get("narrative", "")
+    overall = evaluation.get("overall_signal", "")
+    model_signals = evaluation.get("model_signals", {})
+    dimension_signals = evaluation.get("dimension_signals", {})
+
+    # Default placeholder narrative
+    if narrative in ("", "阿森纳本场表现🟡。数据驱动六模型评估。"):
+        return True, "placeholder_narrative"
+
+    # All model signals are 🟡 (placeholder)
+    if model_signals and all(v == "🟡" for v in model_signals.values()):
+        return True, "all_model_signals_placeholder"
+
+    # All dimension signals are 🟡
+    if dimension_signals and all(v == "🟡" for v in dimension_signals.values()):
+        return True, "all_dimension_signals_placeholder"
+
+    # Overall is 🟡 but no meaningful evidence
+    evidence = evaluation.get("evidence", {})
+    if overall == "🟡" and not any(evidence.values()):
+        return True, "yellow_overall_no_evidence"
+
+    return False, ""
+
+
+def _repair_schema(evaluation: dict) -> dict:
+    """Repair nested evaluation schema where top-level is real but nested has defaults."""
+    # If there's a nested "evaluation" dict inside evaluation, flatten it
+    nested = evaluation.get("evaluation")
+    if isinstance(nested, dict) and nested.get("overall_signal"):
+        # Prefer top-level if it has real values, else use nested
+        top_overall = evaluation.get("overall_signal", "")
+        nested_overall = nested.get("overall_signal", "")
+        if top_overall and top_overall != nested_overall:
+            # Top-level is different — likely the real one; keep top-level
+            pass
+        elif not top_overall and nested_overall:
+            # Top-level empty, nested has value — promote nested
+            evaluation = {**evaluation, **nested}
+    return evaluation
+
+
 # ── Mode: ingest-results (§6.2) ────────────────────────────────────
 
 
@@ -520,6 +570,18 @@ def run_ingest_results(
     for row in results:
         match_id = str(row.get("match_id", ""))
         evaluation = row.get("evaluation", {})
+
+        # Schema repair: handle nested evaluation dict
+        evaluation = _repair_schema(evaluation)
+
+        # Quality gate: quarantine placeholder results
+        is_quarantine, quarantine_reason = _is_quarantine_result(evaluation)
+        if is_quarantine:
+            errors.append({
+                "match_id": match_id,
+                "error": {"code": "QUARANTINE", "message": f"Low-quality result: {quarantine_reason}"},
+            })
+            continue
 
         # Validate
         try:
@@ -742,7 +804,7 @@ def main():
     mj.add_argument("--kb", required=True, help="Path to knowledge.json")
     mj.add_argument("--reports-root", required=True, help="Root directory for backfill runs")
     mj.add_argument("--only", default="missing-evaluation",
-                     choices=["missing-evaluation", "stale-evaluation", "missing-or-stale-evaluation"],
+                     choices=["missing-evaluation", "stale-evaluation", "missing-or-stale-evaluation", "all-feature-backed"],
                      help="Filter mode")
     mj.add_argument("--evaluator-id", default="B", help="Evaluator ID")
     mj.add_argument("--run-id", required=True, help="Run ID for output jobs")
@@ -771,6 +833,12 @@ def main():
     mr = subparsers.add_parser("mine-rules", help="Extract candidate rules from disagreements")
     mr.add_argument("--adjudication", required=True, help="Path to adjudication_report.json")
     mr.add_argument("--output", required=True, help="Path to rule_candidates.json")
+
+    # ── compare-runs ────────────────────────────────────────────────
+    cr = subparsers.add_parser("compare-runs", help="Compare two adjudication reports")
+    cr.add_argument("--b001", required=True, help="Path to b-001 adjudication_report.json")
+    cr.add_argument("--b002", required=True, help="Path to b-002 adjudication_report.json")
+    cr.add_argument("--output", required=True, help="Path to comparison_report.json")
 
     args = parser.parse_args()
 
@@ -829,6 +897,73 @@ def main():
         from src.evaluation.rule_mining import run_rule_mining
         result = run_rule_mining(args.adjudication, args.output)
         print(json.dumps({"ok": True, "output": args.output, "summary": result["summary"]}, indent=2, ensure_ascii=False))
+
+    elif args.command == "compare-runs":
+        result = run_compare_runs(args.b001, args.b002, args.output)
+        print(json.dumps({"ok": True, "output": args.output, "summary": result["summary"]}, indent=2, ensure_ascii=False))
+
+
+def run_compare_runs(b001_path: str, b002_path: str, output_path: str) -> dict:
+    """Compare two adjudication reports and emit delta metrics."""
+    with open(b001_path, encoding="utf-8") as f:
+        b001 = json.load(f)
+    with open(b002_path, encoding="utf-8") as f:
+        b002 = json.load(f)
+
+    def _extract(report: dict) -> dict:
+        s = report.get("summary", {})
+        total = s.get("total_compared", 0)
+        return {
+            "overall_agreement_rate": s.get("overall_agreement_rate", 0.0),
+            "dimension_agreement_rate": s.get("dimension_agreement_rate", 0.0),
+            "model_agreement_rate": s.get("model_agreement_rate", 0.0),
+            "wk_too_harsh": s.get("wk_too_harsh", 0),
+            "wk_too_generous": s.get("wk_too_generous", 0),
+            "dimension_level_disagreement": s.get("dimension_level_disagreement", 0),
+            "model_level_disagreement": s.get("model_level_disagreement", 0),
+            "total_compared": total,
+        }
+
+    r1 = _extract(b001)
+    r2 = _extract(b002)
+
+    delta = {
+        "overall_agreement_rate": round(r2["overall_agreement_rate"] - r1["overall_agreement_rate"], 4),
+        "dimension_agreement_rate": round(r2["dimension_agreement_rate"] - r1["dimension_agreement_rate"], 4),
+        "model_agreement_rate": round(r2["model_agreement_rate"] - r1["model_agreement_rate"], 4),
+        "wk_too_harsh": r2["wk_too_harsh"] - r1["wk_too_harsh"],
+        "wk_too_generous": r2["wk_too_generous"] - r1["wk_too_generous"],
+        "dimension_level_disagreement": r2["dimension_level_disagreement"] - r1["dimension_level_disagreement"],
+        "model_level_disagreement": r2["model_level_disagreement"] - r1["model_level_disagreement"],
+    }
+
+    # Criteria check
+    criteria_met = 0
+    if delta["overall_agreement_rate"] > 0:
+        criteria_met += 1
+    if delta["dimension_agreement_rate"] > 0:
+        criteria_met += 1
+    if delta["model_agreement_rate"] > 0:
+        criteria_met += 1
+    if r1["wk_too_harsh"] > 0 and (r1["wk_too_harsh"] - r2["wk_too_harsh"]) / r1["wk_too_harsh"] >= 0.20:
+        criteria_met += 1
+    if delta["dimension_level_disagreement"] < 0:
+        criteria_met += 1
+
+    report = {
+        "b001": r1,
+        "b002": r2,
+        "delta": delta,
+        "criteria_met": criteria_met,
+        "criteria_total": 6,
+        "effective": criteria_met >= 3,
+    }
+
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+
+    return {"summary": {"criteria_met": criteria_met, "criteria_total": 6, "effective": criteria_met >= 3}}
 
 
 if __name__ == "__main__":
