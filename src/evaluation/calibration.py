@@ -13,7 +13,10 @@ New v2 code should call CalibrationComputer, not PatternComputer directly.
 PatternComputer is retained for backward compatibility with legacy prompt code.
 """
 
+import json
+import logging
 from collections import Counter
+from pathlib import Path
 
 from src.evaluation.knowledge import KnowledgeBase
 from src.evaluation.patterns import (
@@ -21,6 +24,33 @@ from src.evaluation.patterns import (
     MODEL_NAMES,
     DIMENSION_KEYS,
 )
+
+logger = logging.getLogger(__name__)
+
+# Path to the versioned blind-spots JSON registry (relative to project root).
+_BLIND_SPOTS_PATH: Path = Path(__file__).resolve().parent.parent.parent / "rubrics" / "arteta_blind_spots.json"
+
+
+def _load_blind_spots() -> list[dict]:
+    """Load active blind spots from the JSON registry.
+
+    Falls back to the built-in KNOWN_BLIND_SPOTS constant if the file is
+    missing, malformed, or contains no active spots.
+    """
+    path = _BLIND_SPOTS_PATH
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        spots = [
+            s for s in data.get("blind_spots", [])
+            if s.get("status") == "active"
+        ]
+        if spots:
+            return spots
+        logger.warning("No active blind spots in %s; falling back to built-in.", path)
+    except (FileNotFoundError, json.JSONDecodeError, KeyError, TypeError) as exc:
+        logger.warning("Could not load blind spots from %s (%s); falling back to built-in.", path, exc)
+
+    return list(CalibrationComputer.KNOWN_BLIND_SPOTS)
 
 
 class CalibrationComputer:
@@ -119,7 +149,7 @@ class CalibrationComputer:
             "dimension_signal_distribution": summary["dimension_signal_distribution"],
             "common_missing_data": common_missing,
             "guardrails": list(self.GUARDRAILS),
-            "known_blind_spots": list(self.KNOWN_BLIND_SPOTS),
+            "known_blind_spots": list(_load_blind_spots()),
         }
 
     # ------------------------------------------------------------------
@@ -169,5 +199,5 @@ class CalibrationComputer:
             "dimension_signal_distribution": {},
             "common_missing_data": [],
             "guardrails": list(CalibrationComputer.GUARDRAILS),
-            "known_blind_spots": list(CalibrationComputer.KNOWN_BLIND_SPOTS),
+            "known_blind_spots": list(_load_blind_spots()),
         }
