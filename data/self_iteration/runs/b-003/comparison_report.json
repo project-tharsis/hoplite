@@ -31,5 +31,41 @@
   "criteria_met": 5,
   "criteria_total": 5,
   "same_denominator": false,
-  "effective": false
+  "effective": false,
+  "clean_subset": {
+    "b001": {
+      "overall_agreement_rate": 0.6489,
+      "dimension_agreement_rate": 0.2766,
+      "model_agreement_rate": 0.1915,
+      "wk_too_harsh": 33,
+      "wk_too_generous": 0,
+      "dimension_level_disagreement": 35,
+      "model_level_disagreement": 8,
+      "compared": 94
+    },
+    "b002": {
+      "overall_agreement_rate": 0.7979,
+      "dimension_agreement_rate": 0.5,
+      "model_agreement_rate": 0.4255,
+      "wk_too_harsh": 13,
+      "wk_too_generous": 6,
+      "dimension_level_disagreement": 28,
+      "model_level_disagreement": 7,
+      "compared": 94
+    },
+    "delta": {
+      "overall_agreement_rate": 0.149,
+      "dimension_agreement_rate": 0.2234,
+      "model_agreement_rate": 0.234,
+      "wk_too_harsh": -20,
+      "wk_too_generous": 6,
+      "dimension_level_disagreement": -7,
+      "model_level_disagreement": -1
+    },
+    "criteria_met": 5,
+    "criteria_total": 5,
+    "same_denominator": true,
+    "effective": true,
+    "common_match_ids": 94
+  }
 }

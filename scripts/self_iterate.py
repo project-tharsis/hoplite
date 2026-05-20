@@ -516,24 +516,27 @@ def _is_quarantine_result(evaluation: dict) -> tuple[bool, str]:
     return False, ""
 
 
-def _repair_schema(row: dict) -> dict:
-    """Repair nested evaluation schema where top-level is real but nested has defaults.
+def _flatten_nested_evaluation(row: dict) -> dict:
+    """Flatten nested evaluation dict if row.evaluation.evaluation exists.
 
-    Operates on the full result row (not just evaluation) so it can see both levels.
+    Handles the case where evaluation contains a nested 'evaluation' key
+    with a separate evaluation dict. Promotes the nested one if the parent
+    has no overall_signal.
+
+    Note: this does NOT handle row-level strict v2 promotion (where real
+    fields are at row top-level and row.evaluation is a placeholder).
+    That case is handled by the quality gate quarantine.
+
     Returns the repaired evaluation dict.
     """
     evaluation = row.get("evaluation", {})
-    # If there's a nested "evaluation" dict inside the row (separate from evaluation),
-    # and the top-level evaluation has real values, keep top-level
-    nested = row.get("evaluation", {}).get("evaluation")
+    nested = evaluation.get("evaluation")
     if isinstance(nested, dict) and nested.get("overall_signal"):
         top_overall = evaluation.get("overall_signal", "")
         nested_overall = nested.get("overall_signal", "")
         if top_overall and top_overall != nested_overall:
-            # Top-level is different — likely the real one; keep top-level
-            pass
+            pass  # Top-level has real values, keep it
         elif not top_overall and nested_overall:
-            # Top-level empty, nested has value — promote nested
             evaluation = {**evaluation, **nested}
     return evaluation
 
@@ -576,8 +579,8 @@ def run_ingest_results(
         match_id = str(row.get("match_id", ""))
         evaluation = row.get("evaluation", {})
 
-        # Schema repair: handle nested evaluation dict
-        evaluation = _repair_schema(row)
+        # Schema repair: flatten nested evaluation dict if present
+        evaluation = _flatten_nested_evaluation(row)
 
         # Quality gate: quarantine placeholder results
         is_quarantine, quarantine_reason = _is_quarantine_result(evaluation)
@@ -910,7 +913,11 @@ def main():
 
 
 def run_compare_runs(b001_path: str, b002_path: str, output_path: str) -> dict:
-    """Compare two adjudication reports and emit delta metrics."""
+    """Compare two adjudication reports and emit delta metrics.
+
+    When denominators differ, computes a clean-subset comparison by filtering
+    the larger report to only match_ids present in the smaller report.
+    """
     with open(b001_path, encoding="utf-8") as f:
         b001 = json.load(f)
     with open(b002_path, encoding="utf-8") as f:
@@ -930,6 +937,48 @@ def run_compare_runs(b001_path: str, b002_path: str, output_path: str) -> dict:
             "compared": total,
         }
 
+    def _compute_from_rows(rows: list[dict]) -> dict:
+        """Recompute summary metrics from a filtered rows list."""
+        from collections import Counter
+        compared_rows = [r for r in rows if r["status"] not in ("missing_evaluator_b", "invalid_evaluator_b")]
+        n = len(compared_rows)
+        if n == 0:
+            return {k: 0 for k in [
+                "overall_agreement_rate", "dimension_agreement_rate", "model_agreement_rate",
+                "wk_too_harsh", "wk_too_generous", "dimension_level_disagreement",
+                "model_level_disagreement", "compared",
+            ]}
+
+        status_counts = Counter(r["status"] for r in compared_rows)
+        overall_agree = sum(1 for r in compared_rows if not r["differences"] or "overall" not in r["differences"])
+        dim_agree = sum(1 for r in compared_rows if r["status"] in ("agreement_high_confidence", "agreement_low_confidence", "model_level_disagreement"))
+        model_agree = sum(1 for r in compared_rows if r["status"] in ("agreement_high_confidence", "agreement_low_confidence"))
+
+        return {
+            "overall_agreement_rate": round(overall_agree / n, 4),
+            "dimension_agreement_rate": round(dim_agree / n, 4),
+            "model_agreement_rate": round(model_agree / n, 4),
+            "wk_too_harsh": status_counts.get("wk_too_harsh", 0),
+            "wk_too_generous": status_counts.get("wk_too_generous", 0),
+            "dimension_level_disagreement": status_counts.get("dimension_level_disagreement", 0),
+            "model_level_disagreement": status_counts.get("model_level_disagreement", 0),
+            "compared": n,
+        }
+
+    def _check_criteria(r1: dict, r2: dict) -> int:
+        met = 0
+        if r2["overall_agreement_rate"] > r1["overall_agreement_rate"]:
+            met += 1
+        if r2["dimension_agreement_rate"] > r1["dimension_agreement_rate"]:
+            met += 1
+        if r2["model_agreement_rate"] > r1["model_agreement_rate"]:
+            met += 1
+        if r1["wk_too_harsh"] > 0 and (r1["wk_too_harsh"] - r2["wk_too_harsh"]) / r1["wk_too_harsh"] >= 0.20:
+            met += 1
+        if r2["dimension_level_disagreement"] < r1["dimension_level_disagreement"]:
+            met += 1
+        return met
+
     r1 = _extract(b001)
     r2 = _extract(b002)
 
@@ -943,18 +992,45 @@ def run_compare_runs(b001_path: str, b002_path: str, output_path: str) -> dict:
         "model_level_disagreement": r2["model_level_disagreement"] - r1["model_level_disagreement"],
     }
 
-    # Criteria check
-    criteria_met = 0
-    if delta["overall_agreement_rate"] > 0:
-        criteria_met += 1
-    if delta["dimension_agreement_rate"] > 0:
-        criteria_met += 1
-    if delta["model_agreement_rate"] > 0:
-        criteria_met += 1
-    if r1["wk_too_harsh"] > 0 and (r1["wk_too_harsh"] - r2["wk_too_harsh"]) / r1["wk_too_harsh"] >= 0.20:
-        criteria_met += 1
-    if delta["dimension_level_disagreement"] < 0:
-        criteria_met += 1
+    criteria_met = _check_criteria(r1, r2)
+    same_denom = r1["compared"] == r2["compared"]
+
+    # Clean-subset comparison: filter both reports to common compared match_ids
+    clean_subset = None
+    if not same_denom:
+        b001_rows = b001.get("rows", [])
+        b002_rows = b002.get("rows", [])
+
+        # Use compared match_ids from the smaller-denominator report as the subset
+        smaller_rows = b001_rows if r1["compared"] <= r2["compared"] else b002_rows
+        # compared = not missing/invalid
+        subset_ids = {r["match_id"] for r in smaller_rows if r["status"] not in ("missing_evaluator_b", "invalid_evaluator_b")}
+
+        if subset_ids:
+            b001_filtered = [r for r in b001_rows if r["match_id"] in subset_ids]
+            b002_filtered = [r for r in b002_rows if r["match_id"] in subset_ids]
+            cs_r1 = _compute_from_rows(b001_filtered)
+            cs_r2 = _compute_from_rows(b002_filtered)
+            cs_delta = {
+                "overall_agreement_rate": round(cs_r2["overall_agreement_rate"] - cs_r1["overall_agreement_rate"], 4),
+                "dimension_agreement_rate": round(cs_r2["dimension_agreement_rate"] - cs_r1["dimension_agreement_rate"], 4),
+                "model_agreement_rate": round(cs_r2["model_agreement_rate"] - cs_r1["model_agreement_rate"], 4),
+                "wk_too_harsh": cs_r2["wk_too_harsh"] - cs_r1["wk_too_harsh"],
+                "wk_too_generous": cs_r2["wk_too_generous"] - cs_r1["wk_too_generous"],
+                "dimension_level_disagreement": cs_r2["dimension_level_disagreement"] - cs_r1["dimension_level_disagreement"],
+                "model_level_disagreement": cs_r2["model_level_disagreement"] - cs_r1["model_level_disagreement"],
+            }
+            cs_criteria = _check_criteria(cs_r1, cs_r2)
+            clean_subset = {
+                "b001": cs_r1,
+                "b002": cs_r2,
+                "delta": cs_delta,
+                "criteria_met": cs_criteria,
+                "criteria_total": 5,
+                "same_denominator": cs_r1["compared"] == cs_r2["compared"],
+                "effective": cs_criteria >= 3 and cs_r1["compared"] == cs_r2["compared"],
+                "common_match_ids": len(subset_ids),
+            }
 
     report = {
         "b001": r1,
@@ -962,15 +1038,26 @@ def run_compare_runs(b001_path: str, b002_path: str, output_path: str) -> dict:
         "delta": delta,
         "criteria_met": criteria_met,
         "criteria_total": 5,
-        "same_denominator": r1["compared"] == r2["compared"],
-        "effective": criteria_met >= 3 and r1["compared"] == r2["compared"],
+        "same_denominator": same_denom,
+        "effective": criteria_met >= 3 and same_denom,
     }
+    if clean_subset is not None:
+        report["clean_subset"] = clean_subset
 
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
 
-    return {"summary": {"criteria_met": criteria_met, "criteria_total": 5, "same_denominator": r1["compared"] == r2["compared"], "effective": criteria_met >= 3 and r1["compared"] == r2["compared"]}}
+    summary = {
+        "criteria_met": criteria_met,
+        "criteria_total": 5,
+        "same_denominator": same_denom,
+        "effective": criteria_met >= 3 and same_denom,
+    }
+    if clean_subset is not None:
+        summary["clean_subset_criteria_met"] = clean_subset["criteria_met"]
+        summary["clean_subset_effective"] = clean_subset["effective"]
+    return {"summary": summary}
 
 
 if __name__ == "__main__":
