@@ -31,6 +31,7 @@ from __future__ import annotations
 import argparse
 import glob
 import hashlib
+import itertools
 import json
 import os
 import subprocess
@@ -884,6 +885,36 @@ def main():
     pp.add_argument("--regression-manifest", required=True, help="Path to regression_manifest.json")
     pp.add_argument("--output", required=True, help="Path to implementation spec .md")
 
+    # ── Predicate Mining Enhancement (PM phases 1-5) ────────────
+    # Phase 1: diagnose
+    dp = subparsers.add_parser("diagnose-predicate-mining", help="Diagnose rejected candidates")
+    dp.add_argument("--kb", required=True)
+    dp.add_argument("--adjudication", required=True)
+    dp.add_argument("--rejected", required=True)
+    dp.add_argument("--output", required=True)
+
+    # Phase 2: search space
+    bs = subparsers.add_parser("build-predicate-search-space", help="Build feature search space")
+    bs.add_argument("--kb", required=True)
+    bs.add_argument("--adjudication", required=True)
+    bs.add_argument("--output", required=True)
+
+    # Phase 3: mine enhanced predicates
+    me = subparsers.add_parser("mine-enhanced-wk-predicates", help="Mine enhanced WK predicates")
+    me.add_argument("--kb", required=True)
+    me.add_argument("--adjudication", required=True)
+    me.add_argument("--baseline-adjudication", required=True)
+    me.add_argument("--search-space", required=True)
+    me.add_argument("--diagnostics", required=True)
+    me.add_argument("--output", required=True)
+
+    # Phase 5: summarize
+    sp = subparsers.add_parser("summarize-predicate-mining", help="Summarize predicate mining results")
+    sp.add_argument("--diagnostics", required=True)
+    sp.add_argument("--candidates", required=True)
+    sp.add_argument("--replay", required=True)
+    sp.add_argument("--output", required=True)
+
     args = parser.parse_args()
 
     if args.command == "make-jobs":
@@ -961,6 +992,22 @@ def main():
     elif args.command == "propose-wk-patch-spec":
         result = run_propose_wk_patch_spec(args.candidates, args.replay, args.regression_manifest, args.output)
         print(json.dumps({"ok": True, "output": args.output, "generated": result["generated"]}, indent=2, ensure_ascii=False))
+
+    elif args.command == "diagnose-predicate-mining":
+        result = run_diagnose_predicate_mining(args.kb, args.adjudication, args.rejected, args.output)
+        print(json.dumps({"ok": True, "output": args.output, "summary": result["summary"]}, indent=2, ensure_ascii=False))
+
+    elif args.command == "build-predicate-search-space":
+        result = run_build_predicate_search_space(args.kb, args.adjudication, args.output)
+        print(json.dumps({"ok": True, "output": args.output, "summary": result["summary"]}, indent=2, ensure_ascii=False))
+
+    elif args.command == "mine-enhanced-wk-predicates":
+        result = run_mine_enhanced_wk_predicates(args.kb, args.adjudication, args.baseline_adjudication, args.search_space, args.diagnostics, args.output)
+        print(json.dumps({"ok": True, "output": args.output, "summary": result["summary"]}, indent=2, ensure_ascii=False))
+
+    elif args.command == "summarize-predicate-mining":
+        result = run_summarize_predicate_mining(args.diagnostics, args.candidates, args.replay, args.output)
+        print(json.dumps({"ok": True, "output": args.output, "summary": result["summary"]}, indent=2, ensure_ascii=False))
 
 
 def run_compare_runs(b001_path: str, b002_path: str, output_path: str) -> dict:
@@ -1199,6 +1246,31 @@ def _derive_feature_view(entry: dict) -> dict:
     narrow_win = result == "W" and score_margin == 1
     loss_despite_dominance = result == "L" and (dominant_control or dominant_chance_quality)
 
+    # ── Derived features (spec §7.2) ──────────────────────────────
+    big_win = result == "W" and isinstance(score_margin, (int, float)) and score_margin >= 2
+    single_goal_win = result == "W" and score_margin == 1
+    failed_to_win = result not in ("W", "") and result is not None
+    strong_xg_edge = xg_delta is not None and xg_delta >= 1.0
+    moderate_xg_edge = xg_delta is not None and xg_delta >= 0.5
+    shot_volume_edge = shots_delta is not None and shots_delta >= 8
+    shot_quality_edge = features.get("shot_on_target_delta") is not None and features["shot_on_target_delta"] >= 3
+    sterile_possession = (possession_delta is not None and possession_delta >= 8
+                          and xg_delta is not None and xg_delta < 0.5)
+    defensive_leak = ((goals_conceded is not None and goals_conceded >= 2)
+                      or (opponent_shots_on_target is not None and opponent_shots_on_target >= 5))
+    sp_goals_for = features.get("set_piece_goals_for")
+    sp_goals_against = features.get("set_piece_goals_against")
+    set_piece_edge = ((corner_delta is not None and corner_delta >= 4)
+                      or (sp_goals_for is not None and sp_goals_against is not None
+                          and sp_goals_for > sp_goals_against))
+    # Substitution features
+    sub_windows = features.get("substitution_windows", [])
+    latest_sub_min = max((s["minute"] for s in sub_windows), default=0) if sub_windows else 0
+    earliest_sub_min = min((s["minute"] for s in sub_windows), default=999) if sub_windows else 999
+    late_sub_window = latest_sub_min > 80
+    early_sub_window = earliest_sub_min <= 60
+    sub_impact_positive = features.get("goals_after_arsenal_subs", 0) > 0
+
     return {
         "match_id": entry.get("match_id", ""),
         "result": result,
@@ -1213,6 +1285,19 @@ def _derive_feature_view(entry: dict) -> dict:
         "narrow_win": narrow_win,
         "loss_despite_dominance": loss_despite_dominance,
         "xg_present": xg_delta is not None,
+        "big_win": big_win,
+        "single_goal_win": single_goal_win,
+        "failed_to_win": failed_to_win,
+        "strong_xg_edge": strong_xg_edge,
+        "moderate_xg_edge": moderate_xg_edge,
+        "shot_volume_edge": shot_volume_edge,
+        "shot_quality_edge": shot_quality_edge,
+        "sterile_possession_risk": sterile_possession,
+        "defensive_leak": defensive_leak,
+        "set_piece_edge": set_piece_edge,
+        "late_sub_window": late_sub_window,
+        "early_sub_window": early_sub_window,
+        "sub_impact_positive": sub_impact_positive,
         "missing_features": missing,
     }
 
@@ -1493,7 +1578,14 @@ def run_replay_wk_candidates(
     with open(adjudication_path, encoding="utf-8") as f:
         adjudication = json.load(f)
     with open(candidates_path, encoding="utf-8") as f:
-        candidates = json.load(f)
+        candidates_raw = json.load(f)
+
+    # Handle both flat array and enhanced dict format
+    if isinstance(candidates_raw, list):
+        candidates = candidates_raw
+    else:
+        candidates = list(candidates_raw.get("candidates", []))
+        candidates.extend(candidates_raw.get("exploratory_candidates", []))
 
     # Get clean subset rows
     clean_rows = [r for r in adjudication.get("rows", []) if r["status"] not in ("missing_evaluator_b", "invalid_evaluator_b")]
@@ -1822,6 +1914,466 @@ weak_label_version: v1.1 → v1.2
         f.write(spec)
 
     return {"generated": True, "candidates": len(candidate_ids)}
+
+
+# ── Predicate Mining Enhancement ──────────────────────────────────
+
+
+def run_diagnose_predicate_mining(
+    kb_path: str, adjudication_path: str, rejected_path: str, output_path: str,
+) -> dict:
+    """Phase 1: Diagnose why rejected candidates failed."""
+    with open(rejected_path, encoding="utf-8") as f:
+        rejected = json.load(f)
+
+    failure_breakdown = {
+        "support_too_low": 0,
+        "precision_too_low": 0,
+        "false_positive_too_high": 0,
+        "empty_predicate": 0,
+    }
+    by_target: dict[str, int] = {}
+    by_direction: dict[str, int] = {}
+    top_failure_modes: list[dict] = []
+
+    for c in rejected:
+        reason = c.get("rejection_reason", "")
+        target = c.get("target", "unknown")
+        direction = c.get("direction", "unknown")
+
+        by_target[target] = by_target.get(target, 0) + 1
+        by_direction[direction] = by_direction.get(direction, 0) + 1
+
+        if "empty predicate" in reason:
+            failure_breakdown["empty_predicate"] += 1
+        if f"support={c.get('support', 0)}" in reason and "<5" in reason or "<7" in reason:
+            failure_breakdown["support_too_low"] += 1
+        if "precision=" in reason and ("<0.80" in reason or "<0.90" in reason):
+            failure_breakdown["precision_too_low"] += 1
+        if "fp=" in reason and (">1" in reason or ">0" in reason):
+            failure_breakdown["false_positive_too_high"] += 1
+
+    # Top failure modes: group by (target, direction)
+    mode_counts: dict[tuple, int] = {}
+    for c in rejected:
+        key = (c.get("target", ""), c.get("direction", ""))
+        mode_counts[key] = mode_counts.get(key, 0) + 1
+    for (target, direction), count in sorted(mode_counts.items(), key=lambda x: -x[1]):
+        top_failure_modes.append({"target": target, "direction": direction, "count": count})
+
+    report = {
+        "source": "wk-v1.2 rejected candidates",
+        "total_rejected": len(rejected),
+        "failure_breakdown": failure_breakdown,
+        "by_target": by_target,
+        "by_direction": by_direction,
+        "top_failure_modes": top_failure_modes,
+    }
+
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+
+    return {"summary": {"total_rejected": len(rejected), "failure_breakdown": failure_breakdown}}
+
+
+# Boolean features available for predicate enumeration
+_CATEGORICAL_FEATURES = ["result", "opponent_quality", "venue", "competition_stage"]
+_BOOLEAN_FEATURES = [
+    "clean_sheet", "dominant_control", "dominant_chance_quality", "low_defensive_risk",
+    "narrow_win", "loss_despite_dominance", "xg_present",
+    "big_win", "single_goal_win", "failed_to_win",
+    "strong_xg_edge", "moderate_xg_edge", "shot_volume_edge", "shot_quality_edge",
+    "sterile_possession_risk", "defensive_leak", "set_piece_edge",
+    "late_sub_window", "early_sub_window", "sub_impact_positive",
+]
+
+
+def run_build_predicate_search_space(
+    kb_path: str, adjudication_path: str, output_path: str,
+) -> dict:
+    """Phase 2: Build feature search space with derived features."""
+    entries = _load_kb(kb_path)
+    kb_index = _build_kb_index(entries)
+
+    with open(adjudication_path, encoding="utf-8") as f:
+        adj = json.load(f)
+
+    # Only clean subset rows
+    clean_ids = set()
+    for row in adj.get("rows", []):
+        if row["status"] not in ("missing_evaluator_b", "invalid_evaluator_b"):
+            clean_ids.add(row["match_id"])
+
+    rows = []
+    feature_defs = {}
+
+    # Build feature definitions
+    for feat in _CATEGORICAL_FEATURES:
+        feature_defs[feat] = {"type": "categorical", "required_inputs": [feat]}
+    for feat in _BOOLEAN_FEATURES:
+        # Map each boolean to its required inputs
+        req = []
+        if feat in ("big_win", "single_goal_win"):
+            req = ["result", "score_margin"]
+        elif feat == "failed_to_win":
+            req = ["result"]
+        elif feat in ("strong_xg_edge", "moderate_xg_edge"):
+            req = ["xg_delta"]
+        elif feat == "shot_volume_edge":
+            req = ["shot_delta"]
+        elif feat == "shot_quality_edge":
+            req = ["shot_on_target_delta"]
+        elif feat == "sterile_possession_risk":
+            req = ["possession_delta", "xg_delta"]
+        elif feat == "defensive_leak":
+            req = ["goals_conceded", "opponent_shots_on_target"]
+        elif feat == "set_piece_edge":
+            req = ["corner_delta", "set_piece_goals_for", "set_piece_goals_against"]
+        elif feat == "late_sub_window":
+            req = ["substitution_windows"]
+        elif feat == "early_sub_window":
+            req = ["substitution_windows"]
+        elif feat == "sub_impact_positive":
+            req = ["goals_after_arsenal_subs"]
+        else:
+            req = [feat]
+        feature_defs[feat] = {"type": "boolean", "required_inputs": req}
+
+    for mid in clean_ids:
+        entry = kb_index.get(mid)
+        if not entry:
+            continue
+        fv = _derive_feature_view(entry)
+        features = {}
+        for feat in _CATEGORICAL_FEATURES + _BOOLEAN_FEATURES:
+            val = fv.get(feat)
+            if val is not None and val != "unknown":
+                features[feat] = val
+        rows.append({
+            "match_id": mid,
+            "features": features,
+            "missing_features": fv.get("missing_features", []),
+        })
+
+    report = {
+        "feature_schema_version": "predicate_search_space_v1",
+        "rows": rows,
+        "feature_definitions": feature_defs,
+    }
+
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+
+    return {"summary": {"rows": len(rows), "features": len(feature_defs)}}
+
+
+def run_mine_enhanced_wk_predicates(
+    kb_path: str,
+    adjudication_path: str,
+    baseline_adj_path: str,
+    search_space_path: str,
+    diagnostics_path: str,
+    output_path: str,
+) -> dict:
+    """Phase 3: Enumerate 1-4 feature predicate combinations for disagreement groups."""
+    entries = _load_kb(kb_path)
+    kb_index = _build_kb_index(entries)
+
+    with open(adjudication_path, encoding="utf-8") as f:
+        adj = json.load(f)
+    with open(baseline_adj_path, encoding="utf-8") as f:
+        baseline_adj = json.load(f)
+    with open(search_space_path, encoding="utf-8") as f:
+        search_space = json.load(f)
+
+    # Build search space index: match_id → features dict
+    ss_index: dict[str, dict] = {}
+    for row in search_space.get("rows", []):
+        ss_index[row["match_id"]] = row["features"]
+
+    # Build baseline status index
+    baseline_status: dict[str, str] = {}
+    for row in baseline_adj.get("rows", []):
+        if row["status"] not in ("missing_evaluator_b", "invalid_evaluator_b"):
+            baseline_status[row["match_id"]] = row["status"]
+
+    # Clean subset
+    clean_ids = set(ss_index.keys())
+
+    # Disagreement statuses
+    distill_statuses = {"wk_too_harsh", "wk_too_generous", "dimension_level_disagreement", "model_level_disagreement"}
+
+    # Group disagreements by (status, target, direction, target_signal)
+    disagreement_groups: dict[tuple, list[dict]] = {}
+    for row in adj.get("rows", []):
+        if row["match_id"] not in clean_ids:
+            continue
+        if row["status"] not in distill_statuses:
+            continue
+
+        target, direction, target_signal, current_signal = "", "", "", ""
+        if row["status"] == "wk_too_harsh":
+            target, direction = "overall_signal", "upgrade"
+            current_signal = row["wk"]["overall_signal"]
+            target_signal = row["b"]["overall_signal"]
+        elif row["status"] == "wk_too_generous":
+            target, direction = "overall_signal", "downgrade"
+            current_signal = row["wk"]["overall_signal"]
+            target_signal = row["b"]["overall_signal"]
+        elif row["status"] == "dimension_level_disagreement":
+            dim_diffs = [d for d in row["differences"] if d in ("execution", "adjustment", "satisfaction")]
+            if not dim_diffs:
+                continue
+            target = f"dimension_signals.{dim_diffs[0]}"
+            direction = "upgrade" if _signal_rank(row["b"]["dimension_signals"].get(dim_diffs[0], "")) > _signal_rank(row["wk"]["dimension_signals"].get(dim_diffs[0], "")) else "downgrade"
+            current_signal = row["wk"]["dimension_signals"].get(dim_diffs[0], "")
+            target_signal = row["b"]["dimension_signals"].get(dim_diffs[0], "")
+        elif row["status"] == "model_level_disagreement":
+            model_diffs = [d for d in row["differences"] if d in ("1", "2", "3", "4", "5", "6")]
+            if not model_diffs:
+                continue
+            target = f"model_signals.{model_diffs[0]}"
+            direction = "upgrade" if _signal_rank(row["b"]["model_signals"].get(model_diffs[0], "")) > _signal_rank(row["wk"]["model_signals"].get(model_diffs[0], "")) else "downgrade"
+            current_signal = row["wk"]["model_signals"].get(model_diffs[0], "")
+            target_signal = row["b"]["model_signals"].get(model_diffs[0], "")
+        else:
+            continue
+
+        key = (row["status"], target, direction, target_signal)
+        disagreement_groups.setdefault(key, []).append({
+            "match_id": row["match_id"],
+            "features": ss_index.get(row["match_id"], {}),
+            "current_signal": current_signal,
+            "target_signal": target_signal,
+        })
+
+    # Enumerate predicates for each group
+    candidates = []
+    rejected = []
+    total_predicates_evaluated = 0
+    best_candidates = []
+
+    # Get all feature keys available
+    all_feature_keys = set()
+    for row in search_space.get("rows", []):
+        all_feature_keys.update(row["features"].keys())
+    cat_keys = [k for k in _CATEGORICAL_FEATURES if k in all_feature_keys]
+    bool_keys = [k for k in _BOOLEAN_FEATURES if k in all_feature_keys]
+
+    for (status, target, direction, target_signal), items in disagreement_groups.items():
+        group_match_ids = {it["match_id"] for it in items}
+        group_features = [it["features"] for it in items]
+
+        # Enumerate candidate predicates: 1-4 feature combinations
+        # Strategy: for each size, try all combinations of cat (exact) + bool (true)
+        best_candidates = []
+
+        for size in range(1, 5):
+            # Generate feature combos: mix of categorical and boolean
+            available_cats = [k for k in cat_keys if any(fv.get(k) and fv.get(k) != "unknown" for fv in group_features)]
+            available_bools = [k for k in bool_keys if any(fv.get(k) for fv in group_features)]
+
+            # Try all size-sized subsets from available features
+            all_available = available_cats + available_bools
+            if len(all_available) < size:
+                continue
+
+            for combo in itertools.combinations(all_available, size):
+                # Build predicate via intersection
+                pred = {}
+                valid = True
+                for feat in combo:
+                    if feat in available_cats:
+                        vals = {fv.get(feat) for fv in group_features}
+                        vals.discard(None)
+                        vals.discard("unknown")
+                        if len(vals) == 1:
+                            pred[feat] = vals.pop()
+                        else:
+                            valid = False
+                            break
+                    elif feat in available_bools:
+                        if all(fv.get(feat) for fv in group_features):
+                            pred[feat] = True
+                        else:
+                            valid = False
+                            break
+
+                if not valid or not pred:
+                    continue
+
+                total_predicates_evaluated += 1
+
+                # Score this predicate against clean subset
+                matched_ids = set()
+                for mid in clean_ids:
+                    fv = ss_index.get(mid, {})
+                    if _predicate_matches(pred, fv):
+                        matched_ids.add(mid)
+
+                support = len(matched_ids & group_match_ids)
+                matched_total = len(matched_ids)
+                precision = support / matched_total if matched_total > 0 else 0.0
+                fp = matched_total - support
+                coverage = support / len(items) if items else 0.0
+
+                # Breadth check: predicates matching >80% of clean subset are too broad
+                breadth = matched_total / len(clean_ids) if clean_ids else 0.0
+                if breadth > 0.80:
+                    continue
+
+                # Cross-run stability
+                stable = sum(1 for mid in (matched_ids & group_match_ids)
+                             if baseline_status.get(mid) in distill_statuses)
+                stability = stable / support if support > 0 else 0.0
+
+                cand = {
+                    "candidate_schema_version": "enhanced_wk_rule_candidate_v1",
+                    "id": f"enhanced_{status}_{target.replace('.', '_')}_{direction}_{'_'.join(sorted(pred.keys()))}",
+                    "source_runs": ["b-001", "b-003"],
+                    "primary_run": "b-003",
+                    "target": target,
+                    "predicate": pred,
+                    "predicate_size": len(pred),
+                    "current_wk_signal": items[0]["current_signal"],
+                    "target_signal": target_signal,
+                    "direction": direction,
+                    "support": support,
+                    "matched_total": matched_total,
+                    "precision_vs_b": round(precision, 4),
+                    "false_positive_count": fp,
+                    "coverage_ratio": round(coverage, 4),
+                    "cross_run_stability": round(stability, 4),
+                    "examples": list((matched_ids & group_match_ids))[:5],
+                    "counterexamples": list(matched_ids - group_match_ids)[:5],
+                    "risk": "medium" if status == "wk_too_generous" else "low",
+                }
+
+                # Gate checks
+                is_generous = status == "wk_too_generous"
+                if is_generous:
+                    if support >= 5 and precision >= 0.90 and fp == 0 and stability >= 0.80:
+                        cand["eligibility"] = "implementation_eligible"
+                        best_candidates.append(cand)
+                    elif support >= 3 and precision >= 0.80 and fp <= 1:
+                        cand["eligibility"] = "exploratory_only"
+                        cand["rejection_reason"] = f"generous gate: support={support}<5 or precision={precision:.2f}<0.90 or fp={fp}>0 or stability={stability:.2f}<0.80"
+                        best_candidates.append(cand)
+                    else:
+                        cand["rejection_reason"] = f"generous gate failed: support={support}, precision={precision:.2f}, fp={fp}"
+                        rejected.append(cand)
+                else:
+                    if support >= 5 and precision >= 0.80 and fp <= 1 and stability >= 0.60 and coverage >= 0.20:
+                        cand["eligibility"] = "implementation_eligible"
+                        best_candidates.append(cand)
+                    elif support >= 3 and precision >= 0.80 and fp <= 1:
+                        cand["eligibility"] = "exploratory_only"
+                        cand["rejection_reason"] = f"gate: support={support}<5 or stability={stability:.2f}<0.60 or coverage={coverage:.2f}<0.20"
+                        best_candidates.append(cand)
+                    else:
+                        cand["rejection_reason"] = f"gate failed: support={support}, precision={precision:.2f}, fp={fp}"
+                        rejected.append(cand)
+
+    # Deduplicate: keep best candidate per (target, direction) by precision then support
+    seen_keys: dict[tuple, dict] = {}
+    for c in best_candidates:
+        key = (c["target"], c["direction"])
+        if key not in seen_keys or (c["precision_vs_b"], c["support"]) > (seen_keys[key]["precision_vs_b"], seen_keys[key]["support"]):
+            seen_keys[key] = c
+    deduped = list(seen_keys.values())
+
+    final_candidates = [c for c in deduped if c.get("eligibility") == "implementation_eligible"]
+    exploratory = [c for c in deduped if c.get("eligibility") == "exploratory_only"]
+
+    output = {
+        "candidate_schema_version": "enhanced_wk_rule_candidate_v1",
+        "candidates": final_candidates,
+        "exploratory_candidates": exploratory,
+        "rejected_candidates": rejected,
+        "search_summary": {
+            "groups_scanned": len(disagreement_groups),
+            "predicates_evaluated": total_predicates_evaluated,
+            "candidates_found": len(final_candidates),
+            "exploratory_found": len(exploratory),
+            "rejected": len(rejected),
+        },
+    }
+
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+
+    # Also write rejected separately
+    rej_path = Path(output_path).parent / "enhanced_rejected_candidates.json"
+    with open(rej_path, "w", encoding="utf-8") as f:
+        json.dump(rejected, f, ensure_ascii=False, indent=2)
+
+    return {"summary": output["search_summary"]}
+
+
+def run_summarize_predicate_mining(
+    diagnostics_path: str, candidates_path: str, replay_path: str, output_path: str,
+) -> dict:
+    """Phase 5: Summarize predicate mining and make decision."""
+    with open(diagnostics_path, encoding="utf-8") as f:
+        diagnostics = json.load(f)
+    with open(candidates_path, encoding="utf-8") as f:
+        candidates_data = json.load(f)
+    with open(replay_path, encoding="utf-8") as f:
+        replay = json.load(f)
+
+    impl_candidates = candidates_data.get("candidates", [])
+    exploratory = candidates_data.get("exploratory_candidates", [])
+    replay_passes = replay.get("passes", False)
+
+    # Decision logic
+    if impl_candidates and replay_passes:
+        decision = "proceed_to_wk_v1_2_spec"
+        reason = f"{len(impl_candidates)} implementation-eligible candidates passed replay"
+    elif not impl_candidates and not exploratory:
+        # Check if precision is generally low
+        failure = diagnostics.get("failure_breakdown", {})
+        if failure.get("precision_too_low", 0) > diagnostics.get("total_rejected", 1) * 0.5:
+            decision = "collect_more_features"
+            reason = "多数 rejected candidates 因 precision 不足失败，当前 feature 粒度不足"
+        else:
+            decision = "no_action"
+            reason = "无 candidate 通过门槛，但非 feature 粒度问题"
+    elif exploratory and not impl_candidates:
+        decision = "no_action"
+        reason = f"{len(exploratory)} exploratory candidates 存在但 support 不够，等待更多比赛数据"
+    else:
+        decision = "no_action"
+        reason = "replay 未通过或无足够证据"
+
+    feature_gaps = []
+    if decision == "collect_more_features":
+        feature_gaps = [
+            "goal_timing / score_state_at_goals",
+            "lead_protection_quality",
+            "xg_overperformance / underperformance",
+            "substitution_effect_by_score_state",
+            "opponent_shot_quality_pressure",
+            "late_game_control_after_leading",
+        ]
+
+    summary = {
+        "decision": decision,
+        "reason": reason,
+        "candidate_count": len(impl_candidates) + len(exploratory),
+        "implementation_eligible_count": len(impl_candidates),
+        "exploratory_count": len(exploratory),
+        "replay_passes": replay_passes,
+        "feature_gaps": feature_gaps,
+    }
+
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
+
+    return {"summary": summary}
 
 if __name__ == "__main__":
     main()

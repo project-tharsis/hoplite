@@ -1,0 +1,16 @@
+{
+  "decision": "collect_more_features",
+  "reason": "多数 rejected candidates 因 precision 不足失败，当前 feature 粒度不足",
+  "candidate_count": 0,
+  "implementation_eligible_count": 0,
+  "exploratory_count": 0,
+  "replay_passes": false,
+  "feature_gaps": [
+    "goal_timing / score_state_at_goals",
+    "lead_protection_quality",
+    "xg_overperformance / underperformance",
+    "substitution_effect_by_score_state",
+    "opponent_shot_quality_pressure",
+    "late_game_control_after_leading"
+  ]
+}

@@ -1,0 +1,3181 @@
+{
+  "feature_schema_version": "predicate_search_space_v1",
+  "rows": [
+    {
+      "match_id": "1208334",
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379185",
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379259",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379139",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208285",
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208314",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379160",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": true,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": false,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208383",
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1531572",
+      "features": {
+        "result": "L",
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "regular",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": true,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208059",
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379029",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379149",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1540842",
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "knockout",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208304",
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379220",
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": true,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1479619",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "regular",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208194",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1327988",
+      "features": {
+        "result": "L",
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "regular",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": true,
+        "xg_present": false,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": true,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta",
+        "xg_delta",
+        "xg_against"
+      ]
+    },
+    {
+      "match_id": "1457283",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "regular",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": false,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta",
+        "xg_delta",
+        "xg_against"
+      ]
+    },
+    {
+      "match_id": "1208274",
+      "features": {
+        "result": "L",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": true,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": true,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": true,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208185",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208151",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208223",
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1451159",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "group_stage",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": false,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379209",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1528322",
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "knockout",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379237",
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379109",
+      "features": {
+        "result": "L",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379099",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208125",
+      "features": {
+        "result": "D",
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": false,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1534571",
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "knockout",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379299",
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1378993",
+      "features": {
+        "result": "L",
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379239",
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379279",
+      "features": {
+        "result": "L",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": true,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208032",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": true,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208204",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208363",
+      "features": {
+        "result": "L",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1451107",
+      "features": {
+        "result": "W",
+        "opponent_quality": "european_elite",
+        "venue": "home",
+        "competition_stage": "group_stage",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379009",
+      "features": {
+        "result": "D",
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": true,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379049",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": true,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379278",
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379202",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1298642",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "regular",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": false,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta",
+        "xg_delta",
+        "xg_against"
+      ]
+    },
+    {
+      "match_id": "1379309",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208254",
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208167",
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208072",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379328",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": true,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208174",
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1378999",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379091",
+      "features": {
+        "result": "D",
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": true,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1451075",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "group_stage",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1540843",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "knockout",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208134",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379042",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1451021",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "group_stage",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1327989",
+      "features": {
+        "result": "L",
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "regular",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": true,
+        "xg_present": false,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta",
+        "xg_delta",
+        "xg_against"
+      ]
+    },
+    {
+      "match_id": "1208154",
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379132",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208067",
+      "features": {
+        "result": "D",
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1378977",
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208400",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": false,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208091",
+      "features": {
+        "result": "L",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379295",
+      "features": {
+        "result": "L",
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208252",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1309284",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "regular",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": false,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta",
+        "xg_delta",
+        "xg_against"
+      ]
+    },
+    {
+      "match_id": "1208081",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379119",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1534570",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "knockout",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": false,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379079",
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208354",
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": true,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208267",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1451061",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "group_stage",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208348",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208041",
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208298",
+      "features": {
+        "result": "D",
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": true,
+        "defensive_leak": true,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379060",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379189",
+      "features": {
+        "result": "L",
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": true,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": true,
+        "defensive_leak": true,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1314297",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "regular",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": false,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta",
+        "xg_delta",
+        "xg_against"
+      ]
+    },
+    {
+      "match_id": "1451123",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "group_stage",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1451136",
+      "features": {
+        "result": "W",
+        "opponent_quality": "european_elite",
+        "venue": "away",
+        "competition_stage": "group_stage",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": false,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208376",
+      "features": {
+        "result": "D",
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": true,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1498259",
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "regular",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": false,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": false,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta",
+        "xg_delta",
+        "xg_against"
+      ]
+    },
+    {
+      "match_id": "1379076",
+      "features": {
+        "result": "D",
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": false,
+        "failed_to_win": true,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1379026",
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1208023",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1451052",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "group_stage",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1498260",
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "regular",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": false,
+        "low_defensive_risk": true,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": false,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": false,
+        "moderate_xg_edge": false,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": false,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta",
+        "xg_delta",
+        "xg_against"
+      ]
+    },
+    {
+      "match_id": "1523412",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "regular",
+        "clean_sheet": false,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": false,
+        "narrow_win": true,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": false,
+        "single_goal_win": true,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1378979",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": false,
+        "early_sub_window": true,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1490810",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "regular",
+        "clean_sheet": false,
+        "dominant_control": false,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": false,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": false,
+        "shot_quality_edge": false,
+        "sterile_possession_risk": false,
+        "defensive_leak": true,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": true
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1506251",
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "regular",
+        "clean_sheet": true,
+        "dominant_control": true,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": true,
+        "late_sub_window": true,
+        "early_sub_window": true,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    },
+    {
+      "match_id": "1528330",
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "knockout",
+        "clean_sheet": true,
+        "dominant_control": false,
+        "dominant_chance_quality": true,
+        "low_defensive_risk": true,
+        "narrow_win": false,
+        "loss_despite_dominance": false,
+        "xg_present": true,
+        "big_win": true,
+        "single_goal_win": false,
+        "failed_to_win": false,
+        "strong_xg_edge": true,
+        "moderate_xg_edge": true,
+        "shot_volume_edge": true,
+        "shot_quality_edge": true,
+        "sterile_possession_risk": false,
+        "defensive_leak": false,
+        "set_piece_edge": false,
+        "late_sub_window": true,
+        "early_sub_window": false,
+        "sub_impact_positive": false
+      },
+      "missing_features": [
+        "shots_delta"
+      ]
+    }
+  ],
+  "feature_definitions": {
+    "result": {
+      "type": "categorical",
+      "required_inputs": [
+        "result"
+      ]
+    },
+    "opponent_quality": {
+      "type": "categorical",
+      "required_inputs": [
+        "opponent_quality"
+      ]
+    },
+    "venue": {
+      "type": "categorical",
+      "required_inputs": [
+        "venue"
+      ]
+    },
+    "competition_stage": {
+      "type": "categorical",
+      "required_inputs": [
+        "competition_stage"
+      ]
+    },
+    "clean_sheet": {
+      "type": "boolean",
+      "required_inputs": [
+        "clean_sheet"
+      ]
+    },
+    "dominant_control": {
+      "type": "boolean",
+      "required_inputs": [
+        "dominant_control"
+      ]
+    },
+    "dominant_chance_quality": {
+      "type": "boolean",
+      "required_inputs": [
+        "dominant_chance_quality"
+      ]
+    },
+    "low_defensive_risk": {
+      "type": "boolean",
+      "required_inputs": [
+        "low_defensive_risk"
+      ]
+    },
+    "narrow_win": {
+      "type": "boolean",
+      "required_inputs": [
+        "narrow_win"
+      ]
+    },
+    "loss_despite_dominance": {
+      "type": "boolean",
+      "required_inputs": [
+        "loss_despite_dominance"
+      ]
+    },
+    "xg_present": {
+      "type": "boolean",
+      "required_inputs": [
+        "xg_present"
+      ]
+    },
+    "big_win": {
+      "type": "boolean",
+      "required_inputs": [
+        "result",
+        "score_margin"
+      ]
+    },
+    "single_goal_win": {
+      "type": "boolean",
+      "required_inputs": [
+        "result",
+        "score_margin"
+      ]
+    },
+    "failed_to_win": {
+      "type": "boolean",
+      "required_inputs": [
+        "result"
+      ]
+    },
+    "strong_xg_edge": {
+      "type": "boolean",
+      "required_inputs": [
+        "xg_delta"
+      ]
+    },
+    "moderate_xg_edge": {
+      "type": "boolean",
+      "required_inputs": [
+        "xg_delta"
+      ]
+    },
+    "shot_volume_edge": {
+      "type": "boolean",
+      "required_inputs": [
+        "shot_delta"
+      ]
+    },
+    "shot_quality_edge": {
+      "type": "boolean",
+      "required_inputs": [
+        "shot_on_target_delta"
+      ]
+    },
+    "sterile_possession_risk": {
+      "type": "boolean",
+      "required_inputs": [
+        "possession_delta",
+        "xg_delta"
+      ]
+    },
+    "defensive_leak": {
+      "type": "boolean",
+      "required_inputs": [
+        "goals_conceded",
+        "opponent_shots_on_target"
+      ]
+    },
+    "set_piece_edge": {
+      "type": "boolean",
+      "required_inputs": [
+        "corner_delta",
+        "set_piece_goals_for",
+        "set_piece_goals_against"
+      ]
+    },
+    "late_sub_window": {
+      "type": "boolean",
+      "required_inputs": [
+        "substitution_windows"
+      ]
+    },
+    "early_sub_window": {
+      "type": "boolean",
+      "required_inputs": [
+        "substitution_windows"
+      ]
+    },
+    "sub_impact_positive": {
+      "type": "boolean",
+      "required_inputs": [
+        "goals_after_arsenal_subs"
+      ]
+    }
+  }
+}

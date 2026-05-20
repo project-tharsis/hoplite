@@ -1,0 +1,80 @@
+{
+  "source": "wk-v1.2 rejected candidates",
+  "total_rejected": 14,
+  "failure_breakdown": {
+    "support_too_low": 12,
+    "precision_too_low": 12,
+    "false_positive_too_high": 12,
+    "empty_predicate": 2
+  },
+  "by_target": {
+    "model_signals.1": 2,
+    "overall_signal": 3,
+    "dimension_signals.execution": 2,
+    "dimension_signals.satisfaction": 3,
+    "dimension_signals.adjustment": 2,
+    "model_signals.2": 1,
+    "model_signals.4": 1
+  },
+  "by_direction": {
+    "upgrade": 8,
+    "downgrade": 6
+  },
+  "top_failure_modes": [
+    {
+      "target": "model_signals.1",
+      "direction": "upgrade",
+      "count": 2
+    },
+    {
+      "target": "dimension_signals.satisfaction",
+      "direction": "upgrade",
+      "count": 2
+    },
+    {
+      "target": "overall_signal",
+      "direction": "downgrade",
+      "count": 2
+    },
+    {
+      "target": "overall_signal",
+      "direction": "upgrade",
+      "count": 1
+    },
+    {
+      "target": "dimension_signals.execution",
+      "direction": "downgrade",
+      "count": 1
+    },
+    {
+      "target": "dimension_signals.satisfaction",
+      "direction": "downgrade",
+      "count": 1
+    },
+    {
+      "target": "dimension_signals.execution",
+      "direction": "upgrade",
+      "count": 1
+    },
+    {
+      "target": "dimension_signals.adjustment",
+      "direction": "downgrade",
+      "count": 1
+    },
+    {
+      "target": "model_signals.2",
+      "direction": "upgrade",
+      "count": 1
+    },
+    {
+      "target": "dimension_signals.adjustment",
+      "direction": "upgrade",
+      "count": 1
+    },
+    {
+      "target": "model_signals.4",
+      "direction": "downgrade",
+      "count": 1
+    }
+  ]
+}
