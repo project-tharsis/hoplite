@@ -121,6 +121,12 @@ def _feature_backed_entry(match_id: str, opponent: str = "Bournemouth") -> dict:
         **_legacy_entry(match_id, opponent),
         "features": {"result": "W", "score_margin": 1, "arsenal_goals": 3, "opponent_goals": 2},
         "weak_labels": {"overall_signal": "🟢", "model_signals": {}, "dimension_signals": {}},
+        "pre_match_context": {
+            "opponent": opponent,
+            "opponent_quality": "mid_table",
+            "venue": "away",
+            "competition_stage": "league_early",
+        },
     }
 
 
@@ -531,6 +537,7 @@ def _sample_features() -> dict:
         "opponent_name": "Chelsea",
         "venue": "home",
         "opponent_quality": "top6",
+        "competition_stage": "league_early",
         "possession_pct": 60,
         "shots_total": 15,
         "shots_on_target": 6,
@@ -672,7 +679,13 @@ class TestApplyFeaturesPreservesFields:
         entry = kb[0]
         assert entry["custom_tag"] == "seed_v1"
         assert entry["notes"] == "top6 home win seed case"
-        assert entry["pre_match_context"] == {}
+        # pre_match_context is now hydrated from features during apply-features
+        assert entry["pre_match_context"] == {
+            "opponent": "Chelsea",
+            "opponent_quality": "top6",
+            "venue": "home",
+            "competition_stage": "league_early",
+        }
         assert entry["predicted_plan"] == {}
 
 

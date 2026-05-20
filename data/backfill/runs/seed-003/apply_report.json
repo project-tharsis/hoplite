@@ -1,84 +1,715 @@
 {
   "summary": {
     "total": 72,
-    "applied": 72,
-    "skipped": 0,
-    "errors": 0
+    "applied": 70,
+    "skipped": 2,
+    "errors": 0,
+    "metadata_hydrated": 70,
+    "total_fields_hydrated": 342
   },
   "applied": [
-    "1208023",
-    "1208032",
-    "1208041",
-    "1208059",
-    "1208067",
-    "1208072",
-    "1208081",
-    "1208091",
-    "1208103",
-    "1208118",
-    "1208125",
-    "1208134",
-    "1208167",
-    "1208185",
-    "1208194",
-    "1208204",
-    "1208215",
-    "1208223",
-    "1208233",
-    "1208252",
-    "1208254",
-    "1208267",
-    "1208274",
-    "1208285",
-    "1208298",
-    "1208304",
-    "1208314",
-    "1208326",
-    "1208334",
-    "1208348",
-    "1208354",
-    "1208363",
-    "1208400",
-    "1298642",
-    "1309284",
-    "1327988",
-    "1327989",
-    "1378977",
-    "1379009",
-    "1379026",
-    "1379029",
-    "1379042",
-    "1379049",
-    "1379060",
-    "1379139",
-    "1379149",
-    "1379160",
-    "1379169",
-    "1379189",
-    "1379202",
-    "1379220",
-    "1379278",
-    "1379251",
-    "1379259",
-    "1379279",
-    "1379295",
-    "1379309",
-    "1379328",
-    "1451052",
-    "1451061",
-    "1451075",
-    "1451123",
-    "1451159",
-    "1534571",
-    "1540842",
-    "1540843",
-    "1457283",
-    "1479619",
-    "1498259",
-    "1518728",
-    "1490810",
-    "1506251"
+    {
+      "legacy_match_id": "1208023",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208032",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208041",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208059",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208067",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208072",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208081",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208091",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208103",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208118",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208125",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208134",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208167",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208185",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208194",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208204",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208215",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208223",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208233",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208252",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208254",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208267",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208274",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208285",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208298",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208304",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208314",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208326",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208334",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208348",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208354",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208363",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208400",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1298642",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1309284",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1327988",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1327989",
+      "hydrated_fields": [
+        "opponent",
+        "result",
+        "score",
+        "competition",
+        "timestamp",
+        "pre_match_context.opponent_quality",
+        "pre_match_context.venue",
+        "pre_match_context.competition_stage",
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1378977",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379009",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379026",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379029",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379042",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379049",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379060",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379139",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379149",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379169",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379189",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379202",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379220",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379278",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379251",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379259",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379279",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379295",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379309",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1451052",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1451061",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1451075",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1451123",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1451159",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1534571",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1540842",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1540843",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1457283",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1479619",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1498259",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1518728",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1490810",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1506251",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    }
   ],
-  "skipped": [],
+  "skipped": [
+    {
+      "legacy_match_id": "1379160",
+      "reason": "already_backfilled_no_missing_metadata"
+    },
+    {
+      "legacy_match_id": "1379328",
+      "reason": "already_backfilled_no_missing_metadata"
+    }
+  ],
   "errors": []
 }

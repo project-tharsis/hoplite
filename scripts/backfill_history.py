@@ -453,6 +453,107 @@ def _needs_eval_normalization(evaluation: dict) -> bool:
     return has_legacy and not has_new
 
 
+def _hydrate_top_level_metadata(
+    entry: dict,
+    features: dict,
+    report_path: str | None = None,
+) -> list[str]:
+    """Hydrate KB top-level metadata from features and report snapshot.
+
+    Feature-backed entries may have empty top-level fields (opponent, result,
+    score, competition, pre_match_context) even though the features dict is
+    complete.  PatternComputer reads these top-level fields — not the nested
+    features — for filtering (_filter_by_context) and aggregation
+    (_compute_aggregate_stats).  Missing metadata silently breaks calibration.
+
+    Returns list of field names that were hydrated.
+    """
+    hydrated: list[str] = []
+
+    # ── opponent ──────────────────────────────────────────────────────
+    if not entry.get("opponent"):
+        opponent = features.get("opponent_name", "")
+        if opponent:
+            entry["opponent"] = opponent
+            hydrated.append("opponent")
+
+    # ── result ────────────────────────────────────────────────────────
+    if not entry.get("result"):
+        result = features.get("result", "")
+        if result:
+            entry["result"] = result
+            hydrated.append("result")
+
+    # ── score ─────────────────────────────────────────────────────────
+    score = entry.get("score", "")
+    if not score or score == "?-?":
+        ag = features.get("arsenal_goals")
+        og = features.get("opponent_goals")
+        if ag is not None and og is not None:
+            entry["score"] = f"{ag}-{og}"
+            hydrated.append("score")
+
+    # ── competition ───────────────────────────────────────────────────
+    if not entry.get("competition"):
+        competition = _read_report_field(report_path, ("match", "competition"))
+        if competition:
+            entry["competition"] = competition
+            hydrated.append("competition")
+
+    # ── timestamp / date ──────────────────────────────────────────────
+    if not entry.get("timestamp"):
+        ts = _read_report_field(report_path, ("match", "date"))
+        if ts:
+            entry["timestamp"] = ts
+            hydrated.append("timestamp")
+
+    # ── pre_match_context ─────────────────────────────────────────────
+    pmc = entry.get("pre_match_context")
+    if not pmc:
+        pmc = {}
+        entry["pre_match_context"] = pmc
+
+    pmc_fields = {
+        "opponent_quality": features.get("opponent_quality", ""),
+        "venue": features.get("venue", ""),
+        "competition_stage": features.get("competition_stage", ""),
+    }
+    for key, value in pmc_fields.items():
+        if not pmc.get(key) and value:
+            pmc[key] = value
+            hydrated.append(f"pre_match_context.{key}")
+
+    # Also hydrate opponent in pre_match_context if present in features
+    if not pmc.get("opponent"):
+        opponent_name = features.get("opponent_name", "")
+        if opponent_name:
+            pmc["opponent"] = opponent_name
+            hydrated.append("pre_match_context.opponent")
+
+    return hydrated
+
+
+def _read_report_field(report_path: str | None, keys: tuple[str, ...]) -> str | None:
+    """Read a nested field from a report JSON snapshot.
+
+    Returns None if the file doesn't exist or the path is absent.
+    """
+    if not report_path:
+        return None
+    try:
+        p = Path(report_path)
+        if not p.exists():
+            return None
+        with open(p, encoding="utf-8") as f:
+            report = json.load(f)
+        node = report
+        for key in keys:
+            node = node.get(key, {}) if isinstance(node, dict) else {}
+        return node if isinstance(node, str) and node else None
+    except (OSError, json.JSONDecodeError, TypeError, KeyError):
+        return None
+
+
 def run_apply_features(
     kb_path: str,
     manifest_path: str,
@@ -503,7 +604,7 @@ def run_apply_features(
     now_iso = datetime.now().isoformat(timespec="seconds")
     run_id = run_path.name
 
-    applied: list[str] = []
+    applied: list[dict] = []
     skipped: list[dict] = []
     errors: list[dict] = []
 
@@ -516,14 +617,34 @@ def run_apply_features(
 
         prep = prepare_by_id[mid]
 
-        # Idempotency: skip if already has features+weak_labels unless --force
-        if not force and entry.get("features") and entry.get("weak_labels"):
-            skipped.append({"legacy_match_id": mid, "reason": "already_backfilled"})
+        # Idempotency: skip features/weak_labels write if already populated unless --force
+        already_backfilled = (
+            not force and entry.get("features") and entry.get("weak_labels")
+        )
+        if already_backfilled:
+            # Still hydrate metadata even for already-backfilled entries
+            report_path = prep.get("report_path", "")
+            hydrated_fields = _hydrate_top_level_metadata(
+                entry, prep.get("features", {}), report_path or None
+            )
+            if hydrated_fields:
+                applied.append({
+                    "legacy_match_id": mid,
+                    "hydrated_fields": hydrated_fields,
+                })
+            else:
+                skipped.append({"legacy_match_id": mid, "reason": "already_backfilled_no_missing_metadata"})
             continue
 
         # Apply features and weak_labels
         entry["features"] = prep["features"]
         entry["weak_labels"] = prep["weak_labels"]
+
+        # Hydrate top-level metadata from features + report snapshot
+        report_path = prep.get("report_path", "")
+        hydrated_fields = _hydrate_top_level_metadata(
+            entry, prep["features"], report_path or None
+        )
 
         # Version fields
         entry["features_version"] = prep.get("features_version", "v1")
@@ -605,7 +726,10 @@ def run_apply_features(
                 if nv != overall:
                     entry["evaluation"]["overall_signal"] = nv
 
-        applied.append(mid)
+        applied.append({
+            "legacy_match_id": mid,
+            "hydrated_fields": hydrated_fields,
+        })
 
     # Write knowledge.after.json
     after_path = run_path / "knowledge.after.json"
@@ -619,6 +743,12 @@ def run_apply_features(
             "applied": len(applied),
             "skipped": len(skipped),
             "errors": len(errors),
+            "metadata_hydrated": sum(
+                1 for a in applied if a.get("hydrated_fields")
+            ),
+            "total_fields_hydrated": sum(
+                len(a.get("hydrated_fields", [])) for a in applied
+            ),
         },
         "applied": applied,
         "skipped": skipped,

@@ -3,39 +3,198 @@
     "total": 30,
     "applied": 30,
     "skipped": 0,
-    "errors": 0
+    "errors": 0,
+    "metadata_hydrated": 30,
+    "total_fields_hydrated": 37
   },
   "applied": [
-    "1208151",
-    "1208154",
-    "1208174",
-    "1208376",
-    "1208383",
-    "1314297",
-    "1378979",
-    "1378993",
-    "1378999",
-    "1379076",
-    "1379079",
-    "1379091",
-    "1379099",
-    "1379109",
-    "1379119",
-    "1379132",
-    "1379185",
-    "1379209",
-    "1379237",
-    "1379239",
-    "1379299",
-    "1451021",
-    "1451107",
-    "1451136",
-    "1528322",
-    "1528330",
-    "1534570",
-    "1498260",
-    "1523412",
-    "1531572"
+    {
+      "legacy_match_id": "1208151",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208154",
+      "hydrated_fields": [
+        "result",
+        "score"
+      ]
+    },
+    {
+      "legacy_match_id": "1208174",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208376",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1208383",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1314297",
+      "hydrated_fields": [
+        "result",
+        "score"
+      ]
+    },
+    {
+      "legacy_match_id": "1378979",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1378993",
+      "hydrated_fields": [
+        "result",
+        "score"
+      ]
+    },
+    {
+      "legacy_match_id": "1378999",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379076",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379079",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379091",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379099",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379109",
+      "hydrated_fields": [
+        "result",
+        "score"
+      ]
+    },
+    {
+      "legacy_match_id": "1379119",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379132",
+      "hydrated_fields": [
+        "result",
+        "score"
+      ]
+    },
+    {
+      "legacy_match_id": "1379185",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379209",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379237",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379239",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1379299",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1451021",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1451107",
+      "hydrated_fields": [
+        "result",
+        "score"
+      ]
+    },
+    {
+      "legacy_match_id": "1451136",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1528322",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1528330",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1534570",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1498260",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1523412",
+      "hydrated_fields": [
+        "pre_match_context.opponent"
+      ]
+    },
+    {
+      "legacy_match_id": "1531572",
+      "hydrated_fields": [
+        "result",
+        "score"
+      ]
+    }
   ],
   "skipped": [],
   "errors": []

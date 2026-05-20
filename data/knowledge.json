@@ -384,16 +384,16 @@
   },
   {
     "match_id": "1208023",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-08-17T00:00:00",
+    "opponent": "Wolves",
+    "score": "2-0",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Wolves",
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -590,16 +590,16 @@
   },
   {
     "match_id": "1208032",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-08-24T00:00:00",
+    "opponent": "Aston Villa",
+    "score": "2-0",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Aston Villa",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -798,16 +798,16 @@
   },
   {
     "match_id": "1208041",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-08-31T00:00:00",
+    "opponent": "Brighton",
+    "score": "1-1",
+    "result": "D",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Brighton",
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -1003,16 +1003,16 @@
   },
   {
     "match_id": "1208059",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-09-15T00:00:00",
+    "opponent": "Tottenham",
+    "score": "1-0",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Tottenham",
+      "opponent_quality": "top6",
+      "venue": "away",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -1206,16 +1206,16 @@
   },
   {
     "match_id": "1208067",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-09-22T00:00:00",
+    "opponent": "Manchester City",
+    "score": "2-2",
+    "result": "D",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Manchester City",
+      "opponent_quality": "top6",
+      "venue": "away",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -1427,16 +1427,16 @@
   },
   {
     "match_id": "1208072",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-09-28T00:00:00",
+    "opponent": "Leicester",
+    "score": "4-2",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Leicester",
+      "opponent_quality": "lower",
+      "venue": "home",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -1653,16 +1653,16 @@
   },
   {
     "match_id": "1208081",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-10-05T00:00:00",
+    "opponent": "Southampton",
+    "score": "3-1",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Southampton",
+      "opponent_quality": "lower",
+      "venue": "home",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -1878,16 +1878,16 @@
   },
   {
     "match_id": "1208091",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-10-19T00:00:00",
+    "opponent": "Bournemouth",
+    "score": "0-2",
+    "result": "L",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Bournemouth",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -2087,16 +2087,16 @@
   },
   {
     "match_id": "1208103",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-10-27T00:00:00",
+    "opponent": "Liverpool",
+    "score": "2-2",
+    "result": "D",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Liverpool",
+      "opponent_quality": "top6",
+      "venue": "home",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -2310,16 +2310,16 @@
   },
   {
     "match_id": "1208118",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-11-02T00:00:00",
+    "opponent": "Newcastle",
+    "score": "0-1",
+    "result": "L",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Newcastle",
+      "opponent_quality": "top6",
+      "venue": "away",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -2521,16 +2521,16 @@
   },
   {
     "match_id": "1208125",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-11-10T00:00:00",
+    "opponent": "Chelsea",
+    "score": "1-1",
+    "result": "D",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Chelsea",
+      "opponent_quality": "top6",
+      "venue": "away",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -2728,16 +2728,16 @@
   },
   {
     "match_id": "1208134",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-11-23T00:00:00",
+    "opponent": "Nottingham Forest",
+    "score": "3-0",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Nottingham Forest",
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -2960,7 +2960,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "West Ham"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -3191,8 +3192,8 @@
     "match_id": "1208154",
     "timestamp": "2024-12-04",
     "opponent": "Manchester United",
-    "score": "?-?",
-    "result": "",
+    "score": "2-0",
+    "result": "W",
     "competition": "Premier League",
     "pre_match_context": {
       "opponent_quality": "top6",
@@ -3475,7 +3476,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Fulham"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -3687,7 +3689,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Everton"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -3875,16 +3878,16 @@
   },
   {
     "match_id": "1208185",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-12-21T00:00:00",
+    "opponent": "Crystal Palace",
+    "score": "5-1",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Crystal Palace",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -4113,16 +4116,16 @@
   },
   {
     "match_id": "1208194",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-12-27T00:00:00",
+    "opponent": "Ipswich",
+    "score": "1-0",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Ipswich",
+      "opponent_quality": "lower",
+      "venue": "home",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -4308,16 +4311,16 @@
   },
   {
     "match_id": "1208204",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-01-01T00:00:00",
+    "opponent": "Brentford",
+    "score": "3-1",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Brentford",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -4536,16 +4539,16 @@
   },
   {
     "match_id": "1208215",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-01-04T00:00:00",
+    "opponent": "Brighton",
+    "score": "1-1",
+    "result": "D",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Brighton",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -4734,16 +4737,16 @@
   },
   {
     "match_id": "1208223",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-01-15T00:00:00",
+    "opponent": "Tottenham",
+    "score": "2-1",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Tottenham",
+      "opponent_quality": "top6",
+      "venue": "home",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -4950,16 +4953,16 @@
   },
   {
     "match_id": "1208233",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-01-18T00:00:00",
+    "opponent": "Aston Villa",
+    "score": "2-2",
+    "result": "D",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Aston Villa",
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -5156,16 +5159,16 @@
   },
   {
     "match_id": "1208252",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-01-25T00:00:00",
+    "opponent": "Wolves",
+    "score": "1-0",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Wolves",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "league_early"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -5350,16 +5353,16 @@
   },
   {
     "match_id": "1208254",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-02-02T00:00:00",
+    "opponent": "Manchester City",
+    "score": "5-1",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Manchester City",
+      "opponent_quality": "top6",
+      "venue": "home",
+      "competition_stage": "league_late"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -5583,16 +5586,16 @@
   },
   {
     "match_id": "1208267",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-02-15T00:00:00",
+    "opponent": "Leicester",
+    "score": "2-0",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Leicester",
+      "opponent_quality": "lower",
+      "venue": "away",
+      "competition_stage": "league_late"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -5793,16 +5796,16 @@
   },
   {
     "match_id": "1208274",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-02-22T00:00:00",
+    "opponent": "West Ham",
+    "score": "0-1",
+    "result": "L",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "West Ham",
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "league_late"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -6001,16 +6004,16 @@
   },
   {
     "match_id": "1208285",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-02-26T00:00:00",
+    "opponent": "Nottingham Forest",
+    "score": "0-0",
+    "result": "D",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Nottingham Forest",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "league_late"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -6201,16 +6204,16 @@
   },
   {
     "match_id": "1208298",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-03-09T00:00:00",
+    "opponent": "Manchester United",
+    "score": "1-1",
+    "result": "D",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Manchester United",
+      "opponent_quality": "top6",
+      "venue": "away",
+      "competition_stage": "league_late"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -6406,16 +6409,16 @@
   },
   {
     "match_id": "1208304",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-03-16T00:00:00",
+    "opponent": "Chelsea",
+    "score": "1-0",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Chelsea",
+      "opponent_quality": "top6",
+      "venue": "home",
+      "competition_stage": "league_late"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -6604,16 +6607,16 @@
   },
   {
     "match_id": "1208314",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-04-01T00:00:00",
+    "opponent": "Fulham",
+    "score": "2-1",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Fulham",
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "league_late"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -6816,16 +6819,16 @@
   },
   {
     "match_id": "1208326",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-04-05T00:00:00",
+    "opponent": "Everton",
+    "score": "1-1",
+    "result": "D",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Everton",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "league_late"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -7028,16 +7031,16 @@
   },
   {
     "match_id": "1208334",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-04-12T00:00:00",
+    "opponent": "Brentford",
+    "score": "1-1",
+    "result": "D",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Brentford",
+      "opponent_quality": "mid_table",
+      "venue": "home",
+      "competition_stage": "league_late"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -7242,16 +7245,16 @@
   },
   {
     "match_id": "1208348",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-04-20T00:00:00",
+    "opponent": "Ipswich",
+    "score": "4-0",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Ipswich",
+      "opponent_quality": "lower",
+      "venue": "away",
+      "competition_stage": "league_late"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -7478,7 +7481,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Crystal Palace"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -7701,7 +7705,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Bournemouth"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -7926,7 +7931,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Liverpool"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -8150,7 +8156,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Newcastle"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -8354,16 +8361,16 @@
   },
   {
     "match_id": "1208400",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-05-25T00:00:00",
+    "opponent": "Southampton",
+    "score": "2-1",
+    "result": "W",
+    "competition": "Premier League",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Southampton",
+      "opponent_quality": "lower",
+      "venue": "away",
+      "competition_stage": "league_late"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -8576,16 +8583,16 @@
   },
   {
     "match_id": "1298642",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-09-25T00:00:00",
+    "opponent": "Bolton",
+    "score": "5-1",
+    "result": "W",
+    "competition": "League Cup",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Bolton",
+      "opponent_quality": "lower",
+      "venue": "home",
+      "competition_stage": "regular"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -8809,16 +8816,16 @@
   },
   {
     "match_id": "1309284",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2024-10-30T00:00:00",
+    "opponent": "Preston",
+    "score": "3-0",
+    "result": "W",
+    "competition": "League Cup",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Preston",
+      "opponent_quality": "lower",
+      "venue": "away",
+      "competition_stage": "regular"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -9029,8 +9036,8 @@
     "match_id": "1314297",
     "timestamp": "2024-12-18",
     "opponent": "Crystal Palace",
-    "score": "?-?",
-    "result": "",
+    "score": "3-2",
+    "result": "W",
     "competition": "EFL Cup",
     "pre_match_context": {
       "opponent_quality": "mid_table",
@@ -9294,16 +9301,16 @@
   },
   {
     "match_id": "1327988",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-01-07T00:00:00",
+    "opponent": "Newcastle",
+    "score": "0-2",
+    "result": "L",
+    "competition": "League Cup",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Newcastle",
+      "opponent_quality": "top6",
+      "venue": "home",
+      "competition_stage": "regular"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -9496,16 +9503,16 @@
   },
   {
     "match_id": "1327989",
-    "timestamp": "",
-    "opponent": "",
-    "score": "?-?",
-    "result": "",
-    "competition": "",
+    "timestamp": "2025-02-05T00:00:00",
+    "opponent": "Newcastle",
+    "score": "0-2",
+    "result": "L",
+    "competition": "League Cup",
     "pre_match_context": {
-      "opponent": "",
-      "opponent_quality": "",
-      "venue": "",
-      "competition_stage": ""
+      "opponent": "Newcastle",
+      "opponent_quality": "top6",
+      "venue": "away",
+      "competition_stage": "regular"
     },
     "predicted_plan": {
       "focus_areas": [],
@@ -9718,7 +9725,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Manchester United"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -9937,7 +9945,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Leeds"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -10164,8 +10173,8 @@
     "match_id": "1378993",
     "timestamp": "2025-08-31",
     "opponent": "Liverpool",
-    "score": "?-?",
-    "result": "",
+    "score": "0-1",
+    "result": "L",
     "competition": "Premier League",
     "pre_match_context": {
       "opponent_quality": "top6",
@@ -10413,7 +10422,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Nottingham Forest"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -10639,7 +10649,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Manchester City"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -10861,7 +10872,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Newcastle"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -11089,7 +11101,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "West Ham"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -11308,7 +11321,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Fulham"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -11515,7 +11529,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Crystal Palace"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -11733,7 +11748,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Burnley"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -11955,7 +11971,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Sunderland"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -12169,7 +12186,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Tottenham"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -12403,7 +12421,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Chelsea"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -12622,7 +12641,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Brentford"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -12831,8 +12851,8 @@
     "match_id": "1379109",
     "timestamp": "2025-12-06",
     "opponent": "Aston Villa",
-    "score": "?-?",
-    "result": "",
+    "score": "1-2",
+    "result": "L",
     "competition": "Premier League",
     "pre_match_context": {
       "opponent_quality": "mid_table",
@@ -13118,7 +13138,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Wolves"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -13335,8 +13356,8 @@
     "match_id": "1379132",
     "timestamp": "2025-12-20",
     "opponent": "Everton",
-    "score": "?-?",
-    "result": "",
+    "score": "1-0",
+    "result": "W",
     "competition": "Premier League",
     "pre_match_context": {
       "opponent_quality": "mid_table",
@@ -13588,7 +13609,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Brighton"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -13805,7 +13827,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Aston Villa"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -14262,7 +14285,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Liverpool"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -14455,7 +14479,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Nottingham Forest"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -14646,7 +14671,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Manchester United"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -14867,7 +14893,8 @@
       "competition_stage": "league_early",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Leeds"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -15084,7 +15111,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Sunderland"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -15299,7 +15327,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Brentford"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -15504,7 +15533,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Wolves"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -15718,7 +15748,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Tottenham"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -15938,7 +15969,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Chelsea"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -16142,7 +16174,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Brighton"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -16340,7 +16373,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Everton"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -16546,7 +16580,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Bournemouth"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -16756,7 +16791,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Manchester City"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -16965,7 +17001,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Newcastle"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -17163,7 +17200,8 @@
       "competition_stage": "league_late",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Fulham"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -17597,7 +17635,8 @@
       "competition_stage": "group_stage",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Athletic Club"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -17818,7 +17857,8 @@
       "competition_stage": "group_stage",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Olympiakos Piraeus"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -18044,7 +18084,8 @@
       "competition_stage": "group_stage",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Atletico Madrid"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -18279,7 +18320,8 @@
       "competition_stage": "group_stage",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Slavia Praha"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -18495,8 +18537,8 @@
     "match_id": "1451107",
     "timestamp": "2025-11-26",
     "opponent": "Bayern München",
-    "score": "?-?",
-    "result": "",
+    "score": "3-1",
+    "result": "W",
     "competition": "Champions League",
     "pre_match_context": {
       "opponent_quality": "european_elite",
@@ -18768,7 +18810,8 @@
       "competition_stage": "group_stage",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Club Brugge KV"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -18997,7 +19040,8 @@
       "competition_stage": "group_stage",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Inter"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -19218,7 +19262,8 @@
       "competition_stage": "group_stage",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Kairat Almaty"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -19440,7 +19485,8 @@
       "competition_stage": "knockout",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Bayer Leverkusen"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -19636,7 +19682,8 @@
       "competition_stage": "knockout",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Bayer Leverkusen"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -19845,7 +19892,8 @@
       "competition_stage": "knockout",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Sporting CP"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -20038,7 +20086,8 @@
       "competition_stage": "knockout",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Sporting CP"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -20223,7 +20272,8 @@
       "competition_stage": "knockout",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Atletico Madrid"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -20433,7 +20483,8 @@
       "competition_stage": "knockout",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Atletico Madrid"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -20637,7 +20688,8 @@
       "competition_stage": "regular",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Port Vale"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -20857,7 +20909,8 @@
       "competition_stage": "regular",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Brighton"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -21078,7 +21131,8 @@
       "competition_stage": "regular",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Chelsea"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -21295,7 +21349,8 @@
       "competition_stage": "regular",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Chelsea"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -21482,7 +21537,8 @@
       "competition_stage": "regular",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Manchester City"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -21685,7 +21741,8 @@
       "competition_stage": "regular",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Portsmouth"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -21910,7 +21967,8 @@
       "competition_stage": "regular",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Wigan"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -22129,7 +22187,8 @@
       "competition_stage": "regular",
       "injury_situation": "full_strength",
       "recent_form": "mixed",
-      "opponent_style": "possession"
+      "opponent_style": "possession",
+      "opponent": "Mansfield Town"
     },
     "predicted_plan": {
       "focus_areas": [
@@ -22333,8 +22392,8 @@
     "match_id": "1531572",
     "timestamp": "2026-04-04",
     "opponent": "Southampton",
-    "score": "?-?",
-    "result": "",
+    "score": "1-2",
+    "result": "L",
     "competition": "Premier League",
     "pre_match_context": {
       "opponent_quality": "lower",
