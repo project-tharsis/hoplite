@@ -8,36 +8,34 @@
     ],
     "primary_run": "b-003",
     "target": "model_signals.1",
-    "predicate": {},
+    "predicate": {
+      "result": "W",
+      "clean_sheet": true,
+      "dominant_control": true,
+      "dominant_chance_quality": true,
+      "low_defensive_risk": true
+    },
     "current_wk_signal": "🟡",
     "target_signal": "🟢",
     "direction": "upgrade",
     "support": 3,
-    "precision_vs_b": 1.0,
-    "false_positive_count": 0,
+    "cross_run_stability": 0.6667,
+    "precision_vs_b": 0.2,
+    "false_positive_count": 12,
     "examples": [
       "1208023",
       "1379132",
       "1506251"
     ],
     "counterexamples": [
-      "1208174",
       "1208194",
-      "1327988",
-      "1379189",
       "1451075"
     ],
-    "regression_must_not_change": [
-      "1208091",
-      "1208118",
-      "1208274",
-      "1208363",
-      "1327988"
-    ],
+    "regression_must_not_change": [],
     "risk": "low",
-    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "rationale": "评估器B在result=W、机会质量占优、防守风险低、零封时稳定给更高信号",
     "implementation_hint": "",
-    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+    "rejection_reason": "gate: support=3<5 or precision=0.20<0.80 or fp=12>1"
   },
   {
     "candidate_schema_version": "wk_rule_candidate_v1",
@@ -48,34 +46,30 @@
     ],
     "primary_run": "b-003",
     "target": "model_signals.1",
-    "predicate": {},
+    "predicate": {
+      "result": "W",
+      "opponent_quality": "mid_table",
+      "venue": "away",
+      "competition_stage": "league_early",
+      "clean_sheet": true,
+      "low_defensive_risk": true
+    },
     "current_wk_signal": "🟡",
     "target_signal": "🟡",
     "direction": "upgrade",
     "support": 1,
-    "precision_vs_b": 1.0,
-    "false_positive_count": 0,
+    "cross_run_stability": 1.0,
+    "precision_vs_b": 0.5,
+    "false_positive_count": 1,
     "examples": [
       "1208032"
     ],
-    "counterexamples": [
-      "1208174",
-      "1208194",
-      "1327988",
-      "1379189",
-      "1451075"
-    ],
-    "regression_must_not_change": [
-      "1208091",
-      "1208118",
-      "1208274",
-      "1208363",
-      "1327988"
-    ],
+    "counterexamples": [],
+    "regression_must_not_change": [],
     "risk": "low",
-    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "rationale": "评估器B在result=W、vs mid_table、防守风险低、零封时稳定给更高信号",
     "implementation_hint": "",
-    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+    "rejection_reason": "gate: support=1<5 or precision=0.50<0.80 or fp=1>1"
   },
   {
     "candidate_schema_version": "wk_rule_candidate_v1",
@@ -86,13 +80,16 @@
     ],
     "primary_run": "b-003",
     "target": "overall_signal",
-    "predicate": {},
+    "predicate": {
+      "result": "W"
+    },
     "current_wk_signal": "🟡",
     "target_signal": "🟢",
     "direction": "upgrade",
     "support": 13,
-    "precision_vs_b": 0.2281,
-    "false_positive_count": 44,
+    "cross_run_stability": 1.0,
+    "precision_vs_b": 0.25,
+    "false_positive_count": 39,
     "examples": [
       "1208059",
       "1208072",
@@ -101,23 +98,14 @@
       "1208254"
     ],
     "counterexamples": [
-      "1208174",
       "1208194",
-      "1327988",
-      "1379189",
       "1451075"
     ],
-    "regression_must_not_change": [
-      "1208091",
-      "1208118",
-      "1208274",
-      "1208363",
-      "1327988"
-    ],
+    "regression_must_not_change": [],
     "risk": "low",
-    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "rationale": "评估器B在result=W时稳定给更高信号",
     "implementation_hint": "",
-    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+    "rejection_reason": "gate: support=13<5 or precision=0.25<0.80 or fp=39>1"
   },
   {
     "candidate_schema_version": "wk_rule_candidate_v1",
@@ -128,28 +116,28 @@
     ],
     "primary_run": "b-003",
     "target": "dimension_signals.execution",
-    "predicate": {},
+    "predicate": {
+      "result": "D",
+      "opponent_quality": "top6",
+      "venue": "away",
+      "competition_stage": "league_early"
+    },
     "current_wk_signal": "🟡",
     "target_signal": "🔴",
     "direction": "downgrade",
     "support": 1,
+    "cross_run_stability": 1.0,
     "precision_vs_b": 1.0,
     "false_positive_count": 0,
     "examples": [
       "1208067"
     ],
     "counterexamples": [],
-    "regression_must_not_change": [
-      "1208091",
-      "1208118",
-      "1208274",
-      "1208363",
-      "1327988"
-    ],
+    "regression_must_not_change": [],
     "risk": "low",
-    "rationale": "评估器B在特定条件时稳定给更低信号",
+    "rationale": "评估器B在result=D、vs top6时稳定给更低信号",
     "implementation_hint": "",
-    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+    "rejection_reason": "gate: support=1<5 or precision=1.00<0.80 or fp=0>1"
   },
   {
     "candidate_schema_version": "wk_rule_candidate_v1",
@@ -160,30 +148,31 @@
     ],
     "primary_run": "b-003",
     "target": "dimension_signals.satisfaction",
-    "predicate": {},
+    "predicate": {
+      "result": "W",
+      "competition_stage": "league_early",
+      "dominant_control": true,
+      "dominant_chance_quality": true,
+      "low_defensive_risk": true
+    },
     "current_wk_signal": "🟡",
     "target_signal": "🟡",
     "direction": "downgrade",
     "support": 3,
-    "precision_vs_b": 1.0,
-    "false_positive_count": 0,
+    "cross_run_stability": 0.6667,
+    "precision_vs_b": 0.6,
+    "false_positive_count": 2,
     "examples": [
       "1208081",
       "1379042",
       "1379139"
     ],
     "counterexamples": [],
-    "regression_must_not_change": [
-      "1208091",
-      "1208118",
-      "1208274",
-      "1208363",
-      "1327988"
-    ],
+    "regression_must_not_change": [],
     "risk": "low",
-    "rationale": "评估器B在特定条件时稳定给更低信号",
+    "rationale": "评估器B在result=W、机会质量占优、防守风险低时稳定给更低信号",
     "implementation_hint": "",
-    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+    "rejection_reason": "gate: support=3<5 or precision=0.60<0.80 or fp=2>1"
   },
   {
     "candidate_schema_version": "wk_rule_candidate_v1",
@@ -199,8 +188,9 @@
     "target_signal": "🟢",
     "direction": "upgrade",
     "support": 8,
-    "precision_vs_b": 1.0,
-    "false_positive_count": 0,
+    "cross_run_stability": 0.875,
+    "precision_vs_b": 0.1429,
+    "false_positive_count": 48,
     "examples": [
       "1208125",
       "1208185",
@@ -236,30 +226,30 @@
     ],
     "primary_run": "b-003",
     "target": "overall_signal",
-    "predicate": {},
+    "predicate": {
+      "clean_sheet": true,
+      "dominant_control": true,
+      "dominant_chance_quality": true,
+      "low_defensive_risk": true
+    },
     "current_wk_signal": "🟡",
     "target_signal": "🟡",
     "direction": "downgrade",
     "support": 3,
-    "precision_vs_b": 0.0682,
-    "false_positive_count": 41,
+    "cross_run_stability": 1.0,
+    "precision_vs_b": 0.5,
+    "false_positive_count": 3,
     "examples": [
       "1208174",
       "1208194",
       "1451075"
     ],
     "counterexamples": [],
-    "regression_must_not_change": [
-      "1208091",
-      "1208118",
-      "1208274",
-      "1208363",
-      "1327988"
-    ],
+    "regression_must_not_change": [],
     "risk": "medium",
-    "rationale": "评估器B在特定条件时稳定给更低信号",
+    "rationale": "评估器B在机会质量占优、防守风险低、零封时稳定给更低信号",
     "implementation_hint": "",
-    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+    "rejection_reason": "wk_too_generous stricter gate: support=3<7 or precision=0.50<0.90 or fp=3>0"
   },
   {
     "candidate_schema_version": "wk_rule_candidate_v1",
@@ -270,13 +260,16 @@
     ],
     "primary_run": "b-003",
     "target": "dimension_signals.execution",
-    "predicate": {},
+    "predicate": {
+      "result": "W"
+    },
     "current_wk_signal": "🟡",
     "target_signal": "🟢",
     "direction": "upgrade",
     "support": 11,
-    "precision_vs_b": 1.0,
-    "false_positive_count": 0,
+    "cross_run_stability": 0.8182,
+    "precision_vs_b": 0.275,
+    "false_positive_count": 29,
     "examples": [
       "1208314",
       "1208400",
@@ -285,23 +278,14 @@
       "1379099"
     ],
     "counterexamples": [
-      "1208174",
       "1208194",
-      "1327988",
-      "1379189",
       "1451075"
     ],
-    "regression_must_not_change": [
-      "1208091",
-      "1208118",
-      "1208274",
-      "1208363",
-      "1327988"
-    ],
+    "regression_must_not_change": [],
     "risk": "low",
-    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "rationale": "评估器B在result=W时稳定给更高信号",
     "implementation_hint": "",
-    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+    "rejection_reason": "gate: support=11<5 or precision=0.28<0.80 or fp=29>1"
   },
   {
     "candidate_schema_version": "wk_rule_candidate_v1",
@@ -312,28 +296,28 @@
     ],
     "primary_run": "b-003",
     "target": "dimension_signals.adjustment",
-    "predicate": {},
+    "predicate": {
+      "result": "D",
+      "opponent_quality": "top6",
+      "venue": "away",
+      "competition_stage": "league_late"
+    },
     "current_wk_signal": "🟡",
     "target_signal": "🔴",
     "direction": "downgrade",
     "support": 1,
+    "cross_run_stability": 1.0,
     "precision_vs_b": 1.0,
     "false_positive_count": 0,
     "examples": [
       "1208376"
     ],
     "counterexamples": [],
-    "regression_must_not_change": [
-      "1208091",
-      "1208118",
-      "1208274",
-      "1208363",
-      "1327988"
-    ],
+    "regression_must_not_change": [],
     "risk": "low",
-    "rationale": "评估器B在特定条件时稳定给更低信号",
+    "rationale": "评估器B在result=D、vs top6时稳定给更低信号",
     "implementation_hint": "",
-    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+    "rejection_reason": "gate: support=1<5 or precision=1.00<0.80 or fp=0>1"
   },
   {
     "candidate_schema_version": "wk_rule_candidate_v1",
@@ -344,35 +328,29 @@
     ],
     "primary_run": "b-003",
     "target": "model_signals.2",
-    "predicate": {},
+    "predicate": {
+      "result": "W",
+      "narrow_win": true
+    },
     "current_wk_signal": "🟡",
     "target_signal": "🟢",
     "direction": "upgrade",
     "support": 2,
-    "precision_vs_b": 1.0,
-    "false_positive_count": 0,
+    "cross_run_stability": 0.5,
+    "precision_vs_b": 0.1053,
+    "false_positive_count": 17,
     "examples": [
       "1208383",
       "1379160"
     ],
     "counterexamples": [
-      "1208174",
-      "1208194",
-      "1327988",
-      "1379189",
-      "1451075"
+      "1208194"
     ],
-    "regression_must_not_change": [
-      "1208091",
-      "1208118",
-      "1208274",
-      "1208363",
-      "1327988"
-    ],
+    "regression_must_not_change": [],
     "risk": "low",
-    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "rationale": "评估器B在result=W时稳定给更高信号",
     "implementation_hint": "",
-    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+    "rejection_reason": "gate: support=2<5 or precision=0.11<0.80 or fp=17>1"
   },
   {
     "candidate_schema_version": "wk_rule_candidate_v1",
@@ -388,6 +366,7 @@
     "target_signal": "🔴",
     "direction": "downgrade",
     "support": 3,
+    "cross_run_stability": 1.0,
     "precision_vs_b": 0.25,
     "false_positive_count": 9,
     "examples": [
@@ -417,35 +396,33 @@
     ],
     "primary_run": "b-003",
     "target": "dimension_signals.satisfaction",
-    "predicate": {},
+    "predicate": {
+      "result": "L",
+      "opponent_quality": "top6",
+      "venue": "away"
+    },
     "current_wk_signal": "🟡",
     "target_signal": "🟡",
     "direction": "upgrade",
     "support": 2,
+    "cross_run_stability": 0.5,
     "precision_vs_b": 1.0,
     "false_positive_count": 0,
     "examples": [
       "1378993",
       "1379295"
     ],
-    "counterexamples": [
-      "1208174",
-      "1208194",
-      "1327988",
-      "1379189",
-      "1451075"
-    ],
+    "counterexamples": [],
     "regression_must_not_change": [
-      "1208091",
       "1208118",
-      "1208274",
-      "1208363",
-      "1327988"
+      "1327989",
+      "1378993",
+      "1379295"
     ],
     "risk": "low",
-    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "rationale": "评估器B在result=L、vs top6时稳定给更高信号",
     "implementation_hint": "",
-    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+    "rejection_reason": "gate: support=2<5 or precision=1.00<0.80 or fp=0>1"
   },
   {
     "candidate_schema_version": "wk_rule_candidate_v1",
@@ -456,35 +433,28 @@
     ],
     "primary_run": "b-003",
     "target": "dimension_signals.adjustment",
-    "predicate": {},
+    "predicate": {
+      "result": "W",
+      "opponent_quality": "mid_table",
+      "clean_sheet": true
+    },
     "current_wk_signal": "🟡",
     "target_signal": "🟢",
     "direction": "upgrade",
     "support": 2,
-    "precision_vs_b": 1.0,
-    "false_positive_count": 0,
+    "cross_run_stability": 1.0,
+    "precision_vs_b": 0.1818,
+    "false_positive_count": 9,
     "examples": [
       "1534570",
       "1479619"
     ],
-    "counterexamples": [
-      "1208174",
-      "1208194",
-      "1327988",
-      "1379189",
-      "1451075"
-    ],
-    "regression_must_not_change": [
-      "1208091",
-      "1208118",
-      "1208274",
-      "1208363",
-      "1327988"
-    ],
+    "counterexamples": [],
+    "regression_must_not_change": [],
     "risk": "low",
-    "rationale": "评估器B在特定条件时稳定给更高信号",
+    "rationale": "评估器B在result=W、vs mid_table、零封时稳定给更高信号",
     "implementation_hint": "",
-    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+    "rejection_reason": "gate: support=2<5 or precision=0.18<0.80 or fp=9>1"
   },
   {
     "candidate_schema_version": "wk_rule_candidate_v1",
@@ -495,27 +465,30 @@
     ],
     "primary_run": "b-003",
     "target": "model_signals.4",
-    "predicate": {},
+    "predicate": {
+      "result": "W",
+      "opponent_quality": "lower",
+      "venue": "away",
+      "competition_stage": "regular",
+      "clean_sheet": true,
+      "dominant_control": true,
+      "low_defensive_risk": true
+    },
     "current_wk_signal": "🟡",
     "target_signal": "🟡",
     "direction": "downgrade",
     "support": 1,
+    "cross_run_stability": 1.0,
     "precision_vs_b": 1.0,
     "false_positive_count": 0,
     "examples": [
       "1457283"
     ],
     "counterexamples": [],
-    "regression_must_not_change": [
-      "1208091",
-      "1208118",
-      "1208274",
-      "1208363",
-      "1327988"
-    ],
+    "regression_must_not_change": [],
     "risk": "low",
-    "rationale": "评估器B在特定条件时稳定给更低信号",
+    "rationale": "评估器B在result=W、vs lower、防守风险低、零封时稳定给更低信号",
     "implementation_hint": "",
-    "rejection_reason": "empty predicate: no deterministic feature predicate found"
+    "rejection_reason": "gate: support=1<5 or precision=1.00<0.80 or fp=0>1"
   }
 ]

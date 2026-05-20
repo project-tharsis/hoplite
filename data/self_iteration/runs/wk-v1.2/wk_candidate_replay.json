@@ -14,7 +14,7 @@
   "after": {
     "overall_agreement_rate": 0.7979,
     "dimension_agreement_rate": 0.5,
-    "model_agreement_rate": 0.7553,
+    "model_agreement_rate": 0.4255,
     "wk_too_harsh": 13,
     "wk_too_generous": 6
   },
@@ -24,5 +24,6 @@
       "match_id": "1531572",
       "passed": true
     }
-  ]
+  ],
+  "passes": false
 }
