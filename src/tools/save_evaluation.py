@@ -12,6 +12,7 @@ def save_evaluation(
     weak_labels: dict | None = None,
     versions: dict | None = None,
     features: dict | None = None,
+    evaluation_metadata: dict | None = None,
 ) -> dict:
     """Validate LLM evaluation and persist to KB.
 
@@ -31,13 +32,14 @@ def save_evaluation(
                 "weak_label": "v1",
                 "rubric": "arteta_v1",
                 "prompt_builder": "v1"
-            }
+            },
+            "evaluation_metadata": {...optional metadata dict...}
         }
 
     Returns:
         {"ok": true/false, "message": "...", "entry": {...}}
     """
-    # Validate
+    # Validate (metadata must NOT be passed to validate_llm_result)
     try:
         validated = validate_llm_result(evaluation, strict=True)
     except ValueError as e:
@@ -47,7 +49,37 @@ def save_evaluation(
     match_data = report_json.get("match", report_json)
     context = report_json.get("context", {})
 
+    # Preserve existing features if none supplied (prevent wiping on re-save)
+    effective_features = features
+    if not effective_features:
+        match_id = str(match_data.get("fixture_id", ""))
+        kb = KnowledgeBase(str(paths.DEFAULT_KB_PATH))
+        for existing in kb.get_all():
+            if existing.get("match_id") == match_id:
+                effective_features = existing.get("features", {})
+                break
+
     # Build KB entry matching the schema
+    eval_dict: dict = {
+        "source": "llm",
+        "confidence": validated.get("confidence"),
+        "model_signals": validated["model_signals"],
+        "dimension_signals": validated["dimension_signals"],
+        "overall_signal": validated["overall_signal"],
+        "narrative": validated.get("narrative", ""),
+        "evidence": validated.get("evidence", {}),
+        "missing_or_weak_evidence": validated.get(
+            "missing_or_weak_evidence", []
+        ),
+        "weak_label_disagreements": validated.get(
+            "weak_label_disagreements", []
+        ),
+    }
+
+    # Attach metadata only when explicitly provided (backward compat)
+    if evaluation_metadata is not None:
+        eval_dict["metadata"] = evaluation_metadata
+
     entry = {
         "match_id": str(match_data.get("fixture_id", "")),
         "timestamp": match_data.get("date", ""),
@@ -57,22 +89,8 @@ def save_evaluation(
         "competition": match_data.get("competition", ""),
         "pre_match_context": context,
         "predicted_plan": report_json.get("predicted_plan", {}),
-        "features": features or {},
-        "evaluation": {
-            "source": "llm",
-            "confidence": validated.get("confidence"),
-            "model_signals": validated["model_signals"],
-            "dimension_signals": validated["dimension_signals"],
-            "overall_signal": validated["overall_signal"],
-            "narrative": validated.get("narrative", ""),
-            "evidence": validated.get("evidence", {}),
-            "missing_or_weak_evidence": validated.get(
-                "missing_or_weak_evidence", []
-            ),
-            "weak_label_disagreements": validated.get(
-                "weak_label_disagreements", []
-            ),
-        },
+        "features": effective_features or {},
+        "evaluation": eval_dict,
         "weak_labels": weak_labels or {},
         "features_version": (versions or {}).get("features", "v1"),
         "weak_label_version": (versions or {}).get("weak_label", "v1"),
@@ -96,5 +114,6 @@ if __name__ == "__main__":
         input_data.get("weak_labels"),
         input_data.get("versions"),
         input_data.get("features"),
+        input_data.get("evaluation_metadata"),
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))
