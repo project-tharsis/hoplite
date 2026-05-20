@@ -20,6 +20,8 @@ from src.tools.extract import (
     normalize_event_type,
 )
 
+FEATURES_VERSION = "v2"
+
 
 # ── MatchFeatures dataclass (Section 6.3 of spec) ────────────────────
 
@@ -99,6 +101,63 @@ class MatchFeatures:
 
     # Pre-match predicted plan context
     predicted_plan_match_features: dict = field(default_factory=dict)
+
+    # ── v2: Goal Timing / Score State ────────────────────────────────
+    match_duration_minutes: int = 90
+    arsenal_goal_minutes: list = field(default_factory=list)
+    opponent_goal_minutes: list = field(default_factory=list)
+    first_goal_minute: Optional[int] = None
+    first_goal_team: Optional[str] = None  # "arsenal" | "opponent" | None
+    arsenal_scored_first: Optional[bool] = None
+    arsenal_conceded_first: Optional[bool] = None
+    arsenal_led_at_any_point: bool = False
+    arsenal_trailed_at_any_point: bool = False
+    lead_change_count: int = 0
+    minutes_leading: Optional[int] = None
+    minutes_trailing: Optional[int] = None
+    minutes_level: Optional[int] = None
+    goals_for_after_75: int = 0
+    goals_against_after_75: int = 0
+
+    # ── v2: Lead Protection ──────────────────────────────────────────
+    max_lead: int = 0
+    max_deficit: int = 0
+    lead_lost_count: int = 0
+    equalizers_conceded_after_leading: int = 0
+    goals_conceded_while_leading: int = 0
+    first_lead_minute: Optional[int] = None
+    last_lead_minute: Optional[int] = None
+    final_state_from_first_lead: str = "never_led"  # protected | lost | never_led
+    led_after_75: bool = False
+    late_lead_lost: bool = False
+    late_lead_protected: bool = False
+    late_goals_conceded_while_leading: int = 0
+
+    # ── v2: xG Conversion ────────────────────────────────────────────
+    xg_overperformance_for: Optional[float] = None  # arsenal_goals - xg_for
+    xg_overperformance_against: Optional[float] = None  # opponent_goals - xg_against
+    xg_result_gap: Optional[float] = None  # score_margin - xg_delta
+    dominant_xg_no_win: bool = False
+    won_without_xg_edge: bool = False
+
+    # ── v2: Substitution Score State (top-level) ─────────────────────
+    first_sub_minute: Optional[int] = None
+    first_sub_score_margin: Optional[int] = None
+    first_sub_score_state: Optional[str] = None
+    subbed_while_leading: bool = False
+    subbed_while_level: bool = False
+    subbed_while_trailing: bool = False
+    goals_for_after_first_sub: int = 0
+    goals_against_after_first_sub: int = 0
+    net_goals_after_first_sub: int = 0
+
+    # ── v2: Opponent Shot Quality ────────────────────────────────────
+    arsenal_xg_per_shot: Optional[float] = None
+    opponent_xg_per_shot: Optional[float] = None
+    arsenal_xg_per_shot_on_target: Optional[float] = None
+    opponent_xg_per_shot_on_target: Optional[float] = None
+    opponent_high_quality_chances: bool = False
+    opponent_low_volume_high_quality: bool = False
 
     # REQUIRED — explicitly list what data is unavailable
     missing_data: list = field(default_factory=list)
@@ -427,7 +486,207 @@ class FeatureExtractor:
             "opponent": context.get("opponent", ""),
         }
 
+        # ── v2: Goal Timing / Score State ────────────────────────────
+        self._extract_goal_timing(features, events)
+
+        # ── v2: Lead Protection ──────────────────────────────────────
+        self._extract_lead_protection(features)
+
+        # ── v2: xG Conversion ────────────────────────────────────────
+        self._extract_xg_conversion(features)
+
+        # ── v2: Substitution Score State ─────────────────────────────
+        self._extract_substitution_score_state(features, arsenal_subs)
+
+        # ── v2: Opponent Shot Quality ────────────────────────────────
+        self._extract_opponent_shot_quality(features)
+
+        # ── v2: Missing data for goal_events ─────────────────────────
+        if not events and (arsenal_score != 0 or opponent_score != 0):
+            if "goal_events" not in features.missing_data:
+                features.missing_data = sorted(set(features.missing_data + ["goal_events"]))
+
         return features
+
+    # ── v2 extraction helpers ─────────────────────────────────────────
+
+    def _extract_goal_timing(self, features: MatchFeatures, events: list[dict]) -> None:
+        """Extract goal timing and score state features from events."""
+        timeline = features.score_state_timeline
+        duration = features.match_duration_minutes
+
+        # Goal minutes
+        goal_events = [e for e in events if e.get("type") == "goal"]
+        arsenal_goal_minutes: list[int] = []
+        opponent_goal_minutes: list[int] = []
+
+        for e in goal_events:
+            minute = e.get("minute", 0)
+            if e.get("is_arsenal"):
+                arsenal_goal_minutes.append(minute)
+            else:
+                opponent_goal_minutes.append(minute)
+
+        features.arsenal_goal_minutes = sorted(arsenal_goal_minutes)
+        features.opponent_goal_minutes = sorted(opponent_goal_minutes)
+
+        # First goal
+        all_goals_sorted = sorted(goal_events, key=lambda e: (e.get("minute", 0), e.get("player", "")))
+        if all_goals_sorted:
+            first = all_goals_sorted[0]
+            features.first_goal_minute = first.get("minute", 0)
+            if first.get("is_arsenal"):
+                features.first_goal_team = "arsenal"
+                features.arsenal_scored_first = True
+                features.arsenal_conceded_first = False
+            else:
+                features.first_goal_team = "opponent"
+                features.arsenal_scored_first = False
+                features.arsenal_conceded_first = True
+
+        # Goals after 75'
+        features.goals_for_after_75 = sum(1 for m in features.arsenal_goal_minutes if m >= 75)
+        features.goals_against_after_75 = sum(1 for m in features.opponent_goal_minutes if m >= 75)
+
+        # Score state analysis from timeline
+        if timeline:
+            result = _compute_minutes_by_score_state(timeline, duration)
+            features.arsenal_led_at_any_point = result["arsenal_led_at_any_point"]
+            features.arsenal_trailed_at_any_point = result["arsenal_trailed_at_any_point"]
+            features.lead_change_count = result["lead_change_count"]
+            features.minutes_leading = result["minutes_leading"]
+            features.minutes_trailing = result["minutes_trailing"]
+            features.minutes_level = result["minutes_level"]
+
+    def _extract_lead_protection(self, features: MatchFeatures) -> None:
+        """Extract lead protection features from timeline."""
+        timeline = features.score_state_timeline
+        duration = features.match_duration_minutes
+
+        if not timeline:
+            return
+
+        result = _compute_lead_protection(timeline, duration)
+        features.max_lead = result["max_lead"]
+        features.max_deficit = result["max_deficit"]
+        features.lead_lost_count = result["lead_lost_count"]
+        features.equalizers_conceded_after_leading = result["equalizers_conceded_after_leading"]
+        features.goals_conceded_while_leading = result["goals_conceded_while_leading"]
+        features.first_lead_minute = result["first_lead_minute"]
+        features.last_lead_minute = result["last_lead_minute"]
+        features.final_state_from_first_lead = result["final_state_from_first_lead"]
+        features.led_after_75 = result["led_after_75"]
+        features.late_lead_lost = result["late_lead_lost"]
+        features.late_lead_protected = result["late_lead_protected"]
+        features.late_goals_conceded_while_leading = result["late_goals_conceded_while_leading"]
+
+    def _extract_xg_conversion(self, features: MatchFeatures) -> None:
+        """Extract xG conversion features."""
+        xg_for = features.xg_for
+        xg_against = features.xg_against
+        arsenal_goals = features.arsenal_goals
+        opponent_goals = features.opponent_goals
+
+        if xg_for is not None:
+            features.xg_overperformance_for = round(arsenal_goals - xg_for, 3)
+        if xg_against is not None:
+            features.xg_overperformance_against = round(opponent_goals - xg_against, 3)
+
+        if xg_for is not None and xg_against is not None:
+            xg_delta = xg_for - xg_against
+            score_margin = features.score_margin
+            features.xg_result_gap = round(score_margin - xg_delta, 3)
+
+            # dominant_xg_no_win: xG edge but didn't win
+            if xg_delta > 0.5 and features.result != "W":
+                features.dominant_xg_no_win = True
+
+            # won_without_xg_edge: won but didn't have xG edge
+            if features.result == "W" and xg_delta <= 0:
+                features.won_without_xg_edge = True
+
+    def _extract_substitution_score_state(self, features: MatchFeatures, arsenal_subs: list[dict]) -> None:
+        """Extract substitution score state features."""
+        timeline = features.score_state_timeline
+
+        if not arsenal_subs:
+            return
+
+        # Get all goal events for counting goals after subs
+        all_goals = []
+        for e in features.score_state_timeline:
+            pass  # timeline only has score snapshots, not individual goals
+
+        # We need the raw events; reconstruct from timeline + goal minutes
+        arsenal_goal_minutes = set(features.arsenal_goal_minutes)
+        opponent_goal_minutes = set(features.opponent_goal_minutes)
+
+        # Sort subs by minute
+        sorted_subs = sorted(arsenal_subs, key=lambda s: s.get("minute", 0))
+        first_sub = sorted_subs[0]
+        first_sub_minute = first_sub.get("minute", 0)
+
+        features.first_sub_minute = first_sub_minute
+
+        # Score state at first sub
+        margin_at_sub = _score_margin_at_minute(timeline, first_sub_minute)
+        state_at_sub = _score_state_at_minute(timeline, first_sub_minute)
+
+        features.first_sub_score_margin = margin_at_sub
+        features.first_sub_score_state = state_at_sub
+
+        if state_at_sub == "leading":
+            features.subbed_while_leading = True
+        elif state_at_sub == "level":
+            features.subbed_while_level = True
+        elif state_at_sub == "trailing":
+            features.subbed_while_trailing = True
+
+        # Goals after first sub
+        goals_for_after = sum(1 for m in features.arsenal_goal_minutes if m > first_sub_minute)
+        goals_against_after = sum(1 for m in features.opponent_goal_minutes if m > first_sub_minute)
+        features.goals_for_after_first_sub = goals_for_after
+        features.goals_against_after_first_sub = goals_against_after
+        features.net_goals_after_first_sub = goals_for_after - goals_against_after
+
+        # Extend substitution_windows with score state info
+        extended_windows = _compute_substitution_score_effects(
+            features.substitution_windows, timeline,
+            features.arsenal_goal_minutes, features.opponent_goal_minutes,
+        )
+        features.substitution_windows = extended_windows
+
+    def _extract_opponent_shot_quality(self, features: MatchFeatures) -> None:
+        """Extract opponent shot quality features."""
+        xg_for = features.xg_for
+        xg_against = features.xg_against
+        shots_for = features.shots_for
+        shots_against = features.shots_against
+        sot_for = features.shots_on_target_for
+        sot_against = features.shots_on_target_against
+
+        # xG per shot
+        if xg_for is not None and shots_for is not None and shots_for > 0:
+            features.arsenal_xg_per_shot = round(xg_for / shots_for, 3)
+        if xg_against is not None and shots_against is not None and shots_against > 0:
+            features.opponent_xg_per_shot = round(xg_against / shots_against, 3)
+
+        # xG per shot on target
+        if xg_for is not None and sot_for is not None and sot_for > 0:
+            features.arsenal_xg_per_shot_on_target = round(xg_for / sot_for, 3)
+        if xg_against is not None and sot_against is not None and sot_against > 0:
+            features.opponent_xg_per_shot_on_target = round(xg_against / sot_against, 3)
+
+        # opponent_high_quality_chances: opponent xG/shot > 0.12
+        if features.opponent_xg_per_shot is not None:
+            features.opponent_high_quality_chances = features.opponent_xg_per_shot > 0.12
+
+        # opponent_low_volume_high_quality: few shots but high xG/shot
+        if (features.opponent_xg_per_shot is not None
+                and shots_against is not None
+                and shots_against <= 8
+                and features.opponent_xg_per_shot > 0.12):
+            features.opponent_low_volume_high_quality = True
 
 
 # ── Helpers ───────────────────────────────────────────────────────────
@@ -492,3 +751,279 @@ def _build_substitution_windows(arsenal_subs: list[dict]) -> list[dict]:
             "scored_after": s.get("scored_after", False),
         })
     return windows
+
+
+# ── v2 Helper functions ──────────────────────────────────────────────
+
+
+def _score_state_at_minute(timeline: list[dict], minute: int) -> str | None:
+    """Return the score state at a given minute.
+
+    Returns "leading", "trailing", "level", or None if no timeline.
+    Uses the last timeline entry at or before the given minute.
+    """
+    if not timeline:
+        return None
+
+    # Find the last timeline entry at or before the given minute
+    best = None
+    for entry in timeline:
+        if entry["minute"] <= minute:
+            best = entry
+        else:
+            break
+
+    if best is None:
+        return None
+
+    a = best["arsenal_score"]
+    o = best["opponent_score"]
+    if a > o:
+        return "leading"
+    elif a < o:
+        return "trailing"
+    else:
+        return "level"
+
+
+def _score_margin_at_minute(timeline: list[dict], minute: int) -> int | None:
+    """Return the score margin (arsenal - opponent) at a given minute.
+
+    Returns None if no timeline.
+    """
+    if not timeline:
+        return None
+
+    best = None
+    for entry in timeline:
+        if entry["minute"] <= minute:
+            best = entry
+        else:
+            break
+
+    if best is None:
+        return None
+
+    return best["arsenal_score"] - best["opponent_score"]
+
+
+def _compute_minutes_by_score_state(timeline: list[dict], duration: int) -> dict:
+    """Compute minutes spent in each score state.
+
+    Returns dict with:
+    - arsenal_led_at_any_point: bool
+    - arsenal_trailed_at_any_point: bool
+    - lead_change_count: int
+    - minutes_leading: int
+    - minutes_trailing: int
+    - minutes_level: int
+    """
+    result = {
+        "arsenal_led_at_any_point": False,
+        "arsenal_trailed_at_any_point": False,
+        "lead_change_count": 0,
+        "minutes_leading": 0,
+        "minutes_trailing": 0,
+        "minutes_level": duration,
+    }
+
+    if not timeline or len(timeline) < 2:
+        return result
+
+    # Compute time intervals between timeline entries
+    prev_state = "level"  # 0-0 at start
+    prev_margin = 0
+    leading = 0
+    trailing = 0
+    level = 0
+    lead_changes = 0
+
+    for i in range(len(timeline)):
+        entry = timeline[i]
+        minute = entry["minute"]
+        a = entry["arsenal_score"]
+        o = entry["opponent_score"]
+        margin = a - o
+
+        # Determine current state
+        if margin > 0:
+            state = "leading"
+        elif margin < 0:
+            state = "trailing"
+        else:
+            state = "level"
+
+        # Time duration for this state (from this entry to next entry, or end)
+        if i + 1 < len(timeline):
+            next_minute = timeline[i + 1]["minute"]
+        else:
+            next_minute = duration
+
+        time_in_state = max(0, next_minute - minute)
+
+        if state == "leading":
+            leading += time_in_state
+        elif state == "trailing":
+            trailing += time_in_state
+        else:
+            level += time_in_state
+
+        # Track lead changes (between consecutive timeline entries)
+        if i > 0:
+            if (prev_margin <= 0 and margin > 0) or (prev_margin >= 0 and margin < 0):
+                lead_changes += 1
+
+        prev_margin = margin
+
+    result["arsenal_led_at_any_point"] = leading > 0
+    result["arsenal_trailed_at_any_point"] = trailing > 0
+    result["lead_change_count"] = lead_changes
+    result["minutes_leading"] = leading
+    result["minutes_trailing"] = trailing
+    result["minutes_level"] = level
+
+    return result
+
+
+def _compute_lead_protection(timeline: list[dict], duration: int) -> dict:
+    """Compute lead protection features.
+
+    Returns dict with all lead protection fields.
+    """
+    result = {
+        "max_lead": 0,
+        "max_deficit": 0,
+        "lead_lost_count": 0,
+        "equalizers_conceded_after_leading": 0,
+        "goals_conceded_while_leading": 0,
+        "first_lead_minute": None,
+        "last_lead_minute": None,
+        "final_state_from_first_lead": "never_led",
+        "led_after_75": False,
+        "late_lead_lost": False,
+        "late_lead_protected": False,
+        "late_goals_conceded_while_leading": 0,
+    }
+
+    if not timeline or len(timeline) < 2:
+        return result
+
+    first_lead_minute = None
+    last_lead_minute = None
+    ever_led = False
+    ever_lost_lead = False
+    max_lead = 0
+    max_deficit = 0
+    goals_conceded_while_leading = 0
+    equalizers_conceded_after_leading = 0
+    led_after_75 = False
+    late_lead_lost = False
+    late_goals_conceded_while_leading = 0
+
+    # Walk through timeline
+    prev_margin = 0
+    for i in range(1, len(timeline)):
+        entry = timeline[i]
+        minute = entry["minute"]
+        margin = entry["arsenal_score"] - entry["opponent_score"]
+
+        # Track max lead and deficit
+        if margin > max_lead:
+            max_lead = margin
+        if margin < max_deficit:
+            max_deficit = margin
+
+        # Track leading periods
+        if margin > 0:
+            if not ever_led:
+                first_lead_minute = minute
+                ever_led = True
+            last_lead_minute = minute
+
+        # Goals conceded while leading: opponent scored when we were leading
+        # Check if this transition is due to opponent scoring
+        if prev_margin > 0:
+            # We were leading; check if opponent scored (margin decreased)
+            if margin < prev_margin:
+                goals_conceded_while_leading += (prev_margin - margin)
+                if minute >= 75:
+                    late_goals_conceded_while_leading += (prev_margin - margin)
+                # Check if equalized (margin went to 0 or below)
+                if margin <= 0:
+                    equalizers_conceded_after_leading += 1
+                    ever_lost_lead = True
+                    if minute >= 75:
+                        late_lead_lost = True
+
+        prev_margin = margin
+
+    # Check if leading at minute 75 (from the state at that point)
+    state_at_75 = _score_state_at_minute(timeline, 75)
+    if state_at_75 == "leading":
+        led_after_75 = True
+
+    # Also check all timeline entries >= 75
+    for tl_entry in timeline:
+        if tl_entry["minute"] >= 75:
+            tl_margin = tl_entry["arsenal_score"] - tl_entry["opponent_score"]
+            if tl_margin > 0:
+                led_after_75 = True
+                break
+
+    result["max_lead"] = max_lead
+    result["max_deficit"] = abs(min(max_deficit, 0))
+    result["lead_lost_count"] = equalizers_conceded_after_leading
+    result["equalizers_conceded_after_leading"] = equalizers_conceded_after_leading
+    result["goals_conceded_while_leading"] = goals_conceded_while_leading
+    result["first_lead_minute"] = first_lead_minute
+    result["last_lead_minute"] = last_lead_minute
+    result["led_after_75"] = led_after_75
+    result["late_goals_conceded_while_leading"] = late_goals_conceded_while_leading
+    result["late_lead_lost"] = late_lead_lost
+
+    # final_state_from_first_lead
+    if not ever_led:
+        result["final_state_from_first_lead"] = "never_led"
+    elif ever_lost_lead:
+        result["final_state_from_first_lead"] = "lost"
+    else:
+        result["final_state_from_first_lead"] = "protected"
+        result["late_lead_protected"] = led_after_75 and not late_lead_lost
+
+    return result
+
+
+def _compute_substitution_score_effects(
+    windows: list[dict],
+    timeline: list[dict],
+    arsenal_goal_minutes: list[int],
+    opponent_goal_minutes: list[int],
+) -> list[dict]:
+    """Extend substitution windows with score state info.
+
+    Returns extended windows with additional fields:
+    - score_margin_at_sub
+    - score_state_at_sub
+    - goals_for_after_sub
+    - goals_against_after_sub
+    - net_goals_after_sub
+    """
+    extended = []
+    for w in windows:
+        minute = w.get("minute", 0)
+        margin = _score_margin_at_minute(timeline, minute)
+        state = _score_state_at_minute(timeline, minute)
+
+        goals_for_after = sum(1 for m in arsenal_goal_minutes if m > minute)
+        goals_against_after = sum(1 for m in opponent_goal_minutes if m > minute)
+
+        extended.append({
+            **w,
+            "score_margin_at_sub": margin,
+            "score_state_at_sub": state,
+            "goals_for_after_sub": goals_for_after,
+            "goals_against_after_sub": goals_against_after,
+            "net_goals_after_sub": goals_for_after - goals_against_after,
+        })
+
+    return extended

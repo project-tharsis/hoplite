@@ -152,6 +152,7 @@ def prepare_evaluation(data: dict, *, output_format: str = "json") -> dict | str
         "features": features_dict,
         "weak_labels": weak_labels_dict,
         "rubric_version": rubric_version,
+        "features_version": "v2",
         "prompt": prompt,
     }
 

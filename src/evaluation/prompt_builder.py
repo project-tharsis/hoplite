@@ -155,6 +155,9 @@ class PromptBuilder:
         # Section 1: Match Summary
         sections.append(self._build_match_summary(features))
 
+        # Section 1.5: Match Process Signals
+        sections.append(self._build_match_process_signals(features))
+
         # Section 2: Feature Table
         sections.append(self._build_feature_table(features))
 
@@ -224,6 +227,98 @@ class PromptBuilder:
                 f"Score: Arsenal {f.arsenal_goals} - {f.opponent_goals} {opp} ({result_label})",
                 f"Venue: {f.venue or 'Unknown'} | Opponent tier: {f.opponent_quality or 'Unknown'} | Stage: {f.competition_stage or 'Unknown'}",
             ]
+        lines.append("")
+        return "\n".join(lines)
+
+    def _build_match_process_signals(self, f: MatchFeatures) -> str:
+        """Section 1.5: Match process signals (v2 features)."""
+        if self.language == "zh":
+            header = "## 1.5 比赛过程信号"
+        else:
+            header = "## 1.5 Match Process Signals"
+
+        lines = [header, ""]
+
+        # First goal
+        if f.first_goal_team is not None:
+            if f.first_goal_team == "arsenal":
+                first_goal_label = "Arsenal"
+            elif f.first_goal_team == "opponent":
+                first_goal_label = f.opponent_name or "对手"
+            else:
+                first_goal_label = "unknown"
+        else:
+            first_goal_label = "unknown"
+
+        if self.language == "zh":
+            lines.append(f"- 先进球：{first_goal_label}")
+        else:
+            lines.append(f"- First goal: {first_goal_label}")
+
+        # Minutes leading / trailing
+        if f.minutes_leading is not None and f.minutes_trailing is not None:
+            if self.language == "zh":
+                lines.append(f"- 领先时间：{f.minutes_leading} 分钟；落后时间：{f.minutes_trailing} 分钟")
+            else:
+                lines.append(f"- Minutes leading: {f.minutes_leading}; trailing: {f.minutes_trailing}")
+
+        # Lead protection
+        if self.language == "zh":
+            lines.append(f"- 领先保护：{f.final_state_from_first_lead}")
+        else:
+            lines.append(f"- Lead protection: {f.final_state_from_first_lead}")
+
+        # After 75'
+        if self.language == "zh":
+            led_75 = "是" if f.led_after_75 else "否"
+            late_lost = "是" if f.late_lead_lost else "否"
+            lines.append(f"- 75' 后领先：{led_75}；75' 后丢领先：{late_lost}")
+        else:
+            led_75 = "Yes" if f.led_after_75 else "No"
+            late_lost = "Yes" if f.late_lead_lost else "No"
+            lines.append(f"- Led after 75': {led_75}; Late lead lost: {late_lost}")
+
+        # Substitution state
+        if f.first_sub_score_state is not None:
+            if self.language == "zh":
+                lines.append(f"- 换人时状态：{f.first_sub_score_state}")
+            else:
+                lines.append(f"- Sub state: {f.first_sub_score_state}")
+        else:
+            if self.language == "zh":
+                lines.append("- 换人时状态：unknown")
+            else:
+                lines.append("- Sub state: unknown")
+
+        # Net goals after first sub
+        if f.first_sub_minute is not None:
+            sign = "+" if f.net_goals_after_first_sub >= 0 else ""
+            if self.language == "zh":
+                lines.append(f"- 换人后净胜球：{sign}{f.net_goals_after_first_sub}")
+            else:
+                lines.append(f"- Net goals after first sub: {sign}{f.net_goals_after_first_sub}")
+
+        # xG conversion
+        if f.xg_overperformance_for is not None or f.xg_overperformance_against is not None:
+            xg_parts = []
+            if f.xg_overperformance_for is not None:
+                sign = "+" if f.xg_overperformance_for >= 0 else ""
+                xg_parts.append(f"for {sign}{f.xg_overperformance_for:.1f}")
+            if f.xg_overperformance_against is not None:
+                sign = "+" if f.xg_overperformance_against >= 0 else ""
+                xg_parts.append(f"against {sign}{f.xg_overperformance_against:.1f}")
+            if self.language == "zh":
+                lines.append(f"- xG 转化差：{', '.join(xg_parts)}")
+            else:
+                lines.append(f"- xG conversion: {', '.join(xg_parts)}")
+
+        # Opponent shot quality
+        if f.opponent_xg_per_shot is not None:
+            if self.language == "zh":
+                lines.append(f"- 对手机会质量：xG/shot {f.opponent_xg_per_shot:.2f}")
+            else:
+                lines.append(f"- Opponent chance quality: xG/shot {f.opponent_xg_per_shot:.2f}")
+
         lines.append("")
         return "\n".join(lines)
 

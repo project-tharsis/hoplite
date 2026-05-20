@@ -261,7 +261,7 @@ def _filter_entries(
 def _get_current_versions(entries: list[dict]) -> dict:
     """Derive current versions from KB entries + blind spots registry."""
     versions = {
-        "features_version": "v1",
+        "features_version": "v2",
         "weak_label_version": "v1.1",
         "rubric_version": "arteta_v1",
         "prompt_builder_version": "v1",
@@ -269,7 +269,7 @@ def _get_current_versions(entries: list[dict]) -> dict:
     }
     for entry in entries:
         if _is_feature_backed(entry):
-            versions["features_version"] = entry.get("features_version", "v1")
+            versions["features_version"] = entry.get("features_version", "v2")
             versions["weak_label_version"] = entry.get("weak_label_version", "v1.1")
             versions["rubric_version"] = entry.get("rubric_version", "arteta_v1")
             versions["prompt_builder_version"] = entry.get("prompt_builder_version", "v1")

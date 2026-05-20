@@ -92,7 +92,7 @@ def save_evaluation(
         "features": effective_features or {},
         "evaluation": eval_dict,
         "weak_labels": weak_labels or {},
-        "features_version": (versions or {}).get("features", "v1"),
+        "features_version": (versions or {}).get("features", "v2"),
         "weak_label_version": (versions or {}).get("weak_label", "v1"),
         "rubric_version": (versions or {}).get("rubric", "v1"),
         "prompt_builder_version": (versions or {}).get("prompt_builder", "v1"),

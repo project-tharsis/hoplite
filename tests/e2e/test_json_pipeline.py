@@ -247,7 +247,7 @@ class TestSaveEvaluationV2:
                 _strict_v2_evaluation(),
                 weak_labels={"overall_signal": "🟡", "model_signals": {}},
                 versions={
-                    "features": "v1",
+                    "features": "v2",
                     "weak_label": "v1",
                     "rubric": "arteta_v1",
                     "prompt_builder": "v1",
@@ -284,7 +284,7 @@ class TestSaveEvaluationV2:
 
     def test_entry_contains_version_fields(self, tmp_path):
         entry = self._save_and_read(tmp_path)
-        assert entry["features_version"] == "v1"
+        assert entry["features_version"] == "v2"
         assert entry["weak_label_version"] == "v1"
         assert entry["rubric_version"] == "arteta_v1"
         assert entry["prompt_builder_version"] == "v1"
@@ -1654,7 +1654,7 @@ class TestBackfillE2E:
         seed_raw = next(e for e in updated_kb if e["match_id"] == "seed-raw")
         assert "features" in seed_raw
         assert "weak_labels" in seed_raw
-        assert seed_raw["features_version"] == "v1"
+        assert seed_raw["features_version"] == "v2"
         assert seed_raw["weak_label_version"] == "v1.1"
         assert seed_raw["rubric_version"] == "arteta_v1"
         assert seed_raw["prompt_builder_version"] == "v1"

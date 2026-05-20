@@ -376,6 +376,7 @@ def run_prepare_seed(
             "features": features,
             "weak_labels": weak_labels,
             "rubric_version": rubric_version,
+            "features_version": "v2",
             "prompt": prompt,
             "raw_match_path": raw_path or "",
             "report_path": report_path or "",
@@ -785,6 +786,168 @@ def _atomic_write_kb(kb_path: str, entries: list[dict]) -> None:
         raise
 
 
+# ── Refresh-features mode ────────────────────────────────────────────
+
+
+def run_refresh_features(
+    kb_path: str,
+    output_dir: str,
+    *,
+    dry_run: bool = True,
+) -> dict:
+    """Re-extract v2 features for all feature-backed KB entries.
+
+    Reads KB entries with features, finds raw JSON or report, re-extracts
+    features using v2 extractor.  Writes updated features back to KB
+    when --write is set.
+
+    Outputs knowledge.before.json, knowledge.after.json, feature_diff_report.json
+    into output_dir.  Skips legacy-only entries (no raw/report available).
+    """
+    from src.features.extractor import FeatureExtractor
+
+    entries = _load_kb(kb_path)
+
+    out = Path(output_dir)
+    out.mkdir(parents=True, exist_ok=True)
+
+    # Snapshot before
+    before_path = out / "knowledge.before.json"
+    with open(before_path, "w", encoding="utf-8") as f:
+        json.dump(entries, f, ensure_ascii=False, indent=2)
+
+    refreshed: list[dict] = []
+    skipped: list[dict] = []
+    errors: list[dict] = []
+    diffs: list[dict] = []
+
+    for entry in entries:
+        mid = str(entry.get("match_id", ""))
+
+        # Skip legacy-only entries
+        if not entry.get("features"):
+            skipped.append({"match_id": mid, "reason": "legacy_only_no_features"})
+            continue
+
+        # Skip human_override entries
+        if entry.get("human_override"):
+            skipped.append({"match_id": mid, "reason": "has_human_override"})
+            continue
+
+        # Find report or raw JSON
+        backfill = entry.get("backfill", {})
+        report_path = backfill.get("report_path", "")
+        fixture_id = str(backfill.get("fixture_id", "") or mid)
+
+        # Try report_path from backfill
+        report_json = None
+        if report_path and Path(report_path).is_file():
+            try:
+                with open(report_path, encoding="utf-8") as f:
+                    report_json = json.load(f)
+            except (OSError, json.JSONDecodeError):
+                pass
+
+        # Try common report locations if not found
+        if report_json is None:
+            # Look in data/backfill/runs/*/reports/<fixture_id>.json
+            import glob
+            patterns = [
+                f"data/backfill/runs/*/reports/{fixture_id}.json",
+                f"data/backfill/runs/*/reports/{mid}.json",
+            ]
+            for pattern in patterns:
+                candidates = sorted(glob.glob(pattern))
+                if candidates:
+                    try:
+                        with open(candidates[-1], encoding="utf-8") as f:
+                            report_json = json.load(f)
+                        break
+                    except (OSError, json.JSONDecodeError):
+                        continue
+
+        if report_json is None:
+            skipped.append({"match_id": mid, "reason": "no_raw_or_report_found"})
+            continue
+
+        # Re-extract features
+        try:
+            new_features = FeatureExtractor.extract_from_report(report_json)
+            new_features_dict = new_features.to_dict()
+        except Exception as e:
+            errors.append({"match_id": mid, "error": str(e)})
+            continue
+
+        # Compute diff
+        old_features = entry.get("features", {})
+        diff = _compute_feature_diff(old_features, new_features_dict)
+        if diff:
+            diffs.append({"match_id": mid, "diff": diff})
+
+        refreshed.append({
+            "match_id": mid,
+            "old_keys": sorted(old_features.keys()),
+            "new_keys": sorted(new_features_dict.keys()),
+            "has_diff": bool(diff),
+        })
+
+        # Update entry if not dry run
+        if not dry_run:
+            entry["features"] = new_features_dict
+            entry["features_version"] = "v2"
+
+    # Write after snapshot
+    after_path = out / "knowledge.after.json"
+    with open(after_path, "w", encoding="utf-8") as f:
+        json.dump(entries, f, ensure_ascii=False, indent=2)
+
+    # Write diff report
+    diff_report = {
+        "summary": {
+            "total_entries": len(entries),
+            "refreshed": len(refreshed),
+            "skipped": len(skipped),
+            "errors": len(errors),
+            "entries_with_diff": len(diffs),
+            "dry_run": dry_run,
+        },
+        "refreshed": refreshed,
+        "skipped": skipped,
+        "errors": errors,
+        "diffs": diffs,
+    }
+    diff_report_path = out / "feature_diff_report.json"
+    with open(diff_report_path, "w", encoding="utf-8") as f:
+        json.dump(diff_report, f, ensure_ascii=False, indent=2)
+
+    # Write KB if not dry run
+    if not dry_run:
+        _atomic_write_kb(kb_path, entries)
+
+    return {
+        "summary": diff_report["summary"],
+        "knowledge_before_path": str(before_path),
+        "knowledge_after_path": str(after_path),
+        "feature_diff_report_path": str(diff_report_path),
+        "dry_run": dry_run,
+    }
+
+
+def _compute_feature_diff(old: dict, new: dict) -> dict:
+    """Compute diff between old and new feature dicts.
+
+    Returns dict of changed keys with old/new values.
+    """
+    diff = {}
+    all_keys = set(old.keys()) | set(new.keys())
+    for key in sorted(all_keys):
+        old_val = old.get(key)
+        new_val = new.get(key)
+        if old_val != new_val:
+            diff[key] = {"old": old_val, "new": new_val}
+    return diff
+
+
 # ── Validate-rest mode ─────────────────────────────────────────────
 
 
@@ -951,7 +1114,7 @@ def main():
     parser.add_argument("--kb", required=True, help="Path to knowledge.json")
     parser.add_argument("--manifest", required=True, help="Path to backfill manifest")
     parser.add_argument("--mode", required=True,
-                        choices=["inventory", "prepare-seed", "apply-features", "validate-rest"],
+                        choices=["inventory", "prepare-seed", "apply-features", "validate-rest", "refresh-features"],
                         help="Backfill mode")
     parser.add_argument("--output", help="Run directory for output files")
     parser.add_argument("--run", help="Existing run directory to read artifacts from (for apply-features)")
@@ -1008,6 +1171,13 @@ def main():
             print(json.dumps({"error": "--output is required for validate-rest mode"}), file=sys.stderr)
             sys.exit(1)
         result = run_validate_rest(kb_path, manifest_path, args.output)
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+
+    elif args.mode == "refresh-features":
+        if not args.output:
+            print(json.dumps({"error": "--output is required for refresh-features mode"}), file=sys.stderr)
+            sys.exit(1)
+        result = run_refresh_features(kb_path, args.output, dry_run=not args.write)
         print(json.dumps(result, indent=2, ensure_ascii=False))
 
     else:
