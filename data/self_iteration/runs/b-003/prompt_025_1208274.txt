@@ -1,0 +1,258 @@
+你是足球战术分析师，需要基于结构化比赛数据和弱标签基线，用 Arteta 的6个心智模型框架评估阿森纳的表现，然后撰写中文复盘。
+
+## 1. 比赛概述
+
+比分: 阿森纳 0 - 1 West Ham（负）
+场地: home | 对手等级: mid_table | 赛事: league_late
+
+## 2. 关键数据
+
+| 指标 | 阿森纳 | 对手 | 差值 |
+| --- | --- | --- | --- |
+| possession | 68.0% | 32.0% | 36.0% |
+| shots | 20 | 5 | 15 |
+| shots_on_target | 2 | 2 | 0 |
+| xG | 1.22 | 1.07 | 0.15 |
+| pass_accuracy | 89.0% | 78.0% | 11.0% |
+| corners | 2 | 0 | 2 |
+| fouls | 16 | 15 | N/A |
+| 黄牌 | 1 | - | - |
+| 红牌 | 1 | - | - |
+| set_piece_goals | 0 | 0 | N/A |
+| 换人次数 | 4 | - | - |
+| 换人后进球 | 0 | - | - |
+
+## 3. 缺失数据
+
+- pressing
+- pressing_recoveries
+- transition
+
+## 4. 弱标签基线
+
+**综合信号:** 🔴
+
+### 心智模型信号
+- 模型1 (文化标准): 🔴 [置信度: medium] 证据: yellow_cards_for=1, red_cards_for=1, red_card_present
+- 模型2 (比赛控制): 🟢 [置信度: medium] 证据: shot_delta=15, xg_delta=0.15, possession_delta=36.0
+- 模型3 (防守身份): 🟢 [置信度: medium] 证据: goals_conceded=1, opponent_shots_on_target=2, xg_against=1.07
+- 模型4 (边际收益): 🟡 [置信度: medium] 证据: set_piece_goals_for=0, set_piece_goals_against=0, corners_for=2
+- 模型5 (能力叠加): 🔴 [置信度: medium] 证据: result=L, pass_accuracy_for=89.0, possession_for=68.0
+- 模型6 (角色清晰): 🟡 [置信度: medium] 证据: arsenal_sub_count=4, goals_after_arsenal_subs=0, earliest_sub_min=56
+
+### 维度信号
+- 执行: 🟡
+- 调整: 🟡
+- 满意: 🔴
+
+## 5. 评估规则摘要
+
+### 模型1: 文化是战术的操作系统
+**哲学**: 日常标准不对，战术不会稳定运行。
+**正面指标**:
+  - 纪律良好：≤1黄牌
+  - 黄牌出现在合理时刻（如战术犯规）
+  - 犯规数可控
+**负面指标**:
+  - 红牌
+  - 2+黄牌且出现时机不当（开场/僵持时无谓吃牌）
+  - 犯规失控
+**判断规则**:
+  - red > 0 → 🔴 (high confidence)
+  - yellow >= 4 → 🔴 (high confidence)
+  - critical-time card (yellow >= 2 AND result == L) → 🔴 (high confidence)
+  - fouls_delta >= 8 → 🔴 (high confidence)
+**叙事指导**: 领先7-0时89分钟的战术黄牌 ≠ 0-0时2分钟的鲁莽黄牌。结合比赛状态判断纪律质量。
+
+### 模型2: 控制比赛发生在哪里
+**哲学**: 控制不是只控球，是把比赛带到想要的区域、节奏和情绪。
+**正面指标**:
+  - 控球≥55%
+  - 射门显著多于对手
+  - xG碾压
+**负面指标**:
+  - 控球≤45%
+  - 射门少于对手
+  - 被锁在防守三区
+**判断规则**:
+  - shot_delta > 0 AND xg_delta > 0 → 🟢 (high)
+  - xg missing but shot_delta > 0 AND possession_delta > 0 → 🟢 (medium)
+  - shot_delta < 0 AND xg_delta < 0 AND corner_delta < 0 → 🔴 (high)
+  - mixed signals (poss positive but shots negative) → 🟡 (medium)
+**叙事指导**: 控球率高不等于控制比赛。需要结合射门质量和区域控制来判断阿森纳是否真的在主导比赛。
+
+### 模型3: 防守也是进攻身份
+**哲学**: 防守应为进攻创造平台——球员要'爱'防守。
+**正面指标**:
+  - 零封
+  - 失≤1球且对手射正≤3
+  - 防守为进攻提供了平台
+**负面指标**:
+  - 失3+球
+  - 防守崩溃导致进攻被压缩
+**判断规则**:
+  - clean sheet → 🟢 (high)
+  - 1 conceded AND opp_sot <= 3 → 🟢 (high)
+  - 3+ conceded → 🔴 (high)
+  - xg_against > 2.0 → 🔴 (medium)
+**叙事指导**: 防守不只是不失球。要判断防守是否为进攻创造了平台——高位反抢成功后快速反击是好防守转化为进攻的标志。
+
+### 模型4: 边际收益要专家化
+**哲学**: 能决定比赛的部门要专家化——定位球/转换不能靠兼职。
+**正面指标**:
+  - 定位球进球≥2
+  - 零定位球失球
+  - 角球有威胁
+**负面指标**:
+  - 定位球失球≥2
+  - 定位球进攻毫无威胁
+**判断规则**:
+  - set_piece_goals_for > set_piece_goals_against → 🟢 (high)
+  - even but corner advantage > 3 → 🟢 (high)
+  - set_piece_goals_against > set_piece_goals_for → 🔴 (high)
+  - neutral → 🟡 (high)
+**叙事指导**: 定位球不只是进球数。要评估角球/任意球的威胁质量——即使没进球，如果每次角球都制造混乱，说明定位球教练组工作到位。
+
+### 模型5: 加能力，但不要丢身份
+**哲学**: 保留传统优势，同时叠加新能力。
+**正面指标**:
+  - 传统优势保留（传球≥85%、控球好）
+  - 新元素有效（多人进球、新阵型成功）
+**负面指标**:
+  - 传统优势丢失（传球差、控球被压制）
+**判断规则**:
+  - win AND pass_accuracy > 80% AND possession > 50% → 🟢 (high)
+  - loss → 🔴 (high)
+  - draw with poor control (PA<75 AND poss<45) → 🔴 (medium)
+  - win but one metric below threshold → 🟡 (medium)
+**叙事指导**: 多人进球说明体系运转良好，一人包办说明依赖个人能力。传统优势（控球、传球）不能因为叠加新战术而丢失。
+
+### 模型6: 人需要清晰度，不只是压力
+**哲学**: 替补要知道如何贡献，球员要角色清晰。
+**正面指标**:
+  - 换人产生进球/助攻
+  - 替补融入体系
+  - 换人时机合理（45-75分钟）
+**负面指标**:
+  - 换人过晚（80'后且比分落后）
+  - 多次换人无效
+  - 替补明显脱节
+**判断规则**:
+  - no subs AND result == L → 🔴 (high)
+  - no subs → 🟡 (medium)
+  - earliest sub < 70' AND goals_after_subs > 0 → 🟢 (high)
+  - latest sub > 80' AND goals conceded after subs → 🔴 (high)
+**叙事指导**: 换人不只是'谁上谁下'。要评估替补上场后是否清楚自己的角色——是加强防守还是寻找进球？角色清晰度决定换人效果。
+
+### 三维度评估
+**赛前决策执行度** (execution):
+  - stats 数据支持 predicted_plan 的方向 → 🟢
+  - 部分匹配 → 🟡
+  - 差距明显 → 🔴
+
+**赛中调整合理性** (adjustment):
+  - 换人直接产生进球 → 🟢
+  - 换人时机合理且比赛结果好 → 🟢
+  - 换人无效果但比赛已无悬念 → 🟡
+
+**比赛结果满意度** (satisfaction):
+  - L1: 赢强敌→🟢, 赢弱敌→🟡, 平强敌客场→🟢, 输弱敌→🔴, 输强敌→🟡
+  - L2: 净胜≥3球自动🟢, 客场净胜≥2球→🟢, 净负≥4球→🔴
+  - L3: 淘汰赛客场取胜→🟢
+
+## 6. 历史校准参考
+
+类似场景共 5 场: 2胜 1平 2负
+场均进球 1.8, 场均失球 1.2
+
+历史模型信号分布:
+- 文化标准: 🟢0 🟡0 🔴0
+- 比赛控制: 🟢0 🟡0 🔴0
+- 防守身份: 🟢0 🟡0 🔴0
+- 边际收益: 🟢0 🟡0 🔴0
+- 能力叠加: 🟢0 🟡0 🔴0
+- 角色清晰: 🟢0 🟡0 🔴0
+
+校准置信度: medium
+
+样本质量: 0条含特征 / 0条含人工审核 / 5条仅旧格式
+
+校准护栏:
+- Historical hints are reference only.
+- Current-match features take priority.
+- Fewer than 5 similar matches means calibration confidence is low or medium.
+
+已知WK盲区:
+- dominant_stats_loss: WK can overrate matches where Arsenal dominates shots/xG/possession but loses.
+  护栏: Do not let shot/xG/possession dominance override result satisfaction. A loss to lower/mid_table opposition cannot be overall green.
+
+**注意**: 历史仅作参考，以本场数据为准。
+
+## ⚠️ 弱标签分歧要求
+
+你 MUST 解释任何与弱标签基线的分歧。如果你的信号与弱标签不同，请在 weak_label_disagreements 中说明原因。
+
+## 输出格式
+
+请按以下 JSON 结构输出评估结果（先说 signals，再写 narrative）：
+
+```json
+{
+  "overall_signal": "🟢 | 🟡 | 🔴",
+  "model_signals": {
+    "1": "🟢 | 🟡 | 🔴",
+    "2": "🟢 | 🟡 | 🔴",
+    "3": "🟢 | 🟡 | 🔴",
+    "4": "🟢 | 🟡 | 🔴",
+    "5": "🟢 | 🟡 | 🔴",
+    "6": "🟢 | 🟡 | 🔴"
+  },
+  "dimension_signals": {
+    "execution": "🟢 | 🟡 | 🔴",
+    "adjustment": "🟢 | 🟡 | 🔴",
+    "satisfaction": "🟢 | 🟡 | 🔴"
+  },
+  "evidence": {
+    "1": [
+      "evidence string 1",
+      "evidence string 2"
+    ],
+    "2": [
+      "..."
+    ],
+    "3": [
+      "..."
+    ],
+    "4": [
+      "..."
+    ],
+    "5": [
+      "..."
+    ],
+    "6": [
+      "..."
+    ]
+  },
+  "confidence": {
+    "1": "high | medium | low",
+    "2": "high | medium | low",
+    "3": "high | medium | low",
+    "4": "high | medium | low",
+    "5": "high | medium | low",
+    "6": "high | medium | low"
+  },
+  "missing_or_weak_evidence": [
+    "xG missing",
+    "pressing data unavailable"
+  ],
+  "weak_label_disagreements": [
+    {
+      "model": "2",
+      "weak_signal": "🟡",
+      "llm_signal": "🟢",
+      "reason": "xG data unavailable but shot dominance clear"
+    }
+  ],
+  "narrative": "中文复盘正文..."
+}
+```

@@ -1,0 +1,540 @@
+{
+  "summary": {
+    "total_results": 102,
+    "applied": 94,
+    "skipped": 0,
+    "errors": 8,
+    "dry_run": false
+  },
+  "applied": [
+    {
+      "match_id": "1208023",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208032",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208041",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208059",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208067",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208072",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208081",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208091",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208125",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208134",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208154",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208167",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208174",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208185",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208223",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208252",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208254",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208267",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208274",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208285",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208298",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208304",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208314",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208334",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208348",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208354",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208363",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208376",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208383",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208400",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1298642",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1309284",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208194",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208204",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1314297",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1327988",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1327989",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1378977",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1378979",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1378993",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1378999",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379009",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379026",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379029",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379042",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379049",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379060",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379076",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379079",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379091",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379099",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379109",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379119",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379132",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379139",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379149",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379160",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1208151",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379259",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379279",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379295",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379299",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379309",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379328",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1451021",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1451052",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1451061",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1451075",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1451107",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379202",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379185",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379220",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379209",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1457283",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379189",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1479619",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1451159",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1451136",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1506251",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1490810",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1498259",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1498260",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1528322",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1528330",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1534570",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1523412",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1531572",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1540842",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1540843",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1534571",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1451123",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379237",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379239",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    },
+    {
+      "match_id": "1379278",
+      "evaluator_id": "B",
+      "model": "mimo-v2.5-pro"
+    }
+  ],
+  "skipped": [],
+  "errors": [
+    {
+      "match_id": "1208103",
+      "error": {
+        "code": "QUARANTINE",
+        "message": "Low-quality result: all_model_signals_placeholder"
+      }
+    },
+    {
+      "match_id": "1208118",
+      "error": {
+        "code": "QUARANTINE",
+        "message": "Low-quality result: all_dimension_signals_placeholder"
+      }
+    },
+    {
+      "match_id": "1208233",
+      "error": {
+        "code": "QUARANTINE",
+        "message": "Low-quality result: all_dimension_signals_placeholder"
+      }
+    },
+    {
+      "match_id": "1208326",
+      "error": {
+        "code": "QUARANTINE",
+        "message": "Low-quality result: all_dimension_signals_placeholder"
+      }
+    },
+    {
+      "match_id": "1208215",
+      "error": {
+        "code": "QUARANTINE",
+        "message": "Low-quality result: all_dimension_signals_placeholder"
+      }
+    },
+    {
+      "match_id": "1379169",
+      "error": {
+        "code": "QUARANTINE",
+        "message": "Low-quality result: all_dimension_signals_placeholder"
+      }
+    },
+    {
+      "match_id": "1379251",
+      "error": {
+        "code": "QUARANTINE",
+        "message": "Low-quality result: all_dimension_signals_placeholder"
+      }
+    },
+    {
+      "match_id": "1518728",
+      "error": {
+        "code": "QUARANTINE",
+        "message": "Low-quality result: all_dimension_signals_placeholder"
+      }
+    }
+  ]
+}
