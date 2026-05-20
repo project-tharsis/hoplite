@@ -1,6 +1,8 @@
 {
   "source": "wk-v1.2 rejected candidates",
   "total_rejected": 14,
+  "empty_predicate": 2,
+  "non_empty_rejected": 12,
   "failure_breakdown": {
     "support_too_low": 12,
     "precision_too_low": 12,
@@ -76,5 +78,6 @@
       "direction": "downgrade",
       "count": 1
     }
-  ]
+  ],
+  "note": "empty_predicate 来自上一轮 distill 的空 intersection，非本轮 feature 粒度问题"
 }

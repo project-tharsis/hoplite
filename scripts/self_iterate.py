@@ -1215,7 +1215,7 @@ def _derive_feature_view(entry: dict) -> dict:
     opponent_shots_on_target = features.get("opponent_shots_on_target", None)
 
     missing = []
-    for f in ["goals_conceded", "shots_delta", "possession_delta", "corner_delta", "xg_delta", "xg_against", "opponent_shots_on_target"]:
+    for f in ["goals_conceded", "shot_delta", "possession_delta", "corner_delta", "xg_delta", "xg_against", "opponent_shots_on_target"]:
         if features.get(f) is None:
             missing.append(f)
 
@@ -1964,10 +1964,13 @@ def run_diagnose_predicate_mining(
     report = {
         "source": "wk-v1.2 rejected candidates",
         "total_rejected": len(rejected),
+        "empty_predicate": failure_breakdown["empty_predicate"],
+        "non_empty_rejected": len(rejected) - failure_breakdown["empty_predicate"],
         "failure_breakdown": failure_breakdown,
         "by_target": by_target,
         "by_direction": by_direction,
         "top_failure_modes": top_failure_modes,
+        "note": "empty_predicate 来自上一轮 distill 的空 intersection，非本轮 feature 粒度问题",
     }
 
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
@@ -2222,6 +2225,15 @@ def run_mine_enhanced_wk_predicates(
                 # Breadth check: predicates matching >80% of clean subset are too broad
                 breadth = matched_total / len(clean_ids) if clean_ids else 0.0
                 if breadth > 0.80:
+                    total_predicates_evaluated += 1
+                    rejected.append({
+                        "id": f"breadth_{status}_{target.replace('.', '_')}_{direction}_{'_'.join(sorted(pred.keys()))}",
+                        "predicate": pred,
+                        "predicate_size": len(pred),
+                        "matched_total": matched_total,
+                        "breadth": round(breadth, 4),
+                        "rejection_reason": f"breadth_too_high: matches {matched_total}/{len(clean_ids)} ({breadth:.0%}) of clean subset",
+                    })
                     continue
 
                 # Cross-run stability
@@ -2287,28 +2299,30 @@ def run_mine_enhanced_wk_predicates(
     final_candidates = [c for c in deduped if c.get("eligibility") == "implementation_eligible"]
     exploratory = [c for c in deduped if c.get("eligibility") == "exploratory_only"]
 
+    # Write rejected separately first to get path
+    rej_path = Path(output_path).parent / "enhanced_rejected_candidates.json"
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(rej_path, "w", encoding="utf-8") as f:
+        json.dump(rejected, f, ensure_ascii=False, indent=2)
+
     output = {
         "candidate_schema_version": "enhanced_wk_rule_candidate_v1",
         "candidates": final_candidates,
         "exploratory_candidates": exploratory,
-        "rejected_candidates": rejected,
+        "rejected_count": len(rejected),
+        "rejected_path": str(rej_path),
         "search_summary": {
             "groups_scanned": len(disagreement_groups),
             "predicates_evaluated": total_predicates_evaluated,
             "candidates_found": len(final_candidates),
             "exploratory_found": len(exploratory),
+            "breadth_rejected": sum(1 for c in rejected if "breadth_too_high" in c.get("rejection_reason", "")),
             "rejected": len(rejected),
         },
     }
 
-    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-
-    # Also write rejected separately
-    rej_path = Path(output_path).parent / "enhanced_rejected_candidates.json"
-    with open(rej_path, "w", encoding="utf-8") as f:
-        json.dump(rejected, f, ensure_ascii=False, indent=2)
 
     return {"summary": output["search_summary"]}
 
