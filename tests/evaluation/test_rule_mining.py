@@ -138,7 +138,7 @@ class TestFeatureViewDerivation:
 
     def test_late_subs(self):
         features = _make_features(
-            substitution_windows=[{"start_minute": 78, "end_minute": 78, "player": "X"}],
+            substitution_windows=[{"minute": 78, "player": "X"}],
         )
         fv = build_feature_view(_make_row(features=features))
         assert fv["late_subs"] is True

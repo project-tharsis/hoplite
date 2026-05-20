@@ -89,7 +89,7 @@ class MatchFeatures:
     set_piece_goals_against: int = 0
 
     # Substitutions
-    substitution_windows: list = field(default_factory=list)  # list of {start_minute, end_minute, player}
+    substitution_windows: list = field(default_factory=list)  # list of {minute, player, scored_after}
     arsenal_sub_count: int = 0
     goals_after_arsenal_subs: int = 0
     goals_by_substitutes: int = 0  # goals directly scored or assisted by subs

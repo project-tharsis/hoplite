@@ -151,8 +151,8 @@ def build_feature_view(row: dict) -> dict:
     if sub_windows and isinstance(sub_windows, list) and len(sub_windows) > 0:
         minutes = []
         for sw in sub_windows:
-            if isinstance(sw, dict) and "start_minute" in sw and sw["start_minute"] is not None:
-                minutes.append(sw["start_minute"])
+            if isinstance(sw, dict) and "minute" in sw and sw["minute"] is not None:
+                minutes.append(sw["minute"])
         if minutes:
             earliest = min(minutes)
             latest = max(minutes)
@@ -255,15 +255,22 @@ def _precision(group: list[dict]) -> float:
 
 
 def _count_opponents_or_competitions(rows: list[dict]) -> int:
-    """Count distinct opponents or competitions in the examples."""
+    """Count distinct opponents or competitions in the examples.
+
+    Reads opponent_name and competition from the adjudication row's
+    features dict (populated from KB top-level fields by _build_row).
+    Falls back to opponent_quality / competition_stage for test compat.
+    """
     opponents = set()
     competitions = set()
     for row in rows:
-        ctx = row.get("context", {})
-        if ctx.get("opponent_quality"):
-            opponents.add(ctx["opponent_quality"])
-        if ctx.get("competition_stage"):
-            competitions.add(ctx["competition_stage"])
+        feats = row.get("features", {})
+        opp = feats.get("opponent_name") or row.get("context", {}).get("opponent_quality", "")
+        comp = feats.get("competition") or row.get("context", {}).get("competition_stage", "")
+        if opp:
+            opponents.add(opp)
+        if comp:
+            competitions.add(comp)
     return max(len(opponents), len(competitions))
 
 

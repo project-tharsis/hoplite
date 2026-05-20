@@ -747,6 +747,17 @@ def main():
     pb.add_argument("--output", required=True, help="Path to arteta_blind_spots.json")
     pb.add_argument("--write", action="store_true", help="Allow mutation")
 
+    # ── adjudicate ──────────────────────────────────────────────────
+    adj = subparsers.add_parser("adjudicate", help="Compare WK v1.1 vs Evaluator B")
+    adj.add_argument("--kb", required=True, help="Path to knowledge.json")
+    adj.add_argument("--run-id", required=True, help="Run ID")
+    adj.add_argument("--output", required=True, help="Path to adjudication_report.json")
+
+    # ── mine-rules ──────────────────────────────────────────────────
+    mr = subparsers.add_parser("mine-rules", help="Extract candidate rules from disagreements")
+    mr.add_argument("--adjudication", required=True, help="Path to adjudication_report.json")
+    mr.add_argument("--output", required=True, help="Path to rule_candidates.json")
+
     args = parser.parse_args()
 
     if args.command == "make-jobs":
@@ -788,6 +799,22 @@ def main():
             write=args.write,
         )
         print(json.dumps(result, indent=2, ensure_ascii=False))
+
+    elif args.command == "adjudicate":
+        if not Path(args.kb).exists():
+            print(json.dumps({"error": f"KB file not found: {args.kb}"}), file=sys.stderr)
+            sys.exit(1)
+        from src.evaluation.adjudication import run_adjudication
+        result = run_adjudication(args.kb, args.run_id, args.output)
+        print(json.dumps({"ok": True, "output": args.output, "summary": result["summary"]}, indent=2, ensure_ascii=False))
+
+    elif args.command == "mine-rules":
+        if not Path(args.adjudication).exists():
+            print(json.dumps({"error": f"Adjudication file not found: {args.adjudication}"}), file=sys.stderr)
+            sys.exit(1)
+        from src.evaluation.rule_mining import run_rule_mining
+        result = run_rule_mining(args.adjudication, args.output)
+        print(json.dumps({"ok": True, "output": args.output, "summary": result["summary"]}, indent=2, ensure_ascii=False))
 
 
 if __name__ == "__main__":

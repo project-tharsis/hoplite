@@ -195,17 +195,20 @@ class Adjudicator:
         match_id = entry.get("match_id", "unknown")
         features = entry.get("features", {})
         context = _extract_context(features)
+        # Pass through top-level opponent and competition for diversity gate
+        opponent_name = entry.get("opponent", "")
+        competition = entry.get("competition", "")
 
         wk_raw = entry.get("weak_labels", {})
         wk_norm = self._normalize_wk(wk_raw)
 
         # Missing B
         if not _has_b_evaluation(entry):
-            return self._build_row(match_id, context, "missing_evaluator_b", wk_norm, {}, [], features)
+            return self._build_row(match_id, context, "missing_evaluator_b", wk_norm, {}, [], features, opponent_name, competition)
 
         # Invalid B
         if not _has_valid_b(entry):
-            return self._build_row(match_id, context, "invalid_evaluator_b", wk_norm, {}, [], features)
+            return self._build_row(match_id, context, "invalid_evaluator_b", wk_norm, {}, [], features, opponent_name, competition)
 
         ev = entry["evaluation"]
         b_signals = {
@@ -276,7 +279,7 @@ class Adjudicator:
                 status = "dimension_level_disagreement"
 
         return self._build_row(
-            match_id, context, status, wk_norm, b_signals, differences, features
+            match_id, context, status, wk_norm, b_signals, differences, features, opponent_name, competition
         )
 
     # ── normalization ─────────────────────────────────────────────────
@@ -301,6 +304,8 @@ class Adjudicator:
         b: dict,
         differences: list[str],
         features: dict,
+        opponent_name: str = "",
+        competition: str = "",
     ) -> dict:
         return {
             "match_id": match_id,
@@ -320,6 +325,8 @@ class Adjudicator:
             "features": {
                 "result": features.get("result"),
                 "opponent_quality": features.get("opponent_quality"),
+                "opponent_name": opponent_name,
+                "competition": competition,
             },
         }
 
