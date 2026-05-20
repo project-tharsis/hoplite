@@ -1,0 +1,4143 @@
+{
+  "run_id": "b-001",
+  "summary": {
+    "total_entries": 111,
+    "feature_backed": 102,
+    "compared": 7,
+    "missing_evaluator_b": 0,
+    "overall_agreement_rate": 0.8571,
+    "dimension_agreement_rate": 0.7143,
+    "model_agreement_rate": 0.7143
+  },
+  "status_counts": {
+    "agreement_high_confidence": 3,
+    "agreement_low_confidence": 2,
+    "wk_too_harsh": 1,
+    "wk_too_generous": 0,
+    "model_level_disagreement": 0,
+    "dimension_level_disagreement": 1,
+    "missing_evaluator_b": 0,
+    "invalid_evaluator_b": 95,
+    "needs_second_pass": 0
+  },
+  "context_breakdowns": [
+    {
+      "dimension": "opponent_quality",
+      "value": "european_elite",
+      "total": 2,
+      "status_counts": {
+        "agreement_high_confidence": 1,
+        "agreement_low_confidence": 0,
+        "wk_too_harsh": 0,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 0,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 1,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "opponent_quality",
+      "value": "lower",
+      "total": 23,
+      "status_counts": {
+        "agreement_high_confidence": 0,
+        "agreement_low_confidence": 0,
+        "wk_too_harsh": 0,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 1,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 22,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "opponent_quality",
+      "value": "mid_table",
+      "total": 48,
+      "status_counts": {
+        "agreement_high_confidence": 2,
+        "agreement_low_confidence": 1,
+        "wk_too_harsh": 0,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 0,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 45,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "opponent_quality",
+      "value": "top6",
+      "total": 29,
+      "status_counts": {
+        "agreement_high_confidence": 0,
+        "agreement_low_confidence": 1,
+        "wk_too_harsh": 1,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 0,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 27,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "venue",
+      "value": "away",
+      "total": 51,
+      "status_counts": {
+        "agreement_high_confidence": 2,
+        "agreement_low_confidence": 1,
+        "wk_too_harsh": 0,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 1,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 47,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "venue",
+      "value": "home",
+      "total": 51,
+      "status_counts": {
+        "agreement_high_confidence": 1,
+        "agreement_low_confidence": 1,
+        "wk_too_harsh": 1,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 0,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 48,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "competition_stage",
+      "value": "group_stage",
+      "total": 8,
+      "status_counts": {
+        "agreement_high_confidence": 1,
+        "agreement_low_confidence": 0,
+        "wk_too_harsh": 0,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 0,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 7,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "competition_stage",
+      "value": "knockout",
+      "total": 6,
+      "status_counts": {
+        "agreement_high_confidence": 0,
+        "agreement_low_confidence": 0,
+        "wk_too_harsh": 0,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 0,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 6,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "competition_stage",
+      "value": "league_early",
+      "total": 47,
+      "status_counts": {
+        "agreement_high_confidence": 2,
+        "agreement_low_confidence": 1,
+        "wk_too_harsh": 1,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 0,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 43,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "competition_stage",
+      "value": "league_late",
+      "total": 27,
+      "status_counts": {
+        "agreement_high_confidence": 0,
+        "agreement_low_confidence": 0,
+        "wk_too_harsh": 0,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 0,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 27,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "competition_stage",
+      "value": "regular",
+      "total": 14,
+      "status_counts": {
+        "agreement_high_confidence": 0,
+        "agreement_low_confidence": 1,
+        "wk_too_harsh": 0,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 1,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 12,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "result",
+      "value": "D",
+      "total": 24,
+      "status_counts": {
+        "agreement_high_confidence": 0,
+        "agreement_low_confidence": 0,
+        "wk_too_harsh": 0,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 0,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 24,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "result",
+      "value": "L",
+      "total": 13,
+      "status_counts": {
+        "agreement_high_confidence": 1,
+        "agreement_low_confidence": 1,
+        "wk_too_harsh": 0,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 1,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 10,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "result",
+      "value": "W",
+      "total": 65,
+      "status_counts": {
+        "agreement_high_confidence": 2,
+        "agreement_low_confidence": 1,
+        "wk_too_harsh": 1,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 0,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 61,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "xg_present",
+      "value": "True",
+      "total": 94,
+      "status_counts": {
+        "agreement_high_confidence": 3,
+        "agreement_low_confidence": 1,
+        "wk_too_harsh": 1,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 1,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 88,
+        "needs_second_pass": 0
+      }
+    },
+    {
+      "dimension": "xg_present",
+      "value": "False",
+      "total": 8,
+      "status_counts": {
+        "agreement_high_confidence": 0,
+        "agreement_low_confidence": 1,
+        "wk_too_harsh": 0,
+        "wk_too_generous": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 0,
+        "missing_evaluator_b": 0,
+        "invalid_evaluator_b": 7,
+        "needs_second_pass": 0
+      }
+    }
+  ],
+  "rows": [
+    {
+      "match_id": "1208023",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208032",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🔴",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208041",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🔴",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208059",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟡",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1208067",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🔴",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🔴",
+          "3": "🔴",
+          "4": "🟡",
+          "5": "🔴",
+          "6": "🔴"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1208072",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1208081",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1208091",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "L",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🔴",
+          "adjustment": "🔴",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🔴",
+          "3": "🟡",
+          "4": "🔴",
+          "5": "🔴",
+          "6": "🔴"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "L",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208103",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🔴",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟡",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🔴"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1208118",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "L",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🔴",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "L",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1208125",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟡",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1208134",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208151",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208154",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "wk_too_harsh",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "differences": [
+        "overall",
+        "satisfaction",
+        "1",
+        "5"
+      ],
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1208167",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208174",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208185",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟡",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208194",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1208204",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208215",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟡",
+          "3": "🟡",
+          "4": "🔴",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208223",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1208233",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208252",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208254",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1208267",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1208274",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "result": "L",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🔴",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "L",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208285",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208298",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1208304",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1208314",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208326",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🔴",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208334",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208348",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1208354",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🔴",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🔴",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🔴"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208363",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "result": "L",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🔴",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🔴",
+          "6": "🔴"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "L",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1208376",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟢",
+          "3": "🔴",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1208383",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟡",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1208400",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1298642",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "regular",
+        "result": "W",
+        "xg_present": false
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1309284",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "regular",
+        "result": "W",
+        "xg_present": false
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1314297",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "regular",
+        "result": "W",
+        "xg_present": false
+      },
+      "status": "agreement_low_confidence",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1327988",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "regular",
+        "result": "L",
+        "xg_present": false
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟢",
+          "5": "🔴",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "L",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1327989",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "regular",
+        "result": "L",
+        "xg_present": false
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟢",
+          "5": "🔴",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "L",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1378977",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1378979",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1378993",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "L",
+        "xg_present": true
+      },
+      "status": "agreement_low_confidence",
+      "wk": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🔴",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🔴",
+          "6": "🔴"
+        }
+      },
+      "b": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🔴",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🔴",
+          "6": "🔴"
+        }
+      },
+      "differences": [],
+      "features": {
+        "result": "L",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1378999",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379009",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1379026",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1379029",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379042",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379049",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379060",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1379076",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🔴",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🔴"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1379079",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1379091",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1379099",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379109",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "L",
+        "xg_present": true
+      },
+      "status": "agreement_high_confidence",
+      "wk": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🔴",
+          "4": "🟡",
+          "5": "🔴",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🔴",
+          "4": "🟡",
+          "5": "🔴",
+          "6": "🟢"
+        }
+      },
+      "differences": [],
+      "features": {
+        "result": "L",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379119",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379132",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "agreement_high_confidence",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379139",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379149",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🔴",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🔴"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379160",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🔴",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379169",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1379185",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379189",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_early",
+        "result": "L",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟢",
+          "3": "🔴",
+          "4": "🟢",
+          "5": "🔴",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "L",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1379202",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "league_early",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1379209",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1379220",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🔴",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379278",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🔴",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🔴"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379237",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1379239",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1379251",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🔴",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379259",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379279",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "result": "L",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟢",
+          "5": "🔴",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "L",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379295",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "result": "L",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🔴",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🔴",
+          "6": "🔴"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "L",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1379299",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟡",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1379309",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1379328",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "league_late",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1451021",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "group_stage",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟡",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1451052",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "group_stage",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1451061",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "group_stage",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1451075",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "group_stage",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1451107",
+      "context": {
+        "opponent_quality": "european_elite",
+        "venue": "home",
+        "competition_stage": "group_stage",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "agreement_high_confidence",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "european_elite"
+      }
+    },
+    {
+      "match_id": "1451123",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "group_stage",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1451136",
+      "context": {
+        "opponent_quality": "european_elite",
+        "venue": "away",
+        "competition_stage": "group_stage",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "european_elite"
+      }
+    },
+    {
+      "match_id": "1451159",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "group_stage",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🔴",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🔴",
+          "5": "🟢",
+          "6": "🔴"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1528322",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "knockout",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟡",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1528330",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "knockout",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1534570",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "knockout",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟡",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1534571",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "knockout",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1540842",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "away",
+        "competition_stage": "knockout",
+        "result": "D",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🔴",
+          "3": "🔴",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "D",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1540843",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "knockout",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1457283",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "regular",
+        "result": "W",
+        "xg_present": false
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1479619",
+      "context": {
+        "opponent_quality": "mid_table",
+        "venue": "home",
+        "competition_stage": "regular",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟡",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟡",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "mid_table"
+      }
+    },
+    {
+      "match_id": "1498259",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "away",
+        "competition_stage": "regular",
+        "result": "W",
+        "xg_present": false
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1498260",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "regular",
+        "result": "W",
+        "xg_present": false
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟡",
+          "3": "🟢",
+          "4": "🟡",
+          "5": "🟡",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1518728",
+      "context": {
+        "opponent_quality": "top6",
+        "venue": "home",
+        "competition_stage": "regular",
+        "result": "L",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟡",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🔴",
+          "2": "🟡",
+          "3": "🔴",
+          "4": "🟡",
+          "5": "🔴",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "L",
+        "opponent_quality": "top6"
+      }
+    },
+    {
+      "match_id": "1490810",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "regular",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟡",
+        "dimension_signals": {
+          "execution": "🟡",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟡",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1506251",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "home",
+        "competition_stage": "regular",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🟢"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟢",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟡"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1523412",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "regular",
+        "result": "W",
+        "xg_present": true
+      },
+      "status": "invalid_evaluator_b",
+      "wk": {
+        "overall_signal": "🟢",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🟡"
+        },
+        "model_signals": {
+          "1": "🟡",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟢",
+          "5": "🟢",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
+      },
+      "differences": [],
+      "features": {
+        "result": "W",
+        "opponent_quality": "lower"
+      }
+    },
+    {
+      "match_id": "1531572",
+      "context": {
+        "opponent_quality": "lower",
+        "venue": "away",
+        "competition_stage": "regular",
+        "result": "L",
+        "xg_present": true
+      },
+      "status": "dimension_level_disagreement",
+      "wk": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟢",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🟡",
+          "4": "🟢",
+          "5": "🔴",
+          "6": "🟢"
+        }
+      },
+      "b": {
+        "overall_signal": "🔴",
+        "dimension_signals": {
+          "execution": "🟢",
+          "adjustment": "🟡",
+          "satisfaction": "🔴"
+        },
+        "model_signals": {
+          "1": "🟢",
+          "2": "🟢",
+          "3": "🔴",
+          "4": "🟢",
+          "5": "🔴",
+          "6": "🟡"
+        }
+      },
+      "differences": [
+        "adjustment",
+        "3",
+        "6"
+      ],
+      "features": {
+        "result": "L",
+        "opponent_quality": "lower"
+      }
+    }
+  ]
+}

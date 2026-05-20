@@ -1,0 +1,8 @@
+{
+  "kb_path": "data/knowledge.json",
+  "reports_root": "data/backfill/runs",
+  "only": "missing-evaluation",
+  "evaluator_id": "B",
+  "run_id": "b-001",
+  "generated_at": "2026-05-20T03:41:57+00:00"
+}
