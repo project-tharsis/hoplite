@@ -586,6 +586,11 @@ def run_rule_mining(adjudication_report_path: str, output_path: str) -> dict:
 
     output = {
         "version": "v1",
+        "summary": {
+            "disagreement_rows": len(disagreement_rows),
+            "candidates": len(candidates),
+            "rejected_candidates": len(rejected_candidates),
+        },
         "candidates": candidates,
         "rejected_candidates": rejected_candidates,
     }

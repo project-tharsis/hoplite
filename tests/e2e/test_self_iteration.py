@@ -605,3 +605,77 @@ class TestGitignore:
         # Should exclude KB snapshots
         assert "data/self_iteration/**/knowledge.before.json" in content
         assert "data/self_iteration/**/knowledge.after.json" in content
+
+
+# ── Test: CLI subcommands adjudicate and mine-rules work end-to-end ──
+
+
+class TestCliAdjudicate:
+    """adjudicate CLI subcommand produces valid summary output."""
+
+    def test_adjudicate_cli_produces_summary(self, tmp_path):
+        """python scripts/self_iterate.py adjudicate ... → ok + summary."""
+        kb_entries = [
+            _make_kb_entry("5001", has_evaluation=True),
+        ]
+        kb_path = tmp_path / "knowledge.json"
+        kb_path.write_text(json.dumps(kb_entries))
+        output_json = tmp_path / "adj_report.json"
+
+        rc, stdout, stderr = _run_self_iterate([
+            "adjudicate",
+            "--kb", str(kb_path),
+            "--run-id", "test-001",
+            "--output", str(output_json),
+        ])
+        assert rc == 0, f"stderr: {stderr}"
+        result = json.loads(stdout)
+        assert result["ok"] is True
+        assert "summary" in result
+        assert result["summary"]["total_entries"] == 1
+
+
+class TestCliMineRules:
+    """mine-rules CLI subcommand produces valid summary output."""
+
+    def test_mine_rules_cli_produces_summary(self, tmp_path):
+        """python scripts/self_iterate.py mine-rules ... → ok + summary."""
+        adj_report = {
+            "run_id": "test-001",
+            "summary": {},
+            "rows": [
+                {
+                    "match_id": "5001",
+                    "status": "wk_too_harsh",
+                    "context": {"opponent_quality": "top6", "venue": "home", "competition_stage": "league_early", "result": "W", "xg_present": True},
+                    "features": {"result": "W", "opponent_quality": "top6", "opponent_name": "Chelsea", "competition": "Premier League"},
+                    "differences": ["overall"],
+                    "wk": {"overall_signal": "🟡", "dimension_signals": {}, "model_signals": {}},
+                    "b": {"overall_signal": "🟢", "dimension_signals": {}, "model_signals": {}},
+                },
+                # Second row — same pattern for diversity gate
+                {
+                    "match_id": "5002",
+                    "status": "wk_too_harsh",
+                    "context": {"opponent_quality": "top6", "venue": "away", "competition_stage": "league_early", "result": "W", "xg_present": True},
+                    "features": {"result": "W", "opponent_quality": "top6", "opponent_name": "Liverpool", "competition": "Premier League"},
+                    "differences": ["overall"],
+                    "wk": {"overall_signal": "🟡", "dimension_signals": {}, "model_signals": {}},
+                    "b": {"overall_signal": "🟢", "dimension_signals": {}, "model_signals": {}},
+                },
+            ],
+        }
+        adj_path = tmp_path / "adj_report.json"
+        adj_path.write_text(json.dumps(adj_report))
+        output_json = tmp_path / "rule_candidates.json"
+
+        rc, stdout, stderr = _run_self_iterate([
+            "mine-rules",
+            "--adjudication", str(adj_path),
+            "--output", str(output_json),
+        ])
+        assert rc == 0, f"stderr: {stderr}"
+        result = json.loads(stdout)
+        assert result["ok"] is True
+        assert "summary" in result
+        assert result["summary"]["disagreement_rows"] == 2
