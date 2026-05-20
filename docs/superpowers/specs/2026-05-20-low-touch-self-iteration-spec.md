@@ -106,6 +106,63 @@ python scripts/self_iterate.py make-jobs \
 
 评估器B的实际执行发生在仓库外部。
 
+#### 6.1.1 Report 查找策略
+
+`make-jobs` 必须用确定性策略查找 report，不能任意选择一个同名文件。
+
+对每条 feature-backed entry，按以下优先级查找：
+
+1. `entry["backfill"]["report_path"]` 指向的文件存在时，直接使用。
+2. 如果有 `entry["backfill"]["run_id"]`，查找 `reports-root/<run_id>/reports/<fixture_id>.json`，再查找 `reports-root/<run_id>/reports/<match_id>.json`。
+3. fallback 广度搜索：
+   - `reports-root/*/reports/<fixture_id>.json`
+   - `reports-root/*/reports/<match_id>.json`
+4. fallback 搜索命中多个候选时，按完整路径字符串排序后取最后一个，并在 job row 的 `report_candidates` 中记录全部候选。
+
+找不到 report 时：
+
+- 不生成该 match 的 job。
+- 在 `make_jobs_report.json` 中记录：
+
+```json
+{
+  "match_id": "1208154",
+  "ok": false,
+  "error": {
+    "code": "REPORT_NOT_FOUND",
+    "message": "No report found via backfill.report_path, backfill.run_id, or reports-root search."
+  }
+}
+```
+
+#### 6.1.2 Prompt 来源优先级
+
+`make-jobs` 必须明确 prompt 从哪里来，避免 WK/version drift。
+
+对每条 job，按以下优先级取 prompt：
+
+1. 如果当前 output 目录已存在同 `match_id` 的 self-iteration job，复用该 job 的 `prompt`、`prompt_hash` 和 `prompt_source`，保证幂等。
+2. 如果 `entry["backfill"]["run_id"]` 对应 run 目录中存在 `llm_jobs.jsonl`，且能按 `match_id` 或 `fixture_id` 找到同一场比赛，复用该历史 prompt。
+3. 如果 report 所在 run 目录中存在 `llm_jobs.jsonl`，同样按 `match_id` 或 `fixture_id` 查找并复用历史 prompt。
+4. 最后才用 `prepare_evaluation(report, output_format="json")` 重新生成 prompt。
+
+每条 job 必须写 `prompt_source`：
+
+```text
+self_iteration_existing
+backfill_llm_job
+prepare_evaluation_regenerated
+```
+
+如果使用 `prepare_evaluation_regenerated`，但重新生成的 `weak_labels` 与 KB 中已存 `entry["weak_labels"]` 不一致：
+
+- 不覆盖 KB。
+- 仍可生成 job。
+- 在 job row 写 `wk_drift_detected=true`。
+- 在 `make_jobs_report.json` 中记录 drift details。
+
+`prompt_hash` 必须对最终写入 job 的完整 prompt 字符串计算。
+
 ### 6.2 写入评估器B结果
 
 ```bash
@@ -187,20 +244,35 @@ python scripts/self_iterate.py promote-blind-spots \
 
 ```json
 {
+  "job_schema_version": "self_iteration_job_v1",
   "match_id": "1208154",
   "fixture_id": "1208154",
   "evaluator_id": "B",
   "run_id": "b-001",
+  "prompt_source": "backfill_llm_job",
   "prompt_hash": "sha256:...",
   "prompt": "...",
   "features": {},
   "weak_labels": {},
   "report_path": "data/backfill/runs/seed-002/reports/1208154.json",
+  "report_candidates": [],
+  "versions": {
+    "features_version": "v1",
+    "weak_label_version": "v1.1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1"
+  },
   "expected_output_schema": "strict_v2_evaluation"
 }
 ```
 
 `prompt_hash` 必须由完整 prompt 字符串计算得到。
+
+说明：
+
+- 这是 self-iteration job schema，不是 historical backfill 的 `llm_jobs.jsonl` schema。
+- 两者文件名相同，但目录不同：self-iteration 只写入 `data/self_iteration/runs/...`。
+- `job_schema_version` 用于避免未来维护者把 backfill job 和 self-iteration job 混用。
 
 ### 7.2 LLM Result Row
 
@@ -208,6 +280,7 @@ python scripts/self_iterate.py promote-blind-spots \
 
 ```json
 {
+  "job_schema_version": "self_iteration_job_v1",
   "match_id": "1208154",
   "evaluator_id": "B",
   "run_id": "b-001",
@@ -268,7 +341,12 @@ metadata 写入 `entry["evaluation"]["metadata"]`：
     "run_id": "b-001",
     "model": "evaluator-b-model",
     "prompt_hash": "sha256:...",
-    "created_at": "2026-05-20T00:00:00Z"
+    "created_at": "2026-05-20T00:00:00Z",
+    "features_version": "v1",
+    "weak_label_version": "v1.1",
+    "rubric_version": "arteta_v1",
+    "prompt_builder_version": "v1",
+    "job_schema_version": "self_iteration_job_v1"
   }
 }
 ```
@@ -279,6 +357,7 @@ metadata 写入 `entry["evaluation"]["metadata"]`：
 - 既有 `evaluation.source == "llm"` 保持不变。
 - metadata 不能传入 `validate_llm_result()`。
 - metadata 不能降低 strict validation。
+- metadata 中的版本字段用于 stale evaluation 判断；如果未来 `features_version`、`weak_label_version`、`rubric_version` 或 `prompt_builder_version` 变化，`make-jobs --only stale-evaluation` 可以重新生成评估任务。
 
 ## 8. 裁判语义
 
@@ -337,7 +416,17 @@ needs_second_pass
 🔴 < 🟡 < 🟢
 ```
 
-### 8.3 Adjudication Report 结构
+### 8.3 xG 判定
+
+`xg_present` 必须按 feature 字段定义：
+
+```text
+xg_present := features["xg_for"] is not None AND features["xg_against"] is not None
+```
+
+原因：`xg_delta` 需要双方 xG 都存在才可靠。
+
+### 8.4 Adjudication Report 结构
 
 ```json
 {
@@ -407,7 +496,8 @@ src/evaluation/rule_mining.py
   "cards_pressure": false,
   "late_subs": false,
   "sub_impact": true,
-  "set_piece_edge": true
+  "set_piece_edge": true,
+  "missing_features": ["pressing", "pressing_recoveries", "transition"]
 }
 ```
 
@@ -422,6 +512,14 @@ src/evaluation/rule_mining.py
 - `late_subs`：最早换人在 75 分钟后，或未领先状态下最晚换人在 85 分钟后
 - `sub_impact`：`goals_after_arsenal_subs > 0` 或 `goals_by_substitutes > 0`
 - `set_piece_edge`：`set_piece_goals_for > set_piece_goals_against` 或 `corner_delta >= 4`
+
+缺失数据处理：
+
+- 派生规则所需字段缺失或为 `null` 时，该单项条件视为 false。
+- 缺失字段不能被当作满足条件。
+- `dominant_control` 和 `poor_control` 只统计实际可计算且满足阈值的条件。
+- 每条 candidate feature view 必须包含 `missing_features`，列出派生时缺失的字段。
+- 规则挖掘不能把“字段缺失”本身当成战术规律，除非 candidate target 明确是 `missing_data_behavior`。
 
 ### 9.2 Candidate Rule 结构
 
@@ -522,6 +620,16 @@ mine-rules
 promote-blind-spots
 ```
 
+`make-jobs --only` 支持：
+
+```text
+missing-evaluation
+stale-evaluation
+missing-or-stale-evaluation
+```
+
+`stale-evaluation` 的判断依据是 `evaluation.metadata` 中的 version 字段与当前 job 生成版本不一致。
+
 全局规则：
 
 - 每个模式都必须写审计 JSON report。
@@ -581,6 +689,7 @@ tests/tools/test_save_evaluation_metadata.py
 
 - `save_evaluation` 接受 `evaluation_metadata`。
 - metadata 持久化到 `evaluation.metadata`。
+- metadata 包含 `features_version`、`weak_label_version`、`rubric_version`、`prompt_builder_version`、`job_schema_version`。
 - strict validation 仍然拒绝缺少 `evidence`、`confidence`、`missing_or_weak_evidence`、`weak_label_disagreements` 的结果。
 - 不传 metadata 的旧调用仍然通过。
 
@@ -600,6 +709,7 @@ tests/evaluation/test_adjudication.py
 - 只有一个 model 不一致时识别为 `model_level_disagreement`。
 - feature-backed 但缺少评估器B时输出 `missing_evaluator_b`。
 - 评估器B confidence low 且缺少分歧解释时输出 `needs_second_pass`。
+- `xg_present` 只有在 `xg_for` 和 `xg_against` 都非 `None` 时为 true。
 
 ### 13.3 Rule Mining
 
@@ -617,6 +727,8 @@ tests/evaluation/test_rule_mining.py
 - 单个分歧会被 reject。
 - precision 不达标的 candidate 会被 reject。
 - WK patch proposal 的门槛高于 prompt blind spot。
+- 缺失字段不会让派生 boolean 变成 true。
+- candidate feature view 包含 `missing_features`。
 
 ### 13.4 Blind Spot Registry
 
@@ -644,13 +756,17 @@ tests/e2e/test_self_iteration.py
 必测：
 
 1. `make-jobs` 只输出缺少评估器B的 row。
-2. `ingest-results` dry-run 不修改 KB。
-3. `ingest-results --write` 修改 KB 并写 snapshot。
-4. `adjudicate` 比较所有 feature-backed row。
-5. `mine-rules` 写出 candidate 与 rejected-candidate section。
-6. `promote-blind-spots --write` 更新 `rubrics/arteta_blind_spots.json`。
-7. 重复运行 `promote-blind-spots --write` 不会重复添加 blind spot。
-8. `.gitignore` 允许 `data/self_iteration` report，但继续忽略 KB snapshot。
+2. `make-jobs` 优先使用 `entry.backfill.report_path` 查找 report。
+3. `make-jobs` 能从 backfill `llm_jobs.jsonl` 复用 prompt，并写 `prompt_source="backfill_llm_job"`。
+4. `make-jobs` 找不到 report 时跳过该 row，并在 report 中写 `REPORT_NOT_FOUND`。
+5. `make-jobs` 输出 `job_schema_version="self_iteration_job_v1"`。
+6. `ingest-results` dry-run 不修改 KB。
+7. `ingest-results --write` 修改 KB 并写 snapshot。
+8. `adjudicate` 比较所有 feature-backed row。
+9. `mine-rules` 写出 candidate 与 rejected-candidate section。
+10. `promote-blind-spots --write` 更新 `rubrics/arteta_blind_spots.json`。
+11. 重复运行 `promote-blind-spots --write` 不会重复添加 blind spot。
+12. `.gitignore` 允许 `data/self_iteration` report，但继续忽略 KB snapshot。
 
 ## 14. 验收标准
 
@@ -660,10 +776,14 @@ tests/e2e/test_self_iteration.py
 - `rubrics/arteta_blind_spots.json` 存在，并包含 `dominant_stats_loss`。
 - `CalibrationComputer` 使用 registry，并能安全 fallback。
 - `save_evaluation` 持久化 evaluator metadata。
+- evaluator metadata 包含 pipeline/version 字段，可用于 stale evaluation 判断。
 - `self_iterate.py make-jobs` 为当前 KB 精确生成缺失的评估器B任务。
+- `self_iterate.py make-jobs` 有确定性 report 查找策略和 prompt 来源优先级。
 - `self_iterate.py ingest-results --write` 能写入 strict v2 B 输出。
 - `self_iterate.py adjudicate` 生成语料级 agreement metrics。
+- `self_iterate.py adjudicate` 明确定义并测试 `xg_present`。
 - `self_iterate.py mine-rules` 生成 rule candidates，且不修改代码。
+- `self_iterate.py mine-rules` 对缺失 feature 使用保守 false 语义。
 - `self_iterate.py promote-blind-spots` 能安全更新 prompt-level blind spots。
 - `.gitignore` 允许 self-iteration review artifacts，同时排除完整 KB snapshot。
 - 当前 102 条 feature-backed 语料有可复现的自迭代 run：
