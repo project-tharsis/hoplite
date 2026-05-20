@@ -8,6 +8,12 @@ docs/plans/
 # Ignore data files but allow backfill artifacts for remote code review
 data/*
 !data/backfill
+# Allow self-iteration artifacts for review
+!data/self_iteration
+!data/self_iteration/**
+# Exclude KB snapshots from self-iteration
+data/self_iteration/**/knowledge.before.json
+data/self_iteration/**/knowledge.after.json
 *.compact
 *.compact.json
 knowledge.before.json
