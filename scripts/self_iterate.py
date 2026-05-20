@@ -185,6 +185,7 @@ _VERSION_FIELDS = (
     "weak_label_version",
     "rubric_version",
     "prompt_builder_version",
+    "blind_spots_version",
 )
 
 
@@ -247,21 +248,31 @@ def _filter_entries(
 
 
 def _get_current_versions(entries: list[dict]) -> dict:
-    """Derive current versions from KB entries (use first feature-backed entry)."""
-    for entry in entries:
-        if _is_feature_backed(entry):
-            return {
-                "features_version": entry.get("features_version", "v1"),
-                "weak_label_version": entry.get("weak_label_version", "v1.1"),
-                "rubric_version": entry.get("rubric_version", "arteta_v1"),
-                "prompt_builder_version": entry.get("prompt_builder_version", "v1"),
-            }
-    return {
+    """Derive current versions from KB entries + blind spots registry."""
+    versions = {
         "features_version": "v1",
         "weak_label_version": "v1.1",
         "rubric_version": "arteta_v1",
         "prompt_builder_version": "v1",
+        "blind_spots_version": "v1",
     }
+    for entry in entries:
+        if _is_feature_backed(entry):
+            versions["features_version"] = entry.get("features_version", "v1")
+            versions["weak_label_version"] = entry.get("weak_label_version", "v1.1")
+            versions["rubric_version"] = entry.get("rubric_version", "arteta_v1")
+            versions["prompt_builder_version"] = entry.get("prompt_builder_version", "v1")
+            break
+    # Read blind spots version from registry JSON
+    registry_path = Path(__file__).resolve().parent.parent / "rubrics" / "arteta_blind_spots.json"
+    try:
+        if registry_path.exists():
+            with open(registry_path, encoding="utf-8") as f:
+                registry = json.load(f)
+            versions["blind_spots_version"] = registry.get("version", "v1")
+    except (OSError, json.JSONDecodeError):
+        pass
+    return versions
 
 
 def _run_prepare_evaluation(report_json: dict) -> dict:
@@ -316,20 +327,22 @@ def run_make_jobs(
             continue
 
         # 2. Find prompt (priority order §6.1.2)
+        # When stale, skip backfill prompt reuse — regenerate to pick up new blind spots
         prompt_data = None
         prompt_source = ""
+        skip_backfill_prompts = "stale" in only
 
         # 2a. Existing self-iteration job in output dir
         existing_job = _load_existing_self_iteration_job(str(out), match_id)
-        if existing_job:
+        if existing_job and not skip_backfill_prompts:
             prompt_data = {
                 "prompt": existing_job["prompt"],
                 "prompt_hash": existing_job.get("prompt_hash", _prompt_hash(existing_job["prompt"])),
             }
             prompt_source = "self_iteration_existing"
 
-        # 2b. Backfill llm_jobs.jsonl from entry.backfill.run_id
-        if not prompt_data:
+        # 2b. Backfill llm_jobs.jsonl from entry.backfill.run_id (skip for stale)
+        if not prompt_data and not skip_backfill_prompts:
             backfill_run_id = entry.get("backfill", {}).get("run_id", "")
             if backfill_run_id:
                 backfill_dir = str(Path(reports_root) / backfill_run_id)
@@ -337,8 +350,8 @@ def run_make_jobs(
                 if prompt_data:
                     prompt_source = "backfill_llm_job"
 
-        # 2c. Report's run directory llm_jobs.jsonl
-        if not prompt_data:
+        # 2c. Report's run directory llm_jobs.jsonl (skip for stale)
+        if not prompt_data and not skip_backfill_prompts:
             report_run_dir = str(Path(report_path).parent.parent)
             prompt_data = _find_prompt_from_backfill_job(report_run_dir, match_id, fixture_id)
             if prompt_data:
@@ -552,6 +565,7 @@ def run_ingest_results(
             "weak_label_version": entry.get("weak_label_version", "v1.1"),
             "rubric_version": entry.get("rubric_version", "arteta_v1"),
             "prompt_builder_version": entry.get("prompt_builder_version", "v1"),
+            "blind_spots_version": _get_current_versions([entry]).get("blind_spots_version", "v1"),
             "job_schema_version": row.get("job_schema_version", ""),
         }
 

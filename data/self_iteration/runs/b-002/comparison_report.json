@@ -1,0 +1,44 @@
+{
+  "b001": {
+    "overall_agreement_rate": 0.6569,
+    "dimension_agreement_rate": 0.2647,
+    "model_agreement_rate": 0.1765,
+    "wk_too_harsh": 34,
+    "wk_too_generous": 1,
+    "dimension_level_disagreement": 40,
+    "model_level_disagreement": 9,
+    "agreement_high_confidence": 16,
+    "agreement_low_confidence": 2,
+    "compared": 102
+  },
+  "b002": {
+    "overall_agreement_rate": 0.5392,
+    "dimension_agreement_rate": 0.1373,
+    "model_agreement_rate": 0.0588,
+    "wk_too_harsh": 12,
+    "wk_too_generous": 35,
+    "dimension_level_disagreement": 41,
+    "model_level_disagreement": 8,
+    "agreement_high_confidence": 6,
+    "agreement_low_confidence": 0,
+    "compared": 102
+  },
+  "delta": {
+    "overall_agreement_rate": -0.1177,
+    "dimension_agreement_rate": -0.1274,
+    "model_agreement_rate": -0.1177,
+    "wk_too_harsh": -22,
+    "wk_too_generous": 34,
+    "dimension_level_disagreement": 1,
+    "model_level_disagreement": -1
+  },
+  "judgment": {
+    "overall_agreement_up": false,
+    "dimension_agreement_up": false,
+    "model_agreement_up": false,
+    "wk_too_harsh_down_20pct": true,
+    "dimension_disagreement_down": false,
+    "criteria_met": 1,
+    "effective": false
+  }
+}
