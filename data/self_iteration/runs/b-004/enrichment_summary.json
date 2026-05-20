@@ -1,0 +1,43 @@
+{
+  "phase": "b-004-feature-enrichment-summary",
+  "created_at": "2026-05-20T14:38:52Z",
+  "run_id": "b-004",
+  "features_version": "v2",
+  "evaluation_results": {
+    "total_jobs": 102,
+    "total_results": 102,
+    "ingest_applied": 93,
+    "ingest_quarantined": 9,
+    "quarantine_reason": "all_dimension_signals_placeholder"
+  },
+  "adjudication": {
+    "compared": 93,
+    "overall_agreement_rate": 0.6774,
+    "dimension_agreement_rate": 0.4624,
+    "model_agreement_rate": 0.3978,
+    "wk_too_harsh": 20,
+    "wk_too_generous": 10
+  },
+  "comparison_vs_b001": {
+    "clean_subset_n": 93,
+    "overall_agreement_delta": 0.0,
+    "dimension_agreement_delta": 0.1828,
+    "model_agreement_delta": 0.2043,
+    "wk_too_harsh_delta": -9,
+    "wk_too_generous_delta": 9,
+    "criteria_met": "4/5"
+  },
+  "predicate_mining": {
+    "predicates_evaluated": 7843,
+    "candidates_found": 0,
+    "breadth_rejected": 11,
+    "rejected": 7832,
+    "conclusion": "No predicates meet precision threshold. Improvements come from prompt enrichment (过程信号 section), not predicate mining."
+  },
+  "key_insight": "v2 过程信号 prompt enrichment 是主要 improvement driver。dimension_agreement +18.3pp, model_agreement +20.4pp, wk_too_harsh -9。wk_too_generous +9 需要后续关注。",
+  "next_steps": [
+    "Consider promoting v2 prompt format as default",
+    "Monitor wk_too_generous drift in future runs",
+    "Predicate mining may need lower precision threshold or different feature space"
+  ]
+}

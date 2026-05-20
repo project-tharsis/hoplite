@@ -1,0 +1,71 @@
+{
+  "b001": {
+    "overall_agreement_rate": 0.6569,
+    "dimension_agreement_rate": 0.2647,
+    "model_agreement_rate": 0.1765,
+    "wk_too_harsh": 34,
+    "wk_too_generous": 1,
+    "dimension_level_disagreement": 40,
+    "model_level_disagreement": 9,
+    "compared": 102
+  },
+  "b002": {
+    "overall_agreement_rate": 0.6774,
+    "dimension_agreement_rate": 0.4624,
+    "model_agreement_rate": 0.3978,
+    "wk_too_harsh": 20,
+    "wk_too_generous": 10,
+    "dimension_level_disagreement": 20,
+    "model_level_disagreement": 6,
+    "compared": 93
+  },
+  "delta": {
+    "overall_agreement_rate": 0.0205,
+    "dimension_agreement_rate": 0.1977,
+    "model_agreement_rate": 0.2213,
+    "wk_too_harsh": -14,
+    "wk_too_generous": 9,
+    "dimension_level_disagreement": -20,
+    "model_level_disagreement": -3
+  },
+  "criteria_met": 5,
+  "criteria_total": 5,
+  "same_denominator": false,
+  "effective": false,
+  "clean_subset": {
+    "b001": {
+      "overall_agreement_rate": 0.6774,
+      "dimension_agreement_rate": 0.2796,
+      "model_agreement_rate": 0.1935,
+      "wk_too_harsh": 29,
+      "wk_too_generous": 1,
+      "dimension_level_disagreement": 37,
+      "model_level_disagreement": 8,
+      "compared": 93
+    },
+    "b002": {
+      "overall_agreement_rate": 0.6774,
+      "dimension_agreement_rate": 0.4624,
+      "model_agreement_rate": 0.3978,
+      "wk_too_harsh": 20,
+      "wk_too_generous": 10,
+      "dimension_level_disagreement": 20,
+      "model_level_disagreement": 6,
+      "compared": 93
+    },
+    "delta": {
+      "overall_agreement_rate": 0.0,
+      "dimension_agreement_rate": 0.1828,
+      "model_agreement_rate": 0.2043,
+      "wk_too_harsh": -9,
+      "wk_too_generous": 9,
+      "dimension_level_disagreement": -17,
+      "model_level_disagreement": -2
+    },
+    "criteria_met": 4,
+    "criteria_total": 5,
+    "same_denominator": true,
+    "effective": true,
+    "common_match_ids": 93
+  }
+}
