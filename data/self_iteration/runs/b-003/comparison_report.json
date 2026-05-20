@@ -1,0 +1,35 @@
+{
+  "b001": {
+    "overall_agreement_rate": 0.6569,
+    "dimension_agreement_rate": 0.2647,
+    "model_agreement_rate": 0.1765,
+    "wk_too_harsh": 34,
+    "wk_too_generous": 1,
+    "dimension_level_disagreement": 40,
+    "model_level_disagreement": 9,
+    "compared": 102
+  },
+  "b002": {
+    "overall_agreement_rate": 0.7979,
+    "dimension_agreement_rate": 0.5,
+    "model_agreement_rate": 0.4255,
+    "wk_too_harsh": 13,
+    "wk_too_generous": 6,
+    "dimension_level_disagreement": 28,
+    "model_level_disagreement": 7,
+    "compared": 94
+  },
+  "delta": {
+    "overall_agreement_rate": 0.141,
+    "dimension_agreement_rate": 0.2353,
+    "model_agreement_rate": 0.249,
+    "wk_too_harsh": -21,
+    "wk_too_generous": 5,
+    "dimension_level_disagreement": -12,
+    "model_level_disagreement": -2
+  },
+  "criteria_met": 5,
+  "criteria_total": 5,
+  "same_denominator": false,
+  "effective": false
+}

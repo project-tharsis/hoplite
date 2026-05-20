@@ -7,7 +7,11 @@
     "missing_evaluator_b": 0,
     "overall_agreement_rate": 0.6569,
     "dimension_agreement_rate": 0.2647,
-    "model_agreement_rate": 0.1765
+    "model_agreement_rate": 0.1765,
+    "wk_too_harsh": 34,
+    "wk_too_generous": 1,
+    "dimension_level_disagreement": 40,
+    "model_level_disagreement": 9
   },
   "status_counts": {
     "agreement_high_confidence": 16,

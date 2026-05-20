@@ -125,6 +125,7 @@ class Adjudicator:
         entries: list[dict] | None = None,
         kb_path: str | Path | None = None,
         run_id: str = "unknown",
+        evaluator_run_id: str | None = None,
     ):
         if entries is not None:
             self._entries = entries
@@ -134,6 +135,7 @@ class Adjudicator:
         else:
             raise ValueError("Provide either entries or kb_path")
         self._run_id = run_id
+        self._evaluator_run_id = evaluator_run_id
 
     # ── public API ────────────────────────────────────────────────────
 
@@ -152,6 +154,24 @@ class Adjudicator:
         model_agree = 0
 
         for entry in feature_backed:
+            # Filter by evaluator run_id if specified
+            if self._evaluator_run_id is not None:
+                ev_meta = entry.get("evaluation", {}).get("metadata", {})
+                entry_run_id = ev_meta.get("run_id", "")
+                if entry_run_id != self._evaluator_run_id:
+                    # Treat as missing — not from the target run
+                    row = self._build_row(
+                        entry.get("match_id", "unknown"),
+                        _extract_context(entry.get("features", {})),
+                        "missing_evaluator_b",
+                        self._normalize_wk(entry.get("weak_labels", {})),
+                        {}, [], entry.get("features", {}),
+                        entry.get("opponent", ""), entry.get("competition", ""),
+                    )
+                    rows.append(row)
+                    status_counts["missing_evaluator_b"] += 1
+                    continue
+
             row = self._adjudicate_one(entry)
             rows.append(row)
             status_counts[row["status"]] += 1
@@ -385,12 +405,13 @@ def run_adjudication(
     kb_path: str | Path,
     run_id: str,
     output_path: str | Path | None = None,
+    evaluator_run_id: str | None = None,
 ) -> dict:
     """Run adjudication from a KB file and optionally write report.
 
     Non-mutation: never modifies the KB.
     """
-    adj = Adjudicator(kb_path=kb_path, run_id=run_id)
+    adj = Adjudicator(kb_path=kb_path, run_id=run_id, evaluator_run_id=evaluator_run_id)
     report = adj.run()
 
     if output_path is not None:

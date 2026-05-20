@@ -516,12 +516,17 @@ def _is_quarantine_result(evaluation: dict) -> tuple[bool, str]:
     return False, ""
 
 
-def _repair_schema(evaluation: dict) -> dict:
-    """Repair nested evaluation schema where top-level is real but nested has defaults."""
-    # If there's a nested "evaluation" dict inside evaluation, flatten it
-    nested = evaluation.get("evaluation")
+def _repair_schema(row: dict) -> dict:
+    """Repair nested evaluation schema where top-level is real but nested has defaults.
+
+    Operates on the full result row (not just evaluation) so it can see both levels.
+    Returns the repaired evaluation dict.
+    """
+    evaluation = row.get("evaluation", {})
+    # If there's a nested "evaluation" dict inside the row (separate from evaluation),
+    # and the top-level evaluation has real values, keep top-level
+    nested = row.get("evaluation", {}).get("evaluation")
     if isinstance(nested, dict) and nested.get("overall_signal"):
-        # Prefer top-level if it has real values, else use nested
         top_overall = evaluation.get("overall_signal", "")
         nested_overall = nested.get("overall_signal", "")
         if top_overall and top_overall != nested_overall:
@@ -572,7 +577,7 @@ def run_ingest_results(
         evaluation = row.get("evaluation", {})
 
         # Schema repair: handle nested evaluation dict
-        evaluation = _repair_schema(evaluation)
+        evaluation = _repair_schema(row)
 
         # Quality gate: quarantine placeholder results
         is_quarantine, quarantine_reason = _is_quarantine_result(evaluation)
@@ -827,6 +832,7 @@ def main():
     adj = subparsers.add_parser("adjudicate", help="Compare WK v1.1 vs Evaluator B")
     adj.add_argument("--kb", required=True, help="Path to knowledge.json")
     adj.add_argument("--run-id", required=True, help="Run ID")
+    adj.add_argument("--evaluator-run-id", default=None, help="Only compare evaluations from this run_id")
     adj.add_argument("--output", required=True, help="Path to adjudication_report.json")
 
     # ── mine-rules ──────────────────────────────────────────────────
@@ -887,7 +893,7 @@ def main():
             print(json.dumps({"error": f"KB file not found: {args.kb}"}), file=sys.stderr)
             sys.exit(1)
         from src.evaluation.adjudication import run_adjudication
-        result = run_adjudication(args.kb, args.run_id, args.output)
+        result = run_adjudication(args.kb, args.run_id, args.output, evaluator_run_id=args.evaluator_run_id)
         print(json.dumps({"ok": True, "output": args.output, "summary": result["summary"]}, indent=2, ensure_ascii=False))
 
     elif args.command == "mine-rules":
@@ -912,7 +918,7 @@ def run_compare_runs(b001_path: str, b002_path: str, output_path: str) -> dict:
 
     def _extract(report: dict) -> dict:
         s = report.get("summary", {})
-        total = s.get("total_compared", 0)
+        total = s.get("compared", 0)
         return {
             "overall_agreement_rate": s.get("overall_agreement_rate", 0.0),
             "dimension_agreement_rate": s.get("dimension_agreement_rate", 0.0),
@@ -921,7 +927,7 @@ def run_compare_runs(b001_path: str, b002_path: str, output_path: str) -> dict:
             "wk_too_generous": s.get("wk_too_generous", 0),
             "dimension_level_disagreement": s.get("dimension_level_disagreement", 0),
             "model_level_disagreement": s.get("model_level_disagreement", 0),
-            "total_compared": total,
+            "compared": total,
         }
 
     r1 = _extract(b001)
@@ -955,15 +961,16 @@ def run_compare_runs(b001_path: str, b002_path: str, output_path: str) -> dict:
         "b002": r2,
         "delta": delta,
         "criteria_met": criteria_met,
-        "criteria_total": 6,
-        "effective": criteria_met >= 3,
+        "criteria_total": 5,
+        "same_denominator": r1["compared"] == r2["compared"],
+        "effective": criteria_met >= 3 and r1["compared"] == r2["compared"],
     }
 
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
 
-    return {"summary": {"criteria_met": criteria_met, "criteria_total": 6, "effective": criteria_met >= 3}}
+    return {"summary": {"criteria_met": criteria_met, "criteria_total": 5, "same_denominator": r1["compared"] == r2["compared"], "effective": criteria_met >= 3 and r1["compared"] == r2["compared"]}}
 
 
 if __name__ == "__main__":

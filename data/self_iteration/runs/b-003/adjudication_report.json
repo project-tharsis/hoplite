@@ -3,24 +3,24 @@
   "summary": {
     "total_entries": 111,
     "feature_backed": 102,
-    "compared": 102,
-    "missing_evaluator_b": 0,
-    "overall_agreement_rate": 0.8039,
-    "dimension_agreement_rate": 0.4804,
-    "model_agreement_rate": 0.402,
-    "wk_too_harsh": 14,
+    "compared": 94,
+    "missing_evaluator_b": 8,
+    "overall_agreement_rate": 0.7979,
+    "dimension_agreement_rate": 0.5,
+    "model_agreement_rate": 0.4255,
+    "wk_too_harsh": 13,
     "wk_too_generous": 6,
-    "dimension_level_disagreement": 33,
-    "model_level_disagreement": 8
+    "dimension_level_disagreement": 28,
+    "model_level_disagreement": 7
   },
   "status_counts": {
-    "agreement_high_confidence": 41,
+    "agreement_high_confidence": 40,
     "agreement_low_confidence": 0,
-    "wk_too_harsh": 14,
+    "wk_too_harsh": 13,
     "wk_too_generous": 6,
-    "model_level_disagreement": 8,
-    "dimension_level_disagreement": 33,
-    "missing_evaluator_b": 0,
+    "model_level_disagreement": 7,
+    "dimension_level_disagreement": 28,
+    "missing_evaluator_b": 8,
     "invalid_evaluator_b": 0,
     "needs_second_pass": 0
   },
@@ -62,13 +62,13 @@
       "value": "mid_table",
       "total": 48,
       "status_counts": {
-        "agreement_high_confidence": 24,
+        "agreement_high_confidence": 23,
         "agreement_low_confidence": 0,
         "wk_too_harsh": 4,
         "wk_too_generous": 2,
         "model_level_disagreement": 4,
-        "dimension_level_disagreement": 14,
-        "missing_evaluator_b": 0,
+        "dimension_level_disagreement": 11,
+        "missing_evaluator_b": 4,
         "invalid_evaluator_b": 0,
         "needs_second_pass": 0
       }
@@ -80,11 +80,11 @@
       "status_counts": {
         "agreement_high_confidence": 5,
         "agreement_low_confidence": 0,
-        "wk_too_harsh": 7,
+        "wk_too_harsh": 6,
         "wk_too_generous": 2,
-        "model_level_disagreement": 2,
-        "dimension_level_disagreement": 13,
-        "missing_evaluator_b": 0,
+        "model_level_disagreement": 1,
+        "dimension_level_disagreement": 11,
+        "missing_evaluator_b": 4,
         "invalid_evaluator_b": 0,
         "needs_second_pass": 0
       }
@@ -94,13 +94,13 @@
       "value": "away",
       "total": 51,
       "status_counts": {
-        "agreement_high_confidence": 22,
+        "agreement_high_confidence": 21,
         "agreement_low_confidence": 0,
-        "wk_too_harsh": 7,
+        "wk_too_harsh": 6,
         "wk_too_generous": 2,
         "model_level_disagreement": 4,
-        "dimension_level_disagreement": 16,
-        "missing_evaluator_b": 0,
+        "dimension_level_disagreement": 14,
+        "missing_evaluator_b": 4,
         "invalid_evaluator_b": 0,
         "needs_second_pass": 0
       }
@@ -114,9 +114,9 @@
         "agreement_low_confidence": 0,
         "wk_too_harsh": 7,
         "wk_too_generous": 4,
-        "model_level_disagreement": 4,
-        "dimension_level_disagreement": 17,
-        "missing_evaluator_b": 0,
+        "model_level_disagreement": 3,
+        "dimension_level_disagreement": 14,
+        "missing_evaluator_b": 4,
         "invalid_evaluator_b": 0,
         "needs_second_pass": 0
       }
@@ -158,13 +158,13 @@
       "value": "league_early",
       "total": 47,
       "status_counts": {
-        "agreement_high_confidence": 19,
+        "agreement_high_confidence": 18,
         "agreement_low_confidence": 0,
-        "wk_too_harsh": 7,
+        "wk_too_harsh": 6,
         "wk_too_generous": 3,
-        "model_level_disagreement": 5,
-        "dimension_level_disagreement": 13,
-        "missing_evaluator_b": 0,
+        "model_level_disagreement": 4,
+        "dimension_level_disagreement": 11,
+        "missing_evaluator_b": 5,
         "invalid_evaluator_b": 0,
         "needs_second_pass": 0
       }
@@ -179,8 +179,8 @@
         "wk_too_harsh": 3,
         "wk_too_generous": 0,
         "model_level_disagreement": 1,
-        "dimension_level_disagreement": 11,
-        "missing_evaluator_b": 0,
+        "dimension_level_disagreement": 9,
+        "missing_evaluator_b": 2,
         "invalid_evaluator_b": 0,
         "needs_second_pass": 0
       }
@@ -195,8 +195,8 @@
         "wk_too_harsh": 1,
         "wk_too_generous": 1,
         "model_level_disagreement": 2,
-        "dimension_level_disagreement": 4,
-        "missing_evaluator_b": 0,
+        "dimension_level_disagreement": 3,
+        "missing_evaluator_b": 1,
         "invalid_evaluator_b": 0,
         "needs_second_pass": 0
       }
@@ -206,13 +206,13 @@
       "value": "D",
       "total": 24,
       "status_counts": {
-        "agreement_high_confidence": 13,
+        "agreement_high_confidence": 12,
         "agreement_low_confidence": 0,
         "wk_too_harsh": 0,
         "wk_too_generous": 2,
-        "model_level_disagreement": 1,
-        "dimension_level_disagreement": 8,
-        "missing_evaluator_b": 0,
+        "model_level_disagreement": 0,
+        "dimension_level_disagreement": 5,
+        "missing_evaluator_b": 5,
         "invalid_evaluator_b": 0,
         "needs_second_pass": 0
       }
@@ -224,11 +224,11 @@
       "status_counts": {
         "agreement_high_confidence": 7,
         "agreement_low_confidence": 0,
-        "wk_too_harsh": 1,
+        "wk_too_harsh": 0,
         "wk_too_generous": 2,
         "model_level_disagreement": 0,
-        "dimension_level_disagreement": 3,
-        "missing_evaluator_b": 0,
+        "dimension_level_disagreement": 2,
+        "missing_evaluator_b": 2,
         "invalid_evaluator_b": 0,
         "needs_second_pass": 0
       }
@@ -243,8 +243,8 @@
         "wk_too_harsh": 13,
         "wk_too_generous": 2,
         "model_level_disagreement": 7,
-        "dimension_level_disagreement": 22,
-        "missing_evaluator_b": 0,
+        "dimension_level_disagreement": 21,
+        "missing_evaluator_b": 1,
         "invalid_evaluator_b": 0,
         "needs_second_pass": 0
       }
@@ -254,13 +254,13 @@
       "value": "True",
       "total": 94,
       "status_counts": {
-        "agreement_high_confidence": 37,
+        "agreement_high_confidence": 36,
         "agreement_low_confidence": 0,
-        "wk_too_harsh": 14,
+        "wk_too_harsh": 13,
         "wk_too_generous": 5,
-        "model_level_disagreement": 7,
-        "dimension_level_disagreement": 31,
-        "missing_evaluator_b": 0,
+        "model_level_disagreement": 6,
+        "dimension_level_disagreement": 26,
+        "missing_evaluator_b": 8,
         "invalid_evaluator_b": 0,
         "needs_second_pass": 0
       }
@@ -711,7 +711,7 @@
         "result": "D",
         "xg_present": true
       },
-      "status": "dimension_level_disagreement",
+      "status": "missing_evaluator_b",
       "wk": {
         "overall_signal": "🟡",
         "dimension_signals": {
@@ -729,25 +729,11 @@
         }
       },
       "b": {
-        "overall_signal": "🟡",
-        "dimension_signals": {
-          "execution": "🟢",
-          "adjustment": "🔴",
-          "satisfaction": "🟡"
-        },
-        "model_signals": {
-          "1": "🟡",
-          "2": "🟢",
-          "3": "🟡",
-          "4": "🟡",
-          "5": "🟡",
-          "6": "🔴"
-        }
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
       },
-      "differences": [
-        "execution",
-        "2"
-      ],
+      "differences": [],
       "features": {
         "result": "D",
         "opponent_quality": "top6",
@@ -764,7 +750,7 @@
         "result": "L",
         "xg_present": true
       },
-      "status": "wk_too_harsh",
+      "status": "missing_evaluator_b",
       "wk": {
         "overall_signal": "🟡",
         "dimension_signals": {
@@ -782,28 +768,11 @@
         }
       },
       "b": {
-        "overall_signal": "🟢",
-        "dimension_signals": {
-          "execution": "🟢",
-          "adjustment": "🟡",
-          "satisfaction": "🔴"
-        },
-        "model_signals": {
-          "1": "🔴",
-          "2": "🟢",
-          "3": "🟢",
-          "4": "🟢",
-          "5": "🔴",
-          "6": "🔴"
-        }
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
       },
-      "differences": [
-        "overall",
-        "execution",
-        "3",
-        "4",
-        "6"
-      ],
+      "differences": [],
       "features": {
         "result": "L",
         "opponent_quality": "top6",
@@ -1290,7 +1259,7 @@
         "result": "D",
         "xg_present": true
       },
-      "status": "agreement_high_confidence",
+      "status": "missing_evaluator_b",
       "wk": {
         "overall_signal": "🟡",
         "dimension_signals": {
@@ -1308,20 +1277,9 @@
         }
       },
       "b": {
-        "overall_signal": "🟡",
-        "dimension_signals": {
-          "execution": "🟡",
-          "adjustment": "🟡",
-          "satisfaction": "🟡"
-        },
-        "model_signals": {
-          "1": "🟡",
-          "2": "🟡",
-          "3": "🟡",
-          "4": "🔴",
-          "5": "🟡",
-          "6": "🟡"
-        }
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
       },
       "differences": [],
       "features": {
@@ -1390,7 +1348,7 @@
         "result": "D",
         "xg_present": true
       },
-      "status": "dimension_level_disagreement",
+      "status": "missing_evaluator_b",
       "wk": {
         "overall_signal": "🟡",
         "dimension_signals": {
@@ -1408,26 +1366,11 @@
         }
       },
       "b": {
-        "overall_signal": "🟡",
-        "dimension_signals": {
-          "execution": "🟡",
-          "adjustment": "🟡",
-          "satisfaction": "🟡"
-        },
-        "model_signals": {
-          "1": "🟢",
-          "2": "🟡",
-          "3": "🟡",
-          "4": "🟢",
-          "5": "🟡",
-          "6": "🟡"
-        }
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
       },
-      "differences": [
-        "execution",
-        "1",
-        "2"
-      ],
+      "differences": [],
       "features": {
         "result": "D",
         "opponent_quality": "mid_table",
@@ -1853,7 +1796,7 @@
         "result": "D",
         "xg_present": true
       },
-      "status": "dimension_level_disagreement",
+      "status": "missing_evaluator_b",
       "wk": {
         "overall_signal": "🟡",
         "dimension_signals": {
@@ -1871,26 +1814,11 @@
         }
       },
       "b": {
-        "overall_signal": "🟡",
-        "dimension_signals": {
-          "execution": "🟡",
-          "adjustment": "🟡",
-          "satisfaction": "🟡"
-        },
-        "model_signals": {
-          "1": "🟡",
-          "2": "🟢",
-          "3": "🟡",
-          "4": "🔴",
-          "5": "🟡",
-          "6": "🟡"
-        }
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
       },
-      "differences": [
-        "satisfaction",
-        "1",
-        "3"
-      ],
+      "differences": [],
       "features": {
         "result": "D",
         "opponent_quality": "mid_table",
@@ -3555,7 +3483,7 @@
         "result": "D",
         "xg_present": true
       },
-      "status": "model_level_disagreement",
+      "status": "missing_evaluator_b",
       "wk": {
         "overall_signal": "🟡",
         "dimension_signals": {
@@ -3573,25 +3501,11 @@
         }
       },
       "b": {
-        "overall_signal": "🟡",
-        "dimension_signals": {
-          "execution": "🟡",
-          "adjustment": "🟡",
-          "satisfaction": "🟡"
-        },
-        "model_signals": {
-          "1": "🟡",
-          "2": "🟡",
-          "3": "🟡",
-          "4": "🟡",
-          "5": "🟡",
-          "6": "🟡"
-        }
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
       },
-      "differences": [
-        "2",
-        "3"
-      ],
+      "differences": [],
       "features": {
         "result": "D",
         "opponent_quality": "top6",
@@ -4017,7 +3931,7 @@
         "result": "W",
         "xg_present": true
       },
-      "status": "dimension_level_disagreement",
+      "status": "missing_evaluator_b",
       "wk": {
         "overall_signal": "🟡",
         "dimension_signals": {
@@ -4035,27 +3949,11 @@
         }
       },
       "b": {
-        "overall_signal": "🟡",
-        "dimension_signals": {
-          "execution": "🟡",
-          "adjustment": "🟡",
-          "satisfaction": "🟡"
-        },
-        "model_signals": {
-          "1": "🟡",
-          "2": "🟡",
-          "3": "🟡",
-          "4": "🟡",
-          "5": "🟡",
-          "6": "🟡"
-        }
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
       },
-      "differences": [
-        "satisfaction",
-        "1",
-        "2",
-        "3"
-      ],
+      "differences": [],
       "features": {
         "result": "W",
         "opponent_quality": "mid_table",
@@ -5324,7 +5222,7 @@
         "result": "L",
         "xg_present": true
       },
-      "status": "dimension_level_disagreement",
+      "status": "missing_evaluator_b",
       "wk": {
         "overall_signal": "🟡",
         "dimension_signals": {
@@ -5342,27 +5240,11 @@
         }
       },
       "b": {
-        "overall_signal": "🟡",
-        "dimension_signals": {
-          "execution": "🟡",
-          "adjustment": "🟡",
-          "satisfaction": "🟡"
-        },
-        "model_signals": {
-          "1": "🟡",
-          "2": "🟡",
-          "3": "🟡",
-          "4": "🟡",
-          "5": "🟡",
-          "6": "🟡"
-        }
+        "overall_signal": "",
+        "dimension_signals": {},
+        "model_signals": {}
       },
-      "differences": [
-        "satisfaction",
-        "1",
-        "3",
-        "5"
-      ],
+      "differences": [],
       "features": {
         "result": "L",
         "opponent_quality": "top6",
