@@ -829,11 +829,6 @@ def run_refresh_features(
             skipped.append({"match_id": mid, "reason": "legacy_only_no_features"})
             continue
 
-        # Skip human_override entries
-        if entry.get("human_override"):
-            skipped.append({"match_id": mid, "reason": "has_human_override"})
-            continue
-
         # Find report or raw JSON
         backfill = entry.get("backfill", {})
         report_path = backfill.get("report_path", "")

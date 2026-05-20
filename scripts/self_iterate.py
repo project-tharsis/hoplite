@@ -415,6 +415,14 @@ def run_make_jobs(
                     },
                 })
 
+        job_versions = {
+            "features_version": entry.get("features_version", "v1"),
+            "weak_label_version": entry.get("weak_label_version", "v1.1"),
+            "rubric_version": entry.get("rubric_version", "arteta_v1"),
+            "prompt_builder_version": entry.get("prompt_builder_version", "v1"),
+            "blind_spots_version": current_versions.get("blind_spots_version", "v1"),
+        }
+
         # Build job row (§7.1)
         job_row = {
             "job_schema_version": "self_iteration_job_v1",
@@ -429,11 +437,13 @@ def run_make_jobs(
             "weak_labels": entry.get("weak_labels", {}),
             "report_path": report_path,
             "report_candidates": report_candidates,
-            "versions": {
-                "features_version": entry.get("features_version", "v1"),
-                "weak_label_version": entry.get("weak_label_version", "v1.1"),
-                "rubric_version": entry.get("rubric_version", "arteta_v1"),
-                "prompt_builder_version": entry.get("prompt_builder_version", "v1"),
+            "versions": job_versions,
+            "metadata": {
+                "evaluator_id": evaluator_id,
+                "run_id": run_id,
+                "prompt_hash": prompt_data["prompt_hash"],
+                "job_schema_version": "self_iteration_job_v1",
+                **job_versions,
             },
             "expected_output_schema": "strict_v2_evaluation",
         }

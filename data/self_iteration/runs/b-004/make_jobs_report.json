@@ -1,0 +1,624 @@
+{
+  "summary": {
+    "total_candidates": 102,
+    "jobs_generated": 102,
+    "skipped": 0,
+    "only_mode": "stale-evaluation",
+    "evaluator_id": "B",
+    "run_id": "b-004"
+  },
+  "per_match": [
+    {
+      "match_id": "1208023",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208023.json"
+    },
+    {
+      "match_id": "1208032",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208032.json"
+    },
+    {
+      "match_id": "1208041",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208041.json"
+    },
+    {
+      "match_id": "1208059",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208059.json"
+    },
+    {
+      "match_id": "1208067",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208067.json"
+    },
+    {
+      "match_id": "1208072",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208072.json"
+    },
+    {
+      "match_id": "1208081",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208081.json"
+    },
+    {
+      "match_id": "1208091",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208091.json"
+    },
+    {
+      "match_id": "1208103",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208103.json"
+    },
+    {
+      "match_id": "1208118",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208118.json"
+    },
+    {
+      "match_id": "1208125",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208125.json"
+    },
+    {
+      "match_id": "1208134",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208134.json"
+    },
+    {
+      "match_id": "1208151",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1208151.json"
+    },
+    {
+      "match_id": "1208154",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1208154.json"
+    },
+    {
+      "match_id": "1208167",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208167.json"
+    },
+    {
+      "match_id": "1208174",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1208174.json"
+    },
+    {
+      "match_id": "1208185",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208185.json"
+    },
+    {
+      "match_id": "1208194",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208194.json"
+    },
+    {
+      "match_id": "1208204",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208204.json"
+    },
+    {
+      "match_id": "1208215",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208215.json"
+    },
+    {
+      "match_id": "1208223",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208223.json"
+    },
+    {
+      "match_id": "1208233",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208233.json"
+    },
+    {
+      "match_id": "1208252",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208252.json"
+    },
+    {
+      "match_id": "1208254",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208254.json"
+    },
+    {
+      "match_id": "1208267",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208267.json"
+    },
+    {
+      "match_id": "1208274",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208274.json"
+    },
+    {
+      "match_id": "1208285",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208285.json"
+    },
+    {
+      "match_id": "1208298",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208298.json"
+    },
+    {
+      "match_id": "1208304",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208304.json"
+    },
+    {
+      "match_id": "1208314",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208314.json"
+    },
+    {
+      "match_id": "1208326",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208326.json"
+    },
+    {
+      "match_id": "1208334",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208334.json"
+    },
+    {
+      "match_id": "1208348",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208348.json"
+    },
+    {
+      "match_id": "1208354",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208354.json"
+    },
+    {
+      "match_id": "1208363",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208363.json"
+    },
+    {
+      "match_id": "1208376",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1208376.json"
+    },
+    {
+      "match_id": "1208383",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1208383.json"
+    },
+    {
+      "match_id": "1208400",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1208400.json"
+    },
+    {
+      "match_id": "1298642",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1298642.json"
+    },
+    {
+      "match_id": "1309284",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1309284.json"
+    },
+    {
+      "match_id": "1314297",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1314297.json"
+    },
+    {
+      "match_id": "1327988",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1327988.json"
+    },
+    {
+      "match_id": "1327989",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1327989.json"
+    },
+    {
+      "match_id": "1378977",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1378977.json"
+    },
+    {
+      "match_id": "1378979",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1378979.json"
+    },
+    {
+      "match_id": "1378993",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1378993.json"
+    },
+    {
+      "match_id": "1378999",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1378999.json"
+    },
+    {
+      "match_id": "1379009",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379009.json"
+    },
+    {
+      "match_id": "1379026",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379026.json"
+    },
+    {
+      "match_id": "1379029",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379029.json"
+    },
+    {
+      "match_id": "1379042",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379042.json"
+    },
+    {
+      "match_id": "1379049",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379049.json"
+    },
+    {
+      "match_id": "1379060",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379060.json"
+    },
+    {
+      "match_id": "1379076",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1379076.json"
+    },
+    {
+      "match_id": "1379079",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1379079.json"
+    },
+    {
+      "match_id": "1379091",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1379091.json"
+    },
+    {
+      "match_id": "1379099",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1379099.json"
+    },
+    {
+      "match_id": "1379109",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1379109.json"
+    },
+    {
+      "match_id": "1379119",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1379119.json"
+    },
+    {
+      "match_id": "1379132",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1379132.json"
+    },
+    {
+      "match_id": "1379139",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379139.json"
+    },
+    {
+      "match_id": "1379149",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379149.json"
+    },
+    {
+      "match_id": "1379160",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379160.json"
+    },
+    {
+      "match_id": "1379169",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379169.json"
+    },
+    {
+      "match_id": "1379185",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1379185.json"
+    },
+    {
+      "match_id": "1379189",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379189.json"
+    },
+    {
+      "match_id": "1379202",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379202.json"
+    },
+    {
+      "match_id": "1379209",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1379209.json"
+    },
+    {
+      "match_id": "1379220",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379220.json"
+    },
+    {
+      "match_id": "1379278",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379278.json"
+    },
+    {
+      "match_id": "1379237",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1379237.json"
+    },
+    {
+      "match_id": "1379239",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1379239.json"
+    },
+    {
+      "match_id": "1379251",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379251.json"
+    },
+    {
+      "match_id": "1379259",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379259.json"
+    },
+    {
+      "match_id": "1379279",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379279.json"
+    },
+    {
+      "match_id": "1379295",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379295.json"
+    },
+    {
+      "match_id": "1379299",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1379299.json"
+    },
+    {
+      "match_id": "1379309",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379309.json"
+    },
+    {
+      "match_id": "1379328",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1379328.json"
+    },
+    {
+      "match_id": "1451021",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1451021.json"
+    },
+    {
+      "match_id": "1451052",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1451052.json"
+    },
+    {
+      "match_id": "1451061",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1451061.json"
+    },
+    {
+      "match_id": "1451075",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1451075.json"
+    },
+    {
+      "match_id": "1451107",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1451107.json"
+    },
+    {
+      "match_id": "1451123",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1451123.json"
+    },
+    {
+      "match_id": "1451136",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1451136.json"
+    },
+    {
+      "match_id": "1451159",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1451159.json"
+    },
+    {
+      "match_id": "1528322",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1528322.json"
+    },
+    {
+      "match_id": "1528330",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1528330.json"
+    },
+    {
+      "match_id": "1534570",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1534570.json"
+    },
+    {
+      "match_id": "1534571",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1534571.json"
+    },
+    {
+      "match_id": "1540842",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1540842.json"
+    },
+    {
+      "match_id": "1540843",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1540843.json"
+    },
+    {
+      "match_id": "1457283",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1457283.json"
+    },
+    {
+      "match_id": "1479619",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1479619.json"
+    },
+    {
+      "match_id": "1498259",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1498259.json"
+    },
+    {
+      "match_id": "1498260",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1498260.json"
+    },
+    {
+      "match_id": "1518728",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1518728.json"
+    },
+    {
+      "match_id": "1490810",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1490810.json"
+    },
+    {
+      "match_id": "1506251",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-003/reports/1506251.json"
+    },
+    {
+      "match_id": "1523412",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1523412.json"
+    },
+    {
+      "match_id": "1531572",
+      "ok": true,
+      "prompt_source": "prepare_evaluation_regenerated",
+      "report_path": "data/backfill/runs/seed-002/reports/1531572.json"
+    }
+  ]
+}
