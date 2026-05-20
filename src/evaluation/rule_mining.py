@@ -336,7 +336,7 @@ def _build_candidate_rule(
     group_key: str,
     group: list[dict],
     feature_views: list[dict],
-    conflict_groups: dict[str, list[dict]],
+    counterexample_rows: list[dict],
 ) -> dict | None:
     """Build a candidate rule from a group of rows with similar features and same status."""
     if not group:
@@ -359,12 +359,8 @@ def _build_candidate_rule(
     support = len(group)
     examples = [row["match_id"] for row in group]
 
-    # Counterexamples: rows with the same features but opposite direction
-    opposite_status = "wk_too_generous" if status == "wk_too_harsh" else "wk_too_harsh"
-    opposite_key = group_key.replace(status, opposite_status)
-    counterexample_rows = conflict_groups.get(opposite_key, [])
     counterexamples = [r["match_id"] for r in counterexample_rows]
-    false_positive_count = len(counterexamples)
+    false_positive_count = len(counterexample_rows)
 
     # Precision: support / (support + false_positive_count)
     total = support + false_positive_count
@@ -519,7 +515,7 @@ def run_rule_mining(adjudication_report_path: str, output_path: str) -> dict:
     disagreement_statuses = {"wk_too_harsh", "wk_too_generous"}
     disagreement_rows = [r for r in rows if r.get("status") in disagreement_statuses]
 
-    # Build feature views and group
+    # Build feature views and group by status + features
     groups: dict[str, list[dict]] = defaultdict(list)
     feature_view_groups: dict[str, list[dict]] = defaultdict(list)
 
@@ -529,13 +525,14 @@ def run_rule_mining(adjudication_report_path: str, output_path: str) -> dict:
         groups[gk].append(row)
         feature_view_groups[gk].append(fv)
 
-    # Also group by same features but opposite status for conflict detection
-    conflict_groups: dict[str, list[dict]] = defaultdict(list)
+    # Build a second grouping using the SAME features but WITHOUT status,
+    # so we can detect cross-status conflicts for the same feature pattern.
+    # key = _group_key without status → {status: [rows]}
+    feature_pattern_groups: dict[str, dict[str, list[dict]]] = defaultdict(lambda: defaultdict(list))
     for row in disagreement_rows:
         fv = build_feature_view(row)
-        opposite_status = "wk_too_generous" if row["status"] == "wk_too_harsh" else "wk_too_harsh"
-        gk = _group_key(fv, opposite_status)
-        conflict_groups[gk].append(row)
+        base_key = _group_key(fv, "")  # empty status gives the feature-only key
+        feature_pattern_groups[base_key][row["status"]].append(row)
 
     # Build candidate rules
     candidates = []
@@ -543,7 +540,12 @@ def run_rule_mining(adjudication_report_path: str, output_path: str) -> dict:
 
     for gk, group in groups.items():
         fvs = feature_view_groups[gk]
-        candidate = _build_candidate_rule(gk, group, fvs, conflict_groups)
+        # Find counterexamples: rows with same features but opposite status
+        status = group[0]["status"]
+        opposite_status = "wk_too_generous" if status == "wk_too_harsh" else "wk_too_harsh"
+        base_key = _group_key(fvs[0], "")
+        counterexample_rows = feature_pattern_groups.get(base_key, {}).get(opposite_status, [])
+        candidate = _build_candidate_rule(gk, group, fvs, counterexample_rows)
         if candidate is None:
             continue
 
