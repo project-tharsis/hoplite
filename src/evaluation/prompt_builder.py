@@ -155,8 +155,12 @@ class PromptBuilder:
         # Section 1: Match Summary
         sections.append(self._build_match_summary(features))
 
-        # Section 1.5: Match Process Signals
-        sections.append(self._build_match_process_signals(features))
+        # Section 1.5: Match Process Signals — DISABLED (b-004 rollback)
+        # v2 process signals caused regression vs b-003 baseline.
+        # See Codex review: prompt placed signals too prominently, B treated
+        # them as primary judgment evidence rather than auxiliary context.
+        # TODO: Re-enable with per-model binding + downgrade framing (b-005)
+        # sections.append(self._build_match_process_signals(features))
 
         # Section 2: Feature Table
         sections.append(self._build_feature_table(features))
