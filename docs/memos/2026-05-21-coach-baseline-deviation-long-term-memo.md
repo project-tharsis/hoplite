@@ -33,6 +33,8 @@ Hoplite 不应该只是一个“基于 Arteta 哲学的赛后评分器”。
 
 但架构上应保持可扩展：未来可以支持 Guardiola、Klopp、Emery、Slot 等不同教练，也可以支持同一教练不同赛季的对比。
 
+当前状态：StatsBomb/API-Football 数据接入完成，Arteta 6-model 框架已实现，b-001/b-002/b-003 迭代已跑。方向由此 memo 确认。
+
 ## 2. 产品原则
 
 ### 2.1 LLM 负责解释，不负责计算
@@ -86,6 +88,8 @@ Hoplite 应该说：
 - 数据缺口。
 
 尤其要避免把数据相关性直接写成教练意图。
+
+当前状态：生产 prompt 已实现部分原则（weak label、证据分级），但 LLM 输入仍包含原始事件流，结构化工具有待补全。
 
 ## 3. 数据分层
 
@@ -188,6 +192,8 @@ Hoplite 应该说：
 该判断基于事件位置和传球方向推断，缺少 tracking data，因此置信度中等。
 ```
 
+当前状态：stats 级数据已接入，event data 联系 vendor 询价中。StatsBomb Open Data 可做原型验证。
+
 ## 4. Competition Context Layer
 
 比赛性质和重要程度必须作为一级上下文。
@@ -247,6 +253,8 @@ same time_window baseline
 是否偏离 Arteta 在同类比赛中的习惯？
 是否偏离 Arteta 在同比分/同时间状态下的习惯？
 ```
+
+当前状态：未实现。现有分析不按比赛上下文分层，baseline 仅有全局均值概念。
 
 ## 5. Coach Baseline
 
@@ -328,6 +336,8 @@ baseline 应输出机器可读结构，而不是自然语言总结。
 }
 ```
 
+当前状态：未建立结构化 baseline。当前评估基于 Arteta 框架定性评分，非量化指标。
+
 ## 6. Match Deviation
 
 Match Deviation 是单场分析的核心入口。
@@ -376,6 +386,8 @@ vs
 }
 ```
 
+当前状态：未实现 deviation detection。当前输出为整体评分（3-dimension + narrative），非偏离分析。
+
 ## 7. LLM Report Layer
 
 LLM 的输入应是结构化发现，而不是原始事件流。
@@ -405,6 +417,8 @@ data limitations
 - 一句话结论。
 
 LLM 不应自由补充没有数据支持的战术细节。
+
+当前状态：LLM 输入包含结构化 match data + weak labels，但缺少 structured deviations 模块。report 输出已含 evidence/confidence/alternative。
 
 ## 8. 自迭代产物分层
 
@@ -457,6 +471,8 @@ arteta_framework.md 不是一线自迭代对象。
 它只接收多轮 promoted evidence 证明过的稳定结论。
 ```
 
+当前状态：已实现 single-match evaluation → adjudication → experiment decision 链路。b-003 完成后可固化 accepted baseline。
+
 ## 9. 数据源策略
 
 ### 9.1 原型阶段
@@ -496,6 +512,8 @@ arteta_framework.md 不是一线自迭代对象。
 - tracking / freeze-frame 数据。
 
 这部分不应成为 MVP 阻塞项。
+
+当前状态：API-Football stats 级数据可用，event data vendor 询价中。StatsBomb Open Data 备选。
 
 ## 10. 阶段路线
 
@@ -569,6 +587,8 @@ arteta_framework.md 不是一线自迭代对象。
 - 从事件偏离升级到空间结构偏离；
 - 能解释 Arteta 的 build-up shape、pressing shape 和 defensive rest structure。
 
+当前状态：Phase 1 收口中（prompt 隔离、rollback 清理）。Phase 2 待启动，依赖 event data 接入。
+
 ## 11. MVP 成功标准
 
 MVP 不要求“完全理解足球”。
@@ -591,6 +611,8 @@ Arteta historical baseline
 - 缺少数据时明确降置信度；
 - 同一场比赛重复生成结果基本一致；
 - 人工战术读者认为主要结论成立。
+
+当前状态：MVP 标准已定义，当前系统尚未完全达标。Phase 1 完成后可作为评估基准。
 
 ## 12. 长期判断
 
@@ -623,3 +645,5 @@ Hoplite 的长期资产应该是：
 Hoplite 应该从“赛后评分器”升级为
 Coach Baseline + Match Deviation + Evidence-based LLM Report。
 ```
+
+当前状态：方向确认，此 memo 即定位记录。待 Phase 1 收口后进入实现阶段。
