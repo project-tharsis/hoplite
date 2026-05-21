@@ -1,0 +1,28 @@
+{
+  "feature_schema_version": "predicate_search_space_v2_enriched",
+  "source_run": "b-004",
+  "generated_at": "2026-05-21T09:57:00Z",
+  "row_count": 93,
+  "note": "Per-row feature vectors were generated in-session but not separately serialized. The enriched predicate definitions below were added to the existing predicate set (from wk-v1.2-predicate-mining/feature_search_space.json) during mining. See enriched_wk_rule_candidates.json for candidate summary.",
+  "new_predicate_definitions": {
+    "scored_first": "arsenal_scored_first is true",
+    "conceded_first": "arsenal_conceded_first is true",
+    "trailed_then_won_or_drew": "arsenal_trailed_at_any_point and result != L",
+    "led_but_failed_to_win": "arsenal_led_at_any_point and result != W",
+    "protected_lead": "final_state_from_first_lead == protected",
+    "lost_lead": "final_state_from_first_lead == lost",
+    "late_lead_lost": "late_lead_lost is true",
+    "late_lead_protected": "late_lead_protected is true",
+    "dominant_xg_no_win": "dominant_xg_no_win is true",
+    "won_without_xg_edge": "won_without_xg_edge is true",
+    "bad_xg_conversion": "xg_overperformance_for <= -0.75",
+    "opponent_clinical_finishing": "xg_overperformance_against >= 0.75",
+    "opponent_high_quality_chances": "opponent_high_quality_chances is true",
+    "sub_positive_from_level": "first_sub_score_state == level and net_goals_after_first_sub > 0",
+    "sub_negative_while_leading": "first_sub_score_state == leading and net_goals_after_first_sub < 0",
+    "sub_no_change_while_trailing": "first_sub_score_state == trailing and net_goals_after_first_sub <= 0",
+    "late_game_control_loss": "led_after_75 and late_lead_lost"
+  },
+  "predicate_groups_scanned": 14,
+  "predicates_evaluated": 7843
+}

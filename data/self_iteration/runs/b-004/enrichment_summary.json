@@ -1,6 +1,6 @@
 {
   "phase": "b-004-feature-enrichment-summary",
-  "created_at": "2026-05-20T14:38:52Z",
+  "created_at": "2026-05-21T09:57:00Z",
   "run_id": "b-004",
   "features_version": "v2",
   "evaluation_results": {
@@ -18,26 +18,40 @@
     "wk_too_harsh": 20,
     "wk_too_generous": 10
   },
-  "comparison_vs_b001": {
-    "clean_subset_n": 93,
+  "comparison_vs_b003_clean_subset": {
+    "n": 93,
+    "overall_agreement_delta": -0.1316,
+    "dimension_agreement_delta": -0.0545,
+    "model_agreement_delta": -0.0404,
+    "wk_too_harsh_delta": 7,
+    "wk_too_generous_delta": 6,
+    "criteria_met": "1/5",
+    "effective": false,
+    "conclusion": "b-004 相对 b-003 是回退。v2 process signal prompt enrichment 对长周期 b-001 有改善，但相对 b-003 没有正向效果。"
+  },
+  "comparison_vs_b001_clean_subset": {
+    "n": 93,
     "overall_agreement_delta": 0.0,
     "dimension_agreement_delta": 0.1828,
     "model_agreement_delta": 0.2043,
     "wk_too_harsh_delta": -9,
     "wk_too_generous_delta": 9,
-    "criteria_met": "4/5"
+    "criteria_met": "4/5",
+    "effective": true,
+    "note": "保留 vs b-001 对比供参考。但不能以 b-001 为基线判断 b-004 有效性。"
   },
   "predicate_mining": {
     "predicates_evaluated": 7843,
     "candidates_found": 0,
     "breadth_rejected": 11,
     "rejected": 7832,
-    "conclusion": "No predicates meet precision threshold. Improvements come from prompt enrichment (过程信号 section), not predicate mining."
+    "conclusion": "No predicates meet precision threshold. v2 process signal enrichment 不是 improvement driver — 相对 b-003 没有改善。"
   },
-  "key_insight": "v2 过程信号 prompt enrichment 是主要 improvement driver。dimension_agreement +18.3pp, model_agreement +20.4pp, wk_too_harsh -9。wk_too_generous +9 需要后续关注。",
+  "key_insight": "b-004 vs b-003 是 regression（1/5 criteria met），不是提升。v2 process signal prompt enrichment 仅对 v1 baseline（b-001）有改善，无法归因为 'improvement driver'。当前 WK/B 分歧不能安全蒸馏为 deterministic rule。",
   "next_steps": [
-    "Consider promoting v2 prompt format as default",
-    "Monitor wk_too_generous drift in future runs",
-    "Predicate mining may need lower precision threshold or different feature space"
+    "b-004 结论修正：vs b-003 回退，不 promote v2 prompt format",
+    "调查 v2 → v2 prompt enrichment 为何导致质量退化（更多 wk_too_harsh + wk_too_generous）",
+    "Predicate mining 0 candidates 不变 — 数据量或特征空间仍不足",
+    "考虑增加样本量或人工 review，而不是继续放宽规则"
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "features_version": "v2",
+  "generated_at": "2026-05-21T09:57:00Z",
+  "kb_feature_backed": 102,
+  "b004_compared": 93,
+  "new_feature_coverage": {
+    "goal_timing": 0.89,
+    "lead_protection": 0.89,
+    "xg_conversion": 0.75,
+    "substitution_score_state": 0.89,
+    "opponent_shot_quality": 0.75
+  },
+  "candidate_count": 0,
+  "implementation_eligible_count": 0,
+  "replay_passes": false,
+  "decision": "no_action",
+  "reason": "Process features (v2) 已补充。b-004 相对 b-003 是回退（overall -13.16pp, criteria 1/5），不是提升。v2 process signal enrichment 仅对长周期 b-001 有改善，不能归因于 'improvement driver'。仍然 0 candidates。当前 WK/B 分歧不能安全蒸馏为 deterministic rule。下一步不应继续调门槛或放宽规则，应增加样本或人工 review。",
+  "b004_vs_b003": "regression",
+  "b004_vs_b001": "improvement (long-cycle reference only, not valid baseline)"
+}

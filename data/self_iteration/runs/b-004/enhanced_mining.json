@@ -1,0 +1,19 @@
+{
+  "candidate_schema_version": "enhanced_wk_rule_candidate_v1",
+  "generated_at": "2026-05-21T09:57:00Z",
+  "source_run": "b-004",
+  "baseline_run": "b-003",
+  "candidates": [],
+  "exploratory_candidates": [],
+  "rejected_count": 7832,
+  "rejected_path": "data/self_iteration/runs/b-004/enhanced_rejected_candidates.json",
+  "search_summary": {
+    "groups_scanned": 14,
+    "predicates_evaluated": 7843,
+    "candidates_found": 0,
+    "exploratory_found": 0,
+    "breadth_rejected": 11,
+    "rejected": 7832
+  },
+  "note": "This artifact is a b-004 local copy. Canonical enriched mining outputs are at data/self_iteration/runs/wk-v1.2-feature-enrichment/."
+}

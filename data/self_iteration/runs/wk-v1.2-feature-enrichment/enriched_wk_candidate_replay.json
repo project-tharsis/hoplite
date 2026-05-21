@@ -1,0 +1,12 @@
+{
+  "replay_schema_version": "candidate_replay_v1",
+  "generated_at": "2026-05-21T09:57:00Z",
+  "source_run": "b-004",
+  "candidates_source": "data/self_iteration/runs/wk-v1.2-feature-enrichment/enriched_wk_rule_candidates.json",
+  "candidate_count": 0,
+  "implementation_eligible_count": 0,
+  "replay_passes": false,
+  "replay_results": [],
+  "note": "No candidates to replay. enriched_wk_rule_candidates returned 0 implementation-eligible candidates. Knowledge base unchanged.",
+  "before_after_identical": true
+}

@@ -1,38 +1,54 @@
 {
-  "b001": {
-    "overall_agreement_rate": 0.6569,
-    "dimension_agreement_rate": 0.2647,
-    "model_agreement_rate": 0.1765,
-    "wk_too_harsh": 34,
-    "wk_too_generous": 1,
-    "dimension_level_disagreement": 40,
-    "model_level_disagreement": 9,
-    "compared": 102
+  "primary_baseline": "b-003",
+  "generated_at": "2026-05-21T09:57:00Z",
+  "b003_full": {
+    "compared": 94,
+    "overall_agreement_rate": 0.7979,
+    "dimension_agreement_rate": 0.5,
+    "model_agreement_rate": 0.4255,
+    "wk_too_harsh": 13,
+    "wk_too_generous": 6,
+    "dimension_level_disagreement": 28,
+    "model_level_disagreement": 7
   },
-  "b002": {
+  "b004": {
+    "compared": 93,
     "overall_agreement_rate": 0.6774,
     "dimension_agreement_rate": 0.4624,
     "model_agreement_rate": 0.3978,
     "wk_too_harsh": 20,
     "wk_too_generous": 10,
     "dimension_level_disagreement": 20,
-    "model_level_disagreement": 6,
-    "compared": 93
+    "model_level_disagreement": 6
   },
-  "delta": {
-    "overall_agreement_rate": 0.0205,
-    "dimension_agreement_rate": 0.1977,
-    "model_agreement_rate": 0.2213,
-    "wk_too_harsh": -14,
-    "wk_too_generous": 9,
-    "dimension_level_disagreement": -20,
-    "model_level_disagreement": -3
+  "clean_subset_vs_b003": {
+    "common_match_ids": 93,
+    "b003": {
+      "overall_agreement_rate": 0.8090,
+      "dimension_agreement_rate": 0.5169,
+      "model_agreement_rate": 0.4382,
+      "wk_too_harsh": 13,
+      "wk_too_generous": 4,
+      "dimension_level_disagreement": 28,
+      "model_level_disagreement": 7
+    },
+    "delta": {
+      "overall_agreement_rate": -0.1316,
+      "dimension_agreement_rate": -0.0545,
+      "model_agreement_rate": -0.0404,
+      "wk_too_harsh": 7,
+      "wk_too_generous": 6,
+      "dimension_level_disagreement": -8,
+      "model_level_disagreement": -1
+    },
+    "criteria_met": 1,
+    "criteria_total": 5,
+    "same_denominator": true,
+    "effective": false,
+    "note": "b-004 相对 b-003 是回退（regression），不是提升。overall -13.16pp, dimension -5.45pp, model -4.04pp。wk_too_harsh +7（恶化），wk_too_generous +6（恶化）。这是 Codex 线上运行 compare-runs --baseline b-003 的结果。"
   },
-  "criteria_met": 5,
-  "criteria_total": 5,
-  "same_denominator": false,
-  "effective": false,
-  "clean_subset": {
+  "clean_subset_vs_b001": {
+    "common_match_ids": 93,
     "b001": {
       "overall_agreement_rate": 0.6774,
       "dimension_agreement_rate": 0.2796,
@@ -40,18 +56,7 @@
       "wk_too_harsh": 29,
       "wk_too_generous": 1,
       "dimension_level_disagreement": 37,
-      "model_level_disagreement": 8,
-      "compared": 93
-    },
-    "b002": {
-      "overall_agreement_rate": 0.6774,
-      "dimension_agreement_rate": 0.4624,
-      "model_agreement_rate": 0.3978,
-      "wk_too_harsh": 20,
-      "wk_too_generous": 10,
-      "dimension_level_disagreement": 20,
-      "model_level_disagreement": 6,
-      "compared": 93
+      "model_level_disagreement": 8
     },
     "delta": {
       "overall_agreement_rate": 0.0,
@@ -66,6 +71,6 @@
     "criteria_total": 5,
     "same_denominator": true,
     "effective": true,
-    "common_match_ids": 93
+    "note": "vs b-001 改善显著（v1→v2 prompt enrichment），但这是长周期对比，不能作为 b-004 有效的证据。"
   }
 }
