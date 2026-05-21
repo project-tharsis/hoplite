@@ -1,0 +1,117 @@
+{
+  "policy_version": "self_iteration_promotion_v1",
+  "baseline_run_id": "b-001",
+  "candidate_run_id": "b-002",
+  "decision": "reject_quality",
+  "effective": false,
+  "primary_basis": "top_level",
+  "metrics": {
+    "baseline": {
+      "overall_agreement_rate": 0.6569,
+      "dimension_agreement_rate": 0.2647,
+      "model_agreement_rate": 0.1765,
+      "wk_too_harsh": 34,
+      "wk_too_generous": 1,
+      "dimension_level_disagreement": 40,
+      "model_level_disagreement": 9,
+      "agreement_high_confidence": 16,
+      "agreement_low_confidence": 2,
+      "compared": 102
+    },
+    "candidate": {
+      "overall_agreement_rate": 0.5392,
+      "dimension_agreement_rate": 0.1373,
+      "model_agreement_rate": 0.0588,
+      "wk_too_harsh": 12,
+      "wk_too_generous": 35,
+      "dimension_level_disagreement": 41,
+      "model_level_disagreement": 8,
+      "agreement_high_confidence": 6,
+      "agreement_low_confidence": 0,
+      "compared": 102
+    },
+    "delta": {
+      "overall_agreement_rate": -0.1177,
+      "dimension_agreement_rate": -0.1274,
+      "model_agreement_rate": -0.1177,
+      "wk_too_harsh": -22,
+      "wk_too_generous": 34,
+      "dimension_level_disagreement": 1,
+      "model_level_disagreement": -1
+    },
+    "criteria_met": 1,
+    "criteria_total": 5,
+    "same_denominator": true,
+    "source_paths": {
+      "baseline_adjudication": "data/self_iteration/runs/b-001/adjudication_report.json",
+      "candidate_adjudication": "data/self_iteration/runs/b-002/adjudication_report.json",
+      "comparison": "data/self_iteration/runs/b-002/comparison_report.json",
+      "ingest_report": "data/self_iteration/runs/b-002/ingest_report.json"
+    }
+  },
+  "quality": {
+    "total_results": 102,
+    "applied": 102,
+    "skipped": 0,
+    "errors": 0,
+    "quarantine_count": 0,
+    "quarantine_rate": 0.0
+  },
+  "gates": {
+    "min_compared": {
+      "passed": true,
+      "value": 102,
+      "threshold": 90
+    },
+    "quality": {
+      "passed": true,
+      "value": 0.0,
+      "threshold": 0.15
+    },
+    "effectiveness": {
+      "passed": false,
+      "criteria_met": 1,
+      "threshold": 3,
+      "effective": false
+    },
+    "same_denominator": {
+      "passed": true,
+      "value": true
+    },
+    "generous_drift": {
+      "passed": false,
+      "delta": 34,
+      "threshold": 5
+    }
+  },
+  "reasons": [
+    "overall/dimension/model agreement all regressed and wk_too_generous spiked; evaluator quality pollution suspected"
+  ],
+  "cautions": [],
+  "recommended_actions": [
+    "Exclude this run from promotion and rule distillation."
+  ],
+  "baseline_summary": {
+    "total_entries": 111,
+    "feature_backed": 102,
+    "compared": 102,
+    "missing_evaluator_b": 0,
+    "overall_agreement_rate": 0.6569,
+    "dimension_agreement_rate": 0.2647,
+    "model_agreement_rate": 0.1765,
+    "wk_too_harsh": 34,
+    "wk_too_generous": 1,
+    "dimension_level_disagreement": 40,
+    "model_level_disagreement": 9
+  },
+  "candidate_summary": {
+    "total_entries": 111,
+    "feature_backed": 102,
+    "compared": 102,
+    "missing_evaluator_b": 0,
+    "overall_agreement_rate": 0.5392,
+    "dimension_agreement_rate": 0.1373,
+    "model_agreement_rate": 0.0588
+  },
+  "created_at": "2026-05-21T02:24:52+00:00"
+}

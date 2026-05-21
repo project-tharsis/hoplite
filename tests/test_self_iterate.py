@@ -22,6 +22,7 @@ from scripts.self_iterate import (
     _detect_wk_drift,
     _is_stale_evaluation,
     _filter_entries,
+    run_decide_experiment,
 )
 
 
@@ -240,3 +241,193 @@ class TestFilterEntries:
         }
         result = _filter_entries(entries, "B", "stale-evaluation", current_versions=current_versions)
         assert len(result) == 1
+
+
+# ── Experiment decision policy ─────────────────────────────────────
+
+
+def _write_json(tmp_path: Path, name: str, data: dict) -> str:
+    path = tmp_path / name
+    path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+    return str(path)
+
+
+def _adj(compared: int = 94) -> dict:
+    return {
+        "summary": {
+            "compared": compared,
+            "overall_agreement_rate": 0.8,
+            "dimension_agreement_rate": 0.5,
+            "model_agreement_rate": 0.42,
+            "wk_too_harsh": 13,
+            "wk_too_generous": 6,
+            "dimension_level_disagreement": 28,
+            "model_level_disagreement": 7,
+        },
+        "rows": [],
+    }
+
+
+def _ingest(total: int = 102, applied: int = 94, errors: int = 8) -> dict:
+    return {
+        "summary": {
+            "total_results": total,
+            "applied": applied,
+            "skipped": 0,
+            "errors": errors,
+            "dry_run": False,
+        },
+        "errors": [
+            {"match_id": str(i), "error": {"code": "QUARANTINE", "message": "placeholder"}}
+            for i in range(errors)
+        ],
+    }
+
+
+def _run_decision(tmp_path: Path, comparison: dict, ingest: dict | None = None, candidate_compared: int = 94):
+    baseline = _write_json(tmp_path, "baseline.json", _adj(102))
+    candidate = _write_json(tmp_path, "candidate.json", _adj(candidate_compared))
+    comp = _write_json(tmp_path, "comparison.json", comparison)
+    ing = _write_json(tmp_path, "ingest.json", ingest or _ingest(errors=0))
+    out = str(tmp_path / "decision.json")
+    return run_decide_experiment(
+        baseline_run_id="b-001",
+        candidate_run_id="b-003",
+        baseline_adjudication_path=baseline,
+        candidate_adjudication_path=candidate,
+        comparison_path=comp,
+        ingest_report_path=ing,
+        output_path=out,
+    )
+
+
+class TestExperimentDecisionPolicy:
+    def test_promotes_b003_like_clean_subset(self, tmp_path):
+        comparison = {
+            "clean_subset": {
+                "b001": {
+                    "overall_agreement_rate": 0.6489,
+                    "dimension_agreement_rate": 0.2766,
+                    "model_agreement_rate": 0.1915,
+                    "wk_too_harsh": 33,
+                    "wk_too_generous": 0,
+                    "dimension_level_disagreement": 35,
+                    "model_level_disagreement": 8,
+                    "compared": 94,
+                },
+                "b002": {
+                    "overall_agreement_rate": 0.7979,
+                    "dimension_agreement_rate": 0.5,
+                    "model_agreement_rate": 0.4255,
+                    "wk_too_harsh": 13,
+                    "wk_too_generous": 6,
+                    "dimension_level_disagreement": 28,
+                    "model_level_disagreement": 7,
+                    "compared": 94,
+                },
+                "delta": {
+                    "overall_agreement_rate": 0.149,
+                    "dimension_agreement_rate": 0.2234,
+                    "model_agreement_rate": 0.234,
+                    "wk_too_harsh": -20,
+                    "wk_too_generous": 6,
+                    "dimension_level_disagreement": -7,
+                    "model_level_disagreement": -1,
+                },
+                "criteria_met": 5,
+                "criteria_total": 5,
+                "same_denominator": True,
+                "effective": True,
+            }
+        }
+        result = _run_decision(tmp_path, comparison, _ingest(errors=8))
+        assert result["decision"] == "promote"
+        assert result["effective"] is True
+        assert result["cautions"]
+
+    def test_rolls_back_b004_like_regression(self, tmp_path):
+        comparison = {
+            "clean_subset_vs_b003": {
+                "b003": {
+                    "overall_agreement_rate": 0.809,
+                    "dimension_agreement_rate": 0.5169,
+                    "model_agreement_rate": 0.4382,
+                    "wk_too_harsh": 13,
+                    "wk_too_generous": 4,
+                    "dimension_level_disagreement": 28,
+                    "model_level_disagreement": 7,
+                    "compared": 93,
+                },
+                "delta": {
+                    "overall_agreement_rate": -0.1316,
+                    "dimension_agreement_rate": -0.0545,
+                    "model_agreement_rate": -0.0404,
+                    "wk_too_harsh": 7,
+                    "wk_too_generous": 6,
+                    "dimension_level_disagreement": -8,
+                    "model_level_disagreement": -1,
+                },
+                "criteria_met": 1,
+                "criteria_total": 5,
+                "same_denominator": True,
+                "effective": False,
+            },
+            "b003": {"compared": 94},
+            "b004": {
+                "overall_agreement_rate": 0.6774,
+                "dimension_agreement_rate": 0.4624,
+                "model_agreement_rate": 0.3978,
+                "wk_too_harsh": 20,
+                "wk_too_generous": 10,
+                "dimension_level_disagreement": 20,
+                "model_level_disagreement": 6,
+                "compared": 93,
+            },
+        }
+        result = run_decide_experiment(
+            baseline_run_id="b-003",
+            candidate_run_id="b-004",
+            baseline_adjudication_path=_write_json(tmp_path, "baseline.json", _adj(94)),
+            candidate_adjudication_path=_write_json(tmp_path, "candidate.json", _adj(93)),
+            comparison_path=_write_json(tmp_path, "comparison.json", comparison),
+            ingest_report_path=_write_json(tmp_path, "ingest.json", _ingest(errors=9, applied=93)),
+            output_path=str(tmp_path / "decision.json"),
+        )
+        assert result["decision"] == "rollback"
+        assert result["effective"] is False
+
+    def test_rejects_quality_pollution_signature(self, tmp_path):
+        comparison = {
+            "b001": {"overall_agreement_rate": 0.6569, "dimension_agreement_rate": 0.2647, "model_agreement_rate": 0.1765, "wk_too_harsh": 34, "wk_too_generous": 1, "dimension_level_disagreement": 40, "model_level_disagreement": 9, "compared": 102},
+            "b002": {"overall_agreement_rate": 0.5392, "dimension_agreement_rate": 0.1373, "model_agreement_rate": 0.0588, "wk_too_harsh": 12, "wk_too_generous": 35, "dimension_level_disagreement": 41, "model_level_disagreement": 8, "compared": 102},
+            "delta": {"overall_agreement_rate": -0.1177, "dimension_agreement_rate": -0.1274, "model_agreement_rate": -0.1177, "wk_too_harsh": -22, "wk_too_generous": 34, "dimension_level_disagreement": 1, "model_level_disagreement": -1},
+            "judgment": {"criteria_met": 1, "effective": False},
+        }
+        result = _run_decision(tmp_path, comparison, _ingest(errors=0), candidate_compared=102)
+        assert result["decision"] == "reject_quality"
+
+    def test_collects_more_data_when_sample_small(self, tmp_path):
+        comparison = {
+            "b001": {"overall_agreement_rate": 0.6, "dimension_agreement_rate": 0.3, "model_agreement_rate": 0.2, "wk_too_harsh": 10, "wk_too_generous": 1, "dimension_level_disagreement": 20, "model_level_disagreement": 5, "compared": 80},
+            "b002": {"overall_agreement_rate": 0.7, "dimension_agreement_rate": 0.4, "model_agreement_rate": 0.3, "wk_too_harsh": 8, "wk_too_generous": 1, "dimension_level_disagreement": 15, "model_level_disagreement": 4, "compared": 80},
+            "delta": {"overall_agreement_rate": 0.1, "dimension_agreement_rate": 0.1, "model_agreement_rate": 0.1, "wk_too_harsh": -2, "wk_too_generous": 0, "dimension_level_disagreement": -5, "model_level_disagreement": -1},
+            "criteria_met": 5,
+            "criteria_total": 5,
+            "same_denominator": True,
+            "effective": True,
+        }
+        result = _run_decision(tmp_path, comparison, _ingest(total=80, applied=80, errors=0), candidate_compared=80)
+        assert result["decision"] == "collect_more_data"
+
+    def test_requires_human_review_for_effective_generous_drift(self, tmp_path):
+        comparison = {
+            "b001": {"overall_agreement_rate": 0.6, "dimension_agreement_rate": 0.3, "model_agreement_rate": 0.2, "wk_too_harsh": 10, "wk_too_generous": 1, "dimension_level_disagreement": 20, "model_level_disagreement": 5, "compared": 100},
+            "b002": {"overall_agreement_rate": 0.62, "dimension_agreement_rate": 0.4, "model_agreement_rate": 0.3, "wk_too_harsh": 8, "wk_too_generous": 8, "dimension_level_disagreement": 15, "model_level_disagreement": 4, "compared": 100},
+            "delta": {"overall_agreement_rate": 0.02, "dimension_agreement_rate": 0.1, "model_agreement_rate": 0.1, "wk_too_harsh": -2, "wk_too_generous": 7, "dimension_level_disagreement": -5, "model_level_disagreement": -1},
+            "criteria_met": 3,
+            "criteria_total": 5,
+            "same_denominator": True,
+            "effective": True,
+        }
+        result = _run_decision(tmp_path, comparison, _ingest(errors=0), candidate_compared=100)
+        assert result["decision"] == "human_review_required"

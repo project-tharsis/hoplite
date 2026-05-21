@@ -867,6 +867,18 @@ def main():
     cr.add_argument("--b002", required=True, help="Path to b-002 adjudication_report.json")
     cr.add_argument("--output", required=True, help="Path to comparison_report.json")
 
+    # ── decide-experiment ───────────────────────────────────────────
+    de = subparsers.add_parser("decide-experiment", help="Decide promote/rollback for an experiment")
+    de.add_argument("--baseline-run-id", required=True, help="Baseline run id, e.g. b-003")
+    de.add_argument("--candidate-run-id", required=True, help="Candidate run id, e.g. b-004")
+    de.add_argument("--baseline-adjudication", required=True, help="Path to baseline adjudication_report.json")
+    de.add_argument("--candidate-adjudication", required=True, help="Path to candidate adjudication_report.json")
+    de.add_argument("--comparison", required=True, help="Path to comparison_report.json")
+    de.add_argument("--ingest-report", required=True, help="Path to candidate ingest_report.json")
+    de.add_argument("--output", required=True, help="Path to experiment_decision.json")
+    de.add_argument("--min-compared", type=int, default=90, help="Minimum compared sample size")
+    de.add_argument("--max-quarantine-rate", type=float, default=0.15, help="Max acceptable quarantine rate")
+
     # ── summarize-validation (Phase 1) ─────────────────────────────
     sv = subparsers.add_parser("summarize-validation", help="Solidify b-003 validation summary")
     sv.add_argument("--comparison", required=True, help="Path to comparison_report.json")
@@ -986,6 +998,20 @@ def main():
     elif args.command == "compare-runs":
         result = run_compare_runs(args.b001, args.b002, args.output)
         print(json.dumps({"ok": True, "output": args.output, "summary": result["summary"]}, indent=2, ensure_ascii=False))
+
+    elif args.command == "decide-experiment":
+        result = run_decide_experiment(
+            baseline_run_id=args.baseline_run_id,
+            candidate_run_id=args.candidate_run_id,
+            baseline_adjudication_path=args.baseline_adjudication,
+            candidate_adjudication_path=args.candidate_adjudication,
+            comparison_path=args.comparison,
+            ingest_report_path=args.ingest_report,
+            output_path=args.output,
+            min_compared=args.min_compared,
+            max_quarantine_rate=args.max_quarantine_rate,
+        )
+        print(json.dumps({"ok": True, "output": args.output, "decision": result["decision"]}, indent=2, ensure_ascii=False))
 
     elif args.command == "summarize-validation":
         result = run_summarize_validation(args.comparison, args.adjudication, args.output)
@@ -1166,6 +1192,283 @@ def run_compare_runs(b001_path: str, b002_path: str, output_path: str) -> dict:
         summary["clean_subset_criteria_met"] = clean_subset["criteria_met"]
         summary["clean_subset_effective"] = clean_subset["effective"]
     return {"summary": summary}
+
+
+def _slug_run_id(run_id: str) -> str:
+    """Normalize run ids for artifact keys, e.g. b-003 -> b003."""
+    return run_id.replace("-", "").replace("_", "")
+
+
+def _load_json_file(path: str) -> dict:
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def _select_experiment_basis(
+    comparison: dict,
+    baseline_run_id: str,
+    candidate_run_id: str,
+) -> dict:
+    """Select the metrics basis for promotion decisions.
+
+    Prefer clean-subset comparisons because quarantines frequently make run
+    denominators differ. Supports both generic compare-runs artifacts
+    (clean_subset.b001/b002) and named artifacts
+    (clean_subset_vs_b003 + b004).
+    """
+    baseline_slug = _slug_run_id(baseline_run_id)
+    candidate_slug = _slug_run_id(candidate_run_id)
+
+    named_key = f"clean_subset_vs_{baseline_slug}"
+    if named_key in comparison:
+        cs = comparison[named_key]
+        baseline = cs.get(baseline_slug) or cs.get("baseline") or cs.get("b001") or {}
+        candidate = (
+            cs.get(candidate_slug)
+            or comparison.get(candidate_slug)
+            or cs.get("candidate")
+            or cs.get("b002")
+            or {}
+        )
+        return {
+            "primary_basis": named_key,
+            "baseline": baseline,
+            "candidate": candidate,
+            "delta": cs.get("delta", {}),
+            "criteria_met": cs.get("criteria_met", 0),
+            "criteria_total": cs.get("criteria_total", 5),
+            "same_denominator": cs.get("same_denominator", baseline.get("compared") == candidate.get("compared")),
+            "effective": cs.get("effective", False),
+        }
+
+    if "clean_subset" in comparison:
+        cs = comparison["clean_subset"]
+        baseline = cs.get(baseline_slug) or cs.get("b001") or cs.get("baseline") or {}
+        candidate = cs.get(candidate_slug) or cs.get("b002") or cs.get("candidate") or {}
+        return {
+            "primary_basis": "clean_subset",
+            "baseline": baseline,
+            "candidate": candidate,
+            "delta": cs.get("delta", {}),
+            "criteria_met": cs.get("criteria_met", 0),
+            "criteria_total": cs.get("criteria_total", comparison.get("criteria_total", 5)),
+            "same_denominator": cs.get("same_denominator", baseline.get("compared") == candidate.get("compared")),
+            "effective": cs.get("effective", False),
+        }
+
+    baseline = comparison.get(baseline_slug) or comparison.get("b001") or comparison.get("baseline") or {}
+    candidate = comparison.get(candidate_slug) or comparison.get("b002") or comparison.get("candidate") or {}
+    judgment = comparison.get("judgment", {})
+    same_denominator = comparison.get("same_denominator", baseline.get("compared") == candidate.get("compared"))
+    return {
+        "primary_basis": "top_level",
+        "baseline": baseline,
+        "candidate": candidate,
+        "delta": comparison.get("delta", {}),
+        "criteria_met": comparison.get("criteria_met", judgment.get("criteria_met", 0)),
+        "criteria_total": comparison.get("criteria_total", 5),
+        "same_denominator": same_denominator,
+        "effective": comparison.get("effective", judgment.get("effective", False)),
+    }
+
+
+def _extract_ingest_quality(ingest_report: dict) -> dict:
+    """Extract candidate evaluation quality metrics from ingest report."""
+    summary = ingest_report.get("summary", {})
+    total_results = summary.get("total_results")
+    applied = summary.get("applied", 0)
+    skipped = summary.get("skipped", 0)
+    errors = summary.get("errors")
+
+    if errors is None:
+        errors = len(ingest_report.get("errors", []))
+    if total_results is None:
+        total_results = applied + skipped + errors
+
+    quarantine_count = 0
+    for err in ingest_report.get("errors", []):
+        code = err.get("error", {}).get("code")
+        if code == "QUARANTINE":
+            quarantine_count += 1
+    if quarantine_count == 0 and errors:
+        quarantine_count = errors
+
+    quarantine_rate = quarantine_count / total_results if total_results else 0.0
+    return {
+        "total_results": total_results,
+        "applied": applied,
+        "skipped": skipped,
+        "errors": errors,
+        "quarantine_count": quarantine_count,
+        "quarantine_rate": round(quarantine_rate, 4),
+    }
+
+
+def run_decide_experiment(
+    *,
+    baseline_run_id: str,
+    candidate_run_id: str,
+    baseline_adjudication_path: str,
+    candidate_adjudication_path: str,
+    comparison_path: str,
+    ingest_report_path: str,
+    output_path: str,
+    min_compared: int = 90,
+    max_quarantine_rate: float = 0.15,
+) -> dict:
+    """Decide whether an experiment should be promoted, rolled back, or rejected."""
+    baseline_adj = _load_json_file(baseline_adjudication_path)
+    candidate_adj = _load_json_file(candidate_adjudication_path)
+    comparison = _load_json_file(comparison_path)
+    ingest_report = _load_json_file(ingest_report_path)
+
+    basis = _select_experiment_basis(comparison, baseline_run_id, candidate_run_id)
+    quality = _extract_ingest_quality(ingest_report)
+
+    baseline = basis["baseline"]
+    candidate = basis["candidate"]
+    delta = basis["delta"]
+    criteria_met = basis["criteria_met"]
+    criteria_total = basis["criteria_total"]
+    compared = candidate.get("compared", candidate_adj.get("summary", {}).get("compared", 0))
+    same_denominator = basis["same_denominator"]
+    effective = basis["effective"]
+
+    overall_delta = delta.get("overall_agreement_rate", 0.0)
+    dimension_delta = delta.get("dimension_agreement_rate", 0.0)
+    model_delta = delta.get("model_agreement_rate", 0.0)
+    harsh_delta = delta.get("wk_too_harsh", 0)
+    generous_delta = delta.get("wk_too_generous", 0)
+    dimension_disagreement_delta = delta.get("dimension_level_disagreement", 0)
+
+    quality_reject_threshold = 0.20
+    generous_caution_threshold = 5
+    generous_pollution_threshold = 10
+
+    gates = {
+        "min_compared": {"passed": compared >= min_compared, "value": compared, "threshold": min_compared},
+        "quality": {
+            "passed": quality["quarantine_rate"] < max_quarantine_rate,
+            "value": quality["quarantine_rate"],
+            "threshold": max_quarantine_rate,
+        },
+        "effectiveness": {
+            "passed": criteria_met >= 3 and effective,
+            "criteria_met": criteria_met,
+            "threshold": 3,
+            "effective": effective,
+        },
+        "same_denominator": {"passed": bool(same_denominator), "value": bool(same_denominator)},
+        "generous_drift": {
+            "passed": generous_delta <= generous_caution_threshold,
+            "delta": generous_delta,
+            "threshold": generous_caution_threshold,
+        },
+    }
+
+    reasons: list[str] = []
+    actions: list[str] = []
+    caution: list[str] = []
+
+    pollution_signature = (
+        overall_delta < 0
+        and dimension_delta < 0
+        and model_delta < 0
+        and generous_delta >= generous_pollution_threshold
+    )
+
+    if compared < min_compared:
+        decision = "collect_more_data"
+        reasons.append(f"compared={compared} < min_compared={min_compared}")
+        actions.append("Collect more valid evaluator results before deciding.")
+    elif quality["quarantine_rate"] >= quality_reject_threshold or pollution_signature:
+        decision = "reject_quality"
+        if quality["quarantine_rate"] >= quality_reject_threshold:
+            reasons.append(
+                f"quarantine_rate={quality['quarantine_rate']} >= reject_threshold={quality_reject_threshold}"
+            )
+        if pollution_signature:
+            reasons.append(
+                "overall/dimension/model agreement all regressed and wk_too_generous spiked; evaluator quality pollution suspected"
+            )
+        actions.append("Exclude this run from promotion and rule distillation.")
+    elif quality["quarantine_rate"] >= max_quarantine_rate:
+        decision = "rerun"
+        reasons.append(
+            f"quarantine_rate={quality['quarantine_rate']} >= max_quarantine_rate={max_quarantine_rate}"
+        )
+        actions.append("Rerun evaluator B or inspect quarantined outputs.")
+    elif criteria_met < 3 or not effective or (overall_delta < 0 and dimension_delta < 0) or (
+        generous_delta > generous_caution_threshold and overall_delta <= 0
+    ):
+        decision = "rollback"
+        if criteria_met < 3:
+            reasons.append(f"criteria_met={criteria_met} < 3")
+        if not effective:
+            reasons.append("comparison effective=false")
+        if overall_delta < 0 and dimension_delta < 0:
+            reasons.append("overall and dimension agreement both regressed")
+        if generous_delta > generous_caution_threshold and overall_delta <= 0:
+            reasons.append("wk_too_generous increased while overall did not improve")
+        actions.append("Do not promote candidate policy; keep prior production policy.")
+    elif criteria_met >= 3 and effective and generous_delta > generous_caution_threshold and criteria_met < criteria_total:
+        decision = "human_review_required"
+        reasons.append("effective run with elevated wk_too_generous drift requires review")
+        actions.append("Sample review wk_too_generous cases before promotion.")
+    elif (
+        criteria_met >= 3
+        and effective
+        and same_denominator
+        and overall_delta >= 0
+        and dimension_delta >= 0
+        and model_delta >= 0
+    ):
+        decision = "promote"
+        reasons.append(f"criteria_met={criteria_met}/{criteria_total} and all agreement deltas are non-negative")
+        actions.append("Mark candidate policy as promotable.")
+        if generous_delta > generous_caution_threshold:
+            caution.append("wk_too_generous increased; monitor in the next run")
+    else:
+        decision = "no_action"
+        reasons.append("run is valid but does not meet promote or rollback thresholds")
+        actions.append("Keep current policy and collect more evidence.")
+
+    result = {
+        "policy_version": "self_iteration_promotion_v1",
+        "baseline_run_id": baseline_run_id,
+        "candidate_run_id": candidate_run_id,
+        "decision": decision,
+        "effective": decision == "promote",
+        "primary_basis": basis["primary_basis"],
+        "metrics": {
+            "baseline": baseline,
+            "candidate": candidate,
+            "delta": delta,
+            "criteria_met": criteria_met,
+            "criteria_total": criteria_total,
+            "same_denominator": same_denominator,
+            "source_paths": {
+                "baseline_adjudication": baseline_adjudication_path,
+                "candidate_adjudication": candidate_adjudication_path,
+                "comparison": comparison_path,
+                "ingest_report": ingest_report_path,
+            },
+        },
+        "quality": quality,
+        "gates": gates,
+        "reasons": reasons,
+        "cautions": caution,
+        "recommended_actions": actions,
+        "baseline_summary": baseline_adj.get("summary", {}),
+        "candidate_summary": candidate_adj.get("summary", {}),
+        "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    }
+
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+
+    return result
 
 
 # ── Phase 1: summarize-validation ────────────────────────────────────

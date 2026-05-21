@@ -1,0 +1,119 @@
+{
+  "policy_version": "self_iteration_promotion_v1",
+  "baseline_run_id": "b-001",
+  "candidate_run_id": "b-003",
+  "decision": "promote",
+  "effective": true,
+  "primary_basis": "clean_subset",
+  "metrics": {
+    "baseline": {
+      "overall_agreement_rate": 0.6489,
+      "dimension_agreement_rate": 0.2766,
+      "model_agreement_rate": 0.1915,
+      "wk_too_harsh": 33,
+      "wk_too_generous": 0,
+      "dimension_level_disagreement": 35,
+      "model_level_disagreement": 8,
+      "compared": 94
+    },
+    "candidate": {
+      "overall_agreement_rate": 0.7979,
+      "dimension_agreement_rate": 0.5,
+      "model_agreement_rate": 0.4255,
+      "wk_too_harsh": 13,
+      "wk_too_generous": 6,
+      "dimension_level_disagreement": 28,
+      "model_level_disagreement": 7,
+      "compared": 94
+    },
+    "delta": {
+      "overall_agreement_rate": 0.149,
+      "dimension_agreement_rate": 0.2234,
+      "model_agreement_rate": 0.234,
+      "wk_too_harsh": -20,
+      "wk_too_generous": 6,
+      "dimension_level_disagreement": -7,
+      "model_level_disagreement": -1
+    },
+    "criteria_met": 5,
+    "criteria_total": 5,
+    "same_denominator": true,
+    "source_paths": {
+      "baseline_adjudication": "data/self_iteration/runs/b-001/adjudication_report.json",
+      "candidate_adjudication": "data/self_iteration/runs/b-003/adjudication_report.json",
+      "comparison": "data/self_iteration/runs/b-003/comparison_report.json",
+      "ingest_report": "data/self_iteration/runs/b-003/ingest_report.json"
+    }
+  },
+  "quality": {
+    "total_results": 102,
+    "applied": 94,
+    "skipped": 0,
+    "errors": 8,
+    "quarantine_count": 8,
+    "quarantine_rate": 0.0784
+  },
+  "gates": {
+    "min_compared": {
+      "passed": true,
+      "value": 94,
+      "threshold": 90
+    },
+    "quality": {
+      "passed": true,
+      "value": 0.0784,
+      "threshold": 0.15
+    },
+    "effectiveness": {
+      "passed": true,
+      "criteria_met": 5,
+      "threshold": 3,
+      "effective": true
+    },
+    "same_denominator": {
+      "passed": true,
+      "value": true
+    },
+    "generous_drift": {
+      "passed": false,
+      "delta": 6,
+      "threshold": 5
+    }
+  },
+  "reasons": [
+    "criteria_met=5/5 and all agreement deltas are non-negative"
+  ],
+  "cautions": [
+    "wk_too_generous increased; monitor in the next run"
+  ],
+  "recommended_actions": [
+    "Mark candidate policy as promotable."
+  ],
+  "baseline_summary": {
+    "total_entries": 111,
+    "feature_backed": 102,
+    "compared": 102,
+    "missing_evaluator_b": 0,
+    "overall_agreement_rate": 0.6569,
+    "dimension_agreement_rate": 0.2647,
+    "model_agreement_rate": 0.1765,
+    "wk_too_harsh": 34,
+    "wk_too_generous": 1,
+    "dimension_level_disagreement": 40,
+    "model_level_disagreement": 9
+  },
+  "candidate_summary": {
+    "total_entries": 111,
+    "feature_backed": 102,
+    "compared": 94,
+    "missing_evaluator_b": 8,
+    "overall_agreement_rate": 0.7979,
+    "dimension_agreement_rate": 0.5,
+    "model_agreement_rate": 0.4255,
+    "wk_too_harsh": 13,
+    "wk_too_generous": 6,
+    "dimension_level_disagreement": 28,
+    "model_level_disagreement": 7
+  },
+  "created_at": "2026-05-21T02:24:52+00:00"
+}

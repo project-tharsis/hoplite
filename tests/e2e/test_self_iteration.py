@@ -679,3 +679,75 @@ class TestCliMineRules:
         assert result["ok"] is True
         assert "summary" in result
         assert result["summary"]["disagreement_rows"] == 2
+
+
+class TestCliDecideExperiment:
+    """decide-experiment CLI writes a decision artifact."""
+
+    def test_decide_experiment_cli_writes_decision(self, tmp_path):
+        baseline_adj = tmp_path / "baseline_adjudication.json"
+        candidate_adj = tmp_path / "candidate_adjudication.json"
+        comparison = tmp_path / "comparison.json"
+        ingest = tmp_path / "ingest.json"
+        output = tmp_path / "experiment_decision.json"
+
+        baseline_adj.write_text(json.dumps({"summary": {"compared": 94}, "rows": []}))
+        candidate_adj.write_text(json.dumps({"summary": {"compared": 94}, "rows": []}))
+        comparison.write_text(json.dumps({
+            "clean_subset": {
+                "b001": {
+                    "overall_agreement_rate": 0.6,
+                    "dimension_agreement_rate": 0.3,
+                    "model_agreement_rate": 0.2,
+                    "wk_too_harsh": 20,
+                    "wk_too_generous": 1,
+                    "dimension_level_disagreement": 30,
+                    "model_level_disagreement": 10,
+                    "compared": 94,
+                },
+                "b002": {
+                    "overall_agreement_rate": 0.7,
+                    "dimension_agreement_rate": 0.4,
+                    "model_agreement_rate": 0.3,
+                    "wk_too_harsh": 10,
+                    "wk_too_generous": 2,
+                    "dimension_level_disagreement": 20,
+                    "model_level_disagreement": 8,
+                    "compared": 94,
+                },
+                "delta": {
+                    "overall_agreement_rate": 0.1,
+                    "dimension_agreement_rate": 0.1,
+                    "model_agreement_rate": 0.1,
+                    "wk_too_harsh": -10,
+                    "wk_too_generous": 1,
+                    "dimension_level_disagreement": -10,
+                    "model_level_disagreement": -2,
+                },
+                "criteria_met": 5,
+                "criteria_total": 5,
+                "same_denominator": True,
+                "effective": True,
+            }
+        }))
+        ingest.write_text(json.dumps({
+            "summary": {"total_results": 94, "applied": 94, "skipped": 0, "errors": 0}
+        }))
+
+        rc, stdout, stderr = _run_self_iterate([
+            "decide-experiment",
+            "--baseline-run-id", "b-001",
+            "--candidate-run-id", "b-003",
+            "--baseline-adjudication", str(baseline_adj),
+            "--candidate-adjudication", str(candidate_adj),
+            "--comparison", str(comparison),
+            "--ingest-report", str(ingest),
+            "--output", str(output),
+        ])
+
+        assert rc == 0, f"stderr: {stderr}"
+        result = json.loads(stdout)
+        assert result["ok"] is True
+        assert result["decision"] == "promote"
+        artifact = json.loads(output.read_text())
+        assert artifact["decision"] == "promote"
