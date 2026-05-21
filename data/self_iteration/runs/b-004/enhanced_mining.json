@@ -6,7 +6,7 @@
   "candidates": [],
   "exploratory_candidates": [],
   "rejected_count": 7832,
-  "rejected_path": "data/self_iteration/runs/b-004/enhanced_rejected_candidates.json",
+  "rejected_path": "data/self_iteration/runs/wk-v1.2-feature-enrichment/enriched_rejected_candidates.json",
   "search_summary": {
     "groups_scanned": 14,
     "predicates_evaluated": 7843,
